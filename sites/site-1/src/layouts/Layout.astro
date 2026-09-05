@@ -20,9 +20,10 @@ const {
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 // Absolute URL for OG Image
+const cleanPath = image.startsWith(base) && base.length > 0 ? image.slice(base.length) : image;
 const ogImageUrl = image.startsWith('http') 
   ? image 
-  : `https://localagentstack.com${image.startsWith('/') ? '' : '/'}${image}`;
+  : `https://localagentstack.com${cleanPath.startsWith('/') ? '' : '/'}${cleanPath}`;
 ---
 
 <!doctype html>
