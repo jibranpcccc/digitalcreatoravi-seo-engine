@@ -17,7 +17,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+          token: ${{ secrets.SYNC_PAT || secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -27,7 +28,7 @@ jobs:
       - name: Install Python Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install Pillow pytest pytest-asyncio
+          pip install Pillow pytest pytest-asyncio requests
 
       - name: Execute Daily Publishing Pipeline
         run: python tools/daily_publisher.py
@@ -40,6 +41,10 @@ jobs:
           if ! git diff-index --quiet HEAD; then
             git commit -m "chore(daily): autonomous daily article publish & indexnow dispatch"
             git push origin master
+            if [ -n "${{ secrets.SYNC_PAT }}" ]; then
+              echo "Pushing Site 2 subtree to workationradar repo..."
+              git subtree push --prefix=sites/site-2 https://x-access-token:${{ secrets.SYNC_PAT }}@github.com/jibranpcccc/workationradar.git master || true
+            fi
           else
             echo "No new content found in queue today."
           fi
