@@ -3,74 +3,74 @@
 
 ## 10 Inspected Global Coliving Communities
 
-- [Ponta do Sol Nomad Coliving Hub (Madeira, Portugal)](https://workationradar.com/space/ponta-do-sol-nomad-coliving/):
+- [Ponta do Sol Nomad Coliving Hub (Madeira, Portugal)](https://jibranpcccc.github.io/workationradar/space/ponta-do-sol-nomad-coliving/):
   - Download: 480 Mbps | Upload: 220 Mbps | Ping: 14ms
   - Seating: Herman Miller Aeron | Phone Booths: 4 Private
   - Power: Diesel Generator + Battery UPS (100% failover)
   - Rates: €1,250 / month | Min Stay: 14 days | Productivity Score: 96/100
 
-- [Coworking Bansko Mountain Coliving (Bansko, Bulgaria)](https://workationradar.com/space/coworking-bansko-coliving/):
+- [Coworking Bansko Mountain Coliving (Bansko, Bulgaria)](https://jibranpcccc.github.io/workationradar/space/coworking-bansko-coliving/):
   - Download: 350 Mbps | Upload: 180 Mbps | Ping: 22ms
   - Seating: Ergonomic High-Back Mesh | Phone Booths: 6 Private
   - Power: Dual Line Commercial Grid + UPS
   - Rates: €680 / month | Min Stay: 30 days | Productivity Score: 93/100
 
-- [Dojo Coliving Canggu (Bali, Indonesia)](https://workationradar.com/space/dojo-coliving-canggu/):
+- [Dojo Coliving Canggu (Bali, Indonesia)](https://jibranpcccc.github.io/workationradar/space/dojo-coliving-canggu/):
   - Download: 250 Mbps | Upload: 120 Mbps | Ping: 28ms
   - Seating: Steelcase Series 1 | Phone Booths: 5 Private
   - Power: Automated 45kVA Diesel Generator (Blackout proof)
   - Rates: €1,100 / month | Min Stay: 30 days | Productivity Score: 91/100
 
-- [Sun and Co. Historic Coliving (Javea, Spain)](https://workationradar.com/space/sun-and-co-javea/):
+- [Sun and Co. Historic Coliving (Javea, Spain)](https://jibranpcccc.github.io/workationradar/space/sun-and-co-javea/):
   - Download: 600 Mbps | Upload: 300 Mbps | Ping: 11ms
   - Seating: Herman Miller Mirra 2 | Phone Booths: 5 Private
   - Power: Solar Battery UPS Grid Backup
   - Rates: €1,400 / month | Min Stay: 14 days | Productivity Score: 97/100
 
-- [AltSchool Coliving Hub (Chiang Mai, Thailand)](https://workationradar.com/space/altschool-chiang-mai/):
+- [AltSchool Coliving Hub (Chiang Mai, Thailand)](https://jibranpcccc.github.io/workationradar/space/altschool-chiang-mai/):
   - Download: 500 Mbps | Upload: 250 Mbps | Ping: 18ms
   - Seating: Sihoo Doro C300 Ergonomic | Phone Booths: 4 Private
   - Power: Industrial UPS + Automatic Generator
   - Rates: €750 / month | Min Stay: 14 days | Productivity Score: 94/100
 
-- [Outsite Lisbon Intendente (Lisbon, Portugal)](https://workationradar.com/space/outsite-lisbon-intendente/):
+- [Outsite Lisbon Intendente (Lisbon, Portugal)](https://jibranpcccc.github.io/workationradar/space/outsite-lisbon-intendente/):
   - Download: 550 Mbps | Upload: 200 Mbps | Ping: 9ms
   - Seating: Steelcase Gesture | Phone Booths: 6 Private
   - Power: Battery Storage Commercial Grid
   - Rates: €1,650 / month | Min Stay: 30 days | Productivity Score: 95/100
 
-- [The Roof Las Palmas (Las Palmas, Spain)](https://workationradar.com/space/the-roof-las-palmas/):
+- [The Roof Las Palmas (Las Palmas, Spain)](https://jibranpcccc.github.io/workationradar/space/the-roof-las-palmas/):
   - Download: 400 Mbps | Upload: 200 Mbps | Ping: 24ms
   - Seating: Ergonomic Mesh Task Chair | Phone Booths: 3 Private
   - Power: UPS Battery Array
   - Rates: €950 / month | Min Stay: 14 days | Productivity Score: 92/100
 
-- [Coasis Coliving Medellin (Medellin, Colombia)](https://workationradar.com/space/coasis-coliving-medellin/):
+- [Coasis Coliving Medellin (Medellin, Colombia)](https://jibranpcccc.github.io/workationradar/space/coasis-coliving-medellin/):
   - Download: 320 Mbps | Upload: 160 Mbps | Ping: 32ms
   - Seating: Steelcase Leap V2 | Phone Booths: 4 Private
   - Power: Diesel Generator Auto-Switch
   - Rates: €820 / month | Min Stay: 30 days | Productivity Score: 90/100
 
-- [Cape Town Workation Loft (Cape Town, South Africa)](https://workationradar.com/space/cape-town-workation-loft/):
+- [Cape Town Workation Loft (Cape Town, South Africa)](https://jibranpcccc.github.io/workationradar/space/cape-town-workation-loft/):
   - Download: 280 Mbps | Upload: 140 Mbps | Ping: 35ms
   - Seating: Herman Miller Aeron | Phone Booths: 4 Private
   - Power: Solar Microgrid + 15kWh Inverter (100% Loadshedding immune)
   - Rates: €1,050 / month | Min Stay: 30 days | Productivity Score: 93/100
 
-- [Enso Coliving Da Nang (Da Nang, Vietnam)](https://workationradar.com/space/enso-coliving-da-nang/):
+- [Enso Coliving Da Nang (Da Nang, Vietnam)](https://jibranpcccc.github.io/workationradar/space/enso-coliving-da-nang/):
   - Download: 380 Mbps | Upload: 210 Mbps | Ping: 20ms
   - Seating: Autonomous ErgoChair Pro | Phone Booths: 5 Private
   - Power: Commercial Building Generator
   - Rates: €620 / month | Min Stay: 14 days | Productivity Score: 91/100
 
 ## Verified City Hubs
-- [Madeira Coliving Guide](https://workationradar.com/city/Madeira/)
-- [Bansko Coliving Guide](https://workationradar.com/city/Bansko/)
-- [Bali Coliving Guide](https://workationradar.com/city/Bali/)
-- [Javea Coliving Guide](https://workationradar.com/city/Javea/)
-- [Chiang Mai Coliving Guide](https://workationradar.com/city/Chiang%20Mai/)
-- [Lisbon Coliving Guide](https://workationradar.com/city/Lisbon/)
-- [Las Palmas Coliving Guide](https://workationradar.com/city/Las%20Palmas/)
-- [Medellin Coliving Guide](https://workationradar.com/city/Medellin/)
-- [Cape Town Coliving Guide](https://workationradar.com/city/Cape%20Town/)
-- [Da Nang Coliving Guide](https://workationradar.com/city/Da%20Nang/)
+- [Madeira Coliving Guide](https://jibranpcccc.github.io/workationradar/city/Madeira/)
+- [Bansko Coliving Guide](https://jibranpcccc.github.io/workationradar/city/Bansko/)
+- [Bali Coliving Guide](https://jibranpcccc.github.io/workationradar/city/Bali/)
+- [Javea Coliving Guide](https://jibranpcccc.github.io/workationradar/city/Javea/)
+- [Chiang Mai Coliving Guide](https://jibranpcccc.github.io/workationradar/city/Chiang%20Mai/)
+- [Lisbon Coliving Guide](https://jibranpcccc.github.io/workationradar/city/Lisbon/)
+- [Las Palmas Coliving Guide](https://jibranpcccc.github.io/workationradar/city/Las%20Palmas/)
+- [Medellin Coliving Guide](https://jibranpcccc.github.io/workationradar/city/Medellin/)
+- [Cape Town Coliving Guide](https://jibranpcccc.github.io/workationradar/city/Cape%20Town/)
+- [Da Nang Coliving Guide](https://jibranpcccc.github.io/workationradar/city/Da%20Nang/)

@@ -23,4 +23,4 @@ Allow: /
 User-agent: Cohere-ai
 Allow: /
 
-Sitemap: https://workationradar.com/sitemap.xml
+Sitemap: https://jibranpcccc.github.io/workationradar/sitemap.xml

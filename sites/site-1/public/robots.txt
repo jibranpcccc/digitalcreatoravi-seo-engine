@@ -23,4 +23,4 @@ Allow: /
 User-agent: Cohere-ai
 Allow: /
 
-Sitemap: https://localagentstack.com/sitemap.xml
+Sitemap: https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/sitemap.xml
