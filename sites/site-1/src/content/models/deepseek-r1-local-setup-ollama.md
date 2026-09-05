@@ -1,10 +1,11 @@
-﻿---
+---
 title: "DeepSeek R1 Local Setup Ollama: Complete Installation & Prompting Guide (2026)"
 description: "Step-by-step setup guide for running DeepSeek R1 reasoning models locally via Ollama with custom Modelfiles, GPU layer offloading, and optimal context allocation."
 datePublished: "2026-07-25"
 dateModified: "2026-09-03"
 author: "Engineering Team"
 tags: ["deepseek-r1", "ollama", "reasoning-models", "local-ai", "setup-guide"]
+coverImage: "/images/benchmarks/deepseek-r1-local-setup-ollama.webp"
 canonical: "https://localagentstack.com/models/deepseek-r1-local-setup-ollama/"
 ---
 

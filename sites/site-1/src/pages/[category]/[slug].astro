@@ -17,12 +17,18 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content, frontmatter } = post;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+// Compute Cover Image URL
+const rawCover = frontmatter.coverImage || `/images/benchmarks/${Astro.params.slug}.webp`;
+const coverUrl = rawCover.startsWith('/') && !rawCover.startsWith(base) ? `${base}${rawCover}` : rawCover;
 
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": frontmatter.title,
   "description": frontmatter.description,
+  "image": coverUrl,
   "datePublished": frontmatter.datePublished,
   "dateModified": frontmatter.dateModified,
   "author": {
@@ -36,7 +42,7 @@ const schemaData = {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": frontmatter.canonical
+    "@id": frontmatter.canonical || `https://localagentstack.com/${Astro.params.category}/${Astro.params.slug}`
   }
 };
 ---
@@ -48,26 +54,50 @@ const schemaData = {
   schemaJson={JSON.stringify(schemaData)}
 >
   <article class="max-w-4xl mx-auto py-6">
+    <!-- Breadcrumb -->
     <nav class="flex items-center space-x-2 text-xs text-slate-400 mb-6 font-medium">
-      <a href="/" class="hover:text-blue-400">Home</a>
+      <a href={`${base}/`} class="hover:text-blue-400">Home</a>
       <span>/</span>
       <span class="capitalize text-slate-300">{Astro.params.category}</span>
       <span>/</span>
       <span class="text-blue-400 truncate max-w-xs">{frontmatter.title}</span>
     </nav>
 
+    <!-- Header Meta Badges -->
+    <div class="flex items-center space-x-3 text-xs font-semibold text-blue-400 mb-4">
+      <span class="px-2.5 py-1 rounded bg-blue-950 border border-blue-900 uppercase tracking-wider">{Astro.params.category}</span>
+      <span class="text-slate-500">•</span>
+      <span class="text-slate-400 font-mono">Published: {frontmatter.datePublished}</span>
+      <span class="text-slate-500">•</span>
+      <span class="text-emerald-400 font-mono">Last Verified: {frontmatter.dateModified}</span>
+    </div>
+
+    <!-- Featured Cover Graphic -->
+    <div class="rounded-xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900 mb-8">
+      <img 
+        src={coverUrl} 
+        alt={frontmatter.title}
+        class="w-full h-auto object-cover"
+        loading="eager"
+        width="1200"
+        height="675"
+      />
+    </div>
+
+    <!-- Main Content rendered from Markdown (Single semantic H1 inside) -->
     <div class="markdown-body space-y-6 text-slate-300 leading-relaxed">
       <Content />
     </div>
 
+    <!-- Related Articles / Silo Backlinks -->
     <div class="mt-16 pt-8 border-t border-slate-800">
       <h3 class="text-lg font-bold text-white mb-4">Related Engineering Specifications</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-        <a href="/inference/ollama-vs-vllm-benchmark" class="p-4 rounded-lg bg-slate-900 border border-slate-800 hover:border-blue-500 transition block">
+        <a href={`${base}/inference/ollama-vs-vllm-benchmark`} class="p-4 rounded-lg bg-slate-900 border border-slate-800 hover:border-blue-500 transition block">
           <span class="text-xs font-bold text-blue-400">INFERENCE</span>
           <p class="font-semibold text-white mt-1">Ollama vs vLLM Concurrency Benchmark</p>
         </a>
-        <a href="/hardware/vram-requirements-calculator-70b" class="p-4 rounded-lg bg-slate-900 border border-slate-800 hover:border-blue-500 transition block">
+        <a href={`${base}/hardware/vram-requirements-calculator-70b`} class="p-4 rounded-lg bg-slate-900 border border-slate-800 hover:border-blue-500 transition block">
           <span class="text-xs font-bold text-emerald-400">HARDWARE</span>
           <p class="font-semibold text-white mt-1">VRAM Requirements Calculator for 70B</p>
         </a>
@@ -78,11 +108,12 @@ const schemaData = {
 
 <style is:global>
   .markdown-body h1 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     font-weight: 800;
     color: #ffffff;
     line-height: 1.25;
     margin-bottom: 1.5rem;
+    letter-spacing: -0.025em;
   }
   .markdown-body h2 {
     font-size: 1.5rem;
@@ -102,23 +133,28 @@ const schemaData = {
   }
   .markdown-body p {
     margin-bottom: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.75;
   }
   .markdown-body blockquote {
     border-left: 4px solid #3b82f6;
     background: #0f172a;
-    padding: 1rem 1.25rem;
-    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 0.75rem 0.75rem 0;
     color: #e2e8f0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
   .markdown-body table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.5rem 0;
+    margin: 2rem 0;
     font-size: 0.875rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
   }
   .markdown-body th, .markdown-body td {
-    padding: 0.75rem 1rem;
+    padding: 0.85rem 1rem;
     border: 1px solid #1e293b;
     text-align: left;
   }
@@ -145,10 +181,10 @@ const schemaData = {
   .markdown-body pre {
     background: #090d16;
     border: 1px solid #1e293b;
-    padding: 1rem;
+    padding: 1.25rem;
     border-radius: 0.5rem;
     overflow-x: auto;
-    margin: 1.5rem 0;
+    margin: 1.75rem 0;
   }
   .markdown-body img {
     border-radius: 0.75rem;

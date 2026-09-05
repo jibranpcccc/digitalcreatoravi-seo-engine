@@ -1,10 +1,11 @@
-﻿---
+---
 title: "Custom MCP Server Python Tutorial: Build Production Model Context Protocol Tools (2026)"
 description: "Step-by-step tutorial to create, test, and deploy a custom Model Context Protocol (MCP) server in Python using FastMCP, stdio transport, and SQLite tool state."
 datePublished: "2026-08-18"
 dateModified: "2026-09-04"
 author: "Engineering Team"
 tags: ["mcp", "python", "model-context-protocol", "claude-code", "agentic-ai"]
+coverImage: "/images/benchmarks/custom-mcp-server-python-tutorial.webp"
 canonical: "https://localagentstack.com/agents/custom-mcp-server-python-tutorial/"
 ---
 

@@ -1,10 +1,11 @@
-﻿---
+---
 title: "VRAM Requirements Calculator for 70B Models: KV-Cache & Quantization Math (2026)"
 description: "Calculate exact GPU memory requirements for running 70B parameter LLMs including Llama 3.3 and Qwen 2.5 across context windows from 4k to 128k."
 datePublished: "2026-07-10"
 dateModified: "2026-09-02"
 author: "Engineering Team"
 tags: ["vram", "hardware", "70b-models", "gpu", "kv-cache", "llama-3"]
+coverImage: "/images/benchmarks/vram-requirements-calculator-70b.webp"
 canonical: "https://localagentstack.com/hardware/vram-requirements-calculator-70b/"
 ---
 
