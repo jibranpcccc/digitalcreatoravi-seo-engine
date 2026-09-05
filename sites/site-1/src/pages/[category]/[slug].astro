@@ -1,0 +1,172 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob('../../content/**/*.md');
+  return posts.map(post => {
+    const normalized = post.file.replace(/\\/g, '/');
+    const segments = normalized.split('/');
+    const slug = segments[segments.length - 1].replace(/\.md$/, '');
+    const category = segments[segments.length - 2];
+    return {
+      params: { category, slug },
+      props: { post },
+    };
+  });
+}
+
+const { post } = Astro.props;
+const { Content, frontmatter } = post;
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": frontmatter.title,
+  "description": frontmatter.description,
+  "datePublished": frontmatter.datePublished,
+  "dateModified": frontmatter.dateModified,
+  "author": {
+    "@type": "Organization",
+    "name": "LocalAgentStack Engineering Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "LocalAgentStack",
+    "url": "https://localagentstack.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": frontmatter.canonical
+  }
+};
+---
+
+<Layout 
+  title={`${frontmatter.title} | LocalAgentStack`}
+  description={frontmatter.description}
+  canonical={frontmatter.canonical}
+  schemaJson={JSON.stringify(schemaData)}
+>
+  <article class="max-w-4xl mx-auto py-6">
+    <nav class="flex items-center space-x-2 text-xs text-slate-400 mb-6 font-medium">
+      <a href="/" class="hover:text-blue-400">Home</a>
+      <span>/</span>
+      <span class="capitalize text-slate-300">{Astro.params.category}</span>
+      <span>/</span>
+      <span class="text-blue-400 truncate max-w-xs">{frontmatter.title}</span>
+    </nav>
+
+    <div class="markdown-body space-y-6 text-slate-300 leading-relaxed">
+      <Content />
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-slate-800">
+      <h3 class="text-lg font-bold text-white mb-4">Related Engineering Specifications</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <a href="/inference/ollama-vs-vllm-benchmark" class="p-4 rounded-lg bg-slate-900 border border-slate-800 hover:border-blue-500 transition block">
+          <span class="text-xs font-bold text-blue-400">INFERENCE</span>
+          <p class="font-semibold text-white mt-1">Ollama vs vLLM Concurrency Benchmark</p>
+        </a>
+        <a href="/hardware/vram-requirements-calculator-70b" class="p-4 rounded-lg bg-slate-900 border border-slate-800 hover:border-blue-500 transition block">
+          <span class="text-xs font-bold text-emerald-400">HARDWARE</span>
+          <p class="font-semibold text-white mt-1">VRAM Requirements Calculator for 70B</p>
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style is:global>
+  .markdown-body h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+  }
+  .markdown-body h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 0.5rem;
+  }
+  .markdown-body h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #93c5fd;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .markdown-body p {
+    margin-bottom: 1.25rem;
+  }
+  .markdown-body blockquote {
+    border-left: 4px solid #3b82f6;
+    background: #0f172a;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: #e2e8f0;
+    margin-bottom: 1.5rem;
+  }
+  .markdown-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.875rem;
+  }
+  .markdown-body th, .markdown-body td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #1e293b;
+    text-align: left;
+  }
+  .markdown-body th {
+    background-color: #0f172a;
+    color: #93c5fd;
+    font-weight: 600;
+  }
+  .markdown-body tr:nth-child(even) {
+    background-color: #0a0f1d;
+  }
+  .markdown-body code {
+    background: #0f172a;
+    color: #60a5fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+  }
+  .markdown-body pre code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+  }
+  .markdown-body pre {
+    background: #090d16;
+    border: 1px solid #1e293b;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+  .markdown-body img {
+    border-radius: 0.75rem;
+    border: 1px solid #1e293b;
+    margin: 2rem 0;
+    width: 100%;
+    height: auto;
+  }
+  .markdown-body a {
+    color: #60a5fa;
+    text-decoration: underline;
+  }
+  .markdown-body ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .markdown-body li {
+    margin-bottom: 0.5rem;
+  }
+</style>

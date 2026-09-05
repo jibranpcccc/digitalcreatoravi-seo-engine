@@ -1,0 +1,1328 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.710 align:start position:0%
+ 
+We've<00:00:00.320><c> just</c><00:00:00.640><c> launched</c><00:00:01.040><c> our</c><00:00:01.200><c> MCP</c><00:00:01.800><c> integration</c>
+
+00:00:02.710 --> 00:00:02.720 align:start position:0%
+We've just launched our MCP integration
+ 
+
+00:00:02.720 --> 00:00:04.590 align:start position:0%
+We've just launched our MCP integration
+with<00:00:03.040><c> Word</c><00:00:03.280><c> Rocket.</c><00:00:03.920><c> So,</c><00:00:04.080><c> now</c><00:00:04.320><c> you</c><00:00:04.480><c> can</c>
+
+00:00:04.590 --> 00:00:04.600 align:start position:0%
+with Word Rocket. So, now you can
+ 
+
+00:00:04.600 --> 00:00:06.550 align:start position:0%
+with Word Rocket. So, now you can
+connect<00:00:05.080><c> Word</c><00:00:05.360><c> Rocket</c><00:00:05.680><c> to</c><00:00:05.840><c> any</c><00:00:06.200><c> of</c><00:00:06.400><c> your</c>
+
+00:00:06.550 --> 00:00:06.560 align:start position:0%
+connect Word Rocket to any of your
+ 
+
+00:00:06.560 --> 00:00:08.630 align:start position:0%
+connect Word Rocket to any of your
+favorite<00:00:07.040><c> tool.</c><00:00:07.760><c> One</c><00:00:07.920><c> of</c><00:00:08.000><c> the</c><00:00:08.080><c> biggest</c><00:00:08.440><c> use</c>
+
+00:00:08.630 --> 00:00:08.640 align:start position:0%
+favorite tool. One of the biggest use
+ 
+
+00:00:08.640 --> 00:00:10.950 align:start position:0%
+favorite tool. One of the biggest use
+cases<00:00:09.000><c> now</c><00:00:09.200><c> you</c><00:00:09.320><c> can</c><00:00:09.480><c> connect</c><00:00:10.280><c> Word</c><00:00:10.520><c> Rocket</c><00:00:10.880><c> to</c>
+
+00:00:10.950 --> 00:00:10.960 align:start position:0%
+cases now you can connect Word Rocket to
+ 
+
+00:00:10.960 --> 00:00:13.030 align:start position:0%
+cases now you can connect Word Rocket to
+your<00:00:11.120><c> favorite</c><00:00:11.760><c> large</c><00:00:12.120><c> language</c><00:00:12.440><c> model</c><00:00:12.800><c> like</c>
+
+00:00:13.030 --> 00:00:13.040 align:start position:0%
+your favorite large language model like
+ 
+
+00:00:13.040 --> 00:00:15.590 align:start position:0%
+your favorite large language model like
+Claude<00:00:13.680><c> or</c><00:00:13.880><c> Chat</c><00:00:14.160><c> GPT.</c><00:00:15.080><c> And</c><00:00:15.160><c> in</c><00:00:15.240><c> today's</c>
+
+00:00:15.590 --> 00:00:15.600 align:start position:0%
+Claude or Chat GPT. And in today's
+ 
+
+00:00:15.600 --> 00:00:17.670 align:start position:0%
+Claude or Chat GPT. And in today's
+video,<00:00:15.880><c> I'll</c><00:00:16.000><c> be</c><00:00:16.120><c> showing</c><00:00:16.400><c> you</c><00:00:16.520><c> exactly</c><00:00:17.440><c> how</c>
+
+00:00:17.670 --> 00:00:17.680 align:start position:0%
+video, I'll be showing you exactly how
+ 
+
+00:00:17.680 --> 00:00:19.430 align:start position:0%
+video, I'll be showing you exactly how
+to<00:00:17.840><c> do</c><00:00:17.960><c> so.</c><00:00:18.680><c> So,</c><00:00:18.800><c> first</c><00:00:19.040><c> you</c><00:00:19.120><c> want</c><00:00:19.240><c> to</c><00:00:19.320><c> head</c>
+
+00:00:19.430 --> 00:00:19.440 align:start position:0%
+to do so. So, first you want to head
+ 
+
+00:00:19.440 --> 00:00:22.430 align:start position:0%
+to do so. So, first you want to head
+over<00:00:19.680><c> to</c><00:00:20.400><c> docs</c><00:00:20.880><c> and</c><00:00:21.080><c> support.</c><00:00:22.120><c> And</c><00:00:22.280><c> then</c><00:00:22.360><c> we're</c>
+
+00:00:22.430 --> 00:00:22.440 align:start position:0%
+over to docs and support. And then we're
+ 
+
+00:00:22.440 --> 00:00:24.670 align:start position:0%
+over to docs and support. And then we're
+going<00:00:22.560><c> to</c><00:00:22.600><c> head</c><00:00:22.720><c> over</c><00:00:22.880><c> to</c><00:00:23.000><c> public</c><00:00:23.520><c> API.</c><00:00:24.560><c> And</c>
+
+00:00:24.670 --> 00:00:24.680 align:start position:0%
+going to head over to public API. And
+ 
+
+00:00:24.680 --> 00:00:26.790 align:start position:0%
+going to head over to public API. And
+then<00:00:24.760><c> we're</c><00:00:24.840><c> going</c><00:00:24.960><c> to</c><00:00:25.040><c> click</c><00:00:25.240><c> MCP</c><00:00:25.840><c> server.</c>
+
+00:00:26.790 --> 00:00:26.800 align:start position:0%
+then we're going to click MCP server.
+ 
+
+00:00:26.800 --> 00:00:28.030 align:start position:0%
+then we're going to click MCP server.
+Now,<00:00:27.080><c> I'm</c><00:00:27.160><c> going</c><00:00:27.280><c> to</c><00:00:27.360><c> make</c><00:00:27.480><c> this</c><00:00:27.600><c> a</c><00:00:27.680><c> little</c><00:00:27.840><c> bit</c>
+
+00:00:28.030 --> 00:00:28.040 align:start position:0%
+Now, I'm going to make this a little bit
+ 
+
+00:00:28.040 --> 00:00:30.150 align:start position:0%
+Now, I'm going to make this a little bit
+easier<00:00:28.360><c> for</c><00:00:28.520><c> you</c><00:00:28.600><c> to</c><00:00:28.760><c> access</c><00:00:29.120><c> MCP</c><00:00:29.720><c> right</c><00:00:30.000><c> from</c>
+
+00:00:30.150 --> 00:00:30.160 align:start position:0%
+easier for you to access MCP right from
+ 
+
+00:00:30.160 --> 00:00:31.790 align:start position:0%
+easier for you to access MCP right from
+the<00:00:30.280><c> Word</c><00:00:30.560><c> Rocket</c>
+
+00:00:31.790 --> 00:00:31.800 align:start position:0%
+the Word Rocket
+ 
+
+00:00:31.800 --> 00:00:33.950 align:start position:0%
+the Word Rocket
+dashboard.<00:00:32.759><c> But</c><00:00:32.880><c> once</c><00:00:33.080><c> you're</c><00:00:33.240><c> in</c><00:00:33.440><c> MCP</c>
+
+00:00:33.950 --> 00:00:33.960 align:start position:0%
+dashboard. But once you're in MCP
+ 
+
+00:00:33.960 --> 00:00:35.710 align:start position:0%
+dashboard. But once you're in MCP
+server,<00:00:34.400><c> it'll</c><00:00:34.720><c> walk</c><00:00:35.000><c> you</c><00:00:35.080><c> through</c><00:00:35.320><c> how</c><00:00:35.560><c> to</c>
+
+00:00:35.710 --> 00:00:35.720 align:start position:0%
+server, it'll walk you through how to
+ 
+
+00:00:35.720 --> 00:00:38.630 align:start position:0%
+server, it'll walk you through how to
+connect<00:00:36.680><c> Word</c><00:00:36.960><c> Rocket</c><00:00:37.320><c> to</c><00:00:37.400><c> your</c><00:00:37.560><c> favorite</c><00:00:38.280><c> AI</c>
+
+00:00:38.630 --> 00:00:38.640 align:start position:0%
+connect Word Rocket to your favorite AI
+ 
+
+00:00:38.640 --> 00:00:40.550 align:start position:0%
+connect Word Rocket to your favorite AI
+tools.<00:00:39.280><c> Do</c><00:00:39.480><c> note,</c><00:00:39.720><c> you</c><00:00:39.840><c> need</c><00:00:40.000><c> to</c><00:00:40.080><c> be</c><00:00:40.240><c> on</c><00:00:40.440><c> a</c>
+
+00:00:40.550 --> 00:00:40.560 align:start position:0%
+tools. Do note, you need to be on a
+ 
+
+00:00:40.560 --> 00:00:42.950 align:start position:0%
+tools. Do note, you need to be on a
+premium<00:00:41.200><c> or</c><00:00:41.360><c> an</c><00:00:41.560><c> agency</c><00:00:42.040><c> level</c><00:00:42.360><c> plan</c><00:00:42.640><c> in</c><00:00:42.760><c> order</c>
+
+00:00:42.950 --> 00:00:42.960 align:start position:0%
+premium or an agency level plan in order
+ 
+
+00:00:42.960 --> 00:00:45.710 align:start position:0%
+premium or an agency level plan in order
+to<00:00:43.080><c> get</c><00:00:43.280><c> access</c><00:00:43.720><c> to</c><00:00:43.880><c> MCP</c><00:00:45.000><c> because</c><00:00:45.240><c> this</c><00:00:45.440><c> is</c><00:00:45.640><c> a</c>
+
+00:00:45.710 --> 00:00:45.720 align:start position:0%
+to get access to MCP because this is a
+ 
+
+00:00:45.720 --> 00:00:48.270 align:start position:0%
+to get access to MCP because this is a
+premium<00:00:46.240><c> feature.</c><00:00:47.240><c> Now,</c><00:00:47.440><c> the</c><00:00:47.600><c> easiest</c><00:00:48.000><c> way</c><00:00:48.120><c> to</c>
+
+00:00:48.270 --> 00:00:48.280 align:start position:0%
+premium feature. Now, the easiest way to
+ 
+
+00:00:48.280 --> 00:00:52.950 align:start position:0%
+premium feature. Now, the easiest way to
+connect<00:00:49.400><c> to</c><00:00:49.680><c> Claude</c><00:00:50.280><c> or</c><00:00:50.640><c> OpenAI</c><00:00:51.760><c> Chat</c><00:00:51.960><c> GPT</c><00:00:52.800><c> is</c>
+
+00:00:52.950 --> 00:00:52.960 align:start position:0%
+connect to Claude or OpenAI Chat GPT is
+ 
+
+00:00:52.960 --> 00:00:57.030 align:start position:0%
+connect to Claude or OpenAI Chat GPT is
+by<00:00:53.080><c> copying</c><00:00:53.680><c> over</c><00:00:54.080><c> this</c><00:00:54.400><c> URL</c><00:00:55.440><c> https</c>
+
+00:00:57.030 --> 00:00:57.040 align:start position:0%
+by copying over this URL https
+ 
+
+00:00:57.040 --> 00:00:59.230 align:start position:0%
+by copying over this URL https
+wordrocketapi.com.
+
+00:00:59.230 --> 00:00:59.240 align:start position:0%
+wordrocketapi.com.
+ 
+
+00:00:59.240 --> 00:01:01.190 align:start position:0%
+wordrocketapi.com.
+So,<00:00:59.320><c> I'm</c><00:00:59.360><c> going</c><00:00:59.480><c> to</c><00:00:59.560><c> copy</c><00:00:59.880><c> over</c><00:01:00.360><c> this</c><00:01:00.600><c> API.</c><00:01:01.080><c> I'm</c>
+
+00:01:01.190 --> 00:01:01.200 align:start position:0%
+So, I'm going to copy over this API. I'm
+ 
+
+00:01:01.200 --> 00:01:05.150 align:start position:0%
+So, I'm going to copy over this API. I'm
+going<00:01:01.320><c> to</c><00:01:01.400><c> head</c><00:01:01.480><c> back</c><00:01:01.680><c> over</c><00:01:01.880><c> to</c><00:01:02.000><c> Claude.</c>
+
+00:01:05.150 --> 00:01:05.160 align:start position:0%
+ 
+ 
+
+00:01:05.160 --> 00:01:06.830 align:start position:0%
+ 
+And<00:01:05.400><c> then</c><00:01:05.600><c> I'm</c><00:01:05.760><c> going</c><00:01:05.920><c> to</c><00:01:06.040><c> head</c><00:01:06.240><c> over</c><00:01:06.520><c> to</c><00:01:06.680><c> my</c>
+
+00:01:06.830 --> 00:01:06.840 align:start position:0%
+And then I'm going to head over to my
+ 
+
+00:01:06.840 --> 00:01:09.750 align:start position:0%
+And then I'm going to head over to my
+profile<00:01:07.840><c> settings.</c>
+
+00:01:09.750 --> 00:01:09.760 align:start position:0%
+profile settings.
+ 
+
+00:01:09.760 --> 00:01:11.350 align:start position:0%
+profile settings.
+Connectors.
+
+00:01:11.350 --> 00:01:11.360 align:start position:0%
+Connectors.
+ 
+
+00:01:11.360 --> 00:01:13.950 align:start position:0%
+Connectors.
+We're<00:01:11.560><c> going</c><00:01:11.680><c> to</c><00:01:11.760><c> click</c><00:01:12.080><c> customize.</c>
+
+00:01:13.950 --> 00:01:13.960 align:start position:0%
+We're going to click customize.
+ 
+
+00:01:13.960 --> 00:01:16.830 align:start position:0%
+We're going to click customize.
+And<00:01:14.440><c> here</c><00:01:14.800><c> is</c><00:01:14.960><c> now</c><00:01:15.120><c> where</c><00:01:15.440><c> we</c><00:01:15.600><c> can</c><00:01:15.880><c> add</c><00:01:16.720><c> a</c>
+
+00:01:16.830 --> 00:01:16.840 align:start position:0%
+And here is now where we can add a
+ 
+
+00:01:16.840 --> 00:01:18.950 align:start position:0%
+And here is now where we can add a
+custom<00:01:17.360><c> connector.</c><00:01:17.840><c> So,</c><00:01:18.040><c> connector</c><00:01:18.880><c> we're</c>
+
+00:01:18.950 --> 00:01:18.960 align:start position:0%
+custom connector. So, connector we're
+ 
+
+00:01:18.960 --> 00:01:20.350 align:start position:0%
+custom connector. So, connector we're
+going<00:01:19.080><c> to</c><00:01:19.120><c> click</c><00:01:19.400><c> add.</c><00:01:19.680><c> We're</c><00:01:19.760><c> going</c><00:01:19.880><c> to</c><00:01:19.960><c> click</c>
+
+00:01:20.350 --> 00:01:20.360 align:start position:0%
+going to click add. We're going to click
+ 
+
+00:01:20.360 --> 00:01:22.590 align:start position:0%
+going to click add. We're going to click
+a<00:01:20.440><c> custom</c><00:01:21.000><c> connector.</c><00:01:21.920><c> I'm</c><00:01:22.040><c> going</c><00:01:22.160><c> to</c><00:01:22.240><c> name</c><00:01:22.440><c> it</c>
+
+00:01:22.590 --> 00:01:22.600 align:start position:0%
+a custom connector. I'm going to name it
+ 
+
+00:01:22.600 --> 00:01:24.550 align:start position:0%
+a custom connector. I'm going to name it
+Word<00:01:22.840><c> Rocket.</c>
+
+00:01:24.550 --> 00:01:24.560 align:start position:0%
+Word Rocket.
+ 
+
+00:01:24.560 --> 00:01:27.110 align:start position:0%
+Word Rocket.
+And<00:01:24.800><c> then</c><00:01:25.040><c> we're</c><00:01:25.120><c> going</c><00:01:25.240><c> to</c><00:01:25.360><c> paste</c><00:01:25.840><c> in</c><00:01:26.600><c> our</c>
+
+00:01:27.110 --> 00:01:27.120 align:start position:0%
+And then we're going to paste in our
+ 
+
+00:01:27.120 --> 00:01:30.950 align:start position:0%
+And then we're going to paste in our
+Word<00:01:27.440><c> Rocket</c><00:01:28.360><c> uh</c><00:01:28.640><c> URL.</c><00:01:29.640><c> Click</c><00:01:29.920><c> add.</c>
+
+00:01:30.950 --> 00:01:30.960 align:start position:0%
+Word Rocket uh URL. Click add.
+ 
+
+00:01:30.960 --> 00:01:35.870 align:start position:0%
+Word Rocket uh URL. Click add.
+Then<00:01:31.400><c> we</c><00:01:31.560><c> have</c><00:01:31.760><c> to</c><00:01:31.880><c> click</c><00:01:32.240><c> connect.</c>
+
+00:01:35.870 --> 00:01:35.880 align:start position:0%
+ 
+ 
+
+00:01:35.880 --> 00:01:37.630 align:start position:0%
+ 
+Just<00:01:36.040><c> give</c><00:01:36.200><c> it</c><00:01:36.280><c> a</c><00:01:36.360><c> few</c><00:01:36.600><c> seconds.</c><00:01:37.360><c> It's</c><00:01:37.520><c> going</c>
+
+00:01:37.630 --> 00:01:37.640 align:start position:0%
+Just give it a few seconds. It's going
+ 
+
+00:01:37.640 --> 00:01:40.110 align:start position:0%
+Just give it a few seconds. It's going
+to<00:01:37.720><c> authorize</c><00:01:38.280><c> your</c><00:01:38.440><c> MCP</c><00:01:39.080><c> connection.</c><00:01:40.000><c> So,</c>
+
+00:01:40.110 --> 00:01:40.120 align:start position:0%
+to authorize your MCP connection. So,
+ 
+
+00:01:40.120 --> 00:01:42.470 align:start position:0%
+to authorize your MCP connection. So,
+it's<00:01:40.240><c> going</c><00:01:40.360><c> to</c><00:01:41.040><c> allow</c><00:01:41.360><c> you</c><00:01:41.520><c> to</c><00:01:41.880><c> generate</c><00:01:42.360><c> and</c>
+
+00:01:42.470 --> 00:01:42.480 align:start position:0%
+it's going to allow you to generate and
+ 
+
+00:01:42.480 --> 00:01:44.750 align:start position:0%
+it's going to allow you to generate and
+manage<00:01:42.800><c> articles,</c><00:01:43.720><c> run</c><00:01:43.960><c> keyword</c><00:01:44.320><c> research,</c>
+
+00:01:44.750 --> 00:01:44.760 align:start position:0%
+manage articles, run keyword research,
+ 
+
+00:01:44.760 --> 00:01:47.710 align:start position:0%
+manage articles, run keyword research,
+publish<00:01:45.200><c> to</c><00:01:45.320><c> WordPress,</c><00:01:46.240><c> view</c><00:01:46.760><c> usage,</c><00:01:47.200><c> and</c><00:01:47.400><c> so</c>
+
+00:01:47.710 --> 00:01:47.720 align:start position:0%
+publish to WordPress, view usage, and so
+ 
+
+00:01:47.720 --> 00:01:50.190 align:start position:0%
+publish to WordPress, view usage, and so
+on.<00:01:48.280><c> So,</c><00:01:48.440><c> it's</c><00:01:48.560><c> going</c><00:01:48.800><c> to</c><00:01:48.920><c> ensure</c><00:01:49.320><c> that</c><00:01:49.520><c> that</c>
+
+00:01:50.190 --> 00:01:50.200 align:start position:0%
+on. So, it's going to ensure that that
+ 
+
+00:01:50.200 --> 00:01:51.830 align:start position:0%
+on. So, it's going to ensure that that
+you<00:01:50.520><c> are</c><00:01:50.760><c> uh</c><00:01:50.880><c> sorry,</c><00:01:51.080><c> that</c><00:01:51.280><c> account</c><00:01:51.720><c> that</c>
+
+00:01:51.830 --> 00:01:51.840 align:start position:0%
+you are uh sorry, that account that
+ 
+
+00:01:51.840 --> 00:01:54.590 align:start position:0%
+you are uh sorry, that account that
+you're<00:01:52.040><c> on</c><00:01:52.720><c> actually</c><00:01:53.200><c> has</c>
+
+00:01:54.590 --> 00:01:54.600 align:start position:0%
+you're on actually has
+ 
+
+00:01:54.600 --> 00:01:56.670 align:start position:0%
+you're on actually has
+um<00:01:55.080><c> MCP</c><00:01:55.640><c> integrated.</c><00:01:56.080><c> So,</c><00:01:56.160><c> that's</c><00:01:56.360><c> why</c><00:01:56.520><c> you</c>
+
+00:01:56.670 --> 00:01:56.680 align:start position:0%
+um MCP integrated. So, that's why you
+ 
+
+00:01:56.680 --> 00:02:00.790 align:start position:0%
+um MCP integrated. So, that's why you
+need<00:01:56.840><c> to</c><00:01:56.920><c> be</c><00:01:57.480><c> on</c><00:01:57.720><c> the</c><00:01:57.920><c> right</c><00:01:58.200><c> plan.</c>
+
+00:02:00.790 --> 00:02:00.800 align:start position:0%
+ 
+ 
+
+00:02:00.800 --> 00:02:02.750 align:start position:0%
+ 
+So,<00:02:00.920><c> if</c><00:02:01.000><c> I</c><00:02:01.080><c> head</c><00:02:01.200><c> back</c><00:02:01.440><c> over</c><00:02:01.600><c> to</c><00:02:01.720><c> Claude</c><00:02:02.040><c> now,</c>
+
+00:02:02.750 --> 00:02:02.760 align:start position:0%
+So, if I head back over to Claude now,
+ 
+
+00:02:02.760 --> 00:02:05.350 align:start position:0%
+So, if I head back over to Claude now,
+we<00:02:02.920><c> can</c><00:02:03.120><c> see</c><00:02:03.400><c> here</c><00:02:04.120><c> that</c><00:02:04.400><c> Word</c><00:02:04.680><c> Rocket</c><00:02:05.080><c> has</c>
+
+00:02:05.350 --> 00:02:05.360 align:start position:0%
+we can see here that Word Rocket has
+ 
+
+00:02:05.360 --> 00:02:07.190 align:start position:0%
+we can see here that Word Rocket has
+been<00:02:05.640><c> added.</c><00:02:06.120><c> Once</c><00:02:06.320><c> it's</c><00:02:06.440><c> connected,</c><00:02:06.880><c> now</c><00:02:07.080><c> we</c>
+
+00:02:07.190 --> 00:02:07.200 align:start position:0%
+been added. Once it's connected, now we
+ 
+
+00:02:07.200 --> 00:02:09.430 align:start position:0%
+been added. Once it's connected, now we
+just<00:02:07.400><c> have</c><00:02:07.560><c> to</c><00:02:07.680><c> change</c><00:02:08.080><c> our</c><00:02:08.320><c> permission.</c><00:02:09.360><c> So,</c>
+
+00:02:09.430 --> 00:02:09.440 align:start position:0%
+just have to change our permission. So,
+ 
+
+00:02:09.440 --> 00:02:10.870 align:start position:0%
+just have to change our permission. So,
+you<00:02:09.520><c> can</c><00:02:09.640><c> leave</c><00:02:09.880><c> it</c><00:02:10.000><c> so</c><00:02:10.119><c> that</c><00:02:10.360><c> Claude</c><00:02:10.600><c> can</c><00:02:10.720><c> do</c>
+
+00:02:10.870 --> 00:02:10.880 align:start position:0%
+you can leave it so that Claude can do
+ 
+
+00:02:10.880 --> 00:02:13.710 align:start position:0%
+you can leave it so that Claude can do
+whatever<00:02:11.440><c> it</c><00:02:11.680><c> like</c><00:02:12.000><c> with</c><00:02:12.280><c> the</c><00:02:13.000><c> Word</c><00:02:13.320><c> Rocket</c>
+
+00:02:13.710 --> 00:02:13.720 align:start position:0%
+whatever it like with the Word Rocket
+ 
+
+00:02:13.720 --> 00:02:15.630 align:start position:0%
+whatever it like with the Word Rocket
+integration,<00:02:14.360><c> or</c><00:02:14.680><c> you</c><00:02:14.800><c> can</c><00:02:15.280><c> tell</c><00:02:15.440><c> it</c><00:02:15.520><c> to</c>
+
+00:02:15.630 --> 00:02:15.640 align:start position:0%
+integration, or you can tell it to
+ 
+
+00:02:15.640 --> 00:02:17.750 align:start position:0%
+integration, or you can tell it to
+always<00:02:16.200><c> ask</c><00:02:16.560><c> you</c><00:02:16.680><c> before</c><00:02:17.040><c> it</c><00:02:17.160><c> does</c><00:02:17.320><c> something</c>
+
+00:02:17.750 --> 00:02:17.760 align:start position:0%
+always ask you before it does something
+ 
+
+00:02:17.760 --> 00:02:19.550 align:start position:0%
+always ask you before it does something
+with<00:02:17.959><c> this</c><00:02:18.120><c> integration.</c><00:02:19.080><c> You</c><00:02:19.200><c> know,</c><00:02:19.320><c> this</c><00:02:19.480><c> is</c>
+
+00:02:19.550 --> 00:02:19.560 align:start position:0%
+with this integration. You know, this is
+ 
+
+00:02:19.560 --> 00:02:20.670 align:start position:0%
+with this integration. You know, this is
+going<00:02:19.680><c> to</c><00:02:19.760><c> be</c><00:02:19.840><c> important</c><00:02:20.320><c> if</c><00:02:20.400><c> you</c><00:02:20.480><c> want</c><00:02:20.600><c> to</c>
+
+00:02:20.670 --> 00:02:20.680 align:start position:0%
+going to be important if you want to
+ 
+
+00:02:20.680 --> 00:02:23.870 align:start position:0%
+going to be important if you want to
+have<00:02:20.800><c> more</c><00:02:21.000><c> control</c><00:02:22.120><c> over</c><00:02:22.920><c> when</c><00:02:23.160><c> Claude</c><00:02:23.480><c> uses</c>
+
+00:02:23.870 --> 00:02:23.880 align:start position:0%
+have more control over when Claude uses
+ 
+
+00:02:23.880 --> 00:02:25.430 align:start position:0%
+have more control over when Claude uses
+this<00:02:24.120><c> integration.</c>
+
+00:02:25.430 --> 00:02:25.440 align:start position:0%
+this integration.
+ 
+
+00:02:25.440 --> 00:02:27.030 align:start position:0%
+this integration.
+So,<00:02:25.600><c> now</c><00:02:25.840><c> that</c><00:02:26.000><c> we</c><00:02:26.120><c> have</c><00:02:26.320><c> the</c><00:02:26.440><c> Word</c><00:02:26.720><c> Rocket</c>
+
+00:02:27.030 --> 00:02:27.040 align:start position:0%
+So, now that we have the Word Rocket
+ 
+
+00:02:27.040 --> 00:02:30.150 align:start position:0%
+So, now that we have the Word Rocket
+integrated<00:02:28.200><c> into</c><00:02:28.600><c> Claude,</c><00:02:29.480><c> everything</c><00:02:30.000><c> that</c>
+
+00:02:30.150 --> 00:02:30.160 align:start position:0%
+integrated into Claude, everything that
+ 
+
+00:02:30.160 --> 00:02:32.470 align:start position:0%
+integrated into Claude, everything that
+we<00:02:30.240><c> could</c><00:02:30.400><c> do</c><00:02:30.520><c> in</c><00:02:30.680><c> Word</c><00:02:30.959><c> Rocket,</c><00:02:31.400><c> we</c><00:02:31.520><c> can</c><00:02:31.760><c> now</c>
+
+00:02:32.470 --> 00:02:32.480 align:start position:0%
+we could do in Word Rocket, we can now
+ 
+
+00:02:32.480 --> 00:02:34.710 align:start position:0%
+we could do in Word Rocket, we can now
+do<00:02:32.680><c> it</c><00:02:32.920><c> in</c><00:02:33.080><c> Claude.</c><00:02:33.760><c> So,</c><00:02:33.880><c> for</c><00:02:34.000><c> example,</c><00:02:34.640><c> I</c>
+
+00:02:34.710 --> 00:02:34.720 align:start position:0%
+do it in Claude. So, for example, I
+ 
+
+00:02:34.720 --> 00:02:37.390 align:start position:0%
+do it in Claude. So, for example, I
+could<00:02:35.000><c> tell</c><00:02:35.520><c> Claude</c><00:02:36.400><c> to</c><00:02:36.520><c> write</c><00:02:36.760><c> an</c><00:02:36.880><c> article</c><00:02:37.320><c> on</c>
+
+00:02:37.390 --> 00:02:37.400 align:start position:0%
+could tell Claude to write an article on
+ 
+
+00:02:37.400 --> 00:02:39.590 align:start position:0%
+could tell Claude to write an article on
+the<00:02:37.520><c> most</c><00:02:37.840><c> popular</c><00:02:38.280><c> topic</c><00:02:39.080><c> in</c><00:02:39.240><c> the</c><00:02:39.360><c> real</c>
+
+00:02:39.590 --> 00:02:39.600 align:start position:0%
+the most popular topic in the real
+ 
+
+00:02:39.600 --> 00:02:42.030 align:start position:0%
+the most popular topic in the real
+estate<00:02:39.920><c> Toronto</c><00:02:40.280><c> niche</c><00:02:40.640><c> for</c><00:02:40.880><c> today,</c><00:02:41.640><c> include</c>
+
+00:02:42.030 --> 00:02:42.040 align:start position:0%
+estate Toronto niche for today, include
+ 
+
+00:02:42.040 --> 00:02:44.390 align:start position:0%
+estate Toronto niche for today, include
+3,000<00:02:42.480><c> words,</c><00:02:43.000><c> two</c><00:02:43.160><c> images,</c><00:02:43.720><c> use</c><00:02:43.959><c> the</c><00:02:44.120><c> web</c>
+
+00:02:44.390 --> 00:02:44.400 align:start position:0%
+3,000 words, two images, use the web
+ 
+
+00:02:44.400 --> 00:02:46.949 align:start position:0%
+3,000 words, two images, use the web
+mode,<00:02:45.040><c> and</c><00:02:45.240><c> write</c><00:02:45.520><c> for</c><00:02:45.640><c> my</c><00:02:45.840><c> specific</c><00:02:46.440><c> client,</c>
+
+00:02:46.949 --> 00:02:46.959 align:start position:0%
+mode, and write for my specific client,
+ 
+
+00:02:46.959 --> 00:02:49.270 align:start position:0%
+mode, and write for my specific client,
+use<00:02:47.200><c> their</c><00:02:47.360><c> site</c><00:02:47.720><c> map</c><00:02:48.440><c> um</c><00:02:48.760><c> for</c><00:02:48.920><c> internal</c>
+
+00:02:49.270 --> 00:02:49.280 align:start position:0%
+use their site map um for internal
+ 
+
+00:02:49.280 --> 00:02:51.390 align:start position:0%
+use their site map um for internal
+linking,<00:02:49.640><c> and</c><00:02:49.800><c> post</c><00:02:50.160><c> directly</c><00:02:50.680><c> over</c><00:02:51.000><c> to</c><00:02:51.200><c> their</c>
+
+00:02:51.390 --> 00:02:51.400 align:start position:0%
+linking, and post directly over to their
+ 
+
+00:02:51.400 --> 00:02:54.230 align:start position:0%
+linking, and post directly over to their
+WordPress<00:02:51.920><c> site</c><00:02:52.640><c> when</c><00:02:53.000><c> completed.</c><00:02:53.959><c> Right?</c>
+
+00:02:54.230 --> 00:02:54.240 align:start position:0%
+WordPress site when completed. Right?
+ 
+
+00:02:54.240 --> 00:02:55.670 align:start position:0%
+WordPress site when completed. Right?
+So,<00:02:54.360><c> essentially,</c><00:02:54.800><c> again,</c><00:02:55.120><c> what</c><00:02:55.280><c> I'm</c><00:02:55.440><c> doing</c>
+
+00:02:55.670 --> 00:02:55.680 align:start position:0%
+So, essentially, again, what I'm doing
+ 
+
+00:02:55.680 --> 00:02:58.630 align:start position:0%
+So, essentially, again, what I'm doing
+here<00:02:55.840><c> is</c><00:02:56.000><c> I'm</c><00:02:56.120><c> combining</c><00:02:56.840><c> Word</c><00:02:57.160><c> Rocket</c><00:02:58.040><c> with</c>
+
+00:02:58.630 --> 00:02:58.640 align:start position:0%
+here is I'm combining Word Rocket with
+ 
+
+00:02:58.640 --> 00:03:00.550 align:start position:0%
+here is I'm combining Word Rocket with
+Claude,<00:02:59.080><c> so</c><00:02:59.239><c> Claude</c><00:02:59.560><c> can</c><00:02:59.680><c> do</c><00:02:59.800><c> some</c><00:02:59.959><c> additional</c>
+
+00:03:00.550 --> 00:03:00.560 align:start position:0%
+Claude, so Claude can do some additional
+ 
+
+00:03:00.560 --> 00:03:03.070 align:start position:0%
+Claude, so Claude can do some additional
+research,<00:03:01.720><c> and</c><00:03:01.840><c> then</c><00:03:02.000><c> send</c><00:03:02.320><c> that</c><00:03:02.519><c> information</c>
+
+00:03:03.070 --> 00:03:03.080 align:start position:0%
+research, and then send that information
+ 
+
+00:03:03.080 --> 00:03:05.750 align:start position:0%
+research, and then send that information
+over<00:03:03.840><c> to</c><00:03:04.160><c> Word</c><00:03:04.440><c> Rocket.</c><00:03:05.080><c> I</c><00:03:05.200><c> could</c><00:03:05.400><c> even</c><00:03:05.600><c> tell</c>
+
+00:03:05.750 --> 00:03:05.760 align:start position:0%
+over to Word Rocket. I could even tell
+ 
+
+00:03:05.760 --> 00:03:07.509 align:start position:0%
+over to Word Rocket. I could even tell
+it<00:03:05.880><c> to</c><00:03:05.959><c> do</c><00:03:06.080><c> its</c><00:03:06.280><c> own</c><00:03:06.519><c> research</c><00:03:06.920><c> in</c><00:03:07.040><c> Claude,</c><00:03:07.360><c> and</c>
+
+00:03:07.509 --> 00:03:07.519 align:start position:0%
+it to do its own research in Claude, and
+ 
+
+00:03:07.519 --> 00:03:08.990 align:start position:0%
+it to do its own research in Claude, and
+send<00:03:07.760><c> that</c><00:03:08.000><c> over</c><00:03:08.360><c> as</c><00:03:08.560><c> additional</c>
+
+00:03:08.990 --> 00:03:09.000 align:start position:0%
+send that over as additional
+ 
+
+00:03:09.000 --> 00:03:11.670 align:start position:0%
+send that over as additional
+instructions,<00:03:10.120><c> so</c><00:03:10.280><c> that</c><00:03:10.519><c> the</c><00:03:10.720><c> article</c><00:03:11.200><c> can</c><00:03:11.400><c> be</c>
+
+00:03:11.670 --> 00:03:11.680 align:start position:0%
+instructions, so that the article can be
+ 
+
+00:03:11.680 --> 00:03:14.350 align:start position:0%
+instructions, so that the article can be
+even<00:03:12.400><c> better.</c><00:03:13.160><c> Right?</c><00:03:13.360><c> So,</c><00:03:13.480><c> once</c><00:03:13.720><c> I</c><00:03:13.800><c> go</c><00:03:13.959><c> ahead</c>
+
+00:03:14.350 --> 00:03:14.360 align:start position:0%
+even better. Right? So, once I go ahead
+ 
+
+00:03:14.360 --> 00:03:16.070 align:start position:0%
+even better. Right? So, once I go ahead
+and<00:03:14.560><c> I</c><00:03:14.640><c> send</c><00:03:14.880><c> this</c><00:03:15.040><c> over,</c><00:03:15.400><c> I</c><00:03:15.519><c> am</c><00:03:15.720><c> using</c><00:03:15.959><c> the</c>
+
+00:03:16.070 --> 00:03:16.080 align:start position:0%
+and I send this over, I am using the
+ 
+
+00:03:16.080 --> 00:03:18.110 align:start position:0%
+and I send this over, I am using the
+cold<00:03:16.320><c> work</c><00:03:16.519><c> mode,</c><00:03:17.080><c> but</c><00:03:17.280><c> you</c><00:03:17.320><c> can</c><00:03:17.480><c> also</c><00:03:17.880><c> use</c>
+
+00:03:18.110 --> 00:03:18.120 align:start position:0%
+cold work mode, but you can also use
+ 
+
+00:03:18.120 --> 00:03:20.350 align:start position:0%
+cold work mode, but you can also use
+this<00:03:18.360><c> in</c><00:03:18.480><c> the</c><00:03:18.640><c> chat</c><00:03:19.040><c> mode,</c><00:03:19.519><c> and</c><00:03:19.640><c> even</c><00:03:19.880><c> use</c><00:03:20.160><c> it</c>
+
+00:03:20.350 --> 00:03:20.360 align:start position:0%
+this in the chat mode, and even use it
+ 
+
+00:03:20.360 --> 00:03:22.949 align:start position:0%
+this in the chat mode, and even use it
+on<00:03:20.560><c> the</c><00:03:20.760><c> web</c><00:03:21.160><c> app</c><00:03:21.480><c> interface.</c><00:03:22.640><c> It's</c><00:03:22.800><c> going</c><00:03:22.920><c> to</c>
+
+00:03:22.949 --> 00:03:22.959 align:start position:0%
+on the web app interface. It's going to
+ 
+
+00:03:22.959 --> 00:03:24.670 align:start position:0%
+on the web app interface. It's going to
+kick<00:03:23.120><c> everything</c><00:03:23.480><c> off,</c><00:03:23.760><c> research</c><00:03:24.280><c> Toronto</c>
+
+00:03:24.670 --> 00:03:24.680 align:start position:0%
+kick everything off, research Toronto
+ 
+
+00:03:24.680 --> 00:03:26.110 align:start position:0%
+kick everything off, research Toronto
+real<00:03:24.880><c> estate</c><00:03:25.120><c> trends,</c><00:03:25.560><c> check</c><00:03:25.760><c> your</c><00:03:25.880><c> Word</c>
+
+00:03:26.110 --> 00:03:26.120 align:start position:0%
+real estate trends, check your Word
+ 
+
+00:03:26.120 --> 00:03:28.030 align:start position:0%
+real estate trends, check your Word
+Rocket<00:03:26.360><c> account,</c><00:03:26.720><c> and</c><00:03:26.880><c> grab</c><00:03:27.480><c> Brain</c><00:03:27.720><c> Voice</c><00:03:27.959><c> at</c>
+
+00:03:28.030 --> 00:03:28.040 align:start position:0%
+Rocket account, and grab Brain Voice at
+ 
+
+00:03:28.040 --> 00:03:30.550 align:start position:0%
+Rocket account, and grab Brain Voice at
+all<00:03:28.480><c> at</c><00:03:28.720><c> once.</c><00:03:29.760><c> Right?</c><00:03:29.959><c> So,</c><00:03:30.040><c> you</c><00:03:30.120><c> can</c><00:03:30.239><c> see</c><00:03:30.400><c> here</c>
+
+00:03:30.550 --> 00:03:30.560 align:start position:0%
+all at once. Right? So, you can see here
+ 
+
+00:03:30.560 --> 00:03:32.190 align:start position:0%
+all at once. Right? So, you can see here
+on<00:03:30.640><c> the</c><00:03:30.760><c> right-hand</c><00:03:31.200><c> side,</c><00:03:31.519><c> it's</c><00:03:31.680><c> using</c><00:03:32.080><c> the</c>
+
+00:03:32.190 --> 00:03:32.200 align:start position:0%
+on the right-hand side, it's using the
+ 
+
+00:03:32.200 --> 00:03:34.430 align:start position:0%
+on the right-hand side, it's using the
+Word<00:03:32.519><c> Rocket</c><00:03:33.000><c> connector</c><00:03:33.840><c> that</c><00:03:33.959><c> we</c><00:03:34.080><c> just</c><00:03:34.280><c> set</c>
+
+00:03:34.430 --> 00:03:34.440 align:start position:0%
+Word Rocket connector that we just set
+ 
+
+00:03:34.440 --> 00:03:36.229 align:start position:0%
+Word Rocket connector that we just set
+up,<00:03:34.600><c> and</c><00:03:34.720><c> it's</c><00:03:34.840><c> also</c><00:03:35.160><c> using</c><00:03:35.480><c> the</c><00:03:35.640><c> web</c><00:03:35.880><c> search</c>
+
+00:03:36.229 --> 00:03:36.239 align:start position:0%
+up, and it's also using the web search
+ 
+
+00:03:36.239 --> 00:03:38.350 align:start position:0%
+up, and it's also using the web search
+mode.<00:03:37.160><c> While</c><00:03:37.360><c> this</c><00:03:37.519><c> is</c><00:03:37.680><c> writing,</c><00:03:38.000><c> as</c><00:03:38.120><c> you</c><00:03:38.200><c> can</c>
+
+00:03:38.350 --> 00:03:38.360 align:start position:0%
+mode. While this is writing, as you can
+ 
+
+00:03:38.360 --> 00:03:40.670 align:start position:0%
+mode. While this is writing, as you can
+see,<00:03:38.519><c> this</c><00:03:38.760><c> opens</c><00:03:39.120><c> up</c><00:03:39.239><c> a</c><00:03:39.280><c> lot</c><00:03:39.760><c> of</c><00:03:39.959><c> use</c><00:03:40.239><c> cases</c>
+
+00:03:40.670 --> 00:03:40.680 align:start position:0%
+see, this opens up a lot of use cases
+ 
+
+00:03:40.680 --> 00:03:42.790 align:start position:0%
+see, this opens up a lot of use cases
+and<00:03:40.840><c> opportunities</c><00:03:41.880><c> for</c><00:03:42.080><c> what</c><00:03:42.320><c> now</c><00:03:42.519><c> you</c><00:03:42.640><c> can</c>
+
+00:03:42.790 --> 00:03:42.800 align:start position:0%
+and opportunities for what now you can
+ 
+
+00:03:42.800 --> 00:03:45.990 align:start position:0%
+and opportunities for what now you can
+do<00:03:43.320><c> with</c><00:03:43.600><c> Word</c><00:03:43.840><c> Rocket</c><00:03:44.280><c> using</c><00:03:44.640><c> Claude.</c><00:03:45.480><c> So,</c>
+
+00:03:45.990 --> 00:03:46.000 align:start position:0%
+do with Word Rocket using Claude. So,
+ 
+
+00:03:46.000 --> 00:03:48.590 align:start position:0%
+do with Word Rocket using Claude. So,
+you<00:03:46.120><c> can</c><00:03:46.280><c> actually</c><00:03:46.720><c> use</c><00:03:47.519><c> the</c><00:03:47.600><c> schedule</c><00:03:48.120><c> mode</c>
+
+00:03:48.590 --> 00:03:48.600 align:start position:0%
+you can actually use the schedule mode
+ 
+
+00:03:48.600 --> 00:03:50.470 align:start position:0%
+you can actually use the schedule mode
+to<00:03:48.720><c> schedule</c><00:03:49.160><c> this</c><00:03:49.320><c> to</c><00:03:49.440><c> happen</c><00:03:49.800><c> every</c><00:03:50.120><c> single</c>
+
+00:03:50.470 --> 00:03:50.480 align:start position:0%
+to schedule this to happen every single
+ 
+
+00:03:50.480 --> 00:03:52.310 align:start position:0%
+to schedule this to happen every single
+day<00:03:51.000><c> for</c><00:03:51.200><c> your</c><00:03:51.360><c> specific</c><00:03:51.880><c> niche.</c><00:03:52.080><c> So,</c>
+
+00:03:52.310 --> 00:03:52.320 align:start position:0%
+day for your specific niche. So,
+ 
+
+00:03:52.320 --> 00:03:53.950 align:start position:0%
+day for your specific niche. So,
+articles<00:03:52.760><c> are</c><00:03:52.840><c> going</c><00:03:53.000><c> to</c><00:03:53.080><c> be</c><00:03:53.160><c> researched,</c>
+
+00:03:53.950 --> 00:03:53.960 align:start position:0%
+articles are going to be researched,
+ 
+
+00:03:53.960 --> 00:03:55.790 align:start position:0%
+articles are going to be researched,
+written,<00:03:54.320><c> and</c><00:03:54.480><c> posted</c><00:03:54.920><c> directly</c><00:03:55.360><c> over</c><00:03:55.680><c> to</c>
+
+00:03:55.790 --> 00:03:55.800 align:start position:0%
+written, and posted directly over to
+ 
+
+00:03:55.800 --> 00:03:58.590 align:start position:0%
+written, and posted directly over to
+your<00:03:55.960><c> WordPress</c><00:03:56.400><c> site</c><00:03:57.160><c> using</c><00:03:57.520><c> Claude</c><00:03:58.240><c> and</c>
+
+00:03:58.590 --> 00:03:58.600 align:start position:0%
+your WordPress site using Claude and
+ 
+
+00:03:58.600 --> 00:04:01.150 align:start position:0%
+your WordPress site using Claude and
+Word<00:03:58.840><c> Rocket.</c>
+
+00:04:01.150 --> 00:04:01.160 align:start position:0%
+Word Rocket.
+ 
+
+00:04:01.160 --> 00:04:02.750 align:start position:0%
+Word Rocket.
+So,<00:04:01.320><c> as</c><00:04:01.440><c> we</c><00:04:01.520><c> can</c><00:04:01.640><c> see</c><00:04:01.800><c> here,</c><00:04:02.080><c> it</c><00:04:02.280><c> was</c><00:04:02.440><c> able</c><00:04:02.640><c> to</c>
+
+00:04:02.750 --> 00:04:02.760 align:start position:0%
+So, as we can see here, it was able to
+ 
+
+00:04:02.760 --> 00:04:04.310 align:start position:0%
+So, as we can see here, it was able to
+get<00:04:02.920><c> everything.</c><00:04:03.320><c> It</c><00:04:03.440><c> got</c><00:04:03.640><c> the</c><00:04:03.760><c> client,</c><00:04:04.200><c> the</c>
+
+00:04:04.310 --> 00:04:04.320 align:start position:0%
+get everything. It got the client, the
+ 
+
+00:04:04.320 --> 00:04:06.910 align:start position:0%
+get everything. It got the client, the
+site<00:04:04.560><c> map,</c><00:04:05.120><c> the</c><00:04:05.240><c> WordPress,</c><00:04:06.200><c> and</c><00:04:06.440><c> it</c><00:04:06.520><c> found</c><00:04:06.840><c> a</c>
+
+00:04:06.910 --> 00:04:06.920 align:start position:0%
+site map, the WordPress, and it found a
+ 
+
+00:04:06.920 --> 00:04:09.310 align:start position:0%
+site map, the WordPress, and it found a
+topic,<00:04:07.560><c> and</c><00:04:07.720><c> I</c><00:04:07.760><c> was</c><00:04:07.920><c> generating</c><00:04:08.560><c> the</c><00:04:08.680><c> 3,000</c>
+
+00:04:09.310 --> 00:04:09.320 align:start position:0%
+topic, and I was generating the 3,000
+ 
+
+00:04:09.320 --> 00:04:11.630 align:start position:0%
+topic, and I was generating the 3,000
+word<00:04:09.640><c> article.</c><00:04:10.520><c> So,</c><00:04:10.600><c> if</c><00:04:10.720><c> I</c><00:04:10.760><c> actually</c><00:04:11.040><c> go</c><00:04:11.280><c> over</c>
+
+00:04:11.630 --> 00:04:11.640 align:start position:0%
+word article. So, if I actually go over
+ 
+
+00:04:11.640 --> 00:04:14.310 align:start position:0%
+word article. So, if I actually go over
+back,<00:04:12.240><c> and</c><00:04:12.320><c> if</c><00:04:12.440><c> I</c><00:04:12.520><c> go</c><00:04:12.680><c> under</c><00:04:12.920><c> my</c><00:04:13.120><c> content,</c><00:04:14.200><c> I</c>
+
+00:04:14.310 --> 00:04:14.320 align:start position:0%
+back, and if I go under my content, I
+ 
+
+00:04:14.320 --> 00:04:16.670 align:start position:0%
+back, and if I go under my content, I
+should<00:04:14.640><c> be</c><00:04:14.800><c> able</c><00:04:15.040><c> to</c><00:04:15.160><c> see</c><00:04:15.280><c> that</c><00:04:15.520><c> article,</c><00:04:16.280><c> and</c>
+
+00:04:16.670 --> 00:04:16.680 align:start position:0%
+should be able to see that article, and
+ 
+
+00:04:16.680 --> 00:04:18.270 align:start position:0%
+should be able to see that article, and
+we<00:04:16.799><c> see</c><00:04:16.959><c> the</c><00:04:17.079><c> article</c><00:04:17.400><c> here</c><00:04:17.640><c> is</c><00:04:17.799><c> being</c>
+
+00:04:18.270 --> 00:04:18.280 align:start position:0%
+we see the article here is being
+ 
+
+00:04:18.280 --> 00:04:20.110 align:start position:0%
+we see the article here is being
+generated.
+
+00:04:20.110 --> 00:04:20.120 align:start position:0%
+generated.
+ 
+
+00:04:20.120 --> 00:04:21.949 align:start position:0%
+generated.
+So,<00:04:20.280><c> we</c><00:04:20.400><c> know</c><00:04:20.600><c> for</c><00:04:20.760><c> a</c><00:04:20.840><c> fact</c><00:04:21.519><c> that</c><00:04:21.640><c> this</c><00:04:21.840><c> is</c>
+
+00:04:21.949 --> 00:04:21.959 align:start position:0%
+So, we know for a fact that this is
+ 
+
+00:04:21.959 --> 00:04:23.950 align:start position:0%
+So, we know for a fact that this is
+working.<00:04:22.640><c> So,</c><00:04:22.760><c> just</c><00:04:22.919><c> give</c><00:04:23.080><c> it</c><00:04:23.160><c> a</c><00:04:23.200><c> few</c><00:04:23.440><c> minutes</c>
+
+00:04:23.950 --> 00:04:23.960 align:start position:0%
+working. So, just give it a few minutes
+ 
+
+00:04:23.960 --> 00:04:26.230 align:start position:0%
+working. So, just give it a few minutes
+for<00:04:24.120><c> it</c><00:04:24.240><c> to</c><00:04:24.360><c> continue.</c>
+
+00:04:26.230 --> 00:04:26.240 align:start position:0%
+for it to continue.
+ 
+
+00:04:26.240 --> 00:04:28.070 align:start position:0%
+for it to continue.
+If<00:04:26.360><c> you</c><00:04:26.480><c> go</c><00:04:26.600><c> back</c><00:04:26.880><c> over</c><00:04:27.200><c> to</c><00:04:27.440><c> connectors</c><00:04:27.919><c> here,</c>
+
+00:04:28.070 --> 00:04:28.080 align:start position:0%
+If you go back over to connectors here,
+ 
+
+00:04:28.080 --> 00:04:30.070 align:start position:0%
+If you go back over to connectors here,
+we<00:04:28.200><c> can</c><00:04:28.360><c> see</c><00:04:28.520><c> that</c><00:04:28.680><c> there's</c><00:04:28.880><c> also</c><00:04:29.200><c> a</c><00:04:29.240><c> lot</c><00:04:29.640><c> of</c>
+
+00:04:30.070 --> 00:04:30.080 align:start position:0%
+we can see that there's also a lot of
+ 
+
+00:04:30.080 --> 00:04:32.030 align:start position:0%
+we can see that there's also a lot of
+other<00:04:30.360><c> connectors</c><00:04:30.840><c> in</c><00:04:30.960><c> which</c><00:04:31.160><c> you</c><00:04:31.280><c> can</c><00:04:31.480><c> use.</c>
+
+00:04:32.030 --> 00:04:32.040 align:start position:0%
+other connectors in which you can use.
+ 
+
+00:04:32.040 --> 00:04:33.550 align:start position:0%
+other connectors in which you can use.
+So,<00:04:32.160><c> we</c><00:04:32.280><c> see</c><00:04:32.440><c> that</c><00:04:32.600><c> there's</c><00:04:32.800><c> a</c><00:04:32.840><c> connector</c><00:04:33.360><c> for</c>
+
+00:04:33.550 --> 00:04:33.560 align:start position:0%
+So, we see that there's a connector for
+ 
+
+00:04:33.560 --> 00:04:35.630 align:start position:0%
+So, we see that there's a connector for
+SimilarWeb,<00:04:34.640><c> there's</c><00:04:34.840><c> a</c><00:04:34.880><c> connector</c><00:04:35.360><c> for</c>
+
+00:04:35.630 --> 00:04:35.640 align:start position:0%
+SimilarWeb, there's a connector for
+ 
+
+00:04:35.640 --> 00:04:38.390 align:start position:0%
+SimilarWeb, there's a connector for
+Ahrefs,<00:04:36.600><c> there's</c><00:04:36.760><c> a</c><00:04:36.800><c> connector</c><00:04:37.200><c> for</c><00:04:37.400><c> Canva,</c>
+
+00:04:38.390 --> 00:04:38.400 align:start position:0%
+Ahrefs, there's a connector for Canva,
+ 
+
+00:04:38.400 --> 00:04:39.790 align:start position:0%
+Ahrefs, there's a connector for Canva,
+there's<00:04:38.560><c> a</c><00:04:38.600><c> connector</c><00:04:39.000><c> for</c><00:04:39.200><c> HubSpot,</c>
+
+00:04:39.790 --> 00:04:39.800 align:start position:0%
+there's a connector for HubSpot,
+ 
+
+00:04:39.800 --> 00:04:42.510 align:start position:0%
+there's a connector for HubSpot,
+booking.com<00:04:40.520><c> booking.com,</c><00:04:41.680><c> so</c><00:04:42.000><c> on</c><00:04:42.200><c> and</c><00:04:42.320><c> so</c>
+
+00:04:42.510 --> 00:04:42.520 align:start position:0%
+booking.com booking.com, so on and so
+ 
+
+00:04:42.520 --> 00:04:44.750 align:start position:0%
+booking.com booking.com, so on and so
+forth.<00:04:43.200><c> So,</c><00:04:43.360><c> whatever</c><00:04:43.840><c> niche</c><00:04:44.200><c> you're</c><00:04:44.400><c> in,</c><00:04:44.640><c> you</c>
+
+00:04:44.750 --> 00:04:44.760 align:start position:0%
+forth. So, whatever niche you're in, you
+ 
+
+00:04:44.760 --> 00:04:47.390 align:start position:0%
+forth. So, whatever niche you're in, you
+can<00:04:45.000><c> find</c><00:04:45.520><c> a</c><00:04:45.640><c> new</c><00:04:46.480><c> workflow</c><00:04:46.960><c> that</c><00:04:47.080><c> you</c><00:04:47.200><c> can</c>
+
+00:04:47.390 --> 00:04:47.400 align:start position:0%
+can find a new workflow that you can
+ 
+
+00:04:47.400 --> 00:04:49.190 align:start position:0%
+can find a new workflow that you can
+create.<00:04:47.760><c> For</c><00:04:47.880><c> example,</c><00:04:48.480><c> if</c><00:04:48.640><c> you're,</c><00:04:49.120><c> you</c>
+
+00:04:49.190 --> 00:04:49.200 align:start position:0%
+create. For example, if you're, you
+ 
+
+00:04:49.200 --> 00:04:50.630 align:start position:0%
+create. For example, if you're, you
+know,<00:04:49.320><c> within</c><00:04:49.680><c> the</c><00:04:49.840><c> travel</c><00:04:50.240><c> niche</c><00:04:50.440><c> and</c><00:04:50.560><c> you</c>
+
+00:04:50.630 --> 00:04:50.640 align:start position:0%
+know, within the travel niche and you
+ 
+
+00:04:50.640 --> 00:04:52.350 align:start position:0%
+know, within the travel niche and you
+write<00:04:50.800><c> travel</c><00:04:51.160><c> content,</c><00:04:51.640><c> you</c><00:04:51.760><c> can</c><00:04:51.960><c> connect</c>
+
+00:04:52.350 --> 00:04:52.360 align:start position:0%
+write travel content, you can connect
+ 
+
+00:04:52.360 --> 00:04:55.750 align:start position:0%
+write travel content, you can connect
+Tripadvisor<00:04:53.640><c> to</c><00:04:53.760><c> then</c><00:04:54.360><c> find</c><00:04:54.680><c> you</c><00:04:54.760><c> the</c><00:04:54.880><c> most</c><00:04:55.600><c> um</c>
+
+00:04:55.750 --> 00:04:55.760 align:start position:0%
+Tripadvisor to then find you the most um
+ 
+
+00:04:55.760 --> 00:04:59.550 align:start position:0%
+Tripadvisor to then find you the most um
+up-to-date<00:04:56.440><c> trips</c><00:04:57.080><c> for</c><00:04:57.280><c> January</c><00:04:57.840><c> of</c><00:04:58.000><c> 2027,</c>
+
+00:04:59.550 --> 00:04:59.560 align:start position:0%
+up-to-date trips for January of 2027,
+ 
+
+00:04:59.560 --> 00:05:01.990 align:start position:0%
+up-to-date trips for January of 2027,
+and<00:04:59.760><c> write</c><00:04:59.919><c> an</c><00:05:00.080><c> article</c><00:05:00.800><c> about</c><00:05:01.160><c> that.</c><00:05:01.840><c> You</c>
+
+00:05:01.990 --> 00:05:02.000 align:start position:0%
+and write an article about that. You
+ 
+
+00:05:02.000 --> 00:05:03.670 align:start position:0%
+and write an article about that. You
+could<00:05:02.160><c> use</c><00:05:02.360><c> the</c><00:05:02.520><c> HubSpot</c><00:05:03.000><c> integration</c><00:05:03.560><c> to</c>
+
+00:05:03.670 --> 00:05:03.680 align:start position:0%
+could use the HubSpot integration to
+ 
+
+00:05:03.680 --> 00:05:06.710 align:start position:0%
+could use the HubSpot integration to
+pull<00:05:04.520><c> data</c><00:05:05.280><c> that's</c><00:05:05.480><c> relevant</c><00:05:06.040><c> or</c><00:05:06.200><c> analytics</c>
+
+00:05:06.710 --> 00:05:06.720 align:start position:0%
+pull data that's relevant or analytics
+ 
+
+00:05:06.720 --> 00:05:08.270 align:start position:0%
+pull data that's relevant or analytics
+that's<00:05:06.960><c> relevant,</c><00:05:07.360><c> and</c><00:05:07.520><c> use</c><00:05:07.800><c> that</c><00:05:08.000><c> to</c><00:05:08.080><c> then</c>
+
+00:05:08.270 --> 00:05:08.280 align:start position:0%
+that's relevant, and use that to then
+ 
+
+00:05:08.280 --> 00:05:11.550 align:start position:0%
+that's relevant, and use that to then
+write<00:05:08.560><c> content</c><00:05:09.560><c> for</c><00:05:09.880><c> an</c><00:05:10.000><c> internal</c><00:05:10.440><c> meeting</c>
+
+00:05:11.550 --> 00:05:11.560 align:start position:0%
+write content for an internal meeting
+ 
+
+00:05:11.560 --> 00:05:13.710 align:start position:0%
+write content for an internal meeting
+or<00:05:11.680><c> just</c><00:05:11.880><c> to</c><00:05:11.960><c> get</c><00:05:12.120><c> an</c><00:05:12.240><c> idea</c><00:05:13.080><c> of</c><00:05:13.280><c> different</c>
+
+00:05:13.710 --> 00:05:13.720 align:start position:0%
+or just to get an idea of different
+ 
+
+00:05:13.720 --> 00:05:15.550 align:start position:0%
+or just to get an idea of different
+analysis.<00:05:14.240><c> So,</c><00:05:14.360><c> you</c><00:05:14.480><c> can</c><00:05:14.600><c> see</c><00:05:14.760><c> here</c><00:05:14.960><c> that</c><00:05:15.440><c> if</c>
+
+00:05:15.550 --> 00:05:15.560 align:start position:0%
+analysis. So, you can see here that if
+ 
+
+00:05:15.560 --> 00:05:17.110 align:start position:0%
+analysis. So, you can see here that if
+you<00:05:15.640><c> go</c><00:05:15.800><c> through</c><00:05:15.960><c> connectors,</c><00:05:16.480><c> there's</c><00:05:16.640><c> a</c><00:05:16.720><c> lot</c>
+
+00:05:17.110 --> 00:05:17.120 align:start position:0%
+you go through connectors, there's a lot
+ 
+
+00:05:17.120 --> 00:05:18.350 align:start position:0%
+you go through connectors, there's a lot
+of<00:05:17.240><c> different</c><00:05:17.560><c> connectors.</c><00:05:18.040><c> There's</c>
+
+00:05:18.350 --> 00:05:18.360 align:start position:0%
+of different connectors. There's
+ 
+
+00:05:18.360 --> 00:05:21.909 align:start position:0%
+of different connectors. There's
+monday.com,<00:05:19.680><c> there's</c><00:05:19.840><c> booking.com,</c><00:05:21.000><c> Zapier,</c>
+
+00:05:21.909 --> 00:05:21.919 align:start position:0%
+monday.com, there's booking.com, Zapier,
+ 
+
+00:05:21.919 --> 00:05:23.790 align:start position:0%
+monday.com, there's booking.com, Zapier,
+Asana<00:05:22.680><c> as</c><00:05:22.800><c> well.</c><00:05:22.960><c> So,</c><00:05:23.040><c> you</c><00:05:23.120><c> can</c><00:05:23.280><c> connect</c>
+
+00:05:23.790 --> 00:05:23.800 align:start position:0%
+Asana as well. So, you can connect
+ 
+
+00:05:23.800 --> 00:05:26.470 align:start position:0%
+Asana as well. So, you can connect
+really,<00:05:24.120><c> really</c><00:05:24.480><c> in-depth</c><00:05:25.720><c> um</c><00:05:25.880><c> workflows</c>
+
+00:05:26.470 --> 00:05:26.480 align:start position:0%
+really, really in-depth um workflows
+ 
+
+00:05:26.480 --> 00:05:28.430 align:start position:0%
+really, really in-depth um workflows
+using<00:05:26.800><c> Claude</c><00:05:27.400><c> and</c>
+
+00:05:28.430 --> 00:05:28.440 align:start position:0%
+using Claude and
+ 
+
+00:05:28.440 --> 00:05:31.670 align:start position:0%
+using Claude and
+Word<00:05:28.880><c> Rocket</c><00:05:29.440><c> together.</c>
+
+00:05:31.670 --> 00:05:31.680 align:start position:0%
+Word Rocket together.
+ 
+
+00:05:31.680 --> 00:05:33.070 align:start position:0%
+Word Rocket together.
+So,<00:05:31.800><c> if</c><00:05:31.880><c> we</c><00:05:31.960><c> head</c><00:05:32.120><c> back</c><00:05:32.360><c> over,</c><00:05:32.600><c> we</c><00:05:32.720><c> can</c><00:05:32.919><c> see</c>
+
+00:05:33.070 --> 00:05:33.080 align:start position:0%
+So, if we head back over, we can see
+ 
+
+00:05:33.080 --> 00:05:35.350 align:start position:0%
+So, if we head back over, we can see
+that<00:05:33.240><c> the</c><00:05:33.440><c> article</c><00:05:34.280><c> is</c><00:05:34.440><c> now</c><00:05:34.720><c> completed.</c><00:05:35.240><c> So,</c>
+
+00:05:35.350 --> 00:05:35.360 align:start position:0%
+that the article is now completed. So,
+ 
+
+00:05:35.360 --> 00:05:37.710 align:start position:0%
+that the article is now completed. So,
+3,000<00:05:35.880><c> words,</c><00:05:36.120><c> a</c><00:05:36.160><c> live</c><00:05:36.480><c> web</c><00:05:36.680><c> search,</c><00:05:37.440><c> full</c>
+
+00:05:37.710 --> 00:05:37.720 align:start position:0%
+3,000 words, a live web search, full
+ 
+
+00:05:37.720 --> 00:05:40.710 align:start position:0%
+3,000 words, a live web search, full
+FAQs,<00:05:38.919><c> SEO</c><00:05:39.240><c> title,</c><00:05:39.680><c> and</c><00:05:39.800><c> meta</c><00:05:40.040><c> description.</c>
+
+00:05:40.710 --> 00:05:40.720 align:start position:0%
+FAQs, SEO title, and meta description.
+ 
+
+00:05:40.720 --> 00:05:42.950 align:start position:0%
+FAQs, SEO title, and meta description.
+So,<00:05:40.880><c> we</c><00:05:41.000><c> can</c><00:05:41.120><c> see</c><00:05:41.240><c> that</c><00:05:41.400><c> the</c><00:05:41.560><c> full</c><00:05:41.919><c> article</c><00:05:42.440><c> has</c>
+
+00:05:42.950 --> 00:05:42.960 align:start position:0%
+So, we can see that the full article has
+ 
+
+00:05:42.960 --> 00:05:45.310 align:start position:0%
+So, we can see that the full article has
+been<00:05:43.560><c> generated.</c><00:05:44.640><c> So,</c><00:05:44.840><c> we</c><00:05:45.000><c> You</c><00:05:45.080><c> our</c><00:05:45.120><c> key</c>
+
+00:05:45.310 --> 00:05:45.320 align:start position:0%
+been generated. So, we You our key
+ 
+
+00:05:45.320 --> 00:05:47.790 align:start position:0%
+been generated. So, we You our key
+takeaways,<00:05:45.840><c> we</c><00:05:45.919><c> get</c><00:05:46.160><c> our</c><00:05:46.240><c> custom</c><00:05:46.880><c> image,</c><00:05:47.680><c> we</c>
+
+00:05:47.790 --> 00:05:47.800 align:start position:0%
+takeaways, we get our custom image, we
+ 
+
+00:05:47.800 --> 00:05:49.270 align:start position:0%
+takeaways, we get our custom image, we
+get<00:05:47.960><c> our</c><00:05:48.040><c> internal</c><00:05:48.520><c> links</c><00:05:48.800><c> as</c><00:05:48.920><c> you</c><00:05:48.960><c> can</c><00:05:49.120><c> see</c>
+
+00:05:49.270 --> 00:05:49.280 align:start position:0%
+get our internal links as you can see
+ 
+
+00:05:49.280 --> 00:05:52.470 align:start position:0%
+get our internal links as you can see
+here.<00:05:49.920><c> It's</c><00:05:50.120><c> web</c><00:05:50.480><c> research,</c><00:05:51.040><c> it's</c><00:05:51.280><c> in-depth,</c>
+
+00:05:52.470 --> 00:05:52.480 align:start position:0%
+here. It's web research, it's in-depth,
+ 
+
+00:05:52.480 --> 00:05:54.830 align:start position:0%
+here. It's web research, it's in-depth,
+it's<00:05:52.600><c> a</c><00:05:52.680><c> really,</c><00:05:53.040><c> really</c><00:05:53.320><c> good</c><00:05:53.560><c> article.</c><00:05:54.560><c> And</c>
+
+00:05:54.830 --> 00:05:54.840 align:start position:0%
+it's a really, really good article. And
+ 
+
+00:05:54.840 --> 00:05:56.190 align:start position:0%
+it's a really, really good article. And
+as<00:05:54.960><c> you</c><00:05:55.440><c> as</c><00:05:55.600><c> you</c><00:05:55.680><c> can</c><00:05:55.800><c> see</c><00:05:55.880><c> you</c><00:05:55.960><c> get</c><00:05:56.080><c> your</c>
+
+00:05:56.190 --> 00:05:56.200 align:start position:0%
+as you as you can see you get your
+ 
+
+00:05:56.200 --> 00:05:58.070 align:start position:0%
+as you as you can see you get your
+title,<00:05:56.560><c> you</c><00:05:56.680><c> made</c><00:05:56.880><c> a</c><00:05:56.920><c> description</c><00:05:57.480><c> and</c><00:05:57.880><c> your</c>
+
+00:05:58.070 --> 00:05:58.080 align:start position:0%
+title, you made a description and your
+ 
+
+00:05:58.080 --> 00:06:00.390 align:start position:0%
+title, you made a description and your
+tags.<00:05:59.040><c> As</c><00:05:59.200><c> you</c><00:05:59.280><c> can</c><00:05:59.400><c> see</c><00:05:59.520><c> this</c><00:05:59.720><c> is</c><00:05:59.880><c> a</c><00:05:59.960><c> super</c>
+
+00:06:00.390 --> 00:06:00.400 align:start position:0%
+tags. As you can see this is a super
+ 
+
+00:06:00.400 --> 00:06:02.030 align:start position:0%
+tags. As you can see this is a super
+powerful<00:06:00.880><c> integration.</c><00:06:01.680><c> Head</c><00:06:01.800><c> over</c><00:06:01.960><c> to</c>
+
+00:06:02.030 --> 00:06:02.040 align:start position:0%
+powerful integration. Head over to
+ 
+
+00:06:02.040 --> 00:06:03.910 align:start position:0%
+powerful integration. Head over to
+app.wordrocket.ai<00:06:03.240><c> if</c><00:06:03.320><c> you</c><00:06:03.400><c> want</c><00:06:03.520><c> to</c><00:06:03.600><c> sign</c>
+
+00:06:03.910 --> 00:06:03.920 align:start position:0%
+app.wordrocket.ai if you want to sign
+ 
+
+00:06:03.920 --> 00:06:06.030 align:start position:0%
+app.wordrocket.ai if you want to sign
+up.<00:06:04.400><c> You</c><00:06:04.520><c> do</c><00:06:04.640><c> need</c><00:06:04.800><c> to</c><00:06:04.880><c> get</c><00:06:05.080><c> an</c><00:06:05.240><c> agency</c><00:06:05.760><c> or</c><00:06:05.960><c> a</c>
+
+00:06:06.030 --> 00:06:06.040 align:start position:0%
+up. You do need to get an agency or a
+ 
+
+00:06:06.040 --> 00:06:08.590 align:start position:0%
+up. You do need to get an agency or a
+premium<00:06:06.760><c> monthly</c><00:06:07.240><c> plan,</c><00:06:07.520><c> but</c><00:06:07.680><c> as</c><00:06:07.760><c> you</c><00:06:07.840><c> can</c><00:06:08.000><c> see</c>
+
+00:06:08.590 --> 00:06:08.600 align:start position:0%
+premium monthly plan, but as you can see
+ 
+
+00:06:08.600 --> 00:06:10.510 align:start position:0%
+premium monthly plan, but as you can see
+it's<00:06:08.840><c> definitely</c><00:06:09.440><c> worth</c><00:06:09.680><c> it.</c><00:06:10.240><c> If</c><00:06:10.360><c> you</c><00:06:10.440><c> have</c>
+
+00:06:10.510 --> 00:06:10.520 align:start position:0%
+it's definitely worth it. If you have
+ 
+
+00:06:10.520 --> 00:06:11.430 align:start position:0%
+it's definitely worth it. If you have
+any<00:06:10.640><c> questions</c><00:06:11.040><c> let</c><00:06:11.120><c> me</c><00:06:11.200><c> know</c><00:06:11.320><c> in</c><00:06:11.360><c> the</c>
+
+00:06:11.430 --> 00:06:11.440 align:start position:0%
+any questions let me know in the
+ 
+
+00:06:11.440 --> 00:06:13.030 align:start position:0%
+any questions let me know in the
+comments<00:06:11.760><c> below.</c><00:06:12.040><c> I'll</c><00:06:12.160><c> see</c><00:06:12.320><c> you</c><00:06:12.440><c> in</c><00:06:12.680><c> the</c><00:06:12.800><c> next</c>
+
+00:06:13.030 --> 00:06:13.040 align:start position:0%
+comments below. I'll see you in the next
+ 
+
+00:06:13.040 --> 00:06:15.920 align:start position:0%
+comments below. I'll see you in the next
+video.<00:06:13.360><c> Take</c><00:06:13.560><c> care.</c>
+

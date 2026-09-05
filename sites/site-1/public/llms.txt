@@ -1,0 +1,9 @@
+# LocalAgentStack
+> The open-source encyclopedia for local LLMs, inference runtimes, and autonomous coding agents.
+
+## Core Pillars
+- [Local Inference Runtimes](/inference/): Step-by-step guides for Ollama, vLLM, and llama.cpp.
+- [Autonomous Agents](/agents/): Production architectures for Claude Code, LangGraph, and MCP servers.
+- [Hardware & VRAM Engineering](/hardware/): Quantization calculators and multi-GPU workstation builds.
+- [Open-Weight Benchmarks](/models/): Empirical speed and coding accuracy benchmarks for DeepSeek R1 and Llama 3.3.
+- [Local RAG & Privacy](/rag/): Air-gapped enterprise search architectures.

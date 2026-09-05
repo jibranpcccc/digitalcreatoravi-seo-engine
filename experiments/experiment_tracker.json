@@ -1,0 +1,35 @@
+[
+  {
+    "id": "EXP-001",
+    "title": "Quick Answer Passage Length & AI Overview Citation Rate",
+    "hypothesis": "Concise 45-word extractable answer passages under H1 achieve higher RAG citation frequency than 90+ word summaries.",
+    "start_date": "2026-09-15",
+    "duration_days": 28,
+    "status": "planned",
+    "primary_metric": "GSC Generative AI Impressions",
+    "test_urls": [
+      "/inference/ollama/concurrency-speed-benchmark/",
+      "/agents/claude-code/mcp-setup-guide/",
+      "/hardware/vram-calculator/"
+    ],
+    "baseline_data": {},
+    "results": {},
+    "conclusion": "Pending execution."
+  },
+  {
+    "id": "EXP-002",
+    "title": "Speedtest Watermark Verification on Image CTR",
+    "hypothesis": "Coliving property images with clear text overlays showing verified Mbps increase Google Image Search CTR by > 20%.",
+    "start_date": "2026-09-20",
+    "duration_days": 30,
+    "status": "planned",
+    "primary_metric": "GSC Image Search CTR",
+    "test_urls": [
+      "/property/madeira/ponta-do-sol-nomad-coliving/",
+      "/property/bansko/coworking-bansko-coliving/"
+    ],
+    "baseline_data": {},
+    "results": {},
+    "conclusion": "Pending execution."
+  }
+]

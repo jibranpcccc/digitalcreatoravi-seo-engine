@@ -1,0 +1,75 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  schemaJson?: string;
+}
+
+const { title, description, canonical = "https://workationradar.com", schemaJson } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-stone-950 text-stone-100 antialiased">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="WorkationRadar" />
+
+    <!-- Machine-Readable Discovery -->
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Index" />
+
+    {schemaJson && (
+      <script type="application/ld+json" set:html={schemaJson} />
+    )}
+  </head>
+  <body class="min-h-screen flex flex-col selection:bg-amber-600 selection:text-white">
+    <!-- Header Navigation -->
+    <header class="border-b border-stone-800 bg-stone-900/80 backdrop-blur sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center space-x-3 group">
+          <div class="w-9 h-9 rounded-lg bg-amber-600 flex items-center justify-center font-bold text-white shadow-lg shadow-amber-600/20 group-hover:bg-amber-500 transition">
+            WR
+          </div>
+          <span class="text-xl font-extrabold tracking-tight text-white">Workation<span class="text-amber-500">Radar</span></span>
+        </a>
+        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-stone-300">
+          <a href="/city/Madeira" class="hover:text-amber-400 transition">Madeira</a>
+          <a href="/city/Bansko" class="hover:text-amber-400 transition">Bansko</a>
+          <a href="/city/Lisbon" class="hover:text-amber-400 transition">Lisbon</a>
+          <a href="/city/Bali" class="hover:text-amber-400 transition">Bali</a>
+          <a href="/llms.txt" class="px-2.5 py-1 rounded bg-stone-800 text-xs text-amber-400 font-mono hover:bg-stone-700 transition">llms.txt</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-6xl mx-auto px-4 py-8 w-full">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-stone-800 bg-stone-900 mt-16 py-12 text-sm text-stone-400">
+      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+          <p class="font-semibold text-stone-200">WorkationRadar.com</p>
+          <p class="text-xs text-stone-500 mt-1">Verified WiFi speedtests, ergonomic chairs & remote work coliving directory.</p>
+        </div>
+        <div class="flex space-x-6 text-xs text-stone-400">
+          <a href="/llms.txt" class="hover:text-amber-400">llms.txt</a>
+          <a href="/robots.txt" class="hover:text-amber-400">robots.txt</a>
+          <a href="/sitemap.xml" class="hover:text-amber-400">sitemap.xml</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

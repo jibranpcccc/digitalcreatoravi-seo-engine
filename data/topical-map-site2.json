@@ -1,0 +1,253 @@
+{
+  "site_name": "WorkationRadar",
+  "domain": "workationradar.com",
+  "architecture_type": "Structured Programmatic Directory (Astro + SQLite/Postgres)",
+  "regions": [
+    "Europe",
+    "Asia",
+    "Americas",
+    "Africa"
+  ],
+  "destinations": [
+    {
+      "city": "Madeira",
+      "country": "Portugal",
+      "region": "Europe",
+      "city_hub_url": "/coliving/portugal/madeira",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Lisbon",
+      "country": "Portugal",
+      "region": "Europe",
+      "city_hub_url": "/coliving/portugal/lisbon",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Porto",
+      "country": "Portugal",
+      "region": "Europe",
+      "city_hub_url": "/coliving/portugal/porto",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Algarve",
+      "country": "Portugal",
+      "region": "Europe",
+      "city_hub_url": "/coliving/portugal/algarve",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Bansko",
+      "country": "Bulgaria",
+      "region": "Europe",
+      "city_hub_url": "/coliving/bulgaria/bansko",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Gran Canaria",
+      "country": "Spain",
+      "region": "Europe",
+      "city_hub_url": "/coliving/spain/gran-canaria",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Tenerife",
+      "country": "Spain",
+      "region": "Europe",
+      "city_hub_url": "/coliving/spain/tenerife",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Barcelona",
+      "country": "Spain",
+      "region": "Europe",
+      "city_hub_url": "/coliving/spain/barcelona",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Valencia",
+      "country": "Spain",
+      "region": "Europe",
+      "city_hub_url": "/coliving/spain/valencia",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Malaga",
+      "country": "Spain",
+      "region": "Europe",
+      "city_hub_url": "/coliving/spain/malaga",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Chiang Mai",
+      "country": "Thailand",
+      "region": "Asia",
+      "city_hub_url": "/coliving/thailand/chiang-mai",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Koh Phangan",
+      "country": "Thailand",
+      "region": "Asia",
+      "city_hub_url": "/coliving/thailand/koh-phangan",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Bangkok",
+      "country": "Thailand",
+      "region": "Asia",
+      "city_hub_url": "/coliving/thailand/bangkok",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Bali (Canggu)",
+      "country": "Indonesia",
+      "region": "Asia",
+      "city_hub_url": "/coliving/indonesia/bali-(canggu)",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    },
+    {
+      "city": "Bali (Ubud)",
+      "country": "Indonesia",
+      "region": "Asia",
+      "city_hub_url": "/coliving/indonesia/bali-(ubud)",
+      "properties_count": 8,
+      "facets": [
+        "speedtest-100mbps+",
+        "ergonomic-chairs",
+        "private-phone-booths",
+        "backup-generator",
+        "under-1500-month"
+      ],
+      "schema_type": "ItemList / Place / LodgingBusiness",
+      "monetization": "Direct Booking Commissions (8-15%) + Travel Insurance + eSIM Bounties"
+    }
+  ]
+}

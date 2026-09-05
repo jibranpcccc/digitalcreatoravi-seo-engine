@@ -1,0 +1,992 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.670 align:start position:0%
+ 
+This<00:00:00.400><c> is</c><00:00:00.600><c> my</c><00:00:00.760><c> custom</c><00:00:01.280><c> coded</c><00:00:01.680><c> website,</c><00:00:02.480><c> and</c>
+
+00:00:02.670 --> 00:00:02.680 align:start position:0%
+This is my custom coded website, and
+ 
+
+00:00:02.680 --> 00:00:04.910 align:start position:0%
+This is my custom coded website, and
+every<00:00:03.000><c> single</c><00:00:03.360><c> day</c><00:00:03.520><c> Claude</c><00:00:03.920><c> does</c><00:00:04.160><c> research</c><00:00:04.760><c> on</c>
+
+00:00:04.910 --> 00:00:04.920 align:start position:0%
+every single day Claude does research on
+ 
+
+00:00:04.920 --> 00:00:07.390 align:start position:0%
+every single day Claude does research on
+my<00:00:05.120><c> niche,</c><00:00:05.880><c> finds</c><00:00:06.280><c> trending</c><00:00:06.760><c> or</c><00:00:06.920><c> relevant</c>
+
+00:00:07.390 --> 00:00:07.400 align:start position:0%
+my niche, finds trending or relevant
+ 
+
+00:00:07.400 --> 00:00:10.150 align:start position:0%
+my niche, finds trending or relevant
+topics,<00:00:08.240><c> write</c><00:00:08.520><c> the</c><00:00:08.720><c> articles,</c><00:00:09.680><c> and</c><00:00:09.800><c> then</c><00:00:10.000><c> the</c>
+
+00:00:10.150 --> 00:00:10.160 align:start position:0%
+topics, write the articles, and then the
+ 
+
+00:00:10.160 --> 00:00:12.550 align:start position:0%
+topics, write the articles, and then the
+article<00:00:10.560><c> is</c><00:00:10.720><c> posted</c><00:00:11.240><c> directly</c><00:00:11.840><c> over</c><00:00:12.200><c> to</c><00:00:12.400><c> my</c>
+
+00:00:12.550 --> 00:00:12.560 align:start position:0%
+article is posted directly over to my
+ 
+
+00:00:12.560 --> 00:00:15.990 align:start position:0%
+article is posted directly over to my
+website<00:00:13.400><c> without</c><00:00:14.040><c> me</c><00:00:14.440><c> lifting</c><00:00:14.920><c> a</c><00:00:15.000><c> finger.</c>
+
+00:00:15.990 --> 00:00:16.000 align:start position:0%
+website without me lifting a finger.
+ 
+
+00:00:16.000 --> 00:00:17.630 align:start position:0%
+website without me lifting a finger.
+Let's<00:00:16.240><c> show</c><00:00:16.440><c> you</c><00:00:16.640><c> how</c><00:00:16.800><c> you</c><00:00:16.960><c> can</c><00:00:17.120><c> set</c><00:00:17.280><c> up</c><00:00:17.400><c> this</c>
+
+00:00:17.630 --> 00:00:17.640 align:start position:0%
+Let's show you how you can set up this
+ 
+
+00:00:17.640 --> 00:00:20.270 align:start position:0%
+Let's show you how you can set up this
+workflow<00:00:18.200><c> for</c><00:00:18.640><c> yourself.</c><00:00:19.720><c> So,</c><00:00:19.880><c> first</c><00:00:20.160><c> we're</c>
+
+00:00:20.270 --> 00:00:20.280 align:start position:0%
+workflow for yourself. So, first we're
+ 
+
+00:00:20.280 --> 00:00:21.990 align:start position:0%
+workflow for yourself. So, first we're
+going<00:00:20.400><c> to</c><00:00:20.480><c> want</c><00:00:20.640><c> to</c><00:00:20.720><c> use</c><00:00:20.920><c> Claude</c><00:00:21.400><c> code</c><00:00:21.800><c> for</c>
+
+00:00:21.990 --> 00:00:22.000 align:start position:0%
+going to want to use Claude code for
+ 
+
+00:00:22.000 --> 00:00:23.870 align:start position:0%
+going to want to use Claude code for
+this<00:00:22.200><c> setup.</c><00:00:22.880><c> The</c><00:00:23.000><c> reason</c><00:00:23.280><c> why</c><00:00:23.440><c> we're</c><00:00:23.560><c> using</c>
+
+00:00:23.870 --> 00:00:23.880 align:start position:0%
+this setup. The reason why we're using
+ 
+
+00:00:23.880 --> 00:00:25.870 align:start position:0%
+this setup. The reason why we're using
+Claude<00:00:24.280><c> code</c><00:00:24.480><c> is</c><00:00:24.600><c> because</c><00:00:24.960><c> now</c><00:00:25.720><c> we're</c>
+
+00:00:25.870 --> 00:00:25.880 align:start position:0%
+Claude code is because now we're
+ 
+
+00:00:25.880 --> 00:00:28.230 align:start position:0%
+Claude code is because now we're
+implementing<00:00:26.520><c> and</c><00:00:26.760><c> using</c><00:00:27.160><c> the</c><00:00:27.320><c> WordRocket</c>
+
+00:00:28.230 --> 00:00:28.240 align:start position:0%
+implementing and using the WordRocket
+ 
+
+00:00:28.240 --> 00:00:30.950 align:start position:0%
+implementing and using the WordRocket
+API.<00:00:29.360><c> Because</c><00:00:29.840><c> our</c><00:00:30.000><c> website</c><00:00:30.360><c> is</c><00:00:30.520><c> custom</c>
+
+00:00:30.950 --> 00:00:30.960 align:start position:0%
+API. Because our website is custom
+ 
+
+00:00:30.960 --> 00:00:33.350 align:start position:0%
+API. Because our website is custom
+coded,<00:00:31.360><c> we</c><00:00:31.520><c> obviously</c><00:00:32.040><c> cannot</c><00:00:32.520><c> use</c><00:00:33.120><c> our</c>
+
+00:00:33.350 --> 00:00:33.360 align:start position:0%
+coded, we obviously cannot use our
+ 
+
+00:00:33.360 --> 00:00:35.750 align:start position:0%
+coded, we obviously cannot use our
+WordPress<00:00:33.840><c> integration</c><00:00:34.480><c> that</c><00:00:34.600><c> we</c><00:00:34.720><c> have</c><00:00:35.360><c> with</c>
+
+00:00:35.750 --> 00:00:35.760 align:start position:0%
+WordPress integration that we have with
+ 
+
+00:00:35.760 --> 00:00:38.070 align:start position:0%
+WordPress integration that we have with
+WordRocket.<00:00:36.760><c> So,</c><00:00:36.920><c> in</c><00:00:37.040><c> order</c><00:00:37.320><c> to</c><00:00:37.440><c> get</c><00:00:37.680><c> this</c><00:00:37.920><c> to</c>
+
+00:00:38.070 --> 00:00:38.080 align:start position:0%
+WordRocket. So, in order to get this to
+ 
+
+00:00:38.080 --> 00:00:39.510 align:start position:0%
+WordRocket. So, in order to get this to
+work,<00:00:38.320><c> there's</c><00:00:38.520><c> a</c><00:00:38.600><c> couple</c><00:00:39.080><c> of</c><00:00:39.200><c> different</c>
+
+00:00:39.510 --> 00:00:39.520 align:start position:0%
+work, there's a couple of different
+ 
+
+00:00:39.520 --> 00:00:41.550 align:start position:0%
+work, there's a couple of different
+steps<00:00:39.880><c> in</c><00:00:40.000><c> which</c><00:00:40.200><c> you</c><00:00:40.320><c> need</c><00:00:40.560><c> to</c><00:00:40.680><c> do.</c><00:00:41.000><c> The</c><00:00:41.120><c> first</c>
+
+00:00:41.550 --> 00:00:41.560 align:start position:0%
+steps in which you need to do. The first
+ 
+
+00:00:41.560 --> 00:00:42.910 align:start position:0%
+steps in which you need to do. The first
+set<00:00:41.760><c> is</c><00:00:41.880><c> that</c><00:00:42.040><c> you</c><00:00:42.120><c> need</c><00:00:42.360><c> to</c><00:00:42.480><c> connect</c><00:00:42.800><c> your</c>
+
+00:00:42.910 --> 00:00:42.920 align:start position:0%
+set is that you need to connect your
+ 
+
+00:00:42.920 --> 00:00:45.950 align:start position:0%
+set is that you need to connect your
+custom<00:00:43.480><c> site's</c><00:00:43.880><c> publishing</c><00:00:44.400><c> API</c><00:00:45.480><c> to</c><00:00:45.640><c> Claude.</c>
+
+00:00:45.950 --> 00:00:45.960 align:start position:0%
+custom site's publishing API to Claude.
+ 
+
+00:00:45.960 --> 00:00:48.270 align:start position:0%
+custom site's publishing API to Claude.
+So,<00:00:46.080><c> before</c><00:00:46.520><c> talking</c><00:00:46.920><c> to</c><00:00:47.040><c> Claude,</c><00:00:47.760><c> make</c><00:00:48.040><c> sure</c>
+
+00:00:48.270 --> 00:00:48.280 align:start position:0%
+So, before talking to Claude, make sure
+ 
+
+00:00:48.280 --> 00:00:50.070 align:start position:0%
+So, before talking to Claude, make sure
+that<00:00:48.440><c> you</c><00:00:48.520><c> have</c><00:00:48.640><c> a</c><00:00:48.680><c> publish</c><00:00:49.120><c> endpoint,</c><00:00:50.000><c> a</c>
+
+00:00:50.070 --> 00:00:50.080 align:start position:0%
+that you have a publish endpoint, a
+ 
+
+00:00:50.080 --> 00:00:52.870 align:start position:0%
+that you have a publish endpoint, a
+secret<00:00:50.440><c> API</c><00:00:50.840><c> key,</c><00:00:51.200><c> a</c><00:00:51.280><c> bearer</c><00:00:51.560><c> token,</c><00:00:52.520><c> and</c><00:00:52.680><c> so</c>
+
+00:00:52.870 --> 00:00:52.880 align:start position:0%
+secret API key, a bearer token, and so
+ 
+
+00:00:52.880 --> 00:00:54.670 align:start position:0%
+secret API key, a bearer token, and so
+on<00:00:53.000><c> and</c><00:00:53.120><c> so</c><00:00:53.320><c> forth.</c><00:00:53.880><c> Now,</c><00:00:54.040><c> you</c><00:00:54.200><c> don't</c><00:00:54.360><c> need</c><00:00:54.560><c> to</c>
+
+00:00:54.670 --> 00:00:54.680 align:start position:0%
+on and so forth. Now, you don't need to
+ 
+
+00:00:54.680 --> 00:00:57.270 align:start position:0%
+on and so forth. Now, you don't need to
+know<00:00:55.160><c> or</c><00:00:55.400><c> to</c><00:00:55.600><c> be</c><00:00:55.720><c> technical</c><00:00:56.240><c> to</c><00:00:56.360><c> know</c><00:00:56.720><c> exactly</c>
+
+00:00:57.270 --> 00:00:57.280 align:start position:0%
+know or to be technical to know exactly
+ 
+
+00:00:57.280 --> 00:00:58.630 align:start position:0%
+know or to be technical to know exactly
+how<00:00:57.480><c> to</c><00:00:57.640><c> do</c><00:00:57.760><c> this.</c>
+
+00:00:58.630 --> 00:00:58.640 align:start position:0%
+how to do this.
+ 
+
+00:00:58.640 --> 00:01:00.550 align:start position:0%
+how to do this.
+All<00:00:58.880><c> you</c><00:00:58.960><c> need</c><00:00:59.160><c> to</c><00:00:59.280><c> do</c><00:00:59.400><c> is</c><00:00:59.560><c> follow</c><00:00:59.920><c> this</c><00:01:00.200><c> prompt</c>
+
+00:01:00.550 --> 00:01:00.560 align:start position:0%
+All you need to do is follow this prompt
+ 
+
+00:01:00.560 --> 00:01:02.550 align:start position:0%
+All you need to do is follow this prompt
+and<00:01:00.760><c> put</c><00:01:01.040><c> it</c><00:01:01.520><c> into</c><00:01:01.880><c> Claude.</c><00:01:02.200><c> If</c><00:01:02.320><c> you</c><00:01:02.400><c> want</c><00:01:02.520><c> to</c>
+
+00:01:02.550 --> 00:01:02.560 align:start position:0%
+and put it into Claude. If you want to
+ 
+
+00:01:02.560 --> 00:01:04.869 align:start position:0%
+and put it into Claude. If you want to
+get<00:01:02.640><c> the</c><00:01:02.760><c> full</c><00:01:03.120><c> prompt</c><00:01:03.480><c> and</c><00:01:03.600><c> SOP,</c><00:01:04.519><c> comment</c>
+
+00:01:04.869 --> 00:01:04.879 align:start position:0%
+get the full prompt and SOP, comment
+ 
+
+00:01:04.879 --> 00:01:06.550 align:start position:0%
+get the full prompt and SOP, comment
+Claude<00:01:05.199><c> below</c><00:01:05.480><c> and</c><00:01:05.560><c> I'll</c><00:01:05.680><c> send</c><00:01:05.880><c> it</c><00:01:06.080><c> over</c><00:01:06.400><c> to</c>
+
+00:01:06.550 --> 00:01:06.560 align:start position:0%
+Claude below and I'll send it over to
+ 
+
+00:01:06.560 --> 00:01:08.510 align:start position:0%
+Claude below and I'll send it over to
+you.<00:01:07.040><c> This</c><00:01:07.320><c> prompt</c><00:01:07.720><c> will</c><00:01:07.880><c> essentially</c>
+
+00:01:08.510 --> 00:01:08.520 align:start position:0%
+you. This prompt will essentially
+ 
+
+00:01:08.520 --> 00:01:12.270 align:start position:0%
+you. This prompt will essentially
+connect<00:01:09.480><c> Claude</c><00:01:09.960><c> over</c><00:01:10.280><c> to</c><00:01:10.400><c> your</c><00:01:10.640><c> API.</c><00:01:11.800><c> Within</c>
+
+00:01:12.270 --> 00:01:12.280 align:start position:0%
+connect Claude over to your API. Within
+ 
+
+00:01:12.280 --> 00:01:14.110 align:start position:0%
+connect Claude over to your API. Within
+the<00:01:12.400><c> prompt,</c><00:01:12.840><c> you</c><00:01:12.920><c> need</c><00:01:13.120><c> to</c><00:01:13.280><c> enter</c><00:01:13.720><c> in</c><00:01:13.880><c> your</c>
+
+00:01:14.110 --> 00:01:14.120 align:start position:0%
+the prompt, you need to enter in your
+ 
+
+00:01:14.120 --> 00:01:15.870 align:start position:0%
+the prompt, you need to enter in your
+API<00:01:14.600><c> key.</c><00:01:15.200><c> So,</c><00:01:15.360><c> head</c><00:01:15.520><c> over</c><00:01:15.720><c> to</c>
+
+00:01:15.870 --> 00:01:15.880 align:start position:0%
+API key. So, head over to
+ 
+
+00:01:15.880 --> 00:01:17.950 align:start position:0%
+API key. So, head over to
+app.wordrocket.ai.<00:01:17.200><c> You</c><00:01:17.360><c> need</c><00:01:17.520><c> to</c><00:01:17.600><c> ensure</c>
+
+00:01:17.950 --> 00:01:17.960 align:start position:0%
+app.wordrocket.ai. You need to ensure
+ 
+
+00:01:17.960 --> 00:01:20.070 align:start position:0%
+app.wordrocket.ai. You need to ensure
+that<00:01:18.160><c> you're</c><00:01:18.280><c> on</c><00:01:18.360><c> a</c><00:01:18.440><c> lifetime</c><00:01:19.040><c> agency</c><00:01:19.560><c> plan</c><00:01:19.920><c> or</c>
+
+00:01:20.070 --> 00:01:20.080 align:start position:0%
+that you're on a lifetime agency plan or
+ 
+
+00:01:20.080 --> 00:01:22.910 align:start position:0%
+that you're on a lifetime agency plan or
+higher<00:01:20.800><c> or</c><00:01:21.080><c> a</c><00:01:21.160><c> premium</c><00:01:21.640><c> monthly</c><00:01:22.040><c> plan.</c><00:01:22.800><c> And</c>
+
+00:01:22.910 --> 00:01:22.920 align:start position:0%
+higher or a premium monthly plan. And
+ 
+
+00:01:22.920 --> 00:01:25.110 align:start position:0%
+higher or a premium monthly plan. And
+then<00:01:23.080><c> under</c><00:01:23.360><c> API</c><00:01:23.840><c> keys,</c><00:01:24.200><c> you</c><00:01:24.320><c> can</c><00:01:24.520><c> generate</c><00:01:25.040><c> a</c>
+
+00:01:25.110 --> 00:01:25.120 align:start position:0%
+then under API keys, you can generate a
+ 
+
+00:01:25.120 --> 00:01:29.030 align:start position:0%
+then under API keys, you can generate a
+new<00:01:25.520><c> API</c><00:01:26.080><c> key,</c><00:01:26.720><c> copy</c><00:01:27.120><c> over</c><00:01:27.400><c> that</c><00:01:27.640><c> API</c><00:01:28.120><c> key,</c><00:01:28.840><c> and</c>
+
+00:01:29.030 --> 00:01:29.040 align:start position:0%
+new API key, copy over that API key, and
+ 
+
+00:01:29.040 --> 00:01:31.310 align:start position:0%
+new API key, copy over that API key, and
+you're<00:01:29.160><c> going</c><00:01:29.280><c> to</c><00:01:29.360><c> put</c><00:01:29.600><c> that</c><00:01:30.000><c> into</c><00:01:30.440><c> Claude</c><00:01:31.200><c> so</c>
+
+00:01:31.310 --> 00:01:31.320 align:start position:0%
+you're going to put that into Claude so
+ 
+
+00:01:31.320 --> 00:01:33.830 align:start position:0%
+you're going to put that into Claude so
+that<00:01:31.520><c> it</c><00:01:31.640><c> can</c><00:01:31.800><c> connect</c><00:01:33.200><c> uh</c>
+
+00:01:33.830 --> 00:01:33.840 align:start position:0%
+that it can connect uh
+ 
+
+00:01:33.840 --> 00:01:36.270 align:start position:0%
+that it can connect uh
+to<00:01:34.160><c> WordRocket</c><00:01:34.800><c> from</c><00:01:35.080><c> the</c><00:01:35.240><c> API.</c><00:01:35.840><c> The</c><00:01:35.920><c> beauty</c>
+
+00:01:36.270 --> 00:01:36.280 align:start position:0%
+to WordRocket from the API. The beauty
+ 
+
+00:01:36.280 --> 00:01:37.870 align:start position:0%
+to WordRocket from the API. The beauty
+about<00:01:36.560><c> this</c><00:01:36.760><c> workflow</c><00:01:37.280><c> is</c><00:01:37.440><c> that</c><00:01:37.600><c> we</c><00:01:37.720><c> can</c>
+
+00:01:37.870 --> 00:01:37.880 align:start position:0%
+about this workflow is that we can
+ 
+
+00:01:37.880 --> 00:01:40.670 align:start position:0%
+about this workflow is that we can
+actually<00:01:38.240><c> create</c><00:01:38.560><c> a</c><00:01:38.680><c> routine.</c><00:01:39.640><c> So,</c><00:01:40.040><c> a</c><00:01:40.160><c> routine</c>
+
+00:01:40.670 --> 00:01:40.680 align:start position:0%
+actually create a routine. So, a routine
+ 
+
+00:01:40.680 --> 00:01:42.510 align:start position:0%
+actually create a routine. So, a routine
+is<00:01:40.840><c> a</c><00:01:40.880><c> templatized</c><00:01:41.680><c> routine</c><00:01:42.040><c> that</c><00:01:42.240><c> can</c><00:01:42.360><c> be</c>
+
+00:01:42.510 --> 00:01:42.520 align:start position:0%
+is a templatized routine that can be
+ 
+
+00:01:42.520 --> 00:01:45.710 align:start position:0%
+is a templatized routine that can be
+kicked<00:01:42.880><c> off</c><00:01:43.480><c> on</c><00:01:43.680><c> schedule</c><00:01:44.160><c> by</c><00:01:44.360><c> API</c><00:01:45.000><c> or</c><00:01:45.320><c> by</c><00:01:45.600><c> a</c>
+
+00:01:45.710 --> 00:01:45.720 align:start position:0%
+kicked off on schedule by API or by a
+ 
+
+00:01:45.720 --> 00:01:48.030 align:start position:0%
+kicked off on schedule by API or by a
+webhook.<00:01:46.600><c> So,</c><00:01:46.720><c> as</c><00:01:46.840><c> you</c><00:01:46.920><c> can</c><00:01:47.080><c> see</c><00:01:47.280><c> here,</c><00:01:47.800><c> we've</c>
+
+00:01:48.030 --> 00:01:48.040 align:start position:0%
+webhook. So, as you can see here, we've
+ 
+
+00:01:48.040 --> 00:01:49.590 align:start position:0%
+webhook. So, as you can see here, we've
+went<00:01:48.160><c> ahead</c><00:01:48.400><c> and</c><00:01:48.520><c> created</c><00:01:48.880><c> this</c><00:01:49.120><c> full</c>
+
+00:01:49.590 --> 00:01:49.600 align:start position:0%
+went ahead and created this full
+ 
+
+00:01:49.600 --> 00:01:51.350 align:start position:0%
+went ahead and created this full
+routine.<00:01:50.400><c> Step</c><00:01:50.680><c> one</c><00:01:50.840><c> is</c><00:01:50.960><c> going</c><00:01:51.080><c> to</c><00:01:51.120><c> pick</c>
+
+00:01:51.350 --> 00:01:51.360 align:start position:0%
+routine. Step one is going to pick
+ 
+
+00:01:51.360 --> 00:01:53.350 align:start position:0%
+routine. Step one is going to pick
+today's<00:01:51.720><c> topic</c><00:01:52.600><c> based</c><00:01:52.880><c> upon</c><00:01:53.240><c> the</c>
+
+00:01:53.350 --> 00:01:53.360 align:start position:0%
+today's topic based upon the
+ 
+
+00:01:53.360 --> 00:01:54.710 align:start position:0%
+today's topic based upon the
+instructions<00:01:53.840><c> that</c><00:01:54.000><c> I</c><00:01:54.080><c> gave</c><00:01:54.320><c> it.</c><00:01:54.480><c> It's</c><00:01:54.600><c> going</c>
+
+00:01:54.710 --> 00:01:54.720 align:start position:0%
+instructions that I gave it. It's going
+ 
+
+00:01:54.720 --> 00:01:56.230 align:start position:0%
+instructions that I gave it. It's going
+to<00:01:54.800><c> research</c><00:01:55.160><c> the</c><00:01:55.280><c> topic.</c><00:01:55.880><c> It's</c><00:01:56.040><c> going</c><00:01:56.160><c> to</c>
+
+00:01:56.230 --> 00:01:56.240 align:start position:0%
+to research the topic. It's going to
+ 
+
+00:01:56.240 --> 00:01:57.910 align:start position:0%
+to research the topic. It's going to
+generate<00:01:56.560><c> the</c><00:01:56.640><c> topic</c><00:01:57.000><c> using</c><00:01:57.280><c> the</c><00:01:57.360><c> WordRocket</c>
+
+00:01:57.910 --> 00:01:57.920 align:start position:0%
+generate the topic using the WordRocket
+ 
+
+00:01:57.920 --> 00:02:00.950 align:start position:0%
+generate the topic using the WordRocket
+MCP,<00:01:59.040><c> and</c><00:01:59.200><c> then</c><00:01:59.320><c> it's</c><00:01:59.480><c> going</c><00:01:59.760><c> to</c>
+
+00:02:00.950 --> 00:02:00.960 align:start position:0%
+MCP, and then it's going to
+ 
+
+00:02:00.960 --> 00:02:03.510 align:start position:0%
+MCP, and then it's going to
+um<00:02:01.040><c> get</c><00:02:01.280><c> the</c><00:02:01.480><c> AI</c><00:02:01.720><c> generated</c><00:02:02.200><c> image,</c><00:02:03.000><c> construct</c>
+
+00:02:03.510 --> 00:02:03.520 align:start position:0%
+um get the AI generated image, construct
+ 
+
+00:02:03.520 --> 00:02:04.950 align:start position:0%
+um get the AI generated image, construct
+the<00:02:03.640><c> API</c><00:02:04.080><c> payload.</c><00:02:04.520><c> So,</c><00:02:04.600><c> essentially</c><00:02:04.880><c> it's</c>
+
+00:02:04.950 --> 00:02:04.960 align:start position:0%
+the API payload. So, essentially it's
+ 
+
+00:02:04.960 --> 00:02:07.070 align:start position:0%
+the API payload. So, essentially it's
+going<00:02:05.080><c> to</c><00:02:05.480><c> construct</c><00:02:05.960><c> the</c><00:02:06.040><c> payload</c><00:02:06.400><c> with</c><00:02:06.560><c> the</c>
+
+00:02:07.070 --> 00:02:07.080 align:start position:0%
+going to construct the payload with the
+ 
+
+00:02:07.080 --> 00:02:09.710 align:start position:0%
+going to construct the payload with the
+article<00:02:07.560><c> and</c><00:02:07.640><c> then</c><00:02:07.800><c> send</c><00:02:08.119><c> it</c><00:02:08.360><c> over</c><00:02:09.160><c> to</c><00:02:09.520><c> your</c>
+
+00:02:09.710 --> 00:02:09.720 align:start position:0%
+article and then send it over to your
+ 
+
+00:02:09.720 --> 00:02:11.750 align:start position:0%
+article and then send it over to your
+blog<00:02:10.160><c> API,</c><00:02:10.880><c> and</c><00:02:10.960><c> then</c><00:02:11.120><c> come</c><00:02:11.280><c> back</c><00:02:11.520><c> and</c><00:02:11.600><c> tell</c>
+
+00:02:11.750 --> 00:02:11.760 align:start position:0%
+blog API, and then come back and tell
+ 
+
+00:02:11.760 --> 00:02:13.510 align:start position:0%
+blog API, and then come back and tell
+you<00:02:11.840><c> that</c><00:02:12.000><c> everything</c><00:02:12.360><c> is</c><00:02:12.480><c> done.</c><00:02:13.160><c> And</c><00:02:13.280><c> we</c><00:02:13.400><c> can</c>
+
+00:02:13.510 --> 00:02:13.520 align:start position:0%
+you that everything is done. And we can
+ 
+
+00:02:13.520 --> 00:02:15.790 align:start position:0%
+you that everything is done. And we can
+set<00:02:13.680><c> this</c><00:02:13.880><c> up</c><00:02:14.000><c> to</c><00:02:14.120><c> be</c><00:02:14.240><c> done</c><00:02:14.520><c> every</c><00:02:14.880><c> single</c><00:02:15.160><c> day</c>
+
+00:02:15.790 --> 00:02:15.800 align:start position:0%
+set this up to be done every single day
+ 
+
+00:02:15.800 --> 00:02:17.950 align:start position:0%
+set this up to be done every single day
+at<00:02:16.080><c> 8:00</c><00:02:16.440><c> a.m.</c>
+
+00:02:17.950 --> 00:02:17.960 align:start position:0%
+at 8:00 a.m.
+ 
+
+00:02:17.960 --> 00:02:19.670 align:start position:0%
+at 8:00 a.m.
+So,<00:02:18.200><c> as</c><00:02:18.320><c> you</c><00:02:18.400><c> can</c><00:02:18.560><c> see,</c><00:02:18.760><c> we've</c><00:02:19.000><c> already</c><00:02:19.320><c> done</c>
+
+00:02:19.670 --> 00:02:19.680 align:start position:0%
+So, as you can see, we've already done
+ 
+
+00:02:19.680 --> 00:02:21.870 align:start position:0%
+So, as you can see, we've already done
+two<00:02:20.040><c> different</c><00:02:20.480><c> runs.</c><00:02:21.320><c> So,</c><00:02:21.400><c> if</c><00:02:21.480><c> you</c><00:02:21.560><c> go</c><00:02:21.680><c> ahead</c>
+
+00:02:21.870 --> 00:02:21.880 align:start position:0%
+two different runs. So, if you go ahead
+ 
+
+00:02:21.880 --> 00:02:23.830 align:start position:0%
+two different runs. So, if you go ahead
+and<00:02:22.000><c> take</c><00:02:22.200><c> a</c><00:02:22.240><c> look</c><00:02:22.400><c> at</c><00:02:22.480><c> these</c><00:02:22.720><c> two</c><00:02:22.880><c> runs,</c><00:02:23.680><c> we</c>
+
+00:02:23.830 --> 00:02:23.840 align:start position:0%
+and take a look at these two runs, we
+ 
+
+00:02:23.840 --> 00:02:26.310 align:start position:0%
+and take a look at these two runs, we
+can<00:02:24.480><c> open</c><00:02:24.760><c> up</c><00:02:24.880><c> these</c><00:02:25.080><c> links,</c><00:02:25.720><c> and</c><00:02:25.840><c> we</c><00:02:25.960><c> can</c><00:02:26.120><c> see</c>
+
+00:02:26.310 --> 00:02:26.320 align:start position:0%
+can open up these links, and we can see
+ 
+
+00:02:26.320 --> 00:02:29.470 align:start position:0%
+can open up these links, and we can see
+that<00:02:26.680><c> right</c><00:02:27.080><c> onto</c><00:02:27.520><c> WordRocket,</c><00:02:28.640><c> our</c><00:02:28.920><c> articles</c>
+
+00:02:29.470 --> 00:02:29.480 align:start position:0%
+that right onto WordRocket, our articles
+ 
+
+00:02:29.480 --> 00:02:32.430 align:start position:0%
+that right onto WordRocket, our articles
+have<00:02:29.680><c> been</c><00:02:29.880><c> posted.</c><00:02:30.840><c> They</c><00:02:31.040><c> have</c><00:02:31.560><c> title</c><00:02:31.960><c> tags.</c>
+
+00:02:32.430 --> 00:02:32.440 align:start position:0%
+have been posted. They have title tags.
+ 
+
+00:02:32.440 --> 00:02:35.310 align:start position:0%
+have been posted. They have title tags.
+They<00:02:32.600><c> have</c><00:02:33.360><c> um</c><00:02:33.720><c> they're</c><00:02:34.000><c> nicely</c><00:02:34.600><c> formatted.</c>
+
+00:02:35.310 --> 00:02:35.320 align:start position:0%
+They have um they're nicely formatted.
+ 
+
+00:02:35.320 --> 00:02:37.750 align:start position:0%
+They have um they're nicely formatted.
+They<00:02:35.440><c> have</c><00:02:35.640><c> TLDR.</c><00:02:36.920><c> Beautiful</c><00:02:37.360><c> images</c>
+
+00:02:37.750 --> 00:02:37.760 align:start position:0%
+They have TLDR. Beautiful images
+ 
+
+00:02:37.760 --> 00:02:39.510 align:start position:0%
+They have TLDR. Beautiful images
+included<00:02:38.200><c> here.</c>
+
+00:02:39.510 --> 00:02:39.520 align:start position:0%
+included here.
+ 
+
+00:02:39.520 --> 00:02:41.510 align:start position:0%
+included here.
+And<00:02:39.640><c> we</c><00:02:39.720><c> can</c><00:02:39.880><c> see</c><00:02:40.000><c> the</c><00:02:40.200><c> article</c><00:02:40.560><c> has</c><00:02:40.720><c> been</c><00:02:40.880><c> post</c>
+
+00:02:41.510 --> 00:02:41.520 align:start position:0%
+And we can see the article has been post
+ 
+
+00:02:41.520 --> 00:02:43.110 align:start position:0%
+And we can see the article has been post
+We<00:02:41.640><c> can</c><00:02:41.840><c> see</c><00:02:42.040><c> that</c><00:02:42.200><c> the</c><00:02:42.360><c> article</c><00:02:42.800><c> has</c><00:02:42.960><c> been</c>
+
+00:02:43.110 --> 00:02:43.120 align:start position:0%
+We can see that the article has been
+ 
+
+00:02:43.120 --> 00:02:46.030 align:start position:0%
+We can see that the article has been
+posted<00:02:43.960><c> directly</c><00:02:44.520><c> over</c><00:02:44.840><c> to</c><00:02:45.040><c> WordRocket</c><00:02:45.760><c> with</c>
+
+00:02:46.030 --> 00:02:46.040 align:start position:0%
+posted directly over to WordRocket with
+ 
+
+00:02:46.040 --> 00:02:49.830 align:start position:0%
+posted directly over to WordRocket with
+our<00:02:46.280><c> tags,</c><00:02:47.040><c> our</c><00:02:47.200><c> H1s,</c><00:02:47.720><c> our</c><00:02:47.840><c> images,</c><00:02:48.800><c> our</c><00:02:49.080><c> TLDR,</c>
+
+00:02:49.830 --> 00:02:49.840 align:start position:0%
+our tags, our H1s, our images, our TLDR,
+ 
+
+00:02:49.840 --> 00:02:51.910 align:start position:0%
+our tags, our H1s, our images, our TLDR,
+our<00:02:50.000><c> key</c><00:02:50.320><c> takeaways,</c><00:02:51.320><c> and</c><00:02:51.440><c> the</c><00:02:51.520><c> information</c>
+
+00:02:51.910 --> 00:02:51.920 align:start position:0%
+our key takeaways, and the information
+ 
+
+00:02:51.920 --> 00:02:55.110 align:start position:0%
+our key takeaways, and the information
+just<00:02:52.080><c> looks</c><00:02:52.280><c> really,</c><00:02:52.680><c> really</c><00:02:53.040><c> good.</c>
+
+00:02:55.110 --> 00:02:55.120 align:start position:0%
+just looks really, really good.
+ 
+
+00:02:55.120 --> 00:02:56.510 align:start position:0%
+just looks really, really good.
+That<00:02:55.280><c> was</c><00:02:55.400><c> the</c><00:02:55.520><c> first</c><00:02:55.880><c> article</c><00:02:56.160><c> in</c><00:02:56.240><c> which</c><00:02:56.440><c> we</c>
+
+00:02:56.510 --> 00:02:56.520 align:start position:0%
+That was the first article in which we
+ 
+
+00:02:56.520 --> 00:02:58.590 align:start position:0%
+That was the first article in which we
+generated.<00:02:57.160><c> We</c><00:02:57.320><c> made</c><00:02:57.560><c> some</c><00:02:57.800><c> tweaks</c><00:02:58.240><c> to</c><00:02:58.400><c> the</c>
+
+00:02:58.590 --> 00:02:58.600 align:start position:0%
+generated. We made some tweaks to the
+ 
+
+00:02:58.600 --> 00:03:00.430 align:start position:0%
+generated. We made some tweaks to the
+prompt,<00:02:59.320><c> and</c><00:02:59.440><c> now</c><00:02:59.600><c> as</c><00:02:59.720><c> you</c><00:02:59.800><c> can</c><00:02:59.960><c> see,</c><00:03:00.120><c> this</c>
+
+00:03:00.430 --> 00:03:00.440 align:start position:0%
+prompt, and now as you can see, this
+ 
+
+00:03:00.440 --> 00:03:02.550 align:start position:0%
+prompt, and now as you can see, this
+article<00:03:00.800><c> is</c><00:03:01.000><c> much</c><00:03:01.360><c> longer.</c><00:03:02.120><c> That</c><00:03:02.280><c> first</c>
+
+00:03:02.550 --> 00:03:02.560 align:start position:0%
+article is much longer. That first
+ 
+
+00:03:02.560 --> 00:03:04.790 align:start position:0%
+article is much longer. That first
+article<00:03:02.920><c> was</c><00:03:03.080><c> 5</c><00:03:03.360><c> minutes.</c><00:03:04.080><c> This</c><00:03:04.320><c> article</c><00:03:04.680><c> is</c>
+
+00:03:04.790 --> 00:03:04.800 align:start position:0%
+article was 5 minutes. This article is
+ 
+
+00:03:04.800 --> 00:03:06.990 align:start position:0%
+article was 5 minutes. This article is
+11<00:03:05.320><c> minute</c><00:03:05.760><c> read.</c><00:03:05.960><c> So,</c><00:03:06.040><c> much,</c><00:03:06.440><c> much</c><00:03:06.680><c> more</c>
+
+00:03:06.990 --> 00:03:07.000 align:start position:0%
+11 minute read. So, much, much more
+ 
+
+00:03:07.000 --> 00:03:09.990 align:start position:0%
+11 minute read. So, much, much more
+in-depth<00:03:08.040><c> and</c><00:03:08.280><c> more</c><00:03:08.480><c> like</c><00:03:08.680><c> a</c><00:03:08.760><c> long-tail</c>
+
+00:03:09.990 --> 00:03:10.000 align:start position:0%
+in-depth and more like a long-tail
+ 
+
+00:03:10.000 --> 00:03:12.190 align:start position:0%
+in-depth and more like a long-tail
+article<00:03:10.800><c> that</c><00:03:10.960><c> we</c><00:03:11.080><c> would</c><00:03:11.240><c> get</c><00:03:11.400><c> back</c><00:03:11.760><c> from</c>
+
+00:03:12.190 --> 00:03:12.200 align:start position:0%
+article that we would get back from
+ 
+
+00:03:12.200 --> 00:03:13.790 align:start position:0%
+article that we would get back from
+WordRocket.<00:03:13.120><c> So,</c><00:03:13.240><c> we</c><00:03:13.280><c> can</c><00:03:13.400><c> see</c><00:03:13.560><c> here,</c>
+
+00:03:13.790 --> 00:03:13.800 align:start position:0%
+WordRocket. So, we can see here,
+ 
+
+00:03:13.800 --> 00:03:15.110 align:start position:0%
+WordRocket. So, we can see here,
+everything<00:03:14.160><c> here</c><00:03:14.360><c> is</c><00:03:14.600><c> really,</c><00:03:14.840><c> really</c>
+
+00:03:15.110 --> 00:03:15.120 align:start position:0%
+everything here is really, really
+ 
+
+00:03:15.120 --> 00:03:17.230 align:start position:0%
+everything here is really, really
+in-depth,<00:03:15.840><c> really</c><00:03:16.080><c> long,</c>
+
+00:03:17.230 --> 00:03:17.240 align:start position:0%
+in-depth, really long,
+ 
+
+00:03:17.240 --> 00:03:19.310 align:start position:0%
+in-depth, really long,
+and<00:03:17.400><c> as</c><00:03:17.480><c> you</c><00:03:17.560><c> can</c><00:03:17.720><c> see,</c><00:03:18.320><c> it's</c><00:03:18.600><c> on</c><00:03:18.840><c> up-to-date</c>
+
+00:03:19.310 --> 00:03:19.320 align:start position:0%
+and as you can see, it's on up-to-date
+ 
+
+00:03:19.320 --> 00:03:22.350 align:start position:0%
+and as you can see, it's on up-to-date
+content.<00:03:19.760><c> This</c><00:03:19.920><c> is</c><00:03:20.040><c> about</c><00:03:20.360><c> Claude</c><00:03:20.800><c> Opus</c><00:03:21.200><c> 4.7,</c>
+
+00:03:22.350 --> 00:03:22.360 align:start position:0%
+content. This is about Claude Opus 4.7,
+ 
+
+00:03:22.360 --> 00:03:24.390 align:start position:0%
+content. This is about Claude Opus 4.7,
+which<00:03:22.520><c> was</c><00:03:22.640><c> just</c><00:03:22.920><c> launched</c><00:03:23.320><c> a</c><00:03:23.400><c> couple</c><00:03:23.800><c> of</c><00:03:23.960><c> days</c>
+
+00:03:24.390 --> 00:03:24.400 align:start position:0%
+which was just launched a couple of days
+ 
+
+00:03:24.400 --> 00:03:26.910 align:start position:0%
+which was just launched a couple of days
+ago.<00:03:25.200><c> So,</c><00:03:25.400><c> you</c><00:03:25.520><c> can</c><00:03:25.720><c> set</c><00:03:25.920><c> it</c><00:03:26.040><c> up</c><00:03:26.200><c> to</c><00:03:26.320><c> do</c><00:03:26.480><c> live</c>
+
+00:03:26.910 --> 00:03:26.920 align:start position:0%
+ago. So, you can set it up to do live
+ 
+
+00:03:26.920 --> 00:03:28.830 align:start position:0%
+ago. So, you can set it up to do live
+web<00:03:27.240><c> research</c><00:03:27.760><c> on</c><00:03:27.960><c> topics</c><00:03:28.400><c> or</c><00:03:28.560><c> that</c><00:03:28.760><c> are</c>
+
+00:03:28.830 --> 00:03:28.840 align:start position:0%
+web research on topics or that are
+ 
+
+00:03:28.840 --> 00:03:31.070 align:start position:0%
+web research on topics or that are
+trending,<00:03:29.680><c> on</c><00:03:29.800><c> news</c><00:03:30.160><c> articles,</c><00:03:30.720><c> on</c><00:03:30.840><c> new</c>
+
+00:03:31.070 --> 00:03:31.080 align:start position:0%
+trending, on news articles, on new
+ 
+
+00:03:31.080 --> 00:03:34.110 align:start position:0%
+trending, on news articles, on new
+releases,<00:03:32.360><c> on</c><00:03:32.800><c> anything</c><00:03:33.400><c> that</c><00:03:33.600><c> you</c><00:03:33.720><c> can</c><00:03:33.880><c> think</c>
+
+00:03:34.110 --> 00:03:34.120 align:start position:0%
+releases, on anything that you can think
+ 
+
+00:03:34.120 --> 00:03:36.430 align:start position:0%
+releases, on anything that you can think
+of.<00:03:34.800><c> And</c><00:03:35.320><c> even</c><00:03:35.560><c> you</c><00:03:35.640><c> can</c><00:03:35.800><c> even</c><00:03:36.000><c> do</c><00:03:36.120><c> this</c><00:03:36.240><c> for</c>
+
+00:03:36.430 --> 00:03:36.440 align:start position:0%
+of. And even you can even do this for
+ 
+
+00:03:36.440 --> 00:03:39.350 align:start position:0%
+of. And even you can even do this for
+evergreen<00:03:36.960><c> content</c><00:03:37.440><c> as</c><00:03:37.680><c> well.</c><00:03:38.480><c> And</c><00:03:38.800><c> I</c><00:03:38.880><c> really,</c>
+
+00:03:39.350 --> 00:03:39.360 align:start position:0%
+evergreen content as well. And I really,
+ 
+
+00:03:39.360 --> 00:03:41.150 align:start position:0%
+evergreen content as well. And I really,
+really<00:03:39.600><c> like</c><00:03:39.800><c> this</c><00:03:39.960><c> because</c><00:03:40.280><c> again,</c><00:03:40.560><c> we're</c>
+
+00:03:41.150 --> 00:03:41.160 align:start position:0%
+really like this because again, we're
+ 
+
+00:03:41.160 --> 00:03:42.830 align:start position:0%
+really like this because again, we're
+interacting<00:03:41.760><c> with</c><00:03:41.920><c> Claude.</c><00:03:42.200><c> So,</c><00:03:42.320><c> Claude</c><00:03:42.680><c> will</c>
+
+00:03:42.830 --> 00:03:42.840 align:start position:0%
+interacting with Claude. So, Claude will
+ 
+
+00:03:42.840 --> 00:03:44.590 align:start position:0%
+interacting with Claude. So, Claude will
+do<00:03:42.960><c> its</c><00:03:43.160><c> best</c><00:03:43.480><c> to</c><00:03:43.560><c> find</c><00:03:43.880><c> the</c><00:03:43.920><c> best</c><00:03:44.160><c> possible</c>
+
+00:03:44.590 --> 00:03:44.600 align:start position:0%
+do its best to find the best possible
+ 
+
+00:03:44.600 --> 00:03:46.950 align:start position:0%
+do its best to find the best possible
+topic,<00:03:45.440><c> get</c><00:03:45.720><c> better</c><00:03:45.960><c> information,</c><00:03:46.560><c> and</c><00:03:46.720><c> send</c>
+
+00:03:46.950 --> 00:03:46.960 align:start position:0%
+topic, get better information, and send
+ 
+
+00:03:46.960 --> 00:03:49.710 align:start position:0%
+topic, get better information, and send
+that<00:03:47.200><c> over</c><00:03:47.960><c> to</c><00:03:48.400><c> WordRocket.</c>
+
+00:03:49.710 --> 00:03:49.720 align:start position:0%
+that over to WordRocket.
+ 
+
+00:03:49.720 --> 00:03:51.110 align:start position:0%
+that over to WordRocket.
+So,<00:03:49.840><c> if</c><00:03:50.000><c> I</c><00:03:50.040><c> actually</c><00:03:50.360><c> go</c><00:03:50.520><c> ahead</c><00:03:50.760><c> and</c><00:03:50.880><c> take</c><00:03:51.080><c> a</c>
+
+00:03:51.110 --> 00:03:51.120 align:start position:0%
+So, if I actually go ahead and take a
+ 
+
+00:03:51.120 --> 00:03:53.150 align:start position:0%
+So, if I actually go ahead and take a
+look<00:03:51.320><c> at</c><00:03:51.440><c> my</c><00:03:51.600><c> content</c><00:03:52.120><c> in</c><00:03:52.320><c> WordRocket,</c><00:03:52.920><c> we</c><00:03:53.000><c> can</c>
+
+00:03:53.150 --> 00:03:53.160 align:start position:0%
+look at my content in WordRocket, we can
+ 
+
+00:03:53.160 --> 00:03:55.270 align:start position:0%
+look at my content in WordRocket, we can
+see<00:03:53.800><c> that</c><00:03:53.960><c> these</c><00:03:54.240><c> were</c><00:03:54.400><c> the</c><00:03:54.560><c> two</c><00:03:54.800><c> articles</c>
+
+00:03:55.270 --> 00:03:55.280 align:start position:0%
+see that these were the two articles
+ 
+
+00:03:55.280 --> 00:03:58.270 align:start position:0%
+see that these were the two articles
+that<00:03:55.400><c> were</c><00:03:55.520><c> sent</c><00:03:55.920><c> over</c><00:03:56.680><c> by</c><00:03:56.880><c> the</c><00:03:57.120><c> API.</c><00:03:57.680><c> So,</c><00:03:58.200><c> it</c>
+
+00:03:58.270 --> 00:03:58.280 align:start position:0%
+that were sent over by the API. So, it
+ 
+
+00:03:58.280 --> 00:04:00.750 align:start position:0%
+that were sent over by the API. So, it
+was<00:03:58.400><c> sent</c><00:03:58.640><c> over,</c><00:03:59.320><c> and</c><00:03:59.480><c> it</c><00:03:59.600><c> was</c><00:03:59.800><c> generated</c>
+
+00:04:00.750 --> 00:04:00.760 align:start position:0%
+was sent over, and it was generated
+ 
+
+00:04:00.760 --> 00:04:03.310 align:start position:0%
+was sent over, and it was generated
+directly<00:04:01.320><c> into</c><00:04:02.040><c> WordRocket.</c><00:04:02.880><c> It</c><00:04:02.960><c> literally</c>
+
+00:04:03.310 --> 00:04:03.320 align:start position:0%
+directly into WordRocket. It literally
+ 
+
+00:04:03.320 --> 00:04:05.350 align:start position:0%
+directly into WordRocket. It literally
+took<00:04:03.480><c> me</c><00:04:03.680><c> hours</c><00:04:04.040><c> to</c><00:04:04.200><c> set</c><00:04:04.440><c> up,</c><00:04:04.880><c> but</c><00:04:05.000><c> I've</c><00:04:05.120><c> got</c>
+
+00:04:05.350 --> 00:04:05.360 align:start position:0%
+took me hours to set up, but I've got
+ 
+
+00:04:05.360 --> 00:04:07.270 align:start position:0%
+took me hours to set up, but I've got
+the<00:04:05.480><c> process</c><00:04:05.960><c> down</c><00:04:06.400><c> right.</c><00:04:06.920><c> And</c><00:04:07.000><c> if</c><00:04:07.080><c> you</c><00:04:07.160><c> want</c>
+
+00:04:07.270 --> 00:04:07.280 align:start position:0%
+the process down right. And if you want
+ 
+
+00:04:07.280 --> 00:04:09.150 align:start position:0%
+the process down right. And if you want
+to<00:04:07.360><c> get</c><00:04:07.480><c> the</c><00:04:07.600><c> full</c><00:04:08.040><c> access</c><00:04:08.480><c> to</c><00:04:08.560><c> the</c><00:04:08.720><c> prompt</c><00:04:09.080><c> and</c>
+
+00:04:09.150 --> 00:04:09.160 align:start position:0%
+to get the full access to the prompt and
+ 
+
+00:04:09.160 --> 00:04:11.270 align:start position:0%
+to get the full access to the prompt and
+the<00:04:09.320><c> SOP,</c><00:04:10.160><c> just</c><00:04:10.320><c> comment</c><00:04:10.600><c> Claude</c><00:04:10.880><c> below</c><00:04:11.160><c> and</c>
+
+00:04:11.270 --> 00:04:11.280 align:start position:0%
+the SOP, just comment Claude below and
+ 
+
+00:04:11.280 --> 00:04:13.590 align:start position:0%
+the SOP, just comment Claude below and
+I'll<00:04:11.400><c> send</c><00:04:11.600><c> it</c><00:04:11.760><c> over.</c>
+
+00:04:13.590 --> 00:04:13.600 align:start position:0%
+I'll send it over.
+ 
+
+00:04:13.600 --> 00:04:15.510 align:start position:0%
+I'll send it over.
+And<00:04:13.760><c> again,</c><00:04:14.000><c> if</c><00:04:14.640><c> And</c><00:04:14.800><c> of</c><00:04:14.960><c> course,</c><00:04:15.240><c> if</c><00:04:15.400><c> you'd</c>
+
+00:04:15.510 --> 00:04:15.520 align:start position:0%
+And again, if And of course, if you'd
+ 
+
+00:04:15.520 --> 00:04:17.110 align:start position:0%
+And again, if And of course, if you'd
+like<00:04:15.680><c> to</c><00:04:15.800><c> use</c><00:04:16.000><c> WordRocket</c><00:04:16.480><c> for</c><00:04:16.640><c> yourselves,</c>
+
+00:04:17.110 --> 00:04:17.120 align:start position:0%
+like to use WordRocket for yourselves,
+ 
+
+00:04:17.120 --> 00:04:19.349 align:start position:0%
+like to use WordRocket for yourselves,
+head<00:04:17.280><c> over</c><00:04:17.440><c> to</c><00:04:17.600><c> app.wordrocket.ai.</c>
+
+00:04:19.349 --> 00:04:19.359 align:start position:0%
+head over to app.wordrocket.ai.
+ 
+
+00:04:19.359 --> 00:04:20.870 align:start position:0%
+head over to app.wordrocket.ai.
+If<00:04:19.519><c> you</c><00:04:19.560><c> want</c><00:04:19.680><c> to</c><00:04:19.760><c> see</c><00:04:19.840><c> exactly</c><00:04:20.320><c> how</c><00:04:20.480><c> to</c><00:04:20.600><c> set</c><00:04:20.760><c> up</c>
+
+00:04:20.870 --> 00:04:20.880 align:start position:0%
+If you want to see exactly how to set up
+ 
+
+00:04:20.880 --> 00:04:23.790 align:start position:0%
+If you want to see exactly how to set up
+your<00:04:21.000><c> MCP</c><00:04:21.959><c> onto</c><00:04:22.280><c> Claude</c><00:04:22.600><c> so</c><00:04:22.720><c> it</c><00:04:22.840><c> can</c><00:04:23.320><c> connect</c>
+
+00:04:23.790 --> 00:04:23.800 align:start position:0%
+your MCP onto Claude so it can connect
+ 
+
+00:04:23.800 --> 00:04:25.510 align:start position:0%
+your MCP onto Claude so it can connect
+to<00:04:23.880><c> Claude</c><00:04:24.280><c> so</c><00:04:24.360><c> we</c><00:04:24.440><c> can</c><00:04:24.600><c> write</c><00:04:24.760><c> the</c><00:04:24.880><c> content</c><00:04:25.320><c> on</c>
+
+00:04:25.510 --> 00:04:25.520 align:start position:0%
+to Claude so we can write the content on
+ 
+
+00:04:25.520 --> 00:04:27.470 align:start position:0%
+to Claude so we can write the content on
+WordRocket,<00:04:26.440><c> I'll</c><00:04:26.680><c> link</c><00:04:27.120><c> some</c><00:04:27.280><c> other</c>
+
+00:04:27.470 --> 00:04:27.480 align:start position:0%
+WordRocket, I'll link some other
+ 
+
+00:04:27.480 --> 00:04:30.390 align:start position:0%
+WordRocket, I'll link some other
+tutorials<00:04:28.000><c> in</c><00:04:28.080><c> which</c><00:04:28.320><c> I've</c><00:04:28.480><c> already</c>
+
+00:04:30.390 --> 00:04:30.400 align:start position:0%
+tutorials in which I've already
+ 
+
+00:04:30.400 --> 00:04:31.670 align:start position:0%
+tutorials in which I've already
+Hope<00:04:30.560><c> that</c><00:04:30.720><c> you</c><00:04:30.800><c> guys</c><00:04:31.040><c> enjoyed</c><00:04:31.400><c> today's</c>
+
+00:04:31.670 --> 00:04:31.680 align:start position:0%
+Hope that you guys enjoyed today's
+ 
+
+00:04:31.680 --> 00:04:33.230 align:start position:0%
+Hope that you guys enjoyed today's
+video,<00:04:31.920><c> and</c><00:04:32.040><c> I'll</c><00:04:32.160><c> see</c><00:04:32.360><c> you</c><00:04:32.520><c> in</c><00:04:32.760><c> the</c><00:04:32.880><c> next</c><00:04:33.080><c> one.</c>
+
+00:04:33.230 --> 00:04:33.240 align:start position:0%
+video, and I'll see you in the next one.
+ 
+
+00:04:33.240 --> 00:04:35.760 align:start position:0%
+video, and I'll see you in the next one.
+Take<00:04:33.400><c> care.</c>
+

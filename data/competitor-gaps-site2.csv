@@ -1,0 +1,6 @@
+id,topic,search_intent,competitor_flaw,information_gain_plan
+1,Verified WiFi Speed & Jitter,Commercial Investigation,Accept host claims ('fast wifi') without speedtest proof.,"Embed verified Speedtest.net screenshots showing download, upload, ping, and jitter under load."
+2,Ergonomic Chair & Desk Specs,Informational / Commercial,Generic 'workspace included' label often means dining table.,"Catalog specific chair models (Aeron, Leap v2), desk dimensions (cm), and monitor rental availability."
+3,Power & Internet Redundancy,Commercial Investigation,Ignore power outages and internet blackouts in developing nomad hubs.,"Verify generator wattage, battery UPS backup duration, and secondary cellular failover status."
+4,True Monthly Cost vs Hotel Rates,Transactional / Commercial,"Display daily rates only, obscuring 30-day extended stay discounts.",Direct side-by-side comparison of 30-day all-inclusive coliving price vs 30-day hotel + coworking pass.
+5,Quiet Call Booth Availability,Informational,Omit noise policies; remote workers get surprised by party hostels.,Count and verify soundproof call booths and community quiet hour policies.

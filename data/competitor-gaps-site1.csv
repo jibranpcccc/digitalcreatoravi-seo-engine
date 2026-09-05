@@ -1,0 +1,6 @@
+id,topic,search_intent,competitor_flaw,information_gain_plan
+1,Ollama vs vLLM Concurrency,Commercial Investigation,Only test single-stream inference; ignore multi-user server loads.,"Benchmark tokens/sec under 1, 5, 10, and 25 concurrent streams on identical hardware."
+2,VRAM Requirements Calculator,Informational / Tool,Static tables ignore KV cache growth at 32k/64k context windows.,"Interactive client-side calculator factoring in parameter count, quantization bit-depth, and context tokens."
+3,DeepSeek R1 Local Deployment,Technical Tutorial,Outdated prompt templates cause catastrophic reasoning loops.,"Verified system prompts, temperature settings (0.6), and Ollama/vLLM one-click config files."
+4,Mac Studio M4 for LLMs,Commercial / Hardware,Compare CPU specs instead of unified memory bandwidth (800 GB/s).,Empirical memory bandwidth saturation tests and cost-per-token comparison against Nvidia cloud GPUs.
+5,Local MCP Server Architecture,Technical Guide,Theoretical explanations without complete working Python/TypeScript server code.,Production-ready GitHub repo template with SQLite connector and Claude Code integration.

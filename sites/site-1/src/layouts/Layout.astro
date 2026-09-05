@@ -1,0 +1,80 @@
+﻿---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  schemaJson?: string;
+}
+
+const { title, description, canonical = "https://localagentstack.com", schemaJson } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-slate-950 text-slate-100 antialiased">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="LocalAgentStack" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Machine-Readable Discovery -->
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Index" />
+
+    {schemaJson && (
+      <script type="application/ld+json" set:html={schemaJson} />
+    )}
+  </head>
+  <body class="min-h-screen flex flex-col selection:bg-blue-600 selection:text-white">
+    <!-- Header Navigation -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center space-x-3 group">
+          <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/20 group-hover:bg-blue-500 transition">
+            LA
+          </div>
+          <span class="text-xl font-extrabold tracking-tight text-white">LocalAgent<span class="text-blue-400">Stack</span></span>
+        </a>
+        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+          <a href="/inference/ollama-vs-vllm-benchmark" class="hover:text-blue-400 transition">Inference</a>
+          <a href="/hardware/vram-requirements-calculator-70b" class="hover:text-blue-400 transition">Hardware</a>
+          <a href="/models/deepseek-r1-local-setup-ollama" class="hover:text-blue-400 transition">Models</a>
+          <a href="/agents/custom-mcp-server-python-tutorial" class="hover:text-blue-400 transition">Agents (MCP)</a>
+          <a href="/llms.txt" class="px-2.5 py-1 rounded bg-slate-800 text-xs text-blue-400 font-mono hover:bg-slate-700 transition">llms.txt</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-6xl mx-auto px-4 py-8 w-full">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-900 mt-16 py-12 text-sm text-slate-400">
+      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+          <p class="font-semibold text-slate-200">LocalAgentStack.com</p>
+          <p class="text-xs text-slate-500 mt-1">Empirical benchmarks, local LLM orchestration & hardware engineering.</p>
+        </div>
+        <div class="flex space-x-6 text-xs text-slate-400">
+          <a href="/llms.txt" class="hover:text-blue-400">llms.txt</a>
+          <a href="/robots.txt" class="hover:text-blue-400">robots.txt</a>
+          <a href="/sitemap.xml" class="hover:text-blue-400">sitemap.xml</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

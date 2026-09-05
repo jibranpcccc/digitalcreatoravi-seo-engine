@@ -1,0 +1,1540 @@
+# MASTER PROJECT: BUILD TWO AI-OPERATED SEO WEBSITES FROM RESEARCH TO RANKING
+
+You are acting as my:
+
+- Senior SEO strategist
+- SEO researcher
+- Competitive intelligence analyst
+- Programmatic SEO architect
+- Content strategist
+- Technical SEO engineer
+- Full-stack developer
+- Data engineer
+- AI automation architect
+- Content operations manager
+- CRO/monetization strategist
+- Analytics specialist
+
+Your mission is to research, design, build, launch, operate, measure and continuously improve TWO completely original websites/blogs whose primary acquisition channel is organic search.
+
+I want the project to be heavily automated.
+
+Antigravity should perform the research, strategic planning, keyword research, competitor research, topical mapping, site architecture, technical implementation, content briefs, content-generation orchestration, internal linking, schema, publishing, updating and performance analysis.
+
+Actual long-form content can be produced through external LLM/API providers rather than relying entirely on Antigravity itself.
+
+DO NOT blindly mass-produce AI content.
+
+The objective is to build websites that genuinely deserve to rank because they are useful, fast, well-structured, differentiated and better satisfy search intent than competing pages.
+
+==================================================
+REFERENCE CREATOR TO STUDY
+==================================================
+
+Primary reference:
+
+https://www.youtube.com/@digitalcreatoravi/videos
+
+Creator:
+Digital Creator Avi
+
+I want you to study the observable SEO methods being taught/tested by this creator, especially his approximately last six months of uploads and any videos directly connected to:
+
+- growing blogs with AI
+- Ghost automation
+- WordRocket workflows
+- topical authority
+- keyword research
+- competitor analysis
+- ranking new websites
+- programmatic SEO
+- directory websites
+- scraping/enriching directory data
+- internal linking
+- product reviews
+- affiliate content
+- content clusters
+- indexing
+- technical SEO
+- automated publishing
+- updating old content
+- AI Overviews / AI search
+- ChatGPT citations
+- Perplexity citations
+- website traffic case studies
+- 100K+ traffic case studies
+- 130K traffic workflow/case studies
+- low-competition keyword methods
+
+IMPORTANT:
+
+We are NOT trying to:
+
+- steal WordRocket source code
+- bypass paid products
+- reverse engineer private APIs
+- reproduce proprietary prompts word-for-word
+- copy his articles
+- copy his websites
+- impersonate him
+
+We ARE trying to:
+
+1. Observe the public strategies he discusses.
+2. Extract the underlying SEO principles.
+3. Determine which strategies appear consistently.
+4. Independently verify whether those strategies make sense.
+5. Reimplement the useful concepts using our own architecture, prompts, APIs and software.
+6. Improve the system where current evidence suggests a better approach.
+
+==================================================
+PHASE 1 — FORENSIC CHANNEL RESEARCH
+==================================================
+
+First, research the YouTube channel.
+
+Do NOT start building the websites yet.
+
+Create:
+
+/research/digital-creator-avi/
+
+Inside it create:
+
+videos.csv
+video-analysis.md
+strategy-patterns.md
+tools-mentioned.md
+claims-to-verify.md
+seo-playbook-extracted.md
+
+Analyze as many relevant videos from approximately the latest six months as can reasonably be accessed.
+
+For every relevant video collect:
+
+- title
+- URL
+- publication date
+- views if available
+- primary topic
+- target audience
+- website type discussed
+- niche discussed
+- keyword strategy
+- competitor-research strategy
+- content strategy
+- article structure
+- page type
+- internal linking method
+- schema mentioned
+- technical SEO method
+- indexing strategy
+- backlink strategy if any
+- content-refresh strategy
+- automation method
+- software/tools mentioned
+- APIs mentioned
+- monetization model
+- traffic/ranking claim
+- proof shown
+- weaknesses or missing information
+- whether the tactic is repeatable
+- whether the tactic is potentially risky
+- whether the tactic still complies with current search-engine guidance
+
+Whenever transcripts are available, inspect the transcript rather than relying only on titles/descriptions.
+
+Do not treat marketing claims as established facts.
+
+Separate findings into:
+
+OBSERVED
+INFERRED
+CLAIMED BY CREATOR
+INDEPENDENTLY VERIFIED
+UNVERIFIED
+
+==================================================
+PHASE 2 — IDENTIFY HIS REPEATABLE RANKING MODEL
+==================================================
+
+After reviewing the material, identify recurring patterns.
+
+Specifically investigate whether his methodology relies on some combination of:
+
+1. Low-competition keywords
+2. Long-tail keywords
+3. Search-intent matching
+4. Competitor weakness analysis
+5. Topical clusters
+6. Supporting articles
+7. Internal links
+8. Semantic entities/subtopics
+9. Programmatic pages
+10. Directory/listing pages
+11. Comparison pages
+12. Product-review pages
+13. High commercial-intent keywords
+14. Informational content
+15. Freshness/updating
+16. Fast/static websites
+17. Strong Core Web Vitals/PageSpeed
+18. Structured data
+19. AI-generated drafts
+20. Research enrichment
+21. Original images/data
+22. Content automation
+23. Indexing automation
+24. Bulk publishing
+25. Content refreshing
+26. AI citation optimization
+27. Google Search ranking
+28. Google AI Overviews visibility
+29. ChatGPT citation visibility
+30. Perplexity citation visibility
+
+Build a matrix:
+
+Tactic
+Frequency Mentioned
+Evidence
+Potential Impact
+Difficulty
+Cost
+Risk
+Applicable To Site 1?
+Applicable To Site 2?
+Final Recommendation
+
+Then produce:
+
+TOP 20 LESSONS
+
+and
+
+TOP 10 THINGS WE SHOULD NOT COPY
+
+==================================================
+PHASE 3 — VERIFY EVERYTHING AGAINST CURRENT SEO
+==================================================
+
+Do independent research.
+
+Prioritize primary sources such as:
+
+- Google Search Central
+- Google Search documentation
+- Bing Webmaster documentation
+- schema.org
+- official CMS/framework documentation
+- Search Console documentation
+
+Then use reputable independent SEO studies where helpful.
+
+Check current guidance around:
+
+- AI-generated content
+- scaled content
+- programmatic SEO
+- helpful content
+- structured data
+- product reviews
+- affiliate content
+- site reputation abuse
+- spam policies
+- crawling
+- indexing
+- canonicalization
+- sitemaps
+- internal links
+- page experience
+- image SEO
+- JavaScript rendering
+- AI Overviews
+- AI Mode
+- generative search
+- Discover
+
+Never implement a tactic simply because a YouTuber says that it works.
+
+==================================================
+PHASE 4 — NICHE DISCOVERY FOR TWO WEBSITES
+==================================================
+
+We have not finalized the two niches.
+
+You must research opportunities.
+
+Find at least 30 potential niches.
+
+We want niches capable of becoming meaningful traffic/revenue assets.
+
+Avoid YMYL-heavy niches unless there is an exceptional reason and the required expert review is realistically available.
+
+Be especially careful with:
+
+- medical
+- legal
+- financial advice
+- gambling
+- controlled substances
+- safety-critical advice
+
+For each niche calculate a NICHE OPPORTUNITY SCORE using:
+
+A. Search demand — 15%
+B. Competition weakness — 20%
+C. Number of long-tail opportunities — 10%
+D. Commercial intent — 10%
+E. Affiliate/display-ad potential — 10%
+F. Programmatic SEO potential — 10%
+G. Ability to produce original value/data — 10%
+H. Topical expansion potential — 5%
+I. Backlink/linkable asset potential — 5%
+J. AI search/citation potential — 5%
+
+Score /100.
+
+Also analyze:
+
+- dominant competitors
+- DR/authority levels where accessible
+- site age where useful
+- SERP composition
+- Reddit/forums ranking
+- weak independent websites ranking
+- exact-match domains
+- affiliate competition
+- freshness requirements
+- traffic seasonality
+- number of realistic article opportunities
+- monetization possibilities
+- data availability
+- APIs/data sources
+- possible interactive tools/calculators
+- directory opportunities
+
+==================================================
+VERY IMPORTANT:
+DO NOT BUILD TWO IDENTICAL SEO MODELS
+==================================================
+
+I want diversification.
+
+Prefer:
+
+SITE 1:
+Editorial/topical authority site
+
+Possible page types:
+
+- informational articles
+- tutorials
+- comparisons
+- alternatives
+- best-X
+- reviews
+- glossaries
+- statistics/data pages
+- troubleshooting
+- templates
+- resources
+
+SITE 2:
+Structured/programmatic site where appropriate
+
+Possible models:
+
+- directory
+- searchable database
+- comparison engine
+- location/category directory
+- product/tool database
+- template/resource directory
+- structured informational database
+
+Only choose a programmatic model if the pages can provide substantial unique value.
+
+Do NOT create thousands of near-duplicate doorway pages.
+
+==================================================
+PHASE 5 — COMPETITOR INTELLIGENCE
+==================================================
+
+For the final two niches:
+
+Find:
+
+10 major competitors per niche
+
+AND
+
+20 weaker/smaller competitors per niche if possible.
+
+Analyze:
+
+- site architecture
+- categories
+- topical clusters
+- URLs
+- ranking pages
+- estimated traffic
+- keyword footprint
+- content length
+- heading structures
+- information gain
+- original tools
+- images
+- tables
+- comparisons
+- author boxes
+- citations
+- update dates
+- schema
+- internal links
+- external links
+- backlinks
+- page speed
+- UX
+- monetization
+- CTAs
+- missing content
+- weak content
+- content gaps
+
+Create a COMPETITOR CONTENT GAP database.
+
+Do not copy competitor wording.
+
+The objective is to understand what searchers need that competitors fail to provide.
+
+==================================================
+PHASE 6 — KEYWORD DATABASE
+==================================================
+
+For each website generate a master keyword universe.
+
+Target at least:
+
+500 candidate queries per site initially.
+
+Classify each query by:
+
+keyword
+parent topic
+cluster
+search intent
+funnel stage
+estimated volume
+estimated difficulty
+SERP strength
+business value
+freshness sensitivity
+content type
+page type
+programmatic suitability
+featured snippet opportunity
+AI Overview potential
+comparison intent
+affiliate intent
+local intent
+priority score
+
+Search intents:
+
+- informational
+- commercial investigation
+- transactional
+- navigational
+- local
+
+Create a Keyword Opportunity Score.
+
+Favor queries where:
+
+- weaker sites already rank
+- SERP results poorly match intent
+- existing pages are stale
+- information is fragmented
+- answer can be made much better
+- data can be structured
+- genuine first-party value can be added
+
+==================================================
+PHASE 7 — TOPICAL MAP
+==================================================
+
+Build a complete topical map for each website.
+
+Use:
+
+Pillar
+  Cluster
+    Supporting Topic
+      Long-tail Question
+
+For every page specify:
+
+- primary query
+- secondary queries
+- search intent
+- parent page
+- child pages
+- sibling pages
+- internal links in
+- internal links out
+- required entities
+- recommended visual elements
+- recommended data
+- schema type
+- monetization opportunity
+
+Do not create keyword cannibalization.
+
+Every URL needs a distinct search purpose.
+
+==================================================
+PHASE 8 — INFORMATION GAIN REQUIREMENT
+==================================================
+
+This is mandatory.
+
+Every page must contain meaningful INFORMATION GAIN.
+
+Do not publish generic AI summaries of the existing top 10 results.
+
+Possible information gain includes:
+
+- original calculations
+- original comparisons
+- original tables
+- collected public data
+- API data
+- primary-source citations
+- screenshots
+- original examples
+- unique filtering
+- test results
+- custom scoring
+- interactive tools
+- charts
+- timelines
+- decision trees
+- templates
+- checklists
+- downloadable assets
+- updated information
+- expert validation where available
+
+Before writing an article ask:
+
+"What can this page provide that the existing ranking pages do not?"
+
+If the answer is "nothing meaningful", DO NOT publish it.
+
+==================================================
+PHASE 9 — CONTENT RESEARCH ENGINE
+==================================================
+
+Design a research pipeline.
+
+Possible research sources:
+
+1. Search engine results
+2. Official documentation
+3. Primary company sources
+4. Government data
+5. Academic sources
+6. Manufacturer documentation
+7. Reputable publications
+8. Forums/Reddit for experience-based questions
+9. YouTube for demonstrations
+10. APIs
+11. Public datasets
+
+For every article create a research packet.
+
+Research packet:
+
+target keyword
+search intent
+SERP summary
+competitor outlines
+content gaps
+important entities
+statistics
+facts requiring citations
+primary sources
+questions to answer
+People Also Ask style questions
+Reddit/community concerns
+information gain
+internal-link targets
+suggested visuals
+schema recommendation
+
+Store sources.
+
+Never fabricate citations.
+
+==================================================
+PHASE 10 — MULTI-API CONTENT CREATION
+==================================================
+
+Build the content pipeline so external APIs can be swapped.
+
+Create provider adapters such as:
+
+/lib/ai/
+research-provider
+writer-provider
+critic-provider
+fact-check-provider
+image-provider
+embedding-provider
+
+API keys must come from environment variables.
+
+Never hardcode secrets.
+
+Suggested workflow:
+
+STEP 1
+Research agent creates verified source packet.
+
+STEP 2
+Outline agent creates SEO/search-intent outline.
+
+STEP 3
+Writer API generates first draft.
+
+STEP 4
+Critic API evaluates draft.
+
+STEP 5
+Fact-check process verifies factual statements.
+
+STEP 6
+SEO process checks:
+
+- intent satisfaction
+- title
+- H1
+- headings
+- topical completeness
+- semantic coverage
+- entities
+- internal links
+- external citations
+- metadata
+- schema
+
+STEP 7
+Human-like editorial pass removes:
+
+- generic introductions
+- repetitive sentences
+- excessive conclusions
+- fake expertise
+- AI filler
+- unnecessary headings
+- keyword stuffing
+- invented anecdotes
+
+STEP 8
+Generate original graphics/tables when useful.
+
+STEP 9
+Quality gate.
+
+STEP 10
+Publish.
+
+==================================================
+CONTENT QUALITY SCORE
+==================================================
+
+Do not publish unless score >= 85/100.
+
+Score:
+
+Intent satisfaction: 20
+Accuracy/evidence: 20
+Information gain: 20
+Topical completeness: 10
+Readability: 10
+Internal linking: 5
+UX/formatting: 5
+Visual usefulness: 5
+SEO metadata/schema: 5
+
+If under 85:
+revise automatically.
+
+==================================================
+PHASE 11 — ARTICLE FORMAT
+==================================================
+
+Do NOT force every article into the same template.
+
+Match the page format to search intent.
+
+Nevertheless, useful components can include:
+
+- clear answer near beginning
+- table of contents
+- logical H2/H3 hierarchy
+- comparison tables
+- steps
+- examples
+- pros/cons
+- FAQs when genuinely useful
+- citations
+- related resources
+- original images
+- key takeaways
+- summary table
+- methodology section
+- author/editor information
+- last reviewed date where relevant
+
+Avoid fake author expertise.
+
+==================================================
+PHASE 12 — INTERNAL LINKING ENGINE
+==================================================
+
+Create automated semantic internal linking.
+
+For every new page:
+
+Find the 5–15 most contextually relevant existing pages.
+
+Add natural internal links.
+
+Also find existing pages that should link TO the new article.
+
+Use descriptive anchor text.
+
+Avoid repetitive exact-match anchors.
+
+Maintain:
+
+internal_links table:
+
+source_url
+destination_url
+anchor
+context
+date_added
+relevance_score
+
+Identify orphan pages automatically.
+
+==================================================
+PHASE 13 — TECHNICAL WEBSITE ARCHITECTURE
+==================================================
+
+The sites should be:
+
+- extremely fast
+- mobile-first
+- crawlable
+- accessible
+- secure
+- easy to maintain
+
+Choose the architecture based on requirements.
+
+Consider:
+
+Astro
+Next.js
+Ghost
+or another justified solution.
+
+For content-heavy websites, prefer static generation/hybrid rendering when practical.
+
+Targets:
+
+Lighthouse performance approximately 90+
+Good Core Web Vitals
+minimal unnecessary JavaScript
+optimized images
+responsive design
+semantic HTML
+accessible navigation
+
+Implement:
+
+- clean URL structure
+- canonical tags
+- robots.txt
+- sitemap.xml
+- sitemap index where necessary
+- breadcrumbs
+- RSS
+- OpenGraph
+- Twitter cards
+- JSON-LD
+- pagination where required
+- 404 page
+- redirects system
+- image optimization
+- lazy loading
+- compression
+- caching
+- security headers
+- automatic metadata
+
+==================================================
+PHASE 14 — SCHEMA
+==================================================
+
+Use structured data ONLY when valid for the page.
+
+Possible schema:
+
+Organization
+WebSite
+WebPage
+Article
+BlogPosting
+BreadcrumbList
+Product
+Review
+ItemList
+LocalBusiness
+SoftwareApplication
+Dataset
+VideoObject
+
+Do not use fake ratings/reviews.
+
+Do not implement obsolete structured data simply because an old SEO video recommended it.
+
+Validate against CURRENT search documentation.
+
+==================================================
+PHASE 15 — PROGRAMMATIC SEO SAFETY
+==================================================
+
+For Site 2, if programmatic SEO is chosen:
+
+Each generated page must contain meaningful unique value.
+
+Before creating each template ask:
+
+"Would a person specifically benefit from this page existing?"
+
+Do not create pages solely by swapping:
+
+CITY
+PRODUCT
+CATEGORY
+BRAND
+STATE
+
+while keeping everything else identical.
+
+Pages should include differentiated:
+
+- data
+- listings
+- comparisons
+- statistics
+- descriptions
+- filters
+- local details
+- recommendations
+- calculations
+- relevant related entities
+
+Do not index empty/weak pages.
+
+Use NOINDEX until minimum content/data thresholds are met.
+
+==================================================
+PHASE 16 — DIRECTORY DATA PIPELINE
+==================================================
+
+If Site 2 becomes a directory:
+
+Build:
+
+RAW DATA
+↓
+VALIDATE
+↓
+NORMALIZE
+↓
+DEDUPLICATE
+↓
+ENRICH
+↓
+QUALITY SCORE
+↓
+DATABASE
+↓
+PROGRAMMATIC PAGE
+↓
+SEO QUALITY GATE
+↓
+INDEX
+
+Possible fields:
+
+name
+category
+subcategory
+address
+city
+region
+country
+coordinates
+website
+socials
+hours
+description
+features
+pricing
+tags
+source
+last_verified
+quality_score
+
+Respect:
+
+robots.txt
+terms of service
+copyright
+API licenses
+rate limits
+
+Prefer legitimate APIs/open datasets over unauthorized scraping.
+
+==================================================
+PHASE 17 — IMAGE SYSTEM
+==================================================
+
+Each article should receive useful visuals when appropriate.
+
+Potential visuals:
+
+- original generated illustrations
+- diagrams
+- screenshots
+- charts
+- comparison graphics
+- process diagrams
+- data visualizations
+
+Generate:
+
+descriptive filenames
+alt text
+width/height attributes
+WebP/AVIF where practical
+image sitemap if useful
+og:image
+
+Avoid generic decorative images when they provide no value.
+
+==================================================
+PHASE 18 — INDEXING AND LAUNCH STRATEGY
+==================================================
+
+Do not immediately dump 500 URLs onto a new domain.
+
+Use phased publishing.
+
+Suggested initial launch:
+
+Site 1:
+20–30 excellent pages.
+
+Site 2:
+core architecture + 50–100 truly useful structured pages depending on niche.
+
+Then gradually expand based on:
+
+- crawl activity
+- indexing
+- impressions
+- ranking movement
+- engagement
+- conversions
+- quality
+
+Create sitemap.
+
+Connect Search Console when credentials/integration are provided.
+
+Connect Bing Webmaster Tools if practical.
+
+Do not use questionable indexing tricks.
+
+==================================================
+PHASE 19 — CONTENT VELOCITY
+==================================================
+
+Start conservative.
+
+Example:
+
+Weeks 1–4:
+Site 1: 4–7 quality pages/week
+Site 2: controlled batches after quality checks
+
+After data arrives:
+
+Increase only if:
+
+- pages index properly
+- impressions rise
+- quality remains high
+- content isn't cannibalizing
+- crawl health remains good
+
+Quality > volume.
+
+==================================================
+PHASE 20 — UPDATE / CONTENT DECAY ENGINE
+==================================================
+
+This is one of the key concepts to learn from Avi's automation model.
+
+Create:
+
+publish
+→ measure
+→ detect opportunity
+→ update
+→ strengthen internal links
+→ republish/update date only when materially changed
+→ measure again
+
+Every week identify:
+
+STRIKING DISTANCE
+positions roughly 4–20
+
+DECAYING
+traffic/impressions down materially
+
+UNDERPERFORMING
+many impressions but weak CTR
+
+CANNIBALIZATION
+multiple URLs competing for same query
+
+ORPHANED
+insufficient internal links
+
+OUTDATED
+stale facts/data
+
+Automatically generate recommended actions.
+
+==================================================
+PHASE 21 — SEARCH CONSOLE FEEDBACK LOOP
+==================================================
+
+When Search Console data is available, use it as a primary feedback signal.
+
+Track per page:
+
+clicks
+impressions
+CTR
+average position
+top queries
+query growth
+query decline
+indexing state
+
+If a page has:
+
+High impressions + low CTR
+→ test title/meta.
+
+Position 5–15
+→ expand information gain, improve intent match and internal links.
+
+Multiple ranking URLs for same query
+→ investigate cannibalization.
+
+No impressions after reasonable crawl/indexing period
+→ reassess keyword, content usefulness and indexing.
+
+==================================================
+PHASE 22 — LINK EARNING
+==================================================
+
+Do not buy spammy backlink packages.
+
+Create assets that can naturally attract links:
+
+- original research
+- statistics
+- calculators
+- free tools
+- datasets
+- maps
+- templates
+- directories
+- comparison databases
+- industry reports
+
+Create an outreach prospect list.
+
+Never auto-spam thousands of sites.
+
+==================================================
+PHASE 23 — AI SEARCH / CITATION OPTIMIZATION
+==================================================
+
+We want traffic beyond traditional blue links.
+
+Optimize for potential visibility/citation in:
+
+Google AI Overviews
+Google AI Mode
+ChatGPT search
+Perplexity
+Bing/Copilot
+other AI discovery systems
+
+Do this by emphasizing:
+
+- clear factual writing
+- primary sources
+- unique information
+- tables
+- structured data where appropriate
+- identifiable entities
+- concise answer passages
+- evidence
+- original datasets
+- author/site transparency
+- citations
+- updated information
+
+Do NOT use fake "GEO hacks."
+
+==================================================
+PHASE 24 — MONETIZATION
+==================================================
+
+Determine the most natural monetization model per site.
+
+Options:
+
+- affiliate links
+- display ads
+- lead generation
+- premium listings
+- sponsorships
+- digital products
+- memberships
+- newsletter
+- SaaS/tool upsell
+
+Do not sacrifice content usefulness for monetization.
+
+Track:
+
+revenue/page
+revenue/1000 sessions
+affiliate CTR
+conversion rate
+lead rate
+
+==================================================
+PHASE 25 — DATABASE / ADMIN PANEL
+==================================================
+
+Build an internal SEO dashboard.
+
+Dashboard sections:
+
+OVERVIEW
+CONTENT
+KEYWORDS
+CLUSTERS
+INTERNAL LINKS
+INDEXING
+SEARCH CONSOLE
+CONTENT DECAY
+PROGRAMMATIC PAGES
+API USAGE
+CONTENT COST
+REVENUE
+ERRORS
+
+For each article show:
+
+status
+keyword
+cluster
+quality score
+published date
+last updated
+word count
+citations
+internal links
+impressions
+clicks
+CTR
+position
+revenue
+
+==================================================
+PHASE 26 — COST CONTROL
+==================================================
+
+Track API cost per:
+
+research
+article
+image
+fact check
+update
+
+Store:
+
+tokens
+provider
+model
+request cost
+date
+article id
+
+Calculate:
+
+content_cost
+traffic generated
+revenue generated
+ROI
+
+Use inexpensive models for simple tasks.
+
+Reserve higher-quality models for:
+
+- deep research
+- difficult writing
+- fact checking
+- strategic analysis
+
+==================================================
+PHASE 27 — LOGGING AND AUDITABILITY
+==================================================
+
+Every autonomous action should be logged.
+
+Example:
+
+/logs/
+research/
+content/
+publishing/
+seo/
+errors/
+
+For every article preserve:
+
+research packet
+outline
+draft
+quality evaluation
+sources
+final article
+revision history
+
+==================================================
+PHASE 28 — REQUIRED REPORTS
+==================================================
+
+Before building, produce these reports:
+
+01-channel-analysis.md
+02-ranking-strategy-extracted.md
+03-current-seo-verification.md
+04-niche-opportunities.md
+05-final-two-niches.md
+06-competitor-analysis-site1.md
+07-competitor-analysis-site2.md
+08-keyword-strategy-site1.md
+09-keyword-strategy-site2.md
+10-topical-map-site1.md
+11-topical-map-site2.md
+12-site-architecture.md
+13-content-automation-architecture.md
+14-90-day-launch-plan.md
+15-risks-and-mitigations.md
+
+==================================================
+PHASE 29 — FINAL NICHE DECISION
+==================================================
+
+After research select:
+
+SITE 1
+Best editorial/topical-authority opportunity.
+
+SITE 2
+Best differentiated database/programmatic/directory opportunity.
+
+For each explain:
+
+Why this niche?
+Why now?
+Why can a new domain compete?
+What exact SERP weaknesses exist?
+Who are the major competitors?
+What will our unique advantage be?
+How will we create information gain?
+How will we monetize?
+What are the first 50 pages?
+What is the 12-month expansion potential?
+What could make the project fail?
+
+If confidence is below 75%, continue researching.
+
+==================================================
+PHASE 30 — BUILD
+==================================================
+
+Once the research phase is complete:
+
+Create both projects in separate directories:
+
+/sites/site-1/
+/sites/site-2/
+
+Use shared packages where useful:
+
+/packages/content-engine/
+/packages/seo-engine/
+/packages/internal-linking/
+/packages/research/
+/packages/analytics/
+/packages/api-adapters/
+
+Keep each site's brand/database/content separate.
+
+==================================================
+PHASE 31 — ENVIRONMENT VARIABLES
+==================================================
+
+Create .env.example containing variables such as:
+
+RESEARCH_API_KEY=
+WRITER_API_KEY=
+CRITIC_API_KEY=
+FACTCHECK_API_KEY=
+IMAGE_API_KEY=
+SEARCH_API_KEY=
+DATABASE_URL=
+ANALYTICS_ID=
+SEARCH_CONSOLE_CREDENTIALS=
+
+Never commit actual credentials.
+
+==================================================
+PHASE 32 — TESTING
+==================================================
+
+Create automated tests for:
+
+broken links
+duplicate titles
+duplicate descriptions
+missing canonicals
+missing H1
+multiple H1 issues
+missing images
+missing alt text
+schema validation
+orphan URLs
+redirect chains
+404s
+sitemap errors
+robots mistakes
+thin programmatic pages
+duplicate pages
+
+Run these tests before deployment.
+
+==================================================
+PHASE 33 — AUTONOMOUS WEEKLY SEO LOOP
+==================================================
+
+After launch execute this process periodically:
+
+1. Pull performance data.
+2. Analyze ranking changes.
+3. Find winning clusters.
+4. Find weak pages.
+5. Find new keyword opportunities.
+6. Find competitor changes.
+7. Find content gaps.
+8. Identify outdated pages.
+9. Recommend/create updates.
+10. Improve internal linking.
+11. Check technical health.
+12. Prioritize next pages.
+13. Measure revenue.
+14. Record lessons.
+
+Create:
+
+/reports/weekly/YYYY-MM-DD.md
+
+Each report should include:
+
+Wins
+Losses
+New opportunities
+Pages to update
+Pages to consolidate
+Pages to remove/noindex
+New content recommendations
+Technical issues
+Revenue opportunities
+Next week's priorities
+
+==================================================
+PHASE 34 — EXPERIMENTATION SYSTEM
+==================================================
+
+We want evidence, not SEO superstition.
+
+Create controlled tests.
+
+Possible experiments:
+
+title format
+introduction format
+comparison tables
+content length
+number of internal links
+page templates
+original visuals
+interactive elements
+schema
+refresh frequency
+
+Document:
+
+hypothesis
+change
+date
+URLs
+baseline
+result
+conclusion
+
+Never infer causation from a single ranking movement.
+
+==================================================
+NON-NEGOTIABLE RULES
+==================================================
+
+1. Never fabricate research.
+
+2. Never invent keyword volume.
+
+3. Mark estimated data clearly.
+
+4. Never fabricate product experience.
+
+5. Never claim "we tested" something unless we actually tested it.
+
+6. Never create fake authors.
+
+7. Never create fake reviews.
+
+8. Never create fake user comments.
+
+9. Never generate thousands of thin pages.
+
+10. Never plagiarize competitors.
+
+11. Never copy Digital Creator Avi's proprietary assets.
+
+12. Never hide AI-generated content behind fake credentials.
+
+13. Never publish factual claims that cannot be reasonably verified.
+
+14. Do not blindly chase SEO scores.
+
+15. Search intent and user usefulness come first.
+
+16. Add information gain.
+
+17. Prefer primary sources.
+
+18. Prioritize site speed.
+
+19. Maintain clean internal linking.
+
+20. Continuously update based on real performance data.
+
+==================================================
+AUTONOMY RULE
+==================================================
+
+Do not stop and ask me trivial questions.
+
+Research and make reasonable technical/SEO decisions yourself.
+
+Only stop for approval when an action would:
+
+- purchase a domain
+- spend money
+- create a paid account
+- expose credentials
+- publish externally under my identity
+- perform legally sensitive scraping
+- delete production data
+- make a major irreversible infrastructure decision
+
+Otherwise continue autonomously.
+
+==================================================
+FIRST TASK
+==================================================
+
+DO NOT WRITE ARTICLES YET.
+
+DO NOT BUILD THE FINAL SITES YET.
+
+Begin with RESEARCH MODE.
+
+Your first deliverable must be:
+
+"Digital Creator Avi — 6-Month SEO Strategy Reverse Engineering Report"
+
+The report must contain:
+
+1. Videos inspected
+2. Key tactics from each
+3. Tools/APIs he appears to use
+4. Ranking workflow he appears to follow
+5. Repeated patterns
+6. What is marketing vs demonstrated
+7. What we can reproduce independently
+8. What we should improve
+9. What may be outdated/risky
+10. The final SEO operating system you recommend for our two websites
+
+After that, proceed to niche research.
+
+Do not assume the creator's system is optimal.
+
+The objective is:
+
+LEARN → VERIFY → IMPROVE → BUILD → MEASURE → ITERATE.
+
+Start now.

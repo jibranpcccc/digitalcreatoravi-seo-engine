@@ -1,0 +1,9 @@
+# WorkationRadar
+> The verified global directory of coliving hubs and remote workation properties for digital nomads.
+
+## Verified Hubs & Destinations
+- [Madeira, Portugal](/coliving/portugal/madeira/): High-speed fiber, nomad village community, Atlantic views.
+- [Bansko, Bulgaria](/coliving/bulgaria/bansko/): Budget mountain retreat, winter skiing, all-inclusive monthly rates under €800.
+- [Chiang Mai, Thailand](/coliving/thailand/chiang-mai/): Global remote hub, high-speed fiber, vibrant cafe culture.
+- [Bali (Canggu), Indonesia](/coliving/indonesia/bali-canggu/): Generator-backed power, dedicated ergonomic call booths.
+- [Medellín, Colombia](/coliving/colombia/medellin/): Year-round spring climate, fiber redundancy, El Poblado tech scene.
