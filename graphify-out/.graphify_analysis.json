@@ -1,0 +1,289 @@
+{
+  "communities": {
+    "0": [
+      "tests_test_seo_suite",
+      "tests_test_seo_suite_rationale_1",
+      "tests_test_seo_suite_testfullseosuite",
+      "tests_test_seo_suite_testfullseosuite_setup",
+      "tests_test_seo_suite_testfullseosuite_test_canonical_presence",
+      "tests_test_seo_suite_testfullseosuite_test_env_hygiene",
+      "tests_test_seo_suite_testfullseosuite_test_h1_integrity",
+      "tests_test_seo_suite_testfullseosuite_test_information_gain_elements",
+      "tests_test_seo_suite_testfullseosuite_test_internal_link_engine",
+      "tests_test_seo_suite_testfullseosuite_test_keyword_datasets_completeness",
+      "tests_test_seo_suite_testfullseosuite_test_llms_txt_presence",
+      "tests_test_seo_suite_testfullseosuite_test_quality_gate_evaluator",
+      "tests_test_seo_suite_testfullseosuite_test_reports_manifest",
+      "tests_test_seo_suite_testfullseosuite_test_robots_txt_rules",
+      "tests_test_seo_suite_testfullseosuite_test_schema_builder",
+      "tests_test_seo_suite_testfullseosuite_test_site2_anti_doorway_data_richness"
+    ],
+    "1": [
+      "c_users_jibra_desktop_1_digitalcreatoravi_sites_site_2_src_data_properties_json",
+      "sites_site_2_src_layouts_layout",
+      "sites_site_2_src_pages_city_city",
+      "sites_site_2_src_pages_city_city_getstaticpaths",
+      "sites_site_2_src_pages_index",
+      "sites_site_2_src_pages_index_cities",
+      "sites_site_2_src_pages_space_slug",
+      "sites_site_2_src_pages_space_slug_getstaticpaths",
+      "sites_site_2_src_pages_space_slug_schemadata"
+    ],
+    "2": [
+      "sites_site_1_src_layouts_layout",
+      "sites_site_1_src_layouts_layout_base",
+      "sites_site_1_src_pages_category_slug",
+      "sites_site_1_src_pages_category_slug_base",
+      "sites_site_1_src_pages_category_slug_getstaticpaths",
+      "sites_site_1_src_pages_category_slug_schemadata",
+      "sites_site_1_src_pages_index",
+      "sites_site_1_src_pages_index_articles",
+      "sites_site_1_src_pages_index_base"
+    ],
+    "3": [
+      "sites_site_1_package",
+      "sites_site_1_package_name",
+      "sites_site_1_package_scripts",
+      "sites_site_1_package_scripts_build",
+      "sites_site_1_package_scripts_dev",
+      "sites_site_1_package_scripts_preview",
+      "sites_site_1_package_type",
+      "sites_site_1_package_version"
+    ],
+    "4": [
+      "sites_site_2_package",
+      "sites_site_2_package_name",
+      "sites_site_2_package_scripts",
+      "sites_site_2_package_scripts_build",
+      "sites_site_2_package_scripts_dev",
+      "sites_site_2_package_scripts_preview",
+      "sites_site_2_package_type",
+      "sites_site_2_package_version"
+    ],
+    "5": [
+      "sites_site_1_package_dependencies",
+      "sites_site_1_package_dependencies_astro",
+      "sites_site_1_package_dependencies_astrojs_tailwind",
+      "sites_site_1_package_dependencies_tailwindcss",
+      "sites_site_1_package_json_astro",
+      "sites_site_1_package_json_astrojs_tailwind",
+      "sites_site_1_package_json_tailwindcss"
+    ],
+    "6": [
+      "sites_site_2_package_dependencies",
+      "sites_site_2_package_dependencies_astro",
+      "sites_site_2_package_dependencies_astrojs_tailwind",
+      "sites_site_2_package_dependencies_tailwindcss",
+      "sites_site_2_package_json_astro",
+      "sites_site_2_package_json_astrojs_tailwind",
+      "sites_site_2_package_json_tailwindcss"
+    ],
+    "7": [
+      "packages_api_adapters_llm_adapter",
+      "packages_api_adapters_llm_adapter_llmadapter",
+      "packages_api_adapters_llm_adapter_llmadapter_calculate_cost",
+      "packages_api_adapters_llm_adapter_llmadapter_generate",
+      "packages_api_adapters_llm_adapter_llmadapter_init",
+      "packages_api_adapters_llm_adapter_rationale_1"
+    ],
+    "8": [
+      "packages_internal_linking_link_engine",
+      "packages_internal_linking_link_engine_internallinkengine",
+      "packages_internal_linking_link_engine_internallinkengine_init",
+      "packages_internal_linking_link_engine_internallinkengine_inject_internal_links",
+      "packages_internal_linking_link_engine_internallinkengine_load_from_dict",
+      "packages_internal_linking_link_engine_rationale_1"
+    ],
+    "9": [
+      "packages_seo_engine_schema_builder",
+      "packages_seo_engine_schema_builder_build_article_schema",
+      "packages_seo_engine_schema_builder_build_property_schema",
+      "packages_seo_engine_schema_builder_rationale_1"
+    ],
+    "10": [
+      "tools_fetch_channel",
+      "tools_fetch_channel_clean_vtt",
+      "tools_fetch_channel_fetch_details_and_subtitles",
+      "tools_fetch_channel_get_playlist_entries"
+    ],
+    "11": [
+      "packages_analytics_decay_detector",
+      "packages_analytics_decay_detector_detect_decay_and_opportunities",
+      "packages_analytics_decay_detector_rationale_1"
+    ],
+    "12": [
+      "packages_content_engine_quality_gate",
+      "packages_content_engine_quality_gate_evaluate_article_quality",
+      "packages_content_engine_quality_gate_rationale_1"
+    ],
+    "13": [
+      "sites_site_1_astro_config",
+      "sites_site_1_astro_config_rehypebaseprefix"
+    ],
+    "14": [
+      "tools_generate_research_docs",
+      "tools_generate_research_docs_get_transcript"
+    ],
+    "15": [
+      "tools_generate_video_analysis",
+      "tools_generate_video_analysis_get_transcript"
+    ],
+    "16": [
+      "sites_site_1_src_env_d"
+    ],
+    "17": [
+      "sites_site_1_tailwind_config"
+    ],
+    "18": [
+      "sites_site_2_astro_config"
+    ],
+    "19": [
+      "sites_site_2_src_env_d"
+    ],
+    "20": [
+      "sites_site_2_tailwind_config"
+    ],
+    "21": [
+      "tools_audit_dist"
+    ],
+    "22": [
+      "tools_audit_live_site"
+    ],
+    "23": [
+      "tools_build_packages_and_sites"
+    ],
+    "24": [
+      "tools_generate_benchmark_images"
+    ],
+    "25": [
+      "tools_generate_keywords_and_topical_maps"
+    ],
+    "26": [
+      "tools_generate_niche_and_competitors"
+    ],
+    "27": [
+      "tools_generate_reports_12_to_15"
+    ],
+    "28": [
+      "tools_generate_reports_phase1_3"
+    ],
+    "29": [
+      "tools_setup_weekly_and_experiments"
+    ],
+    "30": [
+      "tools_verify_all_images"
+    ],
+    "31": [
+      "tools_verify_all_pages"
+    ]
+  },
+  "cohesion": {
+    "0": 0.125,
+    "1": 0.2777777777777778,
+    "2": 0.2222222222222222,
+    "3": 0.25,
+    "4": 0.25,
+    "5": 0.2857142857142857,
+    "6": 0.2857142857142857,
+    "7": 0.3333333333333333,
+    "8": 0.3333333333333333,
+    "9": 0.5,
+    "10": 0.6666666666666666,
+    "11": 0.6666666666666666,
+    "12": 0.6666666666666666,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0
+  },
+  "gods": [
+    {
+      "id": "tests_test_seo_suite_testfullseosuite",
+      "label": "TestFullSEOSuite",
+      "degree": 14
+    },
+    {
+      "id": "packages_api_adapters_llm_adapter_llmadapter",
+      "label": "LLMAdapter",
+      "degree": 4
+    },
+    {
+      "id": "packages_internal_linking_link_engine_internallinkengine",
+      "label": "InternalLinkEngine",
+      "degree": 4
+    },
+    {
+      "id": "sites_site_1_package_scripts",
+      "label": "scripts",
+      "degree": 4
+    },
+    {
+      "id": "sites_site_2_package_scripts",
+      "label": "scripts",
+      "degree": 4
+    },
+    {
+      "id": "c_users_jibra_desktop_1_digitalcreatoravi_sites_site_2_src_data_properties_json",
+      "label": "../data/properties.json",
+      "degree": 3
+    },
+    {
+      "id": "sites_site_1_package_dependencies_astro",
+      "label": "astro",
+      "degree": 2
+    },
+    {
+      "id": "sites_site_1_package_dependencies_astrojs_tailwind",
+      "label": "@astrojs/tailwind",
+      "degree": 2
+    },
+    {
+      "id": "sites_site_1_package_dependencies_tailwindcss",
+      "label": "tailwindcss",
+      "degree": 2
+    },
+    {
+      "id": "sites_site_2_package_dependencies_astro",
+      "label": "astro",
+      "degree": 2
+    }
+  ],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `dependencies` to `site-1/package.json`?",
+      "why": "High betweenness centrality (0.010) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `dependencies` to `site-2/package.json`?",
+      "why": "High betweenness centrality (0.010) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `name`, `type`, `version` to the rest of the system?",
+      "why": "25 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `TestFullSEOSuite` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.125 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

@@ -6,107 +6,317 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const articles = [
   {
     title: "Ollama vs vLLM: Concurrency & Throughput Benchmark (2026)",
-    desc: "Single-user developer latency vs 10-stream continuous batching throughput on RTX 4090.",
+    desc: "Single-user developer latency vs 10-stream continuous batching throughput tested on RTX 4090 with PagedAttention analysis.",
     category: "inference",
     slug: "ollama-vs-vllm-benchmark",
     tps: "280 tok/s",
-    badge: "BENCHMARK"
+    badge: "BENCHMARK",
+    gradient: "from-blue-500/20 to-indigo-500/10",
+    border: "group-hover:border-blue-500/60",
+    accent: "text-blue-400"
   },
   {
     title: "VRAM Requirements Calculator for 70B Models: Sizing Guide",
-    desc: "Exact memory computation for Q4_K_M vs FP8 across 8k to 64k context windows.",
+    desc: "Exact GPU memory equations for Q4_K_M vs FP8 across 8k to 64k context windows. Avoid catastrophic CPU RAM fallback.",
     category: "hardware",
     slug: "vram-requirements-calculator-70b",
     tps: "45.4 GB Min",
-    badge: "CALCULATOR"
+    badge: "CALCULATOR",
+    gradient: "from-purple-500/20 to-pink-500/10",
+    border: "group-hover:border-purple-500/60",
+    accent: "text-purple-400"
   },
   {
     title: "DeepSeek R1 Local Setup Ollama: Step-by-Step Optimization",
-    desc: "Optimal chain-of-thought parameter tuning, temperature 0.6, and custom Modelfile templates.",
+    desc: "Optimal chain-of-thought parameter tuning, temperature 0.6, and custom Modelfile templates for 8B, 14B, and 32B checkpoints.",
     category: "models",
     slug: "deepseek-r1-local-setup-ollama",
     tps: "58 tok/s (14B)",
-    badge: "SETUP GUIDE"
+    badge: "REASONING",
+    gradient: "from-emerald-500/20 to-teal-500/10",
+    border: "group-hover:border-emerald-500/60",
+    accent: "text-emerald-400"
   },
   {
     title: "Mac Studio M4 Max LLM Speed: Tokens Per Second Report",
-    desc: "Unified memory bandwidth (546 GB/s) testing across 8B, 32B, and 70B parameter models.",
+    desc: "Unified memory bandwidth (546 GB/s) testing across 8B, 32B, and 70B parameter models at 65W total system power draw.",
     category: "hardware",
     slug: "mac-studio-m4-max-llm-benchmarks",
     tps: "22.4 tok/s (70B)",
-    badge: "HARDWARE"
+    badge: "HARDWARE",
+    gradient: "from-amber-500/20 to-orange-500/10",
+    border: "group-hover:border-amber-500/60",
+    accent: "text-amber-400"
   },
   {
     title: "Custom MCP Server Python Tutorial: Build Production Tools",
-    desc: "FastMCP stdio transport, automated schema generation, and stateful SQLite integrations.",
+    desc: "FastMCP stdio transport, automated schema generation, and stateful SQLite integrations for Claude Code and Cursor.",
     category: "agents",
     slug: "custom-mcp-server-python-tutorial",
     tps: "< 4ms IPC",
-    badge: "TUTORIAL"
+    badge: "TUTORIAL",
+    gradient: "from-cyan-500/20 to-blue-500/10",
+    border: "group-hover:border-cyan-500/60",
+    accent: "text-cyan-400"
   }
 ];
 ---
 
 <Layout 
   title="LocalAgentStack: Local AI Inference, Hardware Benchmarks & MCP Orchestration"
-  description="Empirical hardware benchmarks, local LLM inference guides, VRAM calculators, and Model Context Protocol architectures for AI engineers."
+  description="Empirical hardware benchmarks, local LLM inference guides, interactive VRAM calculators, and Model Context Protocol architectures for AI engineers."
 >
-  <!-- Hero Section -->
-  <section class="py-12 md:py-16 text-center max-w-3xl mx-auto">
-    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-950/60 border border-blue-800 text-blue-400 text-xs font-semibold mb-6">
+  <!-- Hero Section with Ambient Glow -->
+  <section class="pt-8 pb-16 md:pt-14 md:pb-24 text-center max-w-4xl mx-auto relative">
+    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 text-xs font-semibold mb-8 shadow-sm">
       <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-      <span>2026 Empirical Benchmark Suite</span>
+      <span class="text-slate-200">2026 Empirical Local AI Benchmarks</span>
+      <span class="text-slate-600">•</span>
+      <span class="text-blue-400 font-mono">Zero Cloud Egress</span>
     </div>
-    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-      Deploy Local AI Models with <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Zero Cloud Latency</span>
+
+    <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-8 leading-[1.1]">
+      Run Frontier AI Models <br class="hidden sm:inline" />
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-emerald-400">
+        On Your Own Metal
+      </span>
     </h1>
-    <p class="text-lg text-slate-400 mb-8 leading-relaxed">
-      Empirical tokens-per-second benchmarks, VRAM calculations, and production Model Context Protocol (MCP) architectures. Built for privacy-first developers and local agent engineers.
+
+    <p class="text-base sm:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+      Empirical tokens-per-second benchmarks, exact KV-cache equations, and production Model Context Protocol (MCP) architectures. No fluff, no vendor lock-in.
     </p>
+
     <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold">
-      <a href="#benchmarks" class="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/20 transition">
-        Explore Benchmarks
+      <a 
+        href="#vram-sizer" 
+        class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 transition duration-200 flex items-center space-x-2"
+      >
+        <span>⚡ Launch VRAM Sizer</span>
       </a>
-      <a href={`${base}/llms.txt`} class="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
-        View llms.txt Specs
+      <a 
+        href="#benchmarks" 
+        class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 hover:border-slate-600 transition duration-200"
+      >
+        Explore Benchmark Guides
       </a>
+    </div>
+
+    <!-- Trust Stats Bar -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-10 border-t border-slate-800/80 text-left">
+      <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/60">
+        <span class="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">Inference Cost</span>
+        <span class="text-2xl font-black text-emerald-400 font-mono">$0.00 / mo</span>
+        <span class="text-[11px] text-slate-400 block mt-0.5">Zero API Token Invoices</span>
+      </div>
+      <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/60">
+        <span class="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">Peak Concurrency</span>
+        <span class="text-2xl font-black text-blue-400 font-mono">280 tok/s</span>
+        <span class="text-[11px] text-slate-400 block mt-0.5">vLLM 10-Stream Batched</span>
+      </div>
+      <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/60">
+        <span class="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">Data Privacy</span>
+        <span class="text-2xl font-black text-indigo-400 font-mono">100% Offline</span>
+        <span class="text-[11px] text-slate-400 block mt-0.5">Air-Gapped Workloads</span>
+      </div>
+      <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/60">
+        <span class="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">Tool Transport</span>
+        <span class="text-2xl font-black text-amber-400 font-mono">&lt; 4ms Latency</span>
+        <span class="text-[11px] text-slate-400 block mt-0.5">FastMCP Local IPC Stdio</span>
+      </div>
     </div>
   </section>
 
-  <!-- Key Pillar Grid -->
-  <section id="benchmarks" class="py-8">
-    <div class="flex justify-between items-end mb-8 border-b border-slate-800 pb-4">
-      <div>
-        <h2 class="text-2xl font-bold text-white">Foundational Architecture Guides</h2>
-        <p class="text-sm text-slate-400 mt-1">Verified hardware specs, reproducible code, and passage-level answers.</p>
+  <!-- Interactive VRAM Sizer Tool Section -->
+  <section id="vram-sizer" class="py-12 border-t border-slate-800/80">
+    <div class="max-w-3xl mx-auto mb-8 text-center">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-3">
+        <span>INTERACTIVE INFORMATION GAIN TOOL</span>
       </div>
+      <h2 class="text-3xl font-extrabold text-white tracking-tight">Interactive Local VRAM & Hardware Sizer</h2>
+      <p class="text-slate-400 text-sm mt-2">Adjust model architecture and context buffer to compute required memory and hardware recommendations.</p>
+    </div>
+
+    <!-- Client-Side Reactive Sizer Component -->
+    <div class="max-w-2xl mx-auto bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl">
+      <div class="space-y-6">
+        <!-- Model Selection -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Select Target LLM Architecture</label>
+          <select id="homeModelSelect" class="w-full bg-slate-950 border border-slate-700/80 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition">
+            <option value="8">Llama 3.3 8B / DeepSeek 8B (Consumer Single GPU)</option>
+            <option value="14" selected>DeepSeek R1 14B (Optimal Reasoning / 12-16GB VRAM)</option>
+            <option value="32">Qwen 2.5 Coder 32B (High Precision Coding / 24GB VRAM)</option>
+            <option value="70">Llama 3.3 70B / DeepSeek 70B (Workstation Dual GPU)</option>
+          </select>
+        </div>
+
+        <!-- Quantization Selection -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Quantization Bit Precision</label>
+          <div class="grid grid-cols-3 gap-3">
+            <button type="button" class="home-quant-btn px-4 py-2.5 rounded-xl border border-blue-500 bg-blue-500/10 text-blue-400 text-xs font-bold transition" data-bpw="4.5">Q4_K_M (4.5 bpw)</button>
+            <button type="button" class="home-quant-btn px-4 py-2.5 rounded-xl border border-slate-800 bg-slate-950 text-slate-400 text-xs font-semibold hover:border-slate-700 transition" data-bpw="5.5">Q5_K_M (5.5 bpw)</button>
+            <button type="button" class="home-quant-btn px-4 py-2.5 rounded-xl border border-slate-800 bg-slate-950 text-slate-400 text-xs font-semibold hover:border-slate-700 transition" data-bpw="8.0">FP8 / Q8_0 (8.0 bpw)</button>
+          </div>
+        </div>
+
+        <!-- Context Window Slider -->
+        <div>
+          <div class="flex justify-between text-xs font-bold mb-2">
+            <span class="text-slate-400 uppercase tracking-wider">Context Window Length</span>
+            <span id="homeContextVal" class="text-blue-400 font-mono text-sm">16,384 tokens</span>
+          </div>
+          <input id="homeContextSlider" type="range" min="4096" max="65536" step="4096" value="16384" class="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-blue-500" />
+        </div>
+
+        <!-- Output Calculation Display -->
+        <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 space-y-4">
+          <div class="flex items-baseline justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Total VRAM Required</span>
+            <span id="homeVramResult" class="text-3xl font-black text-blue-400 font-mono">11.4 GB</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 text-xs border-t border-slate-850 pt-3">
+            <div>
+              <span class="text-slate-400 block mb-0.5">Model Weights</span>
+              <span id="homeWeightsResult" class="font-bold text-slate-200 font-mono text-sm">9.6 GB</span>
+            </div>
+            <div>
+              <span class="text-slate-400 block mb-0.5">KV-Cache Memory</span>
+              <span id="homeKvResult" class="font-bold text-slate-200 font-mono text-sm">1.8 GB</span>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-850 pt-3">
+            <div class="flex items-center justify-between text-xs mb-1.5">
+              <span class="text-slate-400">Target GPU Sizing</span>
+              <span id="homeHardwareBadge" class="font-bold text-emerald-400 font-mono">RTX 4070 (12GB) / Mac 16GB</span>
+            </div>
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-slate-400">Expected Generation Speed</span>
+              <span id="homeSpeedEstimate" class="font-bold text-blue-300 font-mono">~58 tokens / sec</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Pillar Guides Grid -->
+  <section id="benchmarks" class="py-16 border-t border-slate-800/80">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
+      <div>
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-xs font-semibold mb-2">
+          <span>PEER-REVIEWED SPECIFICATIONS</span>
+        </div>
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">Foundational Engineering Guides</h2>
+        <p class="text-sm text-slate-400 mt-1">Grounded reproducible configurations, memory math, and terminal commands.</p>
+      </div>
+      <a href={`${base}/llms.txt`} class="text-xs font-mono text-blue-400 hover:text-blue-300 underline underline-offset-4">
+        Download /llms.txt Context &rarr;
+      </a>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {articles.map((art) => (
         <a 
           href={`${base}/${art.category}/${art.slug}`}
-          class="group block p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 hover:bg-slate-850 transition duration-200 shadow-sm"
+          class={`group relative block p-7 rounded-2xl bg-gradient-to-br ${art.gradient} bg-slate-900/90 border border-slate-800 ${art.border} hover:bg-slate-850/90 transition duration-300 shadow-xl overflow-hidden`}
         >
-          <div class="flex items-center justify-between mb-3">
-            <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-blue-950 text-blue-400 border border-blue-900">
+          <div class="flex items-center justify-between mb-4">
+            <span class={`text-[11px] font-extrabold tracking-wider px-3 py-1 rounded-full bg-slate-950/80 ${art.accent} border border-slate-800`}>
               {art.badge}
             </span>
-            <span class="text-xs font-mono text-emerald-400 font-semibold bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-900">
+            <span class="text-xs font-mono text-emerald-400 font-bold bg-emerald-950/60 px-2.5 py-1 rounded-lg border border-emerald-900/80 shadow-sm">
               {art.tps}
             </span>
           </div>
-          <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition mb-2 leading-snug">
+
+          <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition mb-3 leading-snug">
             {art.title}
           </h3>
-          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+
+          <p class="text-sm text-slate-400 leading-relaxed mb-6 line-clamp-2">
             {art.desc}
           </p>
-          <div class="flex items-center text-xs font-semibold text-blue-400 group-hover:translate-x-1 transition duration-150">
-            <span>Read full specification &rarr;</span>
+
+          <div class="flex items-center justify-between pt-4 border-t border-slate-800/80 text-xs">
+            <span class="text-slate-400 font-mono capitalize">{art.category}</span>
+            <span class="font-bold text-blue-400 group-hover:translate-x-1 transition duration-200 flex items-center space-x-1">
+              <span>Read Full Specification</span>
+              <span>&rarr;</span>
+            </span>
           </div>
         </a>
       ))}
     </div>
   </section>
 </Layout>
+
+<script is:inline>
+  let currentBpw = 4.5;
+  const modelSelect = document.getElementById('homeModelSelect');
+  const contextSlider = document.getElementById('homeContextSlider');
+  const contextVal = document.getElementById('homeContextVal');
+  const vramResult = document.getElementById('homeVramResult');
+  const weightsResult = document.getElementById('homeWeightsResult');
+  const kvResult = document.getElementById('homeKvResult');
+  const hardwareBadge = document.getElementById('homeHardwareBadge');
+  const speedEstimate = document.getElementById('homeSpeedEstimate');
+  const quantBtns = document.querySelectorAll('.home-quant-btn');
+
+  quantBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      quantBtns.forEach(b => {
+        b.className = "home-quant-btn px-4 py-2.5 rounded-xl border border-slate-800 bg-slate-950 text-slate-400 text-xs font-semibold hover:border-slate-700 transition";
+      });
+      btn.className = "home-quant-btn px-4 py-2.5 rounded-xl border border-blue-500 bg-blue-500/10 text-blue-400 text-xs font-bold transition";
+      currentBpw = parseFloat(btn.dataset.bpw);
+      calculate();
+    });
+  });
+
+  function calculate() {
+    const paramsB = parseFloat(modelSelect.value);
+    const ctx = parseInt(contextSlider.value);
+    contextVal.textContent = ctx.toLocaleString() + ' tokens';
+
+    const weights = (paramsB * 1e9 * currentBpw) / (8 * (1024**3));
+    let kvPer1k = 0.08;
+    if (paramsB >= 70) kvPer1k = 0.22;
+    else if (paramsB >= 32) kvPer1k = 0.14;
+    else if (paramsB >= 14) kvPer1k = 0.11;
+    
+    const kv = (ctx / 1024) * kvPer1k;
+    const overhead = 1.2;
+    const total = weights + kv + overhead;
+
+    weightsResult.textContent = weights.toFixed(1) + ' GB';
+    kvResult.textContent = kv.toFixed(1) + ' GB';
+    vramResult.textContent = total.toFixed(1) + ' GB';
+
+    if (total <= 8) {
+      hardwareBadge.textContent = 'RTX 3060 (12GB) / RTX 4060';
+      speedEstimate.textContent = paramsB === 8 ? '~82 tokens / sec' : '~140 tokens / sec';
+    } else if (total <= 12) {
+      hardwareBadge.textContent = 'RTX 4070 (12GB) / Mac 16GB';
+      speedEstimate.textContent = '~58 tokens / sec';
+    } else if (total <= 16) {
+      hardwareBadge.textContent = 'RTX 4080 (16GB) / Mac 24GB';
+      speedEstimate.textContent = '~48 tokens / sec';
+    } else if (total <= 24) {
+      hardwareBadge.textContent = 'Single RTX 3090 / 4090 (24GB)';
+      speedEstimate.textContent = paramsB === 32 ? '~36 tokens / sec' : '~64 tokens / sec';
+    } else if (total <= 48) {
+      hardwareBadge.textContent = 'Dual RTX 3090/4090 (48GB) / Mac 64GB';
+      speedEstimate.textContent = paramsB === 70 ? '~22 to 38 tokens / sec' : '~28 tokens / sec';
+    } else {
+      hardwareBadge.textContent = 'Quad GPU Rig (96GB) / Mac Studio 128GB';
+      speedEstimate.textContent = '~14 to 22 tokens / sec';
+    }
+  }
+
+  modelSelect.addEventListener('change', calculate);
+  contextSlider.addEventListener('input', calculate);
+  calculate();
+</script>

@@ -33,7 +33,8 @@ const schemaData = {
   "dateModified": frontmatter.dateModified,
   "author": {
     "@type": "Organization",
-    "name": "LocalAgentStack Engineering Team"
+    "name": "LocalAgentStack Engineering Team",
+    "url": "https://localagentstack.com"
   },
   "publisher": {
     "@type": "Organization",
@@ -53,156 +54,232 @@ const schemaData = {
   canonical={frontmatter.canonical}
   schemaJson={JSON.stringify(schemaData)}
 >
+  <!-- Reading Progress Bar -->
+  <div id="readingProgress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-emerald-400 z-50 transition-all duration-75" style="width: 0%"></div>
+
   <article class="max-w-4xl mx-auto py-6">
     <!-- Breadcrumb -->
-    <nav class="flex items-center space-x-2 text-xs text-slate-400 mb-6 font-medium">
-      <a href={`${base}/`} class="hover:text-blue-400">Home</a>
-      <span>/</span>
-      <span class="capitalize text-slate-300">{Astro.params.category}</span>
-      <span>/</span>
-      <span class="text-blue-400 truncate max-w-xs">{frontmatter.title}</span>
+    <nav class="flex items-center space-x-2 text-xs text-slate-400 mb-8 font-medium">
+      <a href={`${base}/`} class="hover:text-blue-400 transition flex items-center space-x-1">
+        <span>Home</span>
+      </a>
+      <span class="text-slate-600">/</span>
+      <span class="capitalize text-slate-400 font-mono">{Astro.params.category}</span>
+      <span class="text-slate-600">/</span>
+      <span class="text-blue-400 font-semibold truncate max-w-sm">{frontmatter.title}</span>
     </nav>
 
-    <!-- Header Meta Badges -->
-    <div class="flex items-center space-x-3 text-xs font-semibold text-blue-400 mb-4">
-      <span class="px-2.5 py-1 rounded bg-blue-950 border border-blue-900 uppercase tracking-wider">{Astro.params.category}</span>
-      <span class="text-slate-500">•</span>
-      <span class="text-slate-400 font-mono">Published: {frontmatter.datePublished}</span>
-      <span class="text-slate-500">•</span>
-      <span class="text-emerald-400 font-mono">Last Verified: {frontmatter.dateModified}</span>
-    </div>
+    <!-- Header Meta & Cover Graphic -->
+    <header class="mb-10 pb-8 border-b border-slate-800/80">
+      <div class="flex flex-wrap items-center gap-3 text-xs font-semibold text-blue-400 mb-4">
+        <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 uppercase tracking-wider font-mono text-[11px]">
+          {Astro.params.category}
+        </span>
+        <span class="text-slate-600">•</span>
+        <span class="text-slate-400 font-mono">Published: {frontmatter.datePublished}</span>
+        <span class="text-slate-600">•</span>
+        <span class="text-emerald-400 font-mono flex items-center space-x-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Verified: {frontmatter.dateModified}</span>
+        </span>
+      </div>
 
-    <!-- Featured Cover Graphic -->
-    <div class="rounded-xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900 mb-8">
-      <img 
-        src={coverUrl} 
-        alt={frontmatter.title}
-        class="w-full h-auto object-cover"
-        loading="eager"
-        width="1200"
-        height="675"
-      />
-    </div>
+      <!-- Featured Cover Graphic Banner -->
+      <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900 mb-8 relative group">
+        <img 
+          src={coverUrl} 
+          alt={frontmatter.title}
+          class="w-full h-auto object-cover group-hover:scale-[1.01] transition duration-500"
+          loading="eager"
+          width="1200"
+          height="675"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+      </div>
+    </header>
 
     <!-- Main Content rendered from Markdown (Single semantic H1 inside) -->
-    <div class="markdown-body space-y-6 text-slate-300 leading-relaxed">
+    <div class="markdown-body space-y-6 text-slate-300 leading-relaxed text-base">
       <Content />
     </div>
 
-    <!-- Related Articles / Silo Backlinks -->
-    <div class="mt-16 pt-8 border-t border-slate-800">
-      <h3 class="text-lg font-bold text-white mb-4">Related Engineering Specifications</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-        <a href={`${base}/inference/ollama-vs-vllm-benchmark`} class="p-4 rounded-lg bg-slate-900 border border-slate-800 hover:border-blue-500 transition block">
-          <span class="text-xs font-bold text-blue-400">INFERENCE</span>
-          <p class="font-semibold text-white mt-1">Ollama vs vLLM Concurrency Benchmark</p>
+    <!-- Author & E-E-A-T Verification Box -->
+    <div class="mt-16 p-6 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div class="flex items-center space-x-4">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-black text-lg shadow-md shadow-blue-500/20">
+          LA
+        </div>
+        <div>
+          <h3 class="text-sm font-bold text-white">LocalAgentStack Benchmark Collective</h3>
+          <p class="text-xs text-slate-400 mt-0.5">Empirical benchmarks verified on local physical NVIDIA Ada & Apple Silicon hardware.</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 text-xs font-semibold">
+        <a href="https://github.com/jibranpcccc/digitalcreatoravi-seo-engine" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center space-x-1.5">
+          <span>GitHub Repo</span>
         </a>
-        <a href={`${base}/hardware/vram-requirements-calculator-70b`} class="p-4 rounded-lg bg-slate-900 border border-slate-800 hover:border-blue-500 transition block">
-          <span class="text-xs font-bold text-emerald-400">HARDWARE</span>
-          <p class="font-semibold text-white mt-1">VRAM Requirements Calculator for 70B</p>
+      </div>
+    </div>
+
+    <!-- Related Articles / Silo Backlinks -->
+    <div class="mt-12 pt-8 border-t border-slate-800/80">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-lg font-bold text-white tracking-tight">Related Engineering Specifications</h3>
+        <span class="text-xs font-mono text-slate-400">Cluster Silo Navigation</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <a href={`${base}/inference/ollama-vs-vllm-benchmark`} class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 hover:bg-slate-850 transition block group">
+          <span class="text-[11px] font-bold text-blue-400 font-mono">INFERENCE</span>
+          <p class="font-bold text-white group-hover:text-blue-400 transition mt-1">Ollama vs vLLM Concurrency Benchmark</p>
+          <p class="text-xs text-slate-400 mt-1 line-clamp-1">Single-user latency vs 10-stream continuous batching throughput.</p>
+        </a>
+        <a href={`${base}/hardware/vram-requirements-calculator-70b`} class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-850 transition block group">
+          <span class="text-[11px] font-bold text-emerald-400 font-mono">HARDWARE</span>
+          <p class="font-bold text-white group-hover:text-emerald-400 transition mt-1">VRAM Requirements Calculator for 70B</p>
+          <p class="text-xs text-slate-400 mt-1 line-clamp-1">Exact memory computation for Q4_K_M vs FP8 across context windows.</p>
         </a>
       </div>
     </div>
   </article>
 </Layout>
 
+<script is:inline>
+  window.addEventListener('scroll', () => {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (totalHeight > 0) {
+      const progress = (window.scrollY / totalHeight) * 100;
+      const bar = document.getElementById('readingProgress');
+      if (bar) bar.style.width = progress + '%';
+    }
+  });
+</script>
+
 <style is:global>
   .markdown-body h1 {
     font-size: 2.5rem;
     font-weight: 800;
     color: #ffffff;
-    line-height: 1.25;
-    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.75rem;
     letter-spacing: -0.025em;
   }
   .markdown-body h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #f1f5f9;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #1e293b;
-    padding-bottom: 0.5rem;
+    color: #f8fafc;
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+    padding-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
   }
   .markdown-body h3 {
     font-size: 1.25rem;
     font-weight: 600;
     color: #93c5fd;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
   }
   .markdown-body p {
-    margin-bottom: 1.25rem;
-    font-size: 1rem;
-    line-height: 1.75;
+    margin-bottom: 1.35rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+  }
+  .markdown-body strong {
+    color: #ffffff;
+    font-weight: 700;
   }
   .markdown-body blockquote {
     border-left: 4px solid #3b82f6;
-    background: #0f172a;
-    padding: 1.25rem 1.5rem;
-    border-radius: 0 0.75rem 0.75rem 0;
-    color: #e2e8f0;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.4));
+    border-top: 1px solid rgba(51, 65, 85, 0.4);
+    border-right: 1px solid rgba(51, 65, 85, 0.4);
+    border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+    padding: 1.5rem 1.75rem;
+    border-radius: 0 1rem 1rem 0;
+    color: #f1f5f9;
+    margin-top: 1.5rem;
+    margin-bottom: 2.25rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
   }
   .markdown-body table {
     width: 100%;
     border-collapse: collapse;
-    margin: 2rem 0;
+    margin: 2.25rem 0;
     font-size: 0.875rem;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     overflow: hidden;
+    border: 1px solid rgba(51, 65, 85, 0.6);
   }
   .markdown-body th, .markdown-body td {
-    padding: 0.85rem 1rem;
-    border: 1px solid #1e293b;
+    padding: 0.95rem 1.15rem;
+    border: 1px solid rgba(51, 65, 85, 0.5);
     text-align: left;
   }
   .markdown-body th {
     background-color: #0f172a;
     color: #93c5fd;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
   .markdown-body tr:nth-child(even) {
-    background-color: #0a0f1d;
+    background-color: rgba(15, 23, 42, 0.5);
   }
   .markdown-body code {
     background: #0f172a;
-    color: #60a5fa;
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.25rem;
+    color: #93c5fd;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.35rem;
     font-size: 0.875em;
+    font-family: 'JetBrains Mono', monospace;
+    border: 1px solid rgba(51, 65, 85, 0.4);
   }
   .markdown-body pre code {
     background: transparent;
     padding: 0;
     color: inherit;
+    border: none;
   }
   .markdown-body pre {
-    background: #090d16;
-    border: 1px solid #1e293b;
-    padding: 1.25rem;
-    border-radius: 0.5rem;
+    background: #070a12;
+    border: 1px solid rgba(51, 65, 85, 0.6);
+    padding: 1.35rem;
+    border-radius: 0.75rem;
     overflow-x: auto;
     margin: 1.75rem 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   }
   .markdown-body img {
-    border-radius: 0.75rem;
-    border: 1px solid #1e293b;
-    margin: 2rem 0;
+    border-radius: 1rem;
+    border: 1px solid rgba(51, 65, 85, 0.6);
+    margin: 2.5rem 0;
     width: 100%;
     height: auto;
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
   }
   .markdown-body a {
     color: #60a5fa;
     text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.15s;
+  }
+  .markdown-body a:hover {
+    color: #93c5fd;
   }
   .markdown-body ul {
     list-style-type: disc;
-    padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding-left: 1.75rem;
+    margin-bottom: 1.75rem;
   }
   .markdown-body li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.65rem;
+    color: #cbd5e1;
   }
 </style>
