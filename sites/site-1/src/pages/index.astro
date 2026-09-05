@@ -60,11 +60,48 @@ const articles = [
     accent: "text-cyan-400"
   }
 ];
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://localagentstack.com/#website",
+      "url": "https://localagentstack.com",
+      "name": "LocalAgentStack",
+      "description": "Empirical hardware benchmarks, local LLM inference guides, interactive VRAM calculators, and Model Context Protocol architectures for AI engineers.",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://localagentstack.com/#organization",
+        "name": "LocalAgentStack Engineering Collective",
+        "url": "https://localagentstack.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://localagentstack.com/favicon.svg"
+        }
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://localagentstack.com/#guides",
+      "name": "Foundational Local AI Inference & Hardware Guides",
+      "itemListElement": articles.map((art, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": art.title,
+        "description": art.desc,
+        "url": `https://localagentstack.com/${art.category}/${art.slug}`
+      }))
+    }
+  ]
+};
 ---
 
 <Layout 
   title="LocalAgentStack: Local AI Inference, Hardware Benchmarks & MCP Orchestration"
   description="Empirical hardware benchmarks, local LLM inference guides, interactive VRAM calculators, and Model Context Protocol architectures for AI engineers."
+  canonical="https://localagentstack.com/"
+  schemaJson={JSON.stringify(schemaData)}
 >
   <!-- Hero Section with Ambient Glow -->
   <section class="pt-8 pb-16 md:pt-14 md:pb-24 text-center max-w-4xl mx-auto relative">

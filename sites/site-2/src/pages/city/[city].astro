@@ -18,6 +18,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const avgSpeed = Math.round(cityProps.reduce((acc, p) => acc + p.download_mbps, 0) / cityProps.length);
 const minRate = Math.min(...cityProps.map(p => p.monthly_rate_eur));
 const pageUrl = `https://workationradar.com/city/${encodeURIComponent(city)}`;
+const cityCover = cityProps[0] ? `${base}/images/spaces/${cityProps[0].slug}.webp` : `${base}/images/spaces/ponta-do-sol-nomad-coliving.webp`;
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -65,6 +66,8 @@ const schemaData = {
   title={`Best Verified Coliving Spaces in ${city} (2026 Remote Work Guide)`}
   description={`Compare ${cityProps.length} verified coliving communities in ${city}. Average download speed ${avgSpeed} Mbps, rates starting from €${minRate}/month.`}
   canonical={pageUrl}
+  image={cityCover}
+  type="place"
   schemaJson={JSON.stringify(schemaData)}
 >
   <div class="py-6 max-w-5xl mx-auto">

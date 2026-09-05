@@ -9,16 +9,44 @@ const regions = ["All", "Europe", "Asia", "Americas", "Africa"];
 
 const schemaData = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "WorkationRadar",
-  "url": "https://workationradar.com",
-  "description": "Global verified coliving directory for remote workers with independent fiber speedtests and ergonomic chair inspections."
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://workationradar.com/#website",
+      "url": "https://workationradar.com",
+      "name": "WorkationRadar",
+      "description": "Global verified coliving directory for remote workers with independent fiber speedtests and ergonomic chair inspections.",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://workationradar.com/#organization",
+        "name": "WorkationRadar Field Inspection Collective",
+        "url": "https://workationradar.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workationradar.com/favicon.svg"
+        }
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://workationradar.com/#spaces",
+      "name": "Verified Global Coliving Spaces",
+      "itemListElement": properties.map((prop, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": prop.name,
+        "description": prop.description,
+        "url": `https://workationradar.com/space/${prop.slug}`
+      }))
+    }
+  ]
 };
 ---
 
 <Layout 
   title="WorkationRadar: Verified Coliving Spaces with Speedtests & Ergonomics (2026)"
   description="Independent directory of verified remote work coliving communities featuring verified fiber speedtests, Herman Miller seating, and power backup specs."
+  canonical="https://workationradar.com/"
   schemaJson={JSON.stringify(schemaData)}
 >
   <!-- Hero Section -->
@@ -88,7 +116,29 @@ const schemaData = {
       <p class="text-stone-400 text-sm mt-2">Adjust monthly budget and connectivity requirements to filter verified properties in real-time.</p>
     </div>
 
-    <div class="max-w-3xl mx-auto bg-stone-900/90 border border-stone-800 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl mb-12">
+    <div class="max-w-4xl mx-auto bg-stone-900/90 border border-stone-800 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl mb-12">
+      <!-- Currency Switcher & Header Bar -->
+      <div class="flex flex-wrap items-center justify-between gap-4 pb-6 mb-6 border-b border-stone-800">
+        <div class="flex items-center space-x-2">
+          <span class="text-xs font-bold text-stone-400 uppercase tracking-wider">Currency:</span>
+          <div class="inline-flex rounded-xl p-1 bg-stone-950 border border-stone-800">
+            <button type="button" class="currency-btn px-3 py-1 text-xs font-bold rounded-lg bg-amber-500/20 text-amber-400 border border-amber-500/40 transition" data-curr="EUR" data-sym="€" data-rate="1.0">EUR (€)</button>
+            <button type="button" class="currency-btn px-3 py-1 text-xs font-semibold rounded-lg text-stone-400 hover:text-stone-200 transition" data-curr="USD" data-sym="$" data-rate="1.08">USD ($)</button>
+            <button type="button" class="currency-btn px-3 py-1 text-xs font-semibold rounded-lg text-stone-400 hover:text-stone-200 transition" data-curr="GBP" data-sym="£" data-rate="0.85">GBP (£)</button>
+          </div>
+        </div>
+
+        <!-- Quick Filter Preset Chips -->
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="text-xs text-stone-400 font-medium">Quick:</span>
+          <button type="button" class="preset-chip px-2.5 py-1 rounded-lg text-[11px] font-mono border border-amber-500 bg-amber-500/10 text-amber-300 transition" data-preset="all">All Hubs</button>
+          <button type="button" class="preset-chip px-2.5 py-1 rounded-lg text-[11px] font-mono border border-stone-800 bg-stone-950 text-stone-400 hover:border-stone-700 transition" data-preset="herman">Herman Miller</button>
+          <button type="button" class="preset-chip px-2.5 py-1 rounded-lg text-[11px] font-mono border border-stone-800 bg-stone-950 text-stone-400 hover:border-stone-700 transition" data-preset="generator">Generator Backup</button>
+          <button type="button" class="preset-chip px-2.5 py-1 rounded-lg text-[11px] font-mono border border-stone-800 bg-stone-950 text-stone-400 hover:border-stone-700 transition" data-preset="budget">Sub-€1k</button>
+          <button type="button" class="preset-chip px-2.5 py-1 rounded-lg text-[11px] font-mono border border-stone-800 bg-stone-950 text-stone-400 hover:border-stone-700 transition" data-preset="speed">400+ Mbps</button>
+        </div>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
         <!-- Region Filter -->
         <div>
@@ -145,8 +195,10 @@ const schemaData = {
         <div 
           class="prop-card p-5 rounded-2xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/60 transition duration-300 flex flex-col justify-between shadow-xl overflow-hidden group"
           data-region={prop.region}
-          data-rate={prop.monthly_rate_eur}
+          data-rate-eur={prop.monthly_rate_eur}
           data-speed={prop.download_mbps}
+          data-chair={prop.chair_model}
+          data-power={prop.backup_power}
         >
           <div>
             <!-- Cover Graphic -->
@@ -204,7 +256,7 @@ const schemaData = {
           <div class="flex items-center justify-between pt-4 border-t border-stone-800 text-sm">
             <div>
               <span class="text-[10px] text-stone-400 uppercase font-mono block">Monthly Rate</span>
-              <span class="font-bold text-white text-base">&euro;{prop.monthly_rate_eur}<span class="text-xs text-stone-400 font-normal font-mono"> / mo</span></span>
+              <span class="font-bold text-white text-base"><span class="card-curr-sym">&euro;</span><span class="card-rate-val">{prop.monthly_rate_eur}</span><span class="text-xs text-stone-400 font-normal font-mono"> / mo</span></span>
             </div>
             <a 
               href={`${base}/space/${prop.slug}`}
@@ -228,26 +280,94 @@ const schemaData = {
   const matchCount = document.getElementById('matchCount');
   const resetBtn = document.getElementById('resetFilters');
   const cards = document.querySelectorAll('.prop-card');
+  const currBtns = document.querySelectorAll('.currency-btn');
+  const presetChips = document.querySelectorAll('.preset-chip');
+
+  let currentCurrency = 'EUR';
+  let currencySymbol = '€';
+  let currencyRate = 1.0;
+  let activePreset = 'all';
+
+  function updateCurrency(curr, sym, rate) {
+    currentCurrency = curr;
+    currencySymbol = sym;
+    currencyRate = rate;
+
+    // Update Currency buttons
+    currBtns.forEach(btn => {
+      if (btn.dataset.curr === curr) {
+        btn.className = 'currency-btn px-3 py-1 text-xs font-bold rounded-lg bg-amber-500/20 text-amber-400 border border-amber-500/40 transition';
+      } else {
+        btn.className = 'currency-btn px-3 py-1 text-xs font-semibold rounded-lg text-stone-400 hover:text-stone-200 transition';
+      }
+    });
+
+    // Update cards price display
+    cards.forEach(card => {
+      const eurRate = parseInt(card.dataset.rateEur);
+      const converted = Math.round(eurRate * currencyRate);
+      const symEl = card.querySelector('.card-curr-sym');
+      const valEl = card.querySelector('.card-rate-val');
+      if (symEl) symEl.textContent = currencySymbol;
+      if (valEl) valEl.textContent = converted.toLocaleString();
+    });
+
+    filterCards();
+  }
+
+  currBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      updateCurrency(btn.dataset.curr, btn.dataset.sym, parseFloat(btn.dataset.rate));
+    });
+  });
+
+  presetChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      activePreset = chip.dataset.preset;
+      presetChips.forEach(c => {
+        if (c === chip) {
+          c.className = 'preset-chip px-2.5 py-1 rounded-lg text-[11px] font-mono border border-amber-500 bg-amber-500/10 text-amber-300 transition';
+        } else {
+          c.className = 'preset-chip px-2.5 py-1 rounded-lg text-[11px] font-mono border border-stone-800 bg-stone-950 text-stone-400 hover:border-stone-700 transition';
+        }
+      });
+      filterCards();
+    });
+  });
 
   function filterCards() {
     const region = fRegion.value;
-    const maxRate = parseInt(fBudget.value);
+    const maxRateEur = parseInt(fBudget.value);
     const minSpeed = parseInt(fSpeed.value);
 
-    budgetVal.textContent = '€' + maxRate.toLocaleString() + ' / mo';
+    const convertedBudget = Math.round(maxRateEur * currencyRate);
+    budgetVal.textContent = currencySymbol + convertedBudget.toLocaleString() + ' / mo';
     speedVal.textContent = minSpeed + ' Mbps';
 
     let count = 0;
     cards.forEach(card => {
       const cRegion = card.dataset.region;
-      const cRate = parseInt(card.dataset.rate);
+      const cRateEur = parseInt(card.dataset.rateEur);
       const cSpeed = parseInt(card.dataset.speed);
+      const cChair = card.dataset.chair.toLowerCase();
+      const cPower = card.dataset.power.toLowerCase();
 
       const matchRegion = region === 'All' || cRegion === region;
-      const matchRate = cRate <= maxRate;
+      const matchRate = cRateEur <= maxRateEur;
       const matchSpeed = cSpeed >= minSpeed;
 
-      if (matchRegion && matchRate && matchSpeed) {
+      let matchPreset = true;
+      if (activePreset === 'herman') {
+        matchPreset = cChair.includes('herman miller');
+      } else if (activePreset === 'generator') {
+        matchPreset = cPower.includes('generator') || cPower.includes('inverter') || cPower.includes('solar');
+      } else if (activePreset === 'budget') {
+        matchPreset = cRateEur < 1000;
+      } else if (activePreset === 'speed') {
+        matchPreset = cSpeed >= 400;
+      }
+
+      if (matchRegion && matchRate && matchSpeed && matchPreset) {
         card.style.display = 'flex';
         count++;
       } else {
@@ -266,7 +386,15 @@ const schemaData = {
     fRegion.value = 'All';
     fBudget.value = '1500';
     fSpeed.value = '200';
-    filterCards();
+    activePreset = 'all';
+    presetChips.forEach((c, idx) => {
+      if (idx === 0) {
+        c.className = 'preset-chip px-2.5 py-1 rounded-lg text-[11px] font-mono border border-amber-500 bg-amber-500/10 text-amber-300 transition';
+      } else {
+        c.className = 'preset-chip px-2.5 py-1 rounded-lg text-[11px] font-mono border border-stone-800 bg-stone-950 text-stone-400 hover:border-stone-700 transition';
+      }
+    });
+    updateCurrency('EUR', '€', 1.0);
   });
 
   filterCards();

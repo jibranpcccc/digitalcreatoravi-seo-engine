@@ -1,9 +1,25 @@
-# LocalAgentStack
-> The open-source encyclopedia for local LLMs, inference runtimes, and autonomous coding agents.
+# LocalAgentStack: Local AI Inference & Agent Architecture Knowledge Base
+> Empirical tokens-per-second benchmarks, exact KV-cache equations, and production Model Context Protocol (MCP) architectures for local AI engineering.
 
-## Core Pillars
-- [Local Inference Runtimes](/inference/): Step-by-step guides for Ollama, vLLM, and llama.cpp.
-- [Autonomous Agents](/agents/): Production architectures for Claude Code, LangGraph, and MCP servers.
-- [Hardware & VRAM Engineering](/hardware/): Quantization calculators and multi-GPU workstation builds.
-- [Open-Weight Benchmarks](/models/): Empirical speed and coding accuracy benchmarks for DeepSeek R1 and Llama 3.3.
-- [Local RAG & Privacy](/rag/): Air-gapped enterprise search architectures.
+## Foundational Technical Guides & Empirical Benchmarks
+
+- [Ollama vs vLLM: Concurrency & Throughput Benchmark (2026)](https://localagentstack.com/inference/ollama-vs-vllm-benchmark/):
+  Empirical comparison between Ollama v0.5.4 (sequential queuing, 31.8 tok/s) and vLLM v0.6.6 (continuous batching with PagedAttention, 280.4 aggregate tok/s) on NVIDIA RTX 4090 with Llama 3.3 8B. Includes real-time concurrency simulator.
+
+- [VRAM Requirements Calculator for 70B Models: Sizing Guide](https://localagentstack.com/hardware/vram-requirements-calculator-70b/):
+  Exact GPU memory equations for 70-billion parameter open weights across FP16, Q8_0, Q4_K_M, and EXL2 precisions. Explains KV cache allocation ($2 \times \text{layers} \times \text{heads} \times d_{\text{head}} \times \text{bytes}$) across 8k to 64k context windows to prevent catastrophic CPU RAM offloading.
+
+- [DeepSeek R1 Local Setup Ollama: Step-by-Step Optimization](https://localagentstack.com/models/deepseek-r1-local-setup-ollama/):
+  Optimal local deployment and inference parameter tuning for DeepSeek R1 reasoning models (8B, 14B, 32B checkpoints). Covers temperature 0.6, top_p 0.95, chain-of-thought preservation, system prompt pitfalls, and custom Modelfile templates.
+
+- [Mac Studio M4 Max LLM Speed: Tokens Per Second Report](https://localagentstack.com/hardware/mac-studio-m4-max-llm-benchmarks/):
+  Comprehensive hardware inference report on Apple Silicon M4 Max (128GB unified memory, 546 GB/s bandwidth). Evaluates tokens/sec across 8B (78.4 tok/s), 14B (46.2 tok/s), 32B (24.1 tok/s), and 70B (18.6 tok/s) models at 65W total system power draw.
+
+- [Custom MCP Server Python Tutorial: Build Production Tools](https://localagentstack.com/agents/custom-mcp-server-python-tutorial/):
+  Step-by-step tutorial building a production-grade Model Context Protocol (MCP) server using Python and FastMCP. Covers stdio IPC transport (<4ms latency), dynamic Pydantic parameter schemas, stateful SQLite database persistence, and direct integration with Claude Code and Cursor.
+
+## Architecture Taxonomy
+- `/inference/`: Inference engine runtime architectures (vLLM, Ollama, llama.cpp, SGLang).
+- `/hardware/`: GPU memory bandwidth, PCIe Gen4/Gen5 lane topology, unified memory bus sizing.
+- `/models/`: Quantization trade-offs, reasoning distillation, attention mechanisms.
+- `/agents/`: Tool-calling IPC protocols, multi-turn agent state machines, MCP server orchestration.
