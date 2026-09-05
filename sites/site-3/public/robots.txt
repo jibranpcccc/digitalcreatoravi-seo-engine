@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://openagentstack.pages.dev/sitemap.xml

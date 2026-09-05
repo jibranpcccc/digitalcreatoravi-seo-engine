@@ -1,0 +1,119 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  category?: string;
+  slug?: string;
+  type?: string;
+}
+
+const {
+  title,
+  description,
+  category = "frameworks",
+  slug = "",
+  type = "website"
+} = Astro.props;
+
+const canonical = slug 
+  ? `https://openagentstack.pages.dev/${category}/${slug}/`
+  : "https://openagentstack.pages.dev/";
+
+const ogImage = slug
+  ? `https://openagentstack.pages.dev/images/covers/${slug}.webp`
+  : "https://openagentstack.pages.dev/images/og-default.webp";
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="OpenAgentStack" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Index" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Search Console & Webmaster Verification -->
+    <meta name="google-site-verification" content="google6fe267a998c19a9a" />
+    <meta name="msvalidate.01" content="BING-VERIFICATION-OPENAGENTSTACK" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "OpenAgentStack",
+      "url": "https://openagentstack.pages.dev/",
+      "description": "The authoritative index and benchmark for open-source autonomous AI agents, Model Context Protocol (MCP) servers, and local execution stacks.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "OpenAgentStack Engineering",
+        "url": "https://openagentstack.pages.dev/",
+        "logo": "https://openagentstack.pages.dev/favicon.svg"
+      }
+    })} />
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-['Plus_Jakarta_Sans'] min-h-screen flex flex-col antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
+    <!-- Header -->
+    <header class="border-b border-emerald-950/40 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-slate-950 font-black shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+            ⚡
+          </div>
+          <div>
+            <div class="font-extrabold tracking-tight text-white flex items-center gap-1.5">
+              OpenAgentStack
+              <span class="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">2026</span>
+            </div>
+            <p class="text-xs text-slate-400 hidden sm:block">Open-Source AI Agents & MCP Architecture</p>
+          </div>
+        </a>
+
+        <nav class="flex items-center gap-6 text-sm font-medium">
+          <a href="/#frameworks" class="text-slate-300 hover:text-emerald-400 transition-colors">Frameworks</a>
+          <a href="/#mcp" class="text-slate-300 hover:text-emerald-400 transition-colors">MCP Directory</a>
+          <a href="/#calculator" class="text-slate-300 hover:text-emerald-400 transition-colors">Token Calculator</a>
+          <a href="https://github.com/jibranpcccc" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-all text-xs font-semibold flex items-center gap-1.5">
+            GitHub
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-12 mt-20 text-xs text-slate-400">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <div class="font-bold text-white mb-1">OpenAgentStack (2026 Edition)</div>
+          <p>Zero-compromise empirical benchmarks and deployment guides for autonomous AI agents.</p>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="/llms.txt" class="hover:text-emerald-400">llms.txt</a>
+          <a href="/sitemap.xml" class="hover:text-emerald-400">sitemap.xml</a>
+          <a href="/robots.txt" class="hover:text-emerald-400">robots.txt</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

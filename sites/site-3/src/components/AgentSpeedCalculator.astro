@@ -1,0 +1,92 @@
+---
+// Interactive Agent Speed & Token Latency Calculator
+---
+<div class="rounded-2xl border border-emerald-500/30 bg-slate-900/80 p-6 sm:p-8 backdrop-blur-sm shadow-xl shadow-emerald-950/20">
+  <div class="flex items-center gap-3 mb-6">
+    <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 text-xl font-mono">⏱️</div>
+    <div>
+      <h3 class="text-xl font-bold text-white">Interactive Agent Latency & Cost Calculator</h3>
+      <p class="text-sm text-slate-400">Compute tool-calling execution rounds, token context expansion, and monthly inference expense.</p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <div>
+      <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Agent Execution Turns</label>
+      <input type="range" id="agent-turns" min="1" max="25" value="6" class="w-full accent-emerald-500 bg-slate-800 rounded-lg cursor-pointer" />
+      <div class="flex justify-between text-xs text-slate-400 mt-1">
+        <span>Simple (1)</span>
+        <span id="turns-val" class="font-bold text-emerald-400">6 turns</span>
+        <span>Deep (25)</span>
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Tools Per Execution Step</label>
+      <input type="range" id="tools-step" min="1" max="8" value="3" class="w-full accent-emerald-500 bg-slate-800 rounded-lg cursor-pointer" />
+      <div class="flex justify-between text-xs text-slate-400 mt-1">
+        <span>1 Tool</span>
+        <span id="tools-val" class="font-bold text-emerald-400">3 tools/turn</span>
+        <span>8 Tools</span>
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Daily Agent Tasks</label>
+      <input type="range" id="daily-tasks" min="10" max="1000" step="10" value="150" class="w-full accent-emerald-500 bg-slate-800 rounded-lg cursor-pointer" />
+      <div class="flex justify-between text-xs text-slate-400 mt-1">
+        <span>10</span>
+        <span id="tasks-val" class="font-bold text-emerald-400">150 tasks/day</span>
+        <span>1,000</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 rounded-xl bg-slate-950 border border-slate-800 text-center">
+    <div>
+      <div class="text-xs text-slate-400 font-medium mb-1">Total Tool Invocations</div>
+      <div id="stat-tools" class="text-2xl font-black text-emerald-400">18</div>
+      <div class="text-[10px] text-slate-500">per task run</div>
+    </div>
+    <div>
+      <div class="text-xs text-slate-400 font-medium mb-1">Context Ingestion</div>
+      <div id="stat-tokens" class="text-2xl font-black text-blue-400">14.4k</div>
+      <div class="text-[10px] text-slate-500">tokens / task</div>
+    </div>
+    <div>
+      <div class="text-xs text-slate-400 font-medium mb-1">Cloud API Cost</div>
+      <div id="stat-cloud-cost" class="text-2xl font-black text-rose-400">$64.80</div>
+      <div class="text-[10px] text-slate-500">monthly commercial API</div>
+    </div>
+    <div>
+      <div class="text-xs text-slate-400 font-medium mb-1">Local Edge / Self-Host</div>
+      <div id="stat-local-cost" class="text-2xl font-black text-emerald-300">$0.00</div>
+      <div class="text-[10px] text-slate-500">100% saved via Ollama/vLLM</div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  function updateCalc() {
+    const turns = parseInt(document.getElementById('agent-turns').value);
+    const tools = parseInt(document.getElementById('tools-step').value);
+    const tasks = parseInt(document.getElementById('daily-tasks').value);
+
+    document.getElementById('turns-val').innerText = turns + ' turns';
+    document.getElementById('tools-val').innerText = tools + ' tools/turn';
+    document.getElementById('tasks-val').innerText = tasks + ' tasks/day';
+
+    const totalTools = turns * tools;
+    const tokensPerTask = Math.round(turns * 2400);
+    const monthlyTokens = tokensPerTask * tasks * 30;
+    const cloudCost = ((monthlyTokens / 1000000) * 1.5).toFixed(2);
+
+    document.getElementById('stat-tools').innerText = totalTools;
+    document.getElementById('stat-tokens').innerText = (tokensPerTask / 1000).toFixed(1) + 'k';
+    document.getElementById('stat-cloud-cost').innerText = '$' + cloudCost;
+  }
+
+  document.getElementById('agent-turns').addEventListener('input', updateCalc);
+  document.getElementById('tools-step').addEventListener('input', updateCalc);
+  document.getElementById('daily-tasks').addEventListener('input', updateCalc);
+</script>

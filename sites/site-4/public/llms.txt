@@ -1,0 +1,9 @@
+# IndieStackAudit — Solo Founder Micro-SaaS Tech Stacks
+> Empirical cost models, database pricing math, and payment gateway fee comparisons.
+
+## Core Stack Guides
+- [Next.js vs Astro for Micro-SaaS](https://indiestackaudit.pages.dev/stacks/nextjs-vs-astro-for-micro-saas-speed-cost-seo/): Performance, hosting bills, and SEO.
+- [Stripe vs LemonSqueezy vs Polar](https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/): Fee models and MoR tax automation.
+- [Self-Hosted Supabase vs Neon Postgres](https://indiestackaudit.pages.dev/stacks/self-hosted-supabase-vs-managed-neon-postgres-cost-math/): Real-world database math.
+- [The $0/Month Micro-SaaS Stack](https://indiestackaudit.pages.dev/stacks/zero-cost-saas-stack-cloudflare-pages-turso-resend/): Cloudflare Pages, Turso, and Resend.
+- [Open-Source Auth Comparison](https://indiestackaudit.pages.dev/billing/open-source-auth-comparison-clerk-lucia-better-auth/): Better-Auth vs Clerk vs Lucia.

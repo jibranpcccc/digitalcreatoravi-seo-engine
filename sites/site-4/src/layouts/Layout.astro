@@ -1,0 +1,117 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  category?: string;
+  slug?: string;
+  type?: string;
+}
+
+const {
+  title,
+  description,
+  category = "stacks",
+  slug = "",
+  type = "website"
+} = Astro.props;
+
+const canonical = slug 
+  ? `https://indiestackaudit.pages.dev/${category}/${slug}/`
+  : "https://indiestackaudit.pages.dev/";
+
+const ogImage = slug
+  ? `https://indiestackaudit.pages.dev/images/covers/${slug}.webp`
+  : "https://indiestackaudit.pages.dev/images/og-default.webp";
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="IndieStackAudit" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Index" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Search Console & Webmaster Verification -->
+    <meta name="google-site-verification" content="google6fe267a998c19a9a" />
+    <meta name="msvalidate.01" content="BING-VERIFICATION-INDIESTACKAUDIT" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "IndieStackAudit",
+      "url": "https://indiestackaudit.pages.dev/",
+      "description": "Solo founder micro-SaaS tech stack teardowns, database cost math, payment gateway fee calculators, and boilerplate ROI.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "IndieStackAudit Research",
+        "url": "https://indiestackaudit.pages.dev/",
+        "logo": "https://indiestackaudit.pages.dev/favicon.svg"
+      }
+    })} />
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-['Plus_Jakarta_Sans'] min-h-screen flex flex-col antialiased selection:bg-purple-500/30 selection:text-purple-200">
+    <header class="border-b border-purple-950/40 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-400 flex items-center justify-center text-white font-black shadow-lg shadow-purple-500/20 group-hover:scale-105 transition-transform">
+            🛠️
+          </div>
+          <div>
+            <div class="font-extrabold tracking-tight text-white flex items-center gap-1.5">
+              IndieStackAudit
+              <span class="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">2026</span>
+            </div>
+            <p class="text-xs text-slate-400 hidden sm:block">Micro-SaaS Tech Stacks & Cost Math</p>
+          </div>
+        </a>
+
+        <nav class="flex items-center gap-6 text-sm font-medium">
+          <a href="/#calculator" class="text-slate-300 hover:text-purple-400 transition-colors">Fee Calculator</a>
+          <a href="/#stacks" class="text-slate-300 hover:text-purple-400 transition-colors">Stack Teardowns</a>
+          <a href="/#billing" class="text-slate-300 hover:text-purple-400 transition-colors">Billing & Auth</a>
+          <a href="https://github.com/jibranpcccc" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-lg bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 transition-all text-xs font-semibold flex items-center gap-1.5">
+            GitHub
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-12 mt-20 text-xs text-slate-400">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <div class="font-bold text-white mb-1">IndieStackAudit (2026 Edition)</div>
+          <p>Real-world unit economics, fee models, and deployment architectures for solo software founders.</p>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="/llms.txt" class="hover:text-purple-400">llms.txt</a>
+          <a href="/sitemap.xml" class="hover:text-purple-400">sitemap.xml</a>
+          <a href="/robots.txt" class="hover:text-purple-400">robots.txt</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -38,6 +38,32 @@ SITES_CONFIG = [
             "https://jibranpcccc.github.io/workationradar/city/Bali/",
             "https://jibranpcccc.github.io/workationradar/city/Lisbon/"
         ]
+    },
+    {
+        "name": "OpenAgentStack",
+        "host": "openagentstack.pages.dev",
+        "key_location": "https://openagentstack.pages.dev/8303260f1bf94264ac6d00aa93efde28.txt",
+        "urls": [
+            "https://openagentstack.pages.dev/",
+            "https://openagentstack.pages.dev/frameworks/browser-use-vs-playwright-mcp-web-automation-benchmark/",
+            "https://openagentstack.pages.dev/agents/langgraph-vs-autogen-multi-agent-orchestration-cost/",
+            "https://openagentstack.pages.dev/protocols/building-production-mcp-servers-fastapi-sse/",
+            "https://openagentstack.pages.dev/frameworks/smolagents-vs-crewai-lightweight-python-agents/",
+            "https://openagentstack.pages.dev/protocols/mcp-authorization-oauth2-bearer-tokens-guide/"
+        ]
+    },
+    {
+        "name": "IndieStackAudit",
+        "host": "indiestackaudit.pages.dev",
+        "key_location": "https://indiestackaudit.pages.dev/8303260f1bf94264ac6d00aa93efde28.txt",
+        "urls": [
+            "https://indiestackaudit.pages.dev/",
+            "https://indiestackaudit.pages.dev/stacks/nextjs-vs-astro-for-micro-saas-speed-cost-seo/",
+            "https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/",
+            "https://indiestackaudit.pages.dev/stacks/self-hosted-supabase-vs-managed-neon-postgres-cost-math/",
+            "https://indiestackaudit.pages.dev/stacks/zero-cost-saas-stack-cloudflare-pages-turso-resend/",
+            "https://indiestackaudit.pages.dev/billing/open-source-auth-comparison-clerk-lucia-better-auth/"
+        ]
     }
 ]
 

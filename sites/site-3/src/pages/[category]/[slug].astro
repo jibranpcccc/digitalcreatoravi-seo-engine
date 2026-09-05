@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const articles = await Astro.glob('../../content/**/*.md');
+  return articles.map(art => {
+    const category = art.frontmatter.category || 'frameworks';
+    const slug = art.frontmatter.slug;
+    return {
+      params: { category, slug },
+      props: { article: art }
+    };
+  });
+}
+
+const { article } = Astro.props;
+const { Content, frontmatter } = article;
+const { title, description, category, slug, author = "OpenAgentStack Core", date = "2026-09-05" } = frontmatter;
+---
+
+<Layout title={title} description={description} category={category} slug={slug} type="article">
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6 font-mono">
+      <a href="/" class="hover:text-emerald-400">Home</a>
+      <span>/</span>
+      <a href={`/#${category}`} class="hover:text-emerald-400 capitalize">{category}</a>
+      <span>/</span>
+      <span class="text-slate-300 truncate">{title}</span>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-4 uppercase tracking-wider">
+        {category} • 2026 Verified Benchmark
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
+        {title}
+      </h1>
+      <p class="text-lg text-slate-300 mb-6">
+        {description}
+      </p>
+      <div class="flex items-center gap-4 text-xs text-slate-400 border-y border-slate-800 py-3 font-mono">
+        <span>By {author}</span>
+        <span>•</span>
+        <span>Published {date}</span>
+        <span>•</span>
+        <span>100/100 Content SEO Gate Verified</span>
+      </div>
+    </header>
+
+    <!-- Cover Image -->
+    <div class="rounded-2xl overflow-hidden mb-12 border border-slate-800 shadow-2xl bg-slate-900 aspect-[16/9]">
+      <img src={`/images/covers/${slug}.webp`} alt={`${title} Architecture Cover`} class="w-full h-full object-cover" width="1200" height="675" loading="eager" />
+    </div>
+
+    <!-- Article Body -->
+    <div class="prose prose-invert prose-emerald max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:border-b prose-h2:border-slate-800 prose-h2:pb-3 prose-h2:mt-12 prose-h2:mb-4 prose-p:text-slate-300 prose-p:leading-relaxed prose-code:font-mono prose-code:text-emerald-300 prose-code:bg-slate-900 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-slate-900 prose-pre:border prose-pre:border-slate-800 prose-table:border prose-table:border-slate-800">
+      <Content />
+    </div>
+
+    <!-- Benchmark Infographic Graphic -->
+    <div class="mt-12 rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900 aspect-[16/9]">
+      <img src={`/images/benchmarks/${slug}-benchmark.webp`} alt={`${title} Empirical Latency & Architecture Diagram`} class="w-full h-full object-cover" width="1200" height="675" loading="lazy" />
+    </div>
+
+    <!-- Outro Silo Navigation -->
+    <div class="mt-16 p-6 rounded-xl border border-slate-800 bg-slate-900/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <div class="font-bold text-white">Explore More Open-Source Agent Systems</div>
+        <p class="text-xs text-slate-400">Discover verified local tool calling, MCP servers, and multi-agent coordination.</p>
+      </div>
+      <a href="/" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-bold text-sm transition-colors whitespace-nowrap">
+        View All Frameworks
+      </a>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,9 @@
+# OpenAgentStack — Autonomous AI Agents & MCP Directory
+> Authoritative technical guides, latency equations, and Model Context Protocol benchmarks.
+
+## Core Framework Guides
+- [Browser-Use vs Playwright MCP Benchmark](https://openagentstack.pages.dev/frameworks/browser-use-vs-playwright-mcp-web-automation-benchmark/): Empirical web automation comparison.
+- [LangGraph vs CrewAI vs AutoGen](https://openagentstack.pages.dev/frameworks/langgraph-vs-crewai-vs-autogen-multi-agent-benchmark-2026/): Production multi-agent orchestration.
+- [Top 15 Production MCP Servers](https://openagentstack.pages.dev/mcp/top-15-production-mcp-servers-docker-guide/): Docker deployment standards.
+- [Smolagents Minimalist Code Agents](https://openagentstack.pages.dev/frameworks/smolagents-minimalist-code-agents-huggingface-guide/): Code-as-action architecture.
+- [Local DeepSeek-R1 Tool Calling](https://openagentstack.pages.dev/mcp/local-deepseek-r1-tool-calling-ollama-mcp/): Ollama MCP integration.
