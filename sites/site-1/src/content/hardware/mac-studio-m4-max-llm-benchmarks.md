@@ -5,7 +5,7 @@ datePublished: "2026-08-05"
 dateModified: "2026-09-04"
 author: "Engineering Team"
 tags: ["apple-silicon", "m4-max", "mac-studio", "tokens-per-second", "benchmarks"]
-coverImage: "/images/benchmarks/mac-studio-m4-max-llm-benchmarks.webp"
+coverImage: "/images/covers/mac-studio-m4-max-llm-benchmarks.webp"
 canonical: "https://localagentstack.com/hardware/mac-studio-m4-max-llm-benchmarks/"
 ---
 

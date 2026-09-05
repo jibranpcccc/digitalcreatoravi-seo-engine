@@ -5,7 +5,7 @@ datePublished: "2026-08-18"
 dateModified: "2026-09-04"
 author: "Engineering Team"
 tags: ["mcp", "python", "model-context-protocol", "claude-code", "agentic-ai"]
-coverImage: "/images/benchmarks/custom-mcp-server-python-tutorial.webp"
+coverImage: "/images/covers/custom-mcp-server-python-tutorial.webp"
 canonical: "https://localagentstack.com/agents/custom-mcp-server-python-tutorial/"
 ---
 

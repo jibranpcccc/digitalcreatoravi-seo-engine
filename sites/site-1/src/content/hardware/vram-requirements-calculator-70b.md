@@ -5,7 +5,7 @@ datePublished: "2026-07-10"
 dateModified: "2026-09-02"
 author: "Engineering Team"
 tags: ["vram", "hardware", "70b-models", "gpu", "kv-cache", "llama-3"]
-coverImage: "/images/benchmarks/vram-requirements-calculator-70b.webp"
+coverImage: "/images/covers/vram-requirements-calculator-70b.webp"
 canonical: "https://localagentstack.com/hardware/vram-requirements-calculator-70b/"
 ---
 

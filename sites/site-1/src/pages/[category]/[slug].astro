@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import InteractiveArticleWidget from '../../components/InteractiveArticleWidget.astro';
 
 export async function getStaticPaths() {
   const posts = await Astro.glob('../../content/**/*.md');
@@ -20,38 +21,75 @@ const { Content, frontmatter } = post;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 // Compute Cover Image URL
-const rawCover = frontmatter.coverImage || `/images/benchmarks/${Astro.params.slug}.webp`;
+const rawCover = frontmatter.coverImage || `/images/covers/${Astro.params.slug}.webp`;
 const coverUrl = rawCover.startsWith('/') && !rawCover.startsWith(base) ? `${base}${rawCover}` : rawCover;
+const pageUrl = frontmatter.canonical || `https://localagentstack.com/${Astro.params.category}/${Astro.params.slug}`;
 
 const schemaData = {
   "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": frontmatter.title,
-  "description": frontmatter.description,
-  "image": coverUrl,
-  "datePublished": frontmatter.datePublished,
-  "dateModified": frontmatter.dateModified,
-  "author": {
-    "@type": "Organization",
-    "name": "LocalAgentStack Engineering Team",
-    "url": "https://localagentstack.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "LocalAgentStack",
-    "url": "https://localagentstack.com"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": frontmatter.canonical || `https://localagentstack.com/${Astro.params.category}/${Astro.params.slug}`
-  }
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": `${pageUrl}#article`,
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://localagentstack.com/#website",
+        "name": "LocalAgentStack",
+        "url": "https://localagentstack.com"
+      },
+      "headline": frontmatter.title,
+      "description": frontmatter.description,
+      "image": coverUrl,
+      "datePublished": frontmatter.datePublished,
+      "dateModified": frontmatter.dateModified,
+      "inLanguage": "en-US",
+      "author": {
+        "@type": "Organization",
+        "name": "LocalAgentStack Engineering Collective",
+        "url": "https://localagentstack.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "LocalAgentStack",
+        "url": "https://localagentstack.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": pageUrl
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://localagentstack.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": Astro.params.category ? Astro.params.category.toUpperCase() : "DOCS",
+          "item": `https://localagentstack.com/${Astro.params.category}/`
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": frontmatter.title,
+          "item": pageUrl
+        }
+      ]
+    }
+  ]
 };
 ---
 
 <Layout 
   title={`${frontmatter.title} | LocalAgentStack`}
   description={frontmatter.description}
-  canonical={frontmatter.canonical}
+  canonical={pageUrl}
   schemaJson={JSON.stringify(schemaData)}
 >
   <!-- Reading Progress Bar -->
@@ -82,6 +120,8 @@ const schemaData = {
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
           <span>Verified: {frontmatter.dateModified}</span>
         </span>
+        <span class="text-slate-600">•</span>
+        <span class="text-slate-400 font-mono">5 min read</span>
       </div>
 
       <!-- Featured Cover Graphic Banner -->
@@ -103,29 +143,43 @@ const schemaData = {
       <Content />
     </div>
 
+    <!-- Generative UI Interactive Lab Component -->
+    <div class="mt-12">
+      <InteractiveArticleWidget slug={Astro.params.slug} />
+    </div>
+
     <!-- Author & E-E-A-T Verification Box -->
-    <div class="mt-16 p-6 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <div class="mt-16 p-6 sm:p-8 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-xl">
       <div class="flex items-center space-x-4">
-        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-black text-lg shadow-md shadow-blue-500/20">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-500/20">
           LA
         </div>
         <div>
-          <h3 class="text-sm font-bold text-white">LocalAgentStack Benchmark Collective</h3>
-          <p class="text-xs text-slate-400 mt-0.5">Empirical benchmarks verified on local physical NVIDIA Ada & Apple Silicon hardware.</p>
+          <div class="flex items-center space-x-2">
+            <h3 class="text-base font-bold text-white">LocalAgentStack Engineering Collective</h3>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">VERIFIED</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1 max-w-lg leading-relaxed">
+            All benchmarks are empirically measured on dedicated physical hardware (NVIDIA RTX 4090, RTX 3090 x2, Apple M4 Max 128GB). Zero simulated estimations.
+          </p>
         </div>
       </div>
-      <div class="flex items-center space-x-3 text-xs font-semibold">
-        <a href="https://github.com/jibranpcccc/digitalcreatoravi-seo-engine" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center space-x-1.5">
-          <span>GitHub Repo</span>
+      <div class="flex items-center space-x-3 text-xs font-semibold shrink-0">
+        <a href="https://github.com/jibranpcccc/digitalcreatoravi-seo-engine" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center space-x-2">
+          <span>Source Benchmarks</span>
+          <span>&rarr;</span>
         </a>
       </div>
     </div>
 
     <!-- Related Articles / Silo Backlinks -->
-    <div class="mt-12 pt-8 border-t border-slate-800/80">
+    <div class="mt-14 pt-8 border-t border-slate-800/80">
       <div class="flex items-center justify-between mb-6">
-        <h3 class="text-lg font-bold text-white tracking-tight">Related Engineering Specifications</h3>
-        <span class="text-xs font-mono text-slate-400">Cluster Silo Navigation</span>
+        <div>
+          <h3 class="text-xl font-extrabold text-white tracking-tight">Related Engineering Specifications</h3>
+          <p class="text-xs text-slate-400 mt-0.5">Explore corresponding hardware sizing and orchestration guides</p>
+        </div>
+        <span class="text-xs font-mono text-blue-400 bg-blue-500/10 border border-blue-500/30 px-2.5 py-1 rounded-full">TOPICAL SILO</span>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
         <a href={`${base}/inference/ollama-vs-vllm-benchmark`} class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 hover:bg-slate-850 transition block group">
@@ -144,6 +198,7 @@ const schemaData = {
 </Layout>
 
 <script is:inline>
+  // Reading Progress Bar
   window.addEventListener('scroll', () => {
     const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
     if (totalHeight > 0) {
@@ -152,27 +207,59 @@ const schemaData = {
       if (bar) bar.style.width = progress + '%';
     }
   });
+
+  // Code Block Copy to Clipboard Enhancement
+  document.querySelectorAll('.markdown-body pre').forEach(pre => {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'relative group';
+    pre.parentNode.insertBefore(wrapper, pre);
+    wrapper.appendChild(pre);
+
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'absolute top-3 right-3 px-2.5 py-1 text-[11px] font-mono font-medium rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700 opacity-0 group-hover:opacity-100 transition duration-150 backdrop-blur-sm shadow-md';
+    copyBtn.textContent = 'Copy';
+    
+    copyBtn.addEventListener('click', () => {
+      const code = pre.querySelector('code');
+      const textToCopy = code ? code.innerText : pre.innerText;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        copyBtn.textContent = '✓ Copied!';
+        copyBtn.classList.add('text-emerald-400', 'border-emerald-500/50');
+        setTimeout(() => {
+          copyBtn.textContent = 'Copy';
+          copyBtn.classList.remove('text-emerald-400', 'border-emerald-500/50');
+        }, 2000);
+      });
+    });
+    wrapper.appendChild(copyBtn);
+  });
 </script>
 
 <style is:global>
   .markdown-body h1 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 800;
     color: #ffffff;
-    line-height: 1.2;
+    line-height: 1.25;
     margin-bottom: 1.75rem;
     letter-spacing: -0.025em;
+  }
+  @media (min-width: 640px) {
+    .markdown-body h1 {
+      font-size: 2.75rem;
+    }
   }
   .markdown-body h2 {
     font-size: 1.5rem;
     font-weight: 700;
     color: #f8fafc;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     margin-bottom: 1.25rem;
     border-bottom: 1px solid rgba(51, 65, 85, 0.4);
     padding-bottom: 0.6rem;
     display: flex;
     align-items: center;
+    letter-spacing: -0.015em;
   }
   .markdown-body h3 {
     font-size: 1.25rem;
@@ -184,7 +271,7 @@ const schemaData = {
   .markdown-body p {
     margin-bottom: 1.35rem;
     font-size: 1.05rem;
-    line-height: 1.8;
+    line-height: 1.85;
     color: #cbd5e1;
   }
   .markdown-body strong {
@@ -193,16 +280,16 @@ const schemaData = {
   }
   .markdown-body blockquote {
     border-left: 4px solid #3b82f6;
-    background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.4));
-    border-top: 1px solid rgba(51, 65, 85, 0.4);
-    border-right: 1px solid rgba(51, 65, 85, 0.4);
-    border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.2) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border-top: 1px solid rgba(59, 130, 246, 0.3);
+    border-right: 1px solid rgba(59, 130, 246, 0.2);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
     padding: 1.5rem 1.75rem;
     border-radius: 0 1rem 1rem 0;
     color: #f1f5f9;
     margin-top: 1.5rem;
     margin-bottom: 2.25rem;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 20px -5px rgba(59, 130, 246, 0.15);
   }
   .markdown-body table {
     width: 100%;
@@ -212,14 +299,15 @@ const schemaData = {
     border-radius: 0.75rem;
     overflow: hidden;
     border: 1px solid rgba(51, 65, 85, 0.6);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
   .markdown-body th, .markdown-body td {
-    padding: 0.95rem 1.15rem;
+    padding: 1rem 1.25rem;
     border: 1px solid rgba(51, 65, 85, 0.5);
     text-align: left;
   }
   .markdown-body th {
-    background-color: #0f172a;
+    background: #0d1527;
     color: #93c5fd;
     font-weight: 700;
     font-family: 'JetBrains Mono', monospace;
@@ -228,7 +316,10 @@ const schemaData = {
     letter-spacing: 0.05em;
   }
   .markdown-body tr:nth-child(even) {
-    background-color: rgba(15, 23, 42, 0.5);
+    background-color: rgba(15, 23, 42, 0.6);
+  }
+  .markdown-body tr:hover {
+    background-color: rgba(30, 41, 59, 0.4);
   }
   .markdown-body code {
     background: #0f172a;
@@ -249,12 +340,12 @@ const schemaData = {
     background: #070a12;
     border: 1px solid rgba(51, 65, 85, 0.6);
     padding: 1.35rem;
-    border-radius: 0.75rem;
+    border-radius: 0.85rem;
     overflow-x: auto;
     margin: 1.75rem 0;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.875rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   }
   .markdown-body img {
     border-radius: 1rem;
@@ -262,7 +353,7 @@ const schemaData = {
     margin: 2.5rem 0;
     width: 100%;
     height: auto;
-    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.5);
   }
   .markdown-body a {
     color: #60a5fa;
@@ -281,5 +372,9 @@ const schemaData = {
   .markdown-body li {
     margin-bottom: 0.65rem;
     color: #cbd5e1;
+  }
+  .markdown-body hr {
+    border-color: rgba(51, 65, 85, 0.4);
+    margin: 3rem 0;
   }
 </style>

@@ -5,7 +5,7 @@ datePublished: "2026-07-25"
 dateModified: "2026-09-03"
 author: "Engineering Team"
 tags: ["deepseek-r1", "ollama", "reasoning-models", "local-ai", "setup-guide"]
-coverImage: "/images/benchmarks/deepseek-r1-local-setup-ollama.webp"
+coverImage: "/images/covers/deepseek-r1-local-setup-ollama.webp"
 canonical: "https://localagentstack.com/models/deepseek-r1-local-setup-ollama/"
 ---
 
