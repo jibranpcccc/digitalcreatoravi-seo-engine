@@ -7,7 +7,12 @@ keywords = {
     'vram-requirements-calculator-70b': 'vram requirements calculator',
     'deepseek-r1-local-setup-ollama': 'deepseek r1',
     'mac-studio-m4-max-llm-benchmarks': 'mac studio m4 max',
-    'custom-mcp-server-python-tutorial': 'custom mcp server'
+    'custom-mcp-server-python-tutorial': 'custom mcp server',
+    '2x-rtx-3090-vs-1x-rtx-4090-ai-inference': '2x rtx 3090 vs 1x rtx 4090',
+    'q4_k_m-vs-q8_0-coding-accuracy-test': 'q4_k_m vs q8_0',
+    'local-rag-stack-chromadb-ollama': 'local rag stack',
+    'claude-code-scheduled-tasks-cron': 'claude code',
+    'vllm-multi-gpu-tensor-parallel-docker': 'vllm multi-gpu'
 }
 
 slop_phrases = [

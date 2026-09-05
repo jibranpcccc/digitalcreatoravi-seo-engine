@@ -208,5 +208,26 @@
     "verified_date": "2026-08-28",
     "productivity_score": 91,
     "description": "Ultra-affordable coastal Vietnam coliving with dual commercial ISP routing and dedicated quiet focus floor."
+  },
+  {
+    "id": "prop-011",
+    "name": "Blink Community Coliving Roppongi",
+    "slug": "blink-community-roppongi-tokyo",
+    "city": "Tokyo",
+    "country": "Japan",
+    "region": "Asia",
+    "download_mbps": 850,
+    "upload_mbps": 420,
+    "ping_ms": 6,
+    "jitter_ms": 1,
+    "chair_model": "Okamura Contessa II",
+    "standing_desks_available": true,
+    "phone_booths_count": 8,
+    "backup_power": "Dual Commercial Substation + Building UPS",
+    "monthly_rate_eur": 1650,
+    "minimum_stay_days": 14,
+    "verified_date": "2026-08-25",
+    "productivity_score": 98,
+    "description": "Ultra-modern bilingual coliving and private desk hub in Roppongi. Sub-10ms Tokyo fiber, Okamura Japanese ergonomics, and sound-dampened meeting studios."
   }
 ]

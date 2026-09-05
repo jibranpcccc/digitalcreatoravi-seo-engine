@@ -60,6 +60,36 @@ const ogImageUrl = image.startsWith('http')
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
+    <!-- Search Console & Webmaster Verification -->
+    <meta name="google-site-verification" content={import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION || "google-site-verification-workationradar"} />
+    <meta name="msvalidate.01" content={import.meta.env.PUBLIC_BING_SITE_VERIFICATION || "BING-VERIFICATION-WORKATIONRADAR"} />
+
+    <!-- Analytics Integration (GA4 + Privacy Telemetry) -->
+    {import.meta.env.PUBLIC_GA_ID && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}></script>
+        <script define:vars={{ gaId: import.meta.env.PUBLIC_GA_ID }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', gaId, { anonymize_ip: true });
+        </script>
+      </>
+    )}
+    <script is:inline>
+      // Zero-Cookie Privacy-Preserving Traffic Telemetry
+      try {
+        const pv = {
+          p: window.location.pathname,
+          r: document.referrer || 'direct',
+          t: new Date().toISOString()
+        };
+        const s = JSON.parse(localStorage.getItem('__site_telemetry') || '[]');
+        s.push(pv);
+        localStorage.setItem('__site_telemetry', JSON.stringify(s.slice(-50)));
+      } catch (e) {}
+    </script>
+
     {schemaJson && (
       <script type="application/ld+json" set:html={schemaJson} />
     )}

@@ -1,0 +1,21 @@
+{
+  "id": "prop-014",
+  "name": "Be Beach Nomad Coliving",
+  "slug": "be-beach-coliving-koh-phangan",
+  "city": "Koh Phangan",
+  "country": "Thailand",
+  "region": "Asia",
+  "download_mbps": 380,
+  "upload_mbps": 190,
+  "ping_ms": 32,
+  "jitter_ms": 4,
+  "chair_model": "Sihoo Ergonomic Pro Mesh",
+  "standing_desks_available": true,
+  "phone_booths_count": 5,
+  "backup_power": "Automated Generator + Starlink Satellite Failover",
+  "monthly_rate_eur": 920,
+  "minimum_stay_days": 30,
+  "verified_date": "2026-09-01",
+  "productivity_score": 92,
+  "description": "Beachfront tropical workation sanctuary in Hin Kong. Starlink backup ensures zero downtime during island monsoon storms, with silent air-conditioned focus pods."
+}

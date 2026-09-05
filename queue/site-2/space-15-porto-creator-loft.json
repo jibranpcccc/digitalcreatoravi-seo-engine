@@ -1,0 +1,21 @@
+{
+  "id": "prop-015",
+  "name": "Porto Cozy Creator Loft",
+  "slug": "porto-cozy-creator-loft",
+  "city": "Porto",
+  "country": "Portugal",
+  "region": "Europe",
+  "download_mbps": 600,
+  "upload_mbps": 300,
+  "ping_ms": 11,
+  "jitter_ms": 2,
+  "chair_model": "Herman Miller Aeron Remastered",
+  "standing_desks_available": true,
+  "phone_booths_count": 7,
+  "backup_power": "Dual MEO/Vodafone Fiber + UPS",
+  "monthly_rate_eur": 1180,
+  "minimum_stay_days": 14,
+  "verified_date": "2026-09-03",
+  "productivity_score": 97,
+  "description": "Industrial loft coliving in Cedofeita arts district. Dual Gigabit fiber connections, dual-monitor workstation desks, and specialty espresso bar on-site."
+}

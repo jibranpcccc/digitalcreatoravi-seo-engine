@@ -1,0 +1,21 @@
+{
+  "id": "prop-013",
+  "name": "Nine Coliving La Orotava",
+  "slug": "nine-coliving-la-orotava-tenerife",
+  "city": "Tenerife",
+  "country": "Spain",
+  "region": "Europe",
+  "download_mbps": 500,
+  "upload_mbps": 250,
+  "ping_ms": 24,
+  "jitter_ms": 2,
+  "chair_model": "Steelcase Gesture",
+  "standing_desks_available": true,
+  "phone_booths_count": 4,
+  "backup_power": "Solar Array + Battery Storage Bank",
+  "monthly_rate_eur": 1150,
+  "minimum_stay_days": 14,
+  "verified_date": "2026-08-30",
+  "productivity_score": 96,
+  "description": "Historic 18th-century Canarian house restored into an executive remote work sanctuary. Roof terrace overlooking the Atlantic with 500Mbps symmetrical fiber."
+}

@@ -1,0 +1,45 @@
+name: Automated Daily Publisher & IndexNow Dispatch
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Daily at 06:00 UTC
+  workflow_dispatch:     # Manual trigger button in GitHub Actions tab
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install Pillow pytest pytest-asyncio
+
+      - name: Execute Daily Publishing Pipeline
+        run: python tools/daily_publisher.py
+
+      - name: Commit and Push Daily Release
+        run: |
+          git config --global user.name "Autonomous SEO Bot"
+          git config --global user.email "bot@localagentstack.com"
+          git add -A
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "chore(daily): autonomous daily article publish & indexnow dispatch"
+            git push origin master
+          else
+            echo "No new content found in queue today."
+          fi
