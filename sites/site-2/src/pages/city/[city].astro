@@ -14,102 +14,149 @@ export async function getStaticPaths() {
 }
 
 const { city, properties: cityProps } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const avgSpeed = Math.round(cityProps.reduce((acc, p) => acc + p.download_mbps, 0) / cityProps.length);
 const minRate = Math.min(...cityProps.map(p => p.monthly_rate_eur));
+const pageUrl = `https://workationradar.com/city/${encodeURIComponent(city)}`;
 
 const schemaData = {
   "@context": "https://schema.org",
-  "@type": "Place",
-  "name": `${city} Remote Work & Coliving Hub`,
-  "description": `Verified coliving spaces and remote work communities in ${city} with high-speed fiber internet.`,
-  "geo": {
-    "@type": "GeoCoordinates"
-  }
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": `${pageUrl}#place`,
+      "name": `${city} Remote Work & Coliving Hub`,
+      "description": `Verified coliving spaces and remote work communities in ${city} featuring high-speed fiber internet and ergonomic workstations.`,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": city,
+        "addressCountry": cityProps[0]?.country || "Global"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workationradar.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cities",
+          "item": "https://workationradar.com/#cities"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": city,
+          "item": pageUrl
+        }
+      ]
+    }
+  ]
 };
 ---
 
 <Layout 
   title={`Best Verified Coliving Spaces in ${city} (2026 Remote Work Guide)`}
   description={`Compare ${cityProps.length} verified coliving communities in ${city}. Average download speed ${avgSpeed} Mbps, rates starting from €${minRate}/month.`}
-  canonical={`https://workationradar.com/city/${encodeURIComponent(city)}`}
+  canonical={pageUrl}
   schemaJson={JSON.stringify(schemaData)}
 >
-  <div class="py-8">
-    <nav class="flex items-center space-x-2 text-xs text-stone-400 mb-6 font-medium">
-      <a href="/" class="hover:text-amber-400">Home</a>
-      <span>/</span>
-      <span class="text-stone-300">Cities</span>
-      <span>/</span>
+  <div class="py-6 max-w-5xl mx-auto">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center space-x-2 text-xs text-stone-400 mb-8 font-medium">
+      <a href={`${base}/`} class="hover:text-amber-400 transition">Home</a>
+      <span class="text-stone-600">/</span>
+      <span class="text-stone-400">Cities</span>
+      <span class="text-stone-600">/</span>
       <span class="text-amber-400 font-bold">{city}</span>
     </nav>
 
-    <!-- Header -->
-    <div class="mb-12 border-b border-stone-800 pb-8">
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-800 text-amber-400 text-xs font-semibold mb-4">
-        <span>{cityProps.length} Verified Spaces</span>
+    <!-- City Header & Quick Stats -->
+    <header class="mb-12 border-b border-stone-800 pb-8">
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold mb-4">
+        <span>📍 {cityProps[0]?.country || 'Global'} • {cityProps[0]?.region || 'Hub'}</span>
       </div>
-      <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4">
-        Verified Coliving Spaces in <span class="text-amber-400">{city}</span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">
+        Verified Coliving Spaces in <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">{city}</span>
       </h1>
-      <p class="text-stone-400 max-w-2xl leading-relaxed">
+      <p class="text-stone-400 text-base max-w-2xl leading-relaxed">
         Looking for reliable remote work accommodation in {city}? Every space in our directory has been tested for fiber connection reliability, ergonomic seating, and power failover systems.
       </p>
 
-      <!-- City Quick Stats -->
+      <!-- City Quick Stats Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
         <div class="p-4 rounded-xl bg-stone-900 border border-stone-800">
-          <span class="text-xs text-stone-500 block">Average Speed</span>
-          <span class="text-2xl font-bold text-emerald-400">{avgSpeed} Mbps</span>
+          <span class="text-[10px] text-stone-400 uppercase font-mono block">Average Speed</span>
+          <span class="text-2xl font-black text-emerald-400 font-mono">{avgSpeed} Mbps</span>
         </div>
         <div class="p-4 rounded-xl bg-stone-900 border border-stone-800">
-          <span class="text-xs text-stone-500 block">Starting Rate</span>
-          <span class="text-2xl font-bold text-white">&euro;{minRate}<span class="text-xs text-stone-400 font-normal"> / mo</span></span>
+          <span class="text-[10px] text-stone-400 uppercase font-mono block">Starting Rate</span>
+          <span class="text-2xl font-black text-white font-mono">&euro;{minRate}<span class="text-xs text-stone-400 font-normal"> / mo</span></span>
         </div>
         <div class="p-4 rounded-xl bg-stone-900 border border-stone-800">
-          <span class="text-xs text-stone-500 block">Power Resilience</span>
-          <span class="text-2xl font-bold text-amber-400">100% Backed</span>
+          <span class="text-[10px] text-stone-400 uppercase font-mono block">Power Resilience</span>
+          <span class="text-2xl font-black text-amber-400 font-mono">100% Backed</span>
         </div>
         <div class="p-4 rounded-xl bg-stone-900 border border-stone-800">
-          <span class="text-xs text-stone-500 block">Seating Standard</span>
-          <span class="text-2xl font-bold text-stone-200">Ergonomic</span>
+          <span class="text-[10px] text-stone-400 uppercase font-mono block">Verified Hubs</span>
+          <span class="text-2xl font-black text-stone-200 font-mono">{cityProps.length} Spaces</span>
         </div>
       </div>
-    </div>
+    </header>
 
-    <!-- Listings -->
+    <!-- Listings Grid -->
     <div class="space-y-6">
       {cityProps.map((prop) => (
-        <div class="p-6 rounded-xl bg-stone-900 border border-stone-800 hover:border-amber-500/50 transition duration-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <div class="max-w-2xl">
+        <div class="p-6 rounded-2xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/50 transition duration-300 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-xl overflow-hidden group">
+          <div class="w-full md:w-64 shrink-0 rounded-xl overflow-hidden border border-stone-800">
+            <img 
+              src={`${base}/images/spaces/${prop.slug}.webp`} 
+              alt={prop.name}
+              class="w-full h-40 object-cover group-hover:scale-[1.02] transition duration-500"
+              loading="lazy"
+              width="400"
+              height="225"
+            />
+          </div>
+
+          <div class="max-w-xl flex-grow">
             <div class="flex items-center space-x-3 mb-2">
-              <span class="text-xs font-bold text-amber-400 bg-amber-950 px-2 py-0.5 rounded border border-amber-900">
+              <span class="text-xs font-bold text-amber-400 bg-amber-950/80 px-2.5 py-0.5 rounded border border-amber-900 font-mono">
                 Score: {prop.productivity_score}/100
               </span>
               <span class="text-xs text-stone-400 font-mono">Tested: {prop.verified_date}</span>
             </div>
-            <h2 class="text-xl font-bold text-white mb-2">
-              <a href={`/space/${prop.slug}`} class="hover:text-amber-400 transition">
+            <h2 class="text-xl font-bold text-white mb-2 leading-snug">
+              <a href={`${base}/space/${prop.slug}`} class="hover:text-amber-400 transition">
                 {prop.name}
               </a>
             </h2>
-            <p class="text-sm text-stone-400 mb-4">
+            <p class="text-xs sm:text-sm text-stone-400 mb-4 leading-relaxed">
               {prop.description}
             </p>
-            <div class="flex flex-wrap gap-4 text-xs text-stone-300">
-              <span>🚀 <strong>{prop.download_mbps} Mbps</strong> Down / {prop.upload_mbps} Mbps Up</span>
-              <span>💺 <strong>{prop.chair_model}</strong></span>
-              <span>🔋 <strong>{prop.backup_power}</strong></span>
+            <div class="flex flex-wrap gap-4 text-xs text-stone-300 font-mono">
+              <span class="text-emerald-400 font-semibold">⚡ {prop.download_mbps} Mbps Down</span>
+              <span>💺 {prop.chair_model}</span>
+              <span>🔇 {prop.phone_booths_count} Call Booths</span>
             </div>
           </div>
 
-          <div class="flex flex-col items-start md:items-end justify-between min-w-[140px] pt-4 md:pt-0 border-t md:border-t-0 border-stone-800 w-full md:w-auto">
-            <span class="text-xs text-stone-500">Monthly All-Inclusive</span>
-            <span class="text-2xl font-extrabold text-white mb-3">&euro;{prop.monthly_rate_eur}</span>
+          <div class="shrink-0 flex flex-col items-end justify-between self-stretch md:self-auto border-t md:border-t-0 md:border-l border-stone-800 pt-4 md:pt-0 md:pl-6">
+            <div class="text-right mb-3">
+              <span class="text-[10px] text-stone-400 uppercase font-mono block">Monthly Rate</span>
+              <span class="text-xl font-black text-white font-mono">&euro;{prop.monthly_rate_eur}</span>
+            </div>
             <a 
-              href={`/space/${prop.slug}`}
-              class="w-full text-center px-4 py-2 rounded-lg bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold transition shadow-md shadow-amber-600/20"
+              href={`${base}/space/${prop.slug}`}
+              class="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white text-xs font-bold shadow-md shadow-amber-600/20 transition"
             >
-              Inspect Specs &rarr;
+              Inspect Space &rarr;
             </a>
           </div>
         </div>

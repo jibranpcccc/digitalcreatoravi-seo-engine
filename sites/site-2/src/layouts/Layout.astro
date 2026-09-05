@@ -7,10 +7,11 @@ interface Props {
 }
 
 const { title, description, canonical = "https://workationradar.com", schemaJson } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <!doctype html>
-<html lang="en" class="bg-stone-950 text-stone-100 antialiased">
+<html lang="en" class="bg-[#0c0a09] text-stone-100 antialiased scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,30 +26,81 @@ const { title, description, canonical = "https://workationradar.com", schemaJson
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="WorkationRadar" />
 
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
     <!-- Machine-Readable Discovery -->
-    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Index" />
+    <link rel="alternate" type="text/plain" href={`${base}/llms.txt`} title="LLM Context Index" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
     {schemaJson && (
       <script type="application/ld+json" set:html={schemaJson} />
     )}
   </head>
-  <body class="min-h-screen flex flex-col selection:bg-amber-600 selection:text-white">
+  <body class="min-h-screen flex flex-col font-['Plus_Jakarta_Sans',sans-serif] selection:bg-amber-600 selection:text-white relative overflow-x-hidden">
+    
+    <!-- Ambient Glows -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[350px] bg-gradient-to-b from-amber-600/15 via-orange-600/5 to-transparent blur-[120px] pointer-events-none -z-10"></div>
+    <div class="fixed top-96 -left-48 w-96 h-96 bg-amber-500/5 blur-[140px] pointer-events-none -z-10"></div>
+
+    <!-- Announcement Bar -->
+    <div class="border-b border-stone-800/80 bg-stone-900/60 backdrop-blur-md text-xs py-2 px-4 text-center text-stone-400 flex items-center justify-center space-x-3">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">
+        2026 INDEX
+      </span>
+      <span>10 Global Coliving Hubs Empirically Tested for WiFi & Ergonomics</span>
+      <a href={`${base}/#filter-tool`} class="text-amber-400 hover:text-amber-300 font-semibold underline underline-offset-2 ml-1">
+        Launch Sizer &rarr;
+      </a>
+    </div>
+
     <!-- Header Navigation -->
-    <header class="border-b border-stone-800 bg-stone-900/80 backdrop-blur sticky top-0 z-50">
+    <header class="border-b border-stone-800/80 bg-[#0c0a09]/80 backdrop-blur-xl sticky top-0 z-50">
       <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <a href="/" class="flex items-center space-x-3 group">
-          <div class="w-9 h-9 rounded-lg bg-amber-600 flex items-center justify-center font-bold text-white shadow-lg shadow-amber-600/20 group-hover:bg-amber-500 transition">
-            WR
+        <a href={`${base}/`} class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-orange-500 p-[1px] shadow-lg shadow-amber-600/20 group-hover:shadow-amber-500/40 transition duration-300">
+            <div class="w-full h-full bg-stone-950 rounded-[11px] flex items-center justify-center font-black text-transparent bg-clip-text bg-gradient-to-tr from-amber-400 to-orange-300 text-base">
+              WR
+            </div>
           </div>
-          <span class="text-xl font-extrabold tracking-tight text-white">Workation<span class="text-amber-500">Radar</span></span>
+          <div class="flex flex-col">
+            <span class="text-lg font-black tracking-tight text-white group-hover:text-amber-400 transition">
+              Workation<span class="text-amber-500">Radar</span>
+            </span>
+            <span class="text-[10px] font-mono text-stone-400 tracking-widest uppercase">Verified Coliving Index</span>
+          </div>
         </a>
-        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-stone-300">
-          <a href="/city/Madeira" class="hover:text-amber-400 transition">Madeira</a>
-          <a href="/city/Bansko" class="hover:text-amber-400 transition">Bansko</a>
-          <a href="/city/Lisbon" class="hover:text-amber-400 transition">Lisbon</a>
-          <a href="/city/Bali" class="hover:text-amber-400 transition">Bali</a>
-          <a href="/llms.txt" class="px-2.5 py-1 rounded bg-stone-800 text-xs text-amber-400 font-mono hover:bg-stone-700 transition">llms.txt</a>
+
+        <nav class="hidden md:flex items-center space-x-1 text-sm font-medium text-stone-300">
+          <a href={`${base}/city/Madeira`} class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-stone-800/60 transition">Madeira</a>
+          <a href={`${base}/city/Bansko`} class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-stone-800/60 transition">Bansko</a>
+          <a href={`${base}/city/Bali`} class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-stone-800/60 transition">Bali</a>
+          <a href={`${base}/city/Lisbon`} class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-stone-800/60 transition">Lisbon</a>
+          <a href={`${base}/city/Chiang%20Mai`} class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-stone-800/60 transition">Chiang Mai</a>
         </nav>
+
+        <div class="flex items-center space-x-3">
+          <a 
+            href={`${base}/llms.txt`} 
+            class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-stone-900 border border-stone-700/80 hover:border-amber-500/60 text-xs font-mono text-amber-400 shadow-sm transition"
+            title="Machine-readable LLM Context Index"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>llms.txt</span>
+          </a>
+          <a 
+            href={`${base}/#filter-tool`}
+            class="hidden sm:inline-flex items-center px-4 py-1.5 rounded-lg bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white text-xs font-bold shadow-md shadow-amber-600/20 transition"
+          >
+            Filter Hubs
+          </a>
+        </div>
       </div>
     </header>
 
@@ -58,16 +110,49 @@ const { title, description, canonical = "https://workationradar.com", schemaJson
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-stone-800 bg-stone-900 mt-16 py-12 text-sm text-stone-400">
-      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div>
-          <p class="font-semibold text-stone-200">WorkationRadar.com</p>
-          <p class="text-xs text-stone-500 mt-1">Verified WiFi speedtests, ergonomic chairs & remote work coliving directory.</p>
+    <footer class="border-t border-stone-800/80 bg-[#080605] mt-24 py-16 text-sm text-stone-400">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <div class="md:col-span-2">
+            <div class="flex items-center space-x-3 mb-3">
+              <div class="w-8 h-8 rounded-lg bg-amber-600 flex items-center justify-center font-bold text-white text-xs">
+                WR
+              </div>
+              <span class="text-base font-extrabold text-white">WorkationRadar</span>
+            </div>
+            <p class="text-xs text-stone-400 max-w-sm leading-relaxed mb-4">
+              The independent 16-field verification index for remote work coliving hubs. Empirical fiber speedtests, authentic Herman Miller ergonomics, and generator failovers.
+            </p>
+            <div class="inline-flex items-center space-x-2 px-2.5 py-1 rounded-md bg-stone-900 border border-stone-800 text-[11px] font-mono text-emerald-400">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>100% Zero Affiliate Bias • Grounded Inspections</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold text-stone-200 uppercase tracking-wider mb-3">Featured Hubs</h4>
+            <ul class="space-y-2 text-xs text-stone-400">
+              <li><a href={`${base}/space/ponta-do-sol-nomad-coliving`} class="hover:text-amber-400 transition">Ponta do Sol (Madeira)</a></li>
+              <li><a href={`${base}/space/coworking-bansko-coliving`} class="hover:text-amber-400 transition">Coworking Bansko (Bulgaria)</a></li>
+              <li><a href={`${base}/space/dojo-coliving-canggu`} class="hover:text-amber-400 transition">Dojo Canggu (Bali)</a></li>
+              <li><a href={`${base}/space/sun-and-co-javea`} class="hover:text-amber-400 transition">Sun and Co. (Spain)</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold text-stone-200 uppercase tracking-wider mb-3">Machine Transparency</h4>
+            <ul class="space-y-2 text-xs text-stone-400">
+              <li><a href={`${base}/llms.txt`} class="hover:text-amber-400 transition font-mono">/llms.txt</a></li>
+              <li><a href={`${base}/robots.txt`} class="hover:text-amber-400 transition font-mono">/robots.txt</a></li>
+              <li><a href={`${base}/sitemap.xml`} class="hover:text-amber-400 transition font-mono">/sitemap.xml</a></li>
+              <li><a href="https://github.com/jibranpcccc/workationradar" target="_blank" rel="noopener" class="hover:text-amber-400 transition">Open Data Repository</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="flex space-x-6 text-xs text-stone-400">
-          <a href="/llms.txt" class="hover:text-amber-400">llms.txt</a>
-          <a href="/robots.txt" class="hover:text-amber-400">robots.txt</a>
-          <a href="/sitemap.xml" class="hover:text-amber-400">sitemap.xml</a>
+
+        <div class="border-t border-stone-800/80 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-stone-400 gap-4">
+          <p>&copy; 2026 WorkationRadar. Empirical coliving inspections released under Open Data License.</p>
+          <p class="text-[11px] text-stone-400">Built with Astro SSG • Edge-Hosted on GitHub Pages</p>
         </div>
       </div>
     </footer>
