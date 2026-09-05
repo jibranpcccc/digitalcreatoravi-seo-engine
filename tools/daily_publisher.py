@@ -198,7 +198,7 @@ def publish_next_site1():
     generate_site1_diagram(slug, title)
     
     # Update sitemap
-    url = f"https://localagentstack.com/{category}/{slug}/"
+    url = f"https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/{category}/{slug}/"
     update_site1_sitemap(url)
     
     return {"slug": slug, "category": category, "title": title, "url": url}
@@ -228,8 +228,8 @@ def publish_next_site2():
     generate_site2_space_image(prop["slug"], prop["name"], prop["city"], prop["country"])
     
     # Update sitemaps
-    space_url = f"https://workationradar.com/space/{prop['slug']}/"
-    city_url = f"https://workationradar.com/city/{prop['city']}/"
+    space_url = f"https://jibranpcccc.github.io/workationradar/space/{prop['slug']}/"
+    city_url = f"https://jibranpcccc.github.io/workationradar/city/{prop['city']}/"
     update_site2_sitemap(space_url, city_url)
     
     # Remove from queue
