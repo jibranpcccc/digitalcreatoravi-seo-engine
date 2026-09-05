@@ -117,7 +117,17 @@ const ogImageUrl = image.startsWith('http')
           </a>
         </nav>
 
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-2.5">
+          <a 
+            href="https://www.youtube.com/@digitalcreatoravi" 
+            target="_blank" 
+            rel="noopener"
+            class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-red-600/10 border border-red-500/30 hover:border-red-500 text-xs font-semibold text-red-400 transition"
+            title="Watch Benchmarks on YouTube"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span class="hidden sm:inline">YouTube</span>
+          </a>
           <a 
             href={`${base}/llms.txt`} 
             class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700/80 hover:border-blue-500/60 text-xs font-mono text-blue-400 shadow-sm transition"
@@ -172,12 +182,18 @@ const ogImageUrl = image.startsWith('http')
           </div>
 
           <div>
-            <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-3">Machine Transparency</h4>
+            <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-3">Community & Transparency</h4>
             <ul class="space-y-2 text-xs text-slate-400">
+              <li>
+                <a href="https://www.youtube.com/@digitalcreatoravi" target="_blank" rel="noopener" class="hover:text-red-400 transition flex items-center space-x-1.5">
+                  <svg class="w-3.5 h-3.5 fill-red-500" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  <span>YouTube Channel</span>
+                </a>
+              </li>
+              <li><a href="https://github.com/jibranpcccc/digitalcreatoravi-seo-engine" target="_blank" rel="noopener" class="hover:text-blue-400 transition">GitHub Open Source</a></li>
               <li><a href={`${base}/llms.txt`} class="hover:text-blue-400 transition font-mono">/llms.txt</a></li>
               <li><a href={`${base}/robots.txt`} class="hover:text-blue-400 transition font-mono">/robots.txt</a></li>
               <li><a href={`${base}/sitemap.xml`} class="hover:text-blue-400 transition font-mono">/sitemap.xml</a></li>
-              <li><a href="https://github.com/jibranpcccc/digitalcreatoravi-seo-engine" target="_blank" rel="noopener" class="hover:text-blue-400 transition">Open Source Repository</a></li>
             </ul>
           </div>
         </div>
