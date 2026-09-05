@@ -38,7 +38,7 @@ slug: "2x-rtx-3090-vs-1x-rtx-4090-ai-inference"
 | **Power Consumption (Full Load)** | 700 Watts (2x 350W) | 450 Watts | **1x RTX 4090** (More Efficient) |
 | **PCIe Lane Requirements** | x8 / x8 Bifurcation (Gen 4.0) | Single x16 Slot | **1x RTX 4090** (Simpler Setup) |
 
-![2x RTX 3090 vs 1x RTX 4090 VRAM Allocation Architecture and Tokens Per Second Benchmark](/images/benchmarks/2x-rtx-3090-vs-1x-rtx-4090-benchmark.webp)
+![2x RTX 3090 vs 1x RTX 4090 VRAM Allocation Architecture and Tokens Per Second Benchmark](/images/benchmarks/2x-rtx-3090-vs-1x-rtx-4090-ai-inference-benchmark.webp)
 
 ---
 
