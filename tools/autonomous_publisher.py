@@ -77,6 +77,25 @@ FLEET_CONFIG = {
         "domain": "https://nomadtreaty.vercel.app",
         "path": os.path.join(ROOT_DIR, "sites", "site-6"),
         "key_loc": "https://nomadtreaty.vercel.app/8303260f1bf94264ac6d00aa93efde28.txt"
+    },
+    "site-7": {
+        "id": "site-7",
+        "name": "WebhookWatch",
+        "niche": "Webhook Architecture & Reliability",
+        "platform": "vercel",
+        "domain": "https://webhookwatch.vercel.app",
+        "path": os.path.join(ROOT_DIR, "sites", "site-7"),
+        "key_loc": "https://webhookwatch.vercel.app/8303260f1bf94264ac6d00aa93efde28.txt"
+    },
+    "site-8": {
+        "id": "site-8",
+        "name": "LocalDocPrivacy",
+        "niche": "Client-Side WASM Document Security",
+        "platform": "netlify",
+        "netlify_site": "localdocprivacy",
+        "domain": "https://localdocprivacy.netlify.app",
+        "path": os.path.join(ROOT_DIR, "sites", "site-8"),
+        "key_loc": "https://localdocprivacy.netlify.app/8303260f1bf94264ac6d00aa93efde28.txt"
     }
 }
 
