@@ -58,14 +58,14 @@ CREATE TABLE IF NOT EXISTS webmaster_audits (
 
 # Seed Fleet Data (8 live sites)
 fleet_seeds = [
-    ("site-1", "LocalAgentStack", "Local AI Hardware & Inference", "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/", "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/sitemap.xml", "GitHub Pages (Fastly CDN)", "Cluster 1", "jibranpccc@gmail.com", 100, 1, 1, "200 OK"),
-    ("site-2", "WorkationRadar", "Digital Nomad & Coliving Spaces", "https://jibranpcccc.github.io/workationradar/", "https://jibranpcccc.github.io/workationradar/sitemap.xml", "GitHub Pages (Fastly CDN)", "Cluster 1", "jibranpccc@gmail.com", 100, 1, 1, "200 OK"),
-    ("site-3", "OpenAgentStack", "Autonomous Agents & MCP Protocols", "https://openagentstack.pages.dev/", "https://openagentstack.pages.dev/sitemap.xml", "Cloudflare Pages Edge", "Cluster 1", "jibranpccc@gmail.com", 100, 1, 1, "200 OK"),
-    ("site-4", "IndieStackAudit", "Micro-SaaS Tech Stacks & MoR Billing", "https://indiestackaudit.pages.dev/", "https://indiestackaudit.pages.dev/sitemap.xml", "Cloudflare Pages Edge", "Cluster 1", "jibranpccc@gmail.com", 100, 1, 1, "200 OK"),
-    ("site-5", "VectorBench", "AI Vector DB & Embedding Benchmarks", "https://vectorbench-hq.netlify.app/", "https://vectorbench-hq.netlify.app/sitemap.xml", "Netlify Edge CDN", "Cluster 2", "rosereneee@gmail.com (Profile 2)", 100, 1, 1, "200 OK"),
-    ("site-6", "NomadTreaty", "Digital Nomad Tax & Visas", "https://nomadtreaty.vercel.app/", "https://nomadtreaty.vercel.app/sitemap.xml", "Vercel Global Anycast", "Cluster 2", "rosereneee@gmail.com (Profile 2)", 100, 1, 1, "200 OK"),
-    ("site-7", "WebhookWatch", "Webhook Architecture & Reliability", "https://webhookwatch.vercel.app/", "https://webhookwatch.vercel.app/sitemap.xml", "Vercel Global Anycast", "Cluster 3", "doriancuquejo05@gmail.com (Profile 3)", 100, 1, 1, "200 OK"),
-    ("site-8", "LocalDocPrivacy", "Client-Side WASM Document Security", "https://localdocprivacy.netlify.app/", "https://localdocprivacy.netlify.app/sitemap.xml", "Netlify Edge CDN", "Cluster 4", "teams.thefusionfeed@gmail.com (Profile 4)", 100, 1, 1, "200 OK")
+    ("site-1", "LocalAgentStack", "Local AI Hardware & Inference", "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/", "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/sitemap.xml", "GitHub Pages (Fastly CDN)", "Cluster A (Profile 30)", "vickimarshall853@gmail.com", 100, 1, 1, "200 OK"),
+    ("site-2", "WorkationRadar", "Digital Nomad & Coliving Spaces", "https://jibranpcccc.github.io/workationradar/", "https://jibranpcccc.github.io/workationradar/sitemap.xml", "GitHub Pages (Fastly CDN)", "Cluster B (Profile 31)", "janavajannimik@gmail.com", 100, 1, 1, "200 OK"),
+    ("site-3", "OpenAgentStack", "Autonomous Agents & MCP Protocols", "https://openagentstack.pages.dev/", "https://openagentstack.pages.dev/sitemap.xml", "Cloudflare Pages Edge", "Cluster C (Profile 32)", "gladystuckergmgd@gmail.com", 100, 1, 1, "200 OK"),
+    ("site-4", "IndieStackAudit", "Micro-SaaS Tech Stacks & MoR Billing", "https://indiestackaudit.pages.dev/", "https://indiestackaudit.pages.dev/sitemap.xml", "Cloudflare Pages Edge", "Cluster D (Profile 34)", "siopkbritneymasnbur@gmail.com", 100, 1, 1, "200 OK"),
+    ("site-5", "VectorBench", "AI Vector DB & Embedding Benchmarks", "https://vectorbench-hq.netlify.app/", "https://vectorbench-hq.netlify.app/sitemap.xml", "Netlify Edge CDN", "Cluster E (Default)", "rosereneee@gmail.com", 100, 1, 1, "200 OK"),
+    ("site-6", "NomadTreaty", "Digital Nomad Tax & Visas", "https://nomadtreaty.vercel.app/", "https://nomadtreaty.vercel.app/sitemap.xml", "Vercel Global Anycast", "Cluster F (Profile 35)", "christinapatelf@gmail.com", 100, 1, 1, "200 OK"),
+    ("site-7", "WebhookWatch", "Webhook Architecture & Reliability", "https://webhookwatch.vercel.app/", "https://webhookwatch.vercel.app/sitemap.xml", "Vercel Global Anycast", "Cluster G (Profile 27)", "doriancuquejo05@gmail.com", 100, 1, 1, "200 OK"),
+    ("site-8", "LocalDocPrivacy", "Client-Side WASM Document Security", "https://localdocprivacy.netlify.app/", "https://localdocprivacy.netlify.app/sitemap.xml", "Netlify Edge CDN", "Cluster H (Profile 28)", "teams.thefusionfeed@gmail.com", 100, 1, 1, "200 OK")
 ]
 
 for s in fleet_seeds:

@@ -27,7 +27,7 @@ FLEET = [
         "name": "LocalAgentStack",
         "niche": "Local AI Hardware & Inference",
         "host": "GitHub Pages (Fastly CDN)",
-        "gsc_account": "jibranpccc@gmail.com",
+        "gsc_account": "vickimarshall853@gmail.com (Profile 30)",
         "homepage": "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/",
         "sitemap": "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/sitemap.xml",
         "pages": [
@@ -44,7 +44,7 @@ FLEET = [
         "name": "WorkationRadar",
         "niche": "Digital Nomad & Coliving Spaces",
         "host": "GitHub Pages (Fastly CDN)",
-        "gsc_account": "jibranpccc@gmail.com",
+        "gsc_account": "janavajannimik@gmail.com (Profile 31)",
         "homepage": "https://jibranpcccc.github.io/workationradar/",
         "sitemap": "https://jibranpcccc.github.io/workationradar/sitemap.xml",
         "pages": [
@@ -60,7 +60,7 @@ FLEET = [
         "name": "OpenAgentStack",
         "niche": "Autonomous Agents & MCP Protocols",
         "host": "Cloudflare Pages",
-        "gsc_account": "jibranpccc@gmail.com",
+        "gsc_account": "gladystuckergmgd@gmail.com (Profile 32)",
         "homepage": "https://openagentstack.pages.dev/",
         "sitemap": "https://openagentstack.pages.dev/sitemap.xml",
         "pages": [
@@ -77,7 +77,7 @@ FLEET = [
         "name": "IndieStackAudit",
         "niche": "Micro-SaaS Tech Stacks & MoR Billing",
         "host": "Cloudflare Pages",
-        "gsc_account": "jibranpccc@gmail.com",
+        "gsc_account": "siopkbritneymasnbur@gmail.com (Profile 34)",
         "homepage": "https://indiestackaudit.pages.dev/",
         "sitemap": "https://indiestackaudit.pages.dev/sitemap.xml",
         "pages": [
@@ -94,7 +94,7 @@ FLEET = [
         "name": "VectorBench",
         "niche": "AI Vector DB & Embedding Benchmarks",
         "host": "Netlify High-Performance Edge",
-        "gsc_account": "Pending Secondary Gmail",
+        "gsc_account": "rosereneee@gmail.com (Default Profile)",
         "homepage": "https://vectorbench-hq.netlify.app/",
         "sitemap": "https://vectorbench-hq.netlify.app/sitemap.xml",
         "pages": [
@@ -109,7 +109,7 @@ FLEET = [
         "name": "NomadTreaty",
         "niche": "Digital Nomad Tax & Visas",
         "host": "Vercel Global Anycast Edge",
-        "gsc_account": "Pending Secondary Gmail",
+        "gsc_account": "christinapatelf@gmail.com (Profile 35)",
         "homepage": "https://nomadtreaty.vercel.app/",
         "sitemap": "https://nomadtreaty.vercel.app/sitemap.xml",
         "pages": [
@@ -124,7 +124,7 @@ FLEET = [
         "name": "WebhookWatch",
         "niche": "Webhook Architecture & Reliability",
         "host": "Vercel Global Anycast Edge",
-        "gsc_account": "Pending Secondary Gmail (Cluster 3)",
+        "gsc_account": "doriancuquejo05@gmail.com (Profile 27)",
         "homepage": "https://webhookwatch.vercel.app/",
         "sitemap": "https://webhookwatch.vercel.app/sitemap.xml",
         "pages": [
@@ -139,7 +139,7 @@ FLEET = [
         "name": "LocalDocPrivacy",
         "niche": "Client-Side WASM Document Security",
         "host": "Netlify High-Performance Edge",
-        "gsc_account": "Pending Secondary Gmail (Cluster 4)",
+        "gsc_account": "teams.thefusionfeed@gmail.com (Profile 28)",
         "homepage": "https://localdocprivacy.netlify.app/",
         "sitemap": "https://localdocprivacy.netlify.app/sitemap.xml",
         "pages": [
