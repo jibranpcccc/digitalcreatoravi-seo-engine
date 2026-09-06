@@ -88,9 +88,19 @@ const schemaData = {
       <h1 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">
         Verified Coliving Spaces in <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">{city}</span>
       </h1>
-      <p class="text-stone-400 text-base max-w-2xl leading-relaxed">
+      <p class="text-stone-400 text-base max-w-2xl leading-relaxed mb-6">
         Looking for reliable remote work accommodation in {city}? Every space in our directory has been tested for fiber connection reliability, ergonomic seating, and power failover systems.
       </p>
+
+      <!-- Quick Answer Box -->
+      <div class="bg-amber-950/40 border border-amber-500/30 rounded-2xl p-6 my-6 text-left backdrop-blur-sm shadow-xl shadow-amber-950/50">
+        <div class="flex items-center gap-2 text-amber-400 font-bold text-xs uppercase tracking-wider mb-2">
+          <span>⚡</span> Quick Answer ({city} Workation Guide)
+        </div>
+        <p class="text-stone-200 text-base leading-relaxed font-medium">
+          The best coliving spaces for remote workers in <strong>{city}</strong> provide <strong>verified fiber internet averaging {avgSpeed} Mbps</strong>, ergonomic mesh task chairs, quiet meeting phone booths, and verified community events, with monthly rates starting from <strong>€{minRate}/month</strong>.
+        </p>
+      </div>
 
       <!-- City Quick Stats Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
