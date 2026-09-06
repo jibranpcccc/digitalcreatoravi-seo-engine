@@ -8,7 +8,7 @@ REM 1. Run Autonomous Publisher
 python tools/autonomous_publisher.py --status >> logs/daily_run.log 2>&1
 
 REM 2. Verify all live production sites
-python tools/audit_portfolio_all5.py >> logs/daily_run.log 2>&1
+python tools/audit_portfolio_all6.py >> logs/daily_run.log 2>&1
 
 REM 3. Dispatch IndexNow Pings
 python tools/ping_indexnow.py >> logs/daily_run.log 2>&1

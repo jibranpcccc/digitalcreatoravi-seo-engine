@@ -68,6 +68,15 @@ FLEET_CONFIG = {
         "domain": "https://vectorbench-hq.netlify.app",
         "path": os.path.join(ROOT_DIR, "sites", "site-5"),
         "key_loc": "https://vectorbench-hq.netlify.app/8303260f1bf94264ac6d00aa93efde28.txt"
+    },
+    "site-6": {
+        "id": "site-6",
+        "name": "NomadTreaty",
+        "niche": "Digital Nomad Tax & Visas",
+        "platform": "vercel",
+        "domain": "https://nomadtreaty.vercel.app",
+        "path": os.path.join(ROOT_DIR, "sites", "site-6"),
+        "key_loc": "https://nomadtreaty.vercel.app/8303260f1bf94264ac6d00aa93efde28.txt"
     }
 }
 

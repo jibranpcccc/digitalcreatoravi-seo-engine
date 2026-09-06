@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "183-Day Rule Demystified: Digital Nomad Tax Residency Pitfalls & Day Counting (2026)",
+  "description": "How the 183-day tax residency rule works under OECD model tax treaties. Rolling 12-month periods, center of vital interests tests, and tie-breaker rules explained.",
+  "datePublished": "2026-09-04T00:00:00Z",
+  "dateModified": "2026-09-06T00:00:00Z",
+  "author": {
+    "@type": "Organization",
+    "name": "NomadTreaty Intelligence"
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nomadtreaty.vercel.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "183-Day Rule Guide",
+      "item": "https://nomadtreaty.vercel.app/183-day-rule-tax-residency-nomad-guide/"
+    }
+  ]
+};
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [pageSchema, breadcrumbSchema]
+};
+---
+
+<Layout
+  title="183-Day Rule Demystified: Tax Residency Pitfalls & Day Counting | NomadTreaty"
+  description="Master the 183-day rule for digital nomads. Learn how rolling 365-day periods, center of vital interests, and bilateral tax treaty tie-breakers determine your tax residency."
+  slug="183-day-rule-tax-residency-nomad-guide"
+  schema={schema}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <!-- Breadcrumb Nav -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6 font-medium">
+      <a href="/" class="hover:text-emerald-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-amber-400">183-Day Rule Guide</span>
+    </nav>
+
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold mb-4">
+      International Tax Jurisprudence • OECD Article 4 Standards
+    </div>
+
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+      The 183-Day Rule Demystified: How to Avoid Unexpected Tax Residency Traps
+    </h1>
+
+    <!-- Quick Answer Box -->
+    <div class="bg-emerald-950/40 border border-emerald-500/30 rounded-2xl p-6 mb-8 backdrop-blur-sm">
+      <div class="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-wider mb-2">
+        <span>⚡</span> Quick Answer (The 183-Day Definition)
+      </div>
+      <p class="text-slate-200 text-base leading-relaxed font-medium">
+        The <strong>183-day rule</strong> establishes that spending 183 or more days in a country during a 12-month period creates automatic <strong>tax residency</strong>. However, departing before day 183 does not prevent taxation if tax authorities prove your <strong>center of vital interests</strong> (primary dwelling or economic ties) remained inside the country.
+      </p>
+    </div>
+
+    <!-- The 3 Most Dangerous Traps Table -->
+    <div class="my-8 overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/60 p-1">
+      <table class="w-full text-left text-sm text-slate-300">
+        <thead class="bg-slate-900 text-xs uppercase tracking-wider text-slate-400 border-b border-slate-800">
+          <tr>
+            <th class="px-5 py-3 font-bold text-white">Common Nomad Myth</th>
+            <th class="px-5 py-3 font-bold text-rose-400">The Legal Reality</th>
+            <th class="px-5 py-3 font-bold text-emerald-400">Compliant Mitigation Strategy</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800 text-xs">
+          <tr>
+            <td class="px-5 py-3 font-semibold text-white">"I reset my counter every January 1st"</td>
+            <td class="px-5 py-3 text-rose-300">Many countries (e.g. UK, Australia) count rolling 365-day periods, not calendar years.</td>
+            <td class="px-5 py-3 text-emerald-400 font-semibold">Track presence across continuous rolling 12-month windows.</td>
+          </tr>
+          <tr>
+            <td class="px-5 py-3 font-semibold text-white">"Travel days don't count towards presence"</td>
+            <td class="px-5 py-3 text-rose-300">Any part of a day (arriving at 11:55 PM) counts as a full day of presence in most OECD nations.</td>
+            <td class="px-5 py-3 text-emerald-400 font-semibold">Count arrival and departure days as complete taxable days.</td>
+          </tr>
+          <tr>
+            <td class="px-5 py-3 font-semibold text-white">"If I don't stay 183 days, I pay 0% everywhere"</td>
+            <td class="px-5 py-3 text-rose-300">Leads to perpetual tax residency in your original home country (Tax Nomad Trap).</td>
+            <td class="px-5 py-3 text-emerald-400 font-semibold">Formally establish explicit non-dom residency (e.g. Cyprus, UAE, or Spain).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Editorial Analysis -->
+    <div class="prose prose-invert max-w-none text-slate-300 space-y-6 text-sm sm:text-base leading-relaxed">
+      <h2 class="text-xl sm:text-2xl font-bold text-white mt-8 mb-3">1. OECD Model Treaty: Article 4 Tie-Breaker Rules</h2>
+      <p>
+        When two sovereign nations both claim you as a tax resident, bilateral Double Taxation Treaties (DTTs) resolve the dispute using the sequential <strong>Article 4 Tie-Breaker Test</strong>:
+      </p>
+      <ol class="list-decimal list-inside space-y-2 text-xs text-slate-300">
+        <li><strong>Permanent Home Available:</strong> In which jurisdiction do you have a permanent home owned or leased under a long-term contract?</li>
+        <li><strong>Center of Vital Interests:</strong> Where are your personal and economic relations closer (family, directorships, business operations)?</li>
+        <li><strong>Habitual Abode:</strong> In which country do you physically reside for a greater aggregate duration?</li>
+        <li><strong>Nationality:</strong> What passport do you hold?</li>
+      </ol>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-white mt-8 mb-3">2. Digital Nomad Day-Tracking Best Practices</h2>
+      <p>
+        Modern tax auditors cross-reference passport immigration stamps, airline passenger manifest records (APIS), and local credit card swipes during tax audits. We recommend keeping verified PDF utility bills, short-term lease contracts, and border entry records archived for a minimum of <strong>5 years</strong>.
+      </p>
+    </div>
+
+    <!-- Related Links -->
+    <div class="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between gap-4 text-xs">
+      <a href="/portugal-nhr-tax-nomad-calculator-2026/" class="text-emerald-400 hover:underline">← Read Portugal NHR 2.0 Guide</a>
+      <a href="/" class="text-emerald-400 hover:underline">Back to Global Tax Matrix →</a>
+    </div>
+  </article>
+</Layout>

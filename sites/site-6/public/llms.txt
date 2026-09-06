@@ -1,0 +1,9 @@
+# NomadTreaty — Global Digital Nomad Tax Treaties & Visa Calculator
+
+> NomadTreaty is an open tax treaty, residency calculator, and visa database for remote software engineers, solopreneurs, and digital nomads navigating the 183-day rule, territorial tax systems, and bilateral double taxation treaties (DTTs).
+
+## Core Country Teardowns & Calculators
+- [Global Digital Nomad Tax & 183-Day Matrix](https://nomadtreaty.vercel.app/): Interactive comparison of 20+ nomad visa countries (tax rates, minimum monthly income, stay requirements, and territorial exemptions).
+- [Spain Digital Nomad Visa & Beckham Law Guide (2026)](https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/): Flat 24% tax rate criteria, social security exemption, and regional wealth tax updates.
+- [Portugal NHR 2.0 & Digital Nomad Tax Calculator](https://nomadtreaty.vercel.app/portugal-nhr-tax-nomad-calculator-2026/): Transition from legacy NHR to the Tax Incentive for Scientific Research & Innovation (TIFIC) 20% flat regime.
+- [183-Day Rule Demystified: Tax Residency Pitfalls](https://nomadtreaty.vercel.app/183-day-rule-tax-residency-nomad-guide/): Day-counting math, center of vital interests tests, and how to legally establish tax residency.

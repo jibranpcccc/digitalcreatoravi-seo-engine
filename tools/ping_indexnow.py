@@ -75,6 +75,17 @@ SITES_CONFIG = [
             "https://vectorbench-hq.netlify.app/pgvector-production-tuning-guide/",
             "https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/"
         ]
+    },
+    {
+        "name": "NomadTreaty",
+        "host": "nomadtreaty.vercel.app",
+        "key_location": "https://nomadtreaty.vercel.app/8303260f1bf94264ac6d00aa93efde28.txt",
+        "urls": [
+            "https://nomadtreaty.vercel.app/",
+            "https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/",
+            "https://nomadtreaty.vercel.app/portugal-nhr-tax-nomad-calculator-2026/",
+            "https://nomadtreaty.vercel.app/183-day-rule-tax-residency-nomad-guide/"
+        ]
     }
 ]
 
