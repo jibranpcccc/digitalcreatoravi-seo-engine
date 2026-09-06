@@ -64,6 +64,17 @@ SITES_CONFIG = [
             "https://indiestackaudit.pages.dev/stacks/zero-cost-saas-stack-cloudflare-pages-turso-resend/",
             "https://indiestackaudit.pages.dev/billing/open-source-auth-comparison-clerk-lucia-better-auth/"
         ]
+    },
+    {
+        "name": "VectorBench",
+        "host": "vectorbench-hq.netlify.app",
+        "key_location": "https://vectorbench-hq.netlify.app/8303260f1bf94264ac6d00aa93efde28.txt",
+        "urls": [
+            "https://vectorbench-hq.netlify.app/",
+            "https://vectorbench-hq.netlify.app/qdrant-vs-pinecone-benchmark-2026/",
+            "https://vectorbench-hq.netlify.app/pgvector-production-tuning-guide/",
+            "https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/"
+        ]
     }
 ]
 

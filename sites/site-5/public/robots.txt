@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vectorbench-hq.netlify.app/sitemap.xml

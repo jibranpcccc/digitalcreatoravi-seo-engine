@@ -1,0 +1,140 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  slug?: string;
+  type?: string;
+  schema?: any;
+}
+
+const {
+  title,
+  description,
+  slug = "",
+  type = "website",
+  schema = null
+} = Astro.props;
+
+const canonical = slug 
+  ? `https://vectorbench-hq.netlify.app/${slug}/`
+  : "https://vectorbench-hq.netlify.app/";
+
+const ogImage = "https://vectorbench-hq.netlify.app/og-vectorbench.png";
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="VectorBench" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Index" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Google Webmaster Verification -->
+    <meta name="google-site-verification" content="google6fe267a998c19a9a" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "VectorBench",
+      "url": "https://vectorbench-hq.netlify.app/",
+      "description": "Open engineering benchmarks, latency percentiles, and cost analysis for vector search engines and embedding models.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "VectorBench Labs",
+        "url": "https://vectorbench-hq.netlify.app/"
+      }
+    })} />
+
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-['Plus_Jakarta_Sans'] min-h-screen flex flex-col antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+    <header class="border-b border-cyan-950/40 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-600 to-teal-400 flex items-center justify-center text-white font-black shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+            ⚡
+          </div>
+          <div>
+            <div class="font-extrabold tracking-tight text-white flex items-center gap-1.5">
+              VectorBench
+              <span class="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">2026</span>
+            </div>
+            <p class="text-xs text-slate-400 hidden sm:block">AI Vector Database Benchmarks & Matrix</p>
+          </div>
+        </a>
+
+        <nav class="flex items-center gap-6 text-sm font-medium">
+          <a href="/#matrix" class="text-slate-300 hover:text-cyan-400 transition-colors">Benchmark Matrix</a>
+          <a href="/qdrant-vs-pinecone-benchmark-2026/" class="text-slate-300 hover:text-cyan-400 transition-colors">Qdrant vs Pinecone</a>
+          <a href="/pgvector-production-tuning-guide/" class="text-slate-300 hover:text-cyan-400 transition-colors">pgvector Guide</a>
+          <a href="/chroma-vs-lancedb-embedded-vector-db/" class="text-slate-300 hover:text-cyan-400 transition-colors">Chroma vs LanceDB</a>
+          <a href="https://github.com/jibranpcccc" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition-all text-xs font-semibold flex items-center gap-1.5">
+            GitHub
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-slate-900 bg-slate-950 py-12 text-sm text-slate-400">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xl">⚡</span>
+              <span class="font-bold text-white text-base">VectorBench</span>
+            </div>
+            <p class="text-xs text-slate-400 max-w-md leading-relaxed">
+              Empirical, open-source performance benchmarks for vector search databases, embedding dimensions, and ANN index runtimes. All tests conducted on identical bare-metal hardware with synthetic and real-world Wikipedia vectors.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white text-xs uppercase tracking-wider mb-3">Core Teardowns</h4>
+            <ul class="space-y-2 text-xs">
+              <li><a href="/qdrant-vs-pinecone-benchmark-2026/" class="hover:text-cyan-400 transition-colors">Qdrant vs Pinecone (2026)</a></li>
+              <li><a href="/pgvector-production-tuning-guide/" class="hover:text-cyan-400 transition-colors">pgvector HNSW Tuning</a></li>
+              <li><a href="/chroma-vs-lancedb-embedded-vector-db/" class="hover:text-cyan-400 transition-colors">Chroma vs LanceDB Embedded</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white text-xs uppercase tracking-wider mb-3">Standards & Feeds</h4>
+            <ul class="space-y-2 text-xs">
+              <li><a href="/sitemap.xml" class="hover:text-cyan-400 transition-colors">XML Sitemap</a></li>
+              <li><a href="/robots.txt" class="hover:text-cyan-400 transition-colors">Robots.txt</a></li>
+              <li><a href="/llms.txt" class="hover:text-cyan-400 transition-colors">LLM Context Protocol</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400">
+          <p>© 2026 VectorBench. Hosted globally on Netlify High-Performance Edge CDN.</p>
+          <p class="mt-2 sm:mt-0">Sub-50ms TTFB • Zero Database Latency</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

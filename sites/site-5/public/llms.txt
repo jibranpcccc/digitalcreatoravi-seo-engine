@@ -1,0 +1,9 @@
+# VectorBench — AI Vector Database & Embedding Benchmarks
+
+> VectorBench is an open technical benchmark suite and performance directory comparing modern vector search engines (Qdrant, Pinecone, pgvector, Milvus, Chroma, and LanceDB) across query latency (p95/p99), memory consumption, indexing throughput, and hosting costs.
+
+## Core Benchmark Research & Guides
+- [Vector Database Benchmarks & Matrix 2026](https://vectorbench-hq.netlify.app/): Comprehensive performance matrix across 6 vector databases for 1536-dimension embeddings.
+- [Qdrant vs Pinecone Benchmark (2026)](https://vectorbench-hq.netlify.app/qdrant-vs-pinecone-benchmark-2026/): Head-to-head comparison of self-hosted Rust-based Qdrant vs managed serverless Pinecone.
+- [pgvector Production Performance & HNSW Tuning Guide](https://vectorbench-hq.netlify.app/pgvector-production-tuning-guide/): Engineering guide for scaling PostgreSQL vector search past 10 million vectors with zero query timeouts.
+- [Chroma vs LanceDB: Best Embedded Vector DB for Local AI](https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/): Benchmark for embedded, disk-backed, and desktop AI agent workloads.
