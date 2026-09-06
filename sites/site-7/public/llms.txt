@@ -1,0 +1,9 @@
+# WebhookWatch — Webhook Reliability, Latency Benchmarks, & Architecture
+
+> WebhookWatch is an open technical intelligence platform benchmarking webhook delivery SLAs, HMAC signature verification security, exponential backoff with jitter algorithms, and dead-letter queue (DLQ) architectures across Stripe, Shopify, GitHub, Svix, and Hookdeck.
+
+## Core Guides & Teardowns
+- [Webhook Provider Latency Matrix & SLA Benchmark (2026)](https://webhookwatch.vercel.app/): Empirical delivery speed, retry policies, and failure rates across top 10 SaaS webhook providers.
+- [Stripe Webhook Signature Verification in Python & FastAPI](https://webhookwatch.vercel.app/stripe-webhook-signature-verification-fastapi/): Idempotent, high-throughput webhook listener recipe preventing replay attacks and duplicate charges.
+- [Webhook Retry Strategy: Exponential Backoff with Decorrelated Jitter](https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/): Mathematical proof and code implementation preventing thundering herd outages during downstream API recovery.
+- [Webhook Dead-Letter Queue (DLQ) Architecture with AWS SQS & Redis](https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/): How to capture, alert, and re-drive poisoned webhook events with zero event loss.

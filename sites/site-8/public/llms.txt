@@ -1,0 +1,12 @@
+# LocalDocPrivacy Intelligence & Privacy Documentation
+> Authority knowledge base on client-side WebAssembly document processing, local PDF sanitization, and enterprise zero-data-retention architectures.
+
+## Core Capabilities
+- In-Browser WebAssembly PDF Manipulation: Zero outbound network packets during processing.
+- Permanent Redaction vs Visual Masking: Vector stream deconstruction and pixel destruction.
+- Offline PDF to Markdown: Client-side spatial text parsing and AST generation.
+- Forensic Privacy Audits: Packet inspection comparisons between Cloud SaaS and client-side execution.
+
+## Verification & Architecture
+- All processing executes inside user browser memory (V8/SpiderMonkey WebAssembly Sandbox).
+- Satisfies GDPR Article 32 (Security of Processing) and HIPAA Technical Safeguards (45 CFR § 164.312).

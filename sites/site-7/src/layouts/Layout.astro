@@ -1,0 +1,140 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  slug?: string;
+  type?: string;
+  schema?: any;
+}
+
+const {
+  title,
+  description,
+  slug = "",
+  type = "website",
+  schema = null
+} = Astro.props;
+
+const canonical = slug 
+  ? `https://webhookwatch.vercel.app/${slug}/`
+  : "https://webhookwatch.vercel.app/";
+
+const ogImage = "https://webhookwatch.vercel.app/og-webhookwatch.png";
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪝</text></svg>" />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="WebhookWatch" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Index" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Google Webmaster Verification -->
+    <meta name="google-site-verification" content="google6fe267a998c19a9a" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "WebhookWatch",
+      "url": "https://webhookwatch.vercel.app/",
+      "description": "Empirical webhook delivery benchmarks, retry jitter formulas, and dead-letter queue architectures for software engineers.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "WebhookWatch Research Labs",
+        "url": "https://webhookwatch.vercel.app/"
+      }
+    })} />
+
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-['Plus_Jakarta_Sans'] min-h-screen flex flex-col antialiased selection:bg-orange-500/30 selection:text-orange-200">
+    <header class="border-b border-orange-950/40 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-orange-600 to-amber-400 flex items-center justify-center text-white font-black shadow-lg shadow-orange-500/20 group-hover:scale-105 transition-transform">
+            🪝
+          </div>
+          <div>
+            <div class="font-extrabold tracking-tight text-white flex items-center gap-1.5">
+              WebhookWatch
+              <span class="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded bg-orange-500/10 text-orange-400 border border-orange-500/20">2026</span>
+            </div>
+            <p class="text-xs text-slate-400 hidden sm:block">Webhook Delivery Benchmarks & Reliability</p>
+          </div>
+        </a>
+
+        <nav class="flex items-center gap-6 text-sm font-medium">
+          <a href="/#matrix" class="text-slate-300 hover:text-orange-400 transition-colors">Latency Matrix</a>
+          <a href="/stripe-webhook-signature-verification-fastapi/" class="text-slate-300 hover:text-orange-400 transition-colors">Stripe FastAPI</a>
+          <a href="/webhook-retry-exponential-backoff-jitter-guide/" class="text-slate-300 hover:text-orange-400 transition-colors">Retry Jitter Math</a>
+          <a href="/webhook-dead-letter-queue-architecture-sqs/" class="text-slate-300 hover:text-orange-400 transition-colors">DLQ Architecture</a>
+          <a href="https://github.com/jibranpcccc" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-lg bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 border border-orange-500/30 transition-all text-xs font-semibold flex items-center gap-1.5">
+            GitHub
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-slate-900 bg-slate-950 py-12 text-sm text-slate-400">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xl">🪝</span>
+              <span class="font-bold text-white text-base">WebhookWatch</span>
+            </div>
+            <p class="text-xs text-slate-400 max-w-md leading-relaxed">
+              Empirical webhook delivery benchmarks, HMAC security audits, and fault-tolerant event processing blueprints. Tests conducted across distributed edge probes in North America, Europe, and Asia-Pacific.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white text-xs uppercase tracking-wider mb-3">Core Blueprints</h4>
+            <ul class="space-y-2 text-xs">
+              <li><a href="/stripe-webhook-signature-verification-fastapi/" class="hover:text-orange-400 transition-colors">Stripe Webhook Signature Verification</a></li>
+              <li><a href="/webhook-retry-exponential-backoff-jitter-guide/" class="hover:text-orange-400 transition-colors">Exponential Backoff & Jitter Formulas</a></li>
+              <li><a href="/webhook-dead-letter-queue-architecture-sqs/" class="hover:text-orange-400 transition-colors">Dead-Letter Queue (DLQ) Guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white text-xs uppercase tracking-wider mb-3">Feeds & Verification</h4>
+            <ul class="space-y-2 text-xs">
+              <li><a href="/sitemap.xml" class="hover:text-orange-400 transition-colors">XML Sitemap</a></li>
+              <li><a href="/robots.txt" class="hover:text-orange-400 transition-colors">Robots.txt</a></li>
+              <li><a href="/llms.txt" class="hover:text-orange-400 transition-colors">LLM Context Protocol</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400">
+          <p>© 2026 WebhookWatch. Deployed on Vercel Global Edge Network.</p>
+          <p class="mt-2 sm:mt-0">Sub-50ms Global Anycast Delivery</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

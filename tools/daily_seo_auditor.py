@@ -118,6 +118,36 @@ FLEET = [
             "https://nomadtreaty.vercel.app/portugal-nhr-tax-nomad-calculator-2026/",
             "https://nomadtreaty.vercel.app/183-day-rule-tax-residency-nomad-guide/"
         ]
+    },
+    {
+        "id": "site-7",
+        "name": "WebhookWatch",
+        "niche": "Webhook Architecture & Reliability",
+        "host": "Vercel Global Anycast Edge",
+        "gsc_account": "Pending Secondary Gmail (Cluster 3)",
+        "homepage": "https://webhookwatch.vercel.app/",
+        "sitemap": "https://webhookwatch.vercel.app/sitemap.xml",
+        "pages": [
+            "https://webhookwatch.vercel.app/",
+            "https://webhookwatch.vercel.app/stripe-webhook-signature-verification-fastapi/",
+            "https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/",
+            "https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/"
+        ]
+    },
+    {
+        "id": "site-8",
+        "name": "LocalDocPrivacy",
+        "niche": "Client-Side WASM Document Security",
+        "host": "Netlify High-Performance Edge",
+        "gsc_account": "Pending Secondary Gmail (Cluster 4)",
+        "homepage": "https://localdocprivacy.netlify.app/",
+        "sitemap": "https://localdocprivacy.netlify.app/sitemap.xml",
+        "pages": [
+            "https://localdocprivacy.netlify.app/",
+            "https://localdocprivacy.netlify.app/redact-pdf-locally-browser-wasm-guide/",
+            "https://localdocprivacy.netlify.app/convert-pdf-to-markdown-offline-guide/",
+            "https://localdocprivacy.netlify.app/client-side-vs-cloud-pdf-privacy-audit/"
+        ]
     }
 ]
 

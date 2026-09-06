@@ -86,6 +86,28 @@ SITES_CONFIG = [
             "https://nomadtreaty.vercel.app/portugal-nhr-tax-nomad-calculator-2026/",
             "https://nomadtreaty.vercel.app/183-day-rule-tax-residency-nomad-guide/"
         ]
+    },
+    {
+        "name": "WebhookWatch",
+        "host": "webhookwatch.vercel.app",
+        "key_location": "https://webhookwatch.vercel.app/8303260f1bf94264ac6d00aa93efde28.txt",
+        "urls": [
+            "https://webhookwatch.vercel.app/",
+            "https://webhookwatch.vercel.app/stripe-webhook-signature-verification-fastapi/",
+            "https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/",
+            "https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/"
+        ]
+    },
+    {
+        "name": "LocalDocPrivacy",
+        "host": "localdocprivacy.netlify.app",
+        "key_location": "https://localdocprivacy.netlify.app/8303260f1bf94264ac6d00aa93efde28.txt",
+        "urls": [
+            "https://localdocprivacy.netlify.app/",
+            "https://localdocprivacy.netlify.app/redact-pdf-locally-browser-wasm-guide/",
+            "https://localdocprivacy.netlify.app/convert-pdf-to-markdown-offline-guide/",
+            "https://localdocprivacy.netlify.app/client-side-vs-cloud-pdf-privacy-audit/"
+        ]
     }
 ]
 

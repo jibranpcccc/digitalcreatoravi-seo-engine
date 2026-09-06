@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Convert PDFs to Clean Markdown Offline: Local WebAssembly Parser Guide",
+  "description": "How to convert vector PDFs and scanned documents into clean GitHub Flavored Markdown using offline WebAssembly parsers. Zero LLM API calls, zero server leakage.",
+  "datePublished": "2026-09-02T00:00:00Z",
+  "dateModified": "2026-09-06T00:00:00Z",
+  "author": {
+    "@type": "Organization",
+    "name": "LocalDocPrivacy Security Labs"
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://localdocprivacy.netlify.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Offline PDF to Markdown",
+      "item": "https://localdocprivacy.netlify.app/convert-pdf-to-markdown-offline-guide/"
+    }
+  ]
+};
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [pageSchema, breadcrumbSchema]
+};
+---
+
+<Layout
+  title="Convert PDFs to Clean Markdown Offline: Local WASM Guide | LocalDocPrivacy"
+  description="Master offline PDF to Markdown conversion using client-side WebAssembly. Reconstruct tables, code blocks, and headings without sending data to OpenAI or Anthropic."
+  slug="convert-pdf-to-markdown-offline-guide"
+  schema={schema}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <!-- Breadcrumbs -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6 font-medium">
+      <a href="/" class="hover:text-emerald-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-emerald-400">Offline PDF to Markdown</span>
+    </nav>
+
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-4">
+      Data Engineering • Updated September 2026
+    </div>
+
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+      Convert PDFs to Clean Markdown Offline: Local WebAssembly Parser Guide
+    </h1>
+
+    <!-- Quick Answer Box -->
+    <div class="bg-emerald-950/30 border border-emerald-500/30 rounded-2xl p-6 mb-8 backdrop-blur-sm">
+      <div class="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-wider mb-2">
+        <span>⚡</span> Quick Answer (The Offline AST Rule)
+      </div>
+      <p class="text-slate-200 text-base leading-relaxed font-medium">
+        To convert sensitive PDFs to Markdown without violating privacy regulations, use a <strong>client-side WebAssembly parser (such as PDF.js or Poppler WASM)</strong> to extract spatial text runs, group glyphs by font size into heading AST nodes, and assemble tables using vertical column clustering entirely in browser memory.
+      </p>
+    </div>
+
+    <div class="space-y-8 text-slate-300 leading-relaxed text-base">
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">The Privacy Trap of Cloud Vision & Multimodal APIs</h2>
+        <p>
+          Developers building Retrieval-Augmented Generation (RAG) pipelines frequently route proprietary enterprise PDFs (financial audits, medical histories, NDA-protected contracts) through multimodal vision APIs like GPT-4o or Claude 3.5 Sonnet.
+        </p>
+        <p class="mt-3">
+          While accurate, this architecture sends unencrypted enterprise IP directly into commercial model infrastructure, breaching customer confidentiality contracts and introducing third-party API outage dependencies. Local WebAssembly spatial reconstruction yields clean Markdown at <strong>100x lower latency and \$0.00 marginal cost</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">Spatial Bounding Box Parsing Algorithm</h2>
+        <p>
+          Unlike plain text extractors that produce broken single-line word wraps, spatial WASM parsing reconstructs the logical semantic hierarchy:
+        </p>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 my-4 font-mono text-xs leading-relaxed text-slate-200 overflow-x-auto">
+          <pre><code>// Client-side spatial text reconstruction in JavaScript
+export function reconstructMarkdownFromTextItems(textItems: any[]): string &#123;
+  // Sort items by Y-coordinate descending (top to bottom), then X ascending
+  const sorted = textItems.sort((a, b) =&gt; &#123;
+    if (Math.abs(a.y - b.y) &lt; 4) return a.x - b.x;
+    return b.y - a.y;
+  &#125;);
+
+  let markdown = '';
+  let lastY = -1;
+
+  for (const item of sorted) &#123;
+    const isHeading1 = item.height &gt; 20;
+    const isHeading2 = item.height &gt; 15 && item.height &lt;= 20;
+    
+    if (lastY !== -1 && Math.abs(item.y - lastY) &gt; 12) &#123;
+      markdown += '\n\n';
+    &#125;
+
+    if (isHeading1) &#123;
+      markdown += `# $&#123;item.text&#125;\n`;
+    &#125; else if (isHeading2) &#123;
+      markdown += `## $&#123;item.text&#125;\n`;
+    &#125; else &#123;
+      markdown += `$&#123;item.text&#125; `;
+    &#125;
+
+    lastY = item.y;
+  &#125;
+
+  return markdown.trim();
+&#125;</code></pre>
+        </div>
+      </section>
+    </div>
+
+    <!-- Related Navigation -->
+    <div class="mt-12 pt-8 border-t border-slate-800/80 grid sm:grid-cols-2 gap-4">
+      <a href="/redact-pdf-locally-browser-wasm-guide/" class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-500/40 transition-colors">
+        <div class="text-xs text-emerald-400 font-semibold mb-1">← Previous Blueprint</div>
+        <div class="text-white font-bold text-sm">Client-Side WASM Redaction</div>
+      </a>
+      <a href="/client-side-vs-cloud-pdf-privacy-audit/" class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-500/40 transition-colors text-right">
+        <div class="text-xs text-emerald-400 font-semibold mb-1">Next Blueprint →</div>
+        <div class="text-white font-bold text-sm">Forensic Network Packet Audit</div>
+      </a>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://localdocprivacy.netlify.app/sitemap.xml

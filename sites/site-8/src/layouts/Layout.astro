@@ -1,0 +1,134 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  slug?: string;
+  schema?: Record<string, any>;
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.href,
+  slug = '',
+  schema
+} = Astro.props;
+
+const siteUrl = 'https://localdocprivacy.netlify.app';
+const fullCanonical = slug ? `${siteUrl}/${slug}/` : siteUrl + '/';
+---
+
+<!DOCTYPE html>
+<html lang="en" class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={fullCanonical} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={fullCanonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="LocalDocPrivacy" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Favicon & Search Console -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
+    <meta name="google-site-verification" content="google6fe267a998c19a9a" />
+
+    <!-- Structured Data Schema -->
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+  </head>
+  <body class="min-h-screen flex flex-col bg-slate-950 text-slate-100 font-sans">
+    <!-- Header -->
+    <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center group-hover:border-emerald-400 transition-colors">
+            <span class="text-lg">🛡️</span>
+          </div>
+          <div>
+            <span class="font-extrabold text-lg tracking-tight text-white flex items-center gap-1.5">
+              LocalDoc<span class="text-emerald-400">Privacy</span>
+            </span>
+            <span class="block text-[10px] text-slate-400 font-mono leading-none">Client-Side WASM Security</span>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+          <a href="/redact-pdf-locally-browser-wasm-guide/" class="hover:text-emerald-400 transition-colors">WASM Redaction</a>
+          <a href="/convert-pdf-to-markdown-offline-guide/" class="hover:text-emerald-400 transition-colors">Offline Markdown</a>
+          <a href="/client-side-vs-cloud-pdf-privacy-audit/" class="hover:text-emerald-400 transition-colors">Forensic Packet Audit</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            0 Packets Leaked
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-12 text-slate-400 text-sm">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-lg">🛡️</span>
+            <span class="font-bold text-white tracking-tight text-base">LocalDocPrivacy Research Project</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm mb-4">
+            Defending data sovereignty through client-side WebAssembly document processing. 100% of bytes remain inside your browser sandbox. No servers, no tracking, zero third-party leakage.
+          </p>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[11px] font-mono text-emerald-400">
+            <span>RAM-Only Execution</span> • <span>GDPR Art. 32 Ready</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white text-xs uppercase tracking-wider mb-3">Technical Blueprints</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/redact-pdf-locally-browser-wasm-guide/" class="hover:text-emerald-400 transition-colors">Client-Side PDF Redaction</a></li>
+            <li><a href="/convert-pdf-to-markdown-offline-guide/" class="hover:text-emerald-400 transition-colors">Offline PDF to Markdown</a></li>
+            <li><a href="/client-side-vs-cloud-pdf-privacy-audit/" class="hover:text-emerald-400 transition-colors">Cloud vs Local Packet Audit</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white text-xs uppercase tracking-wider mb-3">Compliance & Standards</h4>
+          <ul class="space-y-2 text-xs">
+            <li><span class="text-slate-300">HIPAA Technical Safeguards</span></li>
+            <li><span class="text-slate-300">GDPR Zero Data Controller</span></li>
+            <li><span class="text-slate-300">Client-Side Sandboxing</span></li>
+            <li><a href="/llms.txt" class="text-emerald-400 hover:underline">llms.txt Machine Spec</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div>© 2026 LocalDocPrivacy Labs. All rights reserved. Zero telemetry recorded.</div>
+        <div class="flex gap-4">
+          <a href="/sitemap.xml" class="hover:text-slate-300">Sitemap</a>
+          <a href="/robots.txt" class="hover:text-slate-300">Robots</a>
+          <a href="/llms.txt" class="hover:text-slate-300">LLMs</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

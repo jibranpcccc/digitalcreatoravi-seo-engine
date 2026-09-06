@@ -1,0 +1,267 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "LocalDocPrivacy",
+  "url": "https://localdocprivacy.netlify.app/",
+  "description": "Client-side WebAssembly document processing toolkit. Redact, compress, and convert sensitive PDFs with zero remote server transmission.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "LocalDocPrivacy Security Labs"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is client-side WebAssembly document processing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Client-side WebAssembly document processing executes compiled C++ and Rust PDF rendering libraries (such as MuPDF, PDFium, or pdf-lib) entirely inside the user's browser runtime. Because the CPU operations happen within the local Web Worker memory sandbox, the document is never uploaded to an external server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is cloud PDF conversion dangerous for sensitive legal or medical documents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cloud PDF SaaS tools (like Smallpdf or iLovePDF) require uploading unencrypted binary files across the public internet to third-party server clusters. These files are subject to TLS interception, disk caching, multi-tenant breach exposure, and potential training ingestion by AI models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does client-side document processing satisfy GDPR and HIPAA requirements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Because data never leaves the end-user's workstation, no data transfer or third-party processing occurs under GDPR Article 28. For HIPAA, local execution eliminates the requirement for a Business Associate Agreement (BAA) since Protected Health Information (PHI) is never transmitted to an external vendor."
+      }
+    }
+  ]
+};
+
+const combinedSchema = {
+  "@context": "https://schema.org",
+  "@graph": [websiteSchema, faqSchema]
+};
+
+const comparisonData = [
+  {
+    feature: "Network Data Transmission",
+    cloud: "100% of document uploaded to remote server",
+    local: "0 bytes transmitted (Local RAM only)",
+    winner: "Local WASM"
+  },
+  {
+    feature: "GDPR Article 28 Compliance",
+    cloud: "Requires Data Processing Agreement (DPA)",
+    local: "Exempt (No third-party data processor)",
+    winner: "Local WASM"
+  },
+  {
+    feature: "HIPAA PHI Exposure Risk",
+    cloud: "High (Requires signed BAA from cloud host)",
+    local: "Zero (Operates within client boundary)",
+    winner: "Local WASM"
+  },
+  {
+    feature: "Processing Latency",
+    cloud: "500ms - 5,000ms (Network round-trip dependent)",
+    local: "15ms - 120ms (Instant CPU execution)",
+    winner: "Local WASM"
+  },
+  {
+    feature: "Offline Availability",
+    cloud: "Completely broken during internet outages",
+    local: "100% operational in air-gapped environments",
+    winner: "Local WASM"
+  }
+];
+---
+
+<Layout
+  title="Client-Side Document Privacy & Local WASM Toolkit | LocalDocPrivacy"
+  description="Process, redact, and convert sensitive PDF documents locally in your browser using WebAssembly. Zero uploads, zero telemetry, and complete GDPR/HIPAA isolation."
+  schema={combinedSchema}
+>
+  <div class="relative overflow-hidden pt-12 pb-20 border-b border-slate-800/60 bg-gradient-to-b from-slate-900/60 via-slate-950 to-slate-950">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-6">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Zero-Upload Architecture • Updated September 2026
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+        Client-Side Document Privacy & <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">Local WASM Toolkit</span>
+      </h1>
+
+      <!-- Quick Answer Box -->
+      <div class="max-w-3xl mx-auto bg-emerald-950/30 border border-emerald-500/30 rounded-2xl p-6 text-left mb-10 backdrop-blur-sm shadow-xl">
+        <div class="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-wider mb-2">
+          <span>⚡</span> Quick Answer (The Zero-Upload Privacy Guarantee)
+        </div>
+        <p class="text-slate-200 text-base leading-relaxed font-medium">
+          <strong>Client-side WebAssembly document processing</strong> executes PDF rendering and manipulation entirely within your device's browser memory sandbox using Web Workers. Because binary bytes never traverse the internet to remote servers, it eliminates data breach vectors, eliminates GDPR processor liabilities, and provides 100% offline air-gapped security.
+        </p>
+      </div>
+
+      <!-- Feature Badges -->
+      <div class="flex flex-wrap justify-center gap-4 text-xs text-slate-300 font-mono">
+        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">🔒 RAM Isolation</span>
+        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">⚡ WebAssembly (WASM)</span>
+        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">🛡️ HIPAA/GDPR Sovereign</span>
+        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">✈️ Air-Gapped Capable</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Sandbox Architecture Section -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">The Architectural Shift: Serverless vs Client-Side Sandbox</h2>
+      <p class="text-slate-400 text-sm max-w-2xl mx-auto">
+        Compare how standard cloud document converters process your files versus how in-browser WebAssembly guarantees zero transmission.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <div class="p-6 rounded-2xl border border-red-500/20 bg-red-950/10">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-red-400">Traditional Cloud Document Converters</h3>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">Vulnerable</span>
+        </div>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-start gap-2">
+            <span class="text-red-400">✕</span>
+            <span>Uploads entire PDF to multi-tenant cloud servers (AWS/GCP/Hetzner).</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-400">✕</span>
+            <span>Document resides in unencrypted temp directories during OCR and conversion.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-400">✕</span>
+            <span>Subject to subpoena, server logging, and unauthorized AI training scraping.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-400">✕</span>
+            <span>Requires formal Data Processing Addendum (DPA) under EU GDPR.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-2xl border border-emerald-500/30 bg-emerald-950/10">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-bold text-emerald-400">LocalDocPrivacy WebAssembly Sandbox</h3>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Secure</span>
+        </div>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-400">✓</span>
+            <span>Processes 100% of data in local device RAM via compiled WASM binaries.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-400">✓</span>
+            <span>Zero outbound network packets (auditable via Wireshark / DevTools Network tab).</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-400">✓</span>
+            <span>Memory is instantly garbage-collected when browser tab or worker terminates.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-400">✓</span>
+            <span>Compliant by design with HIPAA, GDPR, and California Privacy Rights Act (CPRA).</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Comparative Table -->
+    <div class="overflow-x-auto my-12">
+      <table class="w-full text-left text-sm border border-slate-800 rounded-xl overflow-hidden">
+        <thead class="bg-slate-900 text-white font-semibold">
+          <tr>
+            <th class="p-4 border-b border-slate-800">Security & Operational Metric</th>
+            <th class="p-4 border-b border-slate-800">Cloud PDF SaaS Tools</th>
+            <th class="p-4 border-b border-slate-800 text-emerald-400">LocalDocPrivacy (WASM)</th>
+            <th class="p-4 border-b border-slate-800">Privacy Leader</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800 bg-slate-950/40">
+          {comparisonData.map((row) => (
+            <tr>
+              <td class="p-4 font-bold text-white">{row.feature}</td>
+              <td class="p-4 text-slate-400">{row.cloud}</td>
+              <td class="p-4 text-emerald-300 font-mono text-xs">{row.local}</td>
+              <td class="p-4 font-bold text-emerald-400">{row.winner}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Technical Guides Hub -->
+  <section class="border-t border-slate-800/80 bg-slate-900/30 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">Explore Production Privacy Blueprints</h2>
+        <p class="text-slate-400 text-sm max-w-xl mx-auto">
+          In-depth technical guides with executable code recipes for implementing client-side document processing.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/redact-pdf-locally-browser-wasm-guide/" class="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 hover:border-emerald-500/40 transition-colors group flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2">Guide 01</div>
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">Client-Side PDF Redaction</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Why black rectangles fail, and how to permanently destroy underlying vector text and metadata with WebAssembly.
+            </p>
+          </div>
+          <span class="text-emerald-400 font-semibold text-xs mt-4 inline-flex items-center gap-1">Read Blueprint →</span>
+        </a>
+
+        <a href="/convert-pdf-to-markdown-offline-guide/" class="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 hover:border-emerald-500/40 transition-colors group flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2">Guide 02</div>
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">Offline PDF to Markdown</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Extract tables, headings, and code blocks directly into structured Markdown AST without third-party LLM APIs.
+            </p>
+          </div>
+          <span class="text-emerald-400 font-semibold text-xs mt-4 inline-flex items-center gap-1">Read Blueprint →</span>
+        </a>
+
+        <a href="/client-side-vs-cloud-pdf-privacy-audit/" class="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 hover:border-emerald-500/40 transition-colors group flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2">Audit Report</div>
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">Forensic Network Audit</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Wireshark packet captures proving 0-packet leakage for local WASM versus 100% data transmission on cloud platforms.
+            </p>
+          </div>
+          <span class="text-emerald-400 font-semibold text-xs mt-4 inline-flex items-center gap-1">Read Audit →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+    <h2 class="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
+    <div class="space-y-6">
+      {faqSchema.mainEntity.map((item) => (
+        <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/40">
+          <h3 class="text-base sm:text-lg font-bold text-white mb-2">{item.name}</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">{item.acceptedAnswer.text}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>
