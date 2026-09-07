@@ -1,0 +1,561 @@
+[
+  {
+    "brand": "Fleet Master (All 20 Sites)",
+    "url": "https://github.com/jibranpcccc",
+    "tier": "GitHub Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "Fleet Master (All 20 Sites)",
+    "url": "https://jibranpcccc.github.io/tools.html",
+    "tier": "GitHub Pages (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog already updated recently."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "Fleet Master (All 20 Sites)",
+    "url": "https://jibranpcccc.github.io/",
+    "tier": "GitHub Pages Root (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://github.com/jibranpcccc/local-agent-hardware-stack",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog already updated recently."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://github.com/jibranpcccc/workation-coliving-radar",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenAgentStack",
+    "url": "https://github.com/jibranpcccc/open-agent-protocol-hub",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://github.com/jibranpcccc/indie-saas-stack-audit",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "VectorBench",
+    "url": "https://github.com/jibranpcccc/vector-database-benchmarks",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://github.com/jibranpcccc/nomad-tax-treaty-calculator",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WebhookWatch",
+    "url": "https://github.com/jibranpcccc/webhook-signature-audit",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
+    "url": "https://github.com/jibranpcccc/local-pdf-privacy-redactor",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FounderRunway",
+    "url": "https://github.com/jibranpcccc/founder-runway-calculator",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "RAGInspect",
+    "url": "https://github.com/jibranpcccc/rag-semantic-chunking-bench",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://github.com/jibranpcccc/nomad-passport-visa-index",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SaaSUnitMath",
+    "url": "https://github.com/jibranpcccc/saas-unit-economics-calculator",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://github.com/jibranpcccc/nginx-grok-log-tester",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SOC2Ready",
+    "url": "https://github.com/jibranpcccc/soc2-readiness-checklist",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EORCalculator",
+    "url": "https://github.com/jibranpcccc/global-eor-payroll-calculator",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DevConfigHub",
+    "url": "https://github.com/jibranpcccc/devcontainer-docker-generator",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenCRMStack",
+    "url": "https://github.com/jibranpcccc/open-crm-migration-tco",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "CIPipelineGraph",
+    "url": "https://github.com/jibranpcccc/github-actions-dag-validator",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GreekVisualizer",
+    "url": "https://github.com/jibranpcccc/options-greeks-visualizer",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EdgeRuntimeHQ",
+    "url": "https://github.com/jibranpcccc/webgpu-edge-inference-bench",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://jibranpcccc.github.io/tools/site-1-localagentstack.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "RAGInspect",
+    "url": "https://jibranpcccc.github.io/tools/site-10-raginspect.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://jibranpcccc.github.io/tools/site-11-nomadpassportindex.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SaaSUnitMath",
+    "url": "https://jibranpcccc.github.io/tools/site-12-saasunitmath.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://jibranpcccc.github.io/tools/site-13-groklogtester.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SOC2Ready",
+    "url": "https://jibranpcccc.github.io/tools/site-14-soc2ready.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EORCalculator",
+    "url": "https://jibranpcccc.github.io/tools/site-15-eorcalculator.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DevConfigHub",
+    "url": "https://jibranpcccc.github.io/tools/site-16-devconfighub.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenCRMStack",
+    "url": "https://jibranpcccc.github.io/tools/site-17-opencrmstack.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "CIPipelineGraph",
+    "url": "https://jibranpcccc.github.io/tools/site-18-cipipelinegraph.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GreekVisualizer",
+    "url": "https://jibranpcccc.github.io/tools/site-19-greekvisualizer.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://jibranpcccc.github.io/tools/site-2-workationradar.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EdgeRuntimeHQ",
+    "url": "https://jibranpcccc.github.io/tools/site-20-edgeruntimehq.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenAgentStack",
+    "url": "https://jibranpcccc.github.io/tools/site-3-openagentstack.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://jibranpcccc.github.io/tools/site-4-indiestackaudit.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "VectorBench",
+    "url": "https://jibranpcccc.github.io/tools/site-5-vectorbench.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://jibranpcccc.github.io/tools/site-6-nomadtreaty.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WebhookWatch",
+    "url": "https://jibranpcccc.github.io/tools/site-7-webhookwatch.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
+    "url": "https://jibranpcccc.github.io/tools/site-8-localdocprivacy.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FounderRunway",
+    "url": "https://jibranpcccc.github.io/tools/site-9-founderrunway.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  }
+]
