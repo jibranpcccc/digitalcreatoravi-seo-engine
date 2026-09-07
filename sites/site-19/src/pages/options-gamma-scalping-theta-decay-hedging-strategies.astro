@@ -1,0 +1,264 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Options Gamma Scalping, Theta Decay & Dynamic Delta Hedging Strategies | GreekVisualizer";
+const pageDescription = "Master quantitative options gamma scalping: the mathematical relationship between gamma convexity, theta decay, delta neutral rebalancing thresholds, and realized vs implied volatility.";
+const canonical = "https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/";
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Options Gamma Scalping, Theta Decay & Dynamic Delta Hedging Strategies",
+      "description": "Exhaustive mathematical breakdown of gamma scalping, long option convexity, delta-neutral rebalancing algorithms, and theta decay compensation.",
+      "url": canonical,
+      "datePublished": "2026-09-06",
+      "dateModified": "2026-09-06",
+      "author": {
+        "@type": "Organization",
+        "name": "GreekVisualizer Research"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the mathematical condition for profitable gamma scalping?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gamma scalping is net profitable when realized historical volatility exceeds the implied volatility priced into the option contracts at purchase. In the BSM framework, 0.5 * Gamma * S^2 * (sigma_realized^2 - sigma_implied^2) * dt > Transaction Costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Gamma-Theta tradeoff in delta-neutral portfolios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under the Black-Scholes PDE with zero interest rates, Theta + 0.5 * sigma^2 * S^2 * Gamma = 0. This fundamental identity shows that positive convexity (long gamma) requires paying continuous carry costs (negative theta)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do quants choose dynamic rebalancing triggers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Traders choose between threshold delta bands (rebalancing when net portfolio delta drifts past +/- 0.10 or 0.15), price standard deviation bands (rebalancing on 1-sigma price increments), or optimal discrete hedging bands calculated using Leland's modified volatility model to minimize transaction costs."
+          }
+        }
+      ]
+    }
+  ]
+});
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonical} schemaJson={schema}>
+  <article class="max-w-4xl mx-auto pt-6 pb-20">
+    <!-- Breadcrumbs -->
+    <nav class="flex items-center space-x-2 text-xs font-mono text-slate-400 mb-6">
+      <a href="/" class="hover:text-emerald-400 transition">Visualizer Hub</a>
+      <span>/</span>
+      <span class="text-slate-200">Gamma Scalping &amp; Hedging</span>
+    </nav>
+
+    <!-- Exactly ONE H1 Tag -->
+    <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-6">
+      Options Gamma Scalping, Theta Decay &amp; Dynamic Delta Hedging Strategies
+    </h1>
+
+    <p class="text-lg text-slate-300 leading-relaxed mb-8">
+      The quantitative handbook on long convexity, Black-Scholes partial differential equations, discrete rebalancing frequencies, and the realized versus implied volatility spread.
+    </p>
+
+    <!-- 45-60 Word Featured Snippet Quick Answer Box with Green Accent Border -->
+    <div class="border-l-4 border-emerald-500 bg-[#0B1324]/90 rounded-r-xl p-5 sm:p-6 text-left shadow-xl shadow-emerald-500/5 my-8">
+      <div class="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider mb-2">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+        </svg>
+        <span>Quick Answer: Gamma Scalping Foundations</span>
+      </div>
+      <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-sans">
+        Gamma scalping is a quantitative trading strategy where a market maker maintains long option convexity while dynamically rebalancing underlying shares to neutralize directional delta risk. Frequent hedging extracts cash flow by buying dips and selling rallies, generating trading profits that systematically offset the ongoing negative theta decay of the option contracts.
+      </p>
+    </div>
+
+    <!-- Technical Guide Content -->
+    <div class="space-y-12 text-slate-300 leading-relaxed text-sm sm:text-base mt-10">
+
+      <!-- Section 1: The BSM PDE and the Gamma-Theta Tradeoff -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <span>1. The Black-Scholes PDE &amp; The Fundamental Gamma-Theta Equivalence</span>
+        </h2>
+        <p>
+          In institutional quantitative derivatives, no concept is more central than the interplay between Gamma ($\Gamma$) and Theta ($\Theta$). The celebrated Black-Scholes-Merton partial differential equation governs any derivative contract $V(S, t)$ contingent on an underlying asset $S$:
+        </p>
+
+        <pre is:raw class="bg-[#0A101D] border border-slate-800 p-5 rounded-xl font-mono text-xs sm:text-sm text-cyan-300 overflow-x-auto">
+(dV / dt) + (1/2) * sigma^2 * S^2 * (d^2V / dS^2) + r * S * (dV / dS) - r * V = 0
+
+Substituting Greek definitions:
+Theta + (1/2) * sigma^2 * S^2 * Gamma + r * S * Delta - r * V = 0
+        </pre>
+
+        <p>
+          When a portfolio is engineered to be <strong>Delta-Neutral</strong> ($\Delta = 0$) and we isolate short-term maturities where interest rates $r \approx 0$, the equation simplifies to a striking fundamental law:
+        </p>
+
+        <pre is:raw class="bg-slate-950 border border-cyan-500/40 p-4 rounded-xl font-mono text-xs sm:text-sm text-cyan-200 overflow-x-auto text-center">
+Theta + (1/2) * sigma^2 * S^2 * Gamma = 0  ===>  Theta = - (1/2) * sigma^2 * S^2 * Gamma
+        </pre>
+
+        <p>
+          This relationship proves mathematically that you cannot possess positive gamma (curvature/convexity) without incurring negative theta (time decay). Theta is the exact rent you pay to own option curvature.
+        </p>
+      </section>
+
+      <!-- Section 2: Mechanics of Gamma Scalping -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>2. Mechanical Execution: How Long Gamma Harvests Volatility</span>
+        </h2>
+        <p>
+          Suppose an asset is trading at \$100. A quantitative trader buys an At-The-Money (ATM) Straddle (1 Call + 1 Put with Strike $K = 100$).
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4 font-mono text-xs">
+          <div class="bg-[#080E1C] p-4 rounded-xl border border-slate-800">
+            <h3 class="font-bold text-emerald-400 text-sm mb-2">Initial Portfolio State</h3>
+            <p>&bull; Call Delta: +0.50</p>
+            <p>&bull; Put Delta: -0.50</p>
+            <p>&bull; Net Portfolio Delta: 0.00 (Neutral)</p>
+            <p>&bull; Total Gamma: +0.08 (High positive curvature)</p>
+            <p>&bull; Daily Theta: -\$120 / day (Decay carry cost)</p>
+          </div>
+          <div class="bg-[#080E1C] p-4 rounded-xl border border-slate-800">
+            <h3 class="font-bold text-cyan-400 text-sm mb-2">Underlying Jumps to \$104 (+4%)</h3>
+            <p>&bull; Call Delta increases to +0.66</p>
+            <p>&bull; Put Delta shrinks to -0.34</p>
+            <p>&bull; Net Portfolio Delta drifts to +0.32 Long</p>
+            <p>&bull; <strong>Action:</strong> Sell 32 shares at \$104 to re-hedge!</p>
+          </div>
+        </div>
+
+        <p>
+          Now, if the stock pulls back to \$100:
+        </p>
+        <ul class="list-disc list-inside space-y-2 pl-2">
+          <li>Call Delta recedes to +0.50, and Put Delta expands to -0.50.</li>
+          <li>Net Portfolio Delta becomes -0.32 Short (because the trader previously sold 32 shares).</li>
+          <li><strong>Action:</strong> Buy back 32 shares at $100.</li>
+          <li><strong>Scalping Profit Locked:</strong> 32 shares &times; ($104 - $100) = +$128.00 in cash!</li>
+        </ul>
+        <p>
+          The trader extracted \$128 of cash flow from pure oscillatory volatility, while paying \$120 in daily theta decay. The net P&amp;L is a positive \$8.00 riskless alpha.
+        </p>
+      </section>
+
+      <!-- Section 3: The Realized vs Implied Volatility Edge -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>3. The Core Arbitrage: Realized Volatility vs Implied Volatility</span>
+        </h2>
+        <p>
+          Does gamma scalping always win? Mathematically, the expected economic P&amp;L of a continuous delta-hedged position over discrete time step $dt$ is:
+        </p>
+
+        <pre is:raw class="bg-[#0A101D] border border-slate-800 p-5 rounded-xl font-mono text-xs sm:text-sm text-amber-300 overflow-x-auto">
+Expected Daily PnL = (1/2) * Gamma * S^2 * (sigma_realized^2 - sigma_implied^2) * dt - Fees
+        </pre>
+
+        <div class="overflow-x-auto my-4">
+          <table class="w-full text-left text-xs sm:text-sm border border-slate-800 rounded-xl overflow-hidden font-mono">
+            <thead class="bg-slate-900 text-slate-300 border-b border-slate-800">
+              <tr>
+                <th class="p-3">Condition</th>
+                <th class="p-3">Options Implied Vol</th>
+                <th class="p-3">Market Realized Vol</th>
+                <th class="p-3">Gamma Scalping P&amp;L</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300 bg-[#080E1C]">
+              <tr>
+                <td class="p-3 font-bold text-emerald-400">Vol Underpriced</td>
+                <td class="p-3 text-slate-300">25.0% IV</td>
+                <td class="p-3 text-emerald-400">42.0% RV</td>
+                <td class="p-3 font-bold text-emerald-400">Heavily Profitable (Scalps &gt;&gt; Theta)</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-slate-300">Vol Fairly Priced</td>
+                <td class="p-3 text-slate-300">30.0% IV</td>
+                <td class="p-3 text-slate-300">30.0% RV</td>
+                <td class="p-3 text-slate-400">Breakeven before commissions; loss after fees</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-rose-400">Vol Overpriced</td>
+                <td class="p-3 text-slate-300">55.0% IV</td>
+                <td class="p-3 text-rose-400">20.0% RV</td>
+                <td class="p-3 font-bold text-rose-400">Severe Loss (Theta bleeds, insufficient scalps)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 4: Rebalancing Triggers & Discrete Hedging Optimization -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-violet-400"></span>
+          <span>4. Optimal Rebalancing Triggers &amp; Leland's Hedging Friction Model</span>
+        </h2>
+        <p>
+          In theory, continuous rebalancing eliminates directional risk entirely. In practice, exchange commissions, bid-ask spread crossing, and market impact create friction. Quantitative desks deploy three distinct rebalancing rules:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
+          <div class="bg-[#080E1C] p-4 rounded-xl border border-slate-800">
+            <h3 class="text-xs font-bold uppercase text-white font-mono mb-2">Delta Band Rebalance</h3>
+            <p class="text-xs text-slate-400">
+              Only execute when portfolio $\Delta$ exceeds a defined boundary, e.g., $|\Delta| \ge 0.15$. Filters micro-noise and economizes on trading fees.
+            </p>
+          </div>
+          <div class="bg-[#080E1C] p-4 rounded-xl border border-slate-800">
+            <h3 class="text-xs font-bold uppercase text-white font-mono mb-2">Price Deviation Band</h3>
+            <p class="text-xs text-slate-400">
+              Re-hedge whenever underlying price moves by a fixed multiple of instantaneous volatility: &delta;S = k &middot; &sigma; &middot; S &middot; &radic;(&delta;t).
+            </p>
+          </div>
+          <div class="bg-[#080E1C] p-4 rounded-xl border border-slate-800">
+            <h3 class="text-xs font-bold uppercase text-white font-mono mb-2">Time-Periodic Rebalance</h3>
+            <p class="text-xs text-slate-400">
+              Fixed interval hedging (e.g., hourly or at NYSE closing bell 16:00 EST). Simple execution but exposes book to intra-interval jump risk.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          H. E. Leland proved in 1985 that discrete rebalancing with transaction cost percentage $c$ can be incorporated into option pricing by adjusting the implied volatility:
+        </p>
+
+        <pre is:raw class="bg-[#0A101D] border border-slate-800 p-4 rounded-xl font-mono text-xs sm:text-sm text-violet-300 overflow-x-auto">
+sigma_leland^2 = sigma^2 * (1 - c * sqrt(2 / pi) / (sigma * sqrt(delta_t)))
+        </pre>
+        <p>
+          This confirms that for short rebalancing intervals $\delta t \to 0$, trading fees blow up to infinity, defining an analytical sweet spot where the interval $\delta t$ balances gamma monetization against transaction drag.
+        </p>
+      </section>
+
+      <!-- Interactive Tool CTA -->
+      <div class="bg-gradient-to-br from-[#0C1527] to-[#0A101D] border border-cyan-500/30 p-8 rounded-2xl text-center space-y-4 shadow-xl">
+        <h3 class="text-xl font-bold text-white">Simulate Greeks &amp; Convexity Sensitivity</h3>
+        <p class="text-slate-300 text-sm max-w-xl mx-auto">
+          Calculate instant Delta, Gamma curvature, and Daily Theta for any strike and expiration date with our interactive math engine.
+        </p>
+        <a href="/#calculator" class="inline-flex items-center px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-slate-950 font-bold text-sm shadow-lg shadow-emerald-500/20 transition">
+          Launch Options Greeks Calculator &rarr;
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

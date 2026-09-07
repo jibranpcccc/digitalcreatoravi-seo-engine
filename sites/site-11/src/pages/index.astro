@@ -1,0 +1,1254 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const dnvCountries = [
+  {
+    id: "spain",
+    name: "Spain",
+    flag: "🇪🇸",
+    region: "Europe",
+    monthlyIncomeUsd: 2890,
+    monthlyIncomeDisplay: "$2,890 (€2,646)",
+    incomeTier: "$2k-$4k",
+    duration: "1-3 Years (Renewable to 5)",
+    processingTime: "20-45 Days",
+    taxExemption: "24% Flat Rate (Beckham Law)",
+    highlights: "Path to EU Permanent Residency after 5 years; Schengen freedom; UGE fast-track.",
+    link: "/spain-digital-nomad-visa-income-requirements/"
+  },
+  {
+    id: "portugal",
+    name: "Portugal",
+    flag: "🇵🇹",
+    region: "Europe",
+    monthlyIncomeUsd: 3550,
+    monthlyIncomeDisplay: "$3,550 (€3,280)",
+    incomeTier: "$2k-$4k",
+    duration: "1-2 Years (Renewable)",
+    processingTime: "60-90 Days",
+    taxExemption: "Standard / IFICI (20% for tech)",
+    highlights: "4x Portuguese minimum wage requirement; lead route to EU passport in 5 years.",
+    link: "/easiest-digital-nomad-visas-in-europe-2026/"
+  },
+  {
+    id: "japan",
+    name: "Japan",
+    flag: "🇯🇵",
+    region: "Asia",
+    monthlyIncomeUsd: 5670,
+    monthlyIncomeDisplay: "$5,670 (¥10,000,000/yr)",
+    incomeTier: "$4k+",
+    duration: "6 Months (Non-renewable)",
+    processingTime: "30-45 Days",
+    taxExemption: "0% (Exempt via DTA Treaties)",
+    highlights: "Available to 49 treaty nations; spouses allowed; mandatory ¥10M private health insurance.",
+    link: "/japan-digital-nomad-visa-guide-tax-exemption/"
+  },
+  {
+    id: "croatia",
+    name: "Croatia",
+    flag: "🇭🇷",
+    region: "Europe",
+    monthlyIncomeUsd: 2750,
+    monthlyIncomeDisplay: "$2,750 (€2,539)",
+    incomeTier: "$2k-$4k",
+    duration: "1 Year (Non-renewable, 6m gap)",
+    processingTime: "20-30 Days",
+    taxExemption: "100% Tax Exemption (0% local tax)",
+    highlights: "Complete exemption from Croatian personal income tax; Schengen borderless access.",
+    link: "/easiest-digital-nomad-visas-in-europe-2026/"
+  },
+  {
+    id: "greece",
+    name: "Greece",
+    flag: "🇬🇷",
+    region: "Europe",
+    monthlyIncomeUsd: 3800,
+    monthlyIncomeDisplay: "$3,800 (€3,500)",
+    incomeTier: "$2k-$4k",
+    duration: "1-2 Years (Renewable)",
+    processingTime: "15-30 Days",
+    taxExemption: "50% Tax Reduction (after 2 yrs)",
+    highlights: "Consular fast-track; family members add +20% for spouse and +15% per child.",
+    link: "/easiest-digital-nomad-visas-in-europe-2026/"
+  },
+  {
+    id: "italy",
+    name: "Italy",
+    flag: "🇮🇹",
+    region: "Europe",
+    monthlyIncomeUsd: 3050,
+    monthlyIncomeDisplay: "$3,050 (€2,800)",
+    incomeTier: "$2k-$4k",
+    duration: "1 Year (Renewable)",
+    processingTime: "30-60 Days",
+    taxExemption: "5% - 15% Flat Rate Schemes",
+    highlights: "Requires 6+ months remote employment; highly qualified worker tier.",
+    link: "/easiest-digital-nomad-visas-in-europe-2026/"
+  },
+  {
+    id: "malta",
+    name: "Malta",
+    flag: "🇲🇹",
+    region: "Europe",
+    monthlyIncomeUsd: 3800,
+    monthlyIncomeDisplay: "$3,800 (€3,500)",
+    incomeTier: "$2k-$4k",
+    duration: "1-3 Years",
+    processingTime: "30-45 Days",
+    taxExemption: "10% Flat Nomad Residence Tax",
+    highlights: "English-speaking EU nation; excellent Mediterranean infrastructure and co-working hubs."
+  },
+  {
+    id: "estonia",
+    name: "Estonia",
+    flag: "🇪🇪",
+    region: "Europe",
+    monthlyIncomeUsd: 4890,
+    monthlyIncomeDisplay: "$4,890 (€4,500)",
+    incomeTier: "$4k+",
+    duration: "1 Year (Type D Visa)",
+    processingTime: "15-30 Days",
+    taxExemption: "0% for first 183 days",
+    highlights: "Pioneer of e-Residency; world-leading digital public administration."
+  },
+  {
+    id: "germany",
+    name: "Germany",
+    flag: "🇩🇪",
+    region: "Europe",
+    monthlyIncomeUsd: 3200,
+    monthlyIncomeDisplay: "$3,200 (€3,000 profit)",
+    incomeTier: "$2k-$4k",
+    duration: "1-3 Years (Freiberufler)",
+    processingTime: "60-90 Days",
+    taxExemption: "Progressive Local Tax (0-45%)",
+    highlights: "Requires German client intent letters; recognized liberal profession catalog."
+  },
+  {
+    id: "cyprus",
+    name: "Cyprus",
+    flag: "🇨🇾",
+    region: "Europe",
+    monthlyIncomeUsd: 3800,
+    monthlyIncomeDisplay: "$3,800 (€3,500)",
+    incomeTier: "$2k-$4k",
+    duration: "1-3 Years",
+    processingTime: "35-50 Days",
+    taxExemption: "0% Non-Dom Dividend/Interest Tax",
+    highlights: "Favorable 60-day tax residency rule; English widely spoken across financial sector."
+  },
+  {
+    id: "hungary",
+    name: "Hungary",
+    flag: "🇭🇺",
+    region: "Europe",
+    monthlyIncomeUsd: 3250,
+    monthlyIncomeDisplay: "$3,250 (€3,000)",
+    incomeTier: "$2k-$4k",
+    duration: "1-2 Years (White Card)",
+    processingTime: "30 Days",
+    taxExemption: "0% Local Tax (<183 days)",
+    highlights: "Budget Mediterranean alternative; low cost of living in Budapest; individual-only visa.",
+    link: "/easiest-digital-nomad-visas-in-europe-2026/"
+  },
+  {
+    id: "romania",
+    name: "Romania",
+    flag: "🇷🇴",
+    region: "Europe",
+    monthlyIncomeUsd: 4000,
+    monthlyIncomeDisplay: "$4,000 (€3,700)",
+    incomeTier: "$4k+",
+    duration: "1 Year (Renewable)",
+    processingTime: "15-25 Days",
+    taxExemption: "0% Local Tax (<183 days)",
+    highlights: "Fastest broadband in Europe; fully digital consular application portal.",
+    link: "/easiest-digital-nomad-visas-in-europe-2026/"
+  },
+  {
+    id: "czechia",
+    name: "Czech Republic",
+    flag: "🇨🇿",
+    region: "Europe",
+    monthlyIncomeUsd: 1800,
+    monthlyIncomeDisplay: "$1,800 (~€1,650/mo)",
+    incomeTier: "<$2k",
+    duration: "1 Year (Zivno License)",
+    processingTime: "45-60 Days",
+    taxExemption: "Flat Lump-Sum (~$300/mo)",
+    highlights: "One of Europe's lowest effective taxes for registered solo freelancers."
+  },
+  {
+    id: "albania",
+    name: "Albania",
+    flag: "🇦🇱",
+    region: "Europe",
+    monthlyIncomeUsd: 1200,
+    monthlyIncomeDisplay: "$1,200 ($9,800 bank bal)",
+    incomeTier: "<$2k",
+    duration: "1 Year (Renewable to 5)",
+    processingTime: "20-30 Days",
+    taxExemption: "0% Income Tax for IT Nomads",
+    highlights: "Non-Schengen 1-year stay for US citizens visa-free; exceptional cost-of-living ratio.",
+    link: "/easiest-digital-nomad-visas-in-europe-2026/"
+  },
+  {
+    id: "montenegro",
+    name: "Montenegro",
+    flag: "🇲🇪",
+    region: "Europe",
+    monthlyIncomeUsd: 1500,
+    monthlyIncomeDisplay: "$1,500 (€1,400)",
+    incomeTier: "<$2k",
+    duration: "2 Years (Renewable to 4)",
+    processingTime: "30-40 Days",
+    taxExemption: "0% Foreign Income Tax",
+    highlights: "Adriatic coastline living; uses Euro currency; friendly residency pathway."
+  },
+  {
+    id: "iceland",
+    name: "Iceland",
+    flag: "🇮🇸",
+    region: "Europe",
+    monthlyIncomeUsd: 7700,
+    monthlyIncomeDisplay: "$7,700 (1,000,000 ISK)",
+    incomeTier: "$4k+",
+    duration: "6 Months",
+    processingTime: "15-30 Days",
+    taxExemption: "0% Local Tax (Non-resident)",
+    highlights: "Highest income threshold globally; designed for high-earning remote executives."
+  },
+  {
+    id: "norway",
+    name: "Norway (Svalbard)",
+    flag: "🇳🇴",
+    region: "Europe",
+    monthlyIncomeUsd: 4000,
+    monthlyIncomeDisplay: "$4,000 (€3,750)",
+    incomeTier: "$4k+",
+    duration: "2 Years / Open Stay",
+    processingTime: "30-45 Days",
+    taxExemption: "8% Flat Svalbard Tax",
+    highlights: "Unique treaty zone permit; Arctic immersion for remote innovators."
+  },
+  {
+    id: "latvia",
+    name: "Latvia",
+    flag: "🇱🇻",
+    region: "Europe",
+    monthlyIncomeUsd: 3450,
+    monthlyIncomeDisplay: "$3,450 (€3,176)",
+    incomeTier: "$2k-$4k",
+    duration: "1-2 Years",
+    processingTime: "30 Days",
+    taxExemption: "15% Flat Rate Option",
+    highlights: "Must be employed by an OECD registered corporate entity; Baltic tech corridor."
+  },
+  {
+    id: "malaysia",
+    name: "Malaysia",
+    flag: "🇲🇾",
+    region: "Asia",
+    monthlyIncomeUsd: 2000,
+    monthlyIncomeDisplay: "$2,000 ($24,000/yr)",
+    incomeTier: "$2k-$4k",
+    duration: "1-2 Years (DE Rantau)",
+    processingTime: "30-45 Days",
+    taxExemption: "0% on Foreign Income",
+    highlights: "Southeast Asia's premiere digital nomad hub; low cost of living; high-speed fiber."
+  },
+  {
+    id: "thailand",
+    name: "Thailand",
+    flag: "🇹🇭",
+    region: "Asia",
+    monthlyIncomeUsd: 1500,
+    monthlyIncomeDisplay: "$1,500 (500k THB savings)",
+    incomeTier: "<$2k",
+    duration: "5 Years (DTV, 180d/entry)",
+    processingTime: "5-15 Days",
+    taxExemption: "0% on Unremitted Income",
+    highlights: "Destination Thailand Visa (DTV) revolutionized Thai remote stays; multiple entry 5-year permit."
+  },
+  {
+    id: "taiwan",
+    name: "Taiwan",
+    flag: "🇹🇼",
+    region: "Asia",
+    monthlyIncomeUsd: 5700,
+    monthlyIncomeDisplay: "$5,700 (NT$160,000/mo)",
+    incomeTier: "$4k+",
+    duration: "1-3 Years (Gold Card)",
+    processingTime: "30-60 Days",
+    taxExemption: "50% Tax Relief on >NT$3M",
+    highlights: "4-in-1 card: open work permit, residency, re-entry permit, and national health coverage."
+  },
+  {
+    id: "south-korea",
+    name: "South Korea",
+    flag: "🇰🇷",
+    region: "Asia",
+    monthlyIncomeUsd: 5500,
+    monthlyIncomeDisplay: "$5,500 (2x GNI, ~$66k/yr)",
+    incomeTier: "$4k+",
+    duration: "1-2 Years (Workation F-1-D)",
+    processingTime: "20-30 Days",
+    taxExemption: "0% Korean Tax on Foreign Pay",
+    highlights: "High-tech lifestyle; world's fastest mobile data; vibrant cafe and co-working culture."
+  },
+  {
+    id: "indonesia",
+    name: "Indonesia",
+    flag: "🇮🇩",
+    region: "Asia",
+    monthlyIncomeUsd: 5000,
+    monthlyIncomeDisplay: "$5,000 ($60,000 savings)",
+    incomeTier: "$4k+",
+    duration: "1 Year (E33G Remote Visa)",
+    processingTime: "10-15 Days",
+    taxExemption: "0% Indonesian Tax on Foreign Pay",
+    highlights: "Official Bali remote work residency; online eVisa issuance with zero local tax liability."
+  },
+  {
+    id: "philippines",
+    name: "Philippines",
+    flag: "🇵🇭",
+    region: "Asia",
+    monthlyIncomeUsd: 2000,
+    monthlyIncomeDisplay: "$2,000 ($24,000/yr)",
+    incomeTier: "$2k-$4k",
+    duration: "1-2 Years",
+    processingTime: "15-30 Days",
+    taxExemption: "0% on Foreign Sourced Income",
+    highlights: "English as official national language; 7,000+ tropical islands; affordable co-living."
+  },
+  {
+    id: "costa-rica",
+    name: "Costa Rica",
+    flag: "🇨🇷",
+    region: "Americas",
+    monthlyIncomeUsd: 3000,
+    monthlyIncomeDisplay: "$3,000 ($4,000 family)",
+    incomeTier: "$2k-$4k",
+    duration: "1-2 Years",
+    processingTime: "15-25 Days",
+    taxExemption: "100% Exemption from Income Tax",
+    highlights: "Complete tax immunity on foreign earnings; import duty waivers on electronics/vehicles."
+  },
+  {
+    id: "mexico",
+    name: "Mexico",
+    flag: "🇲🇽",
+    region: "Americas",
+    monthlyIncomeUsd: 3700,
+    monthlyIncomeDisplay: "$3,700 (or $62k savings)",
+    incomeTier: "$2k-$4k",
+    duration: "1-4 Years (Residente Temporal)",
+    processingTime: "10-20 Days",
+    taxExemption: "0% on Foreign Income",
+    highlights: "Direct pathway to permanent residency; same time zones as North American remote employers."
+  },
+  {
+    id: "colombia",
+    name: "Colombia",
+    flag: "🇨🇴",
+    region: "Americas",
+    monthlyIncomeUsd: 1400,
+    monthlyIncomeDisplay: "$1,400 (650 monthly SMMLV)",
+    incomeTier: "<$2k",
+    duration: "2 Years (V-Nómadas)",
+    processingTime: "15-30 Days",
+    taxExemption: "0% Tax if <183 days/yr",
+    highlights: "Medellín and Bogotá tech hubs; lowest living cost in the Americas; simple online application."
+  },
+  {
+    id: "brazil",
+    name: "Brazil",
+    flag: "🇧🇷",
+    region: "Americas",
+    monthlyIncomeUsd: 1500,
+    monthlyIncomeDisplay: "$1,500 (or $18k savings)",
+    incomeTier: "<$2k",
+    duration: "1-2 Years (VITEM XIV)",
+    processingTime: "15-30 Days",
+    taxExemption: "0% for first 183 days",
+    highlights: "Low financial hurdle; vibrant nomad communities in Florianópolis and Rio de Janeiro."
+  },
+  {
+    id: "argentina",
+    name: "Argentina",
+    flag: "🇦🇷",
+    region: "Americas",
+    monthlyIncomeUsd: 2500,
+    monthlyIncomeDisplay: "$2,500/mo",
+    incomeTier: "$2k-$4k",
+    duration: "6-12 Months",
+    processingTime: "20-30 Days",
+    taxExemption: "0% on Foreign Earnings",
+    highlights: "Buenos Aires remote nomad incentives, public transport discounts, and culinary capital."
+  },
+  {
+    id: "panama",
+    name: "Panama",
+    flag: "🇵🇦",
+    region: "Americas",
+    monthlyIncomeUsd: 3000,
+    monthlyIncomeDisplay: "$3,000 ($36,000/yr)",
+    incomeTier: "$2k-$4k",
+    duration: "9-18 Months",
+    processingTime: "30 Days",
+    taxExemption: "0% (Strict Territorial Tax)",
+    highlights: "US Dollar economy; world-class financial privacy and banking hub."
+  },
+  {
+    id: "ecuador",
+    name: "Ecuador",
+    flag: "🇪🇨",
+    region: "Americas",
+    monthlyIncomeUsd: 1400,
+    monthlyIncomeDisplay: "$1,400 (3x min wage)",
+    incomeTier: "<$2k",
+    duration: "2 Years (Rentista)",
+    processingTime: "30-45 Days",
+    taxExemption: "0% on Foreign Income",
+    highlights: "Uses the US Dollar as statutory currency; budget-friendly mountain and coastal retreats."
+  },
+  {
+    id: "uruguay",
+    name: "Uruguay",
+    flag: "🇺🇾",
+    region: "Americas",
+    monthlyIncomeUsd: 1800,
+    monthlyIncomeDisplay: "$1,800/mo",
+    incomeTier: "<$2k",
+    duration: "6-12 Months",
+    processingTime: "10-20 Days",
+    taxExemption: "0% (11-Yr Expat Tax Holiday)",
+    highlights: "Latin America's safest nation; modern digital infrastructure in Montevideo and Punta del Este."
+  },
+  {
+    id: "bahamas",
+    name: "Bahamas",
+    flag: "🇧🇸",
+    region: "Americas",
+    monthlyIncomeUsd: 1500,
+    monthlyIncomeDisplay: "$1,500/mo remote contract",
+    incomeTier: "<$2k",
+    duration: "1 Year (BEATS Program)",
+    processingTime: "5-10 Days",
+    taxExemption: "0% Personal Income Tax",
+    highlights: "Zero personal income tax, zero corporate tax, zero capital gains tax."
+  },
+  {
+    id: "barbados",
+    name: "Barbados",
+    flag: "🇧🇧",
+    region: "Americas",
+    monthlyIncomeUsd: 4166,
+    monthlyIncomeDisplay: "$4,166 ($50,000/yr)",
+    incomeTier: "$4k+",
+    duration: "1 Year (Welcome Stamp)",
+    processingTime: "5-7 Days",
+    taxExemption: "0% Local Income Tax",
+    highlights: "Fast 5-day approval; tropical island lifestyle with premier telecom connectivity."
+  },
+  {
+    id: "bermuda",
+    name: "Bermuda",
+    flag: "🇧🇲",
+    region: "Americas",
+    monthlyIncomeUsd: 2500,
+    monthlyIncomeDisplay: "$2,500/mo baseline",
+    incomeTier: "$2k-$4k",
+    duration: "1 Year (Work from Bermuda)",
+    processingTime: "5-10 Days",
+    taxExemption: "0% Personal Income Tax",
+    highlights: "No personal tax; convenient 2-hour flight access to New York and Boston."
+  },
+  {
+    id: "uae",
+    name: "UAE (Dubai)",
+    flag: "🇦🇪",
+    region: "Asia",
+    monthlyIncomeUsd: 3500,
+    monthlyIncomeDisplay: "$3,500/mo",
+    incomeTier: "$2k-$4k",
+    duration: "1 Year (Renewable)",
+    processingTime: "5-10 Days",
+    taxExemption: "0% Personal Income Tax",
+    highlights: "Zero personal income tax; Emirates ID grants local banking, driving licenses, and global flight connections."
+  },
+  {
+    id: "georgia",
+    name: "Georgia",
+    flag: "🇬🇪",
+    region: "Europe",
+    monthlyIncomeUsd: 2000,
+    monthlyIncomeDisplay: "$2,000/mo",
+    incomeTier: "$2k-$4k",
+    duration: "1 Year (Remotely from Georgia)",
+    processingTime: "10 Days",
+    taxExemption: "1% Individual Entrepreneur Tax",
+    highlights: "World-renowned 1% turnover tax regime for IT freelancers; 365-day visa-free for 95+ nations."
+  },
+  {
+    id: "mauritius",
+    name: "Mauritius",
+    flag: "🇲🇺",
+    region: "Other",
+    monthlyIncomeUsd: 1500,
+    monthlyIncomeDisplay: "$1,500/mo",
+    incomeTier: "<$2k",
+    duration: "1 Year (Premium Visa)",
+    processingTime: "48 Hours",
+    taxExemption: "0% (Unless deposited locally)",
+    highlights: "100% free online application; fastest processing globally (48-hour turn-around)."
+  }
+];
+
+const datasetSchema = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Global Digital Nomad Visa Index & Income Threshold Database",
+  "description": "Comprehensive comparative statutory dataset tracking remote work visa requirements, minimum monthly income thresholds, processing timelines, and tax exemption structures across 38 sovereign jurisdictions worldwide.",
+  "url": "https://nomadpassportindex.netlify.app/",
+  "keywords": [
+    "Digital Nomad Visa",
+    "Income Requirements",
+    "Remote Work Visa Database",
+    "Tax Exemption for Nomads",
+    "Beckham Law Spain",
+    "Japan DNV",
+    "Schengen Nomad Visas"
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "NomadPassportIndex Research Group",
+    "url": "https://nomadpassportindex.netlify.app"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "temporalCoverage": "2026",
+  "spatialCoverage": "Global",
+  "variableMeasured": [
+    "Monthly Minimum Income Threshold in USD and Local Currency",
+    "Statutory Visa Duration and Renewal Paths",
+    "Consular and In-Country Processing Lead Time",
+    "Expatriate Tax Exemption or Flat Rate Regime"
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the lowest income threshold for a European Digital Nomad Visa in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Albania offers one of the lowest entry hurdles in Europe with a $1,200 monthly requirement, followed by Montenegro at approximately €1,400 ($1,500/mo) and the Czech Republic Zivno license requiring proof of around €1,650/mo in equivalent assets. Inside the Schengen Zone, Croatia requires €2,539 ($2,750) per month with a 100% local income tax exemption."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is remote income verified during the digital nomad visa application process?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Immigration ministries require certified bank statements covering the previous 3 to 6 consecutive months, stamped employment contracts or freelance service level agreements (SLAs), and official company registration documents proving the hiring business is located outside the host country. Self-employed nomads must also present client invoices and certificate of good standing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do digital nomad visas exempt holders from paying local income taxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tax policies vary significantly. Croatia, Costa Rica, and Bermuda provide complete 100% tax exemptions on foreign income. Spain provides a reduced 24% flat tax under the modified Beckham Law for up to 6 years. Japan exempts digital nomads under bilateral tax treaties for stays under 183 days, whereas other countries trigger full domestic tax residency once you stay beyond 183 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can digital nomads travel freely across Europe's Schengen Area?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, a national long-stay (Type D) digital nomad visa or temporary residency permit issued by a Schengen member state (such as Spain, Portugal, Croatia, Greece, or Italy) allows you to travel freely throughout the entire 29-nation Schengen Zone for up to 90 days in any rolling 180-day window."
+      }
+    }
+  ]
+};
+
+const combinedSchema = {
+  "@context": "https://schema.org",
+  "@graph": [datasetSchema, faqSchema]
+};
+---
+
+<Layout
+  title="Global Digital Nomad Visa Index & Income Threshold Database | NomadPassportIndex"
+  description="Explore 38+ sovereign Digital Nomad Visas filtered by region and monthly income thresholds (<$2k, $2k-$4k, $4k+). Track statutory requirements, processing times, and tax exemption frameworks."
+  schema={combinedSchema}
+>
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-16 border-b border-slate-800/80 bg-gradient-to-b from-slate-900/60 via-[#030712] to-[#030712]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold mb-6">
+        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+        38 Sovereign Visas Verified • Statutory 2026 Edition
+      </div>
+
+      <!-- EXACTLY ONE H1 TAG -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+        Global Digital Nomad Visa Index & <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">Income Threshold Database</span>
+      </h1>
+
+      <!-- FEATURED SNIPPET QUICK ANSWER BOX (45-60 WORDS) -->
+      <div class="max-w-3xl mx-auto bg-amber-950/20 border border-amber-500/30 rounded-2xl p-6 text-left mb-10 backdrop-blur-md shadow-2xl">
+        <div class="flex items-center gap-2 text-amber-400 font-bold text-xs uppercase tracking-wider mb-2">
+          <span>⚡</span> Quick Answer (The Digital Nomad Visa Standard)
+        </div>
+        <p class="text-slate-200 text-base leading-relaxed font-medium">
+          A digital nomad visa grants remote workers legal residency to live in a foreign country while employed abroad. Requirements typically mandate minimum monthly income thresholds ranging from $1,200 to $5,000+, comprehensive international health insurance, clear criminal background checks, and proof of remote employment or client contracts with non-local entities.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+          <div class="text-xs text-slate-400">Total Tracked Visas</div>
+          <div class="text-2xl font-black text-white mt-1">38 Nations</div>
+          <div class="text-[11px] text-emerald-400 font-medium mt-0.5">Europe, Asia, Americas</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+          <div class="text-xs text-slate-400">Lowest Income Hurdle</div>
+          <div class="text-2xl font-black text-amber-400 mt-1">$1,200/mo</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Albania, Colombia, Ecuador</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+          <div class="text-xs text-slate-400">0% Income Tax Regimes</div>
+          <div class="text-2xl font-black text-emerald-400 mt-1">14 Countries</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Croatia, Costa Rica, Dubai, etc.</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+          <div class="text-xs text-slate-400">Fastest Approval</div>
+          <div class="text-2xl font-black text-blue-400 mt-1">48 Hours</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Mauritius Premium Visa</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Searchable & Filterable Database Section -->
+  <section id="database" class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          Explore & Filter Verified Remote Visas
+        </h2>
+        <p class="text-slate-400 text-sm mt-1">
+          Search real-time statutory income requirements, visa durations, processing lead times, and tax exemptions.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <span id="visaCounter" class="text-xs font-mono font-semibold px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400">
+          Showing 38 of 38 Visas
+        </span>
+      </div>
+    </div>
+
+    <!-- Filter Control Bar -->
+    <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-xl mb-8 space-y-4">
+      <div class="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
+        <!-- Live Search Field -->
+        <div class="relative flex-1">
+          <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search country (e.g., Spain, Japan, Croatia) or tax perks..."
+            class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition"
+          />
+        </div>
+
+        <!-- View Switcher -->
+        <div class="flex items-center rounded-xl bg-slate-950 p-1 border border-slate-800 self-start md:self-auto">
+          <button
+            id="viewTableBtn"
+            class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 text-slate-950 transition flex items-center gap-1.5"
+            title="Switch to Table View"
+          >
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z" clip-rule="evenodd"></path></svg>
+            Table View
+          </button>
+          <button
+            id="viewCardsBtn"
+            class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition flex items-center gap-1.5"
+            title="Switch to Cards View"
+          >
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+            Card View
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter Chips Row -->
+      <div class="flex flex-wrap gap-4 pt-2 border-t border-slate-800/80 items-center justify-between text-xs">
+        <!-- Region Filter -->
+        <div class="flex flex-wrap items-center gap-1.5">
+          <span class="text-slate-400 font-semibold mr-1">Region:</span>
+          <button class="region-filter active px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold transition" data-region="all">
+            All Regions
+          </button>
+          <button class="region-filter px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-region="Europe">
+            Europe
+          </button>
+          <button class="region-filter px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-region="Asia">
+            Asia
+          </button>
+          <button class="region-filter px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-region="Americas">
+            Americas
+          </button>
+        </div>
+
+        <!-- Income Threshold Filter -->
+        <div class="flex flex-wrap items-center gap-1.5">
+          <span class="text-slate-400 font-semibold mr-1">Max Income:</span>
+          <button class="income-filter active px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold transition" data-income="all">
+            All Incomes
+          </button>
+          <button class="income-filter px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-income="<$2k">
+            &lt;$2,000/mo
+          </button>
+          <button class="income-filter px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-income="$2k-$4k">
+            $2,000 - $4,000/mo
+          </button>
+          <button class="income-filter px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-income="$4k+">
+            $4,000+/mo
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table View Container -->
+    <div id="tableViewContainer" class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-950/80 shadow-xl">
+      <table class="w-full text-left text-sm divide-y divide-slate-800">
+        <thead class="bg-slate-900 text-white font-semibold text-xs tracking-wider uppercase">
+          <tr>
+            <th class="py-4 px-4 sm:px-6">Country</th>
+            <th class="py-4 px-3">Region</th>
+            <th class="py-4 px-3">Monthly Income</th>
+            <th class="py-4 px-3">Duration</th>
+            <th class="py-4 px-3">Processing Lead Time</th>
+            <th class="py-4 px-4">Tax Structure</th>
+            <th class="py-4 px-4 text-right">Action</th>
+          </tr>
+        </thead>
+        <tbody id="visaTableBody" class="divide-y divide-slate-800/80">
+          {dnvCountries.map((country) => (
+            <tr
+              class="visa-row hover:bg-slate-900/50 transition-colors"
+              data-name={country.name.toLowerCase()}
+              data-region={country.region}
+              data-income-tier={country.incomeTier}
+              data-income-val={country.monthlyIncomeUsd}
+              data-tax={country.taxExemption.toLowerCase()}
+              data-highlights={country.highlights.toLowerCase()}
+            >
+              <td class="py-4 px-4 sm:px-6">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-2xl">{country.flag}</span>
+                  <div>
+                    <span class="font-bold text-white text-base block">{country.name}</span>
+                    <span class="text-[11px] text-slate-400">{country.highlights.substring(0, 48)}...</span>
+                  </div>
+                </div>
+              </td>
+              <td class="py-4 px-3 text-slate-300 text-xs">
+                <span class="px-2 py-0.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 font-mono">
+                  {country.region}
+                </span>
+              </td>
+              <td class="py-4 px-3">
+                <span class="font-bold text-amber-400 font-mono">{country.monthlyIncomeDisplay}</span>
+              </td>
+              <td class="py-4 px-3 text-slate-300 text-xs font-medium">
+                {country.duration}
+              </td>
+              <td class="py-4 px-3 text-slate-300 text-xs font-mono">
+                {country.processingTime}
+              </td>
+              <td class="py-4 px-4">
+                <span class={`inline-block px-2 py-0.5 rounded text-[11px] font-semibold ${
+                  country.taxExemption.includes("0%") || country.taxExemption.includes("100%")
+                    ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
+                    : "bg-blue-500/10 text-blue-400 border border-blue-500/20"
+                }`}>
+                  {country.taxExemption}
+                </span>
+              </td>
+              <td class="py-4 px-4 text-right">
+                {country.link ? (
+                  <a
+                    href={country.link}
+                    class="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-amber-500/10 hover:bg-amber-500 hover:text-slate-950 text-amber-400 text-xs font-bold border border-amber-500/30 transition"
+                  >
+                    Guide &rarr;
+                  </a>
+                ) : (
+                  <button
+                    class="open-modal-btn inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium transition"
+                    data-country={JSON.stringify(country)}
+                  >
+                    Details
+                  </button>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Cards View Container (hidden by default) -->
+    <div id="cardsViewContainer" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {dnvCountries.map((country) => (
+        <div
+          class="visa-card p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between shadow-lg"
+          data-name={country.name.toLowerCase()}
+          data-region={country.region}
+          data-income-tier={country.incomeTier}
+          data-income-val={country.monthlyIncomeUsd}
+          data-tax={country.taxExemption.toLowerCase()}
+          data-highlights={country.highlights.toLowerCase()}
+        >
+          <div>
+            <div class="flex items-start justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-3xl">{country.flag}</span>
+                <div>
+                  <h3 class="text-xl font-bold text-white">{country.name}</h3>
+                  <span class="text-xs text-slate-400">{country.region}</span>
+                </div>
+              </div>
+              <span class="px-2 py-0.5 rounded-full bg-slate-800 border border-slate-700 text-amber-400 font-mono text-xs font-semibold">
+                {country.incomeTier}
+              </span>
+            </div>
+
+            <div class="my-4 p-3 rounded-xl bg-slate-950 border border-slate-800/80 space-y-2 text-xs">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Monthly Threshold:</span>
+                <span class="font-bold text-amber-400 font-mono text-sm">{country.monthlyIncomeDisplay}</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Processing Time:</span>
+                <span class="font-mono text-slate-200">{country.processingTime}</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-400">Validity:</span>
+                <span class="text-slate-200">{country.duration}</span>
+              </div>
+              <div class="pt-2 border-t border-slate-800 flex justify-between items-center">
+                <span class="text-slate-400">Tax Treatment:</span>
+                <span class={`font-semibold text-right ${
+                  country.taxExemption.includes("0%") || country.taxExemption.includes("100%")
+                    ? "text-emerald-400"
+                    : "text-blue-400"
+                }`}>
+                  {country.taxExemption}
+                </span>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              {country.highlights}
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+            {country.link ? (
+              <a
+                href={country.link}
+                class="w-full text-center py-2 px-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold transition shadow-sm"
+              >
+                Read Verified Guide &rarr;
+              </a>
+            ) : (
+              <button
+                class="open-modal-btn w-full text-center py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition"
+                data-country={JSON.stringify(country)}
+              >
+                View Full Specifications
+              </button>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Empty State -->
+    <div id="noResultsState" class="hidden text-center py-16 px-4 rounded-2xl bg-slate-950 border border-slate-800">
+      <div class="text-4xl mb-3">🔍</div>
+      <h3 class="text-lg font-bold text-white mb-1">No matching visas found</h3>
+      <p class="text-slate-400 text-xs max-w-sm mx-auto mb-4">
+        Try broadening your filters or clearing your search term to see the complete 38-country database.
+      </p>
+      <button id="resetFiltersBtn" class="px-4 py-2 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs">
+        Reset All Filters
+      </button>
+    </div>
+  </section>
+
+  <!-- Detailed Modal for Quick Scan -->
+  <div id="countryModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 relative shadow-2xl">
+      <button id="closeModalBtn" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl font-bold">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Detailed Deep-Dive Hub Section -->
+  <section class="border-t border-slate-800/80 bg-slate-900/40 py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-3">
+          Statutory Deep Dives
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+          Comprehensive 2026 Sovereign Visa Guides
+        </h2>
+        <p class="text-slate-400 text-sm max-w-xl mx-auto mt-2">
+          Step-by-step consular documentation, tax calculations, and verified applicant protocols.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Spain Guide Card -->
+        <a href="/spain-digital-nomad-visa-income-requirements/" class="p-6 rounded-2xl border border-slate-800 bg-slate-900/70 hover:border-amber-500/50 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-2xl">🇪🇸</span>
+              <span class="text-[11px] font-mono font-semibold px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">200% SMI Law</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+              Spain Digital Nomad Visa Income Requirements
+            </h3>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Detailed breakdown of the €2,646 monthly threshold, UGE-CE 20-day in-country fast track, Beckham Law 24% flat tax regime, and social security exemptions.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs font-semibold text-amber-400">
+            <span>Read Complete Blueprint</span>
+            <span>&rarr;</span>
+          </div>
+        </a>
+
+        <!-- Japan Guide Card -->
+        <a href="/japan-digital-nomad-visa-guide-tax-exemption/" class="p-6 rounded-2xl border border-slate-800 bg-slate-900/70 hover:border-amber-500/50 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-2xl">🇯🇵</span>
+              <span class="text-[11px] font-mono font-semibold px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">¥10M Annual Income</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+              Japan Digital Nomad Visa Guide & Tax Exemption
+            </h3>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Strict eligibility criteria across 49 qualifying treaty nations, 6-month stay limits, ¥10M private health insurance mandates, and 0% local income taxation.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs font-semibold text-amber-400">
+            <span>Read Complete Blueprint</span>
+            <span>&rarr;</span>
+          </div>
+        </a>
+
+        <!-- Easiest in Europe Card -->
+        <a href="/easiest-digital-nomad-visas-in-europe-2026/" class="p-6 rounded-2xl border border-slate-800 bg-slate-900/70 hover:border-amber-500/50 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-2xl">🇪🇺</span>
+              <span class="text-[11px] font-mono font-semibold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">2026 Benchmark</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+              Easiest Digital Nomad Visas in Europe (2026)
+            </h3>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Comprehensive ranking of Romania (€3,700/mo), Croatia (€2,539/mo, 0% tax), Hungary White Card, and Albania by income hurdle, processing speed, and paperwork complexity.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs font-semibold text-amber-400">
+            <span>Read Comparative Analysis</span>
+            <span>&rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Frequently Asked Questions</h2>
+      <p class="text-slate-400 text-xs">Essential immigration, tax residency, and compliance fundamentals.</p>
+    </div>
+
+    <div class="space-y-4">
+      {faqSchema.mainEntity.map((item) => (
+        <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/40">
+          <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+            <span class="text-amber-400 font-mono">Q:</span>
+            {item.name}
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed pl-6">{item.acceptedAnswer.text}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Client-Side Search & Filtering Script -->
+  <script is:inline>
+    (function() {
+      const searchInput = document.getElementById('searchInput');
+      const regionButtons = document.querySelectorAll('.region-filter');
+      const incomeButtons = document.querySelectorAll('.income-filter');
+      const tableRows = document.querySelectorAll('.visa-row');
+      const cards = document.querySelectorAll('.visa-card');
+      const visaCounter = document.getElementById('visaCounter');
+      const noResultsState = document.getElementById('noResultsState');
+      const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+      const viewTableBtn = document.getElementById('viewTableBtn');
+      const viewCardsBtn = document.getElementById('viewCardsBtn');
+      const tableViewContainer = document.getElementById('tableViewContainer');
+      const cardsViewContainer = document.getElementById('cardsViewContainer');
+
+      let currentRegion = 'all';
+      let currentIncome = 'all';
+      let searchQuery = '';
+
+      function filterItems() {
+        let visibleCount = 0;
+
+        // Filter Table Rows
+        tableRows.forEach(function(row) {
+          const name = row.getAttribute('data-name') || '';
+          const region = row.getAttribute('data-region') || '';
+          const incomeTier = row.getAttribute('data-income-tier') || '';
+          const tax = row.getAttribute('data-tax') || '';
+          const highlights = row.getAttribute('data-highlights') || '';
+
+          const matchesRegion = currentRegion === 'all' || region === currentRegion;
+          const matchesIncome = currentIncome === 'all' || incomeTier === currentIncome;
+          const matchesSearch = searchQuery === '' || 
+            name.includes(searchQuery) || 
+            region.toLowerCase().includes(searchQuery) || 
+            tax.includes(searchQuery) || 
+            highlights.includes(searchQuery);
+
+          if (matchesRegion && matchesIncome && matchesSearch) {
+            row.style.display = '';
+            visibleCount++;
+          } else {
+            row.style.display = 'none';
+          }
+        });
+
+        // Filter Cards (synced)
+        cards.forEach(function(card) {
+          const name = card.getAttribute('data-name') || '';
+          const region = card.getAttribute('data-region') || '';
+          const incomeTier = card.getAttribute('data-income-tier') || '';
+          const tax = card.getAttribute('data-tax') || '';
+          const highlights = card.getAttribute('data-highlights') || '';
+
+          const matchesRegion = currentRegion === 'all' || region === currentRegion;
+          const matchesIncome = currentIncome === 'all' || incomeTier === currentIncome;
+          const matchesSearch = searchQuery === '' || 
+            name.includes(searchQuery) || 
+            region.toLowerCase().includes(searchQuery) || 
+            tax.includes(searchQuery) || 
+            highlights.includes(searchQuery);
+
+          if (matchesRegion && matchesIncome && matchesSearch) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Update Counter
+        if (visaCounter) {
+          visaCounter.textContent = 'Showing ' + visibleCount + ' of 38 Visas';
+        }
+
+        // Toggle No Results
+        if (noResultsState) {
+          if (visibleCount === 0) {
+            noResultsState.classList.remove('hidden');
+            if (tableViewContainer) tableViewContainer.classList.add('hidden');
+            if (cardsViewContainer) cardsViewContainer.classList.add('hidden');
+          } else {
+            noResultsState.classList.add('hidden');
+            if (isCardView) {
+              if (cardsViewContainer) cardsViewContainer.classList.remove('hidden');
+              if (tableViewContainer) tableViewContainer.classList.add('hidden');
+            } else {
+              if (tableViewContainer) tableViewContainer.classList.remove('hidden');
+              if (cardsViewContainer) cardsViewContainer.classList.add('hidden');
+            }
+          }
+        }
+      }
+
+      // Live Search Event
+      if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+          searchQuery = e.target.value.toLowerCase().trim();
+          filterItems();
+        });
+      }
+
+      // Region Filter Buttons
+      regionButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          regionButtons.forEach(function(b) {
+            b.classList.remove('active', 'bg-amber-500', 'text-slate-950', 'font-bold');
+            b.classList.add('bg-slate-800', 'text-slate-300');
+          });
+          btn.classList.add('active', 'bg-amber-500', 'text-slate-950', 'font-bold');
+          btn.classList.remove('bg-slate-800', 'text-slate-300');
+          currentRegion = btn.getAttribute('data-region') || 'all';
+          filterItems();
+        });
+      });
+
+      // Income Filter Buttons
+      incomeButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          incomeButtons.forEach(function(b) {
+            b.classList.remove('active', 'bg-amber-500', 'text-slate-950', 'font-bold');
+            b.classList.add('bg-slate-800', 'text-slate-300');
+          });
+          btn.classList.add('active', 'bg-amber-500', 'text-slate-950', 'font-bold');
+          btn.classList.remove('bg-slate-800', 'text-slate-300');
+          currentIncome = btn.getAttribute('data-income') || 'all';
+          filterItems();
+        });
+      });
+
+      // Reset Button
+      if (resetFiltersBtn) {
+        resetFiltersBtn.addEventListener('click', function() {
+          if (searchInput) searchInput.value = '';
+          searchQuery = '';
+          currentRegion = 'all';
+          currentIncome = 'all';
+
+          regionButtons.forEach(function(b, i) {
+            if (i === 0) {
+              b.classList.add('active', 'bg-amber-500', 'text-slate-950', 'font-bold');
+              b.classList.remove('bg-slate-800', 'text-slate-300');
+            } else {
+              b.classList.remove('active', 'bg-amber-500', 'text-slate-950', 'font-bold');
+              b.classList.add('bg-slate-800', 'text-slate-300');
+            }
+          });
+
+          incomeButtons.forEach(function(b, i) {
+            if (i === 0) {
+              b.classList.add('active', 'bg-amber-500', 'text-slate-950', 'font-bold');
+              b.classList.remove('bg-slate-800', 'text-slate-300');
+            } else {
+              b.classList.remove('active', 'bg-amber-500', 'text-slate-950', 'font-bold');
+              b.classList.add('bg-slate-800', 'text-slate-300');
+            }
+          });
+
+          filterItems();
+        });
+      }
+
+      // View Toggle
+      let isCardView = false;
+      if (viewTableBtn && viewCardsBtn) {
+        viewTableBtn.addEventListener('click', function() {
+          isCardView = false;
+          viewTableBtn.classList.add('bg-amber-500', 'text-slate-950');
+          viewTableBtn.classList.remove('text-slate-400');
+          viewCardsBtn.classList.remove('bg-amber-500', 'text-slate-950');
+          viewCardsBtn.classList.add('text-slate-400');
+          if (tableViewContainer) tableViewContainer.classList.remove('hidden');
+          if (cardsViewContainer) cardsViewContainer.classList.add('hidden');
+        });
+
+        viewCardsBtn.addEventListener('click', function() {
+          isCardView = true;
+          viewCardsBtn.classList.add('bg-amber-500', 'text-slate-950');
+          viewCardsBtn.classList.remove('text-slate-400');
+          viewTableBtn.classList.remove('bg-amber-500', 'text-slate-950');
+          viewTableBtn.classList.add('text-slate-400');
+          if (cardsViewContainer) cardsViewContainer.classList.remove('hidden');
+          if (tableViewContainer) tableViewContainer.classList.add('hidden');
+        });
+      }
+
+      // Country Modal Logic
+      const modal = document.getElementById('countryModal');
+      const modalContent = document.getElementById('modalContent');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+
+      document.querySelectorAll('.open-modal-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          try {
+            const data = JSON.parse(btn.getAttribute('data-country') || '{}');
+            if (modalContent) {
+              modalContent.innerHTML = `
+                <div class="flex items-center gap-3 mb-4">
+                  <span class="text-4xl">${data.flag || '🛂'}</span>
+                  <div>
+                    <h3 class="text-2xl font-bold text-white">${data.name}</h3>
+                    <span class="text-xs text-amber-400 font-mono">${data.region} • ${data.incomeTier}</span>
+                  </div>
+                </div>
+                <div class="space-y-3 bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs mb-4">
+                  <div class="flex justify-between border-b border-slate-800 pb-2">
+                    <span class="text-slate-400">Monthly Minimum Income:</span>
+                    <span class="font-bold text-amber-400 font-mono text-sm">${data.monthlyIncomeDisplay}</span>
+                  </div>
+                  <div class="flex justify-between border-b border-slate-800 pb-2">
+                    <span class="text-slate-400">Statutory Duration:</span>
+                    <span class="text-white font-medium">${data.duration}</span>
+                  </div>
+                  <div class="flex justify-between border-b border-slate-800 pb-2">
+                    <span class="text-slate-400">Processing Lead Time:</span>
+                    <span class="text-white font-mono">${data.processingTime}</span>
+                  </div>
+                  <div class="flex justify-between pt-1">
+                    <span class="text-slate-400">Tax Treatment:</span>
+                    <span class="text-emerald-400 font-semibold">${data.taxExemption}</span>
+                  </div>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4">${data.highlights}</p>
+                <p class="text-[11px] text-slate-500">Statutory verification source: Consular immigration service directives 2026.</p>
+              `;
+            }
+            if (modal) modal.classList.remove('hidden');
+          } catch(e) {}
+        });
+      });
+
+      if (closeModalBtn && modal) {
+        closeModalBtn.addEventListener('click', function() {
+          modal.classList.add('hidden');
+        });
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) modal.classList.add('hidden');
+        });
+      }
+    })();
+  </script>
+</Layout>

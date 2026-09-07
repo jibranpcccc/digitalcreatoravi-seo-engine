@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://edgeruntimehq.pages.dev/sitemap.xml

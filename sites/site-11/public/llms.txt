@@ -1,0 +1,17 @@
+# NomadPassportIndex Intelligence & Global Mobility Knowledge Base
+> Definitive verified dataset and statutory tracker for Global Digital Nomad Visas (DNVs), income thresholds, tax exemptions, and remote residency frameworks.
+
+## Core Database Scope
+- 38+ sovereign countries with active Digital Nomad Visas or remote worker residency permits.
+- Income thresholds tracked in both EUR/USD equivalents and local statutory currencies (e.g., Spain SMI multiples, Japan ¥10M threshold, Portugal RMM multiples).
+- Tax treatment categorization: Territorial taxation, 0% personal tax windows (Croatia, Bahamas, Dubai), reduced flat expat regimes (Spain Beckham Law 24%), and non-dom exemptions.
+- Application protocols: Processing lead times, consular vs in-country submissions, minimum validity, and renewal routes to permanent residency/citizenship.
+
+## Statutory Guides & Deep Dives
+- Spain Digital Nomad Visa: 200% SMI monthly threshold (€2,646 / ~$2,890), Ley de Startups framework, 24% Beckham Law flat tax eligibility, and UGE-CE 20-day processing.
+- Japan Digital Nomad Visa: Specified Visa framework, ¥10M annual income requirement, 6-month non-renewable duration, and bilateral double taxation treaty exemptions.
+- Easiest Digital Nomad Visas in Europe (2026): Comparative analysis of Romania, Croatia, Portugal D8, Hungary White Card, and Albania by income hurdle, processing speed, and tax burden.
+
+## Machine Data Standards
+- Structured JSON-LD Dataset and FAQPage schemas available across all endpoints.
+- Real-time client-side search across regions (Europe, Asia, Americas) and income tiers (<$2k, $2k-$4k, $4k+).

@@ -1,0 +1,888 @@
+﻿---
+import Layout from '../layouts/Layout.astro';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "SOC 2 Type II Readiness Calculator & Security Checklist",
+      "url": "https://site-14-sable.vercel.app/",
+      "description": "Interactive SOC 2 Type II readiness calculator and Common Criteria checklist for B2B SaaS engineering teams.",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between SOC 2 Type 1 and Type 2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A SOC 2 Type 1 report examines whether your security controls are suitably designed at a single specific point in time. In contrast, a SOC 2 Type 2 report evaluates both the design and operating effectiveness of those controls across an extended observation window, typically between 3 and 12 months. Enterprise buyers almost universally require a Type 2 report before approving enterprise SaaS procurement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to prepare for a SOC 2 Type II audit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For an early-stage B2B SaaS startup starting from scratch, technical remediation and policy drafting typically require 6 to 12 weeks. Following readiness, an observation window of 3 to 6 months must elapse before the independent CPA auditor can perform evidence sampling and issue the final attestation report. In total, expect 5 to 9 months from kickoff to final report."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a SOC 2 Type II audit cost for a B2B startup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All-in costs range from $15,000 to $45,000+. Independent boutique CPA firm audit fees generally cost $8,500 to $15,000. Compliance automation software (such as Vanta, Drata, or Secureframe) ranges from $6,500 to $15,000 per year, and third-party penetration testing costs $3,500 to $8,000. Bootstrapped startups can achieve compliance under $20,000 by leveraging open-source tooling and direct CPA engagement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the core Common Criteria (CC) categories in SOC 2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The AICPA Common Criteria are divided into nine series: CC1 (Control Environment), CC2 (Communication and Information), CC3 (Risk Assessment), CC4 (Monitoring Activities), CC5 (Control Activities), CC6 (Logical and Physical Access Controls), CC7 (System Operations), CC8 (Change Management), and CC9 (Risk Mitigation and Vendor Management). CC6, CC7, and CC8 represent the most technically demanding controls for engineering teams."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a startup fail a SOC 2 audit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A SOC 2 audit does not result in a simple pass/fail grade; instead, an independent licensed CPA firm issues an attestation opinion: Unqualified (clean report with no material exceptions), Qualified (one or more controls failed to operate effectively), Adverse (widespread control failures), or a Disclaimer of Opinion. Enterprise procurement departments typically only accept clean Unqualified reports."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a penetration test mandatory for SOC 2 Type II?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While the AICPA Trust Services Criteria do not explicitly state the word 'penetration test' in CC7.1, virtually every accredited SOC 2 CPA firm and enterprise security review mandates an annual third-party external gray-box or black-box penetration test to satisfy the vulnerability identification and management requirements of CC7.1."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const schemaJson = JSON.stringify(schemaData);
+---
+
+<Layout
+  title="B2B SaaS SOC 2 Type II Readiness Checklist & Security Controls | SOC2Ready"
+  description="Comprehensive B2B SaaS SOC 2 Type II readiness checklist and interactive calculator across CC6 Access, CC7 Operations, CC8 Change Management, and Risk Governance."
+  canonical="https://site-14-sable.vercel.app/"
+  schemaJson={schemaJson}
+>
+  <!-- Hero Section -->
+  <section class="pt-6 pb-12 text-center relative">
+    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-mono font-semibold mb-6">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span>2026 AICPA TRUST SERVICES CRITERIA (TSC) BENCHMARK</span>
+    </div>
+
+    <!-- Exactly ONE H1 -->
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight max-w-4xl mx-auto leading-tight sm:leading-none mb-6">
+      B2B SaaS SOC 2 Type II Readiness Checklist & Security Controls
+    </h1>
+
+    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+      Evaluate your engineering architecture against AICPA Common Criteria. Real-time readiness scoring, remediation timelines, and auditor fee estimators for technical founders.
+    </p>
+
+    <!-- 45-60 Word Featured Snippet Box with Green Accent Border -->
+    <div class="max-w-3xl mx-auto text-left mb-12">
+      <div class="border-l-4 border-emerald-500 bg-[#0d1624]/90 border border-slate-800/80 rounded-r-xl p-5 shadow-xl shadow-emerald-950/20 backdrop-blur-md">
+        <div class="flex items-center space-x-2 text-emerald-400 text-xs font-mono font-bold uppercase tracking-wider mb-2">
+          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>Quick Answer: SOC 2 Type II Readiness Mandate</span>
+        </div>
+        <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+          A SOC 2 Type II certification verifies that your SaaS company's security controls operated effectively over a 3-to-12-month observation window. Achieving readiness requires implementing mandatory Common Criteria controls across logical access control (CC6), continuous system operations (CC7), and structured change management (CC8) to satisfy enterprise customer vendor procurement requirements.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Interactive Readiness Calculator & Checklist Section -->
+  <section id="calculator" class="scroll-mt-24 mb-20">
+    <div class="bg-[#0b101c] border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+      <!-- Background Header Glow -->
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-800/80">
+        <div>
+          <div class="flex items-center space-x-2.5">
+            <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight">Interactive SOC 2 Readiness Engine</h2>
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">v2.4 ACTIVE</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm mt-1">
+            Toggle completed security controls below to calculate your audit readiness percentage, estimated preparation timeline, and expected auditor fees.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <button
+            id="btn-select-all"
+            type="button"
+            class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition"
+          >
+            Select All
+          </button>
+          <button
+            id="btn-reset-all"
+            type="button"
+            class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-rose-950/40 text-slate-400 hover:text-rose-300 text-xs font-semibold border border-slate-800 hover:border-rose-900/50 transition"
+          >
+            Reset
+          </button>
+          <button
+            id="btn-export-report"
+            type="button"
+            class="px-3.5 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold shadow-md shadow-emerald-500/20 transition flex items-center space-x-1.5"
+          >
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 2H9a3 3 0 01-3-2z" />
+            </svg>
+            <span>Copy Gap Report</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Metric Scoreboard -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+        <!-- Readiness Score Card -->
+        <div class="bg-[#0f172a]/90 border border-slate-800 rounded-xl p-5 relative overflow-hidden">
+          <span class="text-xs font-mono uppercase text-slate-400 tracking-wider">Readiness Score</span>
+          <div class="flex items-baseline space-x-2 mt-2">
+            <span id="metric-score" class="text-4xl font-black text-rose-400 transition-colors duration-300">0%</span>
+            <span id="metric-status-badge" class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20">
+              CRITICAL GAPS
+            </span>
+          </div>
+          <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden mt-3">
+            <div id="metric-progress-bar" class="bg-rose-500 h-full w-0 transition-all duration-500 rounded-full"></div>
+          </div>
+          <div class="text-[11px] text-slate-400 mt-2 flex justify-between">
+            <span id="controls-count-label">0 of 18 Controls Implemented</span>
+            <span id="controls-remaining-label">18 Gaps</span>
+          </div>
+        </div>
+
+        <!-- Estimated Prep Time Card -->
+        <div class="bg-[#0f172a]/90 border border-slate-800 rounded-xl p-5 relative overflow-hidden">
+          <span class="text-xs font-mono uppercase text-slate-400 tracking-wider">Estimated Prep Timeline</span>
+          <div class="flex items-baseline space-x-2 mt-2">
+            <span id="metric-timeline" class="text-4xl font-black text-amber-400 transition-colors duration-300">22 wks</span>
+            <span class="text-xs text-slate-400">until audit-ready</span>
+          </div>
+          <p id="timeline-explanation" class="text-xs text-slate-400 mt-3 leading-relaxed">
+            High engineering remediation backlog. 18 critical controls missing prior to observation window.
+          </p>
+        </div>
+
+        <!-- Estimated CPA Fees Card -->
+        <div class="bg-[#0f172a]/90 border border-slate-800 rounded-xl p-5 relative overflow-hidden">
+          <span class="text-xs font-mono uppercase text-slate-400 tracking-wider">Estimated CPA Auditor Fee</span>
+          <div class="flex items-baseline space-x-2 mt-2">
+            <span id="metric-fees" class="text-4xl font-black text-cyan-400 transition-colors duration-300">$26,500</span>
+            <span class="text-xs text-slate-400">USD est.</span>
+          </div>
+          <p id="fees-explanation" class="text-xs text-slate-400 mt-3 leading-relaxed">
+            High auditor scoping cost due to manual evidence sampling across un-automated controls.
+          </p>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap gap-2 pb-4 border-b border-slate-800">
+        <button type="button" data-filter="all" class="filter-tab active px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+          All Controls (18)
+        </button>
+        <button type="button" data-filter="cc6" class="filter-tab px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800">
+          CC6 Access Control (5)
+        </button>
+        <button type="button" data-filter="cc7" class="filter-tab px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800">
+          CC7 System Operations (5)
+        </button>
+        <button type="button" data-filter="cc8" class="filter-tab px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800">
+          CC8 Change Management (4)
+        </button>
+        <button type="button" data-filter="gov" class="filter-tab px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800">
+          Risk & Governance (4)
+        </button>
+      </div>
+
+      <!-- Controls Checklist Container -->
+      <div id="controls-list" class="space-y-3 mt-6">
+        <!-- Checklist items rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+  <!-- Comprehensive Evidence Matrix Table Section -->
+  <section id="matrix" class="scroll-mt-24 mb-20">
+    <div class="text-center mb-10">
+      <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">AICPA Common Criteria</span>
+      <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mt-1">
+        SOC 2 Type II Evidence Requirements & Verification Matrix
+      </h2>
+      <p class="text-slate-400 text-sm max-w-2xl mx-auto mt-2">
+        What independent CPA auditors test during operational fieldwork across the AICPA Trust Services Criteria.
+      </p>
+    </div>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-800 bg-[#0b101c] shadow-xl">
+      <table class="w-full text-left text-xs sm:text-sm text-slate-300">
+        <thead class="bg-[#0f172a] text-slate-200 font-mono text-xs uppercase border-b border-slate-800">
+          <tr>
+            <th class="p-4">Criteria ID</th>
+            <th class="p-4">Control Objective</th>
+            <th class="p-4">Required Evidence Artifact</th>
+            <th class="p-4">Automated Tooling</th>
+            <th class="p-4">Common Audit Exception Pitfall</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800/60 font-sans">
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 font-mono text-emerald-400 font-bold whitespace-nowrap">CC6.1</td>
+            <td class="p-4 font-semibold text-white">Logical Access & MFA Enforcement</td>
+            <td class="p-4 text-slate-300">Identity provider export demonstrating enforced TOTP/WebAuthn across 100% of internal accounts.</td>
+            <td class="p-4 font-mono text-xs text-cyan-400">Okta / Google Workspace / JumpCloud</td>
+            <td class="p-4 text-rose-400 text-xs">Exempted service accounts or contractor accounts lacking hardware/TOTP 2FA.</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 font-mono text-emerald-400 font-bold whitespace-nowrap">CC6.2</td>
+            <td class="p-4 font-semibold text-white">Role-Based Access & Least Privilege</td>
+            <td class="p-4 text-slate-300">Cloud IAM role policies with no wildcard permissions (`*`) on production databases.</td>
+            <td class="p-4 font-mono text-xs text-cyan-400">AWS IAM Access Analyzer / GCP IAM</td>
+            <td class="p-4 text-rose-400 text-xs">Engineers possessing permanent AdministratorAccess in production AWS environment.</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 font-mono text-emerald-400 font-bold whitespace-nowrap">CC6.3</td>
+            <td class="p-4 font-semibold text-white">User Access Offboarding & Deprovisioning</td>
+            <td class="p-4 text-slate-300">Timestamped HR termination notice correlated with IdP account deactivation logs within 24h.</td>
+            <td class="p-4 font-mono text-xs text-cyan-400">Rippling / Gusto / SCIM automated deprovision</td>
+            <td class="p-4 text-rose-400 text-xs">Terminated employees retaining GitHub or Slack access days after formal departure.</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 font-mono text-emerald-400 font-bold whitespace-nowrap">CC6.6</td>
+            <td class="p-4 font-semibold text-white">Network Perimeter & VPC Isolation</td>
+            <td class="p-4 text-slate-300">Network security group rules verifying 0.0.0.0/0 ingress is prohibited on database ports (5432, 3306, 27017).</td>
+            <td class="p-4 font-mono text-xs text-cyan-400">AWS VPC Security Groups / Cloudflare WAF</td>
+            <td class="p-4 text-rose-400 text-xs">Temporary troubleshooting security groups left open to the public internet indefinitely.</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 font-mono text-emerald-400 font-bold whitespace-nowrap">CC6.7</td>
+            <td class="p-4 font-semibold text-white">Cryptographic Standards at Rest & In-Transit</td>
+            <td class="p-4 text-slate-300">AWS KMS / EBS encryption configs and SSL Labs A+ rating verifying TLS 1.2/1.3 cipher suites.</td>
+            <td class="p-4 font-mono text-xs text-cyan-400">AWS KMS / HashiCorp Vault / Let's Encrypt</td>
+            <td class="p-4 text-rose-400 text-xs">Unencrypted S3 backup snapshots or legacy microservices communicating via plain HTTP.</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 font-mono text-emerald-400 font-bold whitespace-nowrap">CC7.1</td>
+            <td class="p-4 font-semibold text-white">Vulnerability Scanning & Penetration Testing</td>
+            <td class="p-4 text-slate-300">Annual third-party penetration test report and weekly container/dependency scan reports with SLAs.</td>
+            <td class="p-4 font-mono text-xs text-cyan-400">Trivy / Dependabot / Snyk / Cobalt.io</td>
+            <td class="p-4 text-rose-400 text-xs">Critical/High CVEs remaining unpatched beyond the 30-day remediation SLA policy.</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 font-mono text-emerald-400 font-bold whitespace-nowrap">CC7.2</td>
+            <td class="p-4 font-semibold text-white">Audit Logging & SIEM Centralization</td>
+            <td class="p-4 text-slate-300">Immutable CloudTrail / audit log retention for 365 days with integrity validation enabled.</td>
+            <td class="p-4 font-mono text-xs text-cyan-400">AWS CloudTrail / Datadog / Elastic SIEM</td>
+            <td class="p-4 text-rose-400 text-xs">CloudTrail logging disabled or S3 logging buckets lacking Object Lock MFA Delete.</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 font-mono text-emerald-400 font-bold whitespace-nowrap">CC7.3</td>
+            <td class="p-4 font-semibold text-white">Incident Response & Tabletop Exercise</td>
+            <td class="p-4 text-slate-300">Documented tabletop drill notes, timestamped lessons learned, and active incident response runbook.</td>
+            <td class="p-4 font-mono text-xs text-cyan-400">PagerDuty / Opsgenie / Jira Incident Management</td>
+            <td class="p-4 text-rose-400 text-xs">Failure to perform an annual tabletop drill or missing documentation of post-mortems.</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 font-mono text-emerald-400 font-bold whitespace-nowrap">CC7.4</td>
+            <td class="p-4 font-semibold text-white">Backup Restoration & DR Simulation</td>
+            <td class="p-4 text-slate-300">Automated restore logs demonstrating successful database restoration within RTO/RPO limits.</td>
+            <td class="p-4 font-mono text-xs text-cyan-400">AWS Backup / RDS Automated Snapshots</td>
+            <td class="p-4 text-rose-400 text-xs">Backups running daily but zero empirical evidence that restore procedures were ever tested.</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 font-mono text-emerald-400 font-bold whitespace-nowrap">CC8.1</td>
+            <td class="p-4 font-semibold text-white">Code Review & Branch Protection</td>
+            <td class="p-4 text-slate-300">GitHub branch protection configuration requiring >= 1 peer review and passing CI checks prior to merge.</td>
+            <td class="p-4 font-mono text-xs text-cyan-400">GitHub Rulesets / GitLab Branch Rules</td>
+            <td class="p-4 text-rose-400 text-xs">Admin bypass enabled, allowing founders to push commits directly to `main` without review.</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 font-mono text-emerald-400 font-bold whitespace-nowrap">CC3.1</td>
+            <td class="p-4 font-semibold text-white">Annual Risk Assessment & Threat Modeling</td>
+            <td class="p-4 text-slate-300">Formal corporate risk register identifying threats, likelihood, impact, and mitigation controls.</td>
+            <td class="p-4 font-mono text-xs text-cyan-400">Vanta / Drata Risk Register / Notion Matrix</td>
+            <td class="p-4 text-rose-400 text-xs">Risk register dated once during incorporation and never reviewed or signed by leadership.</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 font-mono text-emerald-400 font-bold whitespace-nowrap">CC9.2</td>
+            <td class="p-4 font-semibold text-white">Third-Party Vendor Risk Assessment</td>
+            <td class="p-4 text-slate-300">Documented SOC 2 Type II or ISO 27001 report reviews for all critical cloud sub-processors.</td>
+            <td class="p-4 font-mono text-xs text-cyan-400">Vendor Risk Management Platform / Whistic</td>
+            <td class="p-4 text-rose-400 text-xs">Using AI APIs (OpenAI/Anthropic) in production without documented vendor risk evaluations.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- Deep-Dive Guides Overview Grid -->
+  <section class="mb-20">
+    <div class="text-center mb-10">
+      <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">Engineering Deep-Dives</span>
+      <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mt-1">
+        SOC 2 Playbooks & Implementation Guides
+      </h2>
+      <p class="text-slate-400 text-sm max-w-2xl mx-auto mt-2">
+        Tactical analysis, platform comparisons, and budget optimization playbooks written specifically for SaaS engineering leaders.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Guide Card 1 -->
+      <a href="/soc-2-type-1-vs-type-2-compliance-timeline-cost/" class="group block p-6 rounded-xl bg-[#0b101c] border border-slate-800 hover:border-emerald-500/50 transition duration-300 relative overflow-hidden shadow-lg">
+        <div class="text-xs font-mono text-emerald-400 font-semibold mb-2">TIMELINE & BUDGET</div>
+        <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition mb-3">
+          SOC 2 Type 1 vs Type 2: Complete Timeline & Cost Breakdown
+        </h3>
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+          Point-in-time design vs 3-to-12-month observation windows. Line-by-line auditor cost modeling, bridge letter templates, and enterprise procurement requirements.
+        </p>
+        <span class="inline-flex items-center text-xs font-semibold text-emerald-400 group-hover:translate-x-1 transition">
+          Read Guide &rarr;
+        </span>
+      </a>
+
+      <!-- Guide Card 2 -->
+      <a href="/vanta-vs-drata-vs-secureframe-compliance-automation-review/" class="group block p-6 rounded-xl bg-[#0b101c] border border-slate-800 hover:border-cyan-500/50 transition duration-300 relative overflow-hidden shadow-lg">
+        <div class="text-xs font-mono text-cyan-400 font-semibold mb-2">PLATFORM BENCHMARK</div>
+        <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition mb-3">
+          Vanta vs Drata vs Secureframe: 2026 Platform Review
+        </h3>
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+          Architectural comparison of API integrations, workstation agent footprints, auditor network discounts, hidden seat fees, and real total cost of ownership.
+        </p>
+        <span class="inline-flex items-center text-xs font-semibold text-cyan-400 group-hover:translate-x-1 transition">
+          Read Review &rarr;
+        </span>
+      </a>
+
+      <!-- Guide Card 3 -->
+      <a href="/soc-2-compliance-for-bootstrapped-startups-under-20k/" class="group block p-6 rounded-xl bg-[#0b101c] border border-slate-800 hover:border-emerald-500/50 transition duration-300 relative overflow-hidden shadow-lg">
+        <div class="text-xs font-mono text-emerald-400 font-semibold mb-2">BOOTSTRAPPED PLAYBOOK</div>
+        <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition mb-3">
+          SOC 2 Type II for Bootstrapped Startups Under $20K
+        </h3>
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+          How to achieve clean Type II attestation without five-figure automation platforms. Open-source tooling, free-tier AWS primitives, and boutique CPA strategies.
+        </p>
+        <span class="inline-flex items-center text-xs font-semibold text-emerald-400 group-hover:translate-x-1 transition">
+          Read Playbook &rarr;
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Comprehensive FAQ Section -->
+  <section class="mb-20 max-w-4xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">KNOWLEDGE BASE</span>
+      <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mt-1">
+        Frequently Asked Questions: SOC 2 Type II Compliance
+      </h2>
+    </div>
+
+    <div class="space-y-4">
+      <div class="border border-slate-800 bg-[#0b101c] rounded-xl p-5">
+        <h3 class="text-base font-bold text-white mb-2">What is the difference between SOC 2 Type 1 and Type 2?</h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          A SOC 2 Type 1 report examines whether your security controls are suitably designed at a single specific point in time. In contrast, a SOC 2 Type 2 report evaluates both the design and operating effectiveness of those controls across an extended observation window, typically between 3 and 12 months. Enterprise buyers almost universally require a Type 2 report before approving enterprise SaaS procurement.
+        </p>
+      </div>
+
+      <div class="border border-slate-800 bg-[#0b101c] rounded-xl p-5">
+        <h3 class="text-base font-bold text-white mb-2">How long does it take to prepare for a SOC 2 Type II audit?</h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          For an early-stage B2B SaaS startup starting from scratch, technical remediation and policy drafting typically require 6 to 12 weeks. Following readiness, an observation window of 3 to 6 months must elapse before the independent CPA auditor can perform evidence sampling and issue the final attestation report. In total, expect 5 to 9 months from kickoff to final report.
+        </p>
+      </div>
+
+      <div class="border border-slate-800 bg-[#0b101c] rounded-xl p-5">
+        <h3 class="text-base font-bold text-white mb-2">How much does a SOC 2 Type II audit cost for a B2B startup?</h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          All-in costs range from $15,000 to $45,000+. Independent boutique CPA firm audit fees generally cost $8,500 to $15,000. Compliance automation software (such as Vanta, Drata, or Secureframe) ranges from $6,500 to $15,000 per year, and third-party penetration testing costs $3,500 to $8,000. Bootstrapped startups can achieve compliance under $20,000 by leveraging open-source tooling and direct CPA engagement.
+        </p>
+      </div>
+
+      <div class="border border-slate-800 bg-[#0b101c] rounded-xl p-5">
+        <h3 class="text-base font-bold text-white mb-2">What are the core Common Criteria (CC) categories in SOC 2?</h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          The AICPA Common Criteria are divided into nine series: CC1 (Control Environment), CC2 (Communication and Information), CC3 (Risk Assessment), CC4 (Monitoring Activities), CC5 (Control Activities), CC6 (Logical and Physical Access Controls), CC7 (System Operations), CC8 (Change Management), and CC9 (Risk Mitigation and Vendor Management). CC6, CC7, and CC8 represent the most technically demanding controls for engineering teams.
+        </p>
+      </div>
+
+      <div class="border border-slate-800 bg-[#0b101c] rounded-xl p-5">
+        <h3 class="text-base font-bold text-white mb-2">Can a startup fail a SOC 2 audit?</h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          A SOC 2 audit does not result in a simple pass/fail grade; instead, an independent licensed CPA firm issues an attestation opinion: Unqualified (clean report with no material exceptions), Qualified (one or more controls failed to operate effectively), Adverse (widespread control failures), or a Disclaimer of Opinion. Enterprise procurement departments typically only accept clean Unqualified reports.
+        </p>
+      </div>
+
+      <div class="border border-slate-800 bg-[#0b101c] rounded-xl p-5">
+        <h3 class="text-base font-bold text-white mb-2">Is a penetration test mandatory for SOC 2 Type II?</h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          While the AICPA Trust Services Criteria do not explicitly state the word 'penetration test' in CC7.1, virtually every accredited SOC 2 CPA firm and enterprise security review mandates an annual third-party external gray-box or black-box penetration test to satisfy the vulnerability identification and management requirements of CC7.1.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Export Modal -->
+  <div id="export-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-[#0b101c] border border-slate-700 rounded-2xl max-w-2xl w-full p-6 shadow-2xl relative">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div class="flex items-center space-x-2">
+          <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+          <h3 class="text-lg font-bold text-white">SOC 2 Gap Assessment Summary</h3>
+        </div>
+        <button id="btn-close-modal" class="text-slate-400 hover:text-white text-lg">&times;</button>
+      </div>
+      <p class="text-xs text-slate-400 mt-3 mb-3">
+        Copy this markdown report directly into your internal security roadmap, Jira epic, or engineering sprint backlog.
+      </p>
+      <textarea id="modal-report-text" readonly class="w-full h-64 bg-slate-950 border border-slate-800 rounded-lg p-3 font-mono text-xs text-emerald-300 focus:outline-none"></textarea>
+      <div class="flex justify-end gap-3 mt-4">
+        <button id="btn-copy-modal" class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold transition">
+          Copy to Clipboard
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Client-Side Checklist Logic -->
+  <script is:inline>
+    const CONTROLS = [
+      // CC6 Access Control
+      {
+        id: "cc6-1",
+        category: "cc6",
+        code: "CC6.1",
+        title: "MFA & SSO Enforcement Across All Accounts",
+        description: "Enforce multi-factor authentication (TOTP or WebAuthn) and Single Sign-On across IdP, AWS/GCP, GitHub, and SaaS tools without exceptions.",
+        evidence: "Identity Provider MFA enforcement export and IAM credential report.",
+        effort: "Medium",
+        impact: 6
+      },
+      {
+        id: "cc6-2",
+        category: "cc6",
+        code: "CC6.2",
+        title: "Role-Based Access Control (RBAC) & Production Least Privilege",
+        description: "Zero wildcard admin permissions in production. Developers access production via temporary just-in-time bastion or break-glass roles.",
+        evidence: "AWS IAM policies and role assume logs showing least-privilege scoping.",
+        effort: "High",
+        impact: 6
+      },
+      {
+        id: "cc6-3",
+        category: "cc6",
+        code: "CC6.3",
+        title: "Quarterly User Access Reviews & Automated Offboarding",
+        description: "Quarterly manager sign-offs for all cloud/repository accounts. SCIM automation deactivating accounts within 24 hours of employee departure.",
+        evidence: "Quarterly signed access review spreadsheets and HR termination ticket diffs.",
+        effort: "Low",
+        impact: 5
+      },
+      {
+        id: "cc6-6",
+        category: "cc6",
+        code: "CC6.6",
+        title: "Network Perimeter Protection & Private VPC Isolation",
+        description: "Production databases and compute reside in private subnets with NAT gateways. Public ingress restricted to load balancers on 443.",
+        evidence: "VPC architecture diagrams and security group ingress rule exports.",
+        effort: "Medium",
+        impact: 6
+      },
+      {
+        id: "cc6-7",
+        category: "cc6",
+        code: "CC6.7",
+        title: "Data Encryption In-Transit (TLS 1.3) & At-Rest (AES-256)",
+        description: "All database instances, S3 buckets, and EBS volumes encrypted with KMS keys. External and internal network traffic strictly TLS 1.2+.",
+        evidence: "AWS KMS key policies, RDS encryption settings, and SSL Labs report.",
+        effort: "Low",
+        impact: 6
+      },
+
+      // CC7 System Operations
+      {
+        id: "cc7-1a",
+        category: "cc7",
+        code: "CC7.1",
+        title: "Automated Container & Dependency Vulnerability Scanning",
+        description: "Automated CI/CD security pipeline scans (Dependabot / Trivy / Snyk) with enforced 30-day SLAs for Critical/High CVE remediations.",
+        evidence: "Automated weekly scan reports and pull request vulnerability gate logs.",
+        effort: "Low",
+        impact: 6
+      },
+      {
+        id: "cc7-1b",
+        category: "cc7",
+        code: "CC7.1",
+        title: "Annual External Gray-Box Penetration Test",
+        description: "Independent third-party penetration testing firm conducts annual scoped assessment covering web application and cloud perimeter.",
+        evidence: "Executive summary and remediation sign-off letter from CREST/OSCP firm.",
+        effort: "High",
+        impact: 6
+      },
+      {
+        id: "cc7-2",
+        category: "cc7",
+        code: "CC7.2",
+        title: "Centralized Audit Log Aggregation & 365-Day Retention",
+        description: "CloudTrail, VPC flow logs, and application access logs streamed to an immutable S3 bucket with Object Lock and centralized SIEM alerting.",
+        evidence: "CloudTrail configuration, S3 lifecycle policies, and alert channel webhooks.",
+        effort: "Medium",
+        impact: 5
+      },
+      {
+        id: "cc7-3",
+        category: "cc7",
+        code: "CC7.3",
+        title: "Formal Incident Response Plan & Tabletop Simulation",
+        description: "Documented severity classification runbooks, customer notification SLA protocols, and an annual executed tabletop exercise post-mortem.",
+        evidence: "Signed tabletop exercise retrospective notes and PagerDuty schedule logs.",
+        effort: "Low",
+        impact: 5
+      },
+      {
+        id: "cc7-4",
+        category: "cc7",
+        code: "CC7.4",
+        title: "Automated Database Backups & Restore Testing",
+        description: "Daily automated database backups with point-in-time recovery (PITR) and bi-annual documented restore drill verifying RTO/RPO limits.",
+        evidence: "Cloud backup policies and timestamped restore testing validation reports.",
+        effort: "Medium",
+        impact: 6
+      },
+
+      // CC8 Change Management
+      {
+        id: "cc8-1",
+        category: "cc8",
+        code: "CC8.1",
+        title: "Enforced Pull Request Peer Reviews & Branch Protection",
+        description: "GitHub branch protection rules require >= 1 approving review from non-author before merging to `main`. Admin bypass disabled.",
+        evidence: "GitHub repository ruleset configuration and random sample of 25 PR approvals.",
+        effort: "Low",
+        impact: 6
+      },
+      {
+        id: "cc8-2",
+        category: "cc8",
+        code: "CC8.2",
+        title: "Automated CI/CD Test Pipeline & Security Quality Gates",
+        description: "Unit tests, linting, and static analysis automated in GitHub Actions. Deployments block automatically if test suites fail.",
+        evidence: "GitHub Actions workflow YAML and deployment execution logs.",
+        effort: "Low",
+        impact: 5
+      },
+      {
+        id: "cc8-3",
+        category: "cc8",
+        code: "CC8.3",
+        title: "Production Deploy Audit Trail & Release Versioning",
+        description: "Every production release mapped to a unique Git commit SHA, Jira issue or PR number, and deployer identity recorded immutably.",
+        evidence: "Deployment pipeline history export correlated with pull requests.",
+        effort: "Low",
+        impact: 5
+      },
+      {
+        id: "cc8-4",
+        category: "cc8",
+        code: "CC8.4",
+        title: "Documented Emergency Hotfix & Rollback Procedures",
+        description: "Standard operating procedure for emergency changes with retroactive code review, post-incident documentation, and instant rollback capability.",
+        evidence: "Change management policy SOP and documented emergency release tickets.",
+        effort: "Low",
+        impact: 5
+      },
+
+      // Risk Assessment & Governance
+      {
+        id: "gov-1",
+        category: "gov",
+        code: "CC3.1",
+        title: "Annual Formal Risk Assessment & Threat Modeling Matrix",
+        description: "Leadership-approved risk register assessing likelihood and impact across operational, physical, technical, and regulatory threats.",
+        evidence: "Dated risk assessment spreadsheet signed by CEO/CTO.",
+        effort: "Medium",
+        impact: 6
+      },
+      {
+        id: "gov-2",
+        category: "gov",
+        code: "CC2.1",
+        title: "Employee Background Checks & Security Training",
+        description: "Pre-employment criminal background checks via Checkr/GoodHire and mandatory annual cybersecurity training completion tracking.",
+        evidence: "HR onboarding checklist sample and training platform completion certificates.",
+        effort: "Low",
+        impact: 5
+      },
+      {
+        id: "gov-3",
+        category: "gov",
+        code: "CC9.2",
+        title: "Third-Party Sub-Processor Vendor Risk Due Diligence",
+        description: "Annual collection and review of SOC 2 Type II or ISO 27001 reports for all vendors processing corporate or customer data.",
+        evidence: "Vendor inventory matrix with annual SOC 2 review sign-off dates.",
+        effort: "Medium",
+        impact: 6
+      },
+      {
+        id: "gov-4",
+        category: "gov",
+        code: "CC5.1",
+        title: "Core Information Security Policy Suite (12 Policies)",
+        description: "Comprehensive written policies: Access Control, Incident Response, Data Classification, BC/DR, Vendor Management, Cryptography, etc.",
+        evidence: "Version-controlled policy repository with annual employee acknowledgments.",
+        effort: "Medium",
+        impact: 5
+      }
+    ];
+    let completedControls = new Set();
+    const STORAGE_KEY = 'soc2ready_selected_controls';
+
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      completedControls = new Set(saved);
+    } catch(e) {}
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(completedControls)));
+      } catch(e) {}
+    }
+
+    function calculateMetrics() {
+      const totalControls = CONTROLS.length;
+      const completedCount = completedControls.size;
+      const pct = Math.round((completedCount / totalControls) * 100);
+
+      const metricScore = document.getElementById('metric-score');
+      const metricStatusBadge = document.getElementById('metric-status-badge');
+      const metricProgressBar = document.getElementById('metric-progress-bar');
+      const controlsCountLabel = document.getElementById('controls-count-label');
+      const controlsRemainingLabel = document.getElementById('controls-remaining-label');
+      const metricTimeline = document.getElementById('metric-timeline');
+      const timelineExplanation = document.getElementById('timeline-explanation');
+      const metricFees = document.getElementById('metric-fees');
+      const feesExplanation = document.getElementById('fees-explanation');
+
+      if (!metricScore) return;
+
+      metricScore.textContent = pct + '%';
+      if (controlsCountLabel) controlsCountLabel.textContent = completedCount + ' of ' + totalControls + ' Controls Implemented';
+      if (controlsRemainingLabel) controlsRemainingLabel.textContent = (totalControls - completedCount) + ' Gaps';
+
+      if (metricProgressBar) metricProgressBar.style.width = pct + '%';
+
+      if (pct < 35) {
+        metricScore.className = 'text-4xl font-black text-rose-400 transition-colors duration-300';
+        if (metricProgressBar) metricProgressBar.className = 'bg-rose-500 h-full transition-all duration-500 rounded-full';
+        if (metricStatusBadge) {
+          metricStatusBadge.className = 'text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20';
+          metricStatusBadge.textContent = 'CRITICAL GAPS';
+        }
+        if (metricTimeline) metricTimeline.textContent = '20-24 wks';
+        if (timelineExplanation) timelineExplanation.textContent = 'Extensive engineering remediation required before starting your 3-6 month observation window.';
+        if (metricFees) metricFees.textContent = '$26,500';
+        if (feesExplanation) feesExplanation.textContent = 'High auditor scoping cost due to extensive manual evidence sampling across non-automated controls.';
+      } else if (pct < 70) {
+        metricScore.className = 'text-4xl font-black text-amber-400 transition-colors duration-300';
+        if (metricProgressBar) metricProgressBar.className = 'bg-amber-400 h-full transition-all duration-500 rounded-full';
+        if (metricStatusBadge) {
+          metricStatusBadge.className = 'text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20';
+          metricStatusBadge.textContent = 'REMEDIATING GAPS';
+        }
+        if (metricTimeline) metricTimeline.textContent = '10-14 wks';
+        if (timelineExplanation) timelineExplanation.textContent = 'Core primitives established. Closing remaining operational & logging gaps enables observation start.';
+        if (metricFees) metricFees.textContent = '$19,500';
+        if (feesExplanation) feesExplanation.textContent = 'Standard CPA fieldwork pricing with moderate sampling overhead and boutique advisory.';
+      } else if (pct < 95) {
+        metricScore.className = 'text-4xl font-black text-emerald-400 transition-colors duration-300';
+        if (metricProgressBar) metricProgressBar.className = 'bg-emerald-400 h-full transition-all duration-500 rounded-full';
+        if (metricStatusBadge) {
+          metricStatusBadge.className = 'text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
+          metricStatusBadge.textContent = 'NEAR AUDIT-READY';
+        }
+        if (metricTimeline) metricTimeline.textContent = '4-6 wks';
+        if (timelineExplanation) timelineExplanation.textContent = 'Fast-track readiness. Finalize remaining evidence artifacts to initiate CPA fieldwork.';
+        if (metricFees) metricFees.textContent = '$14,500';
+        if (feesExplanation) feesExplanation.textContent = 'Streamlined audit engagement with low auditor friction and rapid evidence acceptance.';
+      } else {
+        metricScore.className = 'text-4xl font-black text-emerald-300 transition-colors duration-300';
+        if (metricProgressBar) metricProgressBar.className = 'bg-emerald-300 h-full transition-all duration-500 rounded-full';
+        if (metricStatusBadge) {
+          metricStatusBadge.className = 'text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-400/20 text-emerald-300 border border-emerald-400/30';
+          metricStatusBadge.textContent = '100% READY FOR FIELDWORK';
+        }
+        if (metricTimeline) metricTimeline.textContent = '2-3 wks';
+        if (timelineExplanation) timelineExplanation.textContent = 'Ready for CPA auditor engagement. Kick off Type II observation window immediately.';
+        if (metricFees) metricFees.textContent = '$11,500';
+        if (feesExplanation) feesExplanation.textContent = 'Lowest fixed-fee tier available from boutique CPA firms due to complete automated evidence readiness.';
+      }
+    }
+
+    let activeFilter = 'all';
+
+    function renderControls() {
+      const container = document.getElementById('controls-list');
+      if (!container) return;
+
+      const filtered = CONTROLS.filter(c => activeFilter === 'all' || c.category === activeFilter);
+
+      container.innerHTML = filtered.map(c => {
+        const isChecked = completedControls.has(c.id);
+        const effortColors = {
+          'Low': 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
+          'Medium': 'text-amber-400 bg-amber-500/10 border-amber-500/20',
+          'High': 'text-rose-400 bg-rose-500/10 border-rose-500/20'
+        };
+
+        return `
+          <div class="control-card border ${isChecked ? 'border-emerald-500/40 bg-emerald-950/10' : 'border-slate-800 bg-[#0d1322] hover:border-slate-700'} rounded-xl p-4 transition duration-200">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex items-start space-x-3.5">
+                <input
+                  type="checkbox"
+                  id="${c.id}"
+                  ${isChecked ? 'checked' : ''}
+                  class="control-checkbox mt-1 w-5 h-5 rounded border-slate-700 text-emerald-500 focus:ring-emerald-400 focus:ring-offset-slate-900 cursor-pointer"
+                />
+                <div>
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-slate-800 text-cyan-400 border border-slate-700">${c.code}</span>
+                    <h3 class="text-sm sm:text-base font-bold text-white ${isChecked ? 'line-through text-slate-400' : ''}">${c.title}</h3>
+                  </div>
+                  <p class="text-xs text-slate-300 mt-1 leading-relaxed">${c.description}</p>
+                  <div class="mt-2.5 flex flex-wrap items-center gap-2 text-[11px] text-slate-400">
+                    <span class="font-mono text-slate-400">Evidence: <span class="text-slate-200">${c.evidence}</span></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hidden sm:flex flex-col items-end whitespace-nowrap">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded border ${effortColors[c.effort]}">
+                  Effort: ${c.effort}
+                </span>
+                <span class="text-[10px] font-mono text-slate-400 mt-1">+${c.impact}% Weight</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.querySelectorAll('.control-checkbox').forEach(cb => {
+        cb.addEventListener('change', (e) => {
+          const id = e.target.id;
+          if (e.target.checked) {
+            completedControls.add(id);
+          } else {
+            completedControls.delete(id);
+          }
+          saveState();
+          calculateMetrics();
+          renderControls();
+        });
+      });
+    }
+
+    document.querySelectorAll('.filter-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tab').forEach(b => {
+          b.className = 'filter-tab px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800';
+        });
+        btn.className = 'filter-tab active px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+        activeFilter = btn.dataset.filter;
+        renderControls();
+      });
+    });
+
+    document.getElementById('btn-select-all')?.addEventListener('click', () => {
+      CONTROLS.forEach(c => completedControls.add(c.id));
+      saveState();
+      calculateMetrics();
+      renderControls();
+    });
+
+    document.getElementById('btn-reset-all')?.addEventListener('click', () => {
+      completedControls.clear();
+      saveState();
+      calculateMetrics();
+      renderControls();
+    });
+
+    const exportModal = document.getElementById('export-modal');
+    const modalReportText = document.getElementById('modal-report-text');
+
+    function generateReportMarkdown() {
+      const total = CONTROLS.length;
+      const completed = completedControls.size;
+      const pct = Math.round((completed / total) * 100);
+      const missing = CONTROLS.filter(c => !completedControls.has(c.id));
+
+      let md = `# SOC 2 Type II Readiness Gap Report\n`;
+      md += `Date: ${new Date().toISOString().split('T')[0]}\n`;
+      md += `Readiness Score: ${pct}% (${completed}/${total} Controls Satisfied)\n\n`;
+
+      md += `## Outstanding Security & Compliance Gaps (${missing.length})\n`;
+      missing.forEach(m => {
+        md += `- [ ] **${m.code}**: ${m.title}\n  - Description: ${m.description}\n  - Required Evidence: ${m.evidence}\n  - Effort: ${m.effort}\n\n`;
+      });
+
+      md += `## Satisfied Controls (${completed})\n`;
+      CONTROLS.filter(c => completedControls.has(c.id)).forEach(s => {
+        md += `- [x] **${s.code}**: ${s.title}\n`;
+      });
+
+      return md;
+    }
+
+    document.getElementById('btn-export-report')?.addEventListener('click', () => {
+      const report = generateReportMarkdown();
+      if (modalReportText) modalReportText.value = report;
+      exportModal?.classList.remove('hidden');
+    });
+
+    document.getElementById('btn-close-modal')?.addEventListener('click', () => {
+      exportModal?.classList.add('hidden');
+    });
+
+    document.getElementById('btn-copy-modal')?.addEventListener('click', () => {
+      if (modalReportText) {
+        navigator.clipboard.writeText(modalReportText.value).then(() => {
+          alert('Gap report copied to clipboard!');
+          exportModal?.classList.add('hidden');
+        });
+      }
+    });
+
+    renderControls();
+    calculateMetrics();
+  </script>
+</Layout>

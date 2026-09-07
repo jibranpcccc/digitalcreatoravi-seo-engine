@@ -1,0 +1,207 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  slug?: string;
+  schema?: Record<string, any>;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  slug = '',
+  schema
+} = Astro.props;
+
+const siteUrl = 'https://nomadpassportindex.netlify.app';
+const canonicalUrl = canonical || (slug ? `${siteUrl}/${slug.replace(/^\/+|\/+$/g, '')}/` : `${siteUrl}/`);
+const ogImageUrl = `${siteUrl}/og-nomad-passport.png`;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="bg-[#030712] text-slate-100 antialiased selection:bg-amber-500 selection:text-black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="NomadPassportIndex" />
+    <meta property="og:image" content={ogImageUrl} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Favicon & Search Console -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛂</text></svg>" />
+    <meta name="google-site-verification" content="google6fe267a998c19a9a" />
+
+    <!-- Machine-Readable Discovery -->
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Index" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data Schema -->
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+
+    <!-- Fleet Master Analytics Beacon -->
+    <script is:inline>
+      (function() {
+        try {
+          var payload = JSON.stringify({
+            site: window.location.hostname,
+            path: window.location.pathname,
+            ref: document.referrer || "direct",
+            screen: window.innerWidth + "x" + window.innerHeight,
+            ts: Date.now()
+          });
+          var endpoint = "https://webhookwatch.vercel.app/api/track/";
+          if (navigator.sendBeacon) {
+            navigator.sendBeacon(endpoint, payload);
+          } else {
+            fetch(endpoint, { method: "POST", body: payload, keepalive: true, headers: { "Content-Type": "application/json" } }).catch(function(){});
+          }
+        } catch(e) {}
+      })();
+    </script>
+      <link rel="alternate" type="application/rss+xml" title="RSS 2.0 Feed" href="/rss.xml" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-[#030712] text-slate-100 font-['Plus_Jakarta_Sans',sans-serif] relative overflow-x-hidden">
+    <!-- Ambient Background Lighting -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[400px] bg-gradient-to-b from-blue-600/10 via-amber-500/5 to-transparent blur-[140px] pointer-events-none -z-10"></div>
+    <div class="fixed top-96 -left-48 w-96 h-96 bg-blue-500/10 blur-[150px] pointer-events-none -z-10"></div>
+    <div class="fixed top-96 -right-48 w-96 h-96 bg-amber-500/10 blur-[150px] pointer-events-none -z-10"></div>
+
+    <!-- Top Statutory Alert Header -->
+    <div class="border-b border-slate-800/80 bg-slate-900/60 backdrop-blur-md text-xs py-2 px-4 text-center text-slate-400 flex items-center justify-center space-x-3">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">
+        2026 STATUTORY TRACKER
+      </span>
+      <span>Updated minimum wage thresholds, Spain SMI 200%, and Japan ¥10M criteria</span>
+      <a href="/spain-digital-nomad-visa-income-requirements/" class="text-amber-400 hover:text-amber-300 font-semibold underline underline-offset-2 ml-1">
+        Explore Spain Guide &rarr;
+      </a>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="border-b border-slate-800/80 bg-[#030712]/80 backdrop-blur-xl sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-blue-600 p-[1px] shadow-lg shadow-amber-500/10 group-hover:shadow-amber-500/30 transition duration-300">
+            <div class="w-full h-full bg-slate-950 rounded-[11px] flex items-center justify-center font-black text-amber-400 text-lg">
+              🛂
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-lg font-black tracking-tight text-white group-hover:text-amber-400 transition">
+              NomadPassport<span class="text-amber-400">Index</span>
+            </span>
+            <span class="text-[10px] font-mono text-slate-400 tracking-wider uppercase">Global Remote Visa Database</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center space-x-1 text-sm font-medium text-slate-300">
+          <a href="/#database" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">
+            Visa Database
+          </a>
+          <a href="/spain-digital-nomad-visa-income-requirements/" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">
+            Spain DNV
+          </a>
+          <a href="/japan-digital-nomad-visa-guide-tax-exemption/" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">
+            Japan Visa
+          </a>
+          <a href="/easiest-digital-nomad-visas-in-europe-2026/" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">
+            Easiest in Europe
+          </a>
+        </nav>
+
+        <div class="flex items-center space-x-2.5">
+          <a
+            href="/llms.txt"
+            class="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700/80 hover:border-amber-500/60 text-xs font-mono text-amber-400 shadow-sm transition"
+            title="Machine-readable LLM Context Index"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>llms.txt</span>
+          </a>
+          <a
+            href="/#database"
+            class="inline-flex items-center px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-xs shadow-md shadow-amber-500/20 transition"
+          >
+            Filter 38+ Visas
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Slot -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 bg-[#02040a] mt-24 py-16 text-sm text-slate-400">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+          <div class="md:col-span-2">
+            <div class="flex items-center space-x-3 mb-3">
+              <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-sm">
+                🛂
+              </div>
+              <span class="text-base font-extrabold text-white">NomadPassportIndex</span>
+            </div>
+            <p class="text-xs text-slate-400 max-w-sm leading-relaxed mb-4">
+              The premier open-access statutory repository for remote work visas, consular requirements, minimum monthly income criteria, and bilateral tax treaty exemptions worldwide.
+            </p>
+            <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-md bg-slate-900 border border-slate-800 text-[11px] font-mono text-amber-400">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Updated Monthly • 38 Sovereign Jurisdictions</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-3">Verified Guides</h4>
+            <ul class="space-y-2 text-xs text-slate-400">
+              <li><a href="/spain-digital-nomad-visa-income-requirements/" class="hover:text-amber-400 transition">Spain Income Requirements (200% SMI)</a></li>
+              <li><a href="/japan-digital-nomad-visa-guide-tax-exemption/" class="hover:text-amber-400 transition">Japan 6-Month DNV & Tax Exemption</a></li>
+              <li><a href="/easiest-digital-nomad-visas-in-europe-2026/" class="hover:text-amber-400 transition">Easiest Visas in Europe (2026 Rankings)</a></li>
+              <li><a href="/#database" class="hover:text-amber-400 transition">Global Income Threshold Database</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-3">Data & Compliance</h4>
+            <ul class="space-y-2 text-xs text-slate-400">
+              <li><a href="/llms.txt" class="hover:text-amber-400 transition font-mono">/llms.txt (LLM Standard)</a></li>
+              <li><a href="/robots.txt" class="hover:text-amber-400 transition font-mono">/robots.txt</a></li>
+              <li><a href="/sitemap.xml" class="hover:text-amber-400 transition font-mono">/sitemap.xml</a></li>
+              <li><span class="text-slate-500">Not immigration or legal advice</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-800/80 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+          <p>&copy; 2026 NomadPassportIndex. Statutory figures verified from official ministry sources.</p>
+          <p class="text-[11px] text-slate-500">Built with Astro SSG • Fast, edge-optimized, privacy-respecting</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schemaJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "AWS ALB Access Log Regex Parser & 29-Field Specification",
+      "url": "https://groklogtester.pages.dev/aws-alb-access-log-regex-parser/",
+      "description": "Complete specification, Grok expressions, Athena DDL, and CloudWatch Log Insights queries for AWS Application Load Balancer access logs.",
+      "author": {
+        "@type": "Organization",
+        "name": "GrokLogTester Engineering Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GrokLogTester",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://groklogtester.pages.dev/og-banner.png"
+        }
+      },
+      "datePublished": "2026-09-06",
+      "dateModified": "2026-09-06"
+    }
+  ]
+});
+
+const patAlbGrok = '^%{NOTSPACE:type} %{TIMESTAMP_ISO8601:timestamp} %{NOTSPACE:elb} %{IPORHOST:client_ip}:%{POSINT:client_port:int} (?:%{IPORHOST:target_ip}:%{POSINT:target_port:int}|-) %{NUMBER:request_processing_time:float} %{NUMBER:target_processing_time:float} %{NUMBER:response_processing_time:float} %{NUMBER:elb_status_code:int} (?:%{NUMBER:target_status_code:int}|-) %{NUMBER:received_bytes:int} %{NUMBER:sent_bytes:int} "%{WORD:verb} %{NOTSPACE:request_url} HTTP/%{NUMBER:http_version}" "%{DATA:user_agent}" %{NOTSPACE:ssl_cipher} %{NOTSPACE:ssl_protocol} %{NOTSPACE:target_group_arn} "%{DATA:trace_id}" "(?:%{NOTSPACE:domain_name}|-)" "(?:%{NOTSPACE:chosen_cert_arn}|-)" %{NUMBER:matched_rule_priority:int} %{TIMESTAMP_ISO8601:request_creation_time} "(?:%{DATA:actions_executed}|-)" "(?:%{DATA:redirect_url}|-)" "(?:%{DATA:error_reason}|-)" "(?:%{DATA:target_port_list}|-)" "(?:%{DATA:target_status_code_list}|-)" "(?:%{DATA:classification}|-)" "(?:%{DATA:classification_reason}|-)"$';
+
+const athenaSql = `CREATE EXTERNAL TABLE IF NOT EXISTS alb_logs (
+  type string,
+  time string,
+  elb string,
+  client_ip string,
+  client_port int,
+  target_ip string,
+  target_port int,
+  request_processing_time double,
+  target_processing_time double,
+  response_processing_time double,
+  elb_status_code int,
+  target_status_code string,
+  received_bytes bigint,
+  sent_bytes bigint,
+  request_verb string,
+  request_url string,
+  request_proto string,
+  user_agent string,
+  ssl_cipher string,
+  ssl_protocol string,
+  target_group_arn string,
+  trace_id string,
+  domain_name string,
+  chosen_cert_arn string,
+  matched_rule_priority string,
+  request_creation_time string,
+  actions_executed string,
+  redirect_url string,
+  error_reason string,
+  target_port_list string,
+  target_status_code_list string,
+  classification string,
+  classification_reason string
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.RegexSerDe'
+WITH SERDEPROPERTIES (
+  'serialization.format' = '1',
+  'input.regex' = '([^ ]*) ([^ ]*) ([^ ]*) ([^ ]*):([0-9]*) ([^ ]*)[:-]([0-9]*) ([-.0-9]*) ([-.0-9]*) ([-.0-9]*) (|[-0-9]*) (-|[-0-9]*) ([-0-9]*) ([-0-9]*) \"([^ ]*) (.*) (- |[^ ]*)\" \"([^\"]*)\" ([A-Z0-9-_]+) ([A-Za-z0-9.-]*) ([^ ]*) \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" ([-.0-9]*) ([^ ]*) \"([^\"]*)\" \"([^\"]*)\" \"([^ ]*)\" \"([^\\s]+?)\" \"([^\\s]+?)\" \"([^ ]*)\" \"([^ ]*)\"'
+)
+LOCATION 's3://my-alb-logs-bucket/AWSLogs/123456789012/elasticloadbalancing/us-east-1/';`;
+
+const cwQuery = `fields @timestamp, target_group_arn, target_processing_time, elb_status_code
+| filter elb_status_code >= 500 or target_processing_time > 1.0
+| stats pct(target_processing_time, 95) as p95_latency, count(*) as err_count by target_group_arn
+| sort p95_latency desc
+| limit 20`;
+---
+
+<Layout
+  title="AWS ALB Access Log Regex Parser & Format Spec | GrokLogTester"
+  description="Master AWS Application Load Balancer access log parsing. Full 29-field specification, production Grok patterns, Amazon Athena DDL, and CloudWatch queries."
+  canonical="https://groklogtester.pages.dev/aws-alb-access-log-regex-parser/"
+  schemaJson={schemaJson}
+  type="article"
+>
+  <article class="max-w-4xl mx-auto py-4">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center space-x-2 text-xs font-mono text-slate-400 mb-6">
+      <a href="/" class="hover:text-cyan-400 transition">Home</a>
+      <span>/</span>
+      <span class="text-cyan-400">Guides</span>
+      <span>/</span>
+      <span class="text-slate-300">AWS ALB Parser</span>
+    </nav>
+
+    <!-- Header Section with exactly ONE H1 tag -->
+    <header class="mb-10">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono mb-4">
+        <span>AWS Observability Standard &bull; 29 Fields</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+        AWS ALB Access Log Regex Parser & Format Spec
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+        A complete guide to parsing AWS Application Load Balancer access logs across Vector, Fluent Bit, Amazon Athena, and Elasticsearch with zero dropped events.
+      </p>
+    </header>
+
+    <!-- 45-60 Word Featured Snippet Quick Answer Box -->
+    <div class="bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/90 border border-emerald-500/40 rounded-xl p-5 mb-12 shadow-xl shadow-emerald-950/20 backdrop-blur-md relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-emerald-400 to-cyan-400"></div>
+      <div class="flex items-center space-x-2 mb-2 text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span>Quick Answer: How to Parse AWS ALB Access Logs?</span>
+      </div>
+      <p class="text-sm text-slate-200 leading-relaxed font-sans">
+        Parsing AWS Application Load Balancer (ALB) access logs requires matching 29 space-delimited fields, with URI paths and user agents enclosed in quotes. Because downstream target failures and timeouts emit hyphens instead of IPs and timestamps, production regular expressions must use nullable groups like <code class="text-emerald-300 bg-slate-800 px-1 py-0.5 rounded font-mono text-xs">(?&lt;target_ip&gt;[^ ]+)?</code> to prevent dropped telemetry events.
+      </p>
+    </div>
+
+    <!-- Section 1: 29-Field Specification -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+        1. Complete AWS ALB 29-Field Specification
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed mb-6">
+        AWS Application Load Balancers record access logs as compressed <code class="text-emerald-300 font-mono text-xs">.log.gz</code> files in Amazon S3. Each line contains up to 29 space-delimited positional tokens:
+      </p>
+
+      <div class="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-xl shadow-md mb-6">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-950/80 text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">
+              <th class="py-3 px-3">#</th>
+              <th class="py-3 px-3">Field Name</th>
+              <th class="py-3 px-3">Type</th>
+              <th class="py-3 px-3">Sample Value</th>
+              <th class="py-3 px-3">Nullable</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 text-xs font-mono text-slate-300">
+            <tr><td class="py-2.5 px-3 text-slate-500">1</td><td class="py-2.5 px-3 font-bold text-emerald-400">type</td><td class="py-2.5 px-3 text-cyan-300">String</td><td class="py-2.5 px-3">https, h2, ws</td><td class="py-2.5 px-3 text-slate-500">No</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">2</td><td class="py-2.5 px-3 font-bold text-emerald-400">time</td><td class="py-2.5 px-3 text-cyan-300">ISO 8601</td><td class="py-2.5 px-3">2026-09-06T14:40:12.451Z</td><td class="py-2.5 px-3 text-slate-500">No</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">3</td><td class="py-2.5 px-3 font-bold text-emerald-400">elb</td><td class="py-2.5 px-3 text-cyan-300">String</td><td class="py-2.5 px-3">app/prod-alb/50dc6c495c0c9188</td><td class="py-2.5 px-3 text-slate-500">No</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">4</td><td class="py-2.5 px-3 font-bold text-emerald-400">client:port</td><td class="py-2.5 px-3 text-cyan-300">IP:Port</td><td class="py-2.5 px-3">192.0.2.1:2817</td><td class="py-2.5 px-3 text-slate-500">No</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">5</td><td class="py-2.5 px-3 font-bold text-emerald-400">target:port</td><td class="py-2.5 px-3 text-cyan-300">IP:Port</td><td class="py-2.5 px-3">10.0.0.1:80 or -</td><td class="py-2.5 px-3 text-amber-400 font-bold">Yes (-)</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">6-8</td><td class="py-2.5 px-3 font-bold text-emerald-400">processing_times</td><td class="py-2.5 px-3 text-cyan-300">Float (s)</td><td class="py-2.5 px-3">0.001 0.042 0.000</td><td class="py-2.5 px-3 text-amber-400 font-bold">Yes (-1)</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">9</td><td class="py-2.5 px-3 font-bold text-emerald-400">elb_status_code</td><td class="py-2.5 px-3 text-cyan-300">Integer</td><td class="py-2.5 px-3">200</td><td class="py-2.5 px-3 text-slate-500">No</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">10</td><td class="py-2.5 px-3 font-bold text-emerald-400">target_status_code</td><td class="py-2.5 px-3 text-cyan-300">Integer</td><td class="py-2.5 px-3">200 or -</td><td class="py-2.5 px-3 text-amber-400 font-bold">Yes (-)</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">11-12</td><td class="py-2.5 px-3 font-bold text-emerald-400">bytes_rcvd / sent</td><td class="py-2.5 px-3 text-cyan-300">Integer</td><td class="py-2.5 px-3">341 4528</td><td class="py-2.5 px-3 text-slate-500">No</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">13</td><td class="py-2.5 px-3 font-bold text-emerald-400">request</td><td class="py-2.5 px-3 text-cyan-300">String</td><td class="py-2.5 px-3">"GET https://api.io:443/v1 HTTP/2.0"</td><td class="py-2.5 px-3 text-slate-500">No</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">14</td><td class="py-2.5 px-3 font-bold text-emerald-400">user_agent</td><td class="py-2.5 px-3 text-cyan-300">String</td><td class="py-2.5 px-3">"curl/7.88.1"</td><td class="py-2.5 px-3 text-slate-500">No</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">15-16</td><td class="py-2.5 px-3 font-bold text-emerald-400">ssl_cipher / protocol</td><td class="py-2.5 px-3 text-cyan-300">String</td><td class="py-2.5 px-3">ECDHE-RSA-AES128-GCM-SHA256 TLSv1.2</td><td class="py-2.5 px-3 text-amber-400">Yes (-)</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">17</td><td class="py-2.5 px-3 font-bold text-emerald-400">target_group_arn</td><td class="py-2.5 px-3 text-cyan-300">ARN</td><td class="py-2.5 px-3">arn:aws:elasticloadbalancing:...</td><td class="py-2.5 px-3 text-slate-500">No</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">18</td><td class="py-2.5 px-3 font-bold text-emerald-400">trace_id</td><td class="py-2.5 px-3 text-cyan-300">String</td><td class="py-2.5 px-3">"Root=1-58337262-36d420..."</td><td class="py-2.5 px-3 text-slate-500">No</td></tr>
+            <tr><td class="py-2.5 px-3 text-slate-500">19-29</td><td class="py-2.5 px-3 font-bold text-emerald-400">extended_telemetry</td><td class="py-2.5 px-3 text-cyan-300">Mixed</td><td class="py-2.5 px-3">domain, cert, rule, classification</td><td class="py-2.5 px-3 text-amber-400 font-bold">Yes (-)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 2: Production Grok and Regex Patterns -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+        2. Production-Grade Grok & PCRE Regex
+      </h2>
+
+      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 mb-6">
+        <h3 class="text-sm font-bold text-emerald-400 font-mono uppercase tracking-wider mb-2">
+          Vector / Logstash Grok Expression
+        </h3>
+        <p class="text-xs text-slate-400 mb-3">
+          Resilient pattern covering all 29 fields with support for target timeouts and -1 float metrics:
+        </p>
+        <pre class="bg-slate-950 text-emerald-300 p-3.5 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed whitespace-pre-wrap break-all">{patAlbGrok}</pre>
+      </div>
+    </section>
+
+    <!-- Section 3: Athena DDL & CloudWatch Logs Insights -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+        3. Amazon Athena DDL & CloudWatch Queries
+      </h2>
+
+      <!-- Athena SQL -->
+      <div class="mb-6">
+        <h3 class="text-sm font-bold text-slate-200 mb-2 font-mono">Amazon Athena DDL RegexSerDe Query</h3>
+        <pre class="bg-slate-950 text-slate-200 p-4 rounded-xl font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed">{athenaSql}</pre>
+      </div>
+
+      <!-- CloudWatch Query -->
+      <div class="mb-6">
+        <h3 class="text-sm font-bold text-slate-200 mb-2 font-mono">CloudWatch Log Insights P95 Latency by Target Group</h3>
+        <pre class="bg-slate-950 text-cyan-300 p-4 rounded-xl font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed">{cwQuery}</pre>
+      </div>
+    </section>
+
+    <!-- Return Link -->
+    <div class="pt-6 border-t border-slate-800 flex items-center justify-between text-xs">
+      <a href="/nginx-access-log-grok-pattern-generator/" class="text-slate-400 hover:text-cyan-400 font-semibold flex items-center gap-1.5">
+        &larr; Previous: Nginx Grok Pattern Generator
+      </a>
+      <a href="/high-throughput-log-parsing-vector-vs-fluentbit/" class="text-emerald-400 hover:text-emerald-300 font-bold">
+        Next: Vector vs Fluent Bit Benchmark &rarr;
+      </a>
+    </div>
+  </article>
+</Layout>

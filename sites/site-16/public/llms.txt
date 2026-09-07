@@ -1,0 +1,25 @@
+# DevConfigHub - Modern Local Dev Environment Configurations & Cheatsheets
+
+> DevConfigHub (https://site-16-indol.vercel.app) is an engineering portal and interactive configuration generator for modern local development environments, encompassing DevContainers (devcontainer.json), high-performance Docker Compose setups, and hermetic Nix Flakes development shells.
+
+## Interactive Tools & Core Guides
+
+- [Modern Developer Config Hub & Generator](https://site-16-indol.vercel.app/): Interactive client-side config generator creating production-tuned `devcontainer.json` and `docker-compose.yml` for Node.js/TypeScript, Python/FastAPI, Rust, and Go with PostgreSQL 16, pgvector, Redis 7, and Docker-in-Docker support.
+- [DevContainer.json vs Docker Compose for Local Development](https://site-16-indol.vercel.app/devcontainer-json-vs-docker-compose-local-development/): Architectural comparison of DevContainers vs Docker Compose, detailing lifecycle hooks (`onCreateCommand`, `updateContentCommand`, `postCreateCommand`), port forwarding strategies, IDE integration, and hybrid patterns.
+- [Nix Flakes for Reproducible Python, Rust, and Node Environments](https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/): Complete guide to zero-container hermetic developer environments using Nix Flakes (`devShells.default`), `flake.lock`, direnv integration, and cross-platform reproducibility across macOS and Linux.
+- [Fastest Docker Compose Postgres 16 & Redis 7 Local Development Stack](https://site-16-indol.vercel.app/fastest-docker-compose-postgres-redis-local-stack/): Performance-tuned Docker Compose specification achieving sub-second startup using RAM-backed tmpfs (`/var/lib/postgresql/data`), `fsync=off`, `synchronous_commit=off`, `full_page_writes=off`, and Docker Compose v2 healthcheck dependencies.
+
+## Key Configuration Paradigms
+
+### DevContainer Lifecycle Sequence
+1. `initializeCommand`: Runs on host machine before container creation.
+2. `onCreateCommand`: Runs inside container after creation, before file mounting completes.
+3. `updateContentCommand`: Executes repository dependency downloads or compilation.
+4. `postCreateCommand`: Runs user setup and initial dev tooling.
+5. `postStartCommand`: Runs every time the devcontainer starts.
+6. `postAttachCommand`: Runs every time a developer UI (VS Code / JetBrains) connects.
+
+### High-Performance Local Database Flags (docker-compose.yml)
+- PostgreSQL ephemeral memory mount: `tmpfs: [ "/var/lib/postgresql/data:rw,noexec,nosuid,size=1024m" ]`
+- PostgreSQL dev bypass flags: `-c fsync=off -c synchronous_commit=off -c full_page_writes=off -c shared_buffers=256MB`
+- Redis dev memory bypass: `command: ["redis-server", "--save", "", "--appendonly", "no"]`

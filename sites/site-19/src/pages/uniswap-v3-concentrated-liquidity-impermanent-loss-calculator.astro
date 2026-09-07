@@ -1,0 +1,289 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Uniswap v3 Concentrated Liquidity & Impermanent Loss Math Guide | GreekVisualizer";
+const pageDescription = "Comprehensive quantitative guide to Uniswap v3 concentrated liquidity: mathematical derivations of virtual reserves, tick math, divergence loss equations, and capital efficiency multipliers.";
+const canonical = "https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/";
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Uniswap v3 Concentrated Liquidity & Impermanent Loss Math Guide",
+      "description": "Analytical breakdown of Uniswap v3 concentrated liquidity curves, virtual reserves geometry, tick math, and impermanent loss equations.",
+      "url": canonical,
+      "datePublished": "2026-09-06",
+      "dateModified": "2026-09-06",
+      "author": {
+        "@type": "Organization",
+        "name": "GreekVisualizer Research"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Uniswap v3 virtual reserve math work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uniswap v3 translates the constant product curve (x * y = k) by offsetting real reserves with virtual reserves. This ensures the curve intersects the axes at finite prices P_a and P_b, allowing all capital to be fully utilized inside that range."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the formula for Uniswap v3 capital efficiency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a symmetrical range centered around the current price, the capital efficiency multiplier compared to Uniswap v2 is given by 1 / (1 - (P_a / P_b)^0.25) or approximately 1 / (1 - sqrt(P_a / P_b)). A +/- 10% range achieves over 20x capital efficiency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When does impermanent loss become permanent on Uniswap v3?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Impermanent loss becomes locked in (permanent) when the liquidity provider withdraws their position while the asset price remains diverged from the initial entry price, or when the price breaches the range and never reverts."
+          }
+        }
+      ]
+    }
+  ]
+});
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonical} schemaJson={schema}>
+  <article class="max-w-4xl mx-auto pt-6 pb-20">
+    <!-- Breadcrumbs -->
+    <nav class="flex items-center space-x-2 text-xs font-mono text-slate-400 mb-6">
+      <a href="/" class="hover:text-emerald-400 transition">Visualizer Hub</a>
+      <span>/</span>
+      <span class="text-slate-200">Uniswap v3 Math</span>
+    </nav>
+
+    <!-- Exactly ONE H1 Tag -->
+    <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-6">
+      Uniswap v3 Concentrated Liquidity &amp; Impermanent Loss Math Guide
+    </h1>
+
+    <p class="text-lg text-slate-300 leading-relaxed mb-8">
+      Analytical mechanics of virtual reserves, tick indices, capital efficiency factors, and non-linear divergence loss in concentrated automated market makers.
+    </p>
+
+    <!-- 45-60 Word Featured Snippet Quick Answer Box with Green Accent Border -->
+    <div class="border-l-4 border-emerald-500 bg-[#0B1324]/90 rounded-r-xl p-5 sm:p-6 text-left shadow-xl shadow-emerald-500/5 my-8">
+      <div class="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider mb-2">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <span>Quick Answer: Concentrated Liquidity Dynamics</span>
+      </div>
+      <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-sans">
+        Uniswap v3 concentrated liquidity allows automated market makers to allocate capital within discrete price boundaries, dramatically maximizing capital efficiency and trading fee generation. However, narrowing tick intervals accelerates divergence loss against pure asset holding. Liquidity providers experience asymmetric gamma profiles equivalent to short options, requiring active rebalancing when prices breach designated ranges.
+      </p>
+    </div>
+
+    <!-- Main Technical Guide Content -->
+    <div class="space-y-12 text-slate-300 leading-relaxed text-sm sm:text-base mt-10">
+
+      <!-- Section 1: The Transition from v2 to v3 -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>1. From Infinite Curves to Bounded Virtual Reserves</span>
+        </h2>
+        <p>
+          In classical constant-product automated market makers like Uniswap v2, liquidity is uniformly allocated along the hyperbolic curve <code class="font-mono text-emerald-400">x &middot; y = k</code> across the entire price spectrum from <code class="font-mono text-emerald-400">0</code> to <code class="font-mono text-emerald-400">&infin;</code>. As a consequence, only a tiny fraction of the total deposited assets is actively traded at any given moment, resulting in severe capital inefficiency and extreme slippage for large orders.
+        </p>
+        <p>
+          Uniswap v3 fundamentally reimagines this curve by allowing liquidity providers (LPs) to concentrate their funds within custom price intervals <code class="font-mono text-emerald-400">[p_a, p_b]</code>. To preserve the computational elegance of the constant-product invariant while bounding real token reserves, Uniswap v3 introduces <em>virtual reserves</em>:
+        </p>
+
+        <pre is:raw class="bg-[#0A101D] border border-slate-800 p-5 rounded-xl font-mono text-xs sm:text-sm text-emerald-300 overflow-x-auto">
+(x + L / sqrt(p_b)) * (y + L * sqrt(p_a)) = L^2
+
+Where:
+L     = Virtual liquidity measure (sqrt(k))
+p_a   = Lower price boundary of position
+p_b   = Upper price boundary of position
+x, y  = Real token balances deposited by the provider
+        </pre>
+        <p>
+          When the current market price $P$ falls precisely on the lower bound $p_a$, the pool holds 100% of token $X$ and 0 of token $Y$. Conversely, when $P$ reaches or exceeds the upper bound $p_b$, the pool holds 100% of token $Y$ and 0 of token $X$.
+        </p>
+      </section>
+
+      <!-- Section 2: Mathematical Derivation of Real Balances -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <span>2. Analytical Derivation of Real Reserve Balances</span>
+        </h2>
+        <p>
+          Given a total virtual liquidity parameter $L$ and active price $P = y / x$, the real reserves $x$ and $y$ held by the position are governed by piecewise continuous equations depending on where $P$ sits relative to the boundaries:
+        </p>
+
+        <div class="bg-[#0A101D] border border-slate-800 p-6 rounded-xl space-y-4">
+          <h3 class="text-base font-bold text-white font-mono">Real Reserves Function Piecewise Matrix</h3>
+          
+          <pre is:raw class="bg-slate-950 p-4 rounded-lg font-mono text-xs text-cyan-300 overflow-x-auto border border-slate-800/80">
+Case 1: P <= p_a (Price collapsed below lower boundary)
+x = L * (1 / sqrt(p_a) - 1 / sqrt(p_b))
+y = 0
+
+Case 2: p_a < P < p_b (Price active within concentrated interval)
+x = L * (1 / sqrt(P) - 1 / sqrt(p_b))
+y = L * (sqrt(P) - sqrt(p_a))
+
+Case 3: P >= p_b (Price rallied above upper boundary)
+x = 0
+y = L * (sqrt(p_b) - sqrt(p_a))
+          </pre>
+        </div>
+
+        <p>
+          The total market valuation $V(P)$ of the position, evaluated in units of asset $Y$ (e.g., USD when pairing ETH/USDC), is given by $V(P) = x \cdot P + y$. Substituting the active case yields:
+        </p>
+
+        <pre is:raw class="bg-[#0A101D] border border-slate-800 p-4 rounded-xl font-mono text-xs sm:text-sm text-indigo-300 overflow-x-auto">
+V(P) = L * (2 * sqrt(P) - sqrt(p_a) - P / sqrt(p_b))
+        </pre>
+      </section>
+
+      <!-- Section 3: Impermanent Loss Derivation -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+          <span>3. Exact Concentrated Impermanent Loss Equation</span>
+        </h2>
+        <p>
+          Impermanent loss measures the difference in total portfolio valuation between providing liquidity in an AMM versus passively holding (<code class="font-mono text-emerald-400">HODL</code>) the exact initial asset quantities deposited at inception $P_0$.
+        </p>
+        <p>
+          Suppose an LP deposits capital at price $P_0 \in (p_a, p_b)$, establishing initial balances $x_0$ and $y_0$. If the price subsequently shifts to $P_1$, the valuation of the passive HODL strategy is:
+        </p>
+
+        <pre is:raw class="bg-[#0A101D] border border-slate-800 p-4 rounded-xl font-mono text-xs sm:text-sm text-rose-300 overflow-x-auto">
+V_HODL(P_1) = x_0 * P_1 + y_0
+            = L * ((1 / sqrt(P_0) - 1 / sqrt(p_b)) * P_1 + (sqrt(P_0) - sqrt(p_a)))
+        </pre>
+
+        <p>
+          Therefore, the exact percentage Impermanent Loss (IL<sub>v3</sub>) is expressed analytically as:
+        </p>
+
+        <pre is:raw class="bg-slate-950 border border-rose-500/40 p-5 rounded-xl font-mono text-xs sm:text-sm text-rose-300 overflow-x-auto">
+IL_v3(P_1) = ( V_pool(P_1) - V_HODL(P_1) ) / V_HODL(P_1)
+
+Where V_pool(P_1) evaluates according to the 3 piecewise price cases.
+        </pre>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left text-xs sm:text-sm border border-slate-800 rounded-xl overflow-hidden font-mono">
+            <thead class="bg-slate-900 text-slate-300 border-b border-slate-800">
+              <tr>
+                <th class="p-3">Price Move</th>
+                <th class="p-3">Uniswap v2 IL</th>
+                <th class="p-3">v3 (+/- 20% Range)</th>
+                <th class="p-3">v3 (+/- 10% Range)</th>
+                <th class="p-3">v3 (+/- 5% Range)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300 bg-[#080E1C]">
+              <tr>
+                <td class="p-3 font-bold text-white">+5%</td>
+                <td class="p-3 text-slate-400">-0.03%</td>
+                <td class="p-3 text-emerald-400">-0.16%</td>
+                <td class="p-3 text-cyan-400">-0.35%</td>
+                <td class="p-3 text-rose-400">-0.98%</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-white">+10%</td>
+                <td class="p-3 text-slate-400">-0.11%</td>
+                <td class="p-3 text-emerald-400">-0.64%</td>
+                <td class="p-3 text-cyan-400">-1.42%</td>
+                <td class="p-3 text-rose-400">-3.95%</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-white">+20%</td>
+                <td class="p-3 text-slate-400">-0.41%</td>
+                <td class="p-3 text-emerald-400">-2.56%</td>
+                <td class="p-3 text-rose-400">-5.82%</td>
+                <td class="p-3 text-rose-400">-8.90%</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-white">+50%</td>
+                <td class="p-3 text-slate-400">-2.02%</td>
+                <td class="p-3 text-rose-400">-11.75%</td>
+                <td class="p-3 text-rose-400">-18.32%</td>
+                <td class="p-3 text-rose-400">-22.10%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 4: Capital Efficiency Multipliers -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>4. Capital Efficiency Multiplier Formulations</span>
+        </h2>
+        <p>
+          The tremendous appeal of Uniswap v3 stems from its ability to simulate vast pools of capital using modest deposits. The capital efficiency factor compares the liquidity L<sub>v3</sub> achieved inside [p_a, p_b] with the capital required to achieve identical depth across [0, &infin;) in Uniswap v2:
+        </p>
+
+        <pre is:raw class="bg-[#0A101D] border border-slate-800 p-4 rounded-xl font-mono text-xs sm:text-sm text-amber-300 overflow-x-auto">
+Capital Efficiency Multiplier (Centered Geometric Mean):
+Multiplier = 1 / (1 - (p_a / p_b)^(1/4))
+
+Or approximate simplified formula:
+Multiplier ~ 1 / (1 - sqrt(p_a / p_b))
+        </pre>
+
+        <p>
+          For instance, if an LP sets a price range of \$1,800 to \$2,200 on ETH around a \$2,000 spot:
+        </p>
+        <ul class="list-disc list-inside space-y-2 pl-2">
+          <li>p_a / p_b = 1800 / 2200 = 0.818</li>
+          <li>&radic;(0.818) = 0.9045</li>
+          <li>Efficiency Multiplier &approx; 1 / (1 - 0.9045) = 10.47&times;</li>
+        </ul>
+        <p>
+          This means \$10,000 deposited into this concentrated range earns the same trading fee volume as \$104,700 deposited in a Uniswap v2 pool, assuming price stays within the boundary!
+        </p>
+      </section>
+
+      <!-- Section 5: The Options Equivalence (Synthetic Short Put) -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+          <span>5. Quantitative Options Equivalence: The Short Strangle / Put Spread</span>
+        </h2>
+        <p>
+          In modern quantitative finance, a concentrated LP position is formally isomorphic to a continuous short option strategy:
+        </p>
+        <ul class="list-disc list-inside space-y-2 pl-2">
+          <li><strong>Short Put Component:</strong> As the asset depreciates toward $p_a$, the LP automatically buys the asset, ending up 100% long at $p_a$.</li>
+          <li><strong>Covered Call Component:</strong> As the asset appreciates toward $p_b$, the LP automatically sells into the quoting asset (cash), capping upside at $p_b$.</li>
+          <li><strong>Option Premium Equivalent:</strong> Continuous protocol trading fees collected by the pool correspond precisely to the theta decay received by an options seller.</li>
+        </ul>
+        <p>
+          By understanding this equivalence, sophisticated market makers hedge their AMM inventory by dynamically shorting futures contracts or buying out-of-the-money puts to maintain delta neutrality.
+        </p>
+      </section>
+
+      <!-- Call to Action Card -->
+      <div class="bg-gradient-to-br from-[#0C1527] to-[#0A101D] border border-emerald-500/30 p-8 rounded-2xl text-center space-y-4 shadow-xl">
+        <h3 class="text-xl font-bold text-white">Model Your Concentrated Liquidity Position</h3>
+        <p class="text-slate-300 text-sm max-w-xl mx-auto">
+          Test real tick boundaries, simulate volatile price swings, and project net fee yields against impermanent loss on the interactive visualizer.
+        </p>
+        <a href="/#calculator" class="inline-flex items-center px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-slate-950 font-bold text-sm shadow-lg shadow-emerald-500/20 transition">
+          Launch Interactive IL Calculator &rarr;
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://groklogtester.pages.dev/sitemap.xml

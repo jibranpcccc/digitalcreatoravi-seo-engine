@@ -1,0 +1,1044 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://site-9-inky.vercel.app/#website",
+      "url": "https://site-9-inky.vercel.app/",
+      "name": "FounderRunway",
+      "description": "Geo-arbitrage calculator and intelligence for bootstrapped software founders.",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://site-9-inky.vercel.app/#calculator",
+      "name": "Bootstrapped Founder Runway & Geo-Arbitrage Calculator",
+      "url": "https://site-9-inky.vercel.app/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web Browser",
+      "description": "Real-time calculator computing startup cash runway extension factor when relocating between high-cost tech capitals and global geo-arbitrage hubs.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://site-9-inky.vercel.app/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is geo-arbitrage for bootstrapped startup founders?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Geo-arbitrage for founders is the strategic relocation from high-cost technology centers (like San Francisco, New York, or London) to low-cost, high-amenity global hubs (such as Chiang Mai, Lisbon, Bali, Tokyo, or Medellin) while earning in hard currencies. By reducing monthly burn from $5,000+ to $1,050–$2,400, founders extend their cash runway by 2.5x to 4.5x without giving up startup equity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Runway Extension Factor (REF) calculate startup viability?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Runway Extension Factor (REF) is calculated as: Baseline Monthly Burn divided by Target Hub Monthly Burn. For example, if your baseline burn in San Francisco is $6,000/month and your burn in Chiang Mai is $1,200/month, your REF is 5.0x. A $36,000 bankroll that would last 6 months in SF extends to 30 months in Thailand, giving you 24 extra months to achieve product-market fit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which country offers the best digital nomad visa for tech founders in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Thailand's Destination Thailand Visa (DTV) is widely considered the top tier in 2026, offering 5-year multiple entry status with 180-day stays per entry for remote workers and founders. Other standout options include Portugal's D8 Digital Nomad Visa, Colombia's V-Nomad Visa, and Indonesia's E33G Remote Worker KITAS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I still owe taxes in my home country while living abroad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "US citizens remain subject to worldwide taxation regardless of residency, but can leverage the Foreign Earned Income Exclusion (FEIE, Form 2555) to exclude up to approximately $126,500 of earned income if meeting the Physical Presence Test (330 days abroad in a 365-day period). Founders from the UK, Canada, and EU must formally break tax residency according to their country's domestic ties and 183-day statutory tests."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the optimal bankroll before moving abroad to build a startup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A minimum liquid reserve of $15,000 to $25,000 provides 12 to 24 months of total runway in tier-one geo-arbitrage hubs like Chiang Mai, Bansko, or Medellin, including health insurance, private apartment leases, visa paperwork, and coworking memberships."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Bootstrapped Founder Runway & Geo-Arbitrage Calculator (2026)"
+  description="Calculate your startup cash runway multiplier by relocating to Chiang Mai, Lisbon, Bali, Tokyo, Medellin, or Bansko. Extend runway by 3.8x without dilutive VC funding."
+  schema={schema}
+>
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-900/40 via-slate-950 to-slate-950">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(16,185,129,0.15),rgba(255,255,255,0))] pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-6">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        Zero Venture Dilution • Default Alive Modeling
+      </div>
+
+      <!-- EXACTLY ONE H1 -->
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.15] mb-6">
+        Bootstrapped Founder Runway & Geo-Arbitrage Calculator
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Quantify exactly how many months of development runway you gain by relocating your desk from high-cost tech capitals to the world's most productive founder hubs.
+      </p>
+
+      <!-- 45-60 Word Featured Snippet Box with Green Accent Border -->
+      <div class="max-w-3xl mx-auto text-left bg-emerald-950/20 border-l-4 border-l-emerald-500 border-y border-r border-emerald-500/30 rounded-xl p-6 shadow-xl shadow-emerald-950/20 mb-12">
+        <div class="flex items-center gap-2 mb-2 text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+          Quick Answer: Founder Geo-Arbitrage Mechanics
+        </div>
+        <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
+          Geo-arbitrage enables bootstrapped founders to multiply startup runway by 2.5x to 4.5x through relocating from high-cost tier-one cities ($4,500–$7,500/month) to global digital enclaves like Chiang Mai, Bali, Bansko, Medellin, Tokyo, or Lisbon ($1,050–$2,400/month). This capital efficiency grants solo founders 18 to 36 additional months to reach product-market fit without diluting equity through venture capital.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Ribbon -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto text-center">
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+          <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono">3.8x</div>
+          <div class="text-xs text-slate-400 mt-1">Average Runway Multiplier</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+          <div class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono">+$3,650</div>
+          <div class="text-xs text-slate-400 mt-1">Monthly Burn Saved</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+          <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono">+22.4 Mo</div>
+          <div class="text-xs text-slate-400 mt-1">Runway Added on $35k</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+          <div class="text-2xl sm:text-3xl font-black text-indigo-400 font-mono">0%</div>
+          <div class="text-xs text-slate-400 mt-1">Founder Equity Given Up</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Runway Calculator Section -->
+  <section id="calculator" class="py-16 bg-slate-950 border-b border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Interactive Startup Runway & Geo-Arbitrage Simulator
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-xl mx-auto">
+          Input your liquid cash balance and current monthly burn, then select a destination hub to model your extended survival horizon.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Controls Panel -->
+        <div class="lg:col-span-6 bg-slate-900/90 border border-slate-800 p-6 sm:p-8 rounded-2xl shadow-2xl space-y-6">
+          <div class="border-b border-slate-800 pb-4">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+              1. Financial Parameters
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">Adjust your liquid assets and current living burn.</p>
+          </div>
+
+          <!-- Liquid Savings Input -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label for="savings-input" class="text-sm font-medium text-slate-200">
+                Liquid Savings / Cash Reserves ($ USD)
+              </label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-mono text-xs">$</span>
+                <input
+                  type="number"
+                  id="savings-input"
+                  min="3000"
+                  max="300000"
+                  step="1000"
+                  value="35000"
+                  class="w-32 bg-slate-950 border border-slate-700 rounded-lg pl-6 pr-3 py-1.5 text-right font-mono text-emerald-400 font-bold text-sm focus:outline-none focus:border-emerald-500"
+                />
+              </div>
+            </div>
+            <input
+              type="range"
+              id="savings-slider"
+              min="3000"
+              max="200000"
+              step="1000"
+              value="35000"
+              class="w-full accent-emerald-500 h-2 bg-slate-800 rounded-lg cursor-pointer"
+            />
+            <div class="flex justify-between text-[11px] text-slate-500 font-mono mt-1">
+              <span>$3,000</span>
+              <span>$50,000</span>
+              <span>$100,000</span>
+              <span>$200,000</span>
+            </div>
+          </div>
+
+          <!-- Current Baseline Burn Input -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label for="current-burn-input" class="text-sm font-medium text-slate-200">
+                Current Tier-1 Monthly Burn ($ USD)
+              </label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 font-mono text-xs">$</span>
+                <input
+                  type="number"
+                  id="current-burn-input"
+                  min="1500"
+                  max="15000"
+                  step="250"
+                  value="5000"
+                  class="w-32 bg-slate-950 border border-slate-700 rounded-lg pl-6 pr-3 py-1.5 text-right font-mono text-rose-400 font-bold text-sm focus:outline-none focus:border-rose-500"
+                />
+              </div>
+            </div>
+            <input
+              type="range"
+              id="current-burn-slider"
+              min="1500"
+              max="12000"
+              step="250"
+              value="5000"
+              class="w-full accent-rose-500 h-2 bg-slate-800 rounded-lg cursor-pointer"
+            />
+            <div class="flex justify-between text-[11px] text-slate-500 font-mono mt-1">
+              <span>$1,500 (Lean)</span>
+              <span>$5,000 (SF/NYC Avg)</span>
+              <span>$12,000 (Heavy)</span>
+            </div>
+          </div>
+
+          <!-- Target Hub Selector -->
+          <div class="pt-2">
+            <label class="block text-sm font-medium text-slate-200 mb-3">
+              Select Geo-Arbitrage Tech Hub:
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5" id="city-selector-buttons">
+              <button
+                type="button"
+                data-city="chiang-mai"
+                class="city-btn p-3 rounded-xl border text-left transition-all border-emerald-500/80 bg-emerald-500/10 text-white shadow-sm ring-1 ring-emerald-500/30"
+              >
+                <div class="text-xs font-semibold flex items-center justify-between">
+                  <span>Chiang Mai</span>
+                  <span>🇹🇭</span>
+                </div>
+                <div class="text-[11px] text-emerald-400 font-mono mt-1 font-bold">$1,150/mo</div>
+              </button>
+
+              <button
+                type="button"
+                data-city="lisbon"
+                class="city-btn p-3 rounded-xl border text-left transition-all border-slate-800 bg-slate-950/60 text-slate-300 hover:border-slate-700 hover:text-white"
+              >
+                <div class="text-xs font-semibold flex items-center justify-between">
+                  <span>Lisbon</span>
+                  <span>🇵🇹</span>
+                </div>
+                <div class="text-[11px] text-slate-400 font-mono mt-1 font-bold">$2,250/mo</div>
+              </button>
+
+              <button
+                type="button"
+                data-city="bali"
+                class="city-btn p-3 rounded-xl border text-left transition-all border-slate-800 bg-slate-950/60 text-slate-300 hover:border-slate-700 hover:text-white"
+              >
+                <div class="text-xs font-semibold flex items-center justify-between">
+                  <span>Bali</span>
+                  <span>🇮🇩</span>
+                </div>
+                <div class="text-[11px] text-slate-400 font-mono mt-1 font-bold">$1,450/mo</div>
+              </button>
+
+              <button
+                type="button"
+                data-city="tokyo"
+                class="city-btn p-3 rounded-xl border text-left transition-all border-slate-800 bg-slate-950/60 text-slate-300 hover:border-slate-700 hover:text-white"
+              >
+                <div class="text-xs font-semibold flex items-center justify-between">
+                  <span>Tokyo</span>
+                  <span>🇯🇵</span>
+                </div>
+                <div class="text-[11px] text-slate-400 font-mono mt-1 font-bold">$2,400/mo</div>
+              </button>
+
+              <button
+                type="button"
+                data-city="medellin"
+                class="city-btn p-3 rounded-xl border text-left transition-all border-slate-800 bg-slate-950/60 text-slate-300 hover:border-slate-700 hover:text-white"
+              >
+                <div class="text-xs font-semibold flex items-center justify-between">
+                  <span>Medellin</span>
+                  <span>🇨🇴</span>
+                </div>
+                <div class="text-[11px] text-slate-400 font-mono mt-1 font-bold">$1,350/mo</div>
+              </button>
+
+              <button
+                type="button"
+                data-city="bansko"
+                class="city-btn p-3 rounded-xl border text-left transition-all border-slate-800 bg-slate-950/60 text-slate-300 hover:border-slate-700 hover:text-white"
+              >
+                <div class="text-xs font-semibold flex items-center justify-between">
+                  <span>Bansko</span>
+                  <span>🇧🇬</span>
+                </div>
+                <div class="text-[11px] text-slate-400 font-mono mt-1 font-bold">$1,050/mo</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Fine-tune Hub Burn Rate -->
+          <div class="pt-2 border-t border-slate-800/80">
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="text-xs text-slate-300 font-medium">Fine-Tune Relocated Monthly Burn:</span>
+              <span id="custom-burn-display" class="font-mono text-xs font-bold text-emerald-400">$1,150/mo</span>
+            </div>
+            <input
+              type="range"
+              id="custom-burn-slider"
+              min="800"
+              max="4000"
+              step="50"
+              value="1150"
+              class="w-full accent-emerald-400 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+            />
+            <p class="text-[11px] text-slate-500 mt-1">Covers 1-bed condo, fiber coworking, healthy food, health insurance, and local transport.</p>
+          </div>
+        </div>
+
+        <!-- Real-Time Results Display -->
+        <div class="lg:col-span-6 space-y-6">
+          <!-- Primary Outcome Card -->
+          <div class="bg-gradient-to-br from-slate-900 via-slate-900/90 to-emerald-950/30 border border-emerald-500/30 p-6 sm:p-8 rounded-2xl shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                Runway Multiplier
+              </span>
+              <span id="city-badge" class="text-xs font-medium text-slate-300 flex items-center gap-1.5">
+                <span id="city-flag">🇹🇭</span>
+                <span id="city-name-label">Chiang Mai, Thailand</span>
+              </span>
+            </div>
+
+            <!-- Massive Multiplier Display -->
+            <div class="flex items-baseline gap-3 my-3">
+              <span id="multiplier-value" class="text-5xl sm:text-6xl font-black tracking-tight text-white font-mono">
+                4.3x
+              </span>
+              <div class="text-xs sm:text-sm text-emerald-400 font-medium leading-tight">
+                Runway Extension<br/>
+                <span id="months-added-label" class="text-slate-300 font-bold font-mono">+23.4 months gained</span>
+              </div>
+            </div>
+
+            <!-- Before vs After Comparison Bars -->
+            <div class="space-y-3 mt-6 pt-5 border-t border-slate-800">
+              <!-- Baseline Tier-1 -->
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span class="text-slate-400">Current Runway (Tier-1 City):</span>
+                  <span id="baseline-months-txt" class="font-mono text-rose-400 font-bold">7.0 Months</span>
+                </div>
+                <div class="w-full bg-slate-950 rounded-full h-3 overflow-hidden border border-slate-800">
+                  <div id="baseline-bar" class="bg-rose-500 h-full rounded-full transition-all duration-300" style="width: 23%;"></div>
+                </div>
+              </div>
+
+              <!-- Relocated Runway -->
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span class="text-slate-300 font-medium">Relocated Runway (<span id="relocated-city-short">Chiang Mai</span>):</span>
+                  <span id="relocated-months-txt" class="font-mono text-emerald-400 font-bold">30.4 Months</span>
+                </div>
+                <div class="w-full bg-slate-950 rounded-full h-3 overflow-hidden border border-slate-800">
+                  <div id="relocated-bar" class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full transition-all duration-300" style="width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Detailed Preserved Capital Numbers -->
+            <div class="grid grid-cols-2 gap-3 mt-6 pt-5 border-t border-slate-800 text-xs">
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80">
+                <span class="text-slate-400 block text-[11px]">Monthly Burn Saved</span>
+                <span id="monthly-saved-txt" class="text-base sm:text-lg font-bold text-emerald-400 font-mono">+$3,850/mo</span>
+              </div>
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80">
+                <span class="text-slate-400 block text-[11px]">Annual Cash Preserved</span>
+                <span id="annual-saved-txt" class="text-base sm:text-lg font-bold text-cyan-400 font-mono">+$46,200/yr</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Itemized Monthly Expense Breakdown for Selected City -->
+          <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl shadow-xl">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 font-mono flex items-center justify-between">
+              <span>Itemized Founder Budget: <span id="budget-city-name" class="text-white">Chiang Mai</span></span>
+              <span class="text-emerald-400 font-mono text-xs">100% Verified 2026</span>
+            </h4>
+
+            <div class="space-y-2.5 text-xs">
+              <div class="flex justify-between items-center py-1.5 border-b border-slate-800/60">
+                <span class="text-slate-300 flex items-center gap-2">
+                  <span>🏢</span> Modern 1-Bed Condo / Apartment
+                </span>
+                <span id="budget-rent" class="font-mono text-white font-semibold">$420</span>
+              </div>
+
+              <div class="flex justify-between items-center py-1.5 border-b border-slate-800/60">
+                <span class="text-slate-300 flex items-center gap-2">
+                  <span>⚡</span> Dedicated Desk Coworking (500Mbps+)
+                </span>
+                <span id="budget-coworking" class="font-mono text-white font-semibold">$110</span>
+              </div>
+
+              <div class="flex justify-between items-center py-1.5 border-b border-slate-800/60">
+                <span class="text-slate-300 flex items-center gap-2">
+                  <span>🍲</span> Dining, Specialty Coffee & Groceries
+                </span>
+                <span id="budget-food" class="font-mono text-white font-semibold">$340</span>
+              </div>
+
+              <div class="flex justify-between items-center py-1.5 border-b border-slate-800/60">
+                <span class="text-slate-300 flex items-center gap-2">
+                  <span>🏥</span> Expat Health Insurance (SafetyWing/Allianz)
+                </span>
+                <span id="budget-health" class="font-mono text-white font-semibold">$140</span>
+              </div>
+
+              <div class="flex justify-between items-center py-1.5">
+                <span class="text-slate-300 flex items-center gap-2">
+                  <span>🛵</span> Scooter / Transport, SIM & Visa Amortization
+                </span>
+                <span id="budget-transport" class="font-mono text-white font-semibold">$140</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive Comparison Matrix Section -->
+  <section class="py-16 bg-slate-900/40 border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          2026 Bootstrapped Founder Hub Comparison Matrix
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Comparative benchmarks across living costs, fiber connectivity, visa longevity, timezone alignment, and tax optimization.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-950/90 shadow-2xl">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-900/90 border-b border-slate-800 text-[11px] uppercase tracking-wider text-slate-400 font-mono">
+            <tr>
+              <th class="p-4">Tech Hub & Country</th>
+              <th class="p-4">Est. Founder Burn</th>
+              <th class="p-4">Runway on $30k</th>
+              <th class="p-4">Fiber & Coworking</th>
+              <th class="p-4">Visa Route (2026)</th>
+              <th class="p-4">Timezone vs US/EU</th>
+              <th class="p-4">Tax Environment</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 font-medium">
+            <tr class="hover:bg-slate-900/50 transition-colors">
+              <td class="p-4">
+                <div class="font-bold text-white flex items-center gap-2">
+                  <span>🇹🇭</span> Chiang Mai, Thailand
+                </div>
+                <div class="text-[11px] text-slate-400">Nimman / Santitham</div>
+              </td>
+              <td class="p-4 font-mono font-bold text-emerald-400">$1,150/mo</td>
+              <td class="p-4 font-mono text-white">26.1 Months</td>
+              <td class="p-4">
+                <div class="text-emerald-400 font-semibold">1,000 Mbps Fiber</div>
+                <div class="text-[11px] text-slate-400">Alt_ChiangMai, Yellow</div>
+              </td>
+              <td class="p-4">
+                <span class="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[11px]">
+                  DTV (5-Yr Multiple)
+                </span>
+              </td>
+              <td class="p-4">UTC+7 (11h vs EST, 6h vs CET)</td>
+              <td class="p-4 text-[11px] text-slate-300">Foreign income remittance exemption rules</td>
+            </tr>
+
+            <tr class="hover:bg-slate-900/50 transition-colors">
+              <td class="p-4">
+                <div class="font-bold text-white flex items-center gap-2">
+                  <span>🇧🇬</span> Bansko, Bulgaria
+                </div>
+                <div class="text-[11px] text-slate-400">Pirin Mountain Tech Hub</div>
+              </td>
+              <td class="p-4 font-mono font-bold text-emerald-400">$1,050/mo</td>
+              <td class="p-4 font-mono text-white">28.5 Months</td>
+              <td class="p-4">
+                <div class="text-emerald-400 font-semibold">500 Mbps Fiber</div>
+                <div class="text-[11px] text-slate-400">Coworking Bansko</div>
+              </td>
+              <td class="p-4">
+                <span class="px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[11px]">
+                  EU Freedom of Movement / D Visa
+                </span>
+              </td>
+              <td class="p-4">UTC+2 (1h ahead of CET, 7h vs EST)</td>
+              <td class="p-4 text-[11px] text-slate-300">10% Flat Corporate & Personal Tax (EU lowest)</td>
+            </tr>
+
+            <tr class="hover:bg-slate-900/50 transition-colors">
+              <td class="p-4">
+                <div class="font-bold text-white flex items-center gap-2">
+                  <span>🇨🇴</span> Medellin, Colombia
+                </div>
+                <div class="text-[11px] text-slate-400">El Poblado / Laureles</div>
+              </td>
+              <td class="p-4 font-mono font-bold text-emerald-400">$1,350/mo</td>
+              <td class="p-4 font-mono text-white">22.2 Months</td>
+              <td class="p-4">
+                <div class="text-cyan-400 font-semibold">300-500 Mbps Fiber</div>
+                <div class="text-[11px] text-slate-400">Selina, Semillero</div>
+              </td>
+              <td class="p-4">
+                <span class="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[11px]">
+                  V-Nomad Visa (2 Years)
+                </span>
+              </td>
+              <td class="p-4">UTC-5 (Identical to US EST)</td>
+              <td class="p-4 text-[11px] text-slate-300">183-day worldwide tax trigger threshold</td>
+            </tr>
+
+            <tr class="hover:bg-slate-900/50 transition-colors">
+              <td class="p-4">
+                <div class="font-bold text-white flex items-center gap-2">
+                  <span>🇮🇩</span> Bali, Indonesia
+                </div>
+                <div class="text-[11px] text-slate-400">Canggu / Pererenan / Ubud</div>
+              </td>
+              <td class="p-4 font-mono font-bold text-emerald-400">$1,450/mo</td>
+              <td class="p-4 font-mono text-white">20.7 Months</td>
+              <td class="p-4">
+                <div class="text-amber-400 font-semibold">100-200 Mbps (Weather)</div>
+                <div class="text-[11px] text-slate-400">Tropical Nomad, BWork</div>
+              </td>
+              <td class="p-4">
+                <span class="px-2 py-0.5 rounded bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[11px]">
+                  E33G Remote Worker KITAS
+                </span>
+              </td>
+              <td class="p-4">UTC+8 (12h vs EST, 7h vs CET)</td>
+              <td class="p-4 text-[11px] text-slate-300">Territorial tax regime if foreign income unremitted</td>
+            </tr>
+
+            <tr class="hover:bg-slate-900/50 transition-colors">
+              <td class="p-4">
+                <div class="font-bold text-white flex items-center gap-2">
+                  <span>🇵🇹</span> Lisbon, Portugal
+                </div>
+                <div class="text-[11px] text-slate-400">Saldanha / Santos / Ericeira</div>
+              </td>
+              <td class="p-4 font-mono font-bold text-slate-200">$2,250/mo</td>
+              <td class="p-4 font-mono text-white">13.3 Months</td>
+              <td class="p-4">
+                <div class="text-emerald-400 font-semibold">1,000 Mbps Fiber</div>
+                <div class="text-[11px] text-slate-400">Second Home, LACS</div>
+              </td>
+              <td class="p-4">
+                <span class="px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[11px]">
+                  D8 Digital Nomad Visa
+                </span>
+              </td>
+              <td class="p-4">UTC+0 (5h vs EST, identical to London)</td>
+              <td class="p-4 text-[11px] text-slate-300">IFICI / NHR 2.0 (20% flat tech qualifying rate)</td>
+            </tr>
+
+            <tr class="hover:bg-slate-900/50 transition-colors">
+              <td class="p-4">
+                <div class="font-bold text-white flex items-center gap-2">
+                  <span>🇯🇵</span> Tokyo, Japan
+                </div>
+                <div class="text-[11px] text-slate-400">Shibuya / Shimokitazawa</div>
+              </td>
+              <td class="p-4 font-mono font-bold text-slate-200">$2,400/mo</td>
+              <td class="p-4 font-mono text-white">12.5 Months</td>
+              <td class="p-4">
+                <div class="text-emerald-400 font-semibold">2,000 Mbps Fiber</div>
+                <div class="text-[11px] text-slate-400">WeWork Iceberg, Blink</div>
+              </td>
+              <td class="p-4">
+                <span class="px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-[11px]">
+                  Digital Nomad Visa (6 Months)
+                </span>
+              </td>
+              <td class="p-4">UTC+9 (13h vs EST, 8h vs CET)</td>
+              <td class="p-4 text-[11px] text-slate-300">Non-permanent resident exclusion on offshore funds</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-4 text-right">
+        <p class="text-[11px] text-slate-500 italic">
+          *Estimates based on private single-occupancy modern accommodation, full-time coworking membership, daily healthy nutrition, and comprehensive expat health insurance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Dive Content & Strategic Framework -->
+  <section class="py-16 bg-slate-950 border-b border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="prose prose-invert max-w-none space-y-12">
+        <!-- Section 1 -->
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-4">
+            The Mathematics of Startup "Default Alive"
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+            Paul Graham coined the concept of <em>"Default Alive"</em>: assuming revenues remain constant and expenses stay flat, does your startup reach profitability before your bank account hits zero?
+          </p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+            In tier-one cities like San Francisco, London, or New York, the average solo bootstrapper burns between $4,500 and $7,000 per month just to cover rent, basic groceries, health coverage, and local transit. On a modest self-funded nest egg of $35,000, your survival clock ticks down in under <strong>6.5 months</strong>. This extreme burn forces premature monetization, poor product choices, or frantic fundraising pitches to VC firms that dilute your ownership.
+          </p>
+          <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 my-6">
+            <h4 class="text-white font-bold text-sm mb-2">The Geo-Arbitrage Equation:</h4>
+            <div class="font-mono text-emerald-400 text-sm sm:text-base bg-slate-950 p-3 rounded-lg border border-slate-800">
+              Runway (Months) = Total Liquid Reserves / (Relocated Rent + Coworking + Sustenance + Insurance)
+            </div>
+            <p class="text-xs text-slate-400 mt-2">
+              Dropping monthly burn to $1,150 in Chiang Mai expands that same $35,000 bankroll into <strong>30.4 months of uninterrupted focus</strong>. You transform a 6-month panic sprint into a 2.5-year engineering marathon.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-4">
+            The Three Critical Dimensions of Bootstrapper Hub Selection
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
+            <div class="p-5 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="text-xl mb-2">⚡</div>
+              <h3 class="text-white font-bold text-base mb-1.5">1. Connectivity SLA</h3>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                A bootstrapped developer cannot afford unstable Wi-Fi. While Bali offers unmatched lifestyle, rolling fiber cuts during monsoons require mobile hotspot failovers. Chiang Mai, Tokyo, and Bansko deliver uninterrupted gigabit fiber connections.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="text-xl mb-2">⏰</div>
+              <h3 class="text-white font-bold text-base mb-1.5">2. Timezone Ergonomics</h3>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                If your SaaS targets North American enterprise buyers, living in Southeast Asia forces midnight sales demos. Medellin and Mexico City operate on Eastern and Central time, allowing daylight customer discovery calls.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="text-xl mb-2">🛡️</div>
+              <h3 class="text-white font-bold text-base mb-1.5">3. Legal Visa Durability</h3>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                Perpetual visa runs introduce mental anxiety and border friction. Modern hubs now offer legal remote worker tracks, including the 5-year Thai DTV, Colombian V-Nomad visa, and Portuguese D8 visa.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: Tax Compliance & Corporate Structuring -->
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-4">
+            Tax Compliance & Corporate Structuring (FEIE, 183 Days & CFCs)
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+            Geo-arbitrage is not tax evasion; it is the strategic optimization of your physical tax residency and corporate entity structure.
+          </p>
+          <ul class="space-y-3 text-slate-300 text-sm">
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><strong>US Founders (FEIE):</strong> The Foreign Earned Income Exclusion allows qualifying expats living outside the US for 330 full days out of any 365-day period to exclude up to ~$126,500 of earned income from federal taxation.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><strong>European & Commonwealth Founders:</strong> Most Western jurisdictions trigger tax residency if you spend more than 183 days inside their borders or retain primary economic and family ties. Establishing tax residency in low-tax jurisdictions like Bulgaria (10% flat) or using non-dom frameworks provides legal clarity.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><strong>Delaware C-Corp / LLC Operations:</strong> You can operate a US LLC or Wyoming entity while residing in Thailand or Colombia, receiving Stripe payouts globally into borderless multi-currency business accounts (Wise, Mercury).</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Deep-Dive Guides Directory -->
+  <section class="py-16 bg-slate-900/20 border-b border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Specialized Regional Playbooks
+          </h2>
+          <p class="text-slate-400 text-sm mt-1">
+            Exhaustive, boots-on-the-ground guides written for independent builders.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <a href="/chiang-mai-vs-bali-runway-calculator/" class="group block p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-900 transition-all duration-300">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            🌴
+          </div>
+          <span class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-semibold">Comparative Analysis</span>
+          <h3 class="text-lg font-bold text-white mt-1 mb-2 group-hover:text-emerald-400 transition-colors">
+            Chiang Mai vs Bali: Bootstrapper Cost & Focus Audit
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed line-clamp-3">
+            Detailed ledger comparing Nimman vs Canggu/Ubud, 1Gbps fiber vs monsoon outages, Thai DTV vs Indonesian E33G remote visas, and deep coding sprint cultures.
+          </p>
+          <div class="mt-4 text-xs text-emerald-400 font-semibold flex items-center gap-1">
+            Read Full Guide <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="/lisbon-nhr-tax-runway-founder-guide/" class="group block p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 hover:bg-slate-900 transition-all duration-300">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            🇵🇹
+          </div>
+          <span class="text-[11px] font-mono text-blue-400 uppercase tracking-wider font-semibold">European Tech & Tax</span>
+          <h3 class="text-lg font-bold text-white mt-1 mb-2 group-hover:text-blue-400 transition-colors">
+            Lisbon Founder Runway: NHR 2.0 & D8 Nomad Guide
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed line-clamp-3">
+            Navigating Portugal's post-NHR IFICI tax regime, D8 nomad visa income hurdles, true Lisbon rent benchmarks, and Western European time zone leverage.
+          </p>
+          <div class="mt-4 text-xs text-blue-400 font-semibold flex items-center gap-1">
+            Read Full Guide <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="/top-latin-america-tech-hubs-for-bootstrappers/" class="group block p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-900 transition-all duration-300">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            🌎
+          </div>
+          <span class="text-[11px] font-mono text-amber-400 uppercase tracking-wider font-semibold">Timezone Arbitrage</span>
+          <h3 class="text-lg font-bold text-white mt-1 mb-2 group-hover:text-amber-400 transition-colors">
+            Top Latin America Tech Hubs for Bootstrappers
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed line-clamp-3">
+            Direct US East/Central timezone alignment in Medellin, CDMX, Buenos Aires, and Florianópolis. Build B2B SaaS without nocturnal sales demos.
+          </p>
+          <div class="mt-4 text-xs text-amber-400 font-semibold flex items-center gap-1">
+            Read Full Guide <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-slate-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-slate-400 text-sm mt-1">
+          Everything bootstrappers need to know about founder runway, legalities, and lifestyle execution.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm sm:text-base">
+            <span>What is geo-arbitrage for bootstrapped startup founders?</span>
+            <span class="text-emerald-400 text-lg transition-transform group-open:rotate-180">↓</span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Geo-arbitrage for founders is the strategic relocation from high-cost technology centers (like San Francisco, New York, or London) to low-cost, high-amenity global hubs (such as Chiang Mai, Lisbon, Bali, Tokyo, or Medellin) while earning in hard currencies. By reducing monthly burn from $5,000+ to $1,050–$2,400, founders extend their cash runway by 2.5x to 4.5x without giving up startup equity.
+          </p>
+        </details>
+
+        <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm sm:text-base">
+            <span>How does the Runway Extension Factor (REF) calculate startup viability?</span>
+            <span class="text-emerald-400 text-lg transition-transform group-open:rotate-180">↓</span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            The Runway Extension Factor (REF) is calculated as: Baseline Monthly Burn divided by Target Hub Monthly Burn. For example, if your baseline burn in San Francisco is $6,000/month and your burn in Chiang Mai is $1,200/month, your REF is 5.0x. A $36,000 bankroll that would last 6 months in SF extends to 30 months in Thailand, giving you 24 extra months to achieve product-market fit.
+          </p>
+        </details>
+
+        <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm sm:text-base">
+            <span>Which country offers the best digital nomad visa for tech founders in 2026?</span>
+            <span class="text-emerald-400 text-lg transition-transform group-open:rotate-180">↓</span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Thailand's Destination Thailand Visa (DTV) is widely considered the top tier in 2026, offering 5-year multiple entry status with 180-day stays per entry for remote workers and founders. Other standout options include Portugal's D8 Digital Nomad Visa, Colombia's V-Nomad Visa, and Indonesia's E33G Remote Worker KITAS.
+          </p>
+        </details>
+
+        <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm sm:text-base">
+            <span>Do I still owe taxes in my home country while living abroad?</span>
+            <span class="text-emerald-400 text-lg transition-transform group-open:rotate-180">↓</span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            US citizens remain subject to worldwide taxation regardless of residency, but can leverage the Foreign Earned Income Exclusion (FEIE, Form 2555) to exclude up to approximately $126,500 of earned income if meeting the Physical Presence Test (330 days abroad in a 365-day period). Founders from the UK, Canada, and EU must formally break tax residency according to their country's domestic ties and 183-day statutory tests.
+          </p>
+        </details>
+
+        <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm sm:text-base">
+            <span>What is the optimal bankroll before moving abroad to build a startup?</span>
+            <span class="text-emerald-400 text-lg transition-transform group-open:rotate-180">↓</span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            A minimum liquid reserve of $15,000 to $25,000 provides 12 to 24 months of total runway in tier-one geo-arbitrage hubs like Chiang Mai, Bansko, or Medellin, including health insurance, private apartment leases, visa paperwork, and coworking memberships.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client-Side Runway Calculator Logic -->
+  <script is:inline>
+    (function initRunwayCalculator() {
+      const cityData = {
+        'chiang-mai': {
+          name: 'Chiang Mai, Thailand',
+          short: 'Chiang Mai',
+          flag: '🇹🇭',
+          baseBurn: 1150,
+          rent: 420,
+          coworking: 110,
+          food: 340,
+          health: 140,
+          transport: 140
+        },
+        'lisbon': {
+          name: 'Lisbon, Portugal',
+          short: 'Lisbon',
+          flag: '🇵🇹',
+          baseBurn: 2250,
+          rent: 1250,
+          coworking: 220,
+          food: 480,
+          health: 150,
+          transport: 150
+        },
+        'bali': {
+          name: 'Bali, Indonesia',
+          short: 'Bali',
+          flag: '🇮🇩',
+          baseBurn: 1450,
+          rent: 680,
+          coworking: 160,
+          food: 380,
+          health: 120,
+          transport: 110
+        },
+        'tokyo': {
+          name: 'Tokyo, Japan',
+          short: 'Tokyo',
+          flag: '🇯🇵',
+          baseBurn: 2400,
+          rent: 1100,
+          coworking: 200,
+          food: 650,
+          health: 250,
+          transport: 200
+        },
+        'medellin': {
+          name: 'Medellin, Colombia',
+          short: 'Medellin',
+          flag: '🇨🇴',
+          baseBurn: 1350,
+          rent: 580,
+          coworking: 150,
+          food: 380,
+          health: 120,
+          transport: 120
+        },
+        'bansko': {
+          name: 'Bansko, Bulgaria',
+          short: 'Bansko',
+          flag: '🇧🇬',
+          baseBurn: 1050,
+          rent: 380,
+          coworking: 130,
+          food: 320,
+          health: 110,
+          transport: 110
+        }
+      };
+
+      let selectedCityKey = 'chiang-mai';
+      let currentBurnRate = cityData[selectedCityKey].baseBurn;
+
+      // DOM Elements
+      const savingsInput = document.getElementById('savings-input');
+      const savingsSlider = document.getElementById('savings-slider');
+      const currentBurnInput = document.getElementById('current-burn-input');
+      const currentBurnSlider = document.getElementById('current-burn-slider');
+      const customBurnSlider = document.getElementById('custom-burn-slider');
+      const customBurnDisplay = document.getElementById('custom-burn-display');
+
+      const multiplierValue = document.getElementById('multiplier-value');
+      const monthsAddedLabel = document.getElementById('months-added-label');
+      const baselineMonthsTxt = document.getElementById('baseline-months-txt');
+      const relocatedMonthsTxt = document.getElementById('relocated-months-txt');
+      const baselineBar = document.getElementById('baseline-bar');
+      const relocatedBar = document.getElementById('relocated-bar');
+      const monthlySavedTxt = document.getElementById('monthly-saved-txt');
+      const annualSavedTxt = document.getElementById('annual-saved-txt');
+
+      const cityBadge = document.getElementById('city-badge');
+      const cityFlag = document.getElementById('city-flag');
+      const cityNameLabel = document.getElementById('city-name-label');
+      const relocatedCityShort = document.getElementById('relocated-city-short');
+      const budgetCityName = document.getElementById('budget-city-name');
+
+      const budgetRent = document.getElementById('budget-rent');
+      const budgetCoworking = document.getElementById('budget-coworking');
+      const budgetFood = document.getElementById('budget-food');
+      const budgetHealth = document.getElementById('budget-health');
+      const budgetTransport = document.getElementById('budget-transport');
+
+      const cityButtons = document.querySelectorAll('.city-btn');
+
+      function updateCalculations() {
+        const savings = parseFloat(savingsInput.value) || 35000;
+        const baselineBurn = parseFloat(currentBurnInput.value) || 5000;
+        const hubBurn = parseFloat(customBurnSlider.value) || 1150;
+
+        const baselineMonths = savings / baselineBurn;
+        const relocatedMonths = savings / hubBurn;
+        const multiplier = relocatedMonths / baselineMonths;
+        const monthsAdded = relocatedMonths - baselineMonths;
+        const monthlySaved = Math.max(0, baselineBurn - hubBurn);
+        const annualSaved = monthlySaved * 12;
+
+        multiplierValue.textContent = multiplier.toFixed(1) + 'x';
+        monthsAddedLabel.textContent = (monthsAdded >= 0 ? '+' : '') + monthsAdded.toFixed(1) + ' months gained';
+        baselineMonthsTxt.textContent = baselineMonths.toFixed(1) + ' Months';
+        relocatedMonthsTxt.textContent = relocatedMonths.toFixed(1) + ' Months';
+
+        monthlySavedTxt.textContent = '+$' + Math.round(monthlySaved).toLocaleString() + '/mo';
+        annualSavedTxt.textContent = '+$' + Math.round(annualSaved).toLocaleString() + '/yr';
+
+        // Calculate progress bar percentages
+        const maxMonths = Math.max(baselineMonths, relocatedMonths, 36);
+        const baselinePct = Math.min(100, Math.max(8, (baselineMonths / maxMonths) * 100));
+        const relocatedPct = Math.min(100, Math.max(8, (relocatedMonths / maxMonths) * 100));
+
+        baselineBar.style.width = baselinePct + '%';
+        relocatedBar.style.width = relocatedPct + '%';
+      }
+
+      function updateCityBudget(key) {
+        const city = cityData[key];
+        if (!city) return;
+
+        selectedCityKey = key;
+        customBurnSlider.value = city.baseBurn;
+        customBurnDisplay.textContent = '$' + city.baseBurn.toLocaleString() + '/mo';
+
+        cityFlag.textContent = city.flag;
+        cityNameLabel.textContent = city.name;
+        relocatedCityShort.textContent = city.short;
+        budgetCityName.textContent = city.short;
+
+        budgetRent.textContent = '$' + city.rent;
+        budgetCoworking.textContent = '$' + city.coworking;
+        budgetFood.textContent = '$' + city.food;
+        budgetHealth.textContent = '$' + city.health;
+        budgetTransport.textContent = '$' + city.transport;
+
+        // Button state classes
+        cityButtons.forEach(btn => {
+          if (btn.dataset.city === key) {
+            btn.className = 'city-btn p-3 rounded-xl border text-left transition-all border-emerald-500/80 bg-emerald-500/10 text-white shadow-sm ring-1 ring-emerald-500/30';
+            const priceDiv = btn.querySelector('.font-mono');
+            if (priceDiv) {
+              priceDiv.className = 'text-[11px] text-emerald-400 font-mono mt-1 font-bold';
+            }
+          } else {
+            btn.className = 'city-btn p-3 rounded-xl border text-left transition-all border-slate-800 bg-slate-950/60 text-slate-300 hover:border-slate-700 hover:text-white';
+            const priceDiv = btn.querySelector('.font-mono');
+            if (priceDiv) {
+              priceDiv.className = 'text-[11px] text-slate-400 font-mono mt-1 font-bold';
+            }
+          }
+        });
+
+        updateCalculations();
+      }
+
+      // Event Listeners
+      savingsInput.addEventListener('input', () => {
+        savingsSlider.value = savingsInput.value;
+        updateCalculations();
+      });
+
+      savingsSlider.addEventListener('input', () => {
+        savingsInput.value = savingsSlider.value;
+        updateCalculations();
+      });
+
+      currentBurnInput.addEventListener('input', () => {
+        currentBurnSlider.value = currentBurnInput.value;
+        updateCalculations();
+      });
+
+      currentBurnSlider.addEventListener('input', () => {
+        currentBurnInput.value = currentBurnSlider.value;
+        updateCalculations();
+      });
+
+      customBurnSlider.addEventListener('input', () => {
+        customBurnDisplay.textContent = '$' + parseInt(customBurnSlider.value, 10).toLocaleString() + '/mo';
+        updateCalculations();
+      });
+
+      cityButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          updateCityBudget(btn.dataset.city);
+        });
+      });
+
+      // Initialize
+      updateCityBudget('chiang-mai');
+    })();
+  </script>
+</Layout>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nomadpassportindex.netlify.app/sitemap.xml

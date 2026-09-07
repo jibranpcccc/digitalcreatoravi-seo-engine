@@ -1,0 +1,1204 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://site-18-chi.vercel.app/#application",
+      "name": "CIPipelineGraph",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Interactive client-side CI/CD pipeline DAG dependency visualizer, cycle detector, and GitHub Actions workflow syntax validator.",
+      "url": "https://site-18-chi.vercel.app/"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://site-18-chi.vercel.app/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a DAG in CI/CD pipelines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Directed Acyclic Graph (DAG) in continuous integration models jobs as nodes and execution dependencies as directed edges without closed loops. Unlike strict linear stages, a DAG allows downstream jobs to trigger the millisecond their specific prerequisites finish, maximizing runner concurrency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the 'needs' keyword work in GitHub Actions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In GitHub Actions, the 'needs' key defines prerequisite jobs that must succeed before a job starts. Supplying an array like 'needs: [lint, unit-test]' instructs GitHub's workflow orchestrator to defer execution until all listed dependencies finish with a 0 exit status."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What causes circular dependency deadlocks in CI workflows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Circular dependencies occur when two or more jobs depend on each other directly or transitively (e.g., Job A needs Job B, and Job B needs Job A). Continuous integration orchestrators will reject or freeze the run indefinitely because neither job can satisfy its start precondition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much money can DAG pipeline optimization save on GitHub Actions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By shifting from sequential stages to a dependency DAG and eliminating unnecessary blocking, engineering teams reduce billable runner wall-clock duration by 30% to 55%, preventing idle runner minute billing across large matrix test suites."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="CI/CD Pipeline Visualizer & GitHub Actions DAG Validator | CIPipelineGraph"
+  description="Validate and visualize GitHub Actions workflows and CI/CD pipelines as interactive Directed Acyclic Graphs (DAG). Detect dependency cycles, calculate critical paths, and benchmark runner costs."
+  canonical="https://site-18-chi.vercel.app/"
+  schemaJson={JSON.stringify(schemaData)}
+>
+  <!-- Hero Section -->
+  <section class="pt-6 pb-12 text-center max-w-4xl mx-auto">
+    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono mb-6">
+      <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+      <span>Zero-Latency In-Browser DAG Graph Engine</span>
+    </div>
+
+    <!-- Exactly ONE H1 -->
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
+      CI/CD Pipeline Visualizer & <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-emerald-400">GitHub Actions DAG</span> Validator
+    </h1>
+
+    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-8">
+      Parse workflow YAML, detect circular dependency deadlocks, map critical path bottlenecks, and optimize execution concurrency across your build matrix.
+    </p>
+
+    <!-- 45-60 Word Featured Snippet Quick Answer Box with Green Accent Border -->
+    <div class="border-l-4 border-emerald-500 bg-emerald-950/20 rounded-r-xl p-5 text-left max-w-3xl mx-auto mb-10 shadow-lg shadow-emerald-950/30 backdrop-blur-sm">
+      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-emerald-400 mb-2">
+        <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg>
+        <span>Quick Answer • CI/CD DAG Pipeline Mechanics</span>
+      </div>
+      <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
+        A CI/CD Pipeline Visualizer converts GitHub Actions and GitLab CI workflow configurations into an interactive Directed Acyclic Graph (DAG). By parsing job dependencies declared under the needs key, it validates workflow integrity, identifies circular dependency deadlocks, isolates critical paths, and computes maximum job concurrency before code executes on billable runner infrastructure.
+      </p>
+    </div>
+
+    <!-- Quick Jump Buttons -->
+    <div class="flex flex-wrap justify-center gap-3 text-xs font-semibold">
+      <a href="#visualizer" class="px-5 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold transition shadow-md shadow-cyan-500/20 flex items-center gap-2">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        <span>Launch Interactive Visualizer</span>
+      </a>
+      <a href="#benchmarks" class="px-4 py-2.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-slate-200 transition flex items-center gap-1.5">
+        <svg class="w-4 h-4 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        <span>Runner Cost Benchmarks</span>
+      </a>
+      <a href="/github-actions-vs-gitlab-ci-syntax-execution-cost-comparison/" class="px-4 py-2.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-slate-200 transition">
+        GHA vs GitLab CI
+      </a>
+    </div>
+  </section>
+
+  <!-- Interactive DAG Visualizer Tool Section -->
+  <section id="visualizer" class="scroll-mt-20 my-10 bg-slate-900/60 border border-slate-800 rounded-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-xl shadow-2xl relative">
+    <div class="flex flex-col md:flex-row md:items-center justify-between pb-6 mb-6 border-b border-slate-800/80 gap-4">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-cyan-400"></span>
+          <span>Interactive CI/CD Workflow DAG Graph Engine</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-1">
+          Select production workflow blueprints or paste your custom YAML to render the topological dependency hierarchy.
+        </p>
+      </div>
+
+      <!-- Preset Selector Buttons -->
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="text-xs font-mono text-slate-400 uppercase tracking-wider mr-1">Presets:</span>
+        <button
+          type="button"
+          id="btn-preset-node"
+          class="preset-btn px-3 py-1.5 rounded-md text-xs font-mono bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 hover:bg-cyan-500/30 transition"
+        >
+          Node.js Deploy
+        </button>
+        <button
+          type="button"
+          id="btn-preset-python"
+          class="preset-btn px-3 py-1.5 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 hover:text-white transition"
+        >
+          Python & Docker
+        </button>
+        <button
+          type="button"
+          id="btn-preset-monorepo"
+          class="preset-btn px-3 py-1.5 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 hover:text-white transition"
+        >
+          Turborepo Monorepo
+        </button>
+      </div>
+    </div>
+
+    <!-- Workspace Grid: Editor + Graph Canvas -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      
+      <!-- Left Column: YAML Input & Diagnostics (5 cols) -->
+      <div class="lg:col-span-5 flex flex-col space-y-4">
+        <div class="flex items-center justify-between text-xs text-slate-400 font-mono">
+          <span class="flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            Workflow YAML Definition (.github/workflows)
+          </span>
+          <div class="flex items-center space-x-2">
+            <button id="btn-copy-yaml" class="hover:text-cyan-400 transition" title="Copy YAML to clipboard">Copy</button>
+            <span>•</span>
+            <button id="btn-reset-yaml" class="hover:text-rose-400 transition" title="Reset to default">Reset</button>
+          </div>
+        </div>
+
+        <div class="relative">
+          <textarea
+            id="yaml-input"
+            rows="16"
+            class="w-full bg-[#070B12] border border-slate-800 rounded-xl p-3.5 font-mono text-xs text-slate-200 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 focus:outline-none transition leading-relaxed resize-y selection:bg-cyan-500/20"
+            spellcheck="false"
+            placeholder="Paste your GitHub Actions workflow YAML here..."
+          ></textarea>
+        </div>
+
+        <!-- Real-time DAG Diagnostic Cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center font-mono">
+          <div class="bg-slate-950 border border-slate-800/80 p-2.5 rounded-lg">
+            <div class="text-[10px] uppercase text-slate-400 tracking-wider">Total Jobs</div>
+            <div id="stat-job-count" class="text-lg font-black text-cyan-400 mt-0.5">0</div>
+          </div>
+          <div class="bg-slate-950 border border-slate-800/80 p-2.5 rounded-lg">
+            <div class="text-[10px] uppercase text-slate-400 tracking-wider">Stages (Tiers)</div>
+            <div id="stat-stages" class="text-lg font-black text-emerald-400 mt-0.5">0</div>
+          </div>
+          <div class="bg-slate-950 border border-slate-800/80 p-2.5 rounded-lg">
+            <div class="text-[10px] uppercase text-slate-400 tracking-wider">Max Concurrency</div>
+            <div id="stat-concurrency" class="text-lg font-black text-blue-400 mt-0.5">0</div>
+          </div>
+          <div class="bg-slate-950 border border-slate-800/80 p-2.5 rounded-lg">
+            <div class="text-[10px] uppercase text-slate-400 tracking-wider">DAG Status</div>
+            <div id="stat-status" class="text-xs font-bold text-emerald-400 mt-1">VALID</div>
+          </div>
+        </div>
+
+        <!-- Cycle & Syntax Alerts -->
+        <div id="dag-alert" class="hidden p-3 rounded-lg text-xs font-mono"></div>
+
+        <!-- Node Inspector Drawer -->
+        <div id="inspector-card" class="bg-slate-950/90 border border-slate-800 rounded-xl p-4 text-xs font-mono">
+          <div class="text-slate-400 font-bold uppercase tracking-wider mb-2 flex items-center justify-between">
+            <span class="flex items-center gap-1.5 text-cyan-400">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              Selected Job Inspector
+            </span>
+            <span id="insp-tier" class="text-[10px] px-1.5 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Stage 0</span>
+          </div>
+          <div class="space-y-1.5 text-slate-300">
+            <div><span class="text-slate-400">Job ID:</span> <span id="insp-name" class="text-white font-bold">Select a job node in the canvas</span></div>
+            <div><span class="text-slate-400">Runs On:</span> <span id="insp-runner" class="text-emerald-400">ubuntu-latest</span></div>
+            <div><span class="text-slate-400">Prerequisites (needs):</span> <span id="insp-needs" class="text-amber-300">None (Root Trigger)</span></div>
+            <div><span class="text-slate-400">Downstream Dependents:</span> <span id="insp-dependents" class="text-cyan-300">None</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive SVG DAG Canvas (7 cols) -->
+      <div class="lg:col-span-7 flex flex-col space-y-3">
+        <!-- Canvas Control Bar -->
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <div class="flex items-center space-x-2 font-mono">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              Execution Flow (Left-to-Right Topological Order)
+            </span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <button id="btn-fit-view" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono transition" title="Center graph">
+              Center
+            </button>
+            <button id="btn-export-svg" class="px-2.5 py-1 rounded bg-cyan-500/15 hover:bg-cyan-500/25 border border-cyan-500/30 text-cyan-300 text-xs font-mono transition flex items-center gap-1">
+              <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Export SVG
+            </button>
+          </div>
+        </div>
+
+        <!-- SVG Container -->
+        <div class="w-full h-[540px] bg-[#070B12] border border-slate-800 rounded-xl overflow-hidden relative shadow-inner">
+          <!-- Background Grid Overlay -->
+          <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+          <svg id="dag-svg" class="w-full h-full cursor-grab active:cursor-grabbing select-none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Arrowhead Marker for Dependecy Connectors -->
+              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#06B6D4" />
+              </marker>
+              <marker id="arrow-highlight" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#10B981" />
+              </marker>
+              <marker id="arrow-upstream" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#8B5CF6" />
+              </marker>
+              <linearGradient id="edge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.9"/>
+              </linearGradient>
+            </defs>
+            <g id="dag-viewport">
+              <g id="dag-stages-layer"></g>
+              <g id="dag-edges-layer"></g>
+              <g id="dag-nodes-layer"></g>
+            </g>
+          </svg>
+
+          <!-- Interactive Hint -->
+          <div class="absolute bottom-3 right-3 text-[11px] font-mono text-slate-400 bg-slate-900/80 px-2.5 py-1 rounded border border-slate-800 pointer-events-none">
+            Click node to highlight dependencies • Drag to pan
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CI/CD Runner Cost & Concurrency Benchmark Section -->
+  <section id="benchmarks" class="my-16 scroll-mt-20">
+    <div class="max-w-4xl mx-auto text-center mb-10">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono mb-4">
+        <span>2026 Cloud Infrastructure Economics</span>
+      </div>
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+        CI/CD Runner Pricing, Concurrency & Boot Latency Benchmark
+      </h2>
+      <p class="text-sm sm:text-base text-slate-400 mt-2">
+        Comparing cost per billable minute, hardware provisioning latency, and caching limits across leading CI platforms.
+      </p>
+    </div>
+
+    <div class="overflow-x-auto border border-slate-800 rounded-xl bg-slate-900/40 backdrop-blur-md shadow-xl">
+      <table class="w-full text-left text-xs sm:text-sm font-mono border-collapse">
+        <thead>
+          <tr class="border-b border-slate-800 bg-slate-950/80 text-slate-300">
+            <th class="py-3.5 px-4 font-bold">Platform / Runner Tier</th>
+            <th class="py-3.5 px-4 font-bold">vCPU / RAM</th>
+            <th class="py-3.5 px-4 font-bold text-right">Cost / Minute</th>
+            <th class="py-3.5 px-4 font-bold">Cold Boot Latency</th>
+            <th class="py-3.5 px-4 font-bold">Free Cache Limit</th>
+            <th class="py-3.5 px-4 font-bold text-center">DAG Concurrency</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800/60 text-slate-300">
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="py-3 px-4 font-semibold text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              GitHub Actions Standard
+            </td>
+            <td class="py-3 px-4 text-slate-400">2 vCPU / 7 GB</td>
+            <td class="py-3 px-4 text-right font-bold text-emerald-400">$0.008</td>
+            <td class="py-3 px-4 text-slate-300">4s - 12s</td>
+            <td class="py-3 px-4 text-slate-400">10 GB / repo</td>
+            <td class="py-3 px-4 text-center text-cyan-400">Up to 20 parallel</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="py-3 px-4 font-semibold text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+              GitHub Actions Larger (4-core)
+            </td>
+            <td class="py-3 px-4 text-slate-400">4 vCPU / 16 GB</td>
+            <td class="py-3 px-4 text-right font-bold text-emerald-400">$0.016</td>
+            <td class="py-3 px-4 text-slate-300">2s - 6s (dedicated pool)</td>
+            <td class="py-3 px-4 text-slate-400">10 GB / repo</td>
+            <td class="py-3 px-4 text-center text-cyan-400">Up to 60 parallel</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="py-3 px-4 font-semibold text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+              GitLab SaaS Linux Medium
+            </td>
+            <td class="py-3 px-4 text-slate-400">2 vCPU / 4 GB</td>
+            <td class="py-3 px-4 text-right font-bold text-emerald-400">$0.005</td>
+            <td class="py-3 px-4 text-slate-300">8s - 25s</td>
+            <td class="py-3 px-4 text-slate-400">5 GB / project</td>
+            <td class="py-3 px-4 text-center text-amber-300">Tier dependent</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="py-3 px-4 font-semibold text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+              CircleCI Linux Medium
+            </td>
+            <td class="py-3 px-4 text-slate-400">2 vCPU / 4 GB</td>
+            <td class="py-3 px-4 text-right font-bold text-emerald-400">$0.006</td>
+            <td class="py-3 px-4 text-slate-300">3s - 10s</td>
+            <td class="py-3 px-4 text-slate-400">Unlimited (Credit billing)</td>
+            <td class="py-3 px-4 text-center text-purple-300">Plan credits</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="py-3 px-4 font-semibold text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+              AWS CodeBuild (arm64.large)
+            </td>
+            <td class="py-3 px-4 text-slate-400">4 vCPU / 8 GB (Graviton)</td>
+            <td class="py-3 px-4 text-right font-bold text-emerald-400">$0.007</td>
+            <td class="py-3 px-4 text-slate-300">25s - 65s (VPC attach)</td>
+            <td class="py-3 px-4 text-slate-400">Custom S3 / EFS</td>
+            <td class="py-3 px-4 text-center text-rose-300">AWS Account Quotas</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition bg-emerald-950/20">
+            <td class="py-3 px-4 font-semibold text-emerald-300 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              Self-Hosted Bare Metal (Hetzner)
+            </td>
+            <td class="py-3 px-4 text-slate-400">16 vCPU / 64 GB NVMe</td>
+            <td class="py-3 px-4 text-right font-bold text-emerald-400">~$0.0009 amortized</td>
+            <td class="py-3 px-4 text-emerald-300 font-bold">&lt; 0.5s (warm daemon)</td>
+            <td class="py-3 px-4 text-slate-300">Local NVMe (1 TB+)</td>
+            <td class="py-3 px-4 text-center text-emerald-300">Hardware constrained</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- In-Depth Technical Deep Dive & Architectural Pillars -->
+  <section class="my-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl">
+      <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm mb-4">
+        DAG
+      </div>
+      <h3 class="text-base font-bold text-white mb-2">Directed Acyclic Graph Architecture</h3>
+      <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+        Eliminate sequential stage bottlenecks. By declaring precise itemized dependencies via <code class="text-cyan-400 font-mono">needs:</code>, downstream test and deployment jobs execute immediately once upstream prerequisites finish, eliminating idle wait intervals.
+      </p>
+    </div>
+
+    <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl">
+      <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-mono font-bold text-sm mb-4">
+        CALC
+      </div>
+      <h3 class="text-base font-bold text-white mb-2">Critical Path Identification</h3>
+      <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+        The longest chain of dependent jobs defines your absolute pipeline wall-clock ceiling. Optimizing non-critical jobs yields zero total runtime speedup; targeting critical path jobs unlocks immediate compounding pipeline velocity.
+      </p>
+    </div>
+
+    <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl">
+      <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/30 text-purple-400 flex items-center justify-center font-mono font-bold text-sm mb-4">
+        ZERO
+      </div>
+      <h3 class="text-base font-bold text-white mb-2">Zero-Leakage Security Model</h3>
+      <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+        CIPipelineGraph performs 100% of Abstract Syntax Tree parsing and topological sort calculations in the browser runtime. Secrets, proprietary repo tokens, and environment parameters never leave your local machine.
+      </p>
+    </div>
+  </section>
+
+  <!-- Deep Dive Guides Banner Grid -->
+  <section class="my-16 border border-slate-800 bg-slate-900/30 rounded-2xl p-6 sm:p-8">
+    <div class="text-center max-w-2xl mx-auto mb-8">
+      <h2 class="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
+        Production Engineering CI/CD Guides
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-400 mt-2">
+        Deep dive into runner syntax translations, Docker Buildx caching, and local workflow simulation.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <a href="/github-actions-vs-gitlab-ci-syntax-execution-cost-comparison/" class="group block p-5 rounded-xl bg-slate-950/80 border border-slate-800 hover:border-cyan-500/50 transition duration-300">
+        <div class="text-xs font-mono text-cyan-400 mb-2">SYNTAX & COST GUIDE</div>
+        <h3 class="text-base font-bold text-white group-hover:text-cyan-300 transition mb-2">GitHub Actions vs GitLab CI</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Comprehensive comparison of workflow YAML schemas, DAG pipeline semantics, composite actions, and runner pricing matrices.
+        </p>
+        <div class="mt-4 text-xs font-semibold text-cyan-400 flex items-center gap-1 group-hover:translate-x-1 transition">
+          Read Guide &rarr;
+        </div>
+      </a>
+
+      <a href="/matrix-build-optimization-github-actions-cache-speed/" class="group block p-5 rounded-xl bg-slate-950/80 border border-slate-800 hover:border-emerald-500/50 transition duration-300">
+        <div class="text-xs font-mono text-emerald-400 mb-2">PERFORMANCE OPTIMIZATION</div>
+        <h3 class="text-base font-bold text-white group-hover:text-emerald-300 transition mb-2">Matrix Build Optimization & Cache Speed</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Fine-tune <code class="text-emerald-400">strategy.matrix</code>, fail-fast mechanics, actions/cache@v4 keys, and Docker buildx gha cache backends.
+        </p>
+        <div class="mt-4 text-xs font-semibold text-emerald-400 flex items-center gap-1 group-hover:translate-x-1 transition">
+          Read Guide &rarr;
+        </div>
+      </a>
+
+      <a href="/act-run-github-actions-locally-debugging-guide/" class="group block p-5 rounded-xl bg-slate-950/80 border border-slate-800 hover:border-purple-500/50 transition duration-300">
+        <div class="text-xs font-mono text-purple-400 mb-2">LOCAL WORKFLOW TESTING</div>
+        <h3 class="text-base font-bold text-white group-hover:text-purple-300 transition mb-2">Act CLI: Run GitHub Actions Locally</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Step-by-step tutorial to run and debug CI workflows on local Docker containers without committing or burning cloud runner minutes.
+        </p>
+        <div class="mt-4 text-xs font-semibold text-purple-400 flex items-center gap-1 group-hover:translate-x-1 transition">
+          Read Guide &rarr;
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ Section with Schema Accordion -->
+  <section class="my-16 max-w-4xl mx-auto">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+        Frequently Asked Questions
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-400 mt-2">
+        Common questions regarding CI/CD DAG validation, execution order, and runner economics.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+        <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+          <span class="text-cyan-400">Q:</span> What is a DAG in CI/CD pipelines?
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          A Directed Acyclic Graph (DAG) in continuous integration models jobs as nodes and execution dependencies as directed edges without closed loops. Unlike strict linear stages, a DAG allows downstream jobs to trigger the millisecond their specific prerequisites finish, maximizing runner concurrency and cutting total build time.
+        </p>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+        <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+          <span class="text-cyan-400">Q:</span> How does the 'needs' keyword work in GitHub Actions?
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          In GitHub Actions, the <code class="text-cyan-400 font-mono">needs:</code> key defines prerequisite jobs that must succeed before a job starts. Supplying an array like <code class="text-cyan-400 font-mono">needs: [lint, unit-test]</code> instructs GitHub's workflow orchestrator to defer execution until all listed dependencies finish with a 0 exit status.
+        </p>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+        <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+          <span class="text-cyan-400">Q:</span> What causes circular dependency deadlocks in CI workflows?
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          Circular dependencies occur when two or more jobs depend on each other directly or transitively (e.g., Job A needs Job B, and Job B needs Job A). Continuous integration orchestrators will reject or freeze the run indefinitely because neither job can satisfy its start precondition. CIPipelineGraph detects these cycles before commit.
+        </p>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+        <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+          <span class="text-cyan-400">Q:</span> How much money can DAG pipeline optimization save on GitHub Actions?
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          By shifting from sequential stages to a dependency DAG and eliminating unnecessary blocking, engineering teams reduce billable runner wall-clock duration by 30% to 55%, preventing idle runner minute billing across large matrix test suites.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client-side Interactive DAG Visualizer JavaScript Engine -->
+  <script is:inline>
+    (function() {
+      // Preset Workflows
+      const PRESETS = {
+        node: `name: Node.js CI/CD Pipeline
+on:
+  push:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm run lint
+
+  test:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm test
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    steps:
+      - run: npm run build
+
+  deploy-staging:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - run: ./deploy.sh staging
+
+  smoke-test:
+    runs-on: ubuntu-latest
+    needs: deploy-staging
+    steps:
+      - run: npm run test:smoke
+
+  deploy-production:
+    runs-on: ubuntu-latest
+    needs: smoke-test
+    steps:
+      - run: ./deploy.sh prod`,
+
+        python: `name: Python Matrix & Docker CI
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ruff check .
+
+  test-unit:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - run: pytest tests/unit
+
+  test-integration:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - run: pytest tests/integration
+
+  security-scan:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - run: bandit -r src/
+
+  docker-build:
+    runs-on: ubuntu-latest
+    needs: [test-unit, test-integration, security-scan]
+    steps:
+      - run: docker build -t app .
+
+  vulnerability-scan:
+    runs-on: ubuntu-latest
+    needs: docker-build
+    steps:
+      - run: trivy image app
+
+  publish-registry:
+    runs-on: ubuntu-latest
+    needs: vulnerability-scan
+    steps:
+      - run: docker push ghcr.io/org/app:latest`,
+
+        monorepo: `name: Turborepo Monorepo Full Pipeline
+on: [pull_request, push]
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - run: turbo run typecheck
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: turbo run lint
+
+  unit-frontend:
+    runs-on: ubuntu-latest
+    needs: [typecheck, lint]
+    steps:
+      - run: turbo run test --filter=web
+
+  unit-backend:
+    runs-on: ubuntu-latest
+    needs: [typecheck, lint]
+    steps:
+      - run: turbo run test --filter=api
+
+  e2e-tests:
+    runs-on: ubuntu-latest
+    needs: [unit-frontend, unit-backend]
+    steps:
+      - run: turbo run test:e2e
+
+  build-packages:
+    runs-on: ubuntu-latest
+    needs: [unit-frontend, unit-backend]
+    steps:
+      - run: turbo run build
+
+  publish-release:
+    runs-on: ubuntu-latest
+    needs: [e2e-tests, build-packages]
+    steps:
+      - run: npx semantic-release`
+      };
+
+      // State
+      let selectedNodeId = null;
+      let parsedGraph = null;
+      let viewBox = { x: 0, y: 0, width: 800, height: 500 };
+      let isPanning = false;
+      let startPoint = { x: 0, y: 0 };
+
+      // DOM Elements
+      const textarea = document.getElementById('yaml-input');
+      const statJobCount = document.getElementById('stat-job-count');
+      const statStages = document.getElementById('stat-stages');
+      const statConcurrency = document.getElementById('stat-concurrency');
+      const statStatus = document.getElementById('stat-status');
+      const dagAlert = document.getElementById('dag-alert');
+      const svg = document.getElementById('dag-svg');
+      const stagesLayer = document.getElementById('dag-stages-layer');
+      const edgesLayer = document.getElementById('dag-edges-layer');
+      const nodesLayer = document.getElementById('dag-nodes-layer');
+      const viewportGroup = document.getElementById('dag-viewport');
+
+      // Inspector Elements
+      const inspName = document.getElementById('insp-name');
+      const inspTier = document.getElementById('insp-tier');
+      const inspRunner = document.getElementById('insp-runner');
+      const inspNeeds = document.getElementById('insp-needs');
+      const inspDependents = document.getElementById('insp-dependents');
+
+      // YAML Parser for CI Jobs & Needs
+      function parseWorkflowYAML(yamlText) {
+        const lines = yamlText.split('\\n');
+        const jobs = {};
+        let inJobs = false;
+        let currentJob = null;
+        let inNeedsList = false;
+
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i];
+          const trimmed = line.trim();
+          if (!trimmed || trimmed.startsWith('#')) continue;
+
+          const indent = line.search(/\\S/);
+
+          // Detect top-level "jobs:"
+          if (trimmed === 'jobs:' || trimmed.startsWith('jobs:')) {
+            inJobs = true;
+            currentJob = null;
+            inNeedsList = false;
+            continue;
+          }
+
+          if (inJobs) {
+            // New top-level section under root cancels jobs:
+            if (indent === 0 && !trimmed.startsWith('jobs:')) {
+              inJobs = false;
+              currentJob = null;
+              continue;
+            }
+
+            // A job entry usually indented at 2 spaces (or 1 tab)
+            // match "job_name:"
+            const jobMatch = line.match(/^ {2}([a-zA-Z0-9_.-]+):\\s*$/);
+            if (jobMatch) {
+              const jobId = jobMatch[1];
+              currentJob = jobId;
+              inNeedsList = false;
+              jobs[jobId] = {
+                id: jobId,
+                name: jobId,
+                runsOn: 'ubuntu-latest',
+                needs: [],
+                dependents: []
+              };
+              continue;
+            }
+
+            if (currentJob && jobs[currentJob]) {
+              // Check runs-on
+              const runsOnMatch = trimmed.match(/^runs-on:\\s*(.+)$/);
+              if (runsOnMatch) {
+                jobs[currentJob].runsOn = runsOnMatch[1].replace(/['"\\[\\]]/g, '').trim();
+                inNeedsList = false;
+                continue;
+              }
+
+              // Check name:
+              const nameMatch = trimmed.match(/^name:\\s*['"]?([^'"]+)['"]?$/);
+              if (nameMatch && indent >= 4) {
+                jobs[currentJob].name = nameMatch[1].trim();
+                continue;
+              }
+
+              // Check inline needs: needs: [job1, job2] or needs: job1
+              const needsInline = trimmed.match(/^needs:\\s*(.+)$/);
+              if (needsInline) {
+                const val = needsInline[1].trim();
+                if (val.startsWith('[')) {
+                  // array format
+                  const items = val.replace(/[\\[\\]'"]/g, '').split(',').map(s => s.trim()).filter(Boolean);
+                  jobs[currentJob].needs.push(...items);
+                  inNeedsList = false;
+                } else if (val === '') {
+                  // multi-line array
+                  inNeedsList = true;
+                } else {
+                  // single job
+                  jobs[currentJob].needs.push(val.replace(/['"]/g, '').trim());
+                  inNeedsList = false;
+                }
+                continue;
+              }
+
+              // Multi-line needs items: "- jobname"
+              if (inNeedsList) {
+                const itemMatch = trimmed.match(/^- ([a-zA-Z0-9_.-]+)$/);
+                if (itemMatch) {
+                  jobs[currentJob].needs.push(itemMatch[1]);
+                  continue;
+                } else if (!trimmed.startsWith('-')) {
+                  inNeedsList = false;
+                }
+              }
+            }
+          }
+        }
+
+        return jobs;
+      }
+
+      // Build DAG and compute topological stages + cycles
+      function buildDAG(jobs) {
+        const jobIds = Object.keys(jobs);
+        if (jobIds.length === 0) {
+          return { isValid: false, error: "No jobs defined under 'jobs:' section.", jobs: {}, stages: [] };
+        }
+
+        // Populate dependents
+        jobIds.forEach(id => {
+          jobs[id].needs.forEach(parent => {
+            if (jobs[parent]) {
+              if (!jobs[parent].dependents.includes(id)) {
+                jobs[parent].dependents.push(id);
+              }
+            }
+          });
+        });
+
+        // Check for missing dependencies
+        const missingDeps = [];
+        jobIds.forEach(id => {
+          jobs[id].needs.forEach(parent => {
+            if (!jobs[parent]) {
+              missingDeps.push(\`Job '\${id}' depends on undefined job '\${parent}'\`);
+            }
+          });
+        });
+
+        // Detect Cycles via Kahn's Algorithm / In-degree
+        const inDegree = {};
+        jobIds.forEach(id => {
+          // only count existing parent dependencies
+          inDegree[id] = jobs[id].needs.filter(p => jobs[p]).length;
+        });
+
+        const queue = jobIds.filter(id => inDegree[id] === 0);
+        const stages = [];
+        const jobStage = {};
+        let processedCount = 0;
+
+        let currentTier = queue.slice();
+        let tierIndex = 0;
+
+        while (currentTier.length > 0) {
+          stages[tierIndex] = currentTier.slice();
+          currentTier.forEach(id => {
+            jobStage[id] = tierIndex;
+            processedCount++;
+          });
+
+          const nextTier = [];
+          currentTier.forEach(u => {
+            jobs[u].dependents.forEach(v => {
+              inDegree[v]--;
+              if (inDegree[v] === 0) {
+                nextTier.push(v);
+              }
+            });
+          });
+
+          currentTier = nextTier;
+          tierIndex++;
+        }
+
+        const hasCycle = processedCount < jobIds.length;
+        let cycleInfo = null;
+
+        if (hasCycle) {
+          const stuckJobs = jobIds.filter(id => inDegree[id] > 0);
+          cycleInfo = \`Circular Dependency Deadlock Detected! Unresolvable jobs: \${stuckJobs.join(', ')}\`;
+        }
+
+        return {
+          isValid: !hasCycle && missingDeps.length === 0,
+          error: cycleInfo || (missingDeps.length > 0 ? missingDeps.join('; ') : null),
+          jobs,
+          stages,
+          jobStage
+        };
+      }
+
+      // Render DAG into SVG Canvas
+      function renderDAG(dag) {
+        stagesLayer.innerHTML = '';
+        edgesLayer.innerHTML = '';
+        nodesLayer.innerHTML = '';
+
+        if (!dag || Object.keys(dag.jobs).length === 0) {
+          statJobCount.textContent = '0';
+          statStages.textContent = '0';
+          statConcurrency.textContent = '0';
+          statStatus.textContent = 'EMPTY';
+          statStatus.className = 'text-xs font-bold text-slate-400 mt-1';
+          return;
+        }
+
+        const jobCount = Object.keys(dag.jobs).length;
+        statJobCount.textContent = jobCount;
+        statStages.textContent = dag.stages.length;
+
+        const maxConcurrency = Math.max(...dag.stages.map(s => s.length), 0);
+        statConcurrency.textContent = maxConcurrency;
+
+        if (dag.isValid) {
+          statStatus.textContent = 'DAG VALID';
+          statStatus.className = 'text-xs font-bold text-emerald-400 mt-1';
+          dagAlert.className = 'hidden';
+        } else {
+          statStatus.textContent = 'CYCLE / ERROR';
+          statStatus.className = 'text-xs font-bold text-rose-400 mt-1';
+          dagAlert.className = 'p-3 rounded-lg text-xs font-mono bg-rose-950/40 border border-rose-800/80 text-rose-300';
+          dagAlert.textContent = dag.error || 'Invalid dependency layout detected.';
+          if (dag.stages.length === 0) return;
+        }
+
+        // Layout parameters
+        const nodeWidth = 170;
+        const nodeHeight = 65;
+        const stageGapX = 220;
+        const nodeGapY = 85;
+        const paddingLeft = 50;
+        const paddingTop = 60;
+
+        const nodePositions = {};
+
+        // Calculate positions
+        dag.stages.forEach((stageJobs, stageIdx) => {
+          const stageX = paddingLeft + stageIdx * stageGapX;
+          const totalHeight = stageJobs.length * nodeGapY;
+
+          // Render Stage column header & subtle divider
+          const colX = stageX - 15;
+          const colW = nodeWidth + 30;
+          const colH = Math.max(500, (maxConcurrency + 1) * nodeGapY + 80);
+
+          const stageBg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+          stageBg.setAttribute('x', colX);
+          stageBg.setAttribute('y', 15);
+          stageBg.setAttribute('width', colW);
+          stageBg.setAttribute('height', colH);
+          stageBg.setAttribute('rx', '8');
+          stageBg.setAttribute('fill', stageIdx % 2 === 0 ? '#0B1120' : '#080E18');
+          stageBg.setAttribute('stroke', '#1E293B');
+          stageBg.setAttribute('stroke-width', '1');
+          stageBg.setAttribute('stroke-dasharray', '4 4');
+          stagesLayer.appendChild(stageBg);
+
+          const stageText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+          stageText.setAttribute('x', stageX + nodeWidth / 2);
+          stageText.setAttribute('y', 35);
+          stageText.setAttribute('text-anchor', 'middle');
+          stageText.setAttribute('fill', '#94A3B8');
+          stageText.setAttribute('font-family', 'JetBrains Mono, monospace');
+          stageText.setAttribute('font-size', '11');
+          stageText.setAttribute('font-weight', 'bold');
+          stageText.textContent = \`STAGE \${stageIdx} (\${stageJobs.length} parallel)\`;
+          stagesLayer.appendChild(stageText);
+
+          stageJobs.forEach((jobId, jobIdx) => {
+            const nodeY = paddingTop + jobIdx * nodeGapY;
+            nodePositions[jobId] = {
+              x: stageX,
+              y: nodeY,
+              cx: stageX + nodeWidth / 2,
+              cy: nodeY + nodeHeight / 2,
+              rightX: stageX + nodeWidth,
+              leftX: stageX
+            };
+          });
+        });
+
+        // Render Directed Edges (Bezier Curves)
+        Object.keys(dag.jobs).forEach(targetId => {
+          const targetPos = nodePositions[targetId];
+          if (!targetPos) return;
+
+          dag.jobs[targetId].needs.forEach(sourceId => {
+            const sourcePos = nodePositions[sourceId];
+            if (!sourcePos) return;
+
+            const startX = sourcePos.rightX;
+            const startY = sourcePos.cy;
+            const endX = targetPos.leftX;
+            const endY = targetPos.cy;
+
+            const deltaX = Math.max(30, (endX - startX) / 2);
+            const pathData = \`M \${startX} \${startY} C \${startX + deltaX} \${startY}, \${endX - deltaX} \${endY}, \${endX} \${endY}\`;
+
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', pathData);
+            path.setAttribute('fill', 'none');
+            path.setAttribute('stroke', '#06B6D4');
+            path.setAttribute('stroke-width', '2');
+            path.setAttribute('stroke-opacity', '0.7');
+            path.setAttribute('marker-end', 'url(#arrow)');
+            path.setAttribute('data-source', sourceId);
+            path.setAttribute('data-target', targetId);
+            path.classList.add('dag-edge');
+            edgesLayer.appendChild(path);
+          });
+        });
+
+        // Render Job Nodes
+        Object.keys(dag.jobs).forEach(jobId => {
+          const pos = nodePositions[jobId];
+          if (!pos) return;
+          const job = dag.jobs[jobId];
+          const stageIdx = dag.jobStage[jobId] ?? 0;
+
+          const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+          g.setAttribute('transform', \`translate(\${pos.x}, \${pos.y})\`);
+          g.setAttribute('data-job-id', jobId);
+          g.classList.add('dag-node-group', 'cursor-pointer');
+
+          // Card Background
+          const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+          rect.setAttribute('width', nodeWidth);
+          rect.setAttribute('height', nodeHeight);
+          rect.setAttribute('rx', '10');
+          rect.setAttribute('fill', '#0F172A');
+          rect.setAttribute('stroke', '#1E293B');
+          rect.setAttribute('stroke-width', '1.5');
+          rect.classList.add('node-box', 'transition-all');
+          g.appendChild(rect);
+
+          // Status Icon Circle
+          const iconCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          iconCircle.setAttribute('cx', 18);
+          iconCircle.setAttribute('cy', 22);
+          iconCircle.setAttribute('r', 6);
+          iconCircle.setAttribute('fill', stageIdx === 0 ? '#10B981' : (job.dependents.length === 0 ? '#8B5CF6' : '#06B6D4'));
+          g.appendChild(iconCircle);
+
+          // Job Title
+          const title = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+          title.setAttribute('x', 32);
+          title.setAttribute('y', 26);
+          title.setAttribute('fill', '#FFFFFF');
+          title.setAttribute('font-family', 'JetBrains Mono, monospace');
+          title.setAttribute('font-size', '12');
+          title.setAttribute('font-weight', 'bold');
+          title.textContent = jobId.length > 15 ? jobId.substring(0, 13) + '..' : jobId;
+          g.appendChild(title);
+
+          // Runner Badge text
+          const runner = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+          runner.setAttribute('x', 14);
+          runner.setAttribute('y', 48);
+          runner.setAttribute('fill', '#94A3B8');
+          runner.setAttribute('font-family', 'JetBrains Mono, monospace');
+          runner.setAttribute('font-size', '9.5');
+          runner.textContent = job.runsOn.length > 16 ? job.runsOn.substring(0, 14) + '..' : job.runsOn;
+          g.appendChild(runner);
+
+          // Upstream & Downstream badges
+          const badges = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+          badges.setAttribute('x', nodeWidth - 10);
+          badges.setAttribute('y', 48);
+          badges.setAttribute('text-anchor', 'end');
+          badges.setAttribute('fill', '#38BDF8');
+          badges.setAttribute('font-family', 'JetBrains Mono, monospace');
+          badges.setAttribute('font-size', '9');
+          badges.textContent = \`in:\${job.needs.length} out:\${job.dependents.length}\`;
+          g.appendChild(badges);
+
+          // Node Click Interaction
+          g.addEventListener('click', (e) => {
+            e.stopPropagation();
+            selectNode(jobId, dag);
+          });
+
+          nodesLayer.appendChild(g);
+        });
+
+        // Adjust SVG Viewport
+        const requiredWidth = paddingLeft * 2 + dag.stages.length * stageGapX;
+        const requiredHeight = paddingTop * 2 + (maxConcurrency + 1) * nodeGapY;
+        svg.setAttribute('viewBox', \`0 0 \${Math.max(800, requiredWidth)} \${Math.max(500, requiredHeight)}\`);
+      }
+
+      // Highlight selected node and immediate / transitive connections
+      function selectNode(jobId, dag) {
+        selectedNodeId = jobId;
+        const job = dag.jobs[jobId];
+        if (!job) return;
+
+        // Update Inspector
+        inspName.textContent = jobId;
+        inspTier.textContent = \`Stage \${dag.jobStage[jobId] ?? 0}\`;
+        inspRunner.textContent = job.runsOn || 'ubuntu-latest';
+        inspNeeds.textContent = job.needs.length > 0 ? job.needs.join(', ') : 'None (Root Node)';
+        inspDependents.textContent = job.dependents.length > 0 ? job.dependents.join(', ') : 'None (Terminal Leaf)';
+
+        // Highlighting in SVG
+        const allNodes = document.querySelectorAll('.dag-node-group');
+        const allEdges = document.querySelectorAll('.dag-edge');
+
+        allNodes.forEach(node => {
+          const id = node.getAttribute('data-job-id');
+          const rect = node.querySelector('rect');
+          if (id === jobId) {
+            rect.setAttribute('stroke', '#22D3EE');
+            rect.setAttribute('stroke-width', '3');
+            rect.setAttribute('fill', '#162238');
+          } else if (job.needs.includes(id)) {
+            rect.setAttribute('stroke', '#8B5CF6');
+            rect.setAttribute('stroke-width', '2');
+            rect.setAttribute('fill', '#1A1B2E');
+          } else if (job.dependents.includes(id)) {
+            rect.setAttribute('stroke', '#10B981');
+            rect.setAttribute('stroke-width', '2');
+            rect.setAttribute('fill', '#0E231D');
+          } else {
+            rect.setAttribute('stroke', '#1E293B');
+            rect.setAttribute('stroke-width', '1');
+            rect.setAttribute('fill', '#0F172A');
+          }
+        });
+
+        allEdges.forEach(edge => {
+          const s = edge.getAttribute('data-source');
+          const t = edge.getAttribute('data-target');
+
+          if (t === jobId) {
+            // upstream edge
+            edge.setAttribute('stroke', '#8B5CF6');
+            edge.setAttribute('stroke-width', '3');
+            edge.setAttribute('marker-end', 'url(#arrow-upstream)');
+            edge.setAttribute('stroke-opacity', '1');
+          } else if (s === jobId) {
+            // downstream edge
+            edge.setAttribute('stroke', '#10B981');
+            edge.setAttribute('stroke-width', '3');
+            edge.setAttribute('marker-end', 'url(#arrow-highlight)');
+            edge.setAttribute('stroke-opacity', '1');
+          } else {
+            edge.setAttribute('stroke', '#334155');
+            edge.setAttribute('stroke-width', '1.5');
+            edge.setAttribute('marker-end', 'url(#arrow)');
+            edge.setAttribute('stroke-opacity', '0.3');
+          }
+        });
+      }
+
+      // Re-evaluate current YAML and re-render
+      function updateWorkflow() {
+        const text = textarea.value;
+        const jobs = parseWorkflowYAML(text);
+        parsedGraph = buildDAG(jobs);
+        renderDAG(parsedGraph);
+        if (selectedNodeId && parsedGraph.jobs[selectedNodeId]) {
+          selectNode(selectedNodeId, parsedGraph);
+        }
+      }
+
+      // Presets
+      function loadPreset(presetKey) {
+        if (!PRESETS[presetKey]) return;
+        textarea.value = PRESETS[presetKey];
+        document.querySelectorAll('.preset-btn').forEach(b => {
+          b.classList.remove('bg-cyan-500/20', 'text-cyan-300', 'border-cyan-500/40');
+          b.classList.add('bg-slate-800', 'text-slate-300', 'border-slate-700');
+        });
+        const activeBtn = document.getElementById(\`btn-preset-\${presetKey}\`);
+        if (activeBtn) {
+          activeBtn.classList.remove('bg-slate-800', 'text-slate-300', 'border-slate-700');
+          activeBtn.classList.add('bg-cyan-500/20', 'text-cyan-300', 'border-cyan-500/40');
+        }
+        selectedNodeId = null;
+        updateWorkflow();
+      }
+
+      // Event Listeners
+      document.getElementById('btn-preset-node')?.addEventListener('click', () => loadPreset('node'));
+      document.getElementById('btn-preset-python')?.addEventListener('click', () => loadPreset('python'));
+      document.getElementById('btn-preset-monorepo')?.addEventListener('click', () => loadPreset('monorepo'));
+
+      textarea.addEventListener('input', () => {
+        updateWorkflow();
+      });
+
+      document.getElementById('btn-copy-yaml')?.addEventListener('click', () => {
+        navigator.clipboard.writeText(textarea.value);
+        const btn = document.getElementById('btn-copy-yaml');
+        const orig = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('text-cyan-400');
+        setTimeout(() => {
+          btn.textContent = orig;
+          btn.classList.remove('text-cyan-400');
+        }, 1500);
+      });
+
+      document.getElementById('btn-reset-yaml')?.addEventListener('click', () => {
+        loadPreset('node');
+      });
+
+      document.getElementById('btn-fit-view')?.addEventListener('click', () => {
+        if (parsedGraph) renderDAG(parsedGraph);
+      });
+
+      document.getElementById('btn-export-svg')?.addEventListener('click', () => {
+        const svgData = new XMLSerializer().serializeToString(svg);
+        const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'github-actions-dag-pipeline.svg';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+
+      // Clear highlights when clicking canvas background
+      svg.addEventListener('click', () => {
+        selectedNodeId = null;
+        inspName.textContent = 'Select a job node in the canvas';
+        inspTier.textContent = 'Stage 0';
+        inspRunner.textContent = 'ubuntu-latest';
+        inspNeeds.textContent = 'None';
+        inspDependents.textContent = 'None';
+        if (parsedGraph) renderDAG(parsedGraph);
+      });
+
+      // Initial run
+      loadPreset('node');
+    })();
+  </script>
+</Layout>

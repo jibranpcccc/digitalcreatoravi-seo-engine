@@ -1,0 +1,102 @@
+[
+  {
+    "site_id": "site-1",
+    "repo": "local-agent-hardware-stack",
+    "issue_url": "https://github.com/jibranpcccc/local-agent-hardware-stack/issues/1"
+  },
+  {
+    "site_id": "site-2",
+    "repo": "workation-coliving-radar",
+    "issue_url": "https://github.com/jibranpcccc/workation-coliving-radar/issues/1"
+  },
+  {
+    "site_id": "site-3",
+    "repo": "open-agent-protocol-hub",
+    "issue_url": "https://github.com/jibranpcccc/open-agent-protocol-hub/issues/1"
+  },
+  {
+    "site_id": "site-4",
+    "repo": "indie-saas-stack-audit",
+    "issue_url": "https://github.com/jibranpcccc/indie-saas-stack-audit/issues/1"
+  },
+  {
+    "site_id": "site-5",
+    "repo": "vector-database-benchmarks",
+    "issue_url": "https://github.com/jibranpcccc/vector-database-benchmarks/issues/1"
+  },
+  {
+    "site_id": "site-6",
+    "repo": "nomad-tax-treaty-calculator",
+    "issue_url": "https://github.com/jibranpcccc/nomad-tax-treaty-calculator/issues/1"
+  },
+  {
+    "site_id": "site-7",
+    "repo": "webhook-signature-audit",
+    "issue_url": "https://github.com/jibranpcccc/webhook-signature-audit/issues/1"
+  },
+  {
+    "site_id": "site-8",
+    "repo": "local-pdf-privacy-redactor",
+    "issue_url": "https://github.com/jibranpcccc/local-pdf-privacy-redactor/issues/1"
+  },
+  {
+    "site_id": "site-9",
+    "repo": "founder-runway-calculator",
+    "issue_url": "https://github.com/jibranpcccc/founder-runway-calculator/issues/1"
+  },
+  {
+    "site_id": "site-10",
+    "repo": "rag-semantic-chunking-bench",
+    "issue_url": "https://github.com/jibranpcccc/rag-semantic-chunking-bench/issues/1"
+  },
+  {
+    "site_id": "site-11",
+    "repo": "nomad-passport-visa-index",
+    "issue_url": "https://github.com/jibranpcccc/nomad-passport-visa-index/issues/1"
+  },
+  {
+    "site_id": "site-12",
+    "repo": "saas-unit-economics-calculator",
+    "issue_url": "https://github.com/jibranpcccc/saas-unit-economics-calculator/issues/1"
+  },
+  {
+    "site_id": "site-13",
+    "repo": "nginx-grok-log-tester",
+    "issue_url": "https://github.com/jibranpcccc/nginx-grok-log-tester/issues/1"
+  },
+  {
+    "site_id": "site-14",
+    "repo": "soc2-readiness-checklist",
+    "issue_url": "https://github.com/jibranpcccc/soc2-readiness-checklist/issues/1"
+  },
+  {
+    "site_id": "site-15",
+    "repo": "global-eor-payroll-calculator",
+    "issue_url": "https://github.com/jibranpcccc/global-eor-payroll-calculator/issues/1"
+  },
+  {
+    "site_id": "site-16",
+    "repo": "devcontainer-docker-generator",
+    "issue_url": "https://github.com/jibranpcccc/devcontainer-docker-generator/issues/1"
+  },
+  {
+    "site_id": "site-17",
+    "repo": "open-crm-migration-tco",
+    "issue_url": "https://github.com/jibranpcccc/open-crm-migration-tco/issues/1"
+  },
+  {
+    "site_id": "site-18",
+    "repo": "github-actions-dag-validator",
+    "issue_url": "https://github.com/jibranpcccc/github-actions-dag-validator/issues/1"
+  },
+  {
+    "site_id": "site-19",
+    "repo": "options-greeks-visualizer",
+    "issue_url": "https://github.com/jibranpcccc/options-greeks-visualizer/issues/1"
+  },
+  {
+    "site_id": "site-20",
+    "repo": "webgpu-edge-inference-bench",
+    "issue_url": "https://github.com/jibranpcccc/webgpu-edge-inference-bench/issues/1"
+  }
+]

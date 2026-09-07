@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[EdgeRuntimeHQ - Edge AI Runtimes & ONNX WebGPU Inference]]></title>
+    <link>https://edgeruntimehq.pages.dev/</link>
+    <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
+    <atom:link href="https://edgeruntimehq.pages.dev/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title><![CDATA[Edge AI Inference Leaderboard: WebGPU, ONNX Runtime & CoreML]]></title>
+      <link>https://edgeruntimehq.pages.dev/</link>
+      <guid isPermaLink="true">https://edgeruntimehq.pages.dev/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[WebGPU vs WASM: In-Browser LLM Inference Latency & Memory Benchmarks]]></title>
+      <link>https://edgeruntimehq.pages.dev/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/</link>
+      <guid isPermaLink="true">https://edgeruntimehq.pages.dev/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[ONNX Runtime vs TensorRT: Edge Server Latency & Throughput Guide]]></title>
+      <link>https://edgeruntimehq.pages.dev/onnx-runtime-vs-tensorrt-edge-server-latency/</link>
+      <guid isPermaLink="true">https://edgeruntimehq.pages.dev/onnx-runtime-vs-tensorrt-edge-server-latency/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Running Whisper Locally in Browser with WebGPU: Complete Step-by-Step Architecture]]></title>
+      <link>https://edgeruntimehq.pages.dev/running-whisper-speech-to-text-locally-in-browser-webgpu/</link>
+      <guid isPermaLink="true">https://edgeruntimehq.pages.dev/running-whisper-speech-to-text-locally-in-browser-webgpu/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raginspect.pages.dev/sitemap.xml

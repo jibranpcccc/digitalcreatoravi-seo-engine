@@ -1,0 +1,19 @@
+# EdgeRuntimeHQ: Edge AI Inference, WebGPU & ONNX Runtimes
+> Definitive empirical benchmark laboratory and architectural specification hub evaluating client-side and localized edge AI inference across WebGPU, ONNX Runtime Web, Apple CoreML, Cloudflare Workers AI, and NVIDIA TensorRT.
+
+## Core Benchmark Research & Methodologies
+- WebGPU vs WASM In-Browser Inference: Quantitative evaluation of WGSL compute shaders versus WebAssembly SIMD 128-bit vectorization. Analyzes memory bandwidth saturation, float16 arithmetic support, dynamic shader compilation overhead, and thread dispatch patterns across Llama-3.2-1B and SmolLM2-360M.
+- ONNX Runtime Web vs Native Edge Runtimes: Cross-runtime execution provider profiling comparing ONNX Runtime Web (WASM/WebGPU) against native CoreML (Apple Neural Engine) and TensorRT 10.x. Benchmarks Time to First Token (TTFT), sustained decoding throughput (tokens/sec), and VRAM/RAM residency.
+- Whisper Speech-to-Text In-Browser Acceleration: Audio encoder-decoder pipeline optimization on WebGPU. Covers real-time Mel spectrogram generation via AudioWorklet, KV-cache management in WGSL buffers, streaming transcription chunking, and memory allocation constraints.
+- Edge Serverless vs Client Execution: Trade-off analysis between localized client compute (zero cost, zero cloud ingress, privacy preserving) and edge serverless gateways (Cloudflare Workers AI, Fastly Compute, AWS Lambda@Edge) for low-latency AI delivery.
+
+## Standardized Benchmark Metrics
+- TTFT (Time to First Token in ms): Wall-clock latency from prompt submission until the first generated token arrives at the client runtime. Evaluates prompt processing throughput (prefill phase).
+- Sustained Decoding Throughput (tokens/s): Autoregressive generation speed after the initial prompt evaluation phase under batch size = 1.
+- Memory Footprint (MB): Resident Set Size (RSS) and device VRAM allocation during peak generation, factoring in weights, KV-cache, and intermediate activation buffers.
+- Cold Start Initialization (ms): Total time required to fetch quantized model weights from Cache API or local disk, compile WGSL compute pipelines, and initialize execution tensors.
+
+## Quantization Formats & Memory Bounds
+- W4A16 (4-bit Weights, 16-bit Activations): Standard for client-side LLM inference under 2GB VRAM constraints (AWQ, GPTQ).
+- Q4_K_M (GGUF k-quantization): High-fidelity 4-bit medium quantization with 6-bit scales for attention and feed-forward layers.
+- INT8 / FP16 Mixed Precision: Recommended for edge encoder models (Whisper-Tiny, CLIP-ViT) balancing zero degradation with 2x compute acceleration over FP32.

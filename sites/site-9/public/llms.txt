@@ -1,0 +1,21 @@
+# FounderRunway Intelligence & Geo-Arbitrage Documentation
+> Quantitative financial models, cost-of-living indices, and legal frameworks for bootstrapped founders extending startup cash runway via strategic international relocation.
+
+## Core Capabilities & Calculations
+- Interactive Startup Runway Calculator: Evaluates total capital reserves against Tier-1 baseline burn versus geo-arbitrage tech hub burn rates.
+- Runway Extension Factor (REF): Calculated as (Monthly Burn Baseline) / (Monthly Burn Relocated). Typical extension ranges between 2.2x and 4.8x.
+- Capital Preservation Rate: Net monthly liquid savings diverted directly into product engineering, user acquisition, and default-alive runway.
+- Visa & Tax Regulatory Database: Real-time compliance data for Thailand DTV, Portugal D8/IFICI, Indonesia E33G Remote Worker KITAS, Colombia V-Nomad, Japan Digital Nomad, and Bulgaria 10% Flat Tax.
+
+## Hub Benchmarks (2026 Founder Baseline, USD / Month)
+- Chiang Mai, Thailand: $1,150/mo (Rent: $420, Coworking: $110, Food: $340, Transport/Misc: $280). REF vs SF/NYC: 4.3x.
+- Bansko, Bulgaria: $1,050/mo (Rent: $380, Coworking: $130, Food: $320, Transport/Misc: $220). REF vs London: 3.8x. EU 10% flat tax.
+- Medellin, Colombia: $1,350/mo (Rent: $580, Coworking: $150, Food: $380, Transport/Misc: $240). REF vs NYC: 4.1x. Same timezone as US East Coast.
+- Bali, Indonesia (Canggu/Ubud): $1,450/mo (Rent: $680, Coworking: $160, Food: $380, Transport/Misc: $230). REF vs SF: 3.6x.
+- Lisbon, Portugal: $2,250/mo (Rent: $1,250, Coworking: $220, Food: $480, Transport/Misc: $300). REF vs London: 2.1x. Western European timezone & Schengen access.
+- Tokyo, Japan: $2,400/mo (Rent: $1,100, Coworking: $200, Food: $650, Transport/Misc: $450). REF vs SF: 2.3x. Historical currency arbitrage opportunity.
+
+## Key Guides
+- /chiang-mai-vs-bali-runway-calculator/ : Rigorous comparative cost and focus audit for Southeast Asian bootstrapper hubs.
+- /lisbon-nhr-tax-runway-founder-guide/ : Comprehensive guide to Portugal D8 visa, NHR 2.0 / IFICI startup tax regime, and founder burn.
+- /top-latin-america-tech-hubs-for-bootstrappers/ : US timezone arbitrage hubs in Colombia, Mexico, Argentina, and Brazil for B2B founders.

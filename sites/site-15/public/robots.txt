@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://site-15-ruby.vercel.app/sitemap.xml

@@ -1,0 +1,31 @@
+# GreekVisualizer - Quantitative Options Greeks & DeFi Impermanent Loss Engine
+
+> GreekVisualizer (https://site-19-nine.vercel.app) is an institutional-grade financial mathematics and quantitative research platform providing real-time calculators, derivative sensitivity analysis, and concentrated liquidity models for modern options traders and DeFi market makers.
+
+## Core Calculators & Research Guides
+
+- [Black-Scholes Options Greeks & DeFi Impermanent Loss Visualizer](https://site-19-nine.vercel.app/): High-precision client-side quantitative calculator computing Black-Scholes analytical option prices (Call/Put), first-order Greeks (Delta, Vega, Theta, Rho), second-order Greek (Gamma), and Uniswap v3 concentrated liquidity Impermanent Loss (IL) with capital efficiency ratios.
+- [Uniswap v3 Concentrated Liquidity Impermanent Loss Calculator & Math Guide](https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/): Analytical derivation of virtual reserves, tick math, price ranges [P_a, P_b], LP asset rebalancing, divergence loss equations, and capital efficiency vs Uniswap v2 constant-product pools.
+- [Options Gamma Scalping, Theta Decay & Dynamic Delta Hedging Strategies](https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/): Advanced volatility arbitrage handbook detailing long gamma rebalancing bands, negative theta carry costs, second-order Greek risk management, and the Black-Scholes-Merton PDE equilibrium.
+- [Crypto Funding Rate Arbitrage & Delta-Neutral Yield Farming Guide](https://site-19-nine.vercel.app/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/): Quantitative mechanics of perpetual futures basis trading, 8-hour funding cash-and-carry yields, delta-neutral hedging, liquidation prevention, and execution slippage optimization.
+
+## Mathematical Formulations
+
+### Black-Scholes-Merton Equations
+- $d_1 = \frac{\ln(S/K) + (r + \frac{\sigma^2}{2})T}{\sigma \sqrt{T}}$
+- $d_2 = d_1 - \sigma \sqrt{T}$
+- Call Price: $C = S \cdot N(d_1) - K e^{-rT} \cdot N(d_2)$
+- Put Price: $P = K e^{-rT} \cdot N(-d_2) - S \cdot N(-d_1)$
+- Delta ($\Delta$): Call $= N(d_1)$, Put $= N(d_1) - 1$
+- Gamma ($\Gamma$): $\frac{\phi(d_1)}{S \sigma \sqrt{T}}$
+- Vega ($\nu$): $S \sqrt{T} \phi(d_1) \times 0.01$ (per 1% implied volatility change)
+- Theta ($\Theta$): Call $= -\frac{S \phi(d_1) \sigma}{2\sqrt{T}} - r K e^{-rT} N(d_2)$ (per calendar day $/ 365$)
+- Rho ($\rho$): Call $= K T e^{-rT} N(d_2) \times 0.01$
+
+### Uniswap v3 Concentrated Liquidity Math
+- Real Reserves:
+  - $x = L \left( \frac{1}{\sqrt{P}} - \frac{1}{\sqrt{p_b}} \right)$
+  - $y = L (\sqrt{P} - \sqrt{p_a})$
+- Position Value: $V(P) = x \cdot P + y = L \left( 2\sqrt{P} - \sqrt{p_a} - \frac{P}{\sqrt{p_b}} \right)$
+- Impermanent Loss: $\text{IL} = \frac{V(P_1)}{V_{\text{HODL}}(P_1)} - 1$
+- Capital Efficiency Factor: $\text{Multiplier} = \frac{1}{1 - \sqrt{p_a / p_b}}$

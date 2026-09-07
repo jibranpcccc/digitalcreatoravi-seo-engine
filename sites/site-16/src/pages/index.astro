@@ -1,0 +1,919 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://site-16-indol.vercel.app/#app",
+      "name": "DevConfigHub Dev Environment Generator",
+      "url": "https://site-16-indol.vercel.app/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux, macOS, Windows",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Interactive local development configuration generator for Docker Compose, DevContainers, and Nix Flakes across Node.js, Python, Rust, and Go."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://site-16-indol.vercel.app/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between DevContainers and Docker Compose?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DevContainers (devcontainer.json) configure the developer workspace, editor extensions, lifecycle hooks, and shell environment inside a container. Docker Compose orchestrates multi-service backend topologies (databases, caches, queues). In modern workflows, DevContainers frequently reference a docker-compose.yml file to mount editor tooling onto one service while running database companions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I choose Nix Flakes over Docker containers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose Nix Flakes when you require native CPU performance, zero virtualization memory overhead, and instant shell activation without Docker daemon latency. Nix Flakes excel for compiling Rust, C++, and Go where native file I/O speed is paramount, while Docker excels for isolating services with complex OS-level daemons like PostgreSQL and Redis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you achieve sub-second startup in local Docker databases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mount the database storage directory on a memory-backed tmpfs volume, disable durability guarantees with fsync=off and synchronous_commit=off, and utilize Docker Compose v2 healthcheck dependencies (condition: service_healthy) to prevent race conditions during application boot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Docker-in-Docker (DinD) vs Docker-outside-of-Docker (DooD)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Docker-in-Docker runs a child Docker daemon inside the container with privileged flags. Docker-outside-of-Docker mounts the host's /var/run/docker.sock into the container, allowing sibling container orchestration without nested virtualization overhead or privileged security concessions."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const pageTitle = "DevConfigHub: DevContainer, Docker Compose & Nix Flakes Config Generator";
+const pageDescription = "Generate production-tuned DevContainer, Docker Compose, and Nix Flakes configs for Node.js, Python, Rust, and Go with PostgreSQL 16, pgvector, and Redis 7.";
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical="https://site-16-indol.vercel.app/"
+  schemaJson={JSON.stringify(schemaData)}
+>
+  <!-- Hero Section -->
+  <section class="py-8 sm:py-12 border-b border-slate-800/80 relative">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono mb-6">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      Interactive Local Dev Environment Architect
+    </div>
+
+    <!-- EXACTLY ONE H1 -->
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
+      Modern Developer Config Hub: <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500">DevContainer, Docker Compose & Nix Flakes</span>
+    </h1>
+
+    <!-- 45-60 Word Quick Answer Featured Snippet Box with Green Accent Border -->
+    <div class="my-6 p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-emerald-950/40 via-slate-900/60 to-slate-950/80 border-l-4 border-emerald-500 border-y border-r border-slate-800 shadow-xl shadow-emerald-950/20">
+      <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold mb-2.5">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        <span>Quick Answer & Architecture Summary</span>
+      </div>
+      <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+        DevConfigHub provides production-ready local development configurations bridging DevContainers, Docker Compose, and Nix Flakes. DevContainers isolate editor tooling and extensions inside containers, Docker Compose orchestrates multi-service databases with optimized filesystem caching, and Nix Flakes delivers hermetic, zero-container toolchain reproducibility. Together, they eliminate environment drift and enable instantaneous developer onboarding across any operating system.
+      </p>
+    </div>
+
+    <p class="text-base sm:text-lg text-slate-400 max-w-3xl leading-relaxed">
+      Configure your stack in seconds below. Pick your primary runtime, database companions, and specialized developer features to produce battle-hardened <code class="text-emerald-400 font-mono text-sm bg-slate-900 px-1.5 py-0.5 rounded">docker-compose.yml</code> and <code class="text-cyan-400 font-mono text-sm bg-slate-900 px-1.5 py-0.5 rounded">devcontainer.json</code> files ready for production repos.
+    </p>
+  </section>
+
+  <!-- Interactive Config Generator Section -->
+  <section id="generator" class="py-12">
+    <div class="flex flex-col lg:flex-row gap-8 items-start">
+      
+      <!-- Left Controls Panel -->
+      <div class="w-full lg:w-5/12 bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-2xl backdrop-blur-sm">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+          <h2 class="text-lg font-bold text-white flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+            Configuration Matrix
+          </h2>
+          <span class="text-xs font-mono text-slate-400">Auto-evaluates</span>
+        </div>
+
+        <!-- 1. Select Stack -->
+        <div class="mb-6">
+          <label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-2.5">
+            1. Primary Language & Runtime
+          </label>
+          <div class="grid grid-cols-2 gap-2.5">
+            <label class="flex items-center p-3 rounded-xl border border-slate-700/80 bg-slate-950/60 hover:border-emerald-500/60 cursor-pointer transition has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-950/20">
+              <input type="radio" name="stack" value="node" checked class="w-4 h-4 text-emerald-500 bg-slate-900 border-slate-700 focus:ring-emerald-500" />
+              <div class="ml-2.5">
+                <span class="block text-xs font-bold text-white">Node.js / TS</span>
+                <span class="block text-[10px] text-slate-400 font-mono">v20 LTS • pnpm</span>
+              </div>
+            </label>
+
+            <label class="flex items-center p-3 rounded-xl border border-slate-700/80 bg-slate-950/60 hover:border-emerald-500/60 cursor-pointer transition has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-950/20">
+              <input type="radio" name="stack" value="python" class="w-4 h-4 text-emerald-500 bg-slate-900 border-slate-700 focus:ring-emerald-500" />
+              <div class="ml-2.5">
+                <span class="block text-xs font-bold text-white">Python / FastAPI</span>
+                <span class="block text-[10px] text-slate-400 font-mono">v3.12 • uv & ruff</span>
+              </div>
+            </label>
+
+            <label class="flex items-center p-3 rounded-xl border border-slate-700/80 bg-slate-950/60 hover:border-emerald-500/60 cursor-pointer transition has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-950/20">
+              <input type="radio" name="stack" value="rust" class="w-4 h-4 text-emerald-500 bg-slate-900 border-slate-700 focus:ring-emerald-500" />
+              <div class="ml-2.5">
+                <span class="block text-xs font-bold text-white">Rust</span>
+                <span class="block text-[10px] text-slate-400 font-mono">1.80+ • cargo & clippy</span>
+              </div>
+            </label>
+
+            <label class="flex items-center p-3 rounded-xl border border-slate-700/80 bg-slate-950/60 hover:border-emerald-500/60 cursor-pointer transition has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-950/20">
+              <input type="radio" name="stack" value="go" class="w-4 h-4 text-emerald-500 bg-slate-900 border-slate-700 focus:ring-emerald-500" />
+              <div class="ml-2.5">
+                <span class="block text-xs font-bold text-white">Go (Golang)</span>
+                <span class="block text-[10px] text-slate-400 font-mono">v1.23 • gopls & delve</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- 2. Select Database -->
+        <div class="mb-6">
+          <label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-2.5">
+            2. Database & Cache Layer
+          </label>
+          <div class="grid grid-cols-2 gap-2.5">
+            <label class="flex items-center p-3 rounded-xl border border-slate-700/80 bg-slate-950/60 hover:border-cyan-500/60 cursor-pointer transition has-[:checked]:border-cyan-500 has-[:checked]:bg-cyan-950/20">
+              <input type="radio" name="database" value="both" checked class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500" />
+              <div class="ml-2.5">
+                <span class="block text-xs font-bold text-white">Postgres 16 + Redis 7</span>
+                <span class="block text-[10px] text-slate-400 font-mono">Full stack companion</span>
+              </div>
+            </label>
+
+            <label class="flex items-center p-3 rounded-xl border border-slate-700/80 bg-slate-950/60 hover:border-cyan-500/60 cursor-pointer transition has-[:checked]:border-cyan-500 has-[:checked]:bg-cyan-950/20">
+              <input type="radio" name="database" value="postgres" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500" />
+              <div class="ml-2.5">
+                <span class="block text-xs font-bold text-white">Postgres 16 Only</span>
+                <span class="block text-[10px] text-slate-400 font-mono">Port 5432 • Alpine</span>
+              </div>
+            </label>
+
+            <label class="flex items-center p-3 rounded-xl border border-slate-700/80 bg-slate-950/60 hover:border-cyan-500/60 cursor-pointer transition has-[:checked]:border-cyan-500 has-[:checked]:bg-cyan-950/20">
+              <input type="radio" name="database" value="redis" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500" />
+              <div class="ml-2.5">
+                <span class="block text-xs font-bold text-white">Redis 7 Only</span>
+                <span class="block text-[10px] text-slate-400 font-mono">Port 6379 • In-memory</span>
+              </div>
+            </label>
+
+            <label class="flex items-center p-3 rounded-xl border border-slate-700/80 bg-slate-950/60 hover:border-cyan-500/60 cursor-pointer transition has-[:checked]:border-cyan-500 has-[:checked]:bg-cyan-950/20">
+              <input type="radio" name="database" value="none" class="w-4 h-4 text-cyan-500 bg-slate-900 border-slate-700 focus:ring-cyan-500" />
+              <div class="ml-2.5">
+                <span class="block text-xs font-bold text-white">None (Stateless)</span>
+                <span class="block text-[10px] text-slate-400 font-mono">App container only</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- 3. Specialized Features -->
+        <div class="mb-6">
+          <label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-2.5">
+            3. Advanced Engineering Features
+          </label>
+          <div class="space-y-2.5">
+            <label class="flex items-start p-3 rounded-xl border border-slate-700/80 bg-slate-950/60 hover:border-blue-500/60 cursor-pointer transition has-[:checked]:border-blue-500 has-[:checked]:bg-blue-950/20">
+              <input type="checkbox" id="feat-pgvector" checked class="mt-0.5 w-4 h-4 text-blue-500 rounded bg-slate-900 border-slate-700 focus:ring-blue-500" />
+              <div class="ml-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-bold text-white">pgvector Support</span>
+                  <span class="px-1.5 py-0.5 rounded text-[9px] font-mono bg-blue-500/20 text-blue-400">AI / RAG</span>
+                </div>
+                <span class="text-[11px] text-slate-400 leading-normal block mt-0.5">
+                  Swaps standard Postgres image with <code class="text-slate-300">pgvector/pgvector:pg16</code> for native vector embeddings and cosine distance indexing.
+                </span>
+              </div>
+            </label>
+
+            <label class="flex items-start p-3 rounded-xl border border-slate-700/80 bg-slate-950/60 hover:border-purple-500/60 cursor-pointer transition has-[:checked]:border-purple-500 has-[:checked]:bg-purple-950/20">
+              <input type="checkbox" id="feat-dind" class="mt-0.5 w-4 h-4 text-purple-500 rounded bg-slate-900 border-slate-700 focus:ring-purple-500" />
+              <div class="ml-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-bold text-white">Docker-in-Docker / Socket Mount</span>
+                  <span class="px-1.5 py-0.5 rounded text-[9px] font-mono bg-purple-500/20 text-purple-400">CI / Testcontainers</span>
+                </div>
+                <span class="text-[11px] text-slate-400 leading-normal block mt-0.5">
+                  Injects host Docker socket into DevContainer to run Testcontainers, k3s, or nested container builds.
+                </span>
+              </div>
+            </label>
+
+            <label class="flex items-start p-3 rounded-xl border border-slate-700/80 bg-slate-950/60 hover:border-amber-500/60 cursor-pointer transition has-[:checked]:border-amber-500 has-[:checked]:bg-amber-950/20">
+              <input type="checkbox" id="feat-tmpfs" checked class="mt-0.5 w-4 h-4 text-amber-500 rounded bg-slate-900 border-slate-700 focus:ring-amber-500" />
+              <div class="ml-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-bold text-white">RAM-Backed tmpfs Speed Flags</span>
+                  <span class="px-1.5 py-0.5 rounded text-[9px] font-mono bg-amber-500/20 text-amber-400">10x Speedup</span>
+                </div>
+                <span class="text-[11px] text-slate-400 leading-normal block mt-0.5">
+                  Disables fsync durability and uses memory mounts for sub-second database boot and ultra-fast integration tests.
+                </span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Quick Summary Metrics -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-xs text-slate-400 space-y-1.5 font-mono">
+          <div class="flex justify-between">
+            <span class="text-slate-400">Lifecycle Engine:</span>
+            <span class="text-emerald-400 font-bold" id="metric-lifecycle">postCreateCommand</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-400">Compose Version:</span>
+            <span class="text-cyan-400 font-bold">Compose Spec v2.29</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-400">Container Port:</span>
+            <span class="text-white font-bold" id="metric-port">3000 / 5432</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Output & Code Display Panel -->
+      <div class="w-full lg:w-7/12 bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+        <!-- Header with Tabs and 1-Click Copy -->
+        <div class="bg-slate-900/90 border-b border-slate-800 px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+          <div class="flex items-center gap-1.5">
+            <button
+              id="tab-compose"
+              class="tab-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold transition bg-emerald-500/20 text-emerald-400 border border-emerald-500/40"
+              data-target="compose"
+            >
+              docker-compose.yml
+            </button>
+            <button
+              id="tab-devcontainer"
+              class="tab-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60"
+              data-target="devcontainer"
+            >
+              devcontainer.json
+            </button>
+            <button
+              id="tab-nix"
+              class="tab-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60"
+              data-target="nix"
+            >
+              flake.nix
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button
+              id="copy-btn"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-mono font-bold shadow-md shadow-emerald-500/20 transition cursor-pointer"
+            >
+              <svg id="copy-icon" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              <span id="copy-text">Copy File</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Code Content Area -->
+        <div class="p-4 sm:p-6 overflow-x-auto bg-[#070A11] flex-grow max-h-[600px] overflow-y-auto font-mono text-xs sm:text-sm leading-relaxed text-slate-300 selection:bg-emerald-500/30">
+          <div id="view-compose" class="code-view">
+            <pre id="code-compose" is:raw class="whitespace-pre overflow-x-auto">services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace:cached
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/app_dev?sslmode=disable
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: ["pnpm", "run", "dev"]
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=app_dev
+    command:
+      - "postgres"
+      - "-c"
+      - "fsync=off"
+      - "-c"
+      - "synchronous_commit=off"
+      - "-c"
+      - "full_page_writes=off"
+      - "-c"
+      - "shared_buffers=256MB"
+    tmpfs:
+      - /var/lib/postgresql/data:rw,noexec,nosuid,size=1024m
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d app_dev"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 2s
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 2s
+      retries: 5
+      start_period: 1s</pre>
+          </div>
+
+          <div id="view-devcontainer" class="code-view hidden">
+            <pre id="code-devcontainer" is:raw class="whitespace-pre overflow-x-auto">{
+  "name": "Node.js 20 & Full-Stack Suite",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens",
+        "ms-azuretools.vscode-docker",
+        "ckolkman.vscode-postgres"
+      ]
+    }
+  },
+  "forwardPorts": [3000, 5432, 6379],
+  "portsAttributes": {
+    "3000": {
+      "label": "Application Dev Server",
+      "onAutoForward": "openBrowser"
+    },
+    "5432": {
+      "label": "PostgreSQL 16 Engine",
+      "onAutoForward": "silent"
+    },
+    "6379": {
+      "label": "Redis 7 In-Memory Cache",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "pnpm install",
+  "remoteUser": "node"
+}</pre>
+          </div>
+
+          <div id="view-nix" class="code-view hidden">
+            <pre id="code-nix" is:raw class="whitespace-pre overflow-x-auto">{
+  description = "Hermetic Development Shell via Nix Flakes";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
+  };
+
+  outputs = { self, nixpkgs, flake-utils }:
+    flake-utils.lib.eachDefaultSystem (system:
+      let
+        pkgs = import nixpkgs { inherit system; };
+      in
+      {
+        devShells.default = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            nodejs_20
+            pnpm
+            postgresql_16
+            redis
+            git
+            docker-compose
+          ];
+
+          shellHook = ''
+            echo "🔥 DevConfigHub Hermetic Environment Activated [System: ${system}]"
+            export DATABASE_URL="postgresql://postgres:postgres@localhost:5432/app_dev"
+            export REDIS_URL="redis://localhost:6379/0"
+          '';
+        };
+      }
+    );
+}</pre>
+          </div>
+        </div>
+
+        <!-- Terminal Quick Run Hint Footer -->
+        <div class="bg-slate-900 border-t border-slate-800 px-4 py-2.5 flex items-center justify-between text-[11px] font-mono text-slate-400">
+          <div class="flex items-center gap-2">
+            <span class="text-emerald-400">&gt;</span>
+            <span id="cli-hint">docker compose up -d</span>
+          </div>
+          <span class="text-slate-400">Zero-lag local telemetry</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Architecture Cheatsheet Section -->
+  <section id="cheatsheet" class="py-12 border-t border-slate-800/80">
+    <div class="mb-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono mb-3">
+        Engineers Matrix 2026
+      </div>
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+        Local Dev Environment Architecture Cheatsheet
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-3xl">
+        Compare the three primary paradigms for engineering workstation isolation, disk overhead, filesystem latency, and cross-platform compatibility.
+      </p>
+    </div>
+
+    <!-- Comparative Table -->
+    <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl mb-12">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-slate-950/80 text-slate-300 font-mono uppercase text-[11px] border-b border-slate-800">
+          <tr>
+            <th class="p-4 sm:p-5">Dimension</th>
+            <th class="p-4 sm:p-5 text-emerald-400">VS Code DevContainers</th>
+            <th class="p-4 sm:p-5 text-cyan-400">Docker Compose Alone</th>
+            <th class="p-4 sm:p-5 text-purple-400">Nix Flakes DevShell</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800/80 text-slate-300 font-sans">
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 sm:p-5 font-bold text-white font-mono">Workspace Scope</td>
+            <td class="p-4 sm:p-5">Whole editor server + extensions inside container</td>
+            <td class="p-4 sm:p-5">Only service and runtime daemons isolated</td>
+            <td class="p-4 sm:p-5">Subshell process path & library injection</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 sm:p-5 font-bold text-white font-mono">IDE Integration</td>
+            <td class="p-4 sm:p-5 text-emerald-300">Seamless (VS Code / Cursor / JetBrains Gateway)</td>
+            <td class="p-4 sm:p-5">Manual host plugins + remote port binding</td>
+            <td class="p-4 sm:p-5">Native direnv integration with any editor</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 sm:p-5 font-bold text-white font-mono">File I/O Overhead</td>
+            <td class="p-4 sm:p-5">High on macOS/Windows without named volumes or VirtioFS</td>
+            <td class="p-4 sm:p-5">High for bind mounts; near zero with named volumes</td>
+            <td class="p-4 sm:p-5 text-emerald-300">Zero (Native kernel file I/O speed)</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 sm:p-5 font-bold text-white font-mono">Startup Latency</td>
+            <td class="p-4 sm:p-5">5 – 15 seconds (container boot + remote server)</td>
+            <td class="p-4 sm:p-5">1 – 3 seconds (<code class="font-mono text-xs">docker compose up</code>)</td>
+            <td class="p-4 sm:p-5 text-emerald-300">&lt; 100ms via cached Nix store</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 sm:p-5 font-bold text-white font-mono">Hermetic Reproducibility</td>
+            <td class="p-4 sm:p-5">Good (pinned base image + package locks)</td>
+            <td class="p-4 sm:p-5">Good (pinned OCI container hashes)</td>
+            <td class="p-4 sm:p-5 text-emerald-300">Absolute (SHA256 cryptographic lockfile)</td>
+          </tr>
+          <tr class="hover:bg-slate-800/30 transition">
+            <td class="p-4 sm:p-5 font-bold text-white font-mono">Host Daemon Required</td>
+            <td class="p-4 sm:p-5">Docker Desktop, OrbStack, or Podman</td>
+            <td class="p-4 sm:p-5">Docker Engine / Compose v2</td>
+            <td class="p-4 sm:p-5 text-emerald-300">None (single Nix binary package manager)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Performance Best Practice Pillars -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 transition">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center font-mono text-emerald-400 font-bold mb-4">
+          01
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Eliminate Filesystem Jitter</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          On macOS and Windows, bind mounts incur VM translation overhead. Keep <code class="text-emerald-400 font-mono">node_modules</code> and Cargo target directories in isolated anonymous or named volumes to prevent 8x build slowdowns.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 transition">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center font-mono text-cyan-400 font-bold mb-4">
+          02
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Ephemeral tmpfs for Tests</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Local test suites do not need write-ahead durability. Mount <code class="text-cyan-400 font-mono">/var/lib/postgresql/data</code> onto a memory tmpfs with <code class="text-cyan-400 font-mono">fsync=off</code> to accelerate test suites by up to 1000%.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-purple-500/50 transition">
+        <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center font-mono text-purple-400 font-bold mb-4">
+          03
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Deterministic Lockfiles</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Always pin base images to SHA256 digests or exact patch tags. In Nix environments, commit <code class="text-purple-400 font-mono">flake.lock</code> to version control so every engineer executes bit-for-bit identical toolchains.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Dive Links Banner -->
+  <section class="py-12 border-t border-slate-800/80">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900/90 to-emerald-950/40 border border-slate-800">
+      <div>
+        <h3 class="text-xl font-black text-white mb-1">Explore In-Depth Architectural Engineering Guides</h3>
+        <p class="text-xs sm:text-sm text-slate-400">
+          Step-by-step deep dives on DevContainers, Nix Flakes, and sub-second Postgres performance.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-3">
+        <a
+          href="/devcontainer-json-vs-docker-compose-local-development/"
+          class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono font-semibold transition border border-slate-700"
+        >
+          DevContainer vs Compose &rarr;
+        </a>
+        <a
+          href="/nix-flakes-for-reproducible-python-rust-node-environments/"
+          class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono font-semibold transition border border-slate-700"
+        >
+          Nix Flakes Guide &rarr;
+        </a>
+        <a
+          href="/fastest-docker-compose-postgres-redis-local-stack/"
+          class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-mono font-bold transition shadow-lg shadow-emerald-500/20"
+        >
+          Fastest DB Stack &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section with Schema JSON-LD -->
+  <section id="faq" class="py-12 border-t border-slate-800/80">
+    <div class="mb-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono mb-3">
+        Frequently Answered Questions
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+        Local Developer Environment FAQ
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <h3 class="text-sm font-bold text-white mb-2">What is the difference between DevContainers and Docker Compose?</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          DevContainers (<code class="font-mono text-emerald-400">devcontainer.json</code>) configure the developer workspace, editor extensions, lifecycle hooks, and shell environment inside a container. Docker Compose orchestrates multi-service backend topologies (databases, caches, queues). In modern workflows, DevContainers frequently reference a <code class="font-mono text-cyan-400">docker-compose.yml</code> file to mount editor tooling onto one service while running companion services.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <h3 class="text-sm font-bold text-white mb-2">When should I choose Nix Flakes over Docker containers?</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Choose Nix Flakes when you require native CPU performance, zero virtualization memory overhead, and instant shell activation without Docker daemon latency. Nix Flakes excel for compiling Rust, C++, and Go where native file I/O speed is paramount, while Docker excels for isolating services with complex OS-level daemons like PostgreSQL and Redis.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <h3 class="text-sm font-bold text-white mb-2">How do you achieve sub-second startup in local Docker databases?</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Mount the database storage directory on a memory-backed tmpfs volume, disable durability guarantees with <code class="font-mono text-amber-400">fsync=off</code> and <code class="font-mono text-amber-400">synchronous_commit=off</code>, and utilize Docker Compose v2 healthcheck dependencies (<code class="font-mono text-emerald-400">condition: service_healthy</code>) to prevent race conditions during application boot.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <h3 class="text-sm font-bold text-white mb-2">What is Docker-in-Docker (DinD) vs Docker-outside-of-Docker (DooD)?</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Docker-in-Docker runs a child Docker daemon inside the container with privileged flags. Docker-outside-of-Docker mounts the host's <code class="font-mono text-purple-400">/var/run/docker.sock</code> into the container, allowing sibling container orchestration without nested virtualization overhead or privileged security concessions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client-side Interactive Generator Script -->
+  <script is:inline>
+    (function() {
+      // Elements
+      const stackRadios = document.querySelectorAll('input[name="stack"]');
+      const dbRadios = document.querySelectorAll('input[name="database"]');
+      const featPgvector = document.getElementById('feat-pgvector');
+      const featDind = document.getElementById('feat-dind');
+      const featTmpfs = document.getElementById('feat-tmpfs');
+
+      const codeCompose = document.getElementById('code-compose');
+      const codeDevcontainer = document.getElementById('code-devcontainer');
+      const codeNix = document.getElementById('code-nix');
+
+      const tabCompose = document.getElementById('tab-compose');
+      const tabDevcontainer = document.getElementById('tab-devcontainer');
+      const tabNix = document.getElementById('tab-nix');
+
+      const viewCompose = document.getElementById('view-compose');
+      const viewDevcontainer = document.getElementById('view-devcontainer');
+      const viewNix = document.getElementById('view-nix');
+
+      const copyBtn = document.getElementById('copy-btn');
+      const copyText = document.getElementById('copy-text');
+      const copyIcon = document.getElementById('copy-icon');
+      const metricPort = document.getElementById('metric-port');
+      const cliHint = document.getElementById('cli-hint');
+
+      let currentTab = 'compose';
+
+      function getSelectedStack() {
+        const checked = document.querySelector('input[name="stack"]:checked');
+        return checked ? checked.value : 'node';
+      }
+
+      function getSelectedDb() {
+        const checked = document.querySelector('input[name="database"]:checked');
+        return checked ? checked.value : 'both';
+      }
+
+      function generateConfigs() {
+        const stack = getSelectedStack();
+        const db = getSelectedDb();
+        const hasPgvector = featPgvector.checked && (db === 'postgres' || db === 'both');
+        const hasDind = featDind.checked;
+        const hasTmpfs = featTmpfs.checked;
+
+        // Auto disable pgvector if db has no postgres
+        if (db === 'redis' || db === 'none') {
+          featPgvector.disabled = true;
+          featPgvector.parentElement.classList.add('opacity-50');
+        } else {
+          featPgvector.disabled = false;
+          featPgvector.parentElement.classList.remove('opacity-50');
+        }
+
+        // Stack info
+        const stackConfig = {
+          node: {
+            name: "Node.js 20 & TypeScript Suite",
+            servicePort: 3000,
+            command: '["pnpm", "run", "dev"]',
+            postCreate: "pnpm install",
+            user: "node",
+            extensions: ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode", "eamodio.gitlens"],
+            nixPkgs: "nodejs_20\n            pnpm"
+          },
+          python: {
+            name: "Python 3.12 & FastAPI Engine",
+            servicePort: 8000,
+            command: '["uv", "run", "uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]',
+            postCreate: "uv sync",
+            user: "vscode",
+            extensions: ["ms-python.python", "charliermarsh.ruff", "tamasfe.even-better-toml"],
+            nixPkgs: "python312\n            uv\n            ruff"
+          },
+          rust: {
+            name: "Rust 1.80+ Systems Workstation",
+            servicePort: 8080,
+            command: '["cargo", "watch", "-x", "run"]',
+            postCreate: "cargo check",
+            user: "vscode",
+            extensions: ["rust-lang.rust-analyzer", "tamasfe.even-better-toml", "vadimcn.vscode-lldb"],
+            nixPkgs: "rustc\n            cargo\n            rust-analyzer\n            clippy"
+          },
+          go: {
+            name: "Go 1.23 High-Throughput Service",
+            servicePort: 8080,
+            command: '["air"]',
+            postCreate: "go mod download",
+            user: "vscode",
+            extensions: ["golang.go", "golang.delve-dap"],
+            nixPkgs: "go_1_23\n            gopls\n            golangci-lint"
+          }
+        }[stack];
+
+        metricPort.textContent = `${stackConfig.servicePort}` + (db === 'both' ? ' / 5432 / 6379' : db === 'postgres' ? ' / 5432' : db === 'redis' ? ' / 6379' : '');
+        cliHint.textContent = `docker compose up -d && code .`;
+
+        // 1. Compose Config
+        let compose = `services:\n  app:\n    build:\n      context: .\n      dockerfile: Dockerfile\n    volumes:\n      - .:/workspace:cached\n`;
+        
+        if (hasDind) {
+          compose += `      - /var/run/docker.sock:/var/run/docker.sock\n`;
+        }
+
+        compose += `    ports:\n      - "${stackConfig.servicePort}:${stackConfig.servicePort}"\n    environment:\n      - ENV=development\n`;
+
+        if (db === 'postgres' || db === 'both') {
+          compose += `      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/app_dev?sslmode=disable\n`;
+        }
+        if (db === 'redis' || db === 'both') {
+          compose += `      - REDIS_URL=redis://redis:6379/0\n`;
+        }
+
+        if (db !== 'none') {
+          compose += `    depends_on:\n`;
+          if (db === 'postgres' || db === 'both') {
+            compose += `      postgres:\n        condition: service_healthy\n`;
+          }
+          if (db === 'redis' || db === 'both') {
+            compose += `      redis:\n        condition: service_healthy\n`;
+          }
+        }
+
+        compose += `    command: ${stackConfig.command}\n`;
+
+        // Postgres Service
+        if (db === 'postgres' || db === 'both') {
+          const pgImg = hasPgvector ? 'pgvector/pgvector:pg16' : 'postgres:16-alpine';
+          compose += `\n  postgres:\n    image: ${pgImg}\n    restart: unless-stopped\n    ports:\n      - "5432:5432"\n    environment:\n      - POSTGRES_USER=postgres\n      - POSTGRES_PASSWORD=postgres\n      - POSTGRES_DB=app_dev\n`;
+          
+          if (hasTmpfs) {
+            compose += `    command:\n      - "postgres"\n      - "-c"\n      - "fsync=off"\n      - "-c"\n      - "synchronous_commit=off"\n      - "-c"\n      - "full_page_writes=off"\n      - "-c"\n      - "shared_buffers=256MB"\n    tmpfs:\n      - /var/lib/postgresql/data:rw,noexec,nosuid,size=1024m\n`;
+          } else {
+            compose += `    volumes:\n      - postgres_data:/var/lib/postgresql/data\n`;
+          }
+
+          compose += `    healthcheck:\n      test: ["CMD-SHELL", "pg_isready -U postgres -d app_dev"]\n      interval: 2s\n      timeout: 3s\n      retries: 10\n      start_period: 2s\n`;
+        }
+
+        // Redis Service
+        if (db === 'redis' || db === 'both') {
+          compose += `\n  redis:\n    image: redis:7-alpine\n    restart: unless-stopped\n    ports:\n      - "6379:6379"\n`;
+          if (hasTmpfs) {
+            compose += `    command: ["redis-server", "--save", "", "--appendonly", "no"]\n`;
+          }
+          compose += `    healthcheck:\n      test: ["CMD", "redis-cli", "ping"]\n      interval: 2s\n      timeout: 2s\n      retries: 5\n      start_period: 1s\n`;
+        }
+
+        if ((db === 'postgres' || db === 'both') && !hasTmpfs) {
+          compose += `\nvolumes:\n  postgres_data:\n`;
+        }
+
+        codeCompose.textContent = compose;
+
+        // 2. DevContainer Config
+        const forwardPorts = [stackConfig.servicePort];
+        if (db === 'postgres' || db === 'both') forwardPorts.push(5432);
+        if (db === 'redis' || db === 'both') forwardPorts.push(6379);
+
+        const portsAttributes = {
+          [stackConfig.servicePort]: {
+            label: "Application Dev Server",
+            onAutoForward: "openBrowser"
+          }
+        };
+        if (db === 'postgres' || db === 'both') {
+          portsAttributes["5432"] = {
+            label: "PostgreSQL 16 Engine",
+            onAutoForward: "silent"
+          };
+        }
+        if (db === 'redis' || db === 'both') {
+          portsAttributes["6379"] = {
+            label: "Redis 7 In-Memory Cache",
+            onAutoForward: "silent"
+          };
+        }
+
+        const devcontainerObj = {
+          name: stackConfig.name,
+          dockerComposeFile: "docker-compose.yml",
+          service: "app",
+          workspaceFolder: "/workspace",
+          customizations: {
+            vscode: {
+              settings: {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "editor.formatOnSave": true
+              },
+              extensions: stackConfig.extensions
+            }
+          },
+          forwardPorts: forwardPorts,
+          portsAttributes: portsAttributes,
+          postCreateCommand: stackConfig.postCreate,
+          remoteUser: stackConfig.user
+        };
+
+        if (hasDind) {
+          devcontainerObj.features = {
+            "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+              version: "latest",
+              enableNonRootDocker: "true"
+            }
+          };
+        }
+
+        codeDevcontainer.textContent = JSON.stringify(devcontainerObj, null, 2);
+
+        // 3. Nix Flake Config
+        let nixPkgsList = stackConfig.nixPkgs;
+        if (db === 'postgres' || db === 'both') nixPkgsList += `\n            postgresql_16`;
+        if (db === 'redis' || db === 'both') nixPkgsList += `\n            redis`;
+        nixPkgsList += `\n            git\n            docker-compose`;
+
+        const nixFlake = `{\n  description = "Hermetic Development Shell via Nix Flakes";\n\n  inputs = {\n    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";\n    flake-utils.url = "github:numtide/flake-utils";\n  };\n\n  outputs = { self, nixpkgs, flake-utils }:\n    flake-utils.lib.eachDefaultSystem (system:\n      let\n        pkgs = import nixpkgs { inherit system; };\n      in\n      {\n        devShells.default = pkgs.mkShell {\n          buildInputs = with pkgs; [\n            ${nixPkgsList}\n          ];\n\n          shellHook = ''\n            echo "🔥 DevConfigHub Hermetic Environment [System: \${system}]"\n            export DATABASE_URL="postgresql://postgres:postgres@localhost:5432/app_dev"\n            export REDIS_URL="redis://localhost:6379/0"\n          '';\n        };\n      }\n    );\n}`;
+
+        codeNix.textContent = nixFlake;
+      }
+
+      // Event Listeners for inputs
+      stackRadios.forEach(r => r.addEventListener('change', generateConfigs));
+      dbRadios.forEach(r => r.addEventListener('change', generateConfigs));
+      featPgvector.addEventListener('change', generateConfigs);
+      featDind.addEventListener('change', generateConfigs);
+      featTmpfs.addEventListener('change', generateConfigs);
+
+      // Tabs
+      function setTab(tabName) {
+        currentTab = tabName;
+        [tabCompose, tabDevcontainer, tabNix].forEach(btn => {
+          btn.classList.remove('bg-emerald-500/20', 'text-emerald-400', 'border', 'border-emerald-500/40');
+          btn.classList.add('text-slate-400');
+        });
+        [viewCompose, viewDevcontainer, viewNix].forEach(v => v.classList.add('hidden'));
+
+        if (tabName === 'compose') {
+          tabCompose.classList.add('bg-emerald-500/20', 'text-emerald-400', 'border', 'border-emerald-500/40');
+          tabCompose.classList.remove('text-slate-400');
+          viewCompose.classList.remove('hidden');
+          copyText.textContent = "Copy docker-compose.yml";
+        } else if (tabName === 'devcontainer') {
+          tabDevcontainer.classList.add('bg-emerald-500/20', 'text-emerald-400', 'border', 'border-emerald-500/40');
+          tabDevcontainer.classList.remove('text-slate-400');
+          viewDevcontainer.classList.remove('hidden');
+          copyText.textContent = "Copy devcontainer.json";
+        } else if (tabName === 'nix') {
+          tabNix.classList.add('bg-emerald-500/20', 'text-emerald-400', 'border', 'border-emerald-500/40');
+          tabNix.classList.remove('text-slate-400');
+          viewNix.classList.remove('hidden');
+          copyText.textContent = "Copy flake.nix";
+        }
+      }
+
+      tabCompose.addEventListener('click', () => setTab('compose'));
+      tabDevcontainer.addEventListener('click', () => setTab('devcontainer'));
+      tabNix.addEventListener('click', () => setTab('nix'));
+
+      // 1-Click Copy
+      copyBtn.addEventListener('click', async () => {
+        let textToCopy = "";
+        if (currentTab === 'compose') textToCopy = codeCompose.textContent;
+        if (currentTab === 'devcontainer') textToCopy = codeDevcontainer.textContent;
+        if (currentTab === 'nix') textToCopy = codeNix.textContent;
+
+        try {
+          await navigator.clipboard.writeText(textToCopy);
+          copyText.textContent = "Copied to Clipboard!";
+          copyBtn.classList.remove('bg-emerald-500', 'text-slate-950');
+          copyBtn.classList.add('bg-cyan-400', 'text-slate-950');
+          setTimeout(() => {
+            setTab(currentTab);
+            copyBtn.classList.add('bg-emerald-500', 'text-slate-950');
+            copyBtn.classList.remove('bg-cyan-400');
+          }, 2000);
+        } catch (e) {
+          console.error("Copy failed", e);
+        }
+      });
+
+      // Initial run
+      generateConfigs();
+    })();
+  </script>
+</Layout>

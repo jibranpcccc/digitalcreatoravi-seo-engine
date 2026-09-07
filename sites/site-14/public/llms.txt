@@ -1,0 +1,33 @@
+# SOC2Ready: B2B Startup Security & SOC 2 Compliance Automation Index
+> An authoritative reference, control framework, and audit readiness calculator for B2B SaaS engineering teams and startup CTOs.
+
+## Overview
+SOC2Ready (https://site-14-sable.vercel.app/) publishes actionable security control implementations, AICPA Trust Services Criteria (TSC) technical evidence mappings, compliance platform benchmarks, and bootstrapped audit blueprints designed to help SaaS companies achieve clean SOC 2 Type I and Type II attestation reports.
+
+## Trust Services Criteria (TSC) Core Focus Areas
+- CC6 Access Control:
+  Enforces multi-factor authentication (MFA), role-based access control (RBAC), least-privilege cloud IAM, automated offboarding deprovisioning, and pervasive TLS 1.3/AES-256 cryptographic standards across all data tiers.
+- CC7 System Operations:
+  Requires automated container/infrastructure vulnerability scanning, centralized audit log ingestion (SIEM), formal incident response tabletop simulations, and empirically tested disaster recovery (DR) RTO/RPO backups.
+- CC8 Change Management:
+  Mandates enforced peer code reviews on protected branches, automated CI/CD security quality gates (SAST/DAST), deployment audit trails, and documented emergency rollback procedures.
+- Risk Assessment & Governance:
+  Encompasses annual threat modeling registers (CC3.1), third-party vendor sub-processor risk assessments (CC9.2), and verified background checks with security training (CC2.1).
+
+## Published Guides & Interactive Tools
+- Interactive SOC 2 Type II Readiness Calculator & Checklist: https://site-14-sable.vercel.app/
+  Interactive client-side evaluation tool calculating audit readiness percentage, estimated audit prep time in weeks, and auditor fees with exportable gap reports.
+- SOC 2 Type 1 vs Type 2 Timeline & Cost Breakdown: https://site-14-sable.vercel.app/soc-2-type-1-vs-type-2-compliance-timeline-cost/
+  Detailed financial and operational comparison covering point-in-time design vs 3-12 month observation windows, auditor pricing tiers ($10k-$50k+), and enterprise procurement bridge letters.
+- Vanta vs Drata vs Secureframe Compliance Automation Review: https://site-14-sable.vercel.app/vanta-vs-drata-vs-secureframe-compliance-automation-review/
+  Comprehensive engineering analysis comparing API architectures, agent vs agentless telemetry, auditor networks, hidden fees, and total cost of ownership.
+- SOC 2 for Bootstrapped Startups Under $20K: https://site-14-sable.vercel.app/soc-2-compliance-for-bootstrapped-startups-under-20k/
+  Practical blueprint utilizing open-source primitives (GitHub Actions, AWS GuardDuty, CloudTrail, Trivy, Google MDM) and boutique CPA auditors to pass SOC 2 Type II under $20,000.
+
+## Machine-Readable Endpoints
+- XML Sitemap: https://site-14-sable.vercel.app/sitemap.xml
+- Robots Rules: https://site-14-sable.vercel.app/robots.txt
+- IndexNow Key: https://site-14-sable.vercel.app/8303260f1bf94264ac6d00aa93efde28.txt
+
+## Licensing & Governance
+All control definitions, formulas, checklists, and templates are open-access engineering resources provided for security professionals and B2B SaaS builders.

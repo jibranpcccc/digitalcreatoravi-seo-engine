@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[OpenCRMStack - Open-Source CRM Alternatives & Migration Math]]></title>
+    <link>https://opencrmstack.pages.dev/</link>
+    <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Open-Source CRM Alternatives & Migration Math.]]></description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
+    <atom:link href="https://opencrmstack.pages.dev/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title><![CDATA[Open-Source CRM Total Cost of Ownership (TCO) & Migration Calculator]]></title>
+      <link>https://opencrmstack.pages.dev/</link>
+      <guid isPermaLink="true">https://opencrmstack.pages.dev/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Twenty CRM vs HubSpot: Open-Source Sales Pipeline Audit]]></title>
+      <link>https://opencrmstack.pages.dev/twenty-crm-vs-hubspot-open-source-sales-pipeline-audit/</link>
+      <guid isPermaLink="true">https://opencrmstack.pages.dev/twenty-crm-vs-hubspot-open-source-sales-pipeline-audit/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Self-Hosted ERPNext vs Salesforce: Cost & Migration Breakdown]]></title>
+      <link>https://opencrmstack.pages.dev/self-hosted-erpnext-vs-salesforce-cost-migration-breakdown/</link>
+      <guid isPermaLink="true">https://opencrmstack.pages.dev/self-hosted-erpnext-vs-salesforce-cost-migration-breakdown/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Mautic vs HubSpot: Deliverability & Automation Benchmark]]></title>
+      <link>https://opencrmstack.pages.dev/mautic-vs-hubspot-email-automation-deliverability-benchmark/</link>
+      <guid isPermaLink="true">https://opencrmstack.pages.dev/mautic-vs-hubspot-email-automation-deliverability-benchmark/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
+    </item>
+  </channel>
+</rss>

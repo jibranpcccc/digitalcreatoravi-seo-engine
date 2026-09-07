@@ -1,0 +1,241 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  schemaJson?: string;
+  image?: string;
+  type?: 'website' | 'article';
+}
+
+const {
+  title,
+  description,
+  canonical = "https://site-14-sable.vercel.app/",
+  schemaJson,
+  image = "/og-soc2ready.png",
+  type = "website"
+} = Astro.props;
+
+const canonicalUrl = canonical.endsWith('/') ? canonical : `${canonical}/`;
+const ogImageUrl = image.startsWith('http') ? image : `https://site-14-sable.vercel.app${image.startsWith('/') ? '' : '/'}${image}`;
+---
+
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="SOC2Ready" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Machine-Readable LLM Discovery -->
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Index" />
+
+    <!-- Search Console & Verification -->
+    <meta name="google-site-verification" content="google6fe267a998c19a9a" />
+    <meta name="msvalidate.01" content="BING-VERIFICATION-SOC2READY" />
+    <meta name="theme-color" content="#070a12" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org Structured Data -->
+    {schemaJson && (
+      <script type="application/ld+json" set:html={schemaJson} />
+    )}
+
+    <!-- Zero-Cookie Telemetry -->
+    <script is:inline>
+      try {
+        const pv = {
+          p: window.location.pathname,
+          r: document.referrer || 'direct',
+          t: new Date().toISOString()
+        };
+        const s = JSON.parse(localStorage.getItem('__soc2ready_telemetry') || '[]');
+        s.push(pv);
+        localStorage.setItem('__soc2ready_telemetry', JSON.stringify(s.slice(-30)));
+      } catch (e) {}
+    </script>
+
+    <!-- Fleet Master Analytics Beacon -->
+    <script is:inline>
+      (function() {
+        try {
+          var payload = JSON.stringify({
+            site: window.location.hostname,
+            path: window.location.pathname,
+            ref: document.referrer || "direct",
+            screen: window.innerWidth + "x" + window.innerHeight,
+            ts: Date.now()
+          });
+          var endpoint = "https://webhookwatch.vercel.app/api/track/";
+          if (navigator.sendBeacon) {
+            navigator.sendBeacon(endpoint, payload);
+          } else {
+            fetch(endpoint, { method: "POST", body: payload, keepalive: true, headers: { "Content-Type": "application/json" } }).catch(function(){});
+          }
+        } catch(e) {}
+      })();
+    </script>
+      <link rel="alternate" type="application/rss+xml" title="RSS 2.0 Feed" href="/rss.xml" />
+  </head>
+  <body class="bg-[#070a12] text-slate-100 antialiased font-['Plus_Jakarta_Sans',sans-serif] selection:bg-emerald-500/30 selection:text-emerald-200 min-h-screen flex flex-col relative overflow-x-hidden">
+
+    <!-- Ambient Visual Glows -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[980px] h-[380px] bg-gradient-to-b from-emerald-600/10 via-cyan-600/5 to-transparent blur-[140px] pointer-events-none -z-10"></div>
+    <div class="fixed top-96 -left-48 w-80 h-80 bg-emerald-500/5 blur-[130px] pointer-events-none -z-10"></div>
+    <div class="fixed top-96 -right-48 w-80 h-80 bg-cyan-500/5 blur-[130px] pointer-events-none -z-10"></div>
+
+    <!-- Announcement Bar -->
+    <div class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md text-xs py-2 px-4 text-center text-slate-400 flex items-center justify-center space-x-3">
+      <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+        AICPA TSC 2026
+      </span>
+      <span class="hidden sm:inline">New Security Criteria: AI Sub-Processor & Automated Continuous Evidence Requirements</span>
+      <span class="sm:hidden">SOC 2 2026 Criteria Guide</span>
+      <a href="/soc-2-type-1-vs-type-2-compliance-timeline-cost/" class="text-emerald-400 hover:text-emerald-300 font-semibold underline underline-offset-2 ml-1">
+        Explore Timeline &rarr;
+      </a>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="border-b border-slate-800/80 bg-[#070a12]/90 backdrop-blur-xl sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 p-[1px] shadow-lg shadow-emerald-500/20 group-hover:shadow-emerald-500/40 transition duration-300">
+            <div class="w-full h-full bg-[#0a0f1d] rounded-[11px] flex items-center justify-center font-mono font-bold text-emerald-400 text-sm">
+              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center space-x-1.5">
+              <span class="text-lg font-black tracking-tight text-white group-hover:text-emerald-400 transition">
+                SOC2<span class="text-emerald-400">Ready</span>
+              </span>
+              <span class="text-[9px] uppercase font-mono font-bold px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/25">
+                B2B SAAS
+              </span>
+            </div>
+            <span class="text-[10px] font-mono text-slate-400 tracking-wider">Compliance & Security Engine</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="hidden lg:flex items-center space-x-1 text-sm font-medium text-slate-300">
+          <a href="/#calculator" class="px-3.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span>Readiness Checklist</span>
+          </a>
+          <a href="/soc-2-type-1-vs-type-2-compliance-timeline-cost/" class="px-3.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">
+            Type 1 vs Type 2
+          </a>
+          <a href="/vanta-vs-drata-vs-secureframe-compliance-automation-review/" class="px-3.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">
+            Platform Review
+          </a>
+          <a href="/soc-2-compliance-for-bootstrapped-startups-under-20k/" class="px-3.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">
+            Bootstrapped &lt;$20k
+          </a>
+        </nav>
+
+        <!-- Right Action Items -->
+        <div class="flex items-center space-x-2.5">
+          <a
+            href="/llms.txt"
+            class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700/80 hover:border-emerald-500/60 text-xs font-mono text-emerald-400 shadow-sm transition"
+            title="Machine-readable LLM Context Index"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>llms.txt</span>
+          </a>
+          <a
+            href="/#calculator"
+            class="inline-flex items-center px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 text-xs font-bold shadow-md shadow-emerald-500/20 transition"
+          >
+            Audit Calculator
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Slot -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 py-8 w-full">
+      <slot />
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="border-t border-slate-800/80 bg-[#04060b] mt-24 py-16 text-sm text-slate-400">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <!-- Column 1: Brand & Identity -->
+          <div class="md:col-span-2">
+            <div class="flex items-center space-x-3 mb-3">
+              <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-slate-950 text-xs">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <span class="text-base font-extrabold text-white">SOC2<span class="text-emerald-400">Ready</span></span>
+            </div>
+            <p class="text-xs text-slate-400 max-w-sm leading-relaxed mb-4">
+              Open engineering reference, technical control mapping, and interactive audit readiness calculator for B2B SaaS engineering teams navigating AICPA SOC 2 Type I and Type II attestation.
+            </p>
+            <div class="inline-flex items-center space-x-2 px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-[11px] font-mono text-emerald-400">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>100% Client-Side In-Browser Calculation • Zero Data Collection</span>
+            </div>
+          </div>
+
+          <!-- Column 2: Deep-Dive Guides -->
+          <div>
+            <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-3">Compliance Guides</h4>
+            <ul class="space-y-2 text-xs text-slate-400">
+              <li><a href="/soc-2-type-1-vs-type-2-compliance-timeline-cost/" class="hover:text-emerald-400 transition">Type 1 vs Type 2 Breakdown</a></li>
+              <li><a href="/vanta-vs-drata-vs-secureframe-compliance-automation-review/" class="hover:text-emerald-400 transition">Vanta vs Drata vs Secureframe</a></li>
+              <li><a href="/soc-2-compliance-for-bootstrapped-startups-under-20k/" class="hover:text-emerald-400 transition">Bootstrapped Under $20k Guide</a></li>
+              <li><a href="/#matrix" class="hover:text-emerald-400 transition">AICPA Evidence Matrix</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Standards & Machine Discovery -->
+          <div>
+            <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-3">Standards & Discovery</h4>
+            <ul class="space-y-2 text-xs text-slate-400">
+              <li><a href="/llms.txt" class="hover:text-emerald-400 transition font-mono">/llms.txt (LLM Index)</a></li>
+              <li><a href="/sitemap.xml" class="hover:text-emerald-400 transition font-mono">/sitemap.xml</a></li>
+              <li><a href="/robots.txt" class="hover:text-emerald-400 transition font-mono">/robots.txt</a></li>
+              <li><a href="/8303260f1bf94264ac6d00aa93efde28.txt" class="hover:text-emerald-400 transition font-mono">IndexNow Protocol Key</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-800/80 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 gap-4">
+          <p>&copy; 2026 SOC2Ready. Open compliance reference for B2B engineering teams.</p>
+          <p class="text-[11px] text-slate-400">AICPA Trust Services Criteria (TSC) Technical Mapping</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

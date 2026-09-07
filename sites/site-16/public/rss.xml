@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[DevConfigHub - Local Dev Environment Cheatsheets]]></title>
+    <link>https://site-16-indol.vercel.app/</link>
+    <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Local Dev Environment Cheatsheets.]]></description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
+    <atom:link href="https://site-16-indol.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title><![CDATA[Modern Developer Config Hub: DevContainer, Docker Compose & Nix Flakes]]></title>
+      <link>https://site-16-indol.vercel.app/</link>
+      <guid isPermaLink="true">https://site-16-indol.vercel.app/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local Dev Environment Cheatsheets.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[DevContainer.json vs Docker Compose for Local Development]]></title>
+      <link>https://site-16-indol.vercel.app/devcontainer-json-vs-docker-compose-local-development/</link>
+      <guid isPermaLink="true">https://site-16-indol.vercel.app/devcontainer-json-vs-docker-compose-local-development/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local Dev Environment Cheatsheets.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Nix Flakes for Reproducible Python, Rust & Node Dev Environments]]></title>
+      <link>https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/</link>
+      <guid isPermaLink="true">https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local Dev Environment Cheatsheets.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Fastest Docker Compose Postgres & Redis Local Dev Stack]]></title>
+      <link>https://site-16-indol.vercel.app/fastest-docker-compose-postgres-redis-local-stack/</link>
+      <guid isPermaLink="true">https://site-16-indol.vercel.app/fastest-docker-compose-postgres-redis-local-stack/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local Dev Environment Cheatsheets.]]></description>
+    </item>
+  </channel>
+</rss>

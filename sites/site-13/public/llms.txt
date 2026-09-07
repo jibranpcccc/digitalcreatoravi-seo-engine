@@ -1,0 +1,18 @@
+# GrokLogTester - Observability Regex & Log Parsing Architecture
+
+> GrokLogTester (https://groklogtester.pages.dev) is an open developer utility and technical reference for compiling, testing, and debugging Grok regular expressions and log transformation pipelines across Logstash, Vector, Fluent Bit, Promtail, and OpenTelemetry collector.
+
+## Core Utilities & Endpoints
+
+- [Grok Pattern Tester & Nginx Log Regex Generator](https://groklogtester.pages.dev/): Real-time in-browser Grok evaluator, AST expression debugger, and JSON token generator with sample telemetry for Nginx Combined, AWS CloudFront, Docker JSON, and Syslog RFC 5424.
+- [Nginx Access Log Grok Pattern Generator](https://groklogtester.pages.dev/nginx-access-log-grok-pattern-generator/): Production Grok syntax, Vector VRL transforms, and Fluent Bit regex configurations for default combined, extended upstream response times, and custom microservice log formats.
+- [AWS Application Load Balancer (ALB) Access Log Regex Parser](https://groklogtester.pages.dev/aws-alb-access-log-regex-parser/): Complete specification, Grok patterns, Amazon Athena DDL regex, and CloudWatch Log Insights queries for the full 29-field space-delimited AWS ALB access log.
+- [High-Throughput Log Parsing: Vector vs Fluent Bit Benchmark (2026)](https://groklogtester.pages.dev/high-throughput-log-parsing-vector-vs-fluentbit/): Empirical performance benchmarks comparing events-per-second (EPS), CPU core scaling, RSS memory footprint, and regex compile overhead between Rust-based Vector and C-based Fluent Bit.
+
+## Essential Grok Syntax Reference
+
+- `%{IPORHOST:client_ip}`: Matches IPv4 addresses, IPv6 addresses, or fully qualified domain names.
+- `%{NUMBER:status_code}`: Matches signed or unsigned integer or decimal numerical values.
+- `%{URIPATH:request_path}`: Matches uniform resource identifier paths (e.g., `/api/v1/checkout`).
+- `%{TIMESTAMP_ISO8601:timestamp}`: Matches ISO 8601 UTC date and time strings.
+- `%{GREEDYDATA:message}`: Consumes remaining line content across whitespace and characters.

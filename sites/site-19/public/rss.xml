@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[GreekVisualizer - Options Greeks & DeFi Impermanent Loss Math]]></title>
+    <link>https://site-19-nine.vercel.app/</link>
+    <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Options Greeks & DeFi Impermanent Loss Math.]]></description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
+    <atom:link href="https://site-19-nine.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title><![CDATA[Black-Scholes Options Greeks & DeFi Impermanent Loss Visualizer]]></title>
+      <link>https://site-19-nine.vercel.app/</link>
+      <guid isPermaLink="true">https://site-19-nine.vercel.app/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Uniswap v3 Concentrated Liquidity & Impermanent Loss Math Guide]]></title>
+      <link>https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/</link>
+      <guid isPermaLink="true">https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Options Gamma Scalping, Theta Decay & Dynamic Delta Hedging Strategies]]></title>
+      <link>https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/</link>
+      <guid isPermaLink="true">https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Crypto Funding Rate Arbitrage & Delta-Neutral Yield Guide]]></title>
+      <link>https://site-19-nine.vercel.app/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/</link>
+      <guid isPermaLink="true">https://site-19-nine.vercel.app/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
+    </item>
+  </channel>
+</rss>

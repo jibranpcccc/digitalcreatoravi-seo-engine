@@ -1,0 +1,1018 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Black-Scholes Options Greeks & DeFi Impermanent Loss Visualizer | GreekVisualizer";
+const pageDescription = "Institutional-grade financial math visualizer: calculate Black-Scholes option pricing, first and second order Greeks (Delta, Gamma, Vega, Theta, Rho), and Uniswap v3 concentrated liquidity impermanent loss.";
+const canonical = "https://site-19-nine.vercel.app/";
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "GreekVisualizer Financial Math Engine",
+      "url": "https://site-19-nine.vercel.app/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Real-time Black-Scholes analytical option Greeks calculator and Uniswap v3 concentrated liquidity impermanent loss modeling tool."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are Options Greeks in the Black-Scholes-Merton model?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Options Greeks are partial derivatives of the theoretical option price with respect to underlying parameters. Delta measures price sensitivity to underlying asset movements, Gamma measures Delta sensitivity, Vega measures volatility impact, Theta quantifies temporal decay, and Rho reflects sensitivity to the risk-free interest rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is Uniswap v3 impermanent loss higher than Uniswap v2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uniswap v3 concentrates liquidity within a bounded price interval [P_a, P_b] rather than [0, infinity]. While this yields significant capital efficiency and higher fee capture, it amplifies price divergence within the interval, creating steeper impermanent loss curves equivalent to selling leveraged out-of-the-money options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Gamma Scalping monetize long volatility?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gamma scalping involves holding a long gamma position (e.g., long straddle) and dynamically adjusting underlying hedge contracts whenever the asset moves. Rebalancing locks in cash flow from buying low and selling high, which compensates for ongoing negative theta decay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the mathematical link between Uniswap v3 LPs and short options?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Providing liquidity on Uniswap v3 between prices P_a and P_b produces a payoff curve virtually identical to a short put option (or covered call). The LP receives continuous trading fees (resembling premium decay) while taking downside asset risk and capping upside appreciation."
+          }
+        }
+      ]
+    }
+  ]
+});
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonical} schemaJson={schema}>
+  <!-- Hero Section with exactly ONE H1 tag -->
+  <section class="text-center max-w-4xl mx-auto pt-6 pb-10">
+    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono mb-6">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>INSTITUTIONAL QUANTITATIVE ENGINE • BSM &amp; V3 AMM</span>
+    </div>
+
+    <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight sm:leading-tight mb-6">
+      Black-Scholes Options Greeks &amp; DeFi Impermanent Loss Visualizer
+    </h1>
+
+    <p class="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
+      Analytical partial differential equations meet automated market maker geometry. Model volatility surfaces, second-order convexity, and concentrated divergence loss in real time.
+    </p>
+
+    <!-- 45-60 Word Featured Snippet Quick Answer Box with Green Accent Border -->
+    <div class="border-l-4 border-emerald-500 bg-[#0B1324]/90 rounded-r-xl p-5 sm:p-6 text-left shadow-xl shadow-emerald-500/5 my-8 max-w-3xl mx-auto">
+      <div class="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider mb-2">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+        <span>Quick Answer: Quantitative Derivatives &amp; AMM Mechanics</span>
+      </div>
+      <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-sans">
+        Options Greeks measure derivative price sensitivities using Black-Scholes partial differential equations, quantifying directional delta, convexity gamma, volatility vega, and temporal theta decay. Simultaneously, Uniswap v3 concentrated liquidity creates synthetic options exposure where liquidity providers incur non-linear impermanent loss when asset ratios diverge across custom price boundaries compared to constant holding.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Dual-Tab Calculator Section -->
+  <section id="calculator" class="max-w-5xl mx-auto mb-20 scroll-mt-20">
+    <div class="bg-[#0C1222] border border-slate-800 rounded-2xl p-4 sm:p-8 shadow-2xl relative overflow-hidden">
+      <!-- Glow ambient -->
+      <div class="absolute -top-24 -right-24 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Tab Navigation -->
+      <div class="flex flex-wrap border-b border-slate-800 pb-4 mb-8 gap-3 items-center justify-between">
+        <div class="flex space-x-2 p-1 bg-slate-900/80 rounded-xl border border-slate-800">
+          <button
+            id="tab-bsm-btn"
+            class="px-4 sm:px-6 py-2.5 rounded-lg text-xs sm:text-sm font-bold transition flex items-center space-x-2 bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20"
+            onclick="switchTab('bsm')"
+          >
+            <span class="font-mono text-base">&Delta;</span>
+            <span>Black-Scholes Options Greeks</span>
+          </button>
+          <button
+            id="tab-v3-btn"
+            class="px-4 sm:px-6 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition flex items-center space-x-2 text-slate-400 hover:text-white hover:bg-slate-800/60"
+            onclick="switchTab('v3')"
+          >
+            <span class="font-mono text-base">&Sigma;</span>
+            <span>Uniswap v3 Impermanent Loss</span>
+          </button>
+        </div>
+        <span class="text-xs font-mono text-slate-400 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800 hidden sm:inline-block">
+          Dynamic Float Precision: 6 Digits
+        </span>
+      </div>
+
+      <!-- TAB 1: Black-Scholes Greeks Calculator -->
+      <div id="tab-bsm" class="block">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <!-- Inputs Column (5 cols) -->
+          <div class="lg:col-span-5 space-y-5 bg-[#080E1C] p-5 sm:p-6 rounded-xl border border-slate-800/80">
+            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-300 font-mono flex items-center justify-between">
+              <span>BSM Model Parameters</span>
+              <button onclick="resetBSMDefaults()" class="text-[11px] text-emerald-400 hover:underline">Reset Defaults</button>
+            </h2>
+
+            <!-- Spot Price (S) -->
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <label for="bsm-s" class="font-medium text-slate-300">Spot Price ($S)</label>
+                <span class="font-mono text-emerald-400 font-bold" id="disp-s">$100.00</span>
+              </div>
+              <input type="range" id="bsm-s-range" min="10" max="1000" step="1" value="100" class="w-full accent-emerald-500 cursor-pointer mb-2" oninput="syncBSM('s', this.value)" />
+              <div class="relative">
+                <span class="absolute inset-y-0 left-3 flex items-center text-slate-500 text-xs">$</span>
+                <input type="number" id="bsm-s" value="100" min="1" step="0.5" class="w-full bg-slate-950 border border-slate-800 rounded-lg pl-7 pr-3 py-1.5 text-xs font-mono text-white focus:border-emerald-500 focus:outline-none" oninput="syncBSM('s', this.value)" />
+              </div>
+            </div>
+
+            <!-- Strike Price (K) -->
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <label for="bsm-k" class="font-medium text-slate-300">Strike Price ($K)</label>
+                <span class="font-mono text-emerald-400 font-bold" id="disp-k">$100.00</span>
+              </div>
+              <input type="range" id="bsm-k-range" min="10" max="1000" step="1" value="100" class="w-full accent-emerald-500 cursor-pointer mb-2" oninput="syncBSM('k', this.value)" />
+              <div class="relative">
+                <span class="absolute inset-y-0 left-3 flex items-center text-slate-500 text-xs">$</span>
+                <input type="number" id="bsm-k" value="100" min="1" step="0.5" class="w-full bg-slate-950 border border-slate-800 rounded-lg pl-7 pr-3 py-1.5 text-xs font-mono text-white focus:border-emerald-500 focus:outline-none" oninput="syncBSM('k', this.value)" />
+              </div>
+            </div>
+
+            <!-- Days to Expiry (D) -->
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <label for="bsm-d" class="font-medium text-slate-300">Days to Expiration (D)</label>
+                <span class="font-mono text-cyan-400 font-bold" id="disp-d">30 days</span>
+              </div>
+              <input type="range" id="bsm-d-range" min="1" max="365" step="1" value="30" class="w-full accent-cyan-500 cursor-pointer mb-2" oninput="syncBSM('d', this.value)" />
+              <input type="number" id="bsm-d" value="30" min="1" max="1000" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs font-mono text-white focus:border-cyan-500 focus:outline-none" oninput="syncBSM('d', this.value)" />
+            </div>
+
+            <!-- Implied Volatility (sigma) -->
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <label for="bsm-v" class="font-medium text-slate-300">Implied Volatility (&sigma; %)</label>
+                <span class="font-mono text-indigo-400 font-bold" id="disp-v">30.0%</span>
+              </div>
+              <input type="range" id="bsm-v-range" min="5" max="200" step="1" value="30" class="w-full accent-indigo-500 cursor-pointer mb-2" oninput="syncBSM('v', this.value)" />
+              <div class="relative">
+                <input type="number" id="bsm-v" value="30" min="0.1" max="500" step="0.5" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs font-mono text-white focus:border-indigo-500 focus:outline-none" oninput="syncBSM('v', this.value)" />
+                <span class="absolute inset-y-0 right-3 flex items-center text-slate-500 text-xs">%</span>
+              </div>
+            </div>
+
+            <!-- Risk-Free Rate (r) -->
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <label for="bsm-r" class="font-medium text-slate-300">Risk-Free Rate (r %)</label>
+                <span class="font-mono text-amber-400 font-bold" id="disp-r">4.50%</span>
+              </div>
+              <input type="range" id="bsm-r-range" min="0" max="15" step="0.25" value="4.5" class="w-full accent-amber-500 cursor-pointer mb-2" oninput="syncBSM('r', this.value)" />
+              <div class="relative">
+                <input type="number" id="bsm-r" value="4.5" min="0" max="50" step="0.1" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs font-mono text-white focus:border-amber-500 focus:outline-none" oninput="syncBSM('r', this.value)" />
+                <span class="absolute inset-y-0 right-3 flex items-center text-slate-500 text-xs">%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Outputs Column (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Moneyness & Prices Banner -->
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Call Card -->
+              <div class="bg-gradient-to-br from-[#0D1E16] to-[#0A1320] border border-emerald-500/30 rounded-xl p-4 shadow-lg">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">CALL OPTION</span>
+                  <span id="bsm-call-moneyness" class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">ATM</span>
+                </div>
+                <div class="text-2xl sm:text-3xl font-black font-mono text-white mt-1" id="out-call-price">$3.68</div>
+                <div class="text-xs text-slate-400 mt-1 font-mono">Intrinsic: <span id="out-call-intrinsic" class="text-slate-200">$0.00</span> | Extrinsic: <span id="out-call-extrinsic" class="text-emerald-400">$3.68</span></div>
+              </div>
+
+              <!-- Put Card -->
+              <div class="bg-gradient-to-br from-[#1E1118] to-[#0A1320] border border-rose-500/30 rounded-xl p-4 shadow-lg">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-xs font-bold uppercase tracking-wider text-rose-400 font-mono">PUT OPTION</span>
+                  <span id="bsm-put-moneyness" class="text-[10px] font-mono px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30">ATM</span>
+                </div>
+                <div class="text-2xl sm:text-3xl font-black font-mono text-white mt-1" id="out-put-price">$3.31</div>
+                <div class="text-xs text-slate-400 mt-1 font-mono">Intrinsic: <span id="out-put-intrinsic" class="text-slate-200">$0.00</span> | Extrinsic: <span id="out-put-extrinsic" class="text-rose-400">$3.31</span></div>
+              </div>
+            </div>
+
+            <!-- Greeks Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Delta Card -->
+              <div class="bg-[#080E1C] p-4 rounded-xl border border-slate-800">
+                <div class="flex justify-between items-center mb-2">
+                  <div class="flex items-center space-x-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    <span class="text-xs font-bold text-slate-200 font-mono">Delta (&Delta;)</span>
+                  </div>
+                  <span class="text-[10px] font-mono text-slate-400">Directional Rate</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-center my-2 font-mono">
+                  <div class="bg-slate-950 p-2 rounded border border-slate-800">
+                    <div class="text-[10px] text-emerald-400">Call Delta</div>
+                    <div class="text-base font-bold text-white" id="out-call-delta">+0.5432</div>
+                  </div>
+                  <div class="bg-slate-950 p-2 rounded border border-slate-800">
+                    <div class="text-[10px] text-rose-400">Put Delta</div>
+                    <div class="text-base font-bold text-white" id="out-put-delta">-0.4568</div>
+                  </div>
+                </div>
+                <!-- Visual Slider Bar for Delta -->
+                <div class="mt-2">
+                  <div class="flex justify-between text-[10px] text-slate-500 font-mono mb-1">
+                    <span>-1.0 (Short Put)</span>
+                    <span>0</span>
+                    <span>+1.0 (Long Call)</span>
+                  </div>
+                  <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden flex">
+                    <div id="bar-put-delta" class="bg-rose-500 h-full transition-all duration-200" style="width: 45.6%;"></div>
+                    <div id="bar-call-delta" class="bg-emerald-500 h-full transition-all duration-200" style="width: 54.3%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Gamma Card -->
+              <div class="bg-[#080E1C] p-4 rounded-xl border border-slate-800">
+                <div class="flex justify-between items-center mb-2">
+                  <div class="flex items-center space-x-1.5">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                    <span class="text-xs font-bold text-slate-200 font-mono">Gamma (&Gamma;)</span>
+                  </div>
+                  <span class="text-[10px] font-mono text-slate-400">Curvature / &Delta; Velocity</span>
+                </div>
+                <div class="bg-slate-950 p-3 rounded border border-slate-800 text-center font-mono my-2">
+                  <div class="text-[10px] text-cyan-400">Both Call &amp; Put</div>
+                  <div class="text-xl font-bold text-white" id="out-gamma">0.0458</div>
+                </div>
+                <p class="text-[11px] text-slate-400 mt-2 leading-tight">
+                  Delta shifts by <span id="out-gamma-exp" class="text-cyan-300 font-mono">+0.0458</span> per \$1 move in underlying asset. Peak at-the-money.
+                </p>
+              </div>
+
+              <!-- Theta Card -->
+              <div class="bg-[#080E1C] p-4 rounded-xl border border-slate-800">
+                <div class="flex justify-between items-center mb-2">
+                  <div class="flex items-center space-x-1.5">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                    <span class="text-xs font-bold text-slate-200 font-mono">Theta (&Theta;)</span>
+                  </div>
+                  <span class="text-[10px] font-mono text-slate-400">Daily Decay</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-center my-2 font-mono">
+                  <div class="bg-slate-950 p-2 rounded border border-slate-800">
+                    <div class="text-[10px] text-indigo-400">Call / Day</div>
+                    <div class="text-sm font-bold text-slate-100" id="out-call-theta">-$0.0682</div>
+                  </div>
+                  <div class="bg-slate-950 p-2 rounded border border-slate-800">
+                    <div class="text-[10px] text-indigo-400">Put / Day</div>
+                    <div class="text-sm font-bold text-slate-100" id="out-put-theta">-$0.0559</div>
+                  </div>
+                </div>
+                <p class="text-[11px] text-slate-400 mt-2 leading-tight">
+                  Expected calendar decay per 24 hours assuming volatility &amp; spot remain invariant.
+                </p>
+              </div>
+
+              <!-- Vega & Rho Card -->
+              <div class="bg-[#080E1C] p-4 rounded-xl border border-slate-800">
+                <div class="flex justify-between items-center mb-2">
+                  <div class="flex items-center space-x-1.5">
+                    <span class="w-2 h-2 rounded-full bg-violet-400"></span>
+                    <span class="text-xs font-bold text-slate-200 font-mono">Vega (&nu;) &amp; Rho (&rho;)</span>
+                  </div>
+                  <span class="text-[10px] font-mono text-slate-400">1% Vol / Rate Sensitivities</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-center my-2 font-mono">
+                  <div class="bg-slate-950 p-2 rounded border border-slate-800">
+                    <div class="text-[10px] text-violet-400">Vega (per 1% &sigma;)</div>
+                    <div class="text-sm font-bold text-slate-100" id="out-vega">+$0.1138</div>
+                  </div>
+                  <div class="bg-slate-950 p-2 rounded border border-slate-800">
+                    <div class="text-[10px] text-amber-400">Call Rho (1% r)</div>
+                    <div class="text-sm font-bold text-slate-100" id="out-call-rho">+$0.0435</div>
+                  </div>
+                </div>
+                <p class="text-[11px] text-slate-400 mt-2 leading-tight">
+                  Option value changes by Vega when IV shifts 100 bps; Put Rho is <span id="out-put-rho" class="text-amber-300 font-mono">-$0.0387</span>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: Uniswap v3 Concentrated Liquidity Calculator -->
+      <div id="tab-v3" class="hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <!-- Inputs Column (5 cols) -->
+          <div class="lg:col-span-5 space-y-5 bg-[#080E1C] p-5 sm:p-6 rounded-xl border border-slate-800/80">
+            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-300 font-mono flex items-center justify-between">
+              <span>Pool &amp; Range Parameters</span>
+              <button onclick="resetV3Defaults()" class="text-[11px] text-emerald-400 hover:underline">Reset Defaults</button>
+            </h2>
+
+            <!-- Initial Price (P0) -->
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <label for="v3-p0" class="font-medium text-slate-300">Initial Price ($P_0$)</label>
+                <span class="font-mono text-emerald-400 font-bold" id="disp-v3-p0">$2,000.00</span>
+              </div>
+              <input type="number" id="v3-p0" value="2000" min="1" step="10" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs font-mono text-white focus:border-emerald-500 focus:outline-none" oninput="syncV3()" />
+            </div>
+
+            <!-- Lower Bound (Pa) -->
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <label for="v3-pa" class="font-medium text-slate-300">Lower Bound ($P_a$ / $P_L$)</label>
+                <span class="font-mono text-rose-400 font-bold" id="disp-v3-pa">$1,600.00 (-20%)</span>
+              </div>
+              <input type="range" id="v3-pa-range" min="500" max="2500" step="25" value="1600" class="w-full accent-rose-500 cursor-pointer mb-2" oninput="document.getElementById('v3-pa').value = this.value; syncV3()" />
+              <input type="number" id="v3-pa" value="1600" min="1" step="10" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs font-mono text-white focus:border-rose-500 focus:outline-none" oninput="document.getElementById('v3-pa-range').value = this.value; syncV3()" />
+            </div>
+
+            <!-- Upper Bound (Pb) -->
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <label for="v3-pb" class="font-medium text-slate-300">Upper Bound ($P_b$ / $P_U$)</label>
+                <span class="font-mono text-cyan-400 font-bold" id="disp-v3-pb">$2,500.00 (+25%)</span>
+              </div>
+              <input type="range" id="v3-pb-range" min="1800" max="4000" step="25" value="2500" class="w-full accent-cyan-500 cursor-pointer mb-2" oninput="document.getElementById('v3-pb').value = this.value; syncV3()" />
+              <input type="number" id="v3-pb" value="2500" min="1" step="10" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-xs font-mono text-white focus:border-cyan-500 focus:outline-none" oninput="document.getElementById('v3-pb-range').value = this.value; syncV3()" />
+            </div>
+
+            <!-- Price Change % / New Price -->
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <label for="v3-change" class="font-medium text-slate-300">Asset Price Shift (%)</label>
+                <span class="font-mono text-emerald-400 font-bold" id="disp-v3-change">+15.0%</span>
+              </div>
+              <input type="range" id="v3-change" min="-80" max="150" step="1" value="15" class="w-full accent-emerald-500 cursor-pointer mb-2" oninput="syncV3()" />
+              <div class="text-xs font-mono text-slate-400 flex justify-between">
+                <span>New Price ($P_1$): <strong class="text-white" id="disp-v3-p1">$2,300.00</strong></span>
+                <span id="disp-v3-range-status" class="text-emerald-400 font-bold">IN RANGE</span>
+              </div>
+            </div>
+
+            <!-- Fee APY & Days -->
+            <div class="grid grid-cols-2 gap-3 pt-2 border-t border-slate-800/80">
+              <div>
+                <label class="text-[11px] text-slate-400 block mb-1">Fee APY (%)</label>
+                <input type="number" id="v3-fee-apy" value="28" min="0" max="500" step="1" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-1.5 text-xs font-mono text-white focus:border-emerald-500 focus:outline-none" oninput="syncV3()" />
+              </div>
+              <div>
+                <label class="text-[11px] text-slate-400 block mb-1">Holding Period (Days)</label>
+                <input type="number" id="v3-days" value="30" min="1" max="365" step="1" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-1.5 text-xs font-mono text-white focus:border-emerald-500 focus:outline-none" oninput="syncV3()" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Outputs Column (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Summary Banner -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <!-- Impermanent Loss -->
+              <div class="bg-gradient-to-br from-[#1F1017] to-[#0D1424] border border-rose-500/30 rounded-xl p-4">
+                <div class="text-[10px] font-mono font-bold uppercase text-rose-400">Uniswap v3 IL</div>
+                <div class="text-2xl sm:text-3xl font-black font-mono text-rose-400 mt-1" id="out-v3-il">-1.34%</div>
+                <div class="text-[11px] text-slate-400 mt-1 font-mono">v2 Benchmark: <span id="out-v2-il" class="text-slate-200">-0.24%</span></div>
+              </div>
+
+              <!-- Capital Efficiency -->
+              <div class="bg-gradient-to-br from-[#0D1C24] to-[#0D1424] border border-cyan-500/30 rounded-xl p-4">
+                <div class="text-[10px] font-mono font-bold uppercase text-cyan-400">Capital Efficiency</div>
+                <div class="text-2xl sm:text-3xl font-black font-mono text-cyan-300 mt-1" id="out-v3-eff">4.99x</div>
+                <div class="text-[11px] text-slate-400 mt-1 font-mono">vs Uniswap v2 Full-Range</div>
+              </div>
+
+              <!-- Net ROI vs HODL -->
+              <div class="bg-gradient-to-br from-[#0D1E16] to-[#0D1424] border border-emerald-500/30 rounded-xl p-4">
+                <div class="text-[10px] font-mono font-bold uppercase text-emerald-400">Net Return vs HODL</div>
+                <div class="text-2xl sm:text-3xl font-black font-mono text-emerald-400 mt-1" id="out-v3-net-roi">+0.96%</div>
+                <div class="text-[11px] text-slate-400 mt-1 font-mono">Fees: <span id="out-v3-fee-return" class="text-emerald-300">+2.30%</span></div>
+              </div>
+            </div>
+
+            <!-- Position Composition & Boundary Status -->
+            <div class="bg-[#080E1C] p-5 rounded-xl border border-slate-800">
+              <h3 class="text-xs font-bold text-slate-200 uppercase tracking-wider font-mono mb-3 flex items-center justify-between">
+                <span>Concentrated Range Position Breakdown</span>
+                <span id="v3-active-tag" class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Active Earning Fees</span>
+              </h3>
+
+              <!-- Visual Price Marker -->
+              <div class="relative py-4">
+                <div class="w-full h-3 bg-slate-900 rounded-full relative overflow-hidden flex border border-slate-800">
+                  <div class="w-1/4 bg-slate-800" title="Below Lower Bound (100% Asset X)"></div>
+                  <div class="w-2/4 bg-emerald-500/30 border-x-2 border-emerald-400 relative" title="Active Concentrated Liquidity Zone"></div>
+                  <div class="w-1/4 bg-slate-800" title="Above Upper Bound (100% Asset Y)"></div>
+                </div>
+                <!-- Price needle -->
+                <div class="flex justify-between text-[11px] font-mono mt-2 text-slate-400">
+                  <span class="text-rose-400">Pa: <strong id="lbl-pa">$1,600</strong></span>
+                  <span class="text-white font-bold">P1: <strong id="lbl-p1" class="text-emerald-400">$2,300</strong></span>
+                  <span class="text-cyan-400">Pb: <strong id="lbl-pb">$2,500</strong></span>
+                </div>
+              </div>
+
+              <!-- Comparative Value Table -->
+              <div class="overflow-x-auto mt-4">
+                <table class="w-full text-left text-xs font-mono">
+                  <thead>
+                    <tr class="text-slate-400 border-b border-slate-800 pb-2">
+                      <th class="py-2">Strategy ($10,000 Initial)</th>
+                      <th class="py-2">Terminal Value</th>
+                      <th class="py-2">vs 100% HODL</th>
+                      <th class="py-2">Total ROI</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-800/60 text-slate-300">
+                    <tr>
+                      <td class="py-2.5 font-bold text-emerald-400 flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                        Uniswap v3 + Fees
+                      </td>
+                      <td class="py-2.5 font-bold text-white" id="tbl-v3-val">$10,853</td>
+                      <td class="py-2.5 text-emerald-400" id="tbl-v3-diff">+$96 (+0.96%)</td>
+                      <td class="py-2.5 font-bold text-emerald-400" id="tbl-v3-tot">+8.53%</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2.5 font-bold text-slate-300">50/50 HODL Benchmark</td>
+                      <td class="py-2.5 text-white" id="tbl-hodl-val">$10,750</td>
+                      <td class="py-2.5 text-slate-500">Benchmark</td>
+                      <td class="py-2.5 text-slate-300">+7.50%</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2.5 text-slate-400">Uniswap v2 (Full-Range)</td>
+                      <td class="py-2.5 text-slate-300" id="tbl-v2-val">$10,724</td>
+                      <td class="py-2.5 text-rose-400" id="tbl-v2-diff">-$26 (-0.24%)</td>
+                      <td class="py-2.5 text-slate-300">+7.24%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formula Cheatsheet & Deep Mathematical Insights Section -->
+  <section class="max-w-5xl mx-auto mb-20">
+    <div class="border-t border-slate-800/80 pt-12">
+      <div class="flex items-center space-x-2 text-xs font-mono uppercase text-emerald-400 mb-3">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>Rigorous Quantitative Architecture</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-6">
+        Financial Derivatives Cheatsheet &amp; Analytical Equations
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+        The Black-Scholes-Merton partial differential equation governs European option contracts under geometric Brownian motion assumptions, while Uniswap v3 re-engineers liquidity curves using piecewise constant product invariants with virtual reserves.
+      </p>
+
+      <!-- Grid of Formulas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <!-- Card 1: Black-Scholes Formula -->
+        <div class="bg-[#0C1222] border border-slate-800 rounded-xl p-6">
+          <h3 class="text-base font-bold text-white mb-2 flex items-center justify-between">
+            <span>Black-Scholes-Merton PDE Solution</span>
+            <span class="text-xs font-mono text-emerald-400">BSM Closed-Form</span>
+          </h3>
+          <p class="text-xs text-slate-400 mb-4">
+            Under lognormal diffusion $dS_t = \mu S_t dt + \sigma S_t dW_t$, the non-arbitrage valuation of standard calls and puts is:
+          </p>
+          <pre is:raw class="bg-slate-950 p-4 rounded-lg text-xs font-mono text-emerald-300 overflow-x-auto border border-slate-800/80">
+d1 = (ln(S / K) + (r + sigma^2 / 2) * T) / (sigma * sqrt(T))
+d2 = d1 - sigma * sqrt(T)
+
+Call = S * N(d1) - K * exp(-r * T) * N(d2)
+Put  = K * exp(-r * T) * N(-d2) - S * N(-d1)
+          </pre>
+          <div class="mt-4 text-xs text-slate-300 space-y-1">
+            <p><strong>N(x):</strong> Cumulative standard normal distribution function.</p>
+            <p><strong>Put-Call Parity:</strong> C - P = S - K &middot; exp(-rT).</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Greeks Sensitivity Equations -->
+        <div class="bg-[#0C1222] border border-slate-800 rounded-xl p-6">
+          <h3 class="text-base font-bold text-white mb-2 flex items-center justify-between">
+            <span>Analytical Greeks Formulations</span>
+            <span class="text-xs font-mono text-cyan-400">Sensitivities</span>
+          </h3>
+          <p class="text-xs text-slate-400 mb-4">
+            First- and second-order derivatives describing the risk landscape across price, time, and volatility:
+          </p>
+          <pre is:raw class="bg-slate-950 p-4 rounded-lg text-xs font-mono text-cyan-300 overflow-x-auto border border-slate-800/80">
+Delta_call = N(d1)               Delta_put = N(d1) - 1
+Gamma      = phi(d1) / (S * sigma * sqrt(T))
+Vega       = S * sqrt(T) * phi(d1) * 0.01  [per 1% vol]
+Theta_call = -(S * phi(d1) * sigma) / (2*sqrt(T))
+             - r * K * exp(-r*T) * N(d2)   [/ 365 days]
+Rho_call   = K * T * exp(-r*T) * N(d2) * 0.01
+          </pre>
+          <div class="mt-4 text-xs text-slate-300 space-y-1">
+            <p><strong>phi(x):</strong> Standard normal probability density (1 / &radic;(2&pi;)) &middot; exp(-x<sup>2</sup> / 2).</p>
+            <p><strong>Convexity:</strong> Gamma is identical for both Calls and Puts.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Uniswap v3 Virtual Reserves -->
+        <div class="bg-[#0C1222] border border-slate-800 rounded-xl p-6">
+          <h3 class="text-base font-bold text-white mb-2 flex items-center justify-between">
+            <span>Uniswap v3 Virtual Reserves &amp; Liquidity</span>
+            <span class="text-xs font-mono text-indigo-400">Tick Math</span>
+          </h3>
+          <p class="text-xs text-slate-400 mb-4">
+            Liquidity $L$ operates inside price boundary $[p_a, p_b]$. Virtual reserves shift the coordinate origin to bound capital:
+          </p>
+          <pre is:raw class="bg-slate-950 p-4 rounded-lg text-xs font-mono text-indigo-300 overflow-x-auto border border-slate-800/80">
+When P in [Pa, Pb]:
+x_real = L * (1 / sqrt(P) - 1 / sqrt(Pb))
+y_real = L * (sqrt(P) - sqrt(Pa))
+
+Position Value V(P) in terms of asset Y:
+V(P) = x_real * P + y_real
+     = L * (2 * sqrt(P) - sqrt(Pa) - P / sqrt(Pb))
+          </pre>
+          <div class="mt-4 text-xs text-slate-300 space-y-1">
+            <p><strong>Below p_a:</strong> 100% token X, V(P) = L &middot; (1/&radic;(p_a) - 1/&radic;(p_b)) &middot; P.</p>
+            <p><strong>Above p_b:</strong> 100% token Y, V(P) = L &middot; (&radic;(p_b) - &radic;(p_a)).</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Exact Concentrated IL Derivation -->
+        <div class="bg-[#0C1222] border border-slate-800 rounded-xl p-6">
+          <h3 class="text-base font-bold text-white mb-2 flex items-center justify-between">
+            <span>Concentrated Impermanent Loss Formula</span>
+            <span class="text-xs font-mono text-rose-400">Divergence Loss</span>
+          </h3>
+          <p class="text-xs text-slate-400 mb-4">
+            Relative divergence between active pool value V(P<sub>1</sub>) and passive holding V<sub>HODL</sub>(P<sub>1</sub>) = x<sub>0</sub> &middot; P<sub>1</sub> + y<sub>0</sub>:
+          </p>
+          <pre is:raw class="bg-slate-950 p-4 rounded-lg text-xs font-mono text-rose-300 overflow-x-auto border border-slate-800/80">
+V_HODL(P1) = L * ((1/sqrt(P0) - 1/sqrt(Pb)) * P1 + (sqrt(P0) - sqrt(Pa)))
+
+IL_v3 = (V_pool(P1) - V_HODL(P1)) / V_HODL(P1)
+
+Capital Efficiency Multiplier:
+Multiplier = 1 / (1 - sqrt(Pa / Pb))
+          </pre>
+          <div class="mt-4 text-xs text-slate-300 space-y-1">
+            <p><strong>Option Equivalence:</strong> An LP position replicates a short put spread plus fee cash flows.</p>
+            <p><strong>Breakeven Condition:</strong> Cumulative Accrued Fees &gt; |Impermanent Loss|.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strategy Cross-Links Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <a href="/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/" class="group bg-[#0A101D] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-xl transition">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-mono font-bold text-sm mb-3 group-hover:scale-110 transition">
+            &Sigma;
+          </div>
+          <h4 class="text-base font-bold text-white group-hover:text-emerald-400 transition mb-2">
+            Uniswap v3 IL Deep-Dive &rarr;
+          </h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Analytical tick math, range optimization strategies, virtual reserve mechanics, and capital efficiency formulas.
+          </p>
+        </a>
+
+        <a href="/options-gamma-scalping-theta-decay-hedging-strategies/" class="group bg-[#0A101D] border border-slate-800 hover:border-cyan-500/50 p-6 rounded-xl transition">
+          <div class="w-8 h-8 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm mb-3 group-hover:scale-110 transition">
+            &Gamma;
+          </div>
+          <h4 class="text-base font-bold text-white group-hover:text-cyan-400 transition mb-2">
+            Gamma Scalping &amp; Theta &rarr;
+          </h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Dynamic delta rebalancing, non-linear volatility capture, carry cost management, and market maker trade execution.
+          </p>
+        </a>
+
+        <a href="/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/" class="group bg-[#0A101D] border border-slate-800 hover:border-indigo-500/50 p-6 rounded-xl transition">
+          <div class="w-8 h-8 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-mono font-bold text-sm mb-3 group-hover:scale-110 transition">
+            %
+          </div>
+          <h4 class="text-base font-bold text-white group-hover:text-indigo-400 transition mb-2">
+            Delta-Neutral Funding Yield &rarr;
+          </h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Perpetual futures basis trading, 8-hour cash-and-carry yields, delta-neutral mechanics, and liquidation buffer controls.
+          </p>
+        </a>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="bg-[#0A101D] border border-slate-800 rounded-2xl p-6 sm:p-8">
+        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+          <span>Frequently Asked Quantitative Questions</span>
+        </h3>
+
+        <div class="space-y-6 text-sm">
+          <div class="border-b border-slate-800 pb-4">
+            <h4 class="font-bold text-slate-200 mb-1">How does the Black-Scholes formula calculate option Greeks?</h4>
+            <p class="text-slate-400 leading-relaxed text-xs sm:text-sm">
+              Black-Scholes calculates Greeks by taking analytical partial derivatives of the option pricing function V(S, t, &sigma;, r, K) with respect to each underlying variable. Delta is &part;V/&part;S, Gamma is &part;<sup>2</sup>V/&part;S<sup>2</sup>, Vega is &part;V/&part;&sigma;, Theta is &part;V/&part;t, and Rho is &part;V/&part;r. Because closed-form formulas exist, calculations execute instantaneously in client-side code without numerical discretization error.
+            </p>
+          </div>
+
+          <div class="border-b border-slate-800 pb-4">
+            <h4 class="font-bold text-slate-200 mb-1">What is the structural link between Uniswap v3 LP positions and option selling?</h4>
+            <p class="text-slate-400 leading-relaxed text-xs sm:text-sm">
+              An LP depositing liquidity between [p_a, p_b] on an AMM has a concave payoff profile identical to an options short put spread or covered call. As price drops, the LP accumulates the depreciating asset (negative delta), and as price rises, the LP sells the appreciating asset into stablecoins. Trading fees generated by the pool represent synthetic option premium decay that subsidizes downside volatility exposure.
+            </p>
+          </div>
+
+          <div class="border-b border-slate-800 pb-4">
+            <h4 class="font-bold text-slate-200 mb-1">Why is Uniswap v3 Impermanent Loss magnified compared to Uniswap v2?</h4>
+            <p class="text-slate-400 leading-relaxed text-xs sm:text-sm">
+              In Uniswap v2, liquidity is spread continuously across [0, &infin;), meaning extreme price swings dilute the percentage loss over an infinite band. In Uniswap v3, the same capital is concentrated across a narrower price bracket [p_a, p_b]. This creates a capital efficiency boost of 1 / (1 - &radic;(p_a/p_b)), which equally amplifies the rate of inventory turnover and divergence loss when prices leave the target range.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-slate-200 mb-1">Can options Greeks be utilized to hedge Uniswap v3 impermanent loss?</h4>
+            <p class="text-slate-400 leading-relaxed text-xs sm:text-sm">
+              Yes. Institutional liquidity providers actively hedge concentrated LP positions by computing the local Delta (&Delta; = dy/dP + x) and Gamma of their liquidity curve, and subsequently purchasing out-of-the-money put options or shorting perpetual futures contracts to achieve delta-neutrality and protect against tail-risk pool exhaustion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client-Side Interactive Engine Script -->
+  <script is:inline>
+    // Tab Switching
+    function switchTab(tab) {
+      const bsmTab = document.getElementById('tab-bsm');
+      const v3Tab = document.getElementById('tab-v3');
+      const bsmBtn = document.getElementById('tab-bsm-btn');
+      const v3Btn = document.getElementById('tab-v3-btn');
+
+      if (tab === 'bsm') {
+        bsmTab.classList.remove('hidden');
+        bsmTab.classList.add('block');
+        v3Tab.classList.add('hidden');
+        v3Tab.classList.remove('block');
+
+        bsmBtn.className = "px-4 sm:px-6 py-2.5 rounded-lg text-xs sm:text-sm font-bold transition flex items-center space-x-2 bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20";
+        v3Btn.className = "px-4 sm:px-6 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition flex items-center space-x-2 text-slate-400 hover:text-white hover:bg-slate-800/60";
+      } else {
+        v3Tab.classList.remove('hidden');
+        v3Tab.classList.add('block');
+        bsmTab.classList.add('hidden');
+        bsmTab.classList.remove('block');
+
+        v3Btn.className = "px-4 sm:px-6 py-2.5 rounded-lg text-xs sm:text-sm font-bold transition flex items-center space-x-2 bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20";
+        bsmBtn.className = "px-4 sm:px-6 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition flex items-center space-x-2 text-slate-400 hover:text-white hover:bg-slate-800/60";
+      }
+    }
+
+    // Mathematical Normal Distribution Utilities
+    function standardNormalCDF(x) {
+      const a1 =  0.254829592;
+      const a2 = -0.284496736;
+      const a3 =  1.421413741;
+      const a4 = -1.453152027;
+      const a5 =  1.061405429;
+      const p  =  0.3275911;
+
+      const sign = x < 0 ? -1 : 1;
+      const absX = Math.abs(x) / Math.sqrt(2.0);
+
+      const t = 1.0 / (1.0 + p * absX);
+      const erf = 1.0 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-absX * absX);
+
+      return 0.5 * (1.0 + sign * erf);
+    }
+
+    function standardNormalPDF(x) {
+      return (1.0 / Math.sqrt(2 * Math.PI)) * Math.exp(-0.5 * x * x);
+    }
+
+    // Black-Scholes Greeks Calculation Engine
+    function calculateBSM() {
+      const S = parseFloat(document.getElementById('bsm-s').value) || 100;
+      const K = parseFloat(document.getElementById('bsm-k').value) || 100;
+      const D = parseFloat(document.getElementById('bsm-d').value) || 30;
+      const volPct = parseFloat(document.getElementById('bsm-v').value) || 30;
+      const ratePct = parseFloat(document.getElementById('bsm-r').value) || 4.5;
+
+      const T = Math.max(D / 365.0, 0.0001);
+      const sigma = Math.max(volPct / 100.0, 0.001);
+      const r = ratePct / 100.0;
+
+      const sqrtT = Math.sqrt(T);
+      const d1 = (Math.log(S / K) + (r + 0.5 * sigma * sigma) * T) / (sigma * sqrtT);
+      const d2 = d1 - sigma * sqrtT;
+
+      const Nd1 = standardNormalCDF(d1);
+      const Nd2 = standardNormalCDF(d2);
+      const N_neg_d1 = standardNormalCDF(-d1);
+      const N_neg_d2 = standardNormalCDF(-d2);
+      const phi_d1 = standardNormalPDF(d1);
+
+      const exp_rT = Math.exp(-r * T);
+
+      // Prices
+      const callPrice = S * Nd1 - K * exp_rT * Nd2;
+      const putPrice = K * exp_rT * N_neg_d2 - S * N_neg_d1;
+
+      // Greeks
+      const callDelta = Nd1;
+      const putDelta = Nd1 - 1.0;
+      const gamma = phi_d1 / (S * sigma * sqrtT);
+      const vega = (S * sqrtT * phi_d1) / 100.0; // per 1% change
+
+      // Theta per day
+      const callThetaAnnual = - (S * phi_d1 * sigma) / (2 * sqrtT) - r * K * exp_rT * Nd2;
+      const putThetaAnnual  = - (S * phi_d1 * sigma) / (2 * sqrtT) + r * K * exp_rT * N_neg_d2;
+      const callTheta = callThetaAnnual / 365.0;
+      const putTheta  = putThetaAnnual / 365.0;
+
+      // Rho per 1% change
+      const callRho = (K * T * exp_rT * Nd2) / 100.0;
+      const putRho  = (-K * T * exp_rT * N_neg_d2) / 100.0;
+
+      // Intrinsics
+      const callIntrinsic = Math.max(0, S - K);
+      const callExtrinsic = Math.max(0, callPrice - callIntrinsic);
+      const putIntrinsic = Math.max(0, K - S);
+      const putExtrinsic = Math.max(0, putPrice - putIntrinsic);
+
+      // UI Update
+      document.getElementById('disp-s').innerText = '$' + S.toFixed(2);
+      document.getElementById('disp-k').innerText = '$' + K.toFixed(2);
+      document.getElementById('disp-d').innerText = D + ' days';
+      document.getElementById('disp-v').innerText = volPct.toFixed(1) + '%';
+      document.getElementById('disp-r').innerText = ratePct.toFixed(2) + '%';
+
+      document.getElementById('out-call-price').innerText = '$' + Math.max(0, callPrice).toFixed(2);
+      document.getElementById('out-put-price').innerText = '$' + Math.max(0, putPrice).toFixed(2);
+
+      document.getElementById('out-call-intrinsic').innerText = '$' + callIntrinsic.toFixed(2);
+      document.getElementById('out-call-extrinsic').innerText = '$' + callExtrinsic.toFixed(2);
+      document.getElementById('out-put-intrinsic').innerText = '$' + putIntrinsic.toFixed(2);
+      document.getElementById('out-put-extrinsic').innerText = '$' + putExtrinsic.toFixed(2);
+
+      document.getElementById('out-call-delta').innerText = (callDelta >= 0 ? '+' : '') + callDelta.toFixed(4);
+      document.getElementById('out-put-delta').innerText = putDelta.toFixed(4);
+
+      document.getElementById('out-gamma').innerText = gamma.toFixed(4);
+      document.getElementById('out-gamma-exp').innerText = '+' + gamma.toFixed(4);
+
+      document.getElementById('out-call-theta').innerText = (callTheta >= 0 ? '+$' : '-$') + Math.abs(callTheta).toFixed(4);
+      document.getElementById('out-put-theta').innerText  = (putTheta >= 0 ? '+$' : '-$') + Math.abs(putTheta).toFixed(4);
+
+      document.getElementById('out-vega').innerText = (vega >= 0 ? '+$' : '-$') + Math.abs(vega).toFixed(4);
+      document.getElementById('out-call-rho').innerText = (callRho >= 0 ? '+$' : '-$') + Math.abs(callRho).toFixed(4);
+      document.getElementById('out-put-rho').innerText  = (putRho >= 0 ? '+$' : '-$') + Math.abs(putRho).toFixed(4);
+
+      // Delta visual bars
+      const putWidth = Math.abs(putDelta) * 50;
+      const callWidth = Math.abs(callDelta) * 50;
+      document.getElementById('bar-put-delta').style.width = putWidth.toFixed(1) + '%';
+      document.getElementById('bar-call-delta').style.width = callWidth.toFixed(1) + '%';
+
+      // Moneyness indicators
+      const moneynessRatio = S / K;
+      const callBadge = document.getElementById('bsm-call-moneyness');
+      const putBadge = document.getElementById('bsm-put-moneyness');
+
+      if (moneynessRatio > 1.03) {
+        callBadge.innerText = 'ITM';
+        callBadge.className = 'text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold';
+        putBadge.innerText = 'OTM';
+        putBadge.className = 'text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700 font-bold';
+      } else if (moneynessRatio < 0.97) {
+        callBadge.innerText = 'OTM';
+        callBadge.className = 'text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700 font-bold';
+        putBadge.innerText = 'ITM';
+        putBadge.className = 'text-[10px] font-mono px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30 font-bold';
+      } else {
+        callBadge.innerText = 'ATM';
+        callBadge.className = 'text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold';
+        putBadge.innerText = 'ATM';
+        putBadge.className = 'text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold';
+      }
+    }
+
+    function syncBSM(field, val) {
+      if (field === 's') {
+        document.getElementById('bsm-s').value = val;
+        document.getElementById('bsm-s-range').value = val;
+      } else if (field === 'k') {
+        document.getElementById('bsm-k').value = val;
+        document.getElementById('bsm-k-range').value = val;
+      } else if (field === 'd') {
+        document.getElementById('bsm-d').value = val;
+        document.getElementById('bsm-d-range').value = val;
+      } else if (field === 'v') {
+        document.getElementById('bsm-v').value = val;
+        document.getElementById('bsm-v-range').value = val;
+      } else if (field === 'r') {
+        document.getElementById('bsm-r').value = val;
+        document.getElementById('bsm-r-range').value = val;
+      }
+      calculateBSM();
+    }
+
+    function resetBSMDefaults() {
+      syncBSM('s', 100);
+      syncBSM('k', 100);
+      syncBSM('d', 30);
+      syncBSM('v', 30);
+      syncBSM('r', 4.5);
+    }
+
+    // Uniswap v3 Concentrated Liquidity IL Engine
+    function syncV3() {
+      const P0 = parseFloat(document.getElementById('v3-p0').value) || 2000;
+      let Pa = parseFloat(document.getElementById('v3-pa').value) || 1600;
+      let Pb = parseFloat(document.getElementById('v3-pb').value) || 2500;
+
+      // Guarantee Pa < Pb
+      if (Pa >= Pb) {
+        Pa = Pb * 0.8;
+        document.getElementById('v3-pa').value = Pa.toFixed(0);
+      }
+
+      const priceChangePct = parseFloat(document.getElementById('v3-change').value) || 0;
+      const P1 = P0 * (1 + priceChangePct / 100.0);
+      const feeAPY = parseFloat(document.getElementById('v3-fee-apy').value) || 0;
+      const days = parseFloat(document.getElementById('v3-days').value) || 30;
+
+      // Labels
+      document.getElementById('disp-v3-p0').innerText = '$' + P0.toLocaleString();
+      const paPct = ((Pa - P0) / P0) * 100;
+      const pbPct = ((Pb - P0) / P0) * 100;
+      document.getElementById('disp-v3-pa').innerText = '$' + Pa.toLocaleString() + ' (' + (paPct >= 0 ? '+' : '') + paPct.toFixed(1) + '%)';
+      document.getElementById('disp-v3-pb').innerText = '$' + Pb.toLocaleString() + ' (' + (pbPct >= 0 ? '+' : '') + pbPct.toFixed(1) + '%)';
+      document.getElementById('disp-v3-change').innerText = (priceChangePct >= 0 ? '+' : '') + priceChangePct.toFixed(1) + '%';
+      document.getElementById('disp-v3-p1').innerText = '$' + P1.toFixed(2);
+
+      document.getElementById('lbl-pa').innerText = '$' + Pa.toLocaleString();
+      document.getElementById('lbl-pb').innerText = '$' + Pb.toLocaleString();
+      document.getElementById('lbl-p1').innerText = '$' + P1.toFixed(0);
+
+      // Status check
+      const statusBadge = document.getElementById('disp-v3-range-status');
+      const activeTag = document.getElementById('v3-active-tag');
+      if (P1 < Pa) {
+        statusBadge.innerText = 'OUT OF RANGE (100% Asset X)';
+        statusBadge.className = 'text-rose-400 font-bold';
+        activeTag.innerText = 'Exited Range: 100% Asset X';
+        activeTag.className = 'text-[10px] px-2 py-0.5 rounded bg-rose-500/20 text-rose-400 border border-rose-500/30';
+      } else if (P1 > Pb) {
+        statusBadge.innerText = 'OUT OF RANGE (100% Asset Y)';
+        statusBadge.className = 'text-cyan-400 font-bold';
+        activeTag.innerText = 'Exited Range: 100% Asset Y';
+        activeTag.className = 'text-[10px] px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-400 border border-cyan-500/30';
+      } else {
+        statusBadge.innerText = 'ACTIVE IN RANGE';
+        statusBadge.className = 'text-emerald-400 font-bold';
+        activeTag.innerText = 'Active Earning Trading Fees';
+        activeTag.className = 'text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+      }
+
+      // Mathematical derivation of V3 LP Value
+      // Normalized liquidity L = 1.0 for proportional calculation
+      const L = 1.0;
+      const sqrtP0 = Math.sqrt(P0);
+      const sqrtPa = Math.sqrt(Pa);
+      const sqrtPb = Math.sqrt(Pb);
+
+      // Initial asset balances deposited at P0 (denominated in asset X and asset Y)
+      let x0 = 0;
+      let y0 = 0;
+      if (P0 < Pa) {
+        x0 = L * (1 / sqrtPa - 1 / sqrtPb);
+        y0 = 0;
+      } else if (P0 > Pb) {
+        x0 = 0;
+        y0 = L * (sqrtPb - sqrtPa);
+      } else {
+        x0 = L * (1 / sqrtP0 - 1 / sqrtPb);
+        y0 = L * (sqrtP0 - sqrtPa);
+      }
+      const initialValue = x0 * P0 + y0;
+
+      // Value of position at P1
+      const sqrtP1 = Math.sqrt(P1);
+      let x1 = 0;
+      let y1 = 0;
+      if (P1 < Pa) {
+        x1 = L * (1 / sqrtPa - 1 / sqrtPb);
+        y1 = 0;
+      } else if (P1 > Pb) {
+        x1 = 0;
+        y1 = L * (sqrtPb - sqrtPa);
+      } else {
+        x1 = L * (1 / sqrtP1 - 1 / sqrtPb);
+        y1 = L * (sqrtP1 - sqrtPa);
+      }
+      const v3PoolValue = x1 * P1 + y1;
+
+      // HODL benchmark value of the initially deposited assets evaluated at P1
+      const hodlValue = x0 * P1 + y0;
+
+      // Uniswap v3 Impermanent Loss
+      const v3IL = hodlValue > 0 ? (v3PoolValue - hodlValue) / hodlValue : 0;
+
+      // Uniswap v2 Full Range IL comparison
+      const k = P1 / P0;
+      const v2IL = (2 * Math.sqrt(k)) / (1 + k) - 1.0;
+
+      // Capital efficiency multiplier: approx 1 / (1 - sqrt(Pa / Pb))
+      const efficiency = 1 / (1 - Math.sqrt(Pa / Pb));
+
+      // Fee return over period
+      // Note: Concentrated efficiency multiplies fee capture
+      const feePeriodFraction = days / 365.0;
+      const effectiveFeeAPY = feeAPY;
+      const feeReturnPct = effectiveFeeAPY * feePeriodFraction;
+
+      // Net Return vs HODL: (1 + v3IL) * (1 + feeReturnPct/100) - 1
+      const netReturnVsHodl = (1 + v3IL) * (1 + feeReturnPct / 100.0) - 1.0;
+
+      // Update UI displays
+      document.getElementById('out-v3-il').innerText = (v3IL * 100).toFixed(2) + '%';
+      document.getElementById('out-v2-il').innerText = (v2IL * 100).toFixed(2) + '%';
+      document.getElementById('out-v3-eff').innerText = efficiency.toFixed(2) + 'x';
+      document.getElementById('out-v3-net-roi').innerText = (netReturnVsHodl >= 0 ? '+' : '') + (netReturnVsHodl * 100).toFixed(2) + '%';
+      document.getElementById('out-v3-fee-return').innerText = '+' + feeReturnPct.toFixed(2) + '%';
+
+      // Table dollar calculations for a $10,000 baseline investment
+      const baseUSD = 10000;
+      const terminalHODLUSD = baseUSD * (hodlValue / initialValue);
+      const terminalV3PoolUSD = baseUSD * (v3PoolValue / initialValue);
+      const feesEarnedUSD = terminalV3PoolUSD * (feeReturnPct / 100.0);
+      const terminalV3TotalUSD = terminalV3PoolUSD + feesEarnedUSD;
+
+      const v2PoolRatio = (2 * Math.sqrt(k)) / (1 + k);
+      const terminalV2USD = baseUSD * (0.5 * k + 0.5) * v2PoolRatio;
+
+      const v3DiffUSD = terminalV3TotalUSD - terminalHODLUSD;
+      const v2DiffUSD = terminalV2USD - terminalHODLUSD;
+
+      document.getElementById('tbl-v3-val').innerText = '$' + Math.round(terminalV3TotalUSD).toLocaleString();
+      document.getElementById('tbl-v3-diff').innerText = (v3DiffUSD >= 0 ? '+$' : '-$') + Math.round(Math.abs(v3DiffUSD)).toLocaleString() + ' (' + (netReturnVsHodl >= 0 ? '+' : '') + (netReturnVsHodl * 100).toFixed(2) + '%)';
+      const totV3Roi = ((terminalV3TotalUSD - baseUSD) / baseUSD) * 100;
+      document.getElementById('tbl-v3-tot').innerText = (totV3Roi >= 0 ? '+' : '') + totV3Roi.toFixed(2) + '%';
+
+      document.getElementById('tbl-hodl-val').innerText = '$' + Math.round(terminalHODLUSD).toLocaleString();
+
+      document.getElementById('tbl-v2-val').innerText = '$' + Math.round(terminalV2USD).toLocaleString();
+      document.getElementById('tbl-v2-diff').innerText = (v2DiffUSD >= 0 ? '+$' : '-$') + Math.round(Math.abs(v2DiffUSD)).toLocaleString() + ' (' + (v2IL * 100).toFixed(2) + '%)';
+    }
+
+    function resetV3Defaults() {
+      document.getElementById('v3-p0').value = 2000;
+      document.getElementById('v3-pa').value = 1600;
+      document.getElementById('v3-pa-range').value = 1600;
+      document.getElementById('v3-pb').value = 2500;
+      document.getElementById('v3-pb-range').value = 2500;
+      document.getElementById('v3-change').value = 15;
+      document.getElementById('v3-fee-apy').value = 28;
+      document.getElementById('v3-days').value = 30;
+      syncV3();
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      calculateBSM();
+      syncV3();
+    });
+  </script>
+</Layout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[CIPipelineGraph - CI/CD Syntax Validators & Visualizers]]></title>
+    <link>https://site-18-chi.vercel.app/</link>
+    <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for CI/CD Syntax Validators & Visualizers.]]></description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
+    <atom:link href="https://site-18-chi.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title><![CDATA[CI/CD Pipeline Visualizer & GitHub Actions DAG Validator]]></title>
+      <link>https://site-18-chi.vercel.app/</link>
+      <guid isPermaLink="true">https://site-18-chi.vercel.app/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for CI/CD Syntax Validators & Visualizers.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[GitHub Actions vs GitLab CI: Syntax, Execution & Runner Cost Comparison]]></title>
+      <link>https://site-18-chi.vercel.app/github-actions-vs-gitlab-ci-syntax-execution-cost-comparison/</link>
+      <guid isPermaLink="true">https://site-18-chi.vercel.app/github-actions-vs-gitlab-ci-syntax-execution-cost-comparison/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for CI/CD Syntax Validators & Visualizers.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[GitHub Actions Matrix Optimization & Cache Acceleration Architecture]]></title>
+      <link>https://site-18-chi.vercel.app/matrix-build-optimization-github-actions-cache-speed/</link>
+      <guid isPermaLink="true">https://site-18-chi.vercel.app/matrix-build-optimization-github-actions-cache-speed/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for CI/CD Syntax Validators & Visualizers.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Act CLI: Run, Test & Debug GitHub Actions Locally Without Committing]]></title>
+      <link>https://site-18-chi.vercel.app/act-run-github-actions-locally-debugging-guide/</link>
+      <guid isPermaLink="true">https://site-18-chi.vercel.app/act-run-github-actions-locally-debugging-guide/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for CI/CD Syntax Validators & Visualizers.]]></description>
+    </item>
+  </channel>
+</rss>

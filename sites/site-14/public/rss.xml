@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[SOC2Ready - B2B Startup Security & Compliance Automation]]></title>
+    <link>https://site-14-sable.vercel.app/</link>
+    <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for B2B Startup Security & Compliance Automation.]]></description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
+    <atom:link href="https://site-14-sable.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title><![CDATA[B2B SaaS SOC 2 Type II Readiness Checklist & Security Controls]]></title>
+      <link>https://site-14-sable.vercel.app/</link>
+      <guid isPermaLink="true">https://site-14-sable.vercel.app/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for B2B Startup Security & Compliance Automation.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[SOC 2 Type 1 vs Type 2: Complete Compliance Timeline & Cost Breakdown]]></title>
+      <link>https://site-14-sable.vercel.app/soc-2-type-1-vs-type-2-compliance-timeline-cost/</link>
+      <guid isPermaLink="true">https://site-14-sable.vercel.app/soc-2-type-1-vs-type-2-compliance-timeline-cost/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for B2B Startup Security & Compliance Automation.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Vanta vs Drata vs Secureframe: 2026 Compliance Automation Review]]></title>
+      <link>https://site-14-sable.vercel.app/vanta-vs-drata-vs-secureframe-compliance-automation-review/</link>
+      <guid isPermaLink="true">https://site-14-sable.vercel.app/vanta-vs-drata-vs-secureframe-compliance-automation-review/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for B2B Startup Security & Compliance Automation.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[SOC 2 Type II for Bootstrapped Startups: Under- Playbook]]></title>
+      <link>https://site-14-sable.vercel.app/soc-2-compliance-for-bootstrapped-startups-under-20k/</link>
+      <guid isPermaLink="true">https://site-14-sable.vercel.app/soc-2-compliance-for-bootstrapped-startups-under-20k/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for B2B Startup Security & Compliance Automation.]]></description>
+    </item>
+  </channel>
+</rss>

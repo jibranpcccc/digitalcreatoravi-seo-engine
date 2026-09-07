@@ -1,0 +1,721 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schemaJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "GrokLogTester",
+      "url": "https://groklogtester.pages.dev/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All",
+      "description": "Online Grok pattern tester, AST regex debugger, and Nginx log regex generator for Vector, Fluent Bit, and Logstash observability pipelines.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "headline": "Grok Pattern Tester & Nginx Log Regex Generator",
+      "url": "https://groklogtester.pages.dev/",
+      "description": "Comprehensive guide and interactive utility for testing Grok expressions against Nginx combined, CloudFront, Docker JSON, and Syslog telemetry formats.",
+      "author": {
+        "@type": "Organization",
+        "name": "GrokLogTester Engineering Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GrokLogTester",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://groklogtester.pages.dev/og-banner.png"
+        }
+      },
+      "datePublished": "2026-09-06",
+      "dateModified": "2026-09-06"
+    }
+  ]
+});
+
+const patIporhost = "%{IPORHOST:client_ip}";
+const patNumber = "%{NUMBER:status_code:int}";
+const patUripath = "%{URIPATH:request_path}";
+const patIso8601 = "%{TIMESTAMP_ISO8601:timestamp}";
+const patHttpdate = "%{HTTPDATE:timestamp}";
+const patWord = "%{WORD:verb}";
+const patData = "%{DATA:user_agent}";
+const patGreedy = "%{GREEDYDATA:message}";
+---
+
+<Layout
+  title="Grok Pattern Tester & Nginx Log Regex Generator | GrokLogTester"
+  description="Free in-browser Grok pattern tester and regex debugger. Parse Nginx access logs, CloudFront, Docker JSON, and Syslog with real-time JSON token extraction."
+  canonical="https://groklogtester.pages.dev/"
+  schemaJson={schemaJson}
+>
+  <!-- Hero Section with exactly ONE H1 tag -->
+  <section class="pt-6 pb-8 text-center max-w-4xl mx-auto">
+    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-5 shadow-sm">
+      <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+      <span>Live AST Grok Compiler &bull; Zero Log Exfiltration</span>
+    </div>
+
+    <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+      Grok Pattern Tester & Nginx Log Regex Generator
+    </h1>
+
+    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-8 font-normal">
+      Test and debug Grok expressions against real production logs. Generate parsed JSON tokens, compile standard regular expressions, and validate configurations for Vector, Fluent Bit, and Logstash.
+    </p>
+
+    <!-- 45-60 Word Featured Snippet Quick Answer Box -->
+    <div class="bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/90 border border-cyan-500/40 rounded-xl p-5 text-left shadow-xl shadow-cyan-950/20 backdrop-blur-md relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-cyan-400 to-emerald-400"></div>
+      <div class="flex items-center space-x-2 mb-2 text-xs font-bold uppercase tracking-wider text-cyan-400 font-mono">
+        <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span>Quick Answer: What is a Grok Pattern Tester?</span>
+      </div>
+      <p class="text-sm text-slate-200 leading-relaxed font-sans">
+        A Grok pattern tester matches raw, unstructured server log lines against reusable named regular expressions—converting arbitrary strings into structured JSON key-value pairs. By compiling standard syntax like <code class="text-cyan-300 bg-slate-800 px-1 py-0.5 rounded font-mono text-xs">%&#123;IPORHOST:client_ip&#125;</code> and <code class="text-cyan-300 bg-slate-800 px-1 py-0.5 rounded font-mono text-xs">%&#123;NUMBER:status_code&#125;</code>, observability engineers validate Logstash, Vector, and Fluent Bit parsing pipelines in real time before deploying configurations to production log collectors.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Grok/Regex Log Parser Tool -->
+  <section id="tester" class="my-6 bg-slate-900/70 border border-slate-800 rounded-2xl p-4 sm:p-7 shadow-2xl backdrop-blur-xl">
+    <!-- Log Preset Selector -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+      <div>
+        <h2 class="text-lg font-bold text-white flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-cyan-400"></span>
+          Interactive In-Browser Log Parser & Token Extractor
+        </h2>
+        <p class="text-xs text-slate-400">Select an enterprise log format or input custom log lines and Grok patterns.</p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="text-xs font-mono text-slate-400 mr-1 hidden sm:inline">Presets:</span>
+        <button type="button" data-preset="nginx" class="preset-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 hover:bg-cyan-500/30 transition">
+          Nginx Combined
+        </button>
+        <button type="button" data-preset="cloudfront" class="preset-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500 transition">
+          AWS CloudFront
+        </button>
+        <button type="button" data-preset="docker" class="preset-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500 transition">
+          Docker JSON
+        </button>
+        <button type="button" data-preset="syslog" class="preset-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500 transition">
+          Syslog RFC 5424
+        </button>
+      </div>
+    </div>
+
+    <!-- Inputs Grid -->
+    <div class="grid grid-cols-1 gap-6 pt-6">
+      <!-- Raw Log Line Input -->
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <label for="rawLogInput" class="text-xs font-mono font-semibold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+            </svg>
+            Raw Log Entry (Single Line)
+          </label>
+          <span id="logLengthBadge" class="text-[11px] font-mono text-slate-500">184 chars</span>
+        </div>
+        <textarea
+          id="rawLogInput"
+          rows="3"
+          class="w-full bg-[#050811] text-slate-200 border border-slate-700/80 rounded-xl p-3.5 font-mono text-xs sm:text-sm focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 outline-none resize-y transition shadow-inner leading-relaxed"
+          placeholder="Paste raw log line here..."
+        ></textarea>
+      </div>
+
+      <!-- Grok Pattern Input -->
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <label for="grokPatternInput" class="text-xs font-mono font-semibold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+            Grok Expression / Named Capture Group Syntax
+          </label>
+          <div class="flex items-center space-x-2">
+            <span id="compileStatusBadge" class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+              Pattern Valid
+            </span>
+          </div>
+        </div>
+        <textarea
+          id="grokPatternInput"
+          rows="3"
+          class="w-full bg-[#050811] text-cyan-300 border border-slate-700/80 rounded-xl p-3.5 font-mono text-xs sm:text-sm focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 outline-none resize-y transition shadow-inner leading-relaxed"
+          placeholder="Enter Grok pattern, e.g. %{IPORHOST:client_ip} ..."
+        ></textarea>
+      </div>
+    </div>
+
+    <!-- Action Toolbar -->
+    <div class="flex flex-wrap items-center justify-between gap-3 mt-4 pt-4 border-t border-slate-800">
+      <div class="flex items-center space-x-2">
+        <button
+          id="btnParse"
+          type="button"
+          class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 font-bold text-xs rounded-lg shadow-md shadow-cyan-500/20 transition flex items-center space-x-1.5"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <span>Run Grok Evaluation</span>
+        </button>
+
+        <button
+          id="btnCopyJson"
+          type="button"
+          class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs rounded-lg border border-slate-700 transition flex items-center space-x-1.5"
+        >
+          <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+          <span>Copy JSON</span>
+        </button>
+
+        <button
+          id="btnCopyRegex"
+          type="button"
+          class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs rounded-lg border border-slate-700 transition flex items-center space-x-1.5"
+        >
+          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+          <span>Copy Regex</span>
+        </button>
+      </div>
+
+      <div class="flex items-center space-x-3 text-xs font-mono text-slate-400">
+        <span id="matchStatusLabel" class="text-emerald-400 font-bold">Status: Full Match (100%)</span>
+        <span class="text-slate-600">&bull;</span>
+        <span id="execLatency">Latency: 0.18 ms</span>
+      </div>
+    </div>
+
+    <!-- Extracted Primary Tokens Display -->
+    <div class="mt-8">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          Real-Time Field Extractor Tokens
+        </h3>
+        <span class="text-xs text-slate-500 font-mono">client_ip &bull; status_code &bull; request_path &bull; duration_ms</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Token 1: client_ip -->
+        <div class="bg-[#050811] border border-slate-800 rounded-xl p-4 flex flex-col justify-between shadow-md">
+          <div class="flex items-center justify-between text-xs text-slate-400 mb-2 font-mono">
+            <span class="text-cyan-400 font-bold">client_ip</span>
+            <span class="text-[10px] uppercase px-1.5 py-0.5 rounded bg-cyan-500/10 text-cyan-300">IP / Host</span>
+          </div>
+          <div id="valClientIp" class="text-base font-mono font-bold text-white truncate">192.168.1.105</div>
+          <div class="text-[11px] text-slate-500 mt-2 font-mono">%&#123;IPORHOST:client_ip&#125;</div>
+        </div>
+
+        <!-- Token 2: status_code -->
+        <div class="bg-[#050811] border border-slate-800 rounded-xl p-4 flex flex-col justify-between shadow-md">
+          <div class="flex items-center justify-between text-xs text-slate-400 mb-2 font-mono">
+            <span class="text-emerald-400 font-bold">status_code</span>
+            <span class="text-[10px] uppercase px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300">HTTP Int</span>
+          </div>
+          <div id="valStatusCode" class="text-base font-mono font-bold text-emerald-400">200</div>
+          <div class="text-[11px] text-slate-500 mt-2 font-mono">%&#123;NUMBER:status_code:int&#125;</div>
+        </div>
+
+        <!-- Token 3: request_path -->
+        <div class="bg-[#050811] border border-slate-800 rounded-xl p-4 flex flex-col justify-between shadow-md">
+          <div class="flex items-center justify-between text-xs text-slate-400 mb-2 font-mono">
+            <span class="text-amber-400 font-bold">request_path</span>
+            <span class="text-[10px] uppercase px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-300">URI Path</span>
+          </div>
+          <div id="valRequestPath" class="text-base font-mono font-bold text-slate-200 truncate">/api/v2/products/4192</div>
+          <div class="text-[11px] text-slate-500 mt-2 font-mono">%&#123;URIPATHPARAM:request_path&#125;</div>
+        </div>
+
+        <!-- Token 4: duration_ms -->
+        <div class="bg-[#050811] border border-slate-800 rounded-xl p-4 flex flex-col justify-between shadow-md">
+          <div class="flex items-center justify-between text-xs text-slate-400 mb-2 font-mono">
+            <span class="text-purple-400 font-bold">duration_ms</span>
+            <span class="text-[10px] uppercase px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-300">Latency</span>
+          </div>
+          <div id="valDurationMs" class="text-base font-mono font-bold text-purple-300">0.042 ms</div>
+          <div class="text-[11px] text-slate-500 mt-2 font-mono">%&#123;NUMBER:duration_ms:float&#125;</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full Parsed JSON & Compiled Regex Breakdown -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+      <!-- JSON Token Output -->
+      <div class="bg-[#050811] border border-slate-800 rounded-xl p-4 flex flex-col">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3">
+          <span class="text-xs font-mono font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+            Parsed JSON Token Output
+          </span>
+          <span id="jsonKeyCount" class="text-[11px] font-mono text-slate-400">9 fields extracted</span>
+        </div>
+        <pre id="jsonOutput" class="text-xs font-mono text-cyan-300 bg-slate-950 p-3.5 rounded-lg overflow-x-auto max-h-72 leading-relaxed border border-slate-800/60"></pre>
+      </div>
+
+      <!-- Compiled Regex Inspector -->
+      <div class="bg-[#050811] border border-slate-800 rounded-xl p-4 flex flex-col">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3">
+          <span class="text-xs font-mono font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            Compiled AST PCRE Regex
+          </span>
+          <span class="text-[11px] font-mono text-slate-400">Zero-Dependency ES2026 Engine</span>
+        </div>
+        <div class="flex-1 flex flex-col justify-between">
+          <pre id="compiledRegexOutput" class="text-xs font-mono text-emerald-300 bg-slate-950 p-3.5 rounded-lg overflow-x-auto max-h-56 leading-relaxed border border-slate-800/60 whitespace-pre-wrap break-all"></pre>
+          <div class="mt-3 pt-3 border-t border-slate-800/60 flex items-center justify-between text-[11px] font-mono text-slate-400">
+            <span>Vector VRL & Logstash Compatible</span>
+            <span class="text-slate-500">Named Capture Groups</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cheat Sheet of Common Grok Patterns -->
+  <section id="cheat-sheet" class="my-14">
+    <div class="text-center max-w-2xl mx-auto mb-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-2">
+        Common Grok Patterns Cheat Sheet
+      </h2>
+      <p class="text-sm text-slate-400">
+        Standard pre-compiled Grok definitions used in Logstash, Vector VRL, Fluent Bit, and Datadog pipelines.
+      </p>
+    </div>
+
+    <div class="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-2xl shadow-xl backdrop-blur-md">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="border-b border-slate-800 bg-slate-900/90 text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">
+            <th class="py-3.5 px-4">Grok Pattern</th>
+            <th class="py-3.5 px-4">Regex Equivalent</th>
+            <th class="py-3.5 px-4">Sample Log Match</th>
+            <th class="py-3.5 px-4">Usage Example</th>
+            <th class="py-3.5 px-4 text-right">Action</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800 text-xs font-mono text-slate-300">
+          <tr class="hover:bg-slate-800/40 transition">
+            <td class="py-3.5 px-4 font-bold text-cyan-400">%&#123;IPORHOST&#125;</td>
+            <td class="py-3.5 px-4 text-slate-400 max-w-xs truncate" title="(?:IP|HOSTNAME)">(?:IP|HOSTNAME)</td>
+            <td class="py-3.5 px-4 text-slate-200">192.168.1.105, api.domain.com</td>
+            <td class="py-3.5 px-4 text-slate-400">{patIporhost}</td>
+            <td class="py-3.5 px-4 text-right">
+              <button type="button" class="btn-copy-pattern px-2 py-1 rounded bg-slate-800 hover:bg-cyan-500/20 hover:text-cyan-300 transition text-[11px]" data-pattern={patIporhost}>Copy</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-slate-800/40 transition">
+            <td class="py-3.5 px-4 font-bold text-cyan-400">%&#123;NUMBER&#125;</td>
+            <td class="py-3.5 px-4 text-slate-400 max-w-xs truncate">(?:[+-]?(?:[0-9]+(?:\.[0-9]+)?))</td>
+            <td class="py-3.5 px-4 text-slate-200">200, 4528, 0.042</td>
+            <td class="py-3.5 px-4 text-slate-400">{patNumber}</td>
+            <td class="py-3.5 px-4 text-right">
+              <button type="button" class="btn-copy-pattern px-2 py-1 rounded bg-slate-800 hover:bg-cyan-500/20 hover:text-cyan-300 transition text-[11px]" data-pattern={patNumber}>Copy</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-slate-800/40 transition">
+            <td class="py-3.5 px-4 font-bold text-cyan-400">%&#123;URIPATH&#125;</td>
+            <td class="py-3.5 px-4 text-slate-400 max-w-xs truncate">(?:/[A-Za-z0-9$.+!*'(),~:;=@#%_\-]+)+</td>
+            <td class="py-3.5 px-4 text-slate-200">/api/v2/products/4192</td>
+            <td class="py-3.5 px-4 text-slate-400">{patUripath}</td>
+            <td class="py-3.5 px-4 text-right">
+              <button type="button" class="btn-copy-pattern px-2 py-1 rounded bg-slate-800 hover:bg-cyan-500/20 hover:text-cyan-300 transition text-[11px]" data-pattern={patUripath}>Copy</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-slate-800/40 transition">
+            <td class="py-3.5 px-4 font-bold text-cyan-400">%&#123;TIMESTAMP_ISO8601&#125;</td>
+            <td class="py-3.5 px-4 text-slate-400 max-w-xs truncate">(?:[0-9]&#123;4&#125;-[0-9]&#123;2&#125;-[0-9]&#123;2&#125;T...)</td>
+            <td class="py-3.5 px-4 text-slate-200">2026-09-06T14:40:12.451Z</td>
+            <td class="py-3.5 px-4 text-slate-400">{patIso8601}</td>
+            <td class="py-3.5 px-4 text-right">
+              <button type="button" class="btn-copy-pattern px-2 py-1 rounded bg-slate-800 hover:bg-cyan-500/20 hover:text-cyan-300 transition text-[11px]" data-pattern={patIso8601}>Copy</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-slate-800/40 transition">
+            <td class="py-3.5 px-4 font-bold text-emerald-400">%&#123;HTTPDATE&#125;</td>
+            <td class="py-3.5 px-4 text-slate-400 max-w-xs truncate">DD/Mon/YYYY:HH:MM:SS TZ</td>
+            <td class="py-3.5 px-4 text-slate-200">06/Sep/2026:14:22:18 +0000</td>
+            <td class="py-3.5 px-4 text-slate-400">{patHttpdate}</td>
+            <td class="py-3.5 px-4 text-right">
+              <button type="button" class="btn-copy-pattern px-2 py-1 rounded bg-slate-800 hover:bg-cyan-500/20 hover:text-cyan-300 transition text-[11px]" data-pattern={patHttpdate}>Copy</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-slate-800/40 transition">
+            <td class="py-3.5 px-4 font-bold text-emerald-400">%&#123;WORD&#125;</td>
+            <td class="py-3.5 px-4 text-slate-400">\w+</td>
+            <td class="py-3.5 px-4 text-slate-200">GET, POST, error, stdout</td>
+            <td class="py-3.5 px-4 text-slate-400">{patWord}</td>
+            <td class="py-3.5 px-4 text-right">
+              <button type="button" class="btn-copy-pattern px-2 py-1 rounded bg-slate-800 hover:bg-cyan-500/20 hover:text-cyan-300 transition text-[11px]" data-pattern={patWord}>Copy</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-slate-800/40 transition">
+            <td class="py-3.5 px-4 font-bold text-emerald-400">%&#123;DATA&#125;</td>
+            <td class="py-3.5 px-4 text-slate-400">.*? (Non-greedy)</td>
+            <td class="py-3.5 px-4 text-slate-200">Mozilla/5.0, arbitrary text</td>
+            <td class="py-3.5 px-4 text-slate-400">{patData}</td>
+            <td class="py-3.5 px-4 text-right">
+              <button type="button" class="btn-copy-pattern px-2 py-1 rounded bg-slate-800 hover:bg-cyan-500/20 hover:text-cyan-300 transition text-[11px]" data-pattern={patData}>Copy</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-slate-800/40 transition">
+            <td class="py-3.5 px-4 font-bold text-emerald-400">%&#123;GREEDYDATA&#125;</td>
+            <td class="py-3.5 px-4 text-slate-400">.* (Greedy match to EOL)</td>
+            <td class="py-3.5 px-4 text-slate-200">Remainder of message payload</td>
+            <td class="py-3.5 px-4 text-slate-400">{patGreedy}</td>
+            <td class="py-3.5 px-4 text-right">
+              <button type="button" class="btn-copy-pattern px-2 py-1 rounded bg-slate-800 hover:bg-cyan-500/20 hover:text-cyan-300 transition text-[11px]" data-pattern={patGreedy}>Copy</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Observability Ingestion Guides Cards -->
+  <section class="my-14">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          Observability Ingestion Guides & Benchmarks
+        </h2>
+        <p class="text-sm text-slate-400 mt-1">
+          Deep-dive guides for production Nginx configurations, AWS Load Balancer telemetry, and high-throughput collector engines.
+        </p>
+      </div>
+      <span class="text-xs font-mono text-cyan-400 hidden md:inline">Production Hardened Specifications &bull; 2026</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <a href="/nginx-access-log-grok-pattern-generator/" class="group bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-6 transition flex flex-col justify-between shadow-lg">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center font-mono font-bold text-cyan-400 text-sm mb-4 group-hover:scale-105 transition-transform">
+            NG
+          </div>
+          <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition mb-2">
+            Nginx Access Log Grok Pattern Generator
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Standard combined vs custom microservice format generator. Includes upstream latency, gzip ratios, and Vector VRL code snippets.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-semibold text-cyan-400">
+          <span>Read Generator Guide</span>
+          <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="/aws-alb-access-log-regex-parser/" class="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition flex flex-col justify-between shadow-lg">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center font-mono font-bold text-emerald-400 text-sm mb-4 group-hover:scale-105 transition-transform">
+            ALB
+          </div>
+          <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition mb-2">
+            AWS ALB Access Log Regex Parser
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Full 29-field AWS Application Load Balancer specification. Includes Amazon Athena DDL, CloudWatch Log Insights queries, and error handling.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-semibold text-emerald-400">
+          <span>Read ALB Specification</span>
+          <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="/high-throughput-log-parsing-vector-vs-fluentbit/" class="group bg-slate-900/60 border border-slate-800 hover:border-purple-500/50 rounded-2xl p-6 transition flex flex-col justify-between shadow-lg">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center font-mono font-bold text-purple-400 text-sm mb-4 group-hover:scale-105 transition-transform">
+            R vs C
+          </div>
+          <h3 class="text-lg font-bold text-white group-hover:text-purple-400 transition mb-2">
+            Vector vs Fluent Bit Benchmark
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Empirical benchmark measuring EPS throughput, SIMD JSON acceleration, memory footprint (RSS), and backpressure under sustained load.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-semibold text-purple-400">
+          <span>Read Sizing Benchmark</span>
+          <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Client-Side Grok Engine Script -->
+  <script is:inline>
+    const GROK_DICTIONARY = {
+      'USERNAME': '[a-zA-Z0-9._-]+',
+      'USER': '[a-zA-Z0-9._-]+',
+      'INT': '(?:[+-]?(?:[0-9]+))',
+      'BASE10NUM': '(?<![0-9.+-])(?>[+-]?(?:(?:[0-9]+(?:\\.[0-9]+)?)|(?:\\.[0-9]+)))',
+      'NUMBER': '(?:[+-]?(?:[0-9]+(?:\\.[0-9]+)?))',
+      'POSINT': '\\b\\d+\\b',
+      'WORD': '\\b\\w+\\b',
+      'NOTSPACE': '\\S+',
+      'SPACE': '\\s*',
+      'DATA': '.*?',
+      'GREEDYDATA': '.*',
+      'IPV6': '(?:(?:[0-9A-Fa-f]{1,4}:){7}(?:[0-9A-Fa-f]{1,4}|:)|(?:[0-9A-Fa-f]{1,4}:){6}(?:[0-9A-Fa-f]{1,4}|:)|(?:[0-9A-Fa-f]{1,4}:){5}(?::[0-9A-Fa-f]{1,4}|:)|:(?::[0-9A-Fa-f]{1,4}){1,7})',
+      'IPV4': '(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)',
+      'IP': '(?:(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|(?:(?:[0-9A-Fa-f]{1,4}:){7}(?:[0-9A-Fa-f]{1,4}|:)))',
+      'HOSTNAME': '\\b(?:[0-9A-Za-z][0-9A-Za-z-]{0,62})(?:\\.(?:[0-9A-Za-z][0-9A-Za-z-]{0,62}))*(\\.?|\\b)',
+      'IPORHOST': '(?:(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|\\b(?:[0-9A-Za-z][0-9A-Za-z-]{0,62})(?:\\.(?:[0-9A-Za-z][0-9A-Za-z-]{0,62}))*(\\.?|\\b))',
+      'MONTH': '(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)',
+      'MONTHDAY': '(?:(?:0[1-9])|(?:[12][0-9])|(?:3[01])|[1-9])',
+      'YEAR': '(?:\\d\\d){1,2}',
+      'HOUR': '(?:2[0123]|[01]?[0-9])',
+      'MINUTE': '(?:[0-5][0-9])',
+      'SECOND': '(?:(?:[0-5]?[0-9]|60)(?:[:.,][0-9]+)?)',
+      'TIME': '(?!^)(?:2[0123]|[01]?[0-9]):(?:[0-5][0-9])(?::(?:(?:[0-5]?[0-9]|60)(?:[:.,][0-9]+)?))',
+      'DATE': '(?:\\d{4}-\\d{2}-\\d{2})',
+      'HTTPDATE': '(?:(?:0[1-9])|(?:[12][0-9])|(?:3[01])|[1-9])/(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)/(?:\\d\\d){1,2}:(?:2[0123]|[01]?[0-9]):(?:[0-5][0-9]):(?:(?:[0-5]?[0-9]|60)(?:[:.,][0-9]+)?) [+-]?[0-9]+',
+      'TIMESTAMP_ISO8601': '(?:[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]+)?(?:Z|[+-][0-9]{2}:?[0-9]{2})?)',
+      'URIPATH': '(?:/[A-Za-z0-9$.+!*\x27(),~:;=@#%_\\-]*)+',
+      'URIPARAM': '\\?[A-Za-z0-9$.+!*\x27(),~:;=@#%_\\-]*',
+      'URIPATHPARAM': '(?:/[A-Za-z0-9$.+!*\x27(),~:;=@#%_\\-]*)+(?:\\?[A-Za-z0-9$.+!*\x27(),~:;=@#%_\\-]*)*',
+      'LOGLEVEL': '(?:[Aa]lert|ALERT|[Tt]race|TRACE|[Dd]ebug|DEBUG|[Nn]otice|NOTICE|[Ii]nfo|INFO|[Ww]arn?(?:ing)?|WARN?(?:ING)?|[Ee]rr?(?:or)?|ERR?(?:OR)?|[Cc]rit?(?:ical)?|CRIT?(?:ICAL)?|[Ff]atal|FATAL|[Ss]ev(?:ere)?|SEV(?:ERE)?|[Ee]merg(?:ency)?|EMERG(?:ENCY)?)',
+      'UUID': '[A-Fa-f0-9]{8}-(?:[A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}'
+    };
+
+    const PRESETS = {
+      nginx: {
+        log: '192.168.1.105 - - [06/Sep/2026:14:22:18 +0000] "GET /api/v2/products/4192 HTTP/1.1" 200 4528 "https://example.com/shop" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" 0.042',
+        grok: '%{IPORHOST:client_ip} %{DATA:ident} %{DATA:auth} \\[%{HTTPDATE:timestamp}\\] "%{WORD:verb} %{URIPATHPARAM:request_path} HTTP/%{NUMBER:http_version}" %{NUMBER:status_code:int} %{NUMBER:bytes_sent:int} "%{DATA:referrer}" "%{DATA:user_agent}" %{NUMBER:duration_ms:float}'
+      },
+      cloudfront: {
+        log: '2026-09-06 14:35:10 SFO53-C1 198.51.100.42 GET d111111abcdef8.cloudfront.net /assets/bundle.js 200 14820 https://example.com Mozilla/5.0 - Hit c4b93b2a-89a1-43ef-b924-f3e4c2560381 cdn.example.com https 14820 0.018 - TLSv1.3 TLS_AES_128_GCM_SHA256 Hit',
+        grok: '%{DATE:date} %{TIME:time} %{NOTSPACE:x_edge_location} %{IPORHOST:client_ip} %{WORD:verb} %{NOTSPACE:host} %{URIPATHPARAM:request_path} %{NUMBER:status_code:int} %{NUMBER:bytes_sent:int} %{DATA:referrer} %{DATA:user_agent} %{NOTSPACE:cookie} %{WORD:result_type} %{NOTSPACE:request_id} %{NOTSPACE:host_header} %{NOTSPACE:protocol} %{NUMBER:bytes_received:int} %{NUMBER:duration_ms:float} %{DATA:ssl_protocol} %{DATA:ssl_cipher} %{DATA:response_result_type}'
+      },
+      docker: {
+        log: '{"log":"10.244.3.15 - [06/Sep/2026:14:38:00 +0000] POST /v1/auth/token 201 128 14.2ms\\n","stream":"stdout","time":"2026-09-06T14:38:00.129384729Z","container_id":"9f82ab39c18d","image":"auth-service:v2.4"}',
+        grok: '\\{"log":"%{IPORHOST:client_ip} - \\[%{HTTPDATE:timestamp}\\] %{WORD:verb} %{URIPATHPARAM:request_path} %{NUMBER:status_code:int} %{NUMBER:bytes_sent:int} %{NUMBER:duration_ms:float}ms.*'
+      },
+      syslog: {
+        log: '<134>1 2026-09-06T14:40:12.451Z edge-gateway-01 nginx 40912 - [client@192.168.1.84 request="/checkout/pay" status=502 duration=1240] Upstream connection timeout to payment-svc:8080',
+        grok: '<%{POSINT:priority}>%{POSINT:version} %{TIMESTAMP_ISO8601:timestamp} %{NOTSPACE:hostname} %{NOTSPACE:app_name} %{POSINT:proc_id} %{NOTSPACE:msg_id} \\[client@%{IPORHOST:client_ip} request="%{URIPATHPARAM:request_path}" status=%{NUMBER:status_code:int} duration=%{NUMBER:duration_ms:float}\\] %{GREEDYDATA:message}'
+      }
+    };
+
+    const rawLogInput = document.getElementById('rawLogInput');
+    const grokPatternInput = document.getElementById('grokPatternInput');
+    const btnParse = document.getElementById('btnParse');
+    const btnCopyJson = document.getElementById('btnCopyJson');
+    const btnCopyRegex = document.getElementById('btnCopyRegex');
+    const logLengthBadge = document.getElementById('logLengthBadge');
+    const compileStatusBadge = document.getElementById('compileStatusBadge');
+    const matchStatusLabel = document.getElementById('matchStatusLabel');
+    const execLatency = document.getElementById('execLatency');
+    const jsonOutput = document.getElementById('jsonOutput');
+    const jsonKeyCount = document.getElementById('jsonKeyCount');
+    const compiledRegexOutput = document.getElementById('compiledRegexOutput');
+
+    const valClientIp = document.getElementById('valClientIp');
+    const valStatusCode = document.getElementById('valStatusCode');
+    const valRequestPath = document.getElementById('valRequestPath');
+    const valDurationMs = document.getElementById('valDurationMs');
+
+    let currentCompiledRegexStr = '';
+    let currentParsedData = {};
+
+    function compileGrokToRegex(grokPattern) {
+      const typeMap = {};
+      const grokRegex = /%\{([A-Za-z0-9_]+)(?::([A-Za-z0-9_]+)(?::([A-Za-z0-9_]+))?)?\}/g;
+
+      const compiled = grokPattern.replace(grokRegex, (match, patternName, fieldName, fieldType) => {
+        const patternDef = GROK_DICTIONARY[patternName] || '.*?';
+        if (fieldName) {
+          if (fieldType) {
+            typeMap[fieldName] = fieldType;
+          }
+          return '(?<' + fieldName + '>' + patternDef + ')';
+        }
+        return '(?:' + patternDef + ')';
+      });
+
+      return { regexStr: compiled, typeMap };
+    }
+
+    function evaluateLogParser() {
+      const startTime = performance.now();
+      const rawLog = rawLogInput.value.trim();
+      const grokExpr = grokPatternInput.value.trim();
+
+      logLengthBadge.textContent = rawLog.length + ' chars';
+
+      if (!rawLog || !grokExpr) {
+        compileStatusBadge.textContent = 'Awaiting Input';
+        compileStatusBadge.className = 'inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-semibold bg-slate-800 text-slate-400 border border-slate-700';
+        return;
+      }
+
+      try {
+        const { regexStr, typeMap } = compileGrokToRegex(grokExpr);
+        currentCompiledRegexStr = regexStr;
+        compiledRegexOutput.textContent = regexStr;
+
+        const regex = new RegExp(regexStr);
+        compileStatusBadge.textContent = 'Pattern Valid';
+        compileStatusBadge.className = 'inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+
+        const match = regex.exec(rawLog);
+        const endTime = performance.now();
+        const duration = (endTime - startTime).toFixed(2);
+        execLatency.textContent = 'Latency: ' + duration + ' ms';
+
+        if (match && match.groups) {
+          const parsed = {};
+          for (const [k, v] of Object.entries(match.groups)) {
+            if (v === undefined) {
+              parsed[k] = null;
+              continue;
+            }
+            const cast = typeMap[k];
+            if (cast === 'int') {
+              parsed[k] = parseInt(v, 10);
+            } else if (cast === 'float') {
+              parsed[k] = parseFloat(v);
+            } else {
+              parsed[k] = v;
+            }
+          }
+
+          currentParsedData = parsed;
+          const keyCount = Object.keys(parsed).length;
+          jsonKeyCount.textContent = keyCount + ' fields extracted';
+          jsonOutput.textContent = JSON.stringify(parsed, null, 2);
+
+          matchStatusLabel.textContent = 'Status: Full Match (' + keyCount + ' keys)';
+          matchStatusLabel.className = 'text-emerald-400 font-bold';
+
+          valClientIp.textContent = parsed.client_ip || parsed.host || parsed.ip || '-';
+          
+          if (parsed.status_code !== undefined) {
+            valStatusCode.textContent = parsed.status_code;
+            const code = parseInt(parsed.status_code, 10);
+            if (code >= 200 && code < 300) {
+              valStatusCode.className = 'text-base font-mono font-bold text-emerald-400';
+            } else if (code >= 400 && code < 500) {
+              valStatusCode.className = 'text-base font-mono font-bold text-amber-400';
+            } else if (code >= 500) {
+              valStatusCode.className = 'text-base font-mono font-bold text-rose-400';
+            } else {
+              valStatusCode.className = 'text-base font-mono font-bold text-cyan-400';
+            }
+          } else {
+            valStatusCode.textContent = '-';
+            valStatusCode.className = 'text-base font-mono font-bold text-slate-500';
+          }
+
+          valRequestPath.textContent = parsed.request_path || parsed.path || parsed.uri || '-';
+          
+          if (parsed.duration_ms !== undefined) {
+            valDurationMs.textContent = parsed.duration_ms + ' ms';
+          } else if (parsed.time_taken !== undefined) {
+            valDurationMs.textContent = parsed.time_taken + ' s';
+          } else {
+            valDurationMs.textContent = '-';
+          }
+
+        } else {
+          matchStatusLabel.textContent = 'Status: No Match (Check Delimiters)';
+          matchStatusLabel.className = 'text-rose-400 font-bold';
+          jsonOutput.textContent = JSON.stringify({ error: 'Pattern failed to match input line', hint: 'Ensure spaces, quotes, and square brackets are escaped or accounted for.' }, null, 2);
+          jsonKeyCount.textContent = '0 fields';
+          valClientIp.textContent = '-';
+          valStatusCode.textContent = '-';
+          valRequestPath.textContent = '-';
+          valDurationMs.textContent = '-';
+        }
+
+      } catch (err) {
+        compileStatusBadge.textContent = 'Compilation Error';
+        compileStatusBadge.className = 'inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-semibold bg-rose-500/20 text-rose-400 border border-rose-500/30';
+        matchStatusLabel.textContent = 'Status: Regex Syntax Error';
+        matchStatusLabel.className = 'text-rose-400 font-bold';
+        jsonOutput.textContent = JSON.stringify({ error: err.message }, null, 2);
+        compiledRegexOutput.textContent = 'Error: ' + err.message;
+      }
+    }
+
+    function loadPreset(presetKey) {
+      const p = PRESETS[presetKey];
+      if (!p) return;
+
+      rawLogInput.value = p.log;
+      grokPatternInput.value = p.grok;
+
+      document.querySelectorAll('.preset-btn').forEach(btn => {
+        if (btn.dataset.preset === presetKey) {
+          btn.className = 'preset-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 transition';
+        } else {
+          btn.className = 'preset-btn px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500 transition';
+        }
+      });
+
+      evaluateLogParser();
+    }
+
+    document.querySelectorAll('.preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        loadPreset(btn.dataset.preset);
+      });
+    });
+
+    rawLogInput.addEventListener('input', evaluateLogParser);
+    grokPatternInput.addEventListener('input', evaluateLogParser);
+    btnParse.addEventListener('click', evaluateLogParser);
+
+    btnCopyJson.addEventListener('click', () => {
+      const text = JSON.stringify(currentParsedData, null, 2);
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = btnCopyJson.innerHTML;
+        btnCopyJson.innerHTML = '<span class="text-emerald-400 font-bold">Copied!</span>';
+        setTimeout(() => btnCopyJson.innerHTML = orig, 1800);
+      });
+    });
+
+    btnCopyRegex.addEventListener('click', () => {
+      if (!currentCompiledRegexStr) return;
+      navigator.clipboard.writeText(currentCompiledRegexStr).then(() => {
+        const orig = btnCopyRegex.innerHTML;
+        btnCopyRegex.innerHTML = '<span class="text-emerald-400 font-bold">Copied!</span>';
+        setTimeout(() => btnCopyRegex.innerHTML = orig, 1800);
+      });
+    });
+
+    document.querySelectorAll('.btn-copy-pattern').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const pattern = btn.dataset.pattern;
+        navigator.clipboard.writeText(pattern).then(() => {
+          const orig = btn.textContent;
+          btn.textContent = 'Copied!';
+          btn.classList.add('text-cyan-300');
+          setTimeout(() => {
+            btn.textContent = orig;
+            btn.classList.remove('text-cyan-300');
+          }, 1500);
+        });
+      });
+    });
+
+    loadPreset('nginx');
+  </script>
+</Layout>

@@ -1,0 +1,711 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const title = "Micro-SaaS Unit Economics & LTV/CAC Valuation Calculator | SaaSUnitMath";
+const description = "Interactive SaaS financial calculator for bootstrapped founders. Calculate Gross Margin LTV, LTV:CAC Ratio, CAC Payback Period, and Rule of 40 exit valuation multiples.";
+
+const schemaJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://site-12-taupe.vercel.app/#app",
+      "name": "Micro-SaaS Unit Economics & LTV/CAC Valuation Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All modern browsers",
+      "url": "https://site-12-taupe.vercel.app/",
+      "description": "Interactive financial model and unit economics calculator computing Gross Margin-adjusted LTV, LTV:CAC health ratio, cash payback period, and Rule of 40 benchmarks.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://site-12-taupe.vercel.app/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why must SaaS LTV be adjusted for Gross Margin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Traditional revenue LTV (ARPU / Churn) ignores cost of goods sold such as server hosting, AI API tokens, and payment processing fees. Multiplying by Gross Margin % reveals true gross profit per customer, preventing founders from overspending on customer acquisition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is an ideal LTV:CAC ratio for bootstrapped SaaS companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For bootstrapped SaaS, a healthy LTV:CAC ratio is between 3.0x and 5.0x. A ratio below 2.0x burns working capital, while a ratio above 6.0x often indicates under-investment in proven paid marketing and organic growth funnels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is a CAC payback period under 12 months vital for self-funded software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Without external venture capital, upfront acquisition cash must replenish operating bank reserves rapidly. A payback period under 12 months allows a founder to reinvest cash collections within the same fiscal year to fund continuous growth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Rule of 40 correlate with SaaS valuation multiples?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SaaS acquirers and private equity firms use the Rule of 40 (YoY Growth Rate + Free Cash Flow Margin) to price businesses. Companies scoring above 40% typically receive 8x to 12x ARR multiples, whereas sub-20% companies trade at 2x to 4x ARR."
+          }
+        }
+      ]
+    }
+  ]
+});
+---
+
+<Layout title={title} description={description} schemaJson={schemaJson}>
+  <!-- Hero Section -->
+  <section class="pt-6 pb-12">
+    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono mb-4">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>Empirical Unit Economics Engine</span>
+    </div>
+
+    <!-- Exactly ONE H1 -->
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-tight mb-6">
+      Micro-SaaS Unit Economics & LTV/CAC Valuation Calculator
+    </h1>
+
+    <!-- 45-60 Word Featured Snippet Box -->
+    <div class="bg-gradient-to-br from-slate-900 via-slate-900/95 to-slate-950 border border-emerald-500/40 rounded-2xl p-6 shadow-xl shadow-emerald-500/5 mb-10">
+      <div class="flex items-center space-x-2.5 text-xs font-bold font-mono uppercase tracking-wider text-emerald-400 mb-2">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>Quick Answer: Micro-SaaS Unit Economics Core Principles</span>
+      </div>
+      <p class="text-sm md:text-base text-slate-200 leading-relaxed font-medium">
+        Micro-SaaS unit economics evaluate financial sustainability through customer lifetime value (LTV), acquisition cost (CAC), and churn. A healthy bootstrapped SaaS maintains an LTV:CAC ratio exceeding 3:1, a CAC payback period under 12 months, and gross margins above 80%. Mastering these metrics ensures predictable cash flow, reduces capital burn, and maximizes valuation multiples for bootstrapped founders.
+      </p>
+    </div>
+
+    <!-- Interactive Calculator Container -->
+    <div id="calculator" class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 md:p-8 backdrop-blur-xl shadow-2xl shadow-black/60 mb-16">
+      <div class="flex flex-col md:flex-row md:items-center justify-between pb-6 mb-6 border-b border-slate-800 gap-4">
+        <div>
+          <h2 class="text-xl md:text-2xl font-bold text-white flex items-center gap-2">
+            <span class="text-emerald-400 font-mono">01.</span> Live Unit Economics Modeling Console
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">Adjust core operational metrics below. Results recalculate automatically in real-time.</p>
+        </div>
+
+        <!-- Preset Profiles -->
+        <div class="flex items-center gap-2 flex-wrap text-xs">
+          <span class="text-slate-400 font-mono text-[11px]">Presets:</span>
+          <button type="button" id="preset-micro" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs transition">
+            Micro B2B ($49/mo)
+          </button>
+          <button type="button" id="preset-prosumer" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs transition">
+            Prosumer ($19/mo)
+          </button>
+          <button type="button" id="preset-mid" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs transition">
+            High-ACV B2B ($299/mo)
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Input Controls (5 Cols) -->
+        <div class="lg:col-span-5 space-y-5">
+          <!-- ARPU -->
+          <div>
+            <div class="flex justify-between items-center mb-1.5">
+              <label for="input-arpu" class="text-xs font-semibold text-slate-300">
+                Monthly ARPU (Avg Revenue Per User)
+              </label>
+              <span class="text-xs font-mono text-emerald-400 font-bold" id="display-arpu">$49.00</span>
+            </div>
+            <div class="relative">
+              <span class="absolute left-3 top-2.5 text-slate-500 text-sm">$</span>
+              <input 
+                type="number" 
+                id="input-arpu" 
+                value="49" 
+                min="1" 
+                max="10000" 
+                step="1"
+                class="w-full bg-slate-950 border border-slate-700 rounded-lg py-2 pl-8 pr-3 text-sm text-white font-mono focus:outline-none focus:border-emerald-500 transition"
+              />
+            </div>
+            <span class="text-[11px] text-slate-500">Average billed per active customer each month</span>
+          </div>
+
+          <!-- Monthly Churn % -->
+          <div>
+            <div class="flex justify-between items-center mb-1.5">
+              <label for="input-churn" class="text-xs font-semibold text-slate-300">
+                Monthly Logo Churn Rate (%)
+              </label>
+              <span class="text-xs font-mono text-cyan-400 font-bold" id="display-churn">3.5%</span>
+            </div>
+            <div class="relative">
+              <input 
+                type="number" 
+                id="input-churn" 
+                value="3.5" 
+                min="0.1" 
+                max="50" 
+                step="0.1"
+                class="w-full bg-slate-950 border border-slate-700 rounded-lg py-2 pl-3 pr-8 text-sm text-white font-mono focus:outline-none focus:border-cyan-500 transition"
+              />
+              <span class="absolute right-3 top-2.5 text-slate-500 text-sm">%</span>
+            </div>
+            <span class="text-[11px] text-slate-500">Percent of active customer base lost per 30-day billing cycle</span>
+          </div>
+
+          <!-- Gross Margin % -->
+          <div>
+            <div class="flex justify-between items-center mb-1.5">
+              <label for="input-margin" class="text-xs font-semibold text-slate-300">
+                Gross Margin (% after COGS)
+              </label>
+              <span class="text-xs font-mono text-emerald-400 font-bold" id="display-margin">85%</span>
+            </div>
+            <div class="relative">
+              <input 
+                type="number" 
+                id="input-margin" 
+                value="85" 
+                min="10" 
+                max="100" 
+                step="1"
+                class="w-full bg-slate-950 border border-slate-700 rounded-lg py-2 pl-3 pr-8 text-sm text-white font-mono focus:outline-none focus:border-emerald-500 transition"
+              />
+              <span class="absolute right-3 top-2.5 text-slate-500 text-sm">%</span>
+            </div>
+            <span class="text-[11px] text-slate-500">Revenue remaining after servers, payment gateways, and LLM APIs</span>
+          </div>
+
+          <!-- CAC -->
+          <div>
+            <div class="flex justify-between items-center mb-1.5">
+              <label for="input-cac" class="text-xs font-semibold text-slate-300">
+                Customer Acquisition Cost (CAC)
+              </label>
+              <span class="text-xs font-mono text-emerald-400 font-bold" id="display-cac">$180.00</span>
+            </div>
+            <div class="relative">
+              <span class="absolute left-3 top-2.5 text-slate-500 text-sm">$</span>
+              <input 
+                type="number" 
+                id="input-cac" 
+                value="180" 
+                min="0" 
+                max="50000" 
+                step="5"
+                class="w-full bg-slate-950 border border-slate-700 rounded-lg py-2 pl-8 pr-3 text-sm text-white font-mono focus:outline-none focus:border-emerald-500 transition"
+              />
+            </div>
+            <span class="text-[11px] text-slate-500">Blended total marketing, advertising, and sales cost per paid user</span>
+          </div>
+
+          <!-- Rule of 40 Inputs Toggle / Expansion -->
+          <div class="pt-4 border-t border-slate-800 space-y-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono">
+              Growth & FCF Parameters (Rule of 40)
+            </h3>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="input-growth" class="block text-[11px] font-semibold text-slate-300 mb-1">
+                  YoY Revenue Growth %
+                </label>
+                <input 
+                  type="number" 
+                  id="input-growth" 
+                  value="45" 
+                  min="-50" 
+                  max="500" 
+                  step="1"
+                  class="w-full bg-slate-950 border border-slate-700 rounded-lg py-1.5 px-2.5 text-xs text-white font-mono focus:outline-none focus:border-emerald-500"
+                />
+              </div>
+              <div>
+                <label for="input-fcf" class="block text-[11px] font-semibold text-slate-300 mb-1">
+                  Free Cash Flow Margin %
+                </label>
+                <input 
+                  type="number" 
+                  id="input-fcf" 
+                  value="15" 
+                  min="-100" 
+                  max="100" 
+                  step="1"
+                  class="w-full bg-slate-950 border border-slate-700 rounded-lg py-1.5 px-2.5 text-xs text-white font-mono focus:outline-none focus:border-emerald-500"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Output Metric Cards (7 Cols) -->
+        <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Output 1: LTV -->
+            <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 flex flex-col justify-between relative overflow-hidden group">
+              <div class="absolute -right-6 -bottom-6 w-20 h-20 bg-emerald-500/10 rounded-full blur-xl group-hover:bg-emerald-500/20 transition"></div>
+              <div>
+                <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">
+                  Customer Lifetime Value (LTV)
+                </span>
+                <div class="text-2xl sm:text-3xl font-black font-mono text-emerald-400 mt-1" id="out-ltv">
+                  $1,189.71
+                </div>
+              </div>
+              <div class="mt-3 pt-3 border-t border-slate-800/80 text-[11px] text-slate-400 flex justify-between">
+                <span>Avg Customer Lifespan:</span>
+                <span class="font-mono text-slate-300 font-semibold" id="out-lifespan">28.6 mo</span>
+              </div>
+            </div>
+
+            <!-- Output 2: LTV:CAC Ratio -->
+            <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 flex flex-col justify-between relative overflow-hidden group">
+              <div class="absolute -right-6 -bottom-6 w-20 h-20 bg-cyan-500/10 rounded-full blur-xl group-hover:bg-cyan-500/20 transition"></div>
+              <div>
+                <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">
+                  LTV:CAC Health Ratio
+                </span>
+                <div class="text-2xl sm:text-3xl font-black font-mono text-cyan-400 mt-1" id="out-ratio">
+                  6.61x
+                </div>
+              </div>
+              <div class="mt-3 pt-3 border-t border-slate-800/80">
+                <span id="badge-ratio" class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                  HYPER-EFFICIENT (UNDER-INVESTING)
+                </span>
+              </div>
+            </div>
+
+            <!-- Output 3: CAC Payback Period -->
+            <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 flex flex-col justify-between relative overflow-hidden group">
+              <div>
+                <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">
+                  CAC Payback Period
+                </span>
+                <div class="text-2xl sm:text-3xl font-black font-mono text-slate-100 mt-1" id="out-payback">
+                  4.3 <span class="text-sm font-normal text-slate-400">Months</span>
+                </div>
+              </div>
+              <div class="mt-3 pt-3 border-t border-slate-800/80">
+                <span id="badge-payback" class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                  TOP-DECILE CASH RECOVERY (&le; 6 MO)
+                </span>
+              </div>
+            </div>
+
+            <!-- Output 4: Rule of 40 Score -->
+            <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 flex flex-col justify-between relative overflow-hidden group">
+              <div>
+                <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">
+                  Rule of 40 Score
+                </span>
+                <div class="text-2xl sm:text-3xl font-black font-mono text-purple-400 mt-1" id="out-rule40">
+                  60.0%
+                </div>
+              </div>
+              <div class="mt-3 pt-3 border-t border-slate-800/80">
+                <span id="badge-rule40" class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                  ELITE MULTIPLE CANDIDATE (&ge; 40%)
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Valuation & M&A Multiplier Guidance Box -->
+          <div class="bg-slate-900/90 border border-slate-800/90 rounded-xl p-5 shadow-inner">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-300 font-mono flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                Estimated Micro-Acquisition ARR Valuation Multiplier
+              </h3>
+              <span class="font-mono text-xs font-black text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30" id="out-multiple">
+                6.0x - 8.5x ARR
+              </span>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed" id="out-multiple-notes">
+              Strong LTV:CAC (&gt;3.0x) paired with a sub-6-month payback cycle provides exceptional cash durability. Private equity and strategic micro-acquirers reward this profile with top-quartile multiples due to low working capital requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep-Dive Link Grid -->
+  <section class="mb-16">
+    <div class="text-center max-w-2xl mx-auto mb-8">
+      <h2 class="text-2xl font-bold text-white tracking-tight">
+        Authoritative SaaS Financial Guides
+      </h2>
+      <p class="text-xs text-slate-400 mt-1">
+        Explore mathematical proofs, empirical distributions, and capital efficiency frameworks.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <a href={`${base}/saas-ltv-cac-payback-period-calculator`} class="block group p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-emerald-500/60 hover:bg-slate-900/90 transition duration-300">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-mono font-bold mb-4 group-hover:scale-110 transition">
+          LTV
+        </div>
+        <h3 class="text-base font-bold text-white group-hover:text-emerald-400 transition mb-2">
+          LTV/CAC & Payback Period Formula
+        </h3>
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+          Why omitting gross margins skews true customer lifetime value and how a 12-month CAC payback protects bootstrapped cash reserves.
+        </p>
+        <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1 group-hover:translate-x-1 transition">
+          Read Guide & Formula &rarr;
+        </span>
+      </a>
+
+      <!-- Card 2 -->
+      <a href={`${base}/b2b-saas-churn-benchmarks-by-acv-2026`} class="block group p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-cyan-500/60 hover:bg-slate-900/90 transition duration-300">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-mono font-bold mb-4 group-hover:scale-110 transition">
+          %CR
+        </div>
+        <h3 class="text-base font-bold text-white group-hover:text-cyan-400 transition mb-2">
+          2026 B2B SaaS Churn Benchmarks
+        </h3>
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+          Empirical retention distributions by ACV tier from Micro-SaaS ($49/mo) to enterprise ($50k/yr). Logo churn vs Net Revenue Retention math.
+        </p>
+        <span class="text-xs font-semibold text-cyan-400 flex items-center gap-1 group-hover:translate-x-1 transition">
+          View 2026 Benchmarks &rarr;
+        </span>
+      </a>
+
+      <!-- Card 3 -->
+      <a href={`${base}/rule-of-40-saas-valuation-growth-model`} class="block group p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-purple-500/60 hover:bg-slate-900/90 transition duration-300">
+        <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-mono font-bold mb-4 group-hover:scale-110 transition">
+          R40
+        </div>
+        <h3 class="text-base font-bold text-white group-hover:text-purple-400 transition mb-2">
+          Rule of 40 & Valuation Multiples
+        </h3>
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+          How private equity and strategic buyers balance growth vs free cash flow margins when applying ARR exit valuation multipliers.
+        </p>
+        <span class="text-xs font-semibold text-purple-400 flex items-center gap-1 group-hover:translate-x-1 transition">
+          Model Valuation Multipliers &rarr;
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Industry Benchmark Tables: B2B vs B2C SaaS -->
+  <section class="mb-16">
+    <div class="border-t border-slate-800/80 pt-12">
+      <div class="flex items-center space-x-2 text-xs font-mono text-emerald-400 uppercase tracking-wider mb-2">
+        <span>Empirical Datasets</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+        Industry Benchmarks: B2B SaaS vs B2C SaaS Unit Economics
+      </h2>
+      <p class="text-sm text-slate-400 max-w-3xl leading-relaxed mb-8">
+        Unit economics diverge significantly based on whether software is sold to consumers (B2C/Prosumer) or business entities (B2B). Below are verified median and upper-quartile operational benchmarks.
+      </p>
+
+      <!-- Table 1: B2B vs B2C High-Level Comparison -->
+      <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/60 mb-10">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-900/80 text-slate-200 font-mono uppercase tracking-wider text-[11px] border-b border-slate-800">
+            <tr>
+              <th scope="col" class="py-3.5 px-4 font-bold">Metric Dimension</th>
+              <th scope="col" class="py-3.5 px-4 font-bold text-emerald-400">B2B SaaS (Median)</th>
+              <th scope="col" class="py-3.5 px-4 font-bold text-cyan-400">B2C / Prosumer SaaS (Median)</th>
+              <th scope="col" class="py-3.5 px-4 font-bold">Strategic Founder Implication</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/70 font-sans">
+            <tr class="hover:bg-slate-900/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-white">Monthly Logo Churn</td>
+              <td class="py-3.5 px-4 font-mono text-emerald-400">1.2% - 3.2%</td>
+              <td class="py-3.5 px-4 font-mono text-cyan-400">4.5% - 8.5%</td>
+              <td class="py-3.5 px-4 text-slate-400">B2C requires aggressive self-serve viral acquisition to outrun high attrition.</td>
+            </tr>
+            <tr class="hover:bg-slate-900/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-white">Gross Margin (%)</td>
+              <td class="py-3.5 px-4 font-mono text-emerald-400">75% - 85%</td>
+              <td class="py-3.5 px-4 font-mono text-cyan-400">60% - 75%</td>
+              <td class="py-3.5 px-4 text-slate-400">B2C consumer tools often bear higher compute, storage, and payment gateway costs.</td>
+            </tr>
+            <tr class="hover:bg-slate-900/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-white">CAC Payback Window</td>
+              <td class="py-3.5 px-4 font-mono text-emerald-400">7 - 14 Months</td>
+              <td class="py-3.5 px-4 font-mono text-cyan-400">1 - 4 Months</td>
+              <td class="py-3.5 px-4 text-slate-400">B2C must recover CAC rapidly due to high first-90-day churn cliffs.</td>
+            </tr>
+            <tr class="hover:bg-slate-900/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-white">Target LTV:CAC Ratio</td>
+              <td class="py-3.5 px-4 font-mono text-emerald-400">3.5x - 5.0x</td>
+              <td class="py-3.5 px-4 font-mono text-cyan-400">2.5x - 3.5x</td>
+              <td class="py-3.5 px-4 text-slate-400">B2B accounts justify higher customer success touchpoints and sales compensation.</td>
+            </tr>
+            <tr class="hover:bg-slate-900/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-white">Net Revenue Retention (NRR)</td>
+              <td class="py-3.5 px-4 font-mono text-emerald-400">100% - 125%</td>
+              <td class="py-3.5 px-4 font-mono text-cyan-400">75% - 90%</td>
+              <td class="py-3.5 px-4 text-slate-400">Expansion seats & tier upgrades allow B2B to generate net negative churn.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Table 2: ACV Tier Breakdown -->
+      <h3 class="text-xl font-bold text-white mb-4">
+        B2B SaaS ACV Distribution Matrix
+      </h3>
+      <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/60 mb-12">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-900/80 text-slate-200 font-mono uppercase tracking-wider text-[11px] border-b border-slate-800">
+            <tr>
+              <th scope="col" class="py-3.5 px-4 font-bold">Annual Contract Value (ACV)</th>
+              <th scope="col" class="py-3.5 px-4 font-bold">Monthly Churn</th>
+              <th scope="col" class="py-3.5 px-4 font-bold">Typical CAC</th>
+              <th scope="col" class="py-3.5 px-4 font-bold">Payback Period</th>
+              <th scope="col" class="py-3.5 px-4 font-bold">Primary Go-To-Market</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/70 font-sans">
+            <tr class="hover:bg-slate-900/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-emerald-400">Micro-SaaS (&lt; $1,000 ACV)</td>
+              <td class="py-3.5 px-4 font-mono">3.0% - 5.5%</td>
+              <td class="py-3.5 px-4 font-mono">$80 - $250</td>
+              <td class="py-3.5 px-4 font-mono">3 - 6 Months</td>
+              <td class="py-3.5 px-4 text-slate-400">Product-Led Growth (PLG), SEO, programmatic content</td>
+            </tr>
+            <tr class="hover:bg-slate-900/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-emerald-400">SMB SaaS ($1k - $10k ACV)</td>
+              <td class="py-3.5 px-4 font-mono">1.5% - 2.8%</td>
+              <td class="py-3.5 px-4 font-mono">$600 - $2,500</td>
+              <td class="py-3.5 px-4 font-mono">6 - 10 Months</td>
+              <td class="py-3.5 px-4 text-slate-400">Inbound content, automated demos, self-serve with light support</td>
+            </tr>
+            <tr class="hover:bg-slate-900/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-emerald-400">Mid-Market ($10k - $50k ACV)</td>
+              <td class="py-3.5 px-4 font-mono">0.8% - 1.5%</td>
+              <td class="py-3.5 px-4 font-mono">$4,000 - $18,000</td>
+              <td class="py-3.5 px-4 font-mono">9 - 14 Months</td>
+              <td class="py-3.5 px-4 text-slate-400">Inside sales reps, proof-of-concepts, dedicated onboarding</td>
+            </tr>
+            <tr class="hover:bg-slate-900/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-emerald-400">Enterprise ($50,000+ ACV)</td>
+              <td class="py-3.5 px-4 font-mono">0.4% - 0.9%</td>
+              <td class="py-3.5 px-4 font-mono">$25,000 - $90,000</td>
+              <td class="py-3.5 px-4 font-mono">12 - 18 Months</td>
+              <td class="py-3.5 px-4 text-slate-400">Field enterprise sales, RFP responses, custom security review</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Reflecting FAQPage Schema) -->
+  <section class="border-t border-slate-800/80 pt-12 pb-8">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl font-bold text-white mb-6">
+        Frequently Asked Questions: SaaS Unit Economics & Valuation
+      </h2>
+
+      <div class="space-y-4">
+        <div class="border border-slate-800/80 rounded-xl p-5 bg-slate-900/50">
+          <h3 class="text-sm font-bold text-white mb-2">
+            Why must SaaS LTV be adjusted for Gross Margin?
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Traditional revenue LTV (ARPU / Churn) ignores cost of goods sold such as server hosting, AI API tokens, and payment processing fees. Multiplying by Gross Margin % reveals true gross profit per customer, preventing founders from overspending on customer acquisition.
+          </p>
+        </div>
+
+        <div class="border border-slate-800/80 rounded-xl p-5 bg-slate-900/50">
+          <h3 class="text-sm font-bold text-white mb-2">
+            What is an ideal LTV:CAC ratio for bootstrapped SaaS companies?
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            For bootstrapped SaaS, a healthy LTV:CAC ratio is between 3.0x and 5.0x. A ratio below 2.0x burns working capital, while a ratio above 6.0x often indicates under-investment in proven paid marketing and organic growth funnels.
+          </p>
+        </div>
+
+        <div class="border border-slate-800/80 rounded-xl p-5 bg-slate-900/50">
+          <h3 class="text-sm font-bold text-white mb-2">
+            Why is a CAC payback period under 12 months vital for self-funded software?
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Without external venture capital, upfront acquisition cash must replenish operating bank reserves rapidly. A payback period under 12 months allows a founder to reinvest cash collections within the same fiscal year to fund continuous growth.
+          </p>
+        </div>
+
+        <div class="border border-slate-800/80 rounded-xl p-5 bg-slate-900/50">
+          <h3 class="text-sm font-bold text-white mb-2">
+            How does the Rule of 40 correlate with SaaS valuation multiples?
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            SaaS acquirers and private equity firms use the Rule of 40 (YoY Growth Rate + Free Cash Flow Margin) to price businesses. Companies scoring above 40% typically receive 8x to 12x ARR multiples, whereas sub-20% companies trade at 2x to 4x ARR.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client-Side Calculator Logic -->
+  <script is:inline>
+    function calculateMetrics() {
+      var arpu = parseFloat(document.getElementById('input-arpu').value) || 0;
+      var churnPercent = parseFloat(document.getElementById('input-churn').value) || 0.1;
+      var marginPercent = parseFloat(document.getElementById('input-margin').value) || 10;
+      var cac = parseFloat(document.getElementById('input-cac').value) || 0;
+      var growthPercent = parseFloat(document.getElementById('input-growth').value) || 0;
+      var fcfPercent = parseFloat(document.getElementById('input-fcf').value) || 0;
+
+      // Update display labels
+      document.getElementById('display-arpu').textContent = '$' + arpu.toFixed(2);
+      document.getElementById('display-churn').textContent = churnPercent.toFixed(1) + '%';
+      document.getElementById('display-margin').textContent = marginPercent.toFixed(0) + '%';
+      document.getElementById('display-cac').textContent = '$' + cac.toFixed(2);
+
+      // Math calculations
+      var churnDecimal = churnPercent / 100;
+      var marginDecimal = marginPercent / 100;
+
+      // Avg lifespan in months = 1 / churnDecimal
+      var lifespanMonths = churnDecimal > 0 ? (1 / churnDecimal) : 0;
+
+      // Gross profit per month = ARPU * marginDecimal
+      var grossProfitMonthly = arpu * marginDecimal;
+
+      // Gross Margin-Adjusted LTV = grossProfitMonthly / churnDecimal
+      var ltv = churnDecimal > 0 ? (grossProfitMonthly / churnDecimal) : 0;
+
+      // LTV:CAC Ratio
+      var ratio = cac > 0 ? (ltv / cac) : (ltv > 0 ? 99.9 : 0);
+
+      // CAC Payback Period (Months) = CAC / grossProfitMonthly
+      var payback = grossProfitMonthly > 0 ? (cac / grossProfitMonthly) : 0;
+
+      // Rule of 40 = Growth % + FCF %
+      var rule40 = growthPercent + fcfPercent;
+
+      // Render Outputs
+      document.getElementById('out-ltv').textContent = '$' + ltv.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('out-lifespan').textContent = lifespanMonths.toFixed(1) + ' mo';
+      document.getElementById('out-ratio').textContent = (cac === 0 ? 'N/A' : ratio.toFixed(2) + 'x');
+      document.getElementById('out-payback').innerHTML = payback.toFixed(1) + ' <span class="text-sm font-normal text-slate-400">Months</span>';
+      document.getElementById('out-rule40').textContent = rule40.toFixed(1) + '%';
+
+      // Badges logic: Ratio
+      var badgeRatio = document.getElementById('badge-ratio');
+      if (ratio >= 5.0) {
+        badgeRatio.className = 'inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-cyan-500/20 text-cyan-300 border border-cyan-500/30';
+        badgeRatio.textContent = 'HYPER-EFFICIENT (UNDER-INVESTING)';
+      } else if (ratio >= 3.0) {
+        badgeRatio.className = 'inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+        badgeRatio.textContent = 'IDEAL SAAS SWEET SPOT (3.0x - 5.0x)';
+      } else if (ratio >= 1.5) {
+        badgeRatio.className = 'inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-amber-500/20 text-amber-300 border border-amber-500/30';
+        badgeRatio.textContent = 'MARGINAL (CAPITAL AT RISK)';
+      } else {
+        badgeRatio.className = 'inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-rose-500/20 text-rose-300 border border-rose-500/30';
+        badgeRatio.textContent = 'CRITICAL (VALUE DESTRUCTION)';
+      }
+
+      // Badges logic: Payback
+      var badgePayback = document.getElementById('badge-payback');
+      if (payback <= 6.0) {
+        badgePayback.className = 'inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+        badgePayback.textContent = 'TOP-DECILE CASH RECOVERY (<= 6 MO)';
+      } else if (payback <= 12.0) {
+        badgePayback.className = 'inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-teal-500/20 text-teal-300 border border-teal-500/30';
+        badgePayback.textContent = 'HEALTHY BOOTSTRAPPED PACE (7 - 12 MO)';
+      } else if (payback <= 18.0) {
+        badgePayback.className = 'inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-amber-500/20 text-amber-300 border border-amber-500/30';
+        badgePayback.textContent = 'BORDERLINE CASHFLOW (13 - 18 MO)';
+      } else {
+        badgePayback.className = 'inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-rose-500/20 text-rose-300 border border-rose-500/30';
+        badgePayback.textContent = 'INSOLVENCY RISK (> 18 MO)';
+      }
+
+      // Badges logic: Rule of 40
+      var badgeRule40 = document.getElementById('badge-rule40');
+      if (rule40 >= 40.0) {
+        badgeRule40.className = 'inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-purple-500/20 text-purple-300 border border-purple-500/30';
+        badgeRule40.textContent = 'ELITE TIER (>= 40%)';
+      } else if (rule40 >= 20.0) {
+        badgeRule40.className = 'inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-blue-500/20 text-blue-300 border border-blue-500/30';
+        badgeRule40.textContent = 'MODERATE HEALTH (20% - 39%)';
+      } else {
+        badgeRule40.className = 'inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-slate-700 text-slate-300 border border-slate-600';
+        badgeRule40.textContent = 'BELOW THRESHOLD (< 20%)';
+      }
+
+      // Multiple Estimation
+      var outMultiple = document.getElementById('out-multiple');
+      var outMultipleNotes = document.getElementById('out-multiple-notes');
+      if (rule40 >= 40.0 && ratio >= 3.0 && payback <= 12.0) {
+        outMultiple.textContent = '7.5x - 11.0x ARR';
+        outMultipleNotes.textContent = 'Outstanding unit economics. Both Rule of 40 score (' + rule40.toFixed(1) + '%) and payback velocity qualify this business for top-decile M&A exit multiples.';
+      } else if (ratio >= 2.5 && payback <= 14.0) {
+        outMultiple.textContent = '4.5x - 7.0x ARR';
+        outMultipleNotes.textContent = 'Healthy bootstrapped profile with sustainable cash regeneration. Strong foundation for steady organic expansion and high-probability micro-acquisition.';
+      } else {
+        outMultiple.textContent = '2.0x - 4.0x ARR';
+        outMultipleNotes.textContent = 'Constrained valuation due to extended payback (' + payback.toFixed(1) + ' mo) or low LTV:CAC. Prioritize churn reduction or pricing adjustments to expand margin.';
+      }
+    }
+
+    // Attach event listeners
+    ['input-arpu', 'input-churn', 'input-margin', 'input-cac', 'input-growth', 'input-fcf'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', calculateMetrics);
+      }
+    });
+
+    // Preset handlers
+    document.getElementById('preset-micro').addEventListener('click', function() {
+      document.getElementById('input-arpu').value = 49;
+      document.getElementById('input-churn').value = 3.5;
+      document.getElementById('input-margin').value = 85;
+      document.getElementById('input-cac').value = 180;
+      document.getElementById('input-growth').value = 45;
+      document.getElementById('input-fcf').value = 15;
+      calculateMetrics();
+    });
+
+    document.getElementById('preset-prosumer').addEventListener('click', function() {
+      document.getElementById('input-arpu').value = 19;
+      document.getElementById('input-churn').value = 5.8;
+      document.getElementById('input-margin').value = 75;
+      document.getElementById('input-cac').value = 45;
+      document.getElementById('input-growth').value = 65;
+      document.getElementById('input-fcf').value = 10;
+      calculateMetrics();
+    });
+
+    document.getElementById('preset-mid').addEventListener('click', function() {
+      document.getElementById('input-arpu').value = 299;
+      document.getElementById('input-churn').value = 1.6;
+      document.getElementById('input-margin').value = 88;
+      document.getElementById('input-cac').value = 1200;
+      document.getElementById('input-growth').value = 35;
+      document.getElementById('input-fcf').value = 25;
+      calculateMetrics();
+    });
+
+    // Run on mount
+    calculateMetrics();
+  </script>
+</Layout>

@@ -1,0 +1,17 @@
+# CIPipelineGraph - CI/CD Pipeline Visualizer & GitHub Actions DAG Validator
+
+> CIPipelineGraph (https://site-18-chi.vercel.app) is an open-access developer utility, DAG dependency graph validator, and engineering benchmark resource for modern continuous integration pipelines across GitHub Actions, GitLab CI, CircleCI, and AWS CodeBuild.
+
+## Core Utilities & Endpoints
+
+- [CI/CD Pipeline Visualizer & GitHub Actions DAG Validator](https://site-18-chi.vercel.app/): Client-side interactive DAG renderer, cycle detection validator, critical path calculator, and YAML parser for GitHub Actions workflows.
+- [GitHub Actions vs GitLab CI Syntax & Cost Comparison](https://site-18-chi.vercel.app/github-actions-vs-gitlab-ci-syntax-execution-cost-comparison/): Side-by-side syntax translation (`needs:` vs `stages:`), composite actions vs templates, and compute runner cost matrix for x86 and ARM64 architectures.
+- [Matrix Build Optimization & Cache Speedup Guide](https://site-18-chi.vercel.app/matrix-build-optimization-github-actions-cache-speed/): Advanced GitHub Actions matrix tuning (`fail-fast`, `include`/`exclude`), `actions/cache@v4` best practices, and Docker buildx gha cache optimization.
+- [Act: Run GitHub Actions Locally Debugging Guide](https://site-18-chi.vercel.app/act-run-github-actions-locally-debugging-guide/): Complete walkthrough for executing and debugging GitHub Actions workflows locally with `nektos/act`, custom Docker images, and local secrets.
+
+## Key CI/CD Architectural Concepts
+
+- **Directed Acyclic Graph (DAG)**: In CI/CD pipelines, jobs declare upstream dependencies using the `needs:` keyword (GitHub Actions) or `needs:` / `stages:` (GitLab CI). A valid pipeline DAG must contain zero directed cycles.
+- **Topological Execution Layers**: Jobs without dependencies execute immediately in Stage 0. Downstream jobs trigger as soon as all prerequisite jobs in their dependency array finish with a success state.
+- **Critical Path**: The longest sequence of dependent jobs that dictates the minimum possible pipeline wall-clock execution duration.
+- **Runner Concurrency & Cost**: GitHub Actions standard hosted runners provide 2-core VMs ($0.008/min for Linux), while GitLab SaaS provides 2-core VMs ($0.005-$0.01/min) with differing concurrency tiers and network egress limits.

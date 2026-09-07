@@ -1,0 +1,173 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  slug?: string;
+  schema?: Record<string, any>;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  slug = '',
+  schema
+} = Astro.props;
+
+const siteUrl = 'https://raginspect.pages.dev';
+const fullCanonical = canonical || (slug ? `${siteUrl}/${slug.replace(/^\/|\/$/g, '')}/` : `${siteUrl}/`);
+---
+
+<!DOCTYPE html>
+<html lang="en" class="bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={fullCanonical} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={fullCanonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://raginspect.pages.dev/og-preview.png" />
+    <meta property="og:site_name" content="RAGInspect" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={fullCanonical} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://raginspect.pages.dev/og-preview.png" />
+
+    <!-- Favicon & Search Console -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <meta name="google-site-verification" content="google6fe267a998c19a9a" />
+
+    <!-- Structured Data Schema -->
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+
+    <!-- Fleet Master Analytics Beacon -->
+    <script is:inline>
+      (function() {
+        try {
+          var payload = JSON.stringify({
+            site: window.location.hostname,
+            path: window.location.pathname,
+            ref: document.referrer || "direct",
+            screen: window.innerWidth + "x" + window.innerHeight,
+            ts: Date.now()
+          });
+          var endpoint = "https://webhookwatch.vercel.app/api/track/";
+          if (navigator.sendBeacon) {
+            navigator.sendBeacon(endpoint, payload);
+          } else {
+            fetch(endpoint, { method: "POST", body: payload, keepalive: true, headers: { "Content-Type": "application/json" } }).catch(function(){});
+          }
+        } catch(e) {}
+      })();
+    </script>
+      <link rel="alternate" type="application/rss+xml" title="RSS 2.0 Feed" href="/rss.xml" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-slate-950 text-slate-100 font-sans">
+    <!-- Header -->
+    <header class="border-b border-slate-800/80 bg-slate-950/90 backdrop-blur sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center group-hover:border-indigo-400 group-hover:scale-105 transition-all">
+            <span class="text-lg">⚡</span>
+          </div>
+          <div>
+            <span class="font-extrabold text-lg tracking-tight text-white flex items-center gap-1">
+              RAG<span class="text-indigo-400">Inspect</span>
+            </span>
+            <span class="block text-[10px] text-slate-400 font-mono leading-none">Chunking & Vector Benchmarks</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+          <a href="/#visualizer" class="hover:text-indigo-400 transition-colors">Visualizer</a>
+          <a href="/#leaderboard" class="hover:text-indigo-400 transition-colors">Embedding Leaderboard</a>
+          <a href="/semantic-chunking-vs-fixed-size-rag-benchmarks/" class="hover:text-indigo-400 transition-colors">Semantic Chunking</a>
+          <a href="/hybrid-search-bm25-vs-dense-vector-accuracy/" class="hover:text-indigo-400 transition-colors">Hybrid Search</a>
+          <a href="/ragas-vs-trulens-rag-evaluation-frameworks/" class="hover:text-indigo-400 transition-colors">Ragas vs TruLens</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            MTEB 2026 Verified
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Slot -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-12 text-slate-400 text-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-lg">⚡</span>
+            <span class="font-bold text-white tracking-tight text-base">RAGInspect Benchmark Laboratory</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-md mb-4">
+            Independent research initiative establishing empirical standards for production Retrieval-Augmented Generation (RAG). Benchmarking semantic boundary segmentation, embedding dimension efficiency, BM25 + dense hybrid search fusion, and automated LLM-as-a-judge evaluation frameworks.
+          </p>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-[11px] font-mono text-indigo-400">
+            <span>MTEB-Aligned</span> • <span>NDCG@10 Scored</span> • <span>Synthetic + Real-World Datasets</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white text-xs uppercase tracking-wider mb-3">Engineering Guides</h4>
+          <ul class="space-y-2 text-xs">
+            <li>
+              <a href="/semantic-chunking-vs-fixed-size-rag-benchmarks/" class="hover:text-indigo-400 transition-colors">
+                Semantic vs Fixed-Size Chunking
+              </a>
+            </li>
+            <li>
+              <a href="/hybrid-search-bm25-vs-dense-vector-accuracy/" class="hover:text-indigo-400 transition-colors">
+                Hybrid Search & RRF Architecture
+              </a>
+            </li>
+            <li>
+              <a href="/ragas-vs-trulens-rag-evaluation-frameworks/" class="hover:text-indigo-400 transition-colors">
+                Ragas vs TruLens Evaluation
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white text-xs uppercase tracking-wider mb-3">Specifications & Feeds</h4>
+          <ul class="space-y-2 text-xs">
+            <li><span class="text-slate-300">Mean Reciprocal Rank (MRR)</span></li>
+            <li><span class="text-slate-300">Context Recall & Precision</span></li>
+            <li><a href="/llms.txt" class="text-indigo-400 hover:underline">llms.txt Machine Specification</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-slate-300 transition-colors">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div>© 2026 RAGInspect. Free, open research benchmarks for AI engineering teams.</div>
+        <div class="flex gap-4">
+          <a href="/sitemap.xml" class="hover:text-slate-300">Sitemap</a>
+          <a href="/robots.txt" class="hover:text-slate-300">Robots</a>
+          <a href="/llms.txt" class="hover:text-slate-300">LLMs.txt</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

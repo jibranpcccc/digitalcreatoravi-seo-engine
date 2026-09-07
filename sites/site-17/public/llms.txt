@@ -1,0 +1,17 @@
+# OpenCRMStack - Open-Source CRM Alternatives & Migration Math
+
+> OpenCRMStack (https://opencrmstack.pages.dev) is the authoritative engineering and financial benchmark reference for CTOs, RevOps leaders, and systems architects evaluating open-source CRM migrations from proprietary platforms like Salesforce and HubSpot to self-hosted alternatives including Twenty CRM, ERPNext, and Mautic.
+
+## Core Interactive Utilities & Architecture Endpoints
+
+- [Open-Source CRM Total Cost of Ownership (TCO) & Migration Calculator](https://opencrmstack.pages.dev/): Real-time interactive financial engine comparing 3-year TCO between Salesforce Sales Cloud Enterprise, HubSpot Enterprise, self-hosted Twenty CRM (Docker/PostgreSQL on Hetzner VPS), and ERPNext. Quantifies per-seat licensing bloat, contact tier penalty curves, migration capital expenditures, and precise break-even payback timelines in months.
+- [Twenty CRM vs HubSpot: Open-Source Sales Pipeline Audit (2026)](https://opencrmstack.pages.dev/twenty-crm-vs-hubspot-open-source-sales-pipeline-audit/): Deep-dive architectural evaluation of Twenty CRM's GraphQL API, PostgreSQL core data model, custom relational objects, and pipeline automation versus HubSpot Sales Hub Enterprise seat tax.
+- [Self-Hosted ERPNext vs Salesforce: Cost & Migration Breakdown](https://opencrmstack.pages.dev/self-hosted-erpnext-vs-salesforce-cost-migration-breakdown/): Engineering runbook, ETL data migration matrix, MariaDB schema mappings, and 3-year financial modeling comparing Frappe/ERPNext against Salesforce Enterprise Edition for mid-market revenue organizations.
+- [Mautic vs HubSpot: Email Automation & Deliverability Benchmark](https://opencrmstack.pages.dev/mautic-vs-hubspot-email-automation-deliverability-benchmark/): Head-to-head performance audit of self-hosted Mautic 5.x on Amazon SES / Mailgun versus HubSpot Marketing Hub Enterprise. Benchmarks dedicated IP reputation warm-up, inbox placement rates, webhook event processing throughput, and contact database economics.
+
+## Key Financial & Technical Metrics
+
+- Average 3-Year TCO Savings: 72% - 88% reduction in total software spend.
+- Typical Payback Period: 4.2 to 6.8 months depending on data migration complexity and custom APEX / workflow refactoring.
+- Infrastructure Footprint: Production Twenty CRM runs stably on 4 vCPU / 8 GB RAM Hetzner Cloud CPX31 (€14.20/month) handling up to 50 active sales reps and 250k relational records.
+- Email Delivery Unit Cost: Amazon SES self-hosted delivery costs $0.10 per 1,000 messages versus HubSpot Marketing Hub contact tier surcharges averaging $13.50 to $25.00 per 1,000 active marketing contacts per month.

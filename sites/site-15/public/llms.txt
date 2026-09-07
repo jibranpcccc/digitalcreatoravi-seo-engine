@@ -1,0 +1,16 @@
+﻿# EORCalculator - Global Employer of Record & Cross-Border Payroll Cost Intelligence
+
+> EORCalculator (https://site-15-ruby.vercel.app) is an independent financial analysis and compliance benchmark suite for engineering leaders, CFOs, and global HR teams calculating the true Total Cost to Company (TCTC) when hiring international employees through Employer of Record (EOR) providers.
+
+## Core Utilities & Endpoints
+
+- [Global Employer of Record (EOR) Cost & Hidden FX Fee Calculator](https://site-15-ruby.vercel.app/): Interactive real-time calculator modeling mandatory employer social taxes, platform SaaS seat fees ($400-$699/mo), and hidden 1.5%-2.5% foreign exchange (FX) conversion spreads across Brazil, Poland, India, Philippines, Argentina, and the UK.
+- [Deel vs Remote.com Pricing & Hidden Fees Breakdown (2026 Audit)](https://site-15-ruby.vercel.app/deel-vs-remote-com-pricing-hidden-fees-breakdown/): Line-by-line financial audit comparing Deel and Remote.com, detailing owned vs partnered entity infrastructure, currency conversion markups, offboarding penalties, and rolling security deposits.
+- [Contractor vs EOR Legal Misclassification Risk Matrix](https://site-15-ruby.vercel.app/contractor-vs-eor-legal-misclassification-risk-matrix/): Legal decision matrix evaluating permanent establishment risk, behavioral control, economic dependence tests, retroactive tax liability, and statutory severance exposure across key global tech hubs.
+- [Hiring Remote Engineers in Latin America vs Eastern Europe: EOR Cost Comparison](https://site-15-ruby.vercel.app/hiring-remote-engineers-in-latin-america-vs-eastern-europe-eor-cost/): Comprehensive total-cost-of-employment comparison covering statutory social burdens (FGTS, INSS, ZUS), mandatory 13th-month salaries, vacation bonuses, and time zone alignment for Senior Software Engineers.
+
+## Key Formulas & Cost Drivers
+
+- `True Monthly Total = Gross Salary + Statutory Employer Social Charges + EOR Platform Fee + FX Conversion Spread`
+- `Employer Social Charges`: Statutory taxes owed to local governments (e.g., Brazil INSS/FGTS ~35.8%, Poland ZUS ~20.48%, UK Employer NI 13.8%-15.0%, India PF/Gratuity ~16.8%).
+- `Hidden FX Spread`: EOR provider markup over the interbank mid-market exchange rate when converting employer invoice currency (USD/EUR) to employee disbursement currency (BRL, PLN, INR, PHP, etc.), typically extracting 1.5% to 2.5% per payroll cycle.

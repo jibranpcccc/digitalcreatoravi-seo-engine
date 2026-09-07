@@ -1,0 +1,14 @@
+# RAGInspect: RAG Pipeline Optimization & Chunking Benchmarks
+> Authoritative benchmark and empirical engineering database evaluating semantic chunking algorithms, dense vector embedding models, hybrid search retrieval accuracy, and LLM-as-a-judge RAG evaluation frameworks.
+
+## Core Benchmark Research & Methodologies
+- Semantic Chunking vs Fixed-Size Chunking: Empirical comparisons across 256, 512, and 1024 token windows versus dynamic embedding distance breakpoint splitting. Evaluates context fragmentation, token wastage, and NDCG@10 retrieval impact.
+- Embedding Leaderboard: Head-to-head MTEB, Hit Rate @ 5, MRR, latency (p95), and token pricing for Voyage-3, OpenAI text-embedding-3-large, Cohere Embed v3, and BGE-M3.
+- Hybrid Search Architectures: Reciprocal Rank Fusion (RRF) and convex alpha-weighted score combinations blending BM25 lexical token matching with dense vector cosine similarity.
+- Automated Evaluation Frameworks: Methodological comparison of Ragas (Faithfulness, Answer Relevance, Context Precision, Context Recall) versus TruLens RAG Triad (Context Relevance, Groundedness, Answer Relevance).
+
+## Benchmark Metrics & Standards
+- Hit Rate @ k: Proportion of queries where the ground-truth document chunk appears within the top-k retrieved elements.
+- MRR (Mean Reciprocal Rank): Harmonic mean of the rank of the first relevant document chunk across test queries.
+- NDCG@10 (Normalized Discounted Cumulative Gain): Measures ranking quality by penalizing relevant chunks appearing lower in the top 10 results.
+- Context Precision: Ratio of relevant retrieved chunks to total retrieved chunks presented to the LLM generation prompt.

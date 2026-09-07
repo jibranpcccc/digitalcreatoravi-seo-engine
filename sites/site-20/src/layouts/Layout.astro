@@ -1,0 +1,213 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  slug?: string;
+  schema?: Record<string, any>;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  slug = '',
+  schema
+} = Astro.props;
+
+const siteUrl = 'https://edgeruntimehq.pages.dev';
+const fullCanonical = canonical || (slug ? `${siteUrl}/${slug.replace(/^\/|\/$/g, '')}/` : `${siteUrl}/`);
+---
+
+<!DOCTYPE html>
+<html lang="en" class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={fullCanonical} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={fullCanonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://edgeruntimehq.pages.dev/og-preview.png" />
+    <meta property="og:site_name" content="EdgeRuntimeHQ" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={fullCanonical} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://edgeruntimehq.pages.dev/og-preview.png" />
+
+    <!-- Favicon & Search Console -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><path d='M25 50 L45 70 L75 30' stroke='%2310b981' stroke-width='10' fill='none' stroke-linecap='round'/><circle cx='50' cy='50' r='8' fill='%2306b6d4'/></svg>" />
+    <meta name="google-site-verification" content="google6fe267a998c19a9a" />
+
+    <!-- Structured Data Schema -->
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+
+    <!-- Fleet Master Analytics Beacon -->
+    <script is:inline>
+      (function() {
+        try {
+          var payload = JSON.stringify({
+            site: window.location.hostname,
+            path: window.location.pathname,
+            ref: document.referrer || "direct",
+            screen: window.innerWidth + "x" + window.innerHeight,
+            ts: Date.now()
+          });
+          var endpoint = "https://webhookwatch.vercel.app/api/track/";
+          if (navigator.sendBeacon) {
+            navigator.sendBeacon(endpoint, payload);
+          } else {
+            fetch(endpoint, { method: "POST", body: payload, keepalive: true, headers: { "Content-Type": "application/json" } }).catch(function(){});
+          }
+        } catch(e) {}
+      })();
+    </script>
+      <link rel="alternate" type="application/rss+xml" title="RSS 2.0 Feed" href="/rss.xml" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-slate-950 text-slate-100 font-sans">
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-cyan-950 border-b border-emerald-500/20 px-4 py-1.5 text-xs text-center text-emerald-300 font-mono flex items-center justify-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>2026 Edge AI Benchmark: WebGPU WGSL v1.4 & ONNX Runtime Web 1.20 Benchmarks Live</span>
+    </div>
+
+    <!-- Header -->
+    <header class="border-b border-slate-800/80 bg-slate-950/90 backdrop-blur sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center group-hover:border-emerald-400 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.3)] transition-all">
+            <svg class="w-5 h-5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+              <rect x="9" y="9" width="6" height="6"></rect>
+              <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="font-extrabold text-lg tracking-tight text-white flex items-center gap-1.5">
+              EdgeRuntime<span class="text-emerald-400">HQ</span>
+            </span>
+            <span class="block text-[10px] text-slate-400 font-mono leading-none">WebGPU • ONNX • CoreML Benchmarks</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+          <a href="/#matrix" class="hover:text-emerald-400 transition-colors">Runtime Matrix</a>
+          <a href="/#benchmarks" class="hover:text-emerald-400 transition-colors">Leaderboard</a>
+          <a href="/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/" class="hover:text-emerald-400 transition-colors">WebGPU vs WASM</a>
+          <a href="/onnx-runtime-vs-tensorrt-edge-server-latency/" class="hover:text-emerald-400 transition-colors">ONNX vs TensorRT</a>
+          <a href="/running-whisper-speech-to-text-locally-in-browser-webgpu/" class="hover:text-emerald-400 transition-colors">Whisper WebGPU</a>
+        </nav>
+
+        <!-- Right Badge & Mobile Toggle -->
+        <div class="flex items-center gap-3">
+          <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold font-mono">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            W4A16 & INT8 Tested
+          </span>
+
+          <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-slate-950 px-4 py-4 space-y-3 text-sm">
+        <a href="/#matrix" class="block py-1.5 text-slate-300 hover:text-emerald-400">Runtime Matrix</a>
+        <a href="/#benchmarks" class="block py-1.5 text-slate-300 hover:text-emerald-400">Leaderboard</a>
+        <a href="/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/" class="block py-1.5 text-slate-300 hover:text-emerald-400">WebGPU vs WASM Benchmarks</a>
+        <a href="/onnx-runtime-vs-tensorrt-edge-server-latency/" class="block py-1.5 text-slate-300 hover:text-emerald-400">ONNX vs TensorRT Guide</a>
+        <a href="/running-whisper-speech-to-text-locally-in-browser-webgpu/" class="block py-1.5 text-slate-300 hover:text-emerald-400">Whisper WebGPU Implementation</a>
+      </div>
+    </header>
+
+    <!-- Main Content Slot -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-14 text-slate-400 text-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center">
+              <span class="text-xs text-emerald-400 font-bold">HQ</span>
+            </div>
+            <span class="font-bold text-white tracking-tight text-base">EdgeRuntimeHQ Research Laboratory</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-md mb-4">
+            Independent empirical benchmarks measuring real-world client-side neural network inference. Profiling WebGPU WGSL compute shader pipelines, WebAssembly SIMD kernels, Apple CoreML Neural Engine execution, and ONNX Runtime Web cross-platform deployments.
+          </p>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-[11px] font-mono text-emerald-400">
+            <span>WGSL Matrix Kernels</span> • <span>W4A16 Quantized</span> • <span>Zero Cloud Egress</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white text-xs uppercase tracking-wider mb-3">Architectural Guides</h4>
+          <ul class="space-y-2 text-xs">
+            <li>
+              <a href="/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/" class="hover:text-emerald-400 transition-colors">
+                WebGPU vs WASM Benchmarks
+              </a>
+            </li>
+            <li>
+              <a href="/onnx-runtime-vs-tensorrt-edge-server-latency/" class="hover:text-emerald-400 transition-colors">
+                ONNX Runtime vs TensorRT
+              </a>
+            </li>
+            <li>
+              <a href="/running-whisper-speech-to-text-locally-in-browser-webgpu/" class="hover:text-emerald-400 transition-colors">
+                Whisper In-Browser WebGPU
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white text-xs uppercase tracking-wider mb-3">Runtimes & Specifications</h4>
+          <ul class="space-y-2 text-xs">
+            <li><span class="text-slate-300">W3C WebGPU Working Draft</span></li>
+            <li><span class="text-slate-300">ONNX Runtime Web EP</span></li>
+            <li><span class="text-slate-300">Apple CoreML / ANE SDK</span></li>
+            <li><a href="/llms.txt" class="text-emerald-400 hover:underline">llms.txt Machine Specification</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-slate-300 transition-colors">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>© 2026 EdgeRuntimeHQ. Open research benchmarks for edge and browser AI engineering.</div>
+        <div class="flex gap-4">
+          <a href="/sitemap.xml" class="hover:text-slate-300">Sitemap</a>
+          <a href="/robots.txt" class="hover:text-slate-300">Robots</a>
+          <a href="/llms.txt" class="hover:text-slate-300">LLMs.txt</a>
+        </div>
+      </div>
+    </footer>
+
+    <script is:inline>
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+        });
+      }
+    </script>
+  </body>
+</html>

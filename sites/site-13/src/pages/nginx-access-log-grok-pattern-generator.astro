@@ -1,0 +1,293 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schemaJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Nginx Access Log Grok Pattern Generator: Combined & Custom Formats",
+      "url": "https://groklogtester.pages.dev/nginx-access-log-grok-pattern-generator/",
+      "description": "Production guide for compiling Grok and regex patterns for Nginx combined, upstream latency, and custom microservice access log formats.",
+      "author": {
+        "@type": "Organization",
+        "name": "GrokLogTester Engineering Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GrokLogTester",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://groklogtester.pages.dev/og-banner.png"
+        }
+      },
+      "datePublished": "2026-09-06",
+      "dateModified": "2026-09-06"
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Parse Nginx Access Logs with Grok and Vector VRL",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Identify Nginx log_format Directive",
+          "text": "Locate the log_format declaration inside /etc/nginx/nginx.conf or conf.d/ to determine field ordering."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Construct Grok Pattern with Named Captures",
+          "text": "Map each Nginx variable to standardized Grok tokens such as %{IPORHOST:client_ip} and %{NUMBER:status_code:int}."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Account for Upstream Nullable Delimiters",
+          "text": "Use non-greedy matchers or nullable groups for variables like upstream_response_time which emit hyphens during timeouts."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Deploy Vector or Fluent Bit Parser",
+          "text": "Apply the compiled regex or Grok expression in your ingestion collector pipeline."
+        }
+      ]
+    }
+  ]
+});
+
+const patCombined = '^%{IPORHOST:client_ip} %{DATA:ident} %{DATA:auth_user} \\[%{HTTPDATE:timestamp}\\] "%{WORD:verb} %{URIPATHPARAM:request_path} HTTP/%{NUMBER:http_version}" %{NUMBER:status_code:int} %{NUMBER:bytes_sent:int} "%{DATA:referrer}" "%{DATA:user_agent}"$';
+const patUpstream = '^%{IPORHOST:client_ip} - \\[%{HTTPDATE:timestamp}\\] "%{WORD:verb} %{URIPATHPARAM:request_path} HTTP/%{NUMBER:http_version}" %{NUMBER:status_code:int} %{NUMBER:bytes_sent:int} "%{DATA:referrer}" "%{DATA:user_agent}" %{NUMBER:duration_seconds:float} (?:%{NUMBER:upstream_response_time:float}|-)$';
+
+const vrlCode = `# Vector Remap Language (VRL)
+.parsed, err = parse_grok(.message, "%{IPORHOST:client_ip} %{DATA:ident} %{DATA:auth_user} \\[%{HTTPDATE:timestamp}\\] \"%{WORD:verb} %{URIPATHPARAM:request_path} HTTP/%{NUMBER:http_version}\" %{NUMBER:status_code:int} %{NUMBER:bytes_sent:int} \"%{DATA:referrer}\" \"%{DATA:user_agent}\"")
+if err != null {
+  log("Failed to parse log: " + err, level: "warn")
+} else {
+  . = merge(., .parsed)
+  .timestamp = parse_timestamp!(.timestamp, format: "%d/%b/%Y:%T %z")
+  del(.message)
+  del(.parsed)
+}`;
+
+const flbCode = `[PARSER]
+    Name        nginx_combined_custom
+    Format      regex
+    Regex       ^(?<client_ip>[^ ]+) (?<ident>[^ ]+) (?<user>[^ ]+) \[(?<time>[^\]]+)\] "(?<method>\S+)(?: +(?<path>[^\"]*?)(?: +HTTP\/(?<http_version>[0-9.]+))?)?" (?<status_code>[0-9]+) (?<size>[0-9]+) "(?<referer>[^\"]*)" "(?<user_agent>[^\"]*)"$
+    Time_Key    time
+    Time_Format %d/%b/%Y:%H:%M:%S %z
+    Types       status_code:integer size:integer`;
+---
+
+<Layout
+  title="Nginx Access Log Grok Pattern Generator | GrokLogTester"
+  description="Master Nginx access log parsing with battle-tested Grok patterns and regex generators. Covers standard combined, upstream timing, and JSON formats."
+  canonical="https://groklogtester.pages.dev/nginx-access-log-grok-pattern-generator/"
+  schemaJson={schemaJson}
+  type="article"
+>
+  <article class="max-w-4xl mx-auto py-4">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center space-x-2 text-xs font-mono text-slate-400 mb-6">
+      <a href="/" class="hover:text-cyan-400 transition">Home</a>
+      <span>/</span>
+      <span class="text-cyan-400">Guides</span>
+      <span>/</span>
+      <span class="text-slate-300">Nginx Grok Generator</span>
+    </nav>
+
+    <!-- Header Section with exactly ONE H1 tag -->
+    <header class="mb-10">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-4">
+        <span>Production Observability &bull; Nginx 1.26+</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+        Nginx Access Log Grok Pattern Generator
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+        A deep architectural guide and regex generator for transforming unstructured Nginx combined and custom microservice logs into typed, structured JSON telemetry.
+      </p>
+    </header>
+
+    <!-- 45-60 Word Featured Snippet Quick Answer Box -->
+    <div class="bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/90 border border-cyan-500/40 rounded-xl p-5 mb-12 shadow-xl shadow-cyan-950/20 backdrop-blur-md relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-cyan-400 to-emerald-400"></div>
+      <div class="flex items-center space-x-2 mb-2 text-xs font-bold uppercase tracking-wider text-cyan-400 font-mono">
+        <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span>Quick Answer: What is the Grok Pattern for Nginx Access Logs?</span>
+      </div>
+      <p class="text-sm text-slate-200 leading-relaxed font-sans">
+        The Nginx combined log format requires the standard Grok pattern <code class="text-cyan-300 bg-slate-800 px-1 py-0.5 rounded font-mono text-xs">%&#123;COMBINEDAPACHELOG&#125;</code> or its explicit equivalent: <code class="text-cyan-300 bg-slate-800 px-1 py-0.5 rounded font-mono text-xs">%&#123;IPORHOST:client_ip&#125; - %&#123;DATA:auth_user&#125; [%&#123;HTTPDATE:timestamp&#125;] "%&#123;WORD:verb&#125; %&#123;URIPATHPARAM:request&#125; HTTP/%&#123;NUMBER:http_version&#125;" %&#123;NUMBER:status_code:int&#125; %&#123;NUMBER:bytes_sent:int&#125; "%&#123;DATA:referrer&#125;" "%&#123;DATA:user_agent&#125;"</code>. Adding custom variables like <code class="text-cyan-300 bg-slate-800 px-1 py-0.5 rounded font-mono text-xs">$request_time</code> appends <code class="text-cyan-300 bg-slate-800 px-1 py-0.5 rounded font-mono text-xs">%&#123;NUMBER:request_time:float&#125;</code> for downstream latency profiling in Vector and Elasticsearch.
+      </p>
+    </div>
+
+    <!-- Section 1: Anatomy of Nginx Access Log Formats -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        1. Anatomy of Nginx Access Log Formats
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed mb-6">
+        Nginx builds log lines by evaluating variables at request completion. The default <code class="text-cyan-300 font-mono text-xs">combined</code> format captures baseline client interactions, while modern Kubernetes and microservice gateways augment this format with upstream connection and TLS handshakes.
+      </p>
+
+      <div class="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-xl shadow-md mb-6">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-950/80 text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">
+              <th class="py-3 px-4">Nginx Variable</th>
+              <th class="py-3 px-4">Description</th>
+              <th class="py-3 px-4">Sample Value</th>
+              <th class="py-3 px-4">Target Grok Token</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 text-xs font-mono text-slate-300">
+            <tr>
+              <td class="py-3 px-4 text-cyan-400 font-bold">$remote_addr</td>
+              <td class="py-3 px-4 text-slate-400">Client IP address or upstream proxy IP</td>
+              <td class="py-3 px-4">203.0.113.195</td>
+              <td class="py-3 px-4 text-emerald-400">%&#123;IPORHOST:client_ip&#125;</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-cyan-400 font-bold">$remote_user</td>
+              <td class="py-3 px-4 text-slate-400">HTTP Basic Auth authenticated username</td>
+              <td class="py-3 px-4">- or admin_usr</td>
+              <td class="py-3 px-4 text-emerald-400">%&#123;DATA:remote_user&#125;</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-cyan-400 font-bold">$time_local</td>
+              <td class="py-3 px-4 text-slate-400">Common log format localized timestamp</td>
+              <td class="py-3 px-4">06/Sep/2026:14:22:18 +0000</td>
+              <td class="py-3 px-4 text-emerald-400">%&#123;HTTPDATE:timestamp&#125;</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-cyan-400 font-bold">$request</td>
+              <td class="py-3 px-4 text-slate-400">Full HTTP request line (verb, URI, proto)</td>
+              <td class="py-3 px-4">GET /api/v1/user HTTP/1.1</td>
+              <td class="py-3 px-4 text-emerald-400">%&#123;WORD:verb&#125; %&#123;URIPATHPARAM:request_path&#125; HTTP/%&#123;NUMBER:http_version&#125;</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-cyan-400 font-bold">$status</td>
+              <td class="py-3 px-4 text-slate-400">Standard HTTP response status code</td>
+              <td class="py-3 px-4">200, 404, 502</td>
+              <td class="py-3 px-4 text-emerald-400">%&#123;NUMBER:status_code:int&#125;</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-cyan-400 font-bold">$body_bytes_sent</td>
+              <td class="py-3 px-4 text-slate-400">Number of payload bytes transmitted to client</td>
+              <td class="py-3 px-4">4528</td>
+              <td class="py-3 px-4 text-emerald-400">%&#123;NUMBER:bytes_sent:int&#125;</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-cyan-400 font-bold">$request_time</td>
+              <td class="py-3 px-4 text-slate-400">Total transaction duration in seconds with ms res</td>
+              <td class="py-3 px-4">0.042</td>
+              <td class="py-3 px-4 text-emerald-400">%&#123;NUMBER:duration_seconds:float&#125;</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-cyan-400 font-bold">$upstream_response_time</td>
+              <td class="py-3 px-4 text-slate-400">Time spent receiving upstream backend response</td>
+              <td class="py-3 px-4">0.038 or -</td>
+              <td class="py-3 px-4 text-emerald-400">(?:%&#123;NUMBER:upstream_time:float&#125;|-)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 2: Production Grok Patterns -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        2. Production-Grade Grok Pattern Configurations
+      </h2>
+
+      <!-- Preset A -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 mb-6">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-sm font-bold text-cyan-400 font-mono uppercase tracking-wider">
+            Pattern A: Standard Nginx Combined Format
+          </h3>
+          <span class="text-[11px] font-mono text-slate-500">Default Nginx Directive</span>
+        </div>
+        <p class="text-xs text-slate-300 mb-3">
+          Matches: <code class="text-slate-400 font-mono text-xs">log_format combined '$remote_addr - $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent"';</code>
+        </p>
+        <pre class="bg-slate-950 text-cyan-300 p-3.5 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800">{patCombined}</pre>
+      </div>
+
+      <!-- Preset B -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 mb-6">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-sm font-bold text-emerald-400 font-mono uppercase tracking-wider">
+            Pattern B: Microservice Gateway with Upstream Latency
+          </h3>
+          <span class="text-[11px] font-mono text-slate-500">Includes $request_time & $upstream_response_time</span>
+        </div>
+        <p class="text-xs text-slate-300 mb-3">
+          Matches: <code class="text-slate-400 font-mono text-xs">log_format upstream_perf '$remote_addr - [$time_local] "$request" $status $bytes_sent "$http_referer" "$http_user_agent" $request_time $upstream_response_time';</code>
+        </p>
+        <pre class="bg-slate-950 text-emerald-300 p-3.5 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800">{patUpstream}</pre>
+      </div>
+    </section>
+
+    <!-- Section 3: Collector Pipeline Integrations -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        3. Collector Ingestion Configurations
+      </h2>
+
+      <!-- Vector VRL -->
+      <div class="mb-6">
+        <h3 class="text-sm font-bold text-slate-200 mb-2 font-mono">Vector Remap Language (VRL) Transform</h3>
+        <p class="text-xs text-slate-400 mb-2">Native Rust parsing using <code class="text-cyan-300 font-mono text-xs">parse_grok</code> with automatic type coercion:</p>
+        <pre class="bg-slate-950 text-slate-200 p-4 rounded-xl font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed">{vrlCode}</pre>
+      </div>
+
+      <!-- Fluent Bit -->
+      <div class="mb-6">
+        <h3 class="text-sm font-bold text-slate-200 mb-2 font-mono">Fluent Bit Regex Parser (parsers.conf)</h3>
+        <p class="text-xs text-slate-400 mb-2">Oniguruma regex parser configuration for edge logging:</p>
+        <pre class="bg-slate-950 text-slate-200 p-4 rounded-xl font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed">{flbCode}</pre>
+      </div>
+    </section>
+
+    <!-- Section 4: Production Pitfalls -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        4. Production Pitfalls & Hardening Rules
+      </h2>
+      <div class="space-y-4">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <h3 class="text-sm font-bold text-rose-400 mb-1">1. HTTP 400 Bad Request Truncation</h3>
+          <p class="text-xs text-slate-300">
+            Malicious scanners and clients sending TLS packets to cleartext HTTP ports emit invalid request lines like <code class="text-slate-400 font-mono text-xs">"-" 400 0 "-" "-"</code>. Strict patterns like <code class="text-slate-400 font-mono text-xs">"%&#123;WORD&#125; %&#123;URIPATH&#125; HTTP/%&#123;NUMBER&#125;"</code> will fail to match. Always wrap request parsing in non-capturing fallback groups or separate invalid lines into a dead-letter queue.
+          </p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <h3 class="text-sm font-bold text-amber-400 mb-1">2. Upstream Timeout Hyphens</h3>
+          <p class="text-xs text-slate-300">
+            When upstream backends time out or return 504 Gateway Timeout, <code class="text-slate-400 font-mono text-xs">$upstream_response_time</code> produces a hyphen <code class="text-slate-400 font-mono text-xs">-</code> instead of a float. Using a strict float parser fails; always specify <code class="text-slate-400 font-mono text-xs">(?:%&#123;NUMBER:upstream_time:float&#125;|-)</code>.
+          </p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <h3 class="text-sm font-bold text-emerald-400 mb-1">3. Native JSON Log Recommendation</h3>
+          <p class="text-xs text-slate-300">
+            Where possible, switch Nginx to native structured JSON: <code class="text-slate-400 font-mono text-xs">log_format json_analytics escape=json '&#123;"time_local":"$time_local","client_ip":"$remote_addr","status":$status&#125;';</code>. Parsing JSON with SIMD in Vector is over 4x faster than Grok regex compilation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Return Link -->
+    <div class="pt-6 border-t border-slate-800 flex items-center justify-between text-xs">
+      <a href="/" class="text-cyan-400 hover:text-cyan-300 font-bold flex items-center gap-1.5">
+        &larr; Back to Live Grok Pattern Tester
+      </a>
+      <a href="/aws-alb-access-log-regex-parser/" class="text-slate-400 hover:text-cyan-400 font-semibold">
+        Next: AWS ALB Access Log Regex Parser &rarr;
+      </a>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,38 @@
+# SaaSUnitMath: Bootstrapped SaaS Unit Economics & Valuation Math
+> An authoritative reference and algorithmic calculator library for micro-SaaS founders, bootstrapped operators, and private equity investors.
+
+## Overview
+SaaSUnitMath (https://jibranpcccc.github.io/saasunitmath/) provides precision unit economics formulas, financial models, and empirical benchmark distributions specifically calibrated for bootstrapped and self-funded SaaS companies operating between $10k and $5M ARR.
+
+## Core Financial Formulas
+- Customer Lifetime Value (LTV):
+  LTV = (ARPU * Gross Margin %) / Monthly Churn Rate
+  Note: Omitting Gross Margin overstates LTV by 15% to 30% in infrastructure-heavy or AI-enabled SaaS applications.
+
+- CAC Payback Period:
+  Payback Period (Months) = Customer Acquisition Cost (CAC) / (ARPU * Gross Margin %)
+  Threshold: Bootstrapped companies should aim for <= 12 months to avoid insolvency cliffs.
+
+- LTV:CAC Ratio:
+  LTV:CAC = Customer Lifetime Value / CAC
+  Benchmarks: < 1.0x (Value destruction), 1.0x-2.9x (Strained capital), 3.0x-5.0x (Optimal capital allocation), > 5.0x (Under-spending on viable channels).
+
+- Rule of 40:
+  Rule of 40 Score = Year-over-Year (YoY) Revenue Growth Rate (%) + Free Cash Flow (FCF) Margin (%)
+  Benchmark: >= 40% denotes top-decile financial health commanding 8x-12x ARR valuation multiples.
+
+## Core Guides & Calculators
+- Main Valuation & Unit Economics Calculator: https://jibranpcccc.github.io/saasunitmath/
+  Interactive calculator computing LTV, LTV:CAC health score, CAC payback period, Rule of 40, and estimated ARR exit multiples.
+
+- SaaS LTV/CAC & Payback Period Deep-Dive: https://jibranpcccc.github.io/saasunitmath/saas-ltv-cac-payback-period-calculator
+  Mathematical derivation, gross margin adjustments, cohort retention math, and strategies to shorten payback loops.
+
+- 2026 B2B SaaS Churn Benchmarks by ACV Tier: https://jibranpcccc.github.io/saasunitmath/b2b-saas-churn-benchmarks-by-acv-2026
+  Empirical retention rates, logo vs revenue churn formulas, and benchmark distributions across Micro (<$1k), SMB ($1k-$10k), Mid-Market ($10k-$50k), and Enterprise ($50k+).
+
+- Rule of 40 SaaS Valuation & Growth Model: https://jibranpcccc.github.io/saasunitmath/rule-of-40-saas-valuation-growth-model
+  Trade-offs between aggressive customer acquisition and cash flow efficiency, EBITDA vs FCF variants, and M&A pricing brackets.
+
+## License & Usage
+All benchmarks, formulas, and calculator models are published for open financial research and founder education under open attribution.
