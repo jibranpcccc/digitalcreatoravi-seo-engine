@@ -1,0 +1,20 @@
+{
+  "name": "webhook-hmac-verify",
+  "version": "1.0.0",
+  "description": "Constant-time HMAC-SHA256 signature verification preventing timing attacks on webhook ingress pipelines.",
+  "main": "index.js",
+  "homepage": "https://webhookwatch.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jibranpcccc/digitalcreatoravi-seo-engine.git"
+  },
+  "author": "Jibran Ayub (https://github.com/jibranpcccc)",
+  "license": "MIT",
+  "keywords": [
+    "webhook",
+    "hmac",
+    "security",
+    "crypto",
+    "signature-verification"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "rag-semantic-chunker",
+  "version": "1.0.0",
+  "description": "Semantic boundary chunking algorithm for production Retrieval-Augmented Generation (RAG) pipelines.",
+  "main": "index.js",
+  "homepage": "https://raginspect.pages.dev/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jibranpcccc/digitalcreatoravi-seo-engine.git"
+  },
+  "author": "Jibran Ayub (https://github.com/jibranpcccc)",
+  "license": "MIT",
+  "keywords": [
+    "rag",
+    "chunking",
+    "semantic-chunking",
+    "embeddings",
+    "vector-search"
+  ]
+}

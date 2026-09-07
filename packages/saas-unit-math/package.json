@@ -1,0 +1,21 @@
+{
+  "name": "saas-unit-math",
+  "version": "1.0.0",
+  "description": "Bootstrapped SaaS financial metrics: LTV/CAC ratio, payback periods in months, and Rule of 40 scoring.",
+  "main": "index.js",
+  "homepage": "https://site-12-taupe.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jibranpcccc/digitalcreatoravi-seo-engine.git"
+  },
+  "author": "Jibran Ayub (https://github.com/jibranpcccc)",
+  "license": "MIT",
+  "keywords": [
+    "saas",
+    "ltv",
+    "cac",
+    "unit-economics",
+    "rule-of-40",
+    "burn-rate"
+  ]
+}

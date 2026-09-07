@@ -1,0 +1,21 @@
+{
+  "name": "nginx-grok-parser",
+  "version": "1.0.0",
+  "description": "Fast regex extractor and Grok pattern debugger for Nginx Combined, Apache, and AWS ALB access logs.",
+  "main": "index.js",
+  "homepage": "https://groklogtester.pages.dev/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jibranpcccc/digitalcreatoravi-seo-engine.git"
+  },
+  "author": "Jibran Ayub (https://github.com/jibranpcccc)",
+  "license": "MIT",
+  "keywords": [
+    "nginx",
+    "grok",
+    "log-parsing",
+    "observability",
+    "fluentbit",
+    "vector"
+  ]
+}

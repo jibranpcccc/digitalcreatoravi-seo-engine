@@ -1,0 +1,21 @@
+{
+  "name": "options-greeks-math",
+  "version": "1.0.0",
+  "description": "Lightweight client-side Black-Scholes options Greeks (Delta, Gamma, Theta, Vega) & Uniswap v3 Impermanent Loss calculator.",
+  "main": "index.js",
+  "homepage": "https://site-19-nine.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jibranpcccc/digitalcreatoravi-seo-engine.git"
+  },
+  "author": "Jibran Ayub (https://github.com/jibranpcccc)",
+  "license": "MIT",
+  "keywords": [
+    "black-scholes",
+    "options-greeks",
+    "finance",
+    "defi",
+    "impermanent-loss",
+    "uniswap-v3"
+  ]
+}
