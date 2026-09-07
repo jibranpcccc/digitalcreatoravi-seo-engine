@@ -1,37 +1,17 @@
-﻿---
-name: backlink-creator
-description: "Autonomous high-authority backlink builder and syndication engine. Creates 100% verified, white-hat, dofollow and nofollow backlinks across 116+ DA 74-98 platforms: standalone GitHub repositories, GitHub Releases, Gists, GitHub Pages landing pages, CDN endpoints, open-source packages (NPM/PyPI), Web Archives, dev platforms, and tech directories without link farms or PBN footprints. Strict quarantine against personal emails. Use when user says 'create backlinks', 'build backlinks', 'backlink strategy', 'backlinks easily', 'get backlinks', 'make backlinks', or 'backlink generator'."
-user-invocable: true
-argument-hint: "<target_url_or_portfolio>"
-license: MIT
-metadata:
-  version: "1.1.0"
-  category: seo-backlinks
----
+# 🧭 Master Directory of 116 High-DA Backlink & Authority Channels (DA 74 to DA 98)
 
-# 🚀 Backlink Creator: High-Authority Autonomous Link Engine (116+ Domains)
-
-A battle-tested blueprint and automation engine for building verified, permanent, high-authority backlinks across **116 unique high-DA domains (DA 74 to DA 98)** for web applications, SaaS products, financial tools, and digital portfolios without paid links, spam farms, or PBN footprints.
+This reference defines the verified, clean, penalty-proof authority platforms that can be established for web applications, financial tools, SaaS products, and open-source utilities built on Antigravity.
 
 ---
 
-## 🛡️ Critical Operating Rules & Security Constraints
-
-1. **Strict Email Quarantine**:
-   - **NEVER** use primary personal email addresses (e.g. `jibranpccc@gmail.com`).
-   - Use dedicated secondary project cluster emails (e.g. `teams.thefusionfeed@gmail.com`).
-   - For zero-email methods (GitHub CLI via existing auth, Wayback Machine, IndexNow, XML-RPC, RSS), NO email is attached.
-2. **Zero-PBN Quarantine (Anti-Footprint)**:
-   - **NEVER** cross-link satellite websites directly to each other (e.g., Site A linking to Site B).
-   - Maintain strict **Hub-and-Spoke** topology: all satellite sites link outward to authoritative external references and inward from independent authority hubs (GitHub, PyPI, NPM, Web Archives).
-3. **100% Verified Live Deliverables**:
-   - Every single link generated must be actively probed via HTTP `HEAD`/`GET`.
-   - Must return `HTTP 200 OK`.
-   - Must be logged in `.csv` and styled `.xlsx` reports with anchor context and latency telemetry.
+## 🎯 Core Operating Constraints
+1. **Zero-PBN Quarantine (Anti-Footprint)**: Never cross-link newly created satellite websites to each other. Topology must remain strictly Hub-and-Spoke.
+2. **Authenticated Developer Environments**: Leverage developer CLI ecosystems (`gh`, `npm`, `pypi`, `docker`, `wrangler`, `vercel`) for genuine technical citations.
+3. **100% Machine-Verifiable Output**: Every link must return HTTP 200 OK and be monitored.
 
 ---
 
-## 🧭 Master Directory of 116 High-DA Authority Platforms (DA 74 to 98)
+## 🏛️ The 10 High-DA Authority Tiers
 
 ### Tier 1: Code Repositories, Sandboxes & Cloud IDEs (15 Domains)
 1. **`github.com` (DA 96)**: Standalone public repositories with `--homepage` metadata, tagged releases `v1.0.0`, issue tracker specifications, gists, profile README showcase (`<username>/<username>`).
@@ -168,21 +148,3 @@ A battle-tested blueprint and automation engine for building verified, permanent
 114. **`crunchbase.com` (DA 92)**: Organization / Product profile page.
 115. **`f6s.com` (DA 85)**: Startup & founder directory profile.
 116. **`gust.com` (DA 84)**: Global startup & investor directory profile.
-
----
-
-## ⚡ Quick Execution Commands
-
-```bash
-# 1. Probe all live backlinks and generate Excel report
-python tools/verify_and_generate_excel_report.py
-
-# 2. Archive all live sites and assets on Wayback Machine
-python tools/archive_all_sites_wayback.py
-
-# 3. Broadcast XML-RPC signals for all backlink hubs
-python tools/broadcast_all_backlinks_xmlrpc.py
-
-# 4. Master 1-Click execution (verification + fleet indexing + backlink broadcast)
-python tools/create_and_index_backlinks.py --all
-```
