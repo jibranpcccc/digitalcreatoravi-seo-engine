@@ -32,3 +32,45 @@ const checkout = await polar.checkouts.create({
   successUrl: 'https://indiestackaudit.pages.dev/success'
 });
 ```
+
+## Extended Architecture & In-Depth Technical Breakdown
+
+### The True Cost of Self-Managed Sales Tax
+While Stripe Direct advertises a lower nominal transaction fee (2.9% + 30¢), operating as your own merchant of record imposes severe hidden accounting overhead. In the European Union, the VAT MOSS regulation mandates that digital software sales collect and remit value-added tax according to the buyer's home country. In the United States, over 30 states have established economic nexus thresholds for remote digital sellers.
+
+If you process $10,000 monthly with Stripe Direct, you must either manually register with tax authorities worldwide or subscribe to automated sales tax compliance software such as Stripe Tax (+0.5% per transaction) or TaxJar ($99/month base). When factoring in annual CPA filing fees for international tax returns, the effective cost of running Stripe Direct rises from 2.9% to over 4.8%.
+
+### Why Modern Developers Prefer Polar
+Polar operates as a full Merchant of Record tailored specifically for software developers, indie hackers, and open-source creators. Key advantages include:
+1. **Developer-First SDKs**: Strongly typed TypeScript, Python, and Go libraries with automated webhook validation.
+2. **License Key Generation**: Built-in digital license issuance, activation tracking, and seat validation.
+3. **Transparent Payouts**: Direct deposits via Stripe Connect without the 10% rolling fraud reserves frequently imposed by older platforms.
+4. **Discord & GitHub Sync**: Native integration for granting private repository access and Discord community roles upon checkout.
+
+### Production Webhook Verification Code
+To ensure secure order fulfillment, verify Polar webhook signatures using HMAC SHA-256:
+
+```typescript
+import { Webhook } from 'standardwebhooks';
+
+export async function handlePolarWebhook(rawBody: string, headers: Headers) {
+  const webhookSecret = process.env.POLAR_WEBHOOK_SECRET!;
+  const wh = new Webhook(webhookSecret);
+  
+  const payload = wh.verify(rawBody, {
+    'webhook-id': headers.get('webhook-id')!,
+    'webhook-timestamp': headers.get('webhook-timestamp')!,
+    'webhook-signature': headers.get('webhook-signature')!,
+  });
+  
+  return payload;
+}
+```
+
+## Frequently Asked Questions
+
+### Can Polar handle recurring subscription upgrades and prorations?
+Yes. Polar automatically handles billing cycle alignment, tiered subscription upgrades, credit card retries (dunning), and customer billing portal links.
+
+### How are chargebacks handled by a Merchant of Record?
+Because the MoR is the merchant of record on the customer's credit card statement, their dedicated fraud prevention team investigates dispute claims and submits evidence directly to the payment networks.

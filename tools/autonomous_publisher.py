@@ -96,6 +96,54 @@ FLEET_CONFIG = {
         "domain": "https://localdocprivacy.netlify.app",
         "path": os.path.join(ROOT_DIR, "sites", "site-8"),
         "key_loc": "https://localdocprivacy.netlify.app/8303260f1bf94264ac6d00aa93efde28.txt"
+    },
+    "site-9": {
+        "id": "site-9",
+        "name": "FounderRunway",
+        "niche": "Geo-Arbitrage for Bootstrapped Founders",
+        "platform": "vercel",
+        "domain": "https://site-9-inky.vercel.app",
+        "path": os.path.join(ROOT_DIR, "sites", "site-9"),
+        "key_loc": "https://site-9-inky.vercel.app/8303260f1bf94264ac6d00aa93efde28.txt"
+    },
+    "site-10": {
+        "id": "site-10",
+        "name": "RAGInspect",
+        "niche": "RAG Pipeline Optimization & Chunking Benchmarks",
+        "platform": "cloudflare",
+        "cf_project": "raginspect",
+        "domain": "https://raginspect.pages.dev",
+        "path": os.path.join(ROOT_DIR, "sites", "site-10"),
+        "key_loc": "https://raginspect.pages.dev/8303260f1bf94264ac6d00aa93efde28.txt"
+    },
+    "site-11": {
+        "id": "site-11",
+        "name": "NomadPassportIndex",
+        "niche": "Digital Nomad Visa Requirements Tracker",
+        "platform": "netlify",
+        "netlify_site": "nomadpassportindex",
+        "domain": "https://nomadpassportindex.netlify.app",
+        "path": os.path.join(ROOT_DIR, "sites", "site-11"),
+        "key_loc": "https://nomadpassportindex.netlify.app/8303260f1bf94264ac6d00aa93efde28.txt"
+    },
+    "site-12": {
+        "id": "site-12",
+        "name": "SaaSUnitMath",
+        "niche": "Bootstrapped SaaS Unit Economics & Valuation Math",
+        "platform": "vercel",
+        "domain": "https://site-12-taupe.vercel.app",
+        "path": os.path.join(ROOT_DIR, "sites", "site-12"),
+        "key_loc": "https://site-12-taupe.vercel.app/8303260f1bf94264ac6d00aa93efde28.txt"
+    },
+    "site-13": {
+        "id": "site-13",
+        "name": "GrokLogTester",
+        "niche": "Observability Regex & Log Parsing Utilities",
+        "platform": "cloudflare",
+        "cf_project": "groklogtester",
+        "domain": "https://groklogtester.pages.dev",
+        "path": os.path.join(ROOT_DIR, "sites", "site-13"),
+        "key_loc": "https://groklogtester.pages.dev/8303260f1bf94264ac6d00aa93efde28.txt"
     }
 }
 

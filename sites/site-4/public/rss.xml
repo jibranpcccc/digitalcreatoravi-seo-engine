@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[IndieStackAudit - Micro-SaaS Tech Stacks & MoR Billing]]></title>
+    <link>https://indiestackaudit.pages.dev/</link>
+    <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Micro-SaaS Tech Stacks & MoR Billing.]]></description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
+    <atom:link href="https://indiestackaudit.pages.dev/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title><![CDATA[IndieStackAudit: Micro-SaaS Tech Stacks & MoR Billing]]></title>
+      <link>https://indiestackaudit.pages.dev/</link>
+      <guid isPermaLink="true">https://indiestackaudit.pages.dev/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Micro-SaaS Tech Stacks & MoR Billing.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Next.js vs Astro for Micro-SaaS: Speed, Cost & SEO]]></title>
+      <link>https://indiestackaudit.pages.dev/stacks/nextjs-vs-astro-for-micro-saas-speed-cost-seo/</link>
+      <guid isPermaLink="true">https://indiestackaudit.pages.dev/stacks/nextjs-vs-astro-for-micro-saas-speed-cost-seo/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Micro-SaaS Tech Stacks & MoR Billing.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Stripe vs Lemon Squeezy vs Polar Fee Calculator 2026]]></title>
+      <link>https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/</link>
+      <guid isPermaLink="true">https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Micro-SaaS Tech Stacks & MoR Billing.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Self-Hosted Supabase vs Managed Neon Postgres]]></title>
+      <link>https://indiestackaudit.pages.dev/stacks/self-hosted-supabase-vs-managed-neon-postgres-cost-math/</link>
+      <guid isPermaLink="true">https://indiestackaudit.pages.dev/stacks/self-hosted-supabase-vs-managed-neon-postgres-cost-math/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Micro-SaaS Tech Stacks & MoR Billing.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Open-Source Auth Comparison: Clerk vs Lucia vs Better-Auth]]></title>
+      <link>https://indiestackaudit.pages.dev/billing/open-source-auth-comparison-clerk-lucia-better-auth/</link>
+      <guid isPermaLink="true">https://indiestackaudit.pages.dev/billing/open-source-auth-comparison-clerk-lucia-better-auth/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Micro-SaaS Tech Stacks & MoR Billing.]]></description>
+    </item>
+  </channel>
+</rss>

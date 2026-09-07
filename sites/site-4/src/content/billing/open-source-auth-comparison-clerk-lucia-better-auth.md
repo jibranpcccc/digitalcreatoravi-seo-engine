@@ -21,3 +21,47 @@ date: "2026-09-05"
 | **Data Ownership** | 100% in your Postgres/SQLite | Vendor hosted | In your database |
 | **Multi-Tenancy / Teams** | Built-in Organizations plugin | Premium plan required | Manual RLS policies |
 | **UI Components** | Headless (custom Tailwind) | Pre-styled hosted widgets | Minimal |
+
+## Extended Architecture & In-Depth Technical Breakdown
+
+### The Vendor Lock-In Problem in Commercial Auth
+Third-party hosted authentication services store your user records, password hashes, and MFA secrets on their proprietary cloud infrastructure. While this accelerates initial time-to-market, it creates substantial platform lock-in. If a vendor changes pricing terms or sunsets features, extracting your user base is challenging because password hashes cannot be easily transferred across differing hashing algorithms.
+
+Open-source authentication frameworks like **Better-Auth** store 100% of user data inside your own relational database tables. You maintain full schema control, allowing custom columns (such as `stripe_customer_id`, `organization_id`, or `api_quota`) to live in the same row as user credentials.
+
+### WebAuthn & Passkey Authentication Flow
+Better-Auth provides native support for WebAuthn passkeys, enabling biometric authentication (Touch ID, Face ID, Windows Hello) directly within the browser:
+
+```typescript
+import { authClient } from './auth-client';
+
+// Register biometric passkey
+export async function registerBiometricPasskey() {
+  const result = await authClient.passkey.addPasskey({
+    name: 'MacBook Pro Touch ID'
+  });
+  return result;
+}
+
+// Sign in with passkey
+export async function signInWithPasskey() {
+  const session = await authClient.signIn.passkey();
+  return session;
+}
+```
+
+This delivers a seamless, passwordless login experience that eliminates phishing risks while reducing customer support tickets related to forgotten passwords.
+
+### Multi-Tenancy Architecture for B2B Startups
+Better-Auth includes a first-class Organizations plugin designed specifically for multi-tenant SaaS products. It provides:
+- Team creation and member invitations via signed email tokens.
+- Role-based access control (Owner, Admin, Member, Guest).
+- Context-aware session switching between personal and workspace accounts.
+
+## Frequently Asked Questions
+
+### How does Better-Auth prevent brute force login attempts?
+Better-Auth includes automated rate limiting on password submission endpoints, progressive delay backoffs, and optional CAPTCHA verification via Cloudflare Turnstile.
+
+### Does Better-Auth require a Node.js server, or can it run on Edge Workers?
+Better-Auth is runtime agnostic. It runs smoothly on Node.js, Bun, Deno, and serverless edge environments such as Cloudflare Workers and Vercel Edge Runtime.

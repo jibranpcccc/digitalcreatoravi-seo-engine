@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[NomadTreaty - Digital Nomad Tax & Visas]]></title>
+    <link>https://nomadtreaty.vercel.app/</link>
+    <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Digital Nomad Tax & Visas.]]></description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
+    <atom:link href="https://nomadtreaty.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title><![CDATA[NomadTreaty: Digital Nomad Tax Treaties & Visa Calculator]]></title>
+      <link>https://nomadtreaty.vercel.app/</link>
+      <guid isPermaLink="true">https://nomadtreaty.vercel.app/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Spain Digital Nomad Visa & Beckham Law 24% Flat Tax]]></title>
+      <link>https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/</link>
+      <guid isPermaLink="true">https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Portugal NHR 2.0 (IFICI) Tax Nomad Calculator 2026]]></title>
+      <link>https://nomadtreaty.vercel.app/portugal-nhr-tax-nomad-calculator-2026/</link>
+      <guid isPermaLink="true">https://nomadtreaty.vercel.app/portugal-nhr-tax-nomad-calculator-2026/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[The 183-Day Rule Demystified for Digital Nomads]]></title>
+      <link>https://nomadtreaty.vercel.app/183-day-rule-tax-residency-nomad-guide/</link>
+      <guid isPermaLink="true">https://nomadtreaty.vercel.app/183-day-rule-tax-residency-nomad-guide/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
+    </item>
+  </channel>
+</rss>

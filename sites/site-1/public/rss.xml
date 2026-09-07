@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[LocalAgentStack - Local AI Inference & Hardware]]></title>
+    <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/</link>
+    <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Local AI Inference & Hardware.]]></description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
+    <atom:link href="https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title><![CDATA[LocalAgentStack: Local AI & Inference Benchmarks]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Ollama vs vLLM: High-Concurrency Inference Latency]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/ollama-vs-vllm-benchmark/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/ollama-vs-vllm-benchmark/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[VRAM Requirements Calculator for 70B Models]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/vram-requirements-calculator-70b/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/vram-requirements-calculator-70b/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[DeepSeek-R1 Local Setup Guide with Ollama]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-local-setup-ollama/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-local-setup-ollama/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Mac Studio M4 Max LLM Benchmarks (128GB)]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/mac-studio-m4-max-llm-benchmarks/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/mac-studio-m4-max-llm-benchmarks/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Building Production MCP Servers in Python]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/agents/custom-mcp-server-python-tutorial/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/agents/custom-mcp-server-python-tutorial/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[RTX 5090 vs RTX 4090 Local LLM Inference Benchmark (32GB VRAM)]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/rtx-5090-vs-4090-local-llm-benchmark/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/rtx-5090-vs-4090-local-llm-benchmark/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+  </channel>
+</rss>

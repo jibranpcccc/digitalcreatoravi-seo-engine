@@ -21,3 +21,36 @@ date: "2026-09-05"
 | **Early Growth (10k users)** | \$19.00 / month | \$12.00 / month (VPS) | \$25.00 / month |
 | **High Traffic (> 100k users)** | \$85.00 / month | **\$28.00 / month (VPS)** | \$95.00 / month |
 | **Database Branching** | Instant (Copy-on-write) | Manual dump/restore | Add-on fee |
+
+## Extended Architecture & In-Depth Technical Breakdown
+
+### Architectural Comparison: Monolith vs Decoupled Compute
+Self-hosted Supabase packages a complete database platform inside Docker containers: PostgreSQL, GoTrue authentication, PostgREST RESTful APIs, Realtime WebSocket listeners, and Storage backends. This monolithic design requires sufficient RAM (minimum 2GB to 4GB) to avoid Linux out-of-memory (OOM) killer terminations.
+
+In contrast, Neon separates compute from storage at the engine level. Neon's storage engine stores write-ahead logs (WAL) across distributed object stores. Compute nodes are ephemeral, stateless Linux microVMs that can scale up, down, or pause entirely in seconds.
+
+### When Self-Hosting Makes Economic Sense
+1. **High Data Ingestion Workloads**: If your application ingests millions of time-series records, log events, or vector embeddings monthly, managed cloud database storage tiers ($1.50 to $2.50 per GB) become expensive. A $12/month Hetzner cloud server includes 80GB of high-speed NVMe storage.
+2. **Heavy WebSocket Concurrency**: If your SaaS features collaborative real-time editing or live dashboards, Supabase Realtime running on a dedicated VPS can handle thousands of simultaneous persistent WebSocket connections without per-message surcharges.
+
+### Automated Backup Pipeline for Self-Hosted Supabase
+To ensure zero data loss on a self-hosted VPS, implement an automated daily backup script that streams compressed encrypted snapshots to Cloudflare R2 or Amazon S3:
+
+```bash
+#!/bin/bash
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+BACKUP_DIR="/var/backups/supabase"
+mkdir -p "$BACKUP_DIR"
+
+docker exec supabase-db pg_dump -U postgres -F c -b -v -f "$BACKUP_DIR/db_$TIMESTAMP.dump" postgres
+aws --endpoint-url https://<account_id>.r2.cloudflarestorage.com s3 cp "$BACKUP_DIR/db_$TIMESTAMP.dump" s3://backups/
+rm -f "$BACKUP_DIR/db_$TIMESTAMP.dump"
+```
+
+## Frequently Asked Questions
+
+### Does Neon support the pgvector extension for AI embeddings?
+Yes. Neon natively supports `pgvector` alongside standard indexing algorithms (HNSW and IVFFlat), allowing developers to store and query vector embeddings for RAG pipelines without provisioning separate vector databases.
+
+### How does connection pooling work in serverless environments?
+Neon provides an integrated PgBouncer connection pooling layer reachable via a pooled connection string (port 5432 or 6543), preventing serverless edge functions from exceeding PostgreSQL's maximum connection limits.

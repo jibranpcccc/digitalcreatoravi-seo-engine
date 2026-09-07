@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[VectorBench - AI Vector DB & Embedding Benchmarks]]></title>
+    <link>https://vectorbench-hq.netlify.app/</link>
+    <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for AI Vector DB & Embedding Benchmarks.]]></description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
+    <atom:link href="https://vectorbench-hq.netlify.app/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title><![CDATA[VectorBench: AI Vector Database & Embedding Benchmarks]]></title>
+      <link>https://vectorbench-hq.netlify.app/</link>
+      <guid isPermaLink="true">https://vectorbench-hq.netlify.app/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for AI Vector DB & Embedding Benchmarks.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Qdrant vs Pinecone Benchmark 2026 (RAM, Recall, Latency)]]></title>
+      <link>https://vectorbench-hq.netlify.app/qdrant-vs-pinecone-benchmark-2026/</link>
+      <guid isPermaLink="true">https://vectorbench-hq.netlify.app/qdrant-vs-pinecone-benchmark-2026/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for AI Vector DB & Embedding Benchmarks.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[pgvector Production Tuning Guide: HNSW vs IVFFlat]]></title>
+      <link>https://vectorbench-hq.netlify.app/pgvector-production-tuning-guide/</link>
+      <guid isPermaLink="true">https://vectorbench-hq.netlify.app/pgvector-production-tuning-guide/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for AI Vector DB & Embedding Benchmarks.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Chroma vs LanceDB: Embedded Vector Database Benchmark]]></title>
+      <link>https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/</link>
+      <guid isPermaLink="true">https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for AI Vector DB & Embedding Benchmarks.]]></description>
+    </item>
+  </channel>
+</rss>

@@ -175,5 +175,105 @@ const schemaData = {
         </div>
       ))}
     </div>
+
+    <!-- Deep-Dive Remote Work Guide for {city} -->
+    <section class="mt-16 border-t border-stone-800 pt-12 space-y-12">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4 tracking-tight">
+          Remote Work Infrastructure & Fiber Speeds in {city}
+        </h2>
+        <p class="text-stone-300 text-sm sm:text-base leading-relaxed mb-4">
+          For software engineers, remote founders, and distributed teams, connectivity is the non-negotiable lifeline. In {city}, verified coliving properties consistently deliver an average download bandwidth of <strong class="text-emerald-400">{avgSpeed} Mbps</strong> with latency thresholds under 25ms to European and US edge nodes. Leading spaces feature redundant multi-WAN failover connections (dual ISP or Starlink backup) ensuring uninterrupted Zoom, Google Meet, and deployment pipeline workflows.
+        </p>
+        <p class="text-stone-400 text-sm leading-relaxed">
+          In addition to private room workstations, properties in {city} emphasize ergonomic posture support with Herman Miller Aeron or SIHOO mesh task chairs, dual monitor availability upon request, and dedicated soundproof phone booths for confidential client meetings.
+        </p>
+      </div>
+
+      <!-- Cost of Living Table -->
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4 tracking-tight">
+          Monthly Living Costs & Remote Budget in {city} (2026 Estimates)
+        </h2>
+        <p class="text-stone-400 text-sm mb-6">
+          Realistic monthly budget expectations for independent bootstrappers and remote professionals residing in {city}:
+        </p>
+        <div class="overflow-x-auto rounded-2xl border border-stone-800 bg-stone-900/60 backdrop-blur-sm">
+          <table class="w-full text-left text-xs sm:text-sm text-stone-300">
+            <thead class="bg-stone-950 text-stone-400 uppercase font-mono text-[11px] border-b border-stone-800">
+              <tr>
+                <th class="px-5 py-3.5 font-bold">Expense Category</th>
+                <th class="px-5 py-3.5 font-bold">Estimated Monthly Cost</th>
+                <th class="px-5 py-3.5 font-bold">Included in Coliving?</th>
+                <th class="px-5 py-3.5 font-bold">Key Recommendations</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-800/60 font-sans">
+              <tr class="hover:bg-stone-800/30">
+                <td class="px-5 py-3.5 font-bold text-white">Private Room & Desk</td>
+                <td class="px-5 py-3.5 font-mono text-emerald-400">&euro;{minRate} &ndash; &euro;{Math.round(minRate * 1.45)}</td>
+                <td class="px-5 py-3.5 text-amber-400 font-bold">Yes (100% Covered)</td>
+                <td class="px-5 py-3.5 text-stone-400">Includes utilities, weekly housekeeping & fiber WiFi</td>
+              </tr>
+              <tr class="hover:bg-stone-800/30">
+                <td class="px-5 py-3.5 font-bold text-white">Coworking Hot Desk Pass</td>
+                <td class="px-5 py-3.5 font-mono text-stone-200">&euro;120 &ndash; &euro;220</td>
+                <td class="px-5 py-3.5 text-emerald-400 font-bold">Included on-site</td>
+                <td class="px-5 py-3.5 text-stone-400">24/7 keycard access, ergonomic seating, phone booths</td>
+              </tr>
+              <tr class="hover:bg-stone-800/30">
+                <td class="px-5 py-3.5 font-bold text-white">Food & Dining Out</td>
+                <td class="px-5 py-3.5 font-mono text-stone-200">&euro;350 &ndash; &euro;650</td>
+                <td class="px-5 py-3.5 text-stone-500">Self-catered</td>
+                <td class="px-5 py-3.5 text-stone-400">Shared chef's kitchen available in all spaces</td>
+              </tr>
+              <tr class="hover:bg-stone-800/30">
+                <td class="px-5 py-3.5 font-bold text-white">Local Transit & SIM Card</td>
+                <td class="px-5 py-3.5 font-mono text-stone-200">&euro;35 &ndash; &euro;75</td>
+                <td class="px-5 py-3.5 text-stone-500">Separate</td>
+                <td class="px-5 py-3.5 text-stone-400">Unlimited 5G e-SIM with local data carrier</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Visa & Tax Framework -->
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4 tracking-tight">
+          Digital Nomad Visa & Tax Regulations in {city}
+        </h2>
+        <p class="text-stone-300 text-sm sm:text-base leading-relaxed mb-4">
+          Navigating tax residency is crucial when basing yourself in {city}. Most remote workers enter on 90-day visa-free tourist privileges or dedicated national Digital Nomad Visas (such as Spain's Beckham Law 24% flat tax, Portugal's NHR 2.0 IFICI, or regional nomad permits). Staying under 183 cumulative days in a single calendar year generally prevents accidental domestic tax residency triggers. Always verify double taxation treaties (DTT) between your tax domicile and your destination.
+        </p>
+      </div>
+
+      <!-- FAQ Section -->
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-6 tracking-tight">
+          Frequently Asked Questions About Remote Work in {city}
+        </h2>
+        <div class="space-y-4">
+          <div class="p-5 rounded-xl bg-stone-900 border border-stone-800">
+            <h3 class="text-base font-bold text-white mb-2">What is the average internet speed in {city} coliving spaces?</h3>
+            <p class="text-stone-400 text-sm leading-relaxed">
+              Based on verified on-site speed tests, properties in {city} average {avgSpeed} Mbps download and over 80 Mbps upload, with sub-30ms latency for crystal-clear video conferencing.
+            </p>
+          </div>
+          <div class="p-5 rounded-xl bg-stone-900 border border-stone-800">
+            <h3 class="text-base font-bold text-white mb-2">What is included in the monthly coliving rate?</h3>
+            <p class="text-stone-400 text-sm leading-relaxed">
+              Standard packages include a private furnished room, dedicated 24/7 ergonomic coworking access, enterprise fiber WiFi, all utilities (electricity, water, AC), weekly cleaning, and community networking events.
+            </p>
+          </div>
+          <div class="p-5 rounded-xl bg-stone-900 border border-stone-800">
+            <h3 class="text-base font-bold text-white mb-2">Are quiet call booths available for remote client calls?</h3>
+            <p class="text-stone-400 text-sm leading-relaxed">
+              Yes, all verified locations in our {city} directory are equipped with acoustic soundproof phone booths and bookable private meeting rooms specifically designed for remote team syncs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </Layout>

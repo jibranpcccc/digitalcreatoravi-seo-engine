@@ -39,3 +39,37 @@ services:
 
 ## Security Best Practices for MCP Deployments
 Always run filesystem and command-execution MCP servers within read-only Docker volumes or unprivileged containers to ensure your agent cannot escape its execution sandbox.
+
+## Extended Architecture & In-Depth Technical Breakdown
+
+### Model Context Protocol vs Traditional REST APIs
+Before Anthropic introduced the open-source Model Context Protocol (MCP), integrating LLMs with external tools required building proprietary JSON-RPC bridges or custom function-calling schemas for each LLM provider. MCP standardizes the communication layer through a unified client-server architecture:
+1. **Resources**: URI-addressable static or dynamic data feeds (e.g., `postgres://db/schema` or `file:///logs/access.log`) that the LLM reads for context.
+2. **Prompts**: Pre-engineered system prompts and workflow templates exposed by the server.
+3. **Tools**: Executable functions with JSON-Schema argument validation that perform stateful operations.
+
+### Enterprise Sandboxing & Network Isolation
+When granting AI agents terminal access or database execution privileges, direct host machine execution creates serious security vulnerabilities. Running MCP servers inside an isolated Docker container with drop-all Linux capabilities prevents directory traversal attacks and unauthorized credential access.
+
+### Production Environment Variables & Secret Management
+Always inject sensitive tokens via Docker secrets or `.env` files with strict Unix permissions (0600):
+
+```yaml
+services:
+  mcp-postgres:
+    image: node:20-alpine
+    restart: unless-stopped
+    command: npx -y @modelcontextprotocol/server-postgres ${DATABASE_URL}
+    environment:
+      - DATABASE_URL=postgres://app_ro:${DB_PASS}@postgres-cluster:5432/analytics?sslmode=require
+    networks:
+      - secure-agent-net
+```
+
+## Frequently Asked Questions
+
+### Can MCP servers run over standard HTTP/HTTPS instead of stdio?
+Yes. MCP supports Server-Sent Events (SSE) over HTTP, allowing cloud-hosted agents in AWS or Cloudflare to communicate with remote MCP server clusters securely over TLS.
+
+### What is the maximum payload size supported by MCP tools?
+While the MCP protocol itself does not impose a rigid payload ceiling, standard implementations recommend capping individual tool responses at 256KB to avoid exhausting LLM context windows.

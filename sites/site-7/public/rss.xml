@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[WebhookWatch - Webhook Architecture & Reliability]]></title>
+    <link>https://webhookwatch.vercel.app/</link>
+    <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Webhook Architecture & Reliability.]]></description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
+    <atom:link href="https://webhookwatch.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title><![CDATA[WebhookWatch: Webhook Latency & Architecture Benchmarks]]></title>
+      <link>https://webhookwatch.vercel.app/</link>
+      <guid isPermaLink="true">https://webhookwatch.vercel.app/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Stripe Webhook Signature Verification in Python (FastAPI)]]></title>
+      <link>https://webhookwatch.vercel.app/stripe-webhook-signature-verification-fastapi/</link>
+      <guid isPermaLink="true">https://webhookwatch.vercel.app/stripe-webhook-signature-verification-fastapi/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Webhook Retry Exponential Backoff with Jitter Guide]]></title>
+      <link>https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/</link>
+      <guid isPermaLink="true">https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Webhook Dead Letter Queue (DLQ) Architecture with AWS SQS]]></title>
+      <link>https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/</link>
+      <guid isPermaLink="true">https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
+    </item>
+  </channel>
+</rss>

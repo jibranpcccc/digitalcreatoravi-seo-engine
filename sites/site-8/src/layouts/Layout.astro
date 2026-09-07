@@ -33,12 +33,14 @@ const fullCanonical = slug ? `${siteUrl}/${slug}/` : siteUrl + '/';
     <meta property="og:url" content={fullCanonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://localdocprivacy.netlify.app/og-preview.png" />
     <meta property="og:site_name" content="LocalDocPrivacy" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://localdocprivacy.netlify.app/og-preview.png" />
 
     <!-- Favicon & Search Console -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
@@ -70,6 +72,7 @@ const fullCanonical = slug ? `${siteUrl}/${slug}/` : siteUrl + '/';
       })();
     </script>
 
+      <link rel="alternate" type="application/rss+xml" title="RSS 2.0 Feed" href="/rss.xml" />
   </head>
   <body class="min-h-screen flex flex-col bg-slate-950 text-slate-100 font-sans">
     <!-- Header -->

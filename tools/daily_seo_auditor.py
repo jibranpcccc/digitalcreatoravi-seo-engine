@@ -148,6 +148,186 @@ FLEET = [
             "https://localdocprivacy.netlify.app/convert-pdf-to-markdown-offline-guide/",
             "https://localdocprivacy.netlify.app/client-side-vs-cloud-pdf-privacy-audit/"
         ]
+    },
+    {
+        "id": "site-9",
+        "name": "FounderRunway",
+        "niche": "Geo-Arbitrage for Bootstrapped Founders",
+        "host": "Vercel Global Anycast Edge",
+        "gsc_account": "doriancuquejo05@gmail.com (Profile 27)",
+        "homepage": "https://site-9-inky.vercel.app/",
+        "sitemap": "https://site-9-inky.vercel.app/sitemap.xml",
+        "pages": [
+            "https://site-9-inky.vercel.app/",
+            "https://site-9-inky.vercel.app/chiang-mai-vs-bali-runway-calculator/",
+            "https://site-9-inky.vercel.app/lisbon-nhr-tax-runway-founder-guide/",
+            "https://site-9-inky.vercel.app/top-latin-america-tech-hubs-for-bootstrappers/"
+        ]
+    },
+    {
+        "id": "site-10",
+        "name": "RAGInspect",
+        "niche": "RAG Pipeline Optimization & Chunking Benchmarks",
+        "host": "Cloudflare Pages Edge",
+        "gsc_account": "gladystuckergmgd@gmail.com (Profile 32)",
+        "homepage": "https://raginspect.pages.dev/",
+        "sitemap": "https://raginspect.pages.dev/sitemap.xml",
+        "pages": [
+            "https://raginspect.pages.dev/",
+            "https://raginspect.pages.dev/semantic-chunking-vs-fixed-size-rag-benchmarks/",
+            "https://raginspect.pages.dev/hybrid-search-bm25-vs-dense-vector-accuracy/",
+            "https://raginspect.pages.dev/ragas-vs-trulens-rag-evaluation-frameworks/"
+        ]
+    },
+    {
+        "id": "site-11",
+        "name": "NomadPassportIndex",
+        "niche": "Digital Nomad Visa Requirements Tracker",
+        "host": "Netlify High-Performance Edge",
+        "gsc_account": "teams.thefusionfeed@gmail.com (Profile 28)",
+        "homepage": "https://nomadpassportindex.netlify.app/",
+        "sitemap": "https://nomadpassportindex.netlify.app/sitemap.xml",
+        "pages": [
+            "https://nomadpassportindex.netlify.app/",
+            "https://nomadpassportindex.netlify.app/spain-digital-nomad-visa-income-requirements/",
+            "https://nomadpassportindex.netlify.app/japan-digital-nomad-visa-guide-tax-exemption/",
+            "https://nomadpassportindex.netlify.app/easiest-digital-nomad-visas-in-europe-2026/"
+        ]
+    },
+    {
+        "id": "site-12",
+        "name": "SaaSUnitMath",
+        "niche": "Bootstrapped SaaS Unit Economics & Valuation Math",
+        "host": "Vercel Global Anycast Edge",
+        "gsc_account": "vickimarshall853@gmail.com (Profile 30)",
+        "homepage": "https://site-12-taupe.vercel.app/",
+        "sitemap": "https://site-12-taupe.vercel.app/sitemap.xml",
+        "pages": [
+            "https://site-12-taupe.vercel.app/",
+            "https://site-12-taupe.vercel.app/saas-ltv-cac-payback-period-calculator/",
+            "https://site-12-taupe.vercel.app/b2b-saas-churn-benchmarks-by-acv-2026/",
+            "https://site-12-taupe.vercel.app/rule-of-40-saas-valuation-growth-model/"
+        ]
+    },
+    {
+        "id": "site-13",
+        "name": "GrokLogTester",
+        "niche": "Observability Regex & Log Parsing Utilities",
+        "host": "Cloudflare Pages Edge",
+        "gsc_account": "siopkbritneymasnbur@gmail.com (Profile 34)",
+        "homepage": "https://groklogtester.pages.dev/",
+        "sitemap": "https://groklogtester.pages.dev/sitemap.xml",
+        "pages": [
+            "https://groklogtester.pages.dev/",
+            "https://groklogtester.pages.dev/nginx-access-log-grok-pattern-generator/",
+            "https://groklogtester.pages.dev/aws-alb-access-log-regex-parser/",
+            "https://groklogtester.pages.dev/high-throughput-log-parsing-vector-vs-fluentbit/"
+        ]
+    },
+    {
+        "id": "site-14",
+        "name": "SOC2Ready",
+        "niche": "B2B Startup Security & Compliance Automation",
+        "host": "Vercel Global Anycast Edge",
+        "gsc_account": "janavajannimik@gmail.com (Profile 31)",
+        "homepage": "https://site-14-sable.vercel.app/",
+        "sitemap": "https://site-14-sable.vercel.app/sitemap.xml",
+        "pages": [
+            "https://site-14-sable.vercel.app/",
+            "https://site-14-sable.vercel.app/soc-2-type-1-vs-type-2-compliance-timeline-cost/",
+            "https://site-14-sable.vercel.app/vanta-vs-drata-vs-secureframe-compliance-automation-review/",
+            "https://site-14-sable.vercel.app/soc-2-compliance-for-bootstrapped-startups-under-20k/"
+        ]
+    },
+    {
+        "id": "site-15",
+        "name": "EORCalculator",
+        "niche": "Remote EOR & Global Payroll Cost Comparison",
+        "host": "Vercel Global Anycast Edge",
+        "gsc_account": "christinapatelf@gmail.com (Profile 35)",
+        "homepage": "https://site-15-ruby.vercel.app/",
+        "sitemap": "https://site-15-ruby.vercel.app/sitemap.xml",
+        "pages": [
+            "https://site-15-ruby.vercel.app/",
+            "https://site-15-ruby.vercel.app/deel-vs-remote-com-pricing-hidden-fees-breakdown/",
+            "https://site-15-ruby.vercel.app/contractor-vs-eor-legal-misclassification-risk-matrix/",
+            "https://site-15-ruby.vercel.app/hiring-remote-engineers-in-latin-america-vs-eastern-europe-eor-cost/"
+        ]
+    },
+    {
+        "id": "site-16",
+        "name": "DevConfigHub",
+        "niche": "Local Dev Environment Cheatsheets",
+        "host": "Vercel Global Anycast Edge",
+        "gsc_account": "rosereneee@gmail.com (Default Profile)",
+        "homepage": "https://site-16-indol.vercel.app/",
+        "sitemap": "https://site-16-indol.vercel.app/sitemap.xml",
+        "pages": [
+            "https://site-16-indol.vercel.app/",
+            "https://site-16-indol.vercel.app/devcontainer-json-vs-docker-compose-local-development/",
+            "https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/",
+            "https://site-16-indol.vercel.app/fastest-docker-compose-postgres-redis-local-stack/"
+        ]
+    },
+    {
+        "id": "site-17",
+        "name": "OpenCRMStack",
+        "niche": "Open-Source CRM Alternatives & Migration Math",
+        "host": "Cloudflare Pages Edge",
+        "gsc_account": "gladystuckergmgd@gmail.com (Profile 32)",
+        "homepage": "https://opencrmstack.pages.dev/",
+        "sitemap": "https://opencrmstack.pages.dev/sitemap.xml",
+        "pages": [
+            "https://opencrmstack.pages.dev/",
+            "https://opencrmstack.pages.dev/twenty-crm-vs-hubspot-open-source-sales-pipeline-audit/",
+            "https://opencrmstack.pages.dev/self-hosted-erpnext-vs-salesforce-cost-migration-breakdown/",
+            "https://opencrmstack.pages.dev/mautic-vs-hubspot-email-automation-deliverability-benchmark/"
+        ]
+    },
+    {
+        "id": "site-18",
+        "name": "CIPipelineGraph",
+        "niche": "CI/CD Syntax Validators & Visualizers",
+        "host": "Vercel Global Anycast Edge",
+        "gsc_account": "doriancuquejo05@gmail.com (Profile 27)",
+        "homepage": "https://site-18-chi.vercel.app/",
+        "sitemap": "https://site-18-chi.vercel.app/sitemap.xml",
+        "pages": [
+            "https://site-18-chi.vercel.app/",
+            "https://site-18-chi.vercel.app/github-actions-vs-gitlab-ci-syntax-execution-cost-comparison/",
+            "https://site-18-chi.vercel.app/matrix-build-optimization-github-actions-cache-speed/",
+            "https://site-18-chi.vercel.app/act-run-github-actions-locally-debugging-guide/"
+        ]
+    },
+    {
+        "id": "site-19",
+        "name": "GreekVisualizer",
+        "niche": "Options Greeks & DeFi Impermanent Loss Math",
+        "host": "Vercel Global Anycast Edge",
+        "gsc_account": "teams.thefusionfeed@gmail.com (Profile 28)",
+        "homepage": "https://site-19-nine.vercel.app/",
+        "sitemap": "https://site-19-nine.vercel.app/sitemap.xml",
+        "pages": [
+            "https://site-19-nine.vercel.app/",
+            "https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/",
+            "https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/",
+            "https://site-19-nine.vercel.app/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/"
+        ]
+    },
+    {
+        "id": "site-20",
+        "name": "EdgeRuntimeHQ",
+        "niche": "Edge AI Runtimes & ONNX WebGPU Inference",
+        "host": "Cloudflare Pages Edge",
+        "gsc_account": "siopkbritneymasnbur@gmail.com (Profile 34)",
+        "homepage": "https://edgeruntimehq.pages.dev/",
+        "sitemap": "https://edgeruntimehq.pages.dev/sitemap.xml",
+        "pages": [
+            "https://edgeruntimehq.pages.dev/",
+            "https://edgeruntimehq.pages.dev/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/",
+            "https://edgeruntimehq.pages.dev/onnx-runtime-vs-tensorrt-edge-server-latency/",
+            "https://edgeruntimehq.pages.dev/running-whisper-speech-to-text-locally-in-browser-webgpu/"
+        ]
     }
 ]
 

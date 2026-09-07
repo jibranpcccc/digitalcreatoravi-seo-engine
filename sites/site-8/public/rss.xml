@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[LocalDocPrivacy - Client-Side WASM Document Security]]></title>
+    <link>https://localdocprivacy.netlify.app/</link>
+    <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Client-Side WASM Document Security.]]></description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
+    <atom:link href="https://localdocprivacy.netlify.app/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title><![CDATA[LocalDocPrivacy: Client-Side WASM Document Security]]></title>
+      <link>https://localdocprivacy.netlify.app/</link>
+      <guid isPermaLink="true">https://localdocprivacy.netlify.app/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Client-Side WASM Document Security.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[How to Redact PDFs Locally in the Browser Using WASM]]></title>
+      <link>https://localdocprivacy.netlify.app/redact-pdf-locally-browser-wasm-guide/</link>
+      <guid isPermaLink="true">https://localdocprivacy.netlify.app/redact-pdf-locally-browser-wasm-guide/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Client-Side WASM Document Security.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Convert PDFs to Clean Markdown Offline (Local AST)]]></title>
+      <link>https://localdocprivacy.netlify.app/convert-pdf-to-markdown-offline-guide/</link>
+      <guid isPermaLink="true">https://localdocprivacy.netlify.app/convert-pdf-to-markdown-offline-guide/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Client-Side WASM Document Security.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Cloud PDF Services vs Client-Side WASM: Forensic Packet Audit]]></title>
+      <link>https://localdocprivacy.netlify.app/client-side-vs-cloud-pdf-privacy-audit/</link>
+      <guid isPermaLink="true">https://localdocprivacy.netlify.app/client-side-vs-cloud-pdf-privacy-audit/</guid>
+      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Client-Side WASM Document Security.]]></description>
+    </item>
+  </channel>
+</rss>

@@ -189,7 +189,26 @@ class FleetServerHandler(BaseHTTPRequestHandler):
                 "vectorbench-hq.netlify.app": "site-5",
                 "nomadtreaty.vercel.app": "site-6",
                 "webhookwatch.vercel.app": "site-7",
-                "localdocprivacy.netlify.app": "site-8"
+                "localdocprivacy.netlify.app": "site-8",
+                "site-9-inky.vercel.app": "site-9",
+                "founderrunway.vercel.app": "site-9",
+                "raginspect.pages.dev": "site-10",
+                "nomadpassportindex.netlify.app": "site-11",
+                "site-12-taupe.vercel.app": "site-12",
+                "saasunitmath.vercel.app": "site-12",
+                "groklogtester.pages.dev": "site-13",
+                "site-14-sable.vercel.app": "site-14",
+                "soc2ready.netlify.app": "site-14",
+                "site-15-ruby.vercel.app": "site-15",
+                "site-15-eor.vercel.app": "site-15",
+                "site-16-indol.vercel.app": "site-16",
+                "devconfighub.netlify.app": "site-16",
+                "opencrmstack.pages.dev": "site-17",
+                "site-18-chi.vercel.app": "site-18",
+                "site-18-ci.vercel.app": "site-18",
+                "site-19-nine.vercel.app": "site-19",
+                "greekvisualizer.netlify.app": "site-19",
+                "edgeruntimehq.pages.dev": "site-20"
             }
             site_id = site_map.get(site, site)
             page_path = payload.get("path", "/")
@@ -218,7 +237,7 @@ class FleetServerHandler(BaseHTTPRequestHandler):
 
         if path == "/api/simulate-hit":
             import random
-            sites = ["site-1", "site-2", "site-3", "site-4", "site-5", "site-6", "site-7", "site-8"]
+            sites = ["site-1", "site-2", "site-3", "site-4", "site-5", "site-6", "site-7", "site-8", "site-9", "site-10", "site-11", "site-12", "site-13"]
             refs = [
                 "https://www.google.com/search?q=open+agent+stack",
                 "https://www.bing.com/search?q=vram+calculator+70b",
@@ -491,7 +510,7 @@ def autonomous_telemetry_simulation_worker():
     so the user sees real-time traffic activity across all 8 sites 24/7 without manual action.
     """
     print("⚡ [AUTONOMOUS TELEMETRY ENGINE] Real-time stream worker activated.")
-    sites = ["site-1", "site-2", "site-3", "site-4", "site-5", "site-6", "site-7", "site-8"]
+    sites = ["site-1", "site-2", "site-3", "site-4", "site-5", "site-6", "site-7", "site-8", "site-9", "site-10", "site-11", "site-12", "site-13"]
     referrers = [
         "https://www.google.com/search?q=open+agent+stack",
         "https://www.google.com/search?q=vram+calculator+70b+deepseek",
