@@ -1,0 +1,202 @@
+[
+  {
+    "site_id": "site-1",
+    "site_name": "LocalAgentStack",
+    "target_url": "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/",
+    "status": 0,
+    "latency_ms": 35842,
+    "archive_url": "https://web.archive.org/web/https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/",
+    "timestamp": null,
+    "da": 96
+  },
+  {
+    "site_id": "site-10",
+    "site_name": "RAGInspect",
+    "target_url": "https://raginspect.pages.dev/",
+    "status": 200,
+    "latency_ms": 15821,
+    "archive_url": "http://web.archive.org/web/20260907085054/https://raginspect.pages.dev/",
+    "timestamp": "20260907085054",
+    "da": 96
+  },
+  {
+    "site_id": "site-11",
+    "site_name": "NomadPassportIndex",
+    "target_url": "https://nomadpassportindex.netlify.app/",
+    "status": 200,
+    "latency_ms": 30498,
+    "archive_url": "http://web.archive.org/web/20260907085120/https://nomadpassportindex.netlify.app/",
+    "timestamp": "20260907085120",
+    "da": 96
+  },
+  {
+    "site_id": "site-12",
+    "site_name": "SaaSUnitMath",
+    "target_url": "https://site-12-taupe.vercel.app/",
+    "status": 200,
+    "latency_ms": 27092,
+    "archive_url": "http://web.archive.org/web/20260907085156/https://site-12-taupe.vercel.app/",
+    "timestamp": "20260907085156",
+    "da": 96
+  },
+  {
+    "site_id": "site-13",
+    "site_name": "GrokLogTester",
+    "target_url": "https://groklogtester.pages.dev/",
+    "status": 200,
+    "latency_ms": 27240,
+    "archive_url": "http://web.archive.org/web/20260907085234/https://groklogtester.pages.dev/",
+    "timestamp": "20260907085234",
+    "da": 96
+  },
+  {
+    "site_id": "site-14",
+    "site_name": "SOC2Ready",
+    "target_url": "https://site-14-sable.vercel.app/",
+    "status": 200,
+    "latency_ms": 28019,
+    "archive_url": "http://web.archive.org/web/20260907085305/https://site-14-sable.vercel.app/",
+    "timestamp": "20260907085305",
+    "da": 96
+  },
+  {
+    "site_id": "site-15",
+    "site_name": "EORCalculator",
+    "target_url": "https://site-15-ruby.vercel.app/",
+    "status": 0,
+    "latency_ms": 35736,
+    "archive_url": "https://web.archive.org/web/https://site-15-ruby.vercel.app/",
+    "timestamp": null,
+    "da": 96
+  },
+  {
+    "site_id": "site-16",
+    "site_name": "DevConfigHub",
+    "target_url": "https://site-16-indol.vercel.app/",
+    "status": 200,
+    "latency_ms": 27032,
+    "archive_url": "http://web.archive.org/web/20260907085426/https://site-16-indol.vercel.app/",
+    "timestamp": "20260907085426",
+    "da": 96
+  },
+  {
+    "site_id": "site-17",
+    "site_name": "OpenCRMStack",
+    "target_url": "https://opencrmstack.pages.dev/",
+    "status": 429,
+    "latency_ms": 1994,
+    "archive_url": "https://web.archive.org/web/https://opencrmstack.pages.dev/",
+    "timestamp": null,
+    "da": 96
+  },
+  {
+    "site_id": "site-18",
+    "site_name": "CIPipelineGraph",
+    "target_url": "https://site-18-chi.vercel.app/",
+    "status": 200,
+    "latency_ms": 26182,
+    "archive_url": "http://web.archive.org/web/20260907085513/https://site-18-chi.vercel.app/",
+    "timestamp": "20260907085513",
+    "da": 96
+  },
+  {
+    "site_id": "site-19",
+    "site_name": "GreekVisualizer",
+    "target_url": "https://site-19-nine.vercel.app/",
+    "status": 200,
+    "latency_ms": 28589,
+    "archive_url": "http://web.archive.org/web/20260907085546/https://site-19-nine.vercel.app/",
+    "timestamp": "20260907085546",
+    "da": 96
+  },
+  {
+    "site_id": "site-2",
+    "site_name": "WorkationRadar",
+    "target_url": "https://jibranpcccc.github.io/workationradar/",
+    "status": 200,
+    "latency_ms": 26052,
+    "archive_url": "http://web.archive.org/web/20260907085623/https://jibranpcccc.github.io/workationradar/",
+    "timestamp": "20260907085623",
+    "da": 96
+  },
+  {
+    "site_id": "site-20",
+    "site_name": "EdgeRuntimeHQ",
+    "target_url": "https://edgeruntimehq.pages.dev/",
+    "status": 200,
+    "latency_ms": 27448,
+    "archive_url": "http://web.archive.org/web/20260907085702/https://edgeruntimehq.pages.dev/",
+    "timestamp": "20260907085702",
+    "da": 96
+  },
+  {
+    "site_id": "site-3",
+    "site_name": "OpenAgentStack",
+    "target_url": "https://openagentstack.pages.dev/",
+    "status": 200,
+    "latency_ms": 14868,
+    "archive_url": "http://web.archive.org/web/20260907083054/https://openagentstack.pages.dev/",
+    "timestamp": "20260907083054",
+    "da": 96
+  },
+  {
+    "site_id": "site-4",
+    "site_name": "IndieStackAudit",
+    "target_url": "https://indiestackaudit.pages.dev/",
+    "status": 200,
+    "latency_ms": 27393,
+    "archive_url": "http://web.archive.org/web/20260907085755/https://indiestackaudit.pages.dev/",
+    "timestamp": "20260907085755",
+    "da": 96
+  },
+  {
+    "site_id": "site-5",
+    "site_name": "VectorBench",
+    "target_url": "https://vectorbench-hq.netlify.app/",
+    "status": 0,
+    "latency_ms": 35742,
+    "archive_url": "https://web.archive.org/web/https://vectorbench-hq.netlify.app/",
+    "timestamp": null,
+    "da": 96
+  },
+  {
+    "site_id": "site-6",
+    "site_name": "NomadTreaty",
+    "target_url": "https://nomadtreaty.vercel.app/",
+    "status": 200,
+    "latency_ms": 29111,
+    "archive_url": "http://web.archive.org/web/20260907085910/https://nomadtreaty.vercel.app/",
+    "timestamp": "20260907085910",
+    "da": 96
+  },
+  {
+    "site_id": "site-7",
+    "site_name": "WebhookWatch",
+    "target_url": "https://webhookwatch.vercel.app/",
+    "status": 200,
+    "latency_ms": 22281,
+    "archive_url": "http://web.archive.org/web/20260907085946/https://webhookwatch.vercel.app/",
+    "timestamp": "20260907085946",
+    "da": 96
+  },
+  {
+    "site_id": "site-8",
+    "site_name": "LocalDocPrivacy",
+    "target_url": "https://localdocprivacy.netlify.app/",
+    "status": 200,
+    "latency_ms": 21521,
+    "archive_url": "http://web.archive.org/web/20260907090016/https://localdocprivacy.netlify.app/",
+    "timestamp": "20260907090016",
+    "da": 96
+  },
+  {
+    "site_id": "site-9",
+    "site_name": "FounderRunway",
+    "target_url": "https://site-9-inky.vercel.app/",
+    "status": 0,
+    "latency_ms": 35741,
+    "archive_url": "https://web.archive.org/web/https://site-9-inky.vercel.app/",
+    "timestamp": null,
+    "da": 96
+  }
+]
