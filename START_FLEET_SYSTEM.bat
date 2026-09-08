@@ -1,6 +1,6 @@
 @echo off
 echo ===============================================================
-echo ? LAUNCHING AUTONOMOUS SEO FLEET ENGINE & TELEMETRY HUB
+echo [!] LAUNCHING AUTONOMOUS SEO FLEET ENGINE ^& TELEMETRY HUB
 echo ===============================================================
 echo Opening Fleet Command Dashboard at http://localhost:8088/
 start http://localhost:8088/
