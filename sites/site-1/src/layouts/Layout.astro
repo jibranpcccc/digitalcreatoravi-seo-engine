@@ -75,18 +75,14 @@ const ogImageUrl = image.startsWith('http')
     <meta name="google-site-verification" content={import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION || "google6fe267a998c19a9a"} />
     <meta name="msvalidate.01" content={import.meta.env.PUBLIC_BING_SITE_VERIFICATION || "BING-VERIFICATION-LOCALAGENTSTACK"} />
 
-    <!-- Analytics Integration (GA4 + Privacy Telemetry) -->
-    {import.meta.env.PUBLIC_GA_ID && (
-      <>
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}></script>
-        <script define:vars={{ gaId: import.meta.env.PUBLIC_GA_ID }}>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', gaId, { anonymize_ip: true });
-        </script>
-      </>
-    )}
+    <!-- Google Analytics 4 (GA4) Integration -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-LAS1026001"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LAS1026001', { anonymize_ip: true });
+    </script>
     <script is:inline>
       // Zero-Cookie Privacy-Preserving Traffic Telemetry
       try {

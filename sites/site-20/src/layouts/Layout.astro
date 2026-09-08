@@ -46,6 +46,7 @@ const fullCanonical = canonical || (slug ? `${siteUrl}/${slug.replace(/^\/|\/$/g
     <!-- Favicon & Search Console -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><path d='M25 50 L45 70 L75 30' stroke='%2310b981' stroke-width='10' fill='none' stroke-linecap='round'/><circle cx='50' cy='50' r='8' fill='%2306b6d4'/></svg>" />
     <meta name="google-site-verification" content="google6fe267a998c19a9a" />
+    <meta name="msvalidate.01" content="BING-VERIFICATION-FLEET-2026" />
 
     <!-- Structured Data Schema -->
     {schema && (
@@ -73,18 +74,14 @@ const fullCanonical = canonical || (slug ? `${siteUrl}/${slug.replace(/^\/|\/$/g
       })();
     </script>
       <link rel="alternate" type="application/rss+xml" title="RSS 2.0 Feed" href="/rss.xml" />
-      <!-- Google Analytics (GA4) Integration -->
-    {import.meta.env.PUBLIC_GA_ID && (
-      <>
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}></script>
-        <script define:vars={{ gaId: import.meta.env.PUBLIC_GA_ID }}>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', gaId, { anonymize_ip: true });
-        </script>
-      </>
-    )}
+    <!-- Google Analytics 4 (GA4) Integration -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-ERH2026020"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ERH2026020', { anonymize_ip: true });
+    </script>
 
   </head>
   <body class="min-h-screen flex flex-col bg-slate-950 text-slate-100 font-sans">

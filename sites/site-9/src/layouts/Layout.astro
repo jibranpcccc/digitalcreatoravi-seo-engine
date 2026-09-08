@@ -76,18 +76,14 @@ const ogImage = `${siteUrl}/og-preview.png`;
     <meta name="google-site-verification" content="google6fe267a998c19a9a" />
     <meta name="msvalidate.01" content="BING-VERIFICATION-FLEET-2026" />
 
-      <!-- Google Analytics (GA4) Integration -->
-    {import.meta.env.PUBLIC_GA_ID && (
-      <>
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}></script>
-        <script define:vars={{ gaId: import.meta.env.PUBLIC_GA_ID }}>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', gaId, { anonymize_ip: true });
-        </script>
-      </>
-    )}
+    <!-- Google Analytics 4 (GA4) Integration -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-FRW9026009"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FRW9026009', { anonymize_ip: true });
+    </script>
 
   </head>
   <body class="min-h-screen flex flex-col bg-slate-950 text-slate-100 font-sans">

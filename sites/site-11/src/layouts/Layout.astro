@@ -47,6 +47,7 @@ const ogImageUrl = `${siteUrl}/og-nomad-passport.png`;
     <!-- Favicon & Search Console -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛂</text></svg>" />
     <meta name="google-site-verification" content="google6fe267a998c19a9a" />
+    <meta name="msvalidate.01" content="BING-VERIFICATION-FLEET-2026" />
 
     <!-- Machine-Readable Discovery -->
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Index" />
@@ -82,18 +83,14 @@ const ogImageUrl = `${siteUrl}/og-nomad-passport.png`;
       })();
     </script>
       <link rel="alternate" type="application/rss+xml" title="RSS 2.0 Feed" href="/rss.xml" />
-      <!-- Google Analytics (GA4) Integration -->
-    {import.meta.env.PUBLIC_GA_ID && (
-      <>
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}></script>
-        <script define:vars={{ gaId: import.meta.env.PUBLIC_GA_ID }}>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', gaId, { anonymize_ip: true });
-        </script>
-      </>
-    )}
+    <!-- Google Analytics 4 (GA4) Integration -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-NPI1126011"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NPI1126011', { anonymize_ip: true });
+    </script>
 
   </head>
   <body class="min-h-screen flex flex-col bg-[#030712] text-slate-100 font-['Plus_Jakarta_Sans',sans-serif] relative overflow-x-hidden">

@@ -13,3 +13,4 @@ __pycache__/
 .env.local
 .DS_Store
 Thumbs.db
+.workationradar_git/
