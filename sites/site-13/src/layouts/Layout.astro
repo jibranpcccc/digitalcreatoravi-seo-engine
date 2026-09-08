@@ -99,6 +99,19 @@ const ogImageUrl = image.startsWith('http') ? image : `https://groklogtester.pag
       })();
     </script>
       <link rel="alternate" type="application/rss+xml" title="RSS 2.0 Feed" href="/rss.xml" />
+      <!-- Google Analytics (GA4) Integration -->
+    {import.meta.env.PUBLIC_GA_ID && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}></script>
+        <script define:vars={{ gaId: import.meta.env.PUBLIC_GA_ID }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', gaId, { anonymize_ip: true });
+        </script>
+      </>
+    )}
+
   </head>
   <body class="bg-[#080C14] text-slate-100 antialiased font-['Plus_Jakarta_Sans',sans-serif] selection:bg-cyan-500/30 selection:text-cyan-200 min-h-screen flex flex-col relative overflow-x-hidden">
 

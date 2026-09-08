@@ -68,12 +68,12 @@
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-dot"></span>
             20/20 NODES ONLINE (100%)
           </span>
-          <span class="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 text-[11px] font-mono">
-            4 Edge Clouds • 8 Isolated Clusters
+          <span class="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 text-[11px] font-mono font-bold">
+            🛡️ 100% REAL TELEMETRY • ZERO SIMULATION
           </span>
         </div>
         <p class="text-xs text-slate-400 mt-0.5">
-          Unified Multi-Host Webmaster Hub & Real-Time Traffic Analytics • Autonomous Fleet Operations
+          Unified Multi-Host Webmaster Hub & Real Visitor Analytics • 8 Isolated Google Search Console Accounts
         </p>
       </div>
     </div>
@@ -94,9 +94,9 @@
         <span>🔍</span> Run Fleet Audit
       </button>
 
-      <button onclick="simulateTraffic()" id="btn-sim" class="px-3.5 py-2 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 text-purple-300 text-xs font-bold transition flex items-center gap-1.5 active:scale-95 shadow-sm">
-        <span>🎯</span> Test Hit
-      </button>
+      <a href="https://webhookwatch.vercel.app/api/stats" target="_blank" class="px-3.5 py-2 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 text-purple-300 text-xs font-mono transition flex items-center gap-1.5 shadow-sm">
+        <span>🌐 Edge Relay Feed</span> ↗
+      </a>
     </div>
   </header>
 
@@ -113,11 +113,11 @@
 
     <div class="glass-card p-4 rounded-xl border-l-4 border-l-amber-500">
       <div class="flex items-center justify-between text-[11px] text-slate-400 font-mono mb-1">
-        <span>RECORDED HITS</span>
-        <span class="text-amber-400 pulse-dot">● Active</span>
+        <span>REAL VISITOR HITS</span>
+        <span class="text-amber-400 font-bold">● Live Relay</span>
       </div>
-      <div class="text-2xl font-black text-amber-300 font-mono" id="stat-total-hits">9,538+</div>
-      <div class="text-[10px] text-slate-500 mt-0.5 truncate" id="stat-organic-pct">63.8% Organic Search</div>
+      <div class="text-2xl font-black text-amber-300 font-mono" id="stat-total-hits">0</div>
+      <div class="text-[10px] text-slate-500 mt-0.5 truncate" id="stat-organic-pct">100% Real Edge Hits</div>
     </div>
 
     <div class="glass-card p-4 rounded-xl border-l-4 border-l-purple-500">
@@ -165,7 +165,7 @@
         <span class="px-2 py-0.5 rounded-full bg-cyan-500/20 text-[10px] font-mono text-cyan-300 font-bold">20 Sites</span>
       </button>
       <button onclick="switchTab('traffic')" id="tab-btn-traffic" class="tab-inactive px-4 py-3 text-xs sm:text-sm rounded-t-xl transition flex items-center gap-2 whitespace-nowrap">
-        <span>📊</span> Traffic Intelligence & Analytics
+        <span>📊</span> Real Traffic Intelligence
       </button>
       <button onclick="switchTab('content')" id="tab-btn-content" class="tab-inactive px-4 py-3 text-xs sm:text-sm rounded-t-xl transition flex items-center gap-2 whitespace-nowrap">
         <span>🚀</span> Content Drip Pipeline
@@ -192,14 +192,13 @@
     <!-- TAB 1: FLEET WEBMASTER & TRAFFIC MATRIX (Primary View) -->
     <div id="tab-pane-fleet" class="space-y-6">
       <div class="glass p-6 rounded-2xl overflow-hidden shadow-2xl">
-        <!-- Search, Filter & Quick Stats -->
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-800/80">
           <div>
             <h2 class="text-base sm:text-lg font-black text-white flex items-center gap-2 tracking-tight">
-              <span>🛡️</span> All 20 Production Sites — Traffic & Webmaster Account Matrix
+              <span>🛡️</span> All 20 Production Sites — Real Traffic & Webmaster Account Matrix
             </h2>
             <p class="text-xs text-slate-400 mt-1">
-              Exact live traffic hits recorded, hosting edge clouds, dedicated GSC accounts, and verified sitemaps per node.
+              Verified real visitor hits from production edge relay, dedicated GSC accounts, and verified sitemaps.
             </p>
           </div>
 
@@ -218,22 +217,20 @@
             </select>
 
             <select id="fleet-sort-filter" onchange="filterFleetTable()" class="bg-slate-900 border border-slate-700/80 rounded-xl px-3 py-1.5 text-xs text-slate-300 focus:outline-none focus:border-cyan-500">
-              <option value="hits-desc">Sort: Traffic (High to Low)</option>
-              <option value="hits-asc">Sort: Traffic (Low to High)</option>
               <option value="id-asc">Sort: Site ID (1 to 20)</option>
+              <option value="hits-desc">Sort: Real Traffic (High to Low)</option>
               <option value="name-asc">Sort: Name (A-Z)</option>
             </select>
           </div>
         </div>
 
-        <!-- Master Table -->
         <div class="overflow-x-auto">
           <table class="w-full text-left text-xs border border-slate-800/80 rounded-xl overflow-hidden">
             <thead class="bg-slate-900/90 text-white font-semibold font-mono uppercase tracking-wider text-[11px]">
               <tr>
                 <th class="p-3.5 border-b border-slate-800">Website & Micro-Niche</th>
                 <th class="p-3.5 border-b border-slate-800">Edge Cloud Host</th>
-                <th class="p-3.5 border-b border-slate-800 text-right">Traffic Hits</th>
+                <th class="p-3.5 border-b border-slate-800 text-right">Real Traffic Hits</th>
                 <th class="p-3.5 border-b border-slate-800">Webmaster / GSC Account</th>
                 <th class="p-3.5 border-b border-slate-800">XML Sitemap</th>
                 <th class="p-3.5 border-b border-slate-800">IndexNow</th>
@@ -258,54 +255,49 @@
         <p class="text-xs text-slate-300 leading-relaxed">
           Google algorithms (HCU and SpamBrain) track interlinked ownership across shared GSC logins, shared AdSense IDs, and shared analytics tags. As strictly enforced, <strong>zero websites are associated with <code class="text-rose-400 font-mono">jibranpccc@gmail.com</code></strong>. Every site is isolated across <strong>8 dedicated email clusters</strong> and <strong>4 distinct cloud providers</strong>:
         </p>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4 text-xs font-mono" id="isolation-grid">
-          <!-- Populated by JavaScript with all 20 sites -->
-        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4 text-xs font-mono" id="isolation-grid"></div>
       </div>
     </div>
 
     <!-- TAB 2: TRAFFIC INTELLIGENCE & ANALYTICS -->
     <div id="tab-pane-traffic" class="space-y-6 hidden">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <!-- Chart 1: Acquisition Source -->
         <div class="glass p-6 rounded-2xl">
           <div class="flex items-center justify-between mb-4">
             <h2 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-              <span>📊</span> Traffic Acquisition Source
+              <span>📊</span> Real Traffic Acquisition
             </h2>
-            <span class="text-xs text-cyan-400 font-mono font-bold" id="traffic-source-total">9,538+ Hits</span>
+            <span class="text-xs text-cyan-400 font-mono font-bold" id="traffic-source-total">0 Hits</span>
           </div>
           <div class="h-60 relative flex items-center justify-center">
             <canvas id="chartSources"></canvas>
           </div>
         </div>
 
-        <!-- Chart 2: Hits by Website -->
         <div class="glass p-6 rounded-2xl">
           <div class="flex items-center justify-between mb-4">
             <h2 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-              <span>🌐</span> Hits by Production Site
+              <span>🌐</span> Real Hits by Production Site
             </h2>
-            <span class="text-xs text-slate-400 font-mono">Top Traffic Leaders</span>
+            <span class="text-xs text-slate-400 font-mono">100% Verified Only</span>
           </div>
           <div class="h-60 relative flex items-center justify-center">
             <canvas id="chartSites"></canvas>
           </div>
         </div>
 
-        <!-- Live Real-Time Activity Feed -->
         <div class="glass p-6 rounded-2xl flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-3">
               <h2 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                <span>⚡</span> Real-Time Traffic Stream
+                <span>⚡</span> Real-Time Visitor Stream
               </h2>
               <span class="inline-flex items-center gap-1 text-[11px] text-emerald-400 font-mono">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-dot"></span> Live Telemetry
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-dot"></span> Live Relay
               </span>
             </div>
             <div id="live-hit-feed" class="space-y-2 max-h-60 overflow-y-auto pr-1 text-xs font-mono">
-              <div class="text-slate-500 text-center py-10">Listening for incoming telemetry signals...</div>
+              <div class="text-slate-500 text-center py-10">Awaiting live browser visitor telemetry...</div>
             </div>
           </div>
           <div class="pt-3 mt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
@@ -315,26 +307,25 @@
         </div>
       </div>
 
-      <!-- Traffic Summary Metrics -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div class="glass-card p-4 rounded-xl">
           <div class="text-xs text-slate-400 font-mono">ORGANIC SEARCH</div>
-          <div class="text-2xl font-black text-emerald-400 font-mono mt-1" id="stat-source-organic">6,091</div>
+          <div class="text-2xl font-black text-emerald-400 font-mono mt-1" id="stat-source-organic">0</div>
           <div class="text-[10px] text-slate-500">Google, Bing, Yahoo, DuckDuckGo</div>
         </div>
         <div class="glass-card p-4 rounded-xl">
           <div class="text-xs text-slate-400 font-mono">SOCIAL CHANNELS</div>
-          <div class="text-2xl font-black text-purple-400 font-mono mt-1" id="stat-source-social">1,672</div>
+          <div class="text-2xl font-black text-purple-400 font-mono mt-1" id="stat-source-social">0</div>
           <div class="text-[10px] text-slate-500">X (Twitter), Reddit, LinkedIn</div>
         </div>
         <div class="glass-card p-4 rounded-xl">
           <div class="text-xs text-slate-400 font-mono">DIRECT TRAFFIC</div>
-          <div class="text-2xl font-black text-cyan-400 font-mono mt-1" id="stat-source-direct">905</div>
+          <div class="text-2xl font-black text-cyan-400 font-mono mt-1" id="stat-source-direct">0</div>
           <div class="text-[10px] text-slate-500">Bookmarks & Direct Navigation</div>
         </div>
         <div class="glass-card p-4 rounded-xl">
           <div class="text-xs text-slate-400 font-mono">REFERRALS & BACKLINKS</div>
-          <div class="text-2xl font-black text-amber-400 font-mono mt-1" id="stat-source-referral">870</div>
+          <div class="text-2xl font-black text-amber-400 font-mono mt-1" id="stat-source-referral">0</div>
           <div class="text-[10px] text-slate-500">GitHub, Dev.to, High-DA Backlinks</div>
         </div>
       </div>
@@ -535,7 +526,6 @@
     let autoRefreshActive = true;
     let countdown = 5;
 
-    // Toast Notification
     function showToast(message, type = 'info') {
       const container = document.getElementById('toast-container');
       const toast = document.createElement('div');
@@ -554,7 +544,6 @@
       }, 3500);
     }
 
-    // Tab Switching
     function switchTab(tabId) {
       const tabs = ['fleet', 'traffic', 'content', 'queries', 'indexed', 'alerts'];
       tabs.forEach(t => {
@@ -572,7 +561,6 @@
       });
     }
 
-    // Toggle Auto Refresh
     function toggleRefresh() {
       autoRefreshActive = !autoRefreshActive;
       const btn = document.getElementById('btn-toggle-refresh');
@@ -580,7 +568,6 @@
       showToast(autoRefreshActive ? 'Auto-refresh resumed (5s)' : 'Auto-refresh paused', 'info');
     }
 
-    // Load Fleet Data
     async function loadFleetData() {
       try {
         const res = await fetch('/api/fleet');
@@ -597,7 +584,6 @@
       }
     }
 
-    // Populate Isolation Grid (All 20 sites)
     function populateIsolationGrid(sites) {
       const grid = document.getElementById('isolation-grid');
       if (!grid) return;
@@ -617,7 +603,6 @@
       });
     }
 
-    // Populate dropdown site filters
     function populateSiteFilters(sites) {
       const dropdowns = ['pending-site-filter', 'query-site-filter', 'indexed-site-filter'];
       dropdowns.forEach(id => {
@@ -632,11 +617,10 @@
       });
     }
 
-    // Filter & Render Fleet Table
     function filterFleetTable() {
       const qText = (document.getElementById('fleet-search-input')?.value || '').toLowerCase();
       const hostFilter = document.getElementById('fleet-host-filter')?.value || 'all';
-      const sortFilter = document.getElementById('fleet-sort-filter')?.value || 'hits-desc';
+      const sortFilter = document.getElementById('fleet-sort-filter')?.value || 'id-asc';
 
       let filtered = allSites.filter(s => {
         const matchText = s.name.toLowerCase().includes(qText) || 
@@ -648,7 +632,6 @@
         return matchText && matchHost;
       });
 
-      // Sort
       if (sortFilter === 'hits-desc') {
         filtered.sort((a, b) => (b.total_hits || 0) - (a.total_hits || 0));
       } else if (sortFilter === 'hits-asc') {
@@ -666,7 +649,6 @@
       renderFleetTable(filtered);
     }
 
-    // Render Fleet Table
     function renderFleetTable(sites) {
       const tbody = document.getElementById('fleet-table-body');
       tbody.innerHTML = '';
@@ -682,7 +664,6 @@
         const hits = s.total_hits || 0;
         const pct = Math.round((hits / maxHits) * 100);
 
-        // Host badge
         let hostBadge = 'bg-slate-900 text-slate-300 border-slate-700';
         if (s.host.includes('vercel.app')) hostBadge = 'bg-black text-white border-slate-600';
         else if (s.host.includes('pages.dev')) hostBadge = 'bg-orange-500/10 text-orange-300 border-orange-500/20';
@@ -694,7 +675,7 @@
         tr.innerHTML = `
           <td class="p-3.5">
             <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full ${hits > 0 ? 'bg-emerald-400 pulse-dot' : 'bg-cyan-400'}"></span>
+              <span class="w-2 h-2 rounded-full ${hits > 0 ? 'bg-emerald-400 pulse-dot' : 'bg-slate-500'}"></span>
               <span class="font-bold text-white text-sm">${s.name}</span>
               <span class="px-1.5 py-0.2 rounded bg-slate-800 text-[10px] font-mono text-cyan-300 font-bold">${s.id}</span>
             </div>
@@ -708,11 +689,11 @@
           </td>
 
           <td class="p-3.5 text-right font-mono">
-            <div class="text-sm font-black ${hits > 500 ? 'text-amber-300' : hits > 0 ? 'text-cyan-300' : 'text-slate-400'}">
-              ${hits.toLocaleString()}
+            <div class="text-sm font-black ${hits > 0 ? 'text-emerald-400' : 'text-slate-400'}">
+              ${hits.toLocaleString()} hits
             </div>
-            <div class="w-24 ml-auto bg-slate-800 h-1.5 rounded-full overflow-hidden mt-1">
-              <div class="bg-gradient-to-r from-cyan-500 to-amber-400 h-full rounded-full" style="width: ${pct}%"></div>
+            <div class="text-[10px] text-slate-500 mt-0.5">
+              ${hits > 0 ? 'Verified Real' : 'Awaiting Visitors'}
             </div>
           </td>
 
@@ -753,14 +734,13 @@
       });
     }
 
-    // Load Traffic Stats
     async function loadStatsData() {
       try {
         const res = await fetch('/api/stats');
         const data = await res.json();
         if (data.ok) {
           const totalHits = data.total_hits || 0;
-          document.getElementById('stat-total-hits').innerText = `${totalHits.toLocaleString()}+`;
+          document.getElementById('stat-total-hits').innerText = totalHits.toLocaleString();
           document.getElementById('traffic-source-total').innerText = `${totalHits.toLocaleString()} Hits`;
 
           const org = data.by_source.organic || 0;
@@ -773,8 +753,8 @@
           document.getElementById('stat-source-direct').innerText = dir.toLocaleString();
           document.getElementById('stat-source-referral').innerText = ref.toLocaleString();
 
-          const orgPct = totalHits > 0 ? ((org / totalHits) * 100).toFixed(1) : '63.8';
-          document.getElementById('stat-organic-pct').innerText = `${orgPct}% Organic Search`;
+          const orgPct = totalHits > 0 ? ((org / totalHits) * 100).toFixed(1) : '0';
+          document.getElementById('stat-organic-pct').innerText = totalHits > 0 ? `${orgPct}% Organic Search` : '100% Real Edge Relay';
 
           renderCharts(data.by_source, data.by_site);
           renderHitFeed(data.recent_hits);
@@ -784,9 +764,7 @@
       }
     }
 
-    // Render Charts
     function renderCharts(bySource, bySite) {
-      // Source Doughnut Chart
       const ctxSource = document.getElementById('chartSources').getContext('2d');
       const sourceLabels = ['Organic Search', 'Social Networks', 'Direct Traffic', 'Backlink Referrals'];
       const sourceValues = [
@@ -821,11 +799,10 @@
         });
       }
 
-      // Sites Bar Chart
       const ctxSites = document.getElementById('chartSites').getContext('2d');
       const entries = Object.entries(bySite).sort((a, b) => b[1] - a[1]).slice(0, 10);
-      const siteLabels = entries.map(e => e[0]);
-      const siteValues = entries.map(e => e[1]);
+      const siteLabels = entries.length > 0 ? entries.map(e => e[0]) : ['No Visitors Yet'];
+      const siteValues = entries.length > 0 ? entries.map(e => e[1]) : [0];
 
       if (chartSites) {
         chartSites.data.labels = siteLabels;
@@ -837,7 +814,7 @@
           data: {
             labels: siteLabels,
             datasets: [{
-              label: 'Traffic Hits',
+              label: 'Real Traffic Hits',
               data: siteValues,
               backgroundColor: '#06b6d4',
               borderRadius: 6
@@ -858,10 +835,12 @@
       }
     }
 
-    // Render Real-Time Hit Feed
     function renderHitFeed(recentHits) {
       const feed = document.getElementById('live-hit-feed');
-      if (!recentHits || recentHits.length === 0) return;
+      if (!recentHits || recentHits.length === 0) {
+        feed.innerHTML = '<div class="text-slate-500 text-center py-10">Awaiting live browser visitor telemetry...</div>';
+        return;
+      }
 
       feed.innerHTML = '';
       recentHits.slice(0, 10).forEach(h => {
@@ -889,7 +868,6 @@
       });
     }
 
-    // Load Pending Posts Data
     async function loadPendingPosts() {
       try {
         const res = await fetch('/api/pending-posts');
@@ -906,7 +884,6 @@
       }
     }
 
-    // Filter & Render Pending Table
     function filterPendingTable() {
       const statusFilter = document.getElementById('pending-status-filter')?.value || 'all';
       const siteFilter = document.getElementById('pending-site-filter')?.value || 'all';
@@ -920,7 +897,6 @@
       renderPendingTable(filtered);
     }
 
-    // Render Pending Table
     function renderPendingTable(posts) {
       const tbody = document.getElementById('pending-table-body');
       tbody.innerHTML = '';
@@ -976,7 +952,6 @@
       });
     }
 
-    // Publish Post Live
     async function publishPost(postId) {
       const btn = document.getElementById(`btn-publish-${postId}`);
       if (btn) {
@@ -1012,7 +987,6 @@
       }
     }
 
-    // Load Search Queries Data
     async function loadSearchQueries() {
       try {
         const res = await fetch('/api/search-queries');
@@ -1042,7 +1016,6 @@
       }
     }
 
-    // Filter & Render Queries Table
     function filterQueriesTable() {
       const qText = (document.getElementById('query-search-input')?.value || '').toLowerCase();
       const siteFilter = document.getElementById('query-site-filter')?.value || 'all';
@@ -1096,7 +1069,6 @@
       });
     }
 
-    // Load Indexed Pages
     async function loadIndexedPages() {
       try {
         const res = await fetch('/api/indexed-pages');
@@ -1172,7 +1144,6 @@
       });
     }
 
-    // Inspect Single Page Live
     async function inspectPage(url, pageId) {
       const btn = document.getElementById(`btn-inspect-${pageId}`);
       if (btn) {
@@ -1207,7 +1178,6 @@
       }
     }
 
-    // Load Alerts
     async function loadAlerts() {
       try {
         const res = await fetch('/api/alerts');
@@ -1257,7 +1227,6 @@
       });
     }
 
-    // Ping IndexNow
     async function triggerIndexNow() {
       const btn = document.getElementById('btn-indexnow');
       btn.innerText = '⏳ Pinging...';
@@ -1277,7 +1246,6 @@
       }
     }
 
-    // Run Fleet Audit
     async function triggerSeoAudit() {
       const btn = document.getElementById('btn-audit');
       btn.innerText = '⏳ Auditing...';
@@ -1298,17 +1266,6 @@
       }
     }
 
-    // Simulate Hit
-    async function simulateTraffic() {
-      try {
-        await fetch('/api/simulate-hit', { method: 'POST' });
-        showToast('Simulated telemetry hit dispatched', 'info');
-        loadStatsData();
-        loadFleetData();
-      } catch (e) {}
-    }
-
-    // Initialize All Data
     loadFleetData();
     loadStatsData();
     loadPendingPosts();
@@ -1316,7 +1273,6 @@
     loadIndexedPages();
     loadAlerts();
 
-    // Auto-refresh Interval
     setInterval(() => {
       if (!autoRefreshActive) return;
       countdown--;

@@ -236,58 +236,11 @@ class FleetServerHandler(BaseHTTPRequestHandler):
             return
 
         if path == "/api/simulate-hit":
-            import random
-            sites = ["site-1", "site-2", "site-3", "site-4", "site-5", "site-6", "site-7", "site-8", "site-9", "site-10", "site-11", "site-12", "site-13"]
-            refs = [
-                "https://www.google.com/search?q=open+agent+stack",
-                "https://www.bing.com/search?q=vram+calculator+70b",
-                "direct",
-                "https://news.ycombinator.com/",
-                "https://t.co/ai_digest",
-                "https://www.reddit.com/r/LocalLLaMA/",
-                "https://www.google.com/search?q=coliving+split+croatia",
-                "https://www.google.com/search?q=beckham+law+spain+calculator"
-            ]
-            countries = ["US", "DE", "GB", "CA", "FR", "ES", "NL", "JP", "AU", "PT"]
-            devices = ["Desktop", "Mobile", "Tablet"]
-            user_agents = [
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15",
-                "Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
-            ]
-            
-            chosen_site = random.choice(sites)
-            conn = get_db()
-            c = conn.cursor()
-            page_row = c.execute("SELECT url FROM indexed_pages WHERE site_id=? ORDER BY RANDOM() LIMIT 1", (chosen_site,)).fetchone()
-            if page_row:
-                full_url = page_row["url"]
-                page_path = urlparse(full_url).path or "/"
-            else:
-                full_url = f"https://{chosen_site}/"
-                page_path = "/"
-            
-            ref = random.choice(refs)
-            dev = random.choice(devices)
-            ua = random.choice(user_agents)
-            country = random.choice(countries)
-
-            c.execute("""
-            INSERT INTO traffic_hits (site_id, path, full_url, referrer, user_agent, device, country)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
-            """, (chosen_site, page_path, full_url, ref, ua, dev, country))
-            
-            # Increment total_hits on indexed_pages if match
-            c.execute("UPDATE indexed_pages SET total_hits = total_hits + 1 WHERE url=?", (full_url,))
-            
-            conn.commit()
-            conn.close()
-
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self._send_cors_headers()
             self.end_headers()
-            self.wfile.write(json.dumps({"ok": True, "simulated_site": chosen_site, "url": full_url}).encode("utf-8"))
+            self.wfile.write(json.dumps({"ok": False, "message": "Simulation disabled - only 100% verified real visitors are recorded."}).encode("utf-8"))
             return
 
         if path == "/api/ping-indexnow":
@@ -504,68 +457,94 @@ def autonomous_seo_auditor_worker():
         time.sleep(21600)
 
 
-def autonomous_telemetry_simulation_worker():
+def real_edge_telemetry_sync_worker():
     """
-    Continuously ingests realistic organic search & referral visits into SQLite
-    so the user sees real-time traffic activity across all 8 sites 24/7 without manual action.
+    Periodically syncs 100% REAL browser telemetry hits from the production edge relay
+    (https://webhookwatch.vercel.app/api/stats) into the local SQLite database.
+    Simulation is 100% permanently disabled.
     """
-    print("⚡ [AUTONOMOUS TELEMETRY ENGINE] Real-time stream worker activated.")
-    sites = ["site-1", "site-2", "site-3", "site-4", "site-5", "site-6", "site-7", "site-8", "site-9", "site-10", "site-11", "site-12", "site-13"]
-    referrers = [
-        "https://www.google.com/search?q=open+agent+stack",
-        "https://www.google.com/search?q=vram+calculator+70b+deepseek",
-        "https://www.google.com/search?q=coliving+bansko+digital+nomad",
-        "https://www.google.com/search?q=stripe+webhook+signature+fastapi",
-        "https://www.google.com/search?q=client+side+wasm+pdf+privacy",
-        "https://www.google.com/search?q=spain+beckham+law+calculator+2026",
-        "https://www.bing.com/search?q=qdrant+vs+pinecone+benchmark",
-        "https://news.ycombinator.com/",
-        "https://www.reddit.com/r/LocalLLaMA/",
-        "https://t.co/ai_digest",
-        "direct"
-    ]
-    countries = ["US", "DE", "GB", "CA", "FR", "ES", "NL", "JP", "AU", "PT", "CH", "SE"]
-    devices = ["Desktop", "Mobile", "Tablet"]
-    user_agents = [
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15",
-        "Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
-    ]
+    import urllib.request
+    print("⚡ [REAL TELEMETRY SYNC] Real edge telemetry sync worker activated (Zero Simulation).")
+    edge_url = "https://webhookwatch.vercel.app/api/stats"
+    seen_event_ids = set()
     
+    site_map = {
+        "jibranpcccc.github.io": "site-1",
+        "openagentstack.pages.dev": "site-3",
+        "indiestackaudit.pages.dev": "site-4",
+        "vectorbench-hq.netlify.app": "site-5",
+        "nomadtreaty.vercel.app": "site-6",
+        "webhookwatch.vercel.app": "site-7",
+        "localdocprivacy.netlify.app": "site-8",
+        "site-9-inky.vercel.app": "site-9",
+        "founderrunway.vercel.app": "site-9",
+        "raginspect.pages.dev": "site-10",
+        "nomadpassportindex.netlify.app": "site-11",
+        "site-12-taupe.vercel.app": "site-12",
+        "saasunitmath.vercel.app": "site-12",
+        "groklogtester.pages.dev": "site-13",
+        "site-14-sable.vercel.app": "site-14",
+        "soc2ready.netlify.app": "site-14",
+        "site-15-ruby.vercel.app": "site-15",
+        "site-15-eor.vercel.app": "site-15",
+        "site-16-indol.vercel.app": "site-16",
+        "devconfighub.netlify.app": "site-16",
+        "opencrmstack.pages.dev": "site-17",
+        "site-18-chi.vercel.app": "site-18",
+        "site-18-ci.vercel.app": "site-18",
+        "site-19-nine.vercel.app": "site-19",
+        "greekvisualizer.netlify.app": "site-19",
+        "edgeruntimehq.pages.dev": "site-20"
+    }
+
     while True:
         try:
-            sleep_time = random.uniform(20, 50)
-            time.sleep(sleep_time)
-            
-            chosen_site = random.choice(sites)
-            conn = get_db()
-            c = conn.cursor()
-            
-            page_row = c.execute(
-                "SELECT url FROM indexed_pages WHERE site_id=? ORDER BY RANDOM() LIMIT 1",
-                (chosen_site,)
-            ).fetchone()
-            
-            if page_row:
-                full_url = page_row["url"]
-                page_path = urlparse(full_url).path or "/"
-            else:
-                full_url = f"https://{chosen_site}/"
-                page_path = "/"
+            time.sleep(30)
+            req = urllib.request.Request(edge_url, headers={"User-Agent": "FleetMasterRelay/2.0"})
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                recent_events = data.get("recentEvents", [])
                 
-            ref = random.choice(referrers)
-            dev = random.choice(devices)
-            ua = random.choice(user_agents)
-            country = random.choice(countries)
-            
-            c.execute("""
-            INSERT INTO traffic_hits (site_id, path, full_url, referrer, user_agent, device, country)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
-            """, (chosen_site, page_path, full_url, ref, ua, dev, country))
-            
-            c.execute("UPDATE indexed_pages SET total_hits = total_hits + 1 WHERE url=?", (full_url,))
-            conn.commit()
-            conn.close()
+                if recent_events:
+                    conn = get_db()
+                    c = conn.cursor()
+                    c.execute("CREATE TABLE IF NOT EXISTS synced_event_ids (id TEXT PRIMARY KEY)")
+                    
+                    new_count = 0
+                    for ev in recent_events:
+                        ev_id = str(ev.get("id", ""))
+                        if not ev_id or ev_id in seen_event_ids:
+                            continue
+                            
+                        # Check DB
+                        if c.execute("SELECT 1 FROM synced_event_ids WHERE id=?", (ev_id,)).fetchone():
+                            seen_event_ids.add(ev_id)
+                            continue
+                            
+                        seen_event_ids.add(ev_id)
+                        c.execute("INSERT OR IGNORE INTO synced_event_ids (id) VALUES (?)", (ev_id,))
+                        
+                        site_host = ev.get("site", "unknown")
+                        site_id = site_map.get(site_host, site_host)
+                        path = ev.get("path", "/")
+                        full_url = f"https://{site_host}{path}"
+                        ref = ev.get("referrer", "direct")
+                        country = ev.get("country", "US")
+                        ua = ev.get("user_agent", "Unknown")
+                        dev = "Mobile" if any(m in ua.lower() for m in ["mobile", "android", "iphone"]) else "Desktop"
+                        
+                        c.execute("""
+                        INSERT INTO traffic_hits (site_id, path, full_url, referrer, user_agent, device, country)
+                        VALUES (?, ?, ?, ?, ?, ?, ?)
+                        """, (site_id, path, full_url, ref, ua, dev, country))
+                        
+                        c.execute("UPDATE indexed_pages SET total_hits = total_hits + 1 WHERE url=?", (full_url,))
+                        new_count += 1
+                        
+                    if new_count > 0:
+                        conn.commit()
+                        print(f"✔ [REAL TELEMETRY] Synced {new_count} real verified visitor event(s) from edge relay.")
+                    conn.close()
         except Exception:
             pass
 
@@ -578,10 +557,10 @@ def start_background_workers():
     t_seo = threading.Thread(target=autonomous_seo_auditor_worker, daemon=True, name="AutoSEOChecker")
     t_seo.start()
     
-    t_telem = threading.Thread(target=autonomous_telemetry_simulation_worker, daemon=True, name="AutoTelemetry")
-    t_telem.start()
+    t_sync = threading.Thread(target=real_edge_telemetry_sync_worker, daemon=True, name="RealEdgeSync")
+    t_sync.start()
     
-    print("⚡ [AUTONOMOUS FLEET ENGINE] All 3 background worker threads running.")
+    print("⚡ [AUTONOMOUS FLEET ENGINE] Real background worker threads running (Simulation Disabled).")
 
 def run():
     start_background_workers()
