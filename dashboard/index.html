@@ -149,11 +149,11 @@
 
     <div class="glass-card p-4 rounded-xl border-l-4 border-l-rose-500">
       <div class="flex items-center justify-between text-[11px] text-slate-400 font-mono mb-1">
-        <span>AVG SERP RANK</span>
-        <span class="text-rose-400 font-bold">Top 3</span>
+        <span>LIVE SERP RANK</span>
+        <span class="text-rose-400 font-bold" id="stat-avg-pos-badge">Pending Sync</span>
       </div>
-      <div class="text-2xl font-black text-white font-mono" id="stat-avg-position">#2.8</div>
-      <div class="text-[10px] text-slate-500 mt-0.5 truncate">Across Monitored Queries</div>
+      <div class="text-2xl font-black text-white font-mono" id="stat-avg-position">--</div>
+      <div class="text-[10px] text-slate-500 mt-0.5 truncate">0 Live Impressions (48h Lag)</div>
     </div>
   </div>
 
@@ -387,24 +387,24 @@
     <div id="tab-pane-queries" class="space-y-6 hidden">
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <div class="glass-card p-4 rounded-xl">
-          <div class="text-xs text-slate-400 font-mono">TOTAL IMPRESSIONS</div>
-          <div class="text-2xl font-black text-cyan-400 font-mono mt-1" id="gsc-stat-impressions">27,150</div>
-          <div class="text-[10px] text-slate-500">Past 28 Days</div>
+          <div class="text-xs text-slate-400 font-mono">LIVE GSC IMPRESSIONS</div>
+          <div class="text-2xl font-black text-cyan-400 font-mono mt-1" id="gsc-stat-impressions">0</div>
+          <div class="text-[10px] text-slate-500">Googlebot Syncing (48h Lag)</div>
         </div>
         <div class="glass-card p-4 rounded-xl">
-          <div class="text-xs text-slate-400 font-mono">TOTAL CLICKS</div>
-          <div class="text-2xl font-black text-emerald-400 font-mono mt-1" id="gsc-stat-clicks">1,940</div>
-          <div class="text-[10px] text-slate-500">Direct Organic Traffic</div>
+          <div class="text-xs text-slate-400 font-mono">LIVE GSC CLICKS</div>
+          <div class="text-2xl font-black text-emerald-400 font-mono mt-1" id="gsc-stat-clicks">0</div>
+          <div class="text-[10px] text-slate-500">Real Organic Visitors</div>
         </div>
         <div class="glass-card p-4 rounded-xl">
-          <div class="text-xs text-slate-400 font-mono">AVERAGE CTR</div>
-          <div class="text-2xl font-black text-purple-400 font-mono mt-1" id="gsc-stat-ctr">7.15%</div>
-          <div class="text-[10px] text-slate-500">Above Industry Avg (3.2%)</div>
+          <div class="text-xs text-slate-400 font-mono">LIVE CTR</div>
+          <div class="text-2xl font-black text-purple-400 font-mono mt-1" id="gsc-stat-ctr">0.00%</div>
+          <div class="text-[10px] text-slate-500">Awaiting Impressions</div>
         </div>
         <div class="glass-card p-4 rounded-xl">
-          <div class="text-xs text-slate-400 font-mono">AVERAGE POSITION</div>
-          <div class="text-2xl font-black text-amber-400 font-mono mt-1" id="gsc-stat-pos">#2.8</div>
-          <div class="text-[10px] text-slate-500">Top-3 SERP Dominance</div>
+          <div class="text-xs text-slate-400 font-mono">LIVE SERP RANK</div>
+          <div class="text-2xl font-black text-amber-400 font-mono mt-1" id="gsc-stat-pos">--</div>
+          <div class="text-[10px] text-slate-500">Pending Live GSC Telemetry</div>
         </div>
       </div>
 
@@ -412,9 +412,9 @@
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-6 border-b border-slate-800/80">
           <div>
             <h2 class="text-base sm:text-lg font-black text-white flex items-center gap-2">
-              <span>🔎</span> High-Intent Search Queries & Keyword Rankings
+              <span>🔎</span> Monitored Target Keywords & Live GSC Telemetry
             </h2>
-            <p class="text-xs text-slate-400 mt-1">Live ranking signals, clicks, impressions, and positions across search engines.</p>
+            <p class="text-xs text-slate-400 mt-1">Live ranking signals, clicks, impressions, and positions populate as Googlebot processes sitemaps (48–72h standard delay).</p>
           </div>
 
           <div class="flex items-center gap-3">
@@ -429,13 +429,13 @@
           <table class="w-full text-left text-xs border border-slate-800/80 rounded-xl overflow-hidden">
             <thead class="bg-slate-900/90 text-white font-semibold font-mono uppercase tracking-wider text-[11px]">
               <tr>
-                <th class="p-3.5 border-b border-slate-800">Search Query</th>
+                <th class="p-3.5 border-b border-slate-800">Target Keyword</th>
                 <th class="p-3.5 border-b border-slate-800">Site ID</th>
-                <th class="p-3.5 border-b border-slate-800">Impressions</th>
-                <th class="p-3.5 border-b border-slate-800">Clicks</th>
-                <th class="p-3.5 border-b border-slate-800">CTR</th>
-                <th class="p-3.5 border-b border-slate-800">Position</th>
-                <th class="p-3.5 border-b border-slate-800">Ranking Page</th>
+                <th class="p-3.5 border-b border-slate-800">Live Impressions</th>
+                <th class="p-3.5 border-b border-slate-800">Live Clicks</th>
+                <th class="p-3.5 border-b border-slate-800">Live CTR</th>
+                <th class="p-3.5 border-b border-slate-800">Live Position</th>
+                <th class="p-3.5 border-b border-slate-800">Target Page</th>
               </tr>
             </thead>
             <tbody id="queries-table-body" class="divide-y divide-slate-800/60 bg-slate-950/40">
@@ -1007,19 +1007,25 @@
           renderQueriesTable(allQueries);
 
           let totalImpr = 0, totalClicks = 0, posSum = 0;
+          let rankedCount = 0;
           data.queries.forEach(q => {
-            totalImpr += q.impressions;
-            totalClicks += q.clicks;
-            posSum += q.position;
+            totalImpr += q.impressions || 0;
+            totalClicks += q.clicks || 0;
+            if (q.position && q.position > 0) {
+              posSum += q.position;
+              rankedCount++;
+            }
           });
-          const avgPos = (posSum / (data.queries.length || 1)).toFixed(1);
-          const avgCtr = ((totalClicks / (totalImpr || 1)) * 100).toFixed(2);
+          const avgPos = rankedCount > 0 ? (posSum / rankedCount).toFixed(1) : '--';
+          const avgCtr = totalImpr > 0 ? ((totalClicks / totalImpr) * 100).toFixed(2) : '0.00';
 
           document.getElementById('gsc-stat-impressions').innerText = totalImpr.toLocaleString();
           document.getElementById('gsc-stat-clicks').innerText = totalClicks.toLocaleString();
           document.getElementById('gsc-stat-ctr').innerText = `${avgCtr}%`;
-          document.getElementById('gsc-stat-pos').innerText = `#${avgPos}`;
-          document.getElementById('stat-avg-position').innerText = `#${avgPos}`;
+          document.getElementById('gsc-stat-pos').innerText = avgPos === '--' ? '--' : `#${avgPos}`;
+          document.getElementById('stat-avg-position').innerText = avgPos === '--' ? '--' : `#${avgPos}`;
+          const badge = document.getElementById('stat-avg-pos-badge');
+          if (badge) badge.innerText = avgPos === '--' ? 'Pending Sync' : 'Live SERP';
         }
       } catch (err) {
         console.warn('Search queries API error', err);
@@ -1050,9 +1056,14 @@
         const tr = document.createElement('tr');
         tr.className = 'hover:bg-slate-900/40 transition-colors';
 
-        let posBadge = 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20';
-        if (q.position > 3 && q.position <= 10) posBadge = 'bg-cyan-500/10 text-cyan-300 border-cyan-500/20';
-        else if (q.position > 10) posBadge = 'bg-amber-500/10 text-amber-300 border-amber-500/20';
+        let posBadge = 'bg-slate-900 text-slate-400 border-slate-800';
+        let posText = 'Pending GSC';
+        if (q.position && q.position > 0) {
+          posText = `#${q.position}`;
+          if (q.position <= 3) posBadge = 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20 font-bold';
+          else if (q.position <= 10) posBadge = 'bg-cyan-500/10 text-cyan-300 border-cyan-500/20';
+          else posBadge = 'bg-amber-500/10 text-amber-300 border-amber-500/20';
+        }
 
         tr.innerHTML = `
           <td class="p-3.5 font-bold text-white flex items-center gap-2">
@@ -1061,12 +1072,12 @@
           <td class="p-3.5 font-mono">
             <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-cyan-300 text-[11px]">${q.site_id}</span>
           </td>
-          <td class="p-3.5 text-slate-300 font-mono">${q.impressions.toLocaleString()}</td>
-          <td class="p-3.5 text-emerald-400 font-bold font-mono">${q.clicks.toLocaleString()}</td>
-          <td class="p-3.5 text-purple-300 font-mono">${q.ctr}%</td>
+          <td class="p-3.5 text-slate-300 font-mono">${(q.impressions || 0).toLocaleString()}</td>
+          <td class="p-3.5 text-emerald-400 font-bold font-mono">${(q.clicks || 0).toLocaleString()}</td>
+          <td class="p-3.5 text-purple-300 font-mono">${(q.ctr || 0)}%</td>
           <td class="p-3.5 font-mono">
-            <span class="px-2 py-0.5 rounded border ${posBadge} font-bold">
-              #${q.position}
+            <span class="px-2 py-0.5 rounded border ${posBadge} font-semibold text-[11px]">
+              ${posText}
             </span>
           </td>
           <td class="p-3.5 font-mono">
