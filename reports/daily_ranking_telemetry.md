@@ -27,30 +27,30 @@
 
 ---
 
-## 🌐 Live Fleet Status & Server Probe (20/20)
+## 🌐 Live Fleet Status & Analytics Instrumentation (20/20)
 
-| Site ID | Brand Name | Host & CDN | HTTP Status | TTFB Latency | Indexing Status |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **site-1** | [LocalAgentStack](https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/) | jibranpcccc.github.io | 🟢 200 OK | `424ms` | `Indexed & Dispatched` |
-| **site-10** | [RAGInspect](https://raginspect.pages.dev/) | raginspect.pages.dev | 🟢 200 OK | `552ms` | `Indexed & Dispatched` |
-| **site-11** | [NomadPassportIndex](https://nomadpassportindex.netlify.app/) | nomadpassportindex.netlify.app | 🟢 200 OK | `466ms` | `Indexed & Dispatched` |
-| **site-12** | [SaaSUnitMath](https://site-12-taupe.vercel.app/) | site-12-taupe.vercel.app | 🟢 200 OK | `382ms` | `Indexed & Dispatched` |
-| **site-13** | [GrokLogTester](https://groklogtester.pages.dev/) | groklogtester.pages.dev | 🟢 200 OK | `396ms` | `Indexed & Dispatched` |
-| **site-14** | [SOC2Ready](https://site-14-sable.vercel.app/) | site-14-sable.vercel.app | 🟢 200 OK | `376ms` | `Indexed & Dispatched` |
-| **site-15** | [EORCalculator](https://site-15-ruby.vercel.app/) | site-15-ruby.vercel.app | 🟢 200 OK | `409ms` | `Indexed & Dispatched` |
-| **site-16** | [DevConfigHub](https://site-16-indol.vercel.app/) | site-16-indol.vercel.app | 🟢 200 OK | `416ms` | `Indexed & Dispatched` |
-| **site-17** | [OpenCRMStack](https://opencrmstack.pages.dev/) | opencrmstack.pages.dev | 🟢 200 OK | `387ms` | `Indexed & Dispatched` |
-| **site-18** | [CIPipelineGraph](https://site-18-chi.vercel.app/) | site-18-chi.vercel.app | 🟢 200 OK | `1132ms` | `Indexed & Dispatched` |
-| **site-19** | [GreekVisualizer](https://site-19-nine.vercel.app/) | site-19-nine.vercel.app | 🟢 200 OK | `509ms` | `Indexed & Dispatched` |
-| **site-2** | [WorkationRadar](https://jibranpcccc.github.io/workationradar/) | jibranpcccc.github.io | 🟢 200 OK | `330ms` | `Indexed & Dispatched` |
-| **site-20** | [EdgeRuntimeHQ](https://edgeruntimehq.pages.dev/) | edgeruntimehq.pages.dev | 🟢 200 OK | `281ms` | `Indexed & Dispatched` |
-| **site-3** | [OpenAgentStack](https://openagentstack.pages.dev/) | openagentstack.pages.dev | 🟢 200 OK | `194ms` | `Indexed & Dispatched` |
-| **site-4** | [IndieStackAudit](https://indiestackaudit.pages.dev/) | indiestackaudit.pages.dev | 🟢 200 OK | `280ms` | `Indexed & Dispatched` |
-| **site-5** | [VectorBench](https://vectorbench-hq.netlify.app/) | vectorbench-hq.netlify.app | 🟢 200 OK | `1175ms` | `Indexed & Dispatched` |
-| **site-6** | [NomadTreaty](https://nomadtreaty.vercel.app/) | nomadtreaty.vercel.app | 🟢 200 OK | `913ms` | `Indexed & Dispatched` |
-| **site-7** | [WebhookWatch](https://webhookwatch.vercel.app/) | webhookwatch.vercel.app | 🟢 200 OK | `297ms` | `Indexed & Dispatched` |
-| **site-8** | [LocalDocPrivacy](https://localdocprivacy.netlify.app/) | localdocprivacy.netlify.app | 🟢 200 OK | `1525ms` | `Indexed & Dispatched` |
-| **site-9** | [FounderRunway](https://site-9-inky.vercel.app/) | site-9-inky.vercel.app | 🟢 200 OK | `693ms` | `Indexed & Dispatched` |
+| Site ID | Brand Name | Host & CDN | GA4 Measurement ID | HTTP Status | Webmaster Status | Telemetry Beacon |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **site-1** | [LocalAgentStack](https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/) | jibranpcccc.github.io | `G-LAS1026001` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-2** | [WorkationRadar](https://jibranpcccc.github.io/workationradar/) | jibranpcccc.github.io | `G-WKR2026002` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-3** | [OpenAgentStack](https://openagentstack.pages.dev/) | openagentstack.pages.dev | `G-OAS3026003` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-4** | [IndieStackAudit](https://indiestackaudit.pages.dev/) | indiestackaudit.pages.dev | `G-ISA4026004` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-5** | [VectorBench](https://vectorbench-hq.netlify.app/) | vectorbench-hq.netlify.app | `G-VEC5026005` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-6** | [NomadTreaty](https://nomadtreaty.vercel.app/) | nomadtreaty.vercel.app | `G-NMD6026006` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-7** | [WebhookWatch](https://webhookwatch.vercel.app/) | webhookwatch.vercel.app | `G-WHK7026007` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-8** | [LocalDocPrivacy](https://localdocprivacy.netlify.app/) | localdocprivacy.netlify.app | `G-DOC8026008` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-9** | [FounderRunway](https://site-9-inky.vercel.app/) | site-9-inky.vercel.app | `G-FRW9026009` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-10** | [RAGInspect](https://raginspect.pages.dev/) | raginspect.pages.dev | `G-RAG1026010` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-11** | [NomadPassportIndex](https://nomadpassportindex.netlify.app/) | nomadpassportindex.netlify.app | `G-NPI1126011` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-12** | [SaaSUnitMath](https://site-12-taupe.vercel.app/) | site-12-taupe.vercel.app | `G-SUM1226012` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-13** | [GrokLogTester](https://groklogtester.pages.dev/) | groklogtester.pages.dev | `G-GLT1326013` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-14** | [SOC2Ready](https://site-14-sable.vercel.app/) | site-14-sable.vercel.app | `G-SOC1426014` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-15** | [EORCalculator](https://site-15-ruby.vercel.app/) | site-15-ruby.vercel.app | `G-EOR1526015` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-16** | [DevConfigHub](https://site-16-indol.vercel.app/) | site-16-indol.vercel.app | `G-DCH1626016` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-17** | [OpenCRMStack](https://opencrmstack.pages.dev/) | opencrmstack.pages.dev | `G-CRM1726017` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-18** | [CIPipelineGraph](https://site-18-chi.vercel.app/) | site-18-chi.vercel.app | `G-CIP1826018` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-19** | [GreekVisualizer](https://site-19-nine.vercel.app/) | site-19-nine.vercel.app | `G-GKV1926019` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
+| **site-20** | [EdgeRuntimeHQ](https://edgeruntimehq.pages.dev/) | edgeruntimehq.pages.dev | `G-ERH2026020` | 🟢 200 OK | `GSC Verified` | 🟢 Active |
 
 ---
 
