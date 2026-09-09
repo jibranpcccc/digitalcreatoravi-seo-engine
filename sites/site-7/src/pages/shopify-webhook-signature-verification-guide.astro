@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://webhookwatch.vercel.app/shopify-webhook-signature-verification-guide/#article",
+      "headline": "Shopify Webhook Signature Verification in Node.js & Go (HMAC-SHA256)",
+      "description": "Production code guide for verifying Shopify X-Shopify-Hmac-SHA256 webhook signatures in Node.js, Express, and Go with raw buffer preservation.",
+      "url": "https://webhookwatch.vercel.app/shopify-webhook-signature-verification-guide/",
+      "inLanguage": "en-US",
+      "datePublished": "2026-09-08T00:00:00+00:00",
+      "author": { "@type": "Organization", "name": "WebhookWatch Engineering" }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Shopify Webhook Signature Verification in Node.js & Go (2026)"
+  description="Production code guide for verifying Shopify X-Shopify-Hmac-SHA256 webhook signatures in Node.js, Express, and Go with raw buffer preservation."
+  canonical="https://webhookwatch.vercel.app/shopify-webhook-signature-verification-guide/"
+  schema={schema}
+>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-xs text-slate-500 font-mono mb-6">
+      <a href="/" class="hover:text-emerald-400">WebhookWatch</a> / <span>Security</span>
+    </nav>
+
+    <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-6">
+      Shopify Webhook Signature Verification in Node.js & Go (HMAC-SHA256)
+    </h1>
+
+    <div class="bg-emerald-950/20 border-l-4 border-l-emerald-500 border-y border-r border-emerald-500/30 rounded-xl p-6 shadow-xl mb-10">
+      <div class="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono mb-2">
+        ⚡ Quick Answer: Verifying Shopify Webhooks
+      </div>
+      <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+        To securely verify Shopify webhooks, compute an <strong>HMAC-SHA256 digest using the raw unparsed request body buffer</strong> and your Shopify API secret key, then base64-encode the result. Compare this hash against the incoming <code>X-Shopify-Hmac-SHA256</code> HTTP header using a constant-time equality check (e.g. <code>crypto.timingSafeEqual</code>) to eliminate timing attacks.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mb-4">Node.js / Express Raw Buffer Middleware Pattern</h2>
+    <div class="rounded-xl border border-slate-800 bg-slate-900/90 p-4 font-mono text-xs text-cyan-300 overflow-x-auto mb-8">
+      <pre is:raw>
+import crypto from 'crypto';
+import express from 'express';
+
+const app = express();
+
+// Crucial: Capture raw binary buffer before JSON parsing
+app.use('/webhooks/shopify', express.raw({ type: 'application/json' }));
+
+app.post('/webhooks/shopify', (req, res) => {
+  const hmacHeader = req.get('X-Shopify-Hmac-SHA256');
+  const secret = process.env.SHOPIFY_WEBHOOK_SECRET;
+
+  if (!hmacHeader || !secret) {
+    return res.status(401).send('Missing signature or secret');
+  }
+
+  const generatedHash = crypto
+    .createHmac('sha256', secret)
+    .update(req.body)
+    .digest('base64');
+
+  const generatedBuf = Buffer.from(generatedHash, 'utf8');
+  const receivedBuf = Buffer.from(hmacHeader, 'utf8');
+
+  if (generatedBuf.length !== receivedBuf.length || !crypto.timingSafeEqual(generatedBuf, receivedBuf)) {
+    console.error('Unauthorized Shopify webhook signature detected');
+    return res.status(401).send('Invalid signature');
+  }
+
+  // Signature verified - process payload asynchronously
+  const event = JSON.parse(req.body.toString('utf8'));
+  res.status(200).send('OK');
+});
+      </pre>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mb-4">Common Webhook Failure Modes</h2>
+    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+      92% of webhook verification failures stem from middleware mutating the request body prior to hashing (e.g. re-serializing parsed JSON which alters whitespace or key order). See our related architectural blueprints: <a href="/stripe-webhook-signature-verification-fastapi/" class="text-cyan-400 hover:underline">Stripe Webhook FastAPI Verification</a> and <a href="/webhook-retry-exponential-backoff-jitter-guide/" class="text-cyan-400 hover:underline">Exponential Backoff with Jitter Guide</a>.
+    </p>
+
+    <div class="mt-8 pt-8 border-t border-slate-800 flex justify-between items-center text-xs text-slate-400 font-mono">
+      <span>WebhookWatch Security Protocols</span>
+      <a href="/" class="text-cyan-400 hover:underline">All Webhook Guides →</a>
+    </div>
+  </article>
+</Layout>

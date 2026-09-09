@@ -20,7 +20,8 @@ SITES_CONFIG = [
             "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/vram-requirements-calculator-70b/",
             "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-local-setup-ollama/",
             "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/mac-studio-m4-max-llm-benchmarks/",
-            "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/agents/custom-mcp-server-python-tutorial/"
+            "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/agents/custom-mcp-server-python-tutorial/",
+            "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/rtx-5090-vs-4090-local-llm-benchmark/"
         ]
     },
     {
@@ -36,7 +37,8 @@ SITES_CONFIG = [
             "https://jibranpcccc.github.io/workationradar/city/Madeira/",
             "https://jibranpcccc.github.io/workationradar/city/Bansko/",
             "https://jibranpcccc.github.io/workationradar/city/Bali/",
-            "https://jibranpcccc.github.io/workationradar/city/Lisbon/"
+            "https://jibranpcccc.github.io/workationradar/city/Lisbon/",
+            "https://jibranpcccc.github.io/workationradar/split-croatia-coliving-guide/"
         ]
     },
     {
@@ -49,7 +51,8 @@ SITES_CONFIG = [
             "https://openagentstack.pages.dev/agents/langgraph-vs-autogen-multi-agent-orchestration-cost/",
             "https://openagentstack.pages.dev/protocols/building-production-mcp-servers-fastapi-sse/",
             "https://openagentstack.pages.dev/frameworks/smolagents-vs-crewai-lightweight-python-agents/",
-            "https://openagentstack.pages.dev/protocols/mcp-authorization-oauth2-bearer-tokens-guide/"
+            "https://openagentstack.pages.dev/protocols/mcp-authorization-oauth2-bearer-tokens-guide/",
+            "https://openagentstack.pages.dev/mcp/mcp-server-docker-kubernetes-guide/"
         ]
     },
     {
@@ -62,7 +65,8 @@ SITES_CONFIG = [
             "https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/",
             "https://indiestackaudit.pages.dev/stacks/self-hosted-supabase-vs-managed-neon-postgres-cost-math/",
             "https://indiestackaudit.pages.dev/stacks/zero-cost-saas-stack-cloudflare-pages-turso-resend/",
-            "https://indiestackaudit.pages.dev/billing/open-source-auth-comparison-clerk-lucia-better-auth/"
+            "https://indiestackaudit.pages.dev/billing/open-source-auth-comparison-clerk-lucia-better-auth/",
+            "https://indiestackaudit.pages.dev/stacks/drizzle-vs-prisma-neon-postgres-cold-starts/"
         ]
     },
     {
@@ -73,7 +77,8 @@ SITES_CONFIG = [
             "https://vectorbench-hq.netlify.app/",
             "https://vectorbench-hq.netlify.app/qdrant-vs-pinecone-benchmark-2026/",
             "https://vectorbench-hq.netlify.app/pgvector-production-tuning-guide/",
-            "https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/"
+            "https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/",
+            "https://vectorbench-hq.netlify.app/milvus-vs-qdrant-billion-scale-benchmark/"
         ]
     },
     {
@@ -84,7 +89,8 @@ SITES_CONFIG = [
             "https://nomadtreaty.vercel.app/",
             "https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/",
             "https://nomadtreaty.vercel.app/portugal-nhr-tax-nomad-calculator-2026/",
-            "https://nomadtreaty.vercel.app/183-day-rule-tax-residency-nomad-guide/"
+            "https://nomadtreaty.vercel.app/183-day-rule-tax-residency-nomad-guide/",
+            "https://nomadtreaty.vercel.app/cyprus-non-dom-tax-nomad-guide/"
         ]
     },
     {
@@ -95,7 +101,8 @@ SITES_CONFIG = [
             "https://webhookwatch.vercel.app/",
             "https://webhookwatch.vercel.app/stripe-webhook-signature-verification-fastapi/",
             "https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/",
-            "https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/"
+            "https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/",
+            "https://webhookwatch.vercel.app/shopify-webhook-signature-verification-guide/"
         ]
     },
     {
@@ -106,7 +113,8 @@ SITES_CONFIG = [
             "https://localdocprivacy.netlify.app/",
             "https://localdocprivacy.netlify.app/redact-pdf-locally-browser-wasm-guide/",
             "https://localdocprivacy.netlify.app/convert-pdf-to-markdown-offline-guide/",
-            "https://localdocprivacy.netlify.app/client-side-vs-cloud-pdf-privacy-audit/"
+            "https://localdocprivacy.netlify.app/client-side-vs-cloud-pdf-privacy-audit/",
+            "https://localdocprivacy.netlify.app/client-side-pdf-compression-wasm-guide/"
         ]
     },
     {
@@ -117,7 +125,8 @@ SITES_CONFIG = [
             "https://site-9-inky.vercel.app/",
             "https://site-9-inky.vercel.app/chiang-mai-vs-bali-runway-calculator/",
             "https://site-9-inky.vercel.app/lisbon-nhr-tax-runway-founder-guide/",
-            "https://site-9-inky.vercel.app/top-latin-america-tech-hubs-for-bootstrappers/"
+            "https://site-9-inky.vercel.app/top-latin-america-tech-hubs-for-bootstrappers/",
+            "https://site-9-inky.vercel.app/lisbon-d8-visa-minimum-income-bootstrappers/"
         ]
     },
     {
@@ -128,7 +137,8 @@ SITES_CONFIG = [
             "https://raginspect.pages.dev/",
             "https://raginspect.pages.dev/semantic-chunking-vs-fixed-size-rag-benchmarks/",
             "https://raginspect.pages.dev/hybrid-search-bm25-vs-dense-vector-accuracy/",
-            "https://raginspect.pages.dev/ragas-vs-trulens-rag-evaluation-frameworks/"
+            "https://raginspect.pages.dev/ragas-vs-trulens-rag-evaluation-frameworks/",
+            "https://raginspect.pages.dev/late-chunking-vs-sentence-window-retrieval-benchmark/"
         ]
     },
     {
@@ -139,7 +149,8 @@ SITES_CONFIG = [
             "https://nomadpassportindex.netlify.app/",
             "https://nomadpassportindex.netlify.app/spain-digital-nomad-visa-income-requirements/",
             "https://nomadpassportindex.netlify.app/japan-digital-nomad-visa-guide-tax-exemption/",
-            "https://nomadpassportindex.netlify.app/easiest-digital-nomad-visas-in-europe-2026/"
+            "https://nomadpassportindex.netlify.app/easiest-digital-nomad-visas-in-europe-2026/",
+            "https://nomadpassportindex.netlify.app/greece-digital-nomad-visa-income-requirements/"
         ]
     },
     {
@@ -150,7 +161,8 @@ SITES_CONFIG = [
             "https://site-12-taupe.vercel.app/",
             "https://site-12-taupe.vercel.app/saas-ltv-cac-payback-period-calculator/",
             "https://site-12-taupe.vercel.app/b2b-saas-churn-benchmarks-by-acv-2026/",
-            "https://site-12-taupe.vercel.app/rule-of-40-saas-valuation-growth-model/"
+            "https://site-12-taupe.vercel.app/rule-of-40-saas-valuation-growth-model/",
+            "https://site-12-taupe.vercel.app/net-revenue-retention-nrr-benchmark-bootstrapped-saas/"
         ]
     },
     {
@@ -161,7 +173,8 @@ SITES_CONFIG = [
             "https://groklogtester.pages.dev/",
             "https://groklogtester.pages.dev/nginx-access-log-grok-pattern-generator/",
             "https://groklogtester.pages.dev/aws-alb-access-log-regex-parser/",
-            "https://groklogtester.pages.dev/high-throughput-log-parsing-vector-vs-fluentbit/"
+            "https://groklogtester.pages.dev/high-throughput-log-parsing-vector-vs-fluentbit/",
+            "https://groklogtester.pages.dev/caddy-server-json-access-log-grok-patterns/"
         ]
     },
     {
@@ -172,7 +185,8 @@ SITES_CONFIG = [
             "https://site-14-sable.vercel.app/",
             "https://site-14-sable.vercel.app/soc-2-type-1-vs-type-2-compliance-timeline-cost/",
             "https://site-14-sable.vercel.app/vanta-vs-drata-vs-secureframe-compliance-automation-review/",
-            "https://site-14-sable.vercel.app/soc-2-compliance-for-bootstrapped-startups-under-20k/"
+            "https://site-14-sable.vercel.app/soc-2-compliance-for-bootstrapped-startups-under-20k/",
+            "https://site-14-sable.vercel.app/soc-2-continuous-monitoring-tools-open-source/"
         ]
     },
     {
@@ -183,7 +197,8 @@ SITES_CONFIG = [
             "https://site-15-ruby.vercel.app/",
             "https://site-15-ruby.vercel.app/deel-vs-remote-com-pricing-hidden-fees-breakdown/",
             "https://site-15-ruby.vercel.app/contractor-vs-eor-legal-misclassification-risk-matrix/",
-            "https://site-15-ruby.vercel.app/hiring-remote-engineers-in-latin-america-vs-eastern-europe-eor-cost/"
+            "https://site-15-ruby.vercel.app/hiring-remote-engineers-in-latin-america-vs-eastern-europe-eor-cost/",
+            "https://site-15-ruby.vercel.app/oyster-vs-deel-pricing-contractor-management-fees/"
         ]
     },
     {
@@ -194,7 +209,8 @@ SITES_CONFIG = [
             "https://site-16-indol.vercel.app/",
             "https://site-16-indol.vercel.app/devcontainer-json-vs-docker-compose-local-development/",
             "https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/",
-            "https://site-16-indol.vercel.app/fastest-docker-compose-postgres-redis-local-stack/"
+            "https://site-16-indol.vercel.app/fastest-docker-compose-postgres-redis-local-stack/",
+            "https://site-16-indol.vercel.app/docker-compose-gpu-passthrough-nvidia-container-toolkit/"
         ]
     },
     {
@@ -205,7 +221,8 @@ SITES_CONFIG = [
             "https://opencrmstack.pages.dev/",
             "https://opencrmstack.pages.dev/twenty-crm-vs-hubspot-open-source-sales-pipeline-audit/",
             "https://opencrmstack.pages.dev/self-hosted-erpnext-vs-salesforce-cost-migration-breakdown/",
-            "https://opencrmstack.pages.dev/mautic-vs-hubspot-email-automation-deliverability-benchmark/"
+            "https://opencrmstack.pages.dev/mautic-vs-hubspot-email-automation-deliverability-benchmark/",
+            "https://opencrmstack.pages.dev/twenty-crm-self-hosted-docker-deployment-guide/"
         ]
     },
     {
@@ -216,7 +233,8 @@ SITES_CONFIG = [
             "https://site-18-chi.vercel.app/",
             "https://site-18-chi.vercel.app/github-actions-vs-gitlab-ci-syntax-execution-cost-comparison/",
             "https://site-18-chi.vercel.app/matrix-build-optimization-github-actions-cache-speed/",
-            "https://site-18-chi.vercel.app/act-run-github-actions-locally-debugging-guide/"
+            "https://site-18-chi.vercel.app/act-run-github-actions-locally-debugging-guide/",
+            "https://site-18-chi.vercel.app/github-actions-concurrency-cancel-in-progress-pattern/"
         ]
     },
     {
@@ -227,7 +245,8 @@ SITES_CONFIG = [
             "https://site-19-nine.vercel.app/",
             "https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/",
             "https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/",
-            "https://site-19-nine.vercel.app/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/"
+            "https://site-19-nine.vercel.app/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/",
+            "https://site-19-nine.vercel.app/delta-neutral-liquidity-provision-uniswap-v3/"
         ]
     },
     {
@@ -238,7 +257,8 @@ SITES_CONFIG = [
             "https://edgeruntimehq.pages.dev/",
             "https://edgeruntimehq.pages.dev/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/",
             "https://edgeruntimehq.pages.dev/onnx-runtime-vs-tensorrt-edge-server-latency/",
-            "https://edgeruntimehq.pages.dev/running-whisper-speech-to-text-locally-in-browser-webgpu/"
+            "https://edgeruntimehq.pages.dev/running-whisper-speech-to-text-locally-in-browser-webgpu/",
+            "https://edgeruntimehq.pages.dev/transformers-js-v3-webgpu-browser-inference-tutorial/"
         ]
     }
 ]

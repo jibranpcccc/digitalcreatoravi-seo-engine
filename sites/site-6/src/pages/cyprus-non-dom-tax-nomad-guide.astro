@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://nomadtreaty.vercel.app/cyprus-non-dom-tax-nomad-guide/#article",
+      "headline": "Cyprus 60-Day Rule & Non-Dom Tax Regime for Digital Nomads (2026 Guide)",
+      "description": "Comprehensive analysis of the Cyprus 60-day tax residency rule, 0% tax on dividends and capital gains under non-dom status, and SDC exemption for remote founders.",
+      "url": "https://nomadtreaty.vercel.app/cyprus-non-dom-tax-nomad-guide/",
+      "inLanguage": "en-US",
+      "datePublished": "2026-09-08T00:00:00+00:00",
+      "author": { "@type": "Organization", "name": "NomadTreaty Tax Desk" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nomadtreaty.vercel.app/cyprus-non-dom-tax-nomad-guide/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the Cyprus 60-day tax residency rule work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under the 60-day rule, individuals can become tax resident in Cyprus by spending at least 60 days in Cyprus during the tax year, provided they do not reside in any other single state for more than 183 days, maintain a permanent residential home in Cyprus, and conduct business or hold employment in Cyprus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What taxes are eliminated under Cyprus non-domicile status?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cyprus non-dom residents are 100% exempt from the Special Defence Contribution (SDC), meaning 0% tax on worldwide dividend income, 0% tax on interest income, and 0% tax on capital gains from the sale of shares."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Cyprus 60-Day Rule & Non-Dom Tax Regime for Digital Nomads (2026)"
+  description="Comprehensive analysis of the Cyprus 60-day tax residency rule, 0% tax on dividends and capital gains under non-dom status, and SDC exemption for remote founders."
+  canonical="https://nomadtreaty.vercel.app/cyprus-non-dom-tax-nomad-guide/"
+  schema={schema}
+>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-xs text-slate-500 font-mono mb-6">
+      <a href="/" class="hover:text-emerald-400">NomadTreaty</a> / <span>Tax Treaties</span>
+    </nav>
+
+    <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-6">
+      Cyprus 60-Day Rule & Non-Dom Tax Regime for Digital Nomads (2026 Guide)
+    </h1>
+
+    <div class="bg-emerald-950/20 border-l-4 border-l-emerald-500 border-y border-r border-emerald-500/30 rounded-xl p-6 shadow-xl mb-10">
+      <div class="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono mb-2">
+        ⚡ Quick Answer: Cyprus 60-Day Tax Viability
+      </div>
+      <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+        The <strong>Cyprus 60-day rule</strong> provides the fastest path to legal European tax residency for digital nomads without requiring 183 days in-country. Qualifying under Non-Domicile (Non-Dom) status unlocks a <strong>0% tax rate on worldwide dividends and capital gains</strong> for 17 years, paired with 2.65% mandatory healthcare contributions (GESY), making it superior to Portugal or Spain for bootstrapped software founders.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mb-4">Cyprus Non-Dom vs Portugal IFICI vs Spain Beckham Law</h2>
+    <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/60 mb-10">
+      <table class="w-full text-left text-xs sm:text-sm text-slate-300">
+        <thead class="bg-slate-900 border-b border-slate-800 text-[11px] uppercase font-mono text-slate-400">
+          <tr>
+            <th class="p-3.5">Tax Dimension</th>
+            <th class="p-3.5">Cyprus (60-Day Non-Dom)</th>
+            <th class="p-3.5">Portugal (IFICI / NHR 2.0)</th>
+            <th class="p-3.5">Spain (Beckham Law)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800/60 font-mono">
+          <tr>
+            <td class="p-3.5 font-bold text-white font-sans">Min Days Physical Presence</td>
+            <td class="p-3.5 text-emerald-400">60 Days</td>
+            <td class="p-3.5 text-rose-400">183 Days</td>
+            <td class="p-3.5 text-rose-400">183 Days</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-white font-sans">Tax on Corporate Dividends</td>
+            <td class="p-3.5 text-emerald-400">0% (SDC Exempt)</td>
+            <td class="p-3.5 text-amber-400">28% (Standard Rate)</td>
+            <td class="p-3.5 text-amber-400">19% – 28%</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-white font-sans">Capital Gains (Stocks/Crypto)</td>
+            <td class="p-3.5 text-emerald-400">0% Exemption</td>
+            <td class="p-3.5 text-amber-400">28% Exemption</td>
+            <td class="p-3.5 text-amber-400">19% – 28%</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-white font-sans">Benefit Duration</td>
+            <td class="p-3.5 text-emerald-400">17 Years</td>
+            <td class="p-3.5 text-cyan-300">10 Years</td>
+            <td class="p-3.5 text-cyan-300">6 Years</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+      Explore our comprehensive companion analyses: <a href="/spain-digital-nomad-visa-beckham-law-guide/" class="text-cyan-400 hover:underline">Spain Beckham Law Guide</a> and <a href="/183-day-rule-tax-residency-nomad-guide/" class="text-cyan-400 hover:underline">The 183-Day Rule Guide</a>.
+    </p>
+
+    <div class="mt-8 pt-8 border-t border-slate-800 flex justify-between items-center text-xs text-slate-400 font-mono">
+      <span>NomadTreaty Global Mobility Series</span>
+      <a href="/" class="text-cyan-400 hover:underline">All Tax Frameworks →</a>
+    </div>
+  </article>
+</Layout>

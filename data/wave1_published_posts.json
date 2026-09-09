@@ -1,0 +1,182 @@
+[
+  {
+    "site_id": "site-1",
+    "title": "RTX 5090 vs RTX 4090 Local LLM Inference Benchmark (32GB VRAM)",
+    "slug": "rtx-5090-vs-4090-local-llm-benchmark",
+    "target_keyword": "rtx 5090 local llm benchmark",
+    "search_volume": 4400,
+    "keyword_difficulty": 14,
+    "pillar_silo": "Hardware Benchmarks"
+  },
+  {
+    "site_id": "site-2",
+    "title": "Top 10 Coliving Spaces in Split, Croatia for Remote Workers (2026 Guide)",
+    "slug": "split-croatia-coliving-guide",
+    "target_keyword": "coliving split croatia",
+    "search_volume": 1800,
+    "keyword_difficulty": 8,
+    "pillar_silo": "Destination Hubs"
+  },
+  {
+    "site_id": "site-3",
+    "title": "Containerizing Model Context Protocol (MCP) Servers in Docker & Kubernetes",
+    "slug": "mcp-server-docker-kubernetes-guide",
+    "target_keyword": "mcp server docker production",
+    "search_volume": 3200,
+    "keyword_difficulty": 13,
+    "pillar_silo": "MCP Protocols"
+  },
+  {
+    "site_id": "site-4",
+    "title": "Drizzle ORM vs Prisma Cold-Start Latency on Neon Serverless Postgres",
+    "slug": "drizzle-vs-prisma-neon-postgres-cold-starts",
+    "target_keyword": "drizzle vs prisma cold start",
+    "search_volume": 3500,
+    "keyword_difficulty": 12,
+    "pillar_silo": "Database ORM"
+  },
+  {
+    "site_id": "site-5",
+    "title": "Milvus vs Qdrant at 1 Billion Vectors: RAM Footprint & Recall Latency",
+    "slug": "milvus-vs-qdrant-billion-scale-benchmark",
+    "target_keyword": "milvus vs qdrant benchmark",
+    "search_volume": 2100,
+    "keyword_difficulty": 16,
+    "pillar_silo": "Scalability Benchmarks"
+  },
+  {
+    "site_id": "site-6",
+    "title": "Cyprus 60-Day Rule & Non-Dom Tax Regime for Digital Nomads (2026 Guide)",
+    "slug": "cyprus-non-dom-tax-nomad-guide",
+    "target_keyword": "cyprus non dom digital nomad",
+    "search_volume": 2800,
+    "keyword_difficulty": 9,
+    "pillar_silo": "Tax Treaties"
+  },
+  {
+    "site_id": "site-7",
+    "title": "Shopify Webhook Signature Verification in Node.js & Go (HMAC-SHA256)",
+    "slug": "shopify-webhook-signature-verification-guide",
+    "target_keyword": "shopify webhook signature verification",
+    "search_volume": 3100,
+    "keyword_difficulty": 10,
+    "pillar_silo": "Security Blueprints"
+  },
+  {
+    "site_id": "site-8",
+    "title": "Client-Side PDF Compression with WebAssembly (WASM): Ghostscript vs PDF-lib",
+    "slug": "client-side-pdf-compression-wasm-guide",
+    "target_keyword": "compress pdf in browser wasm",
+    "search_volume": 3400,
+    "keyword_difficulty": 9,
+    "pillar_silo": "WASM Optimization"
+  },
+  {
+    "site_id": "site-9",
+    "title": "Lisbon D8 Digital Nomad Visa Income Threshold for Bootstrappers",
+    "slug": "lisbon-d8-visa-minimum-income-bootstrappers",
+    "target_keyword": "lisbon d8 visa bootstrappers",
+    "search_volume": 2400,
+    "keyword_difficulty": 12,
+    "pillar_silo": "Nomad Visas"
+  },
+  {
+    "site_id": "site-10",
+    "title": "Late Chunking vs Sentence-Window Retrieval: Accuracy vs Cost",
+    "slug": "late-chunking-vs-sentence-window-retrieval-benchmark",
+    "target_keyword": "late chunking rag benchmark",
+    "search_volume": 3100,
+    "keyword_difficulty": 13,
+    "pillar_silo": "Chunking Strategies"
+  },
+  {
+    "site_id": "site-11",
+    "title": "Greece Digital Nomad Visa: \u20ac3,500 Monthly Income Proof & Bank Requirements",
+    "slug": "greece-digital-nomad-visa-income-requirements",
+    "target_keyword": "greece digital nomad visa income requirements",
+    "search_volume": 3200,
+    "keyword_difficulty": 8,
+    "pillar_silo": "European Income Thresholds"
+  },
+  {
+    "site_id": "site-12",
+    "title": "Net Revenue Retention (NRR) Benchmarks for Bootstrapped SaaS",
+    "slug": "net-revenue-retention-nrr-benchmark-bootstrapped-saas",
+    "target_keyword": "nrr benchmarks bootstrapped saas",
+    "search_volume": 2900,
+    "keyword_difficulty": 12,
+    "pillar_silo": "Retention Math"
+  },
+  {
+    "site_id": "site-13",
+    "title": "Caddy Server JSON Access Log Grok Patterns & Parsing",
+    "slug": "caddy-server-json-access-log-grok-patterns",
+    "target_keyword": "caddy json log grok pattern",
+    "search_volume": 2100,
+    "keyword_difficulty": 8,
+    "pillar_silo": "Web Server Logs"
+  },
+  {
+    "site_id": "site-14",
+    "title": "Open-Source SOC 2 Continuous Monitoring Tools: CloudQuery vs Steampipe",
+    "slug": "soc-2-continuous-monitoring-tools-open-source",
+    "target_keyword": "open source soc 2 monitoring",
+    "search_volume": 2800,
+    "keyword_difficulty": 13,
+    "pillar_silo": "Compliance Tooling"
+  },
+  {
+    "site_id": "site-15",
+    "title": "Oyster vs Deel: Transparent Pricing & Contractor Management Fees",
+    "slug": "oyster-vs-deel-pricing-contractor-management-fees",
+    "target_keyword": "oyster vs deel pricing comparison",
+    "search_volume": 3400,
+    "keyword_difficulty": 12,
+    "pillar_silo": "Provider Comparisons"
+  },
+  {
+    "site_id": "site-16",
+    "title": "Docker Compose GPU Passthrough Guide with NVIDIA Container Toolkit",
+    "slug": "docker-compose-gpu-passthrough-nvidia-container-toolkit",
+    "target_keyword": "docker compose nvidia gpu passthrough",
+    "search_volume": 4800,
+    "keyword_difficulty": 14,
+    "pillar_silo": "Docker Blueprints"
+  },
+  {
+    "site_id": "site-17",
+    "title": "Twenty CRM Self-Hosted Docker Compose Production Deployment",
+    "slug": "twenty-crm-self-hosted-docker-deployment-guide",
+    "target_keyword": "twenty crm docker compose install",
+    "search_volume": 3500,
+    "keyword_difficulty": 11,
+    "pillar_silo": "Self-Hosting Guides"
+  },
+  {
+    "site_id": "site-18",
+    "title": "GitHub Actions Concurrency: Cancel In-Progress Workflow Runs Correctly",
+    "slug": "github-actions-concurrency-cancel-in-progress-pattern",
+    "target_keyword": "github actions concurrency cancel in progress",
+    "search_volume": 3900,
+    "keyword_difficulty": 10,
+    "pillar_silo": "CI Optimization"
+  },
+  {
+    "site_id": "site-19",
+    "title": "Delta-Neutral Liquidity Provision on Uniswap v3 using Aave Hedge",
+    "slug": "delta-neutral-liquidity-provision-uniswap-v3",
+    "target_keyword": "delta neutral uniswap v3",
+    "search_volume": 2500,
+    "keyword_difficulty": 15,
+    "pillar_silo": "DeFi Yield"
+  },
+  {
+    "site_id": "site-20",
+    "title": "Transformers.js v3 WebGPU: Running Phi-3.5 in the Browser at 30 Tok/s",
+    "slug": "transformers-js-v3-webgpu-browser-inference-tutorial",
+    "target_keyword": "transformers.js v3 webgpu tutorial",
+    "search_volume": 4400,
+    "keyword_difficulty": 13,
+    "pillar_silo": "WebGPU Inference"
+  }
+]

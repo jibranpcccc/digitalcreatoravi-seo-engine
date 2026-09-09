@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://site-14-sable.vercel.app/soc-2-continuous-monitoring-tools-open-source/#article",
+      "headline": "Open-Source SOC 2 Continuous Monitoring Tools: CloudQuery vs Steampipe",
+      "description": "Evaluate open-source SOC 2 Type II compliance automation tools: comparing CloudQuery and Steampipe for SQL-driven AWS/GCP infrastructure security audits.",
+      "url": "https://site-14-sable.vercel.app/soc-2-continuous-monitoring-tools-open-source/",
+      "inLanguage": "en-US",
+      "datePublished": "2026-09-08T00:00:00+00:00",
+      "author": { "@type": "Organization", "name": "SOC2Ready Compliance Desk" }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Open-Source SOC 2 Continuous Monitoring: CloudQuery vs Steampipe"
+  description="Evaluate open-source SOC 2 Type II compliance automation tools: comparing CloudQuery and Steampipe for SQL-driven AWS/GCP infrastructure security audits."
+  canonical="https://site-14-sable.vercel.app/soc-2-continuous-monitoring-tools-open-source/"
+  schema={schema}
+>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-xs text-slate-500 font-mono mb-6">
+      <a href="/" class="hover:text-emerald-400">SOC2Ready</a> / <span>Compliance Tooling</span>
+    </nav>
+
+    <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-6">
+      Open-Source SOC 2 Continuous Monitoring Tools: CloudQuery vs Steampipe
+    </h1>
+
+    <div class="bg-emerald-950/20 border-l-4 border-l-emerald-500 border-y border-r border-emerald-500/30 rounded-xl p-6 shadow-xl mb-10">
+      <div class="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono mb-2">
+        ⚡ Quick Answer: Open-Source SOC 2 Monitoring
+      </div>
+      <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+        Startups can avoid \$15,000/year Vanta or Drata licensing fees by orchestrating open-source SQL compliance engines like <strong>CloudQuery</strong> (ELT sync to PostgreSQL) or <strong>Steampipe</strong> (zero-ETL foreign data wrappers). Both tools continuously audit AWS, GCP, and GitHub configurations against SOC 2 Common Criteria controls (CC6.1 access management, CC6.6 encryption-at-rest), generating auditor-ready evidence.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mb-4">CloudQuery vs Steampipe Architecture Matrix</h2>
+    <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/60 mb-10">
+      <table class="w-full text-left text-xs sm:text-sm text-slate-300">
+        <thead class="bg-slate-900 border-b border-slate-800 text-[11px] uppercase font-mono text-slate-400">
+          <tr>
+            <th class="p-3.5">Feature</th>
+            <th class="p-3.5">CloudQuery (ELT Engine)</th>
+            <th class="p-3.5">Steampipe (FDW Engine)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800/60 font-mono">
+          <tr>
+            <td class="p-3.5 font-bold text-white font-sans">Storage Architecture</td>
+            <td class="p-3.5 text-cyan-300">Syncs to external Postgres / ClickHouse</td>
+            <td class="p-3.5 text-emerald-400">Embedded Postgres (Real-time live APIs)</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-white font-sans">Historical Drift Auditing</td>
+            <td class="p-3.5 text-emerald-400">Full Time-Series History Native</td>
+            <td class="p-3.5 text-amber-400">Snapshot-only (Requires custom cron)</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-white font-sans">Pre-Built SOC 2 Dashboards</td>
+            <td class="p-3.5 text-cyan-300">Grafana & Superset Templates</td>
+            <td class="p-3.5 text-emerald-400">Steampipe Mod for SOC 2 (Terminal UI)</td>
+          </tr>
+          <tr>
+            <td class="p-3.5 font-bold text-white font-sans">Execution Speed (50 accounts)</td>
+            <td class="p-3.5 text-emerald-400">High Throughput Batch (Concurrency)</td>
+            <td class="p-3.5 text-amber-400">API Rate-Limit Bound</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+      Compare compliance platforms: <a href="/vanta-vs-drata-vs-secureframe-compliance-automation-review/" class="text-cyan-400 hover:underline">Vanta vs Drata Review</a> and <a href="/soc-2-compliance-for-bootstrapped-startups-under-20k/" class="text-cyan-400 hover:underline">SOC 2 Under $20k Guide</a>.
+    </p>
+
+    <div class="mt-8 pt-8 border-t border-slate-800 flex justify-between items-center text-xs text-slate-400 font-mono">
+      <span>SOC2Ready Automation Toolkit</span>
+      <a href="/" class="text-cyan-400 hover:underline">Readiness Checklist →</a>
+    </div>
+  </article>
+</Layout>

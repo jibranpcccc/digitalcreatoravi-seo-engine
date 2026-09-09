@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://opencrmstack.pages.dev/twenty-crm-self-hosted-docker-deployment-guide/#article",
+      "headline": "Twenty CRM Self-Hosted Docker Compose Production Deployment",
+      "description": "Step-by-step production deployment guide for self-hosting Twenty CRM on Linux using Docker Compose, PostgreSQL 16, Redis, and Caddy reverse proxy.",
+      "url": "https://opencrmstack.pages.dev/twenty-crm-self-hosted-docker-deployment-guide/",
+      "inLanguage": "en-US",
+      "datePublished": "2026-09-08T00:00:00+00:00",
+      "author": { "@type": "Organization", "name": "OpenCRMStack Systems" }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Twenty CRM Self-Hosted Docker Compose Production Deployment"
+  description="Step-by-step production deployment guide for self-hosting Twenty CRM on Linux using Docker Compose, PostgreSQL 16, Redis, and Caddy reverse proxy."
+  canonical="https://opencrmstack.pages.dev/twenty-crm-self-hosted-docker-deployment-guide/"
+  schema={schema}
+>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-xs text-slate-500 font-mono mb-6">
+      <a href="/" class="hover:text-emerald-400">OpenCRMStack</a> / <span>Self-Hosting</span>
+    </nav>
+
+    <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-6">
+      Twenty CRM Self-Hosted Docker Compose Production Deployment
+    </h1>
+
+    <div class="bg-emerald-950/20 border-l-4 border-l-emerald-500 border-y border-r border-emerald-500/30 rounded-xl p-6 shadow-xl mb-10">
+      <div class="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono mb-2">
+        ⚡ Quick Answer: Deploying Twenty CRM Locally
+      </div>
+      <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+        <strong>Twenty CRM</strong> is the leading open-source modern alternative to HubSpot, built on TypeScript and PostgreSQL. Self-hosting requires deploying three containers via Docker Compose: the Twenty server image (<code>twentycrm/twenty:latest</code>), PostgreSQL 16 with UUID extensions, and Redis for background job queues. A single \$20/month VPS comfortably supports up to 25 sales representatives.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mb-4">Production Docker Compose Blueprint</h2>
+    <div class="rounded-xl border border-slate-800 bg-slate-900/90 p-4 font-mono text-xs text-cyan-300 overflow-x-auto mb-8">
+      <pre is:raw>
+services:
+  twenty-server:
+    image: twentycrm/twenty:latest
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - PG_DATABASE_URL=postgres://twenty:secretpassword@twenty-db:5432/twenty
+      - REDIS_URL=redis://twenty-redis:6379
+      - SIGNING_KEY=generate_with_openssl_rand_hex_32
+      - SERVER_URL=https://crm.yourdomain.com
+    depends_on:
+      twenty-db:
+        condition: service_healthy
+
+  twenty-db:
+    image: postgres:16-alpine
+    restart: always
+    volumes:
+      - twenty_db_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=twenty
+      - POSTGRES_PASSWORD=secretpassword
+      - POSTGRES_DB=twenty
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U twenty"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  twenty_db_data:
+      </pre>
+    </div>
+
+    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+      Check our migration guides and comparisons: <a href="/twenty-crm-vs-hubspot-open-source-sales-pipeline-audit/" class="text-cyan-400 hover:underline">Twenty CRM vs HubSpot Audit</a> and <a href="/self-hosted-erpnext-vs-salesforce-cost-migration-breakdown/" class="text-cyan-400 hover:underline">ERPNext vs Salesforce Migration</a>.
+    </p>
+
+    <div class="mt-8 pt-8 border-t border-slate-800 flex justify-between items-center text-xs text-slate-400 font-mono">
+      <span>OpenCRMStack Architecture</span>
+      <a href="/" class="text-cyan-400 hover:underline">TCO Calculator →</a>
+    </div>
+  </article>
+</Layout>
