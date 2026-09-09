@@ -1,0 +1,371 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "GitHub Webhook Delivery Architecture: Handling 100k Webhooks/Sec with Kafka",
+  "description": "Production blueprint for ingesting 100,000 GitHub webhooks per second using FastAPI, Redpanda/Kafka event streaming, deterministic repository partitioning, dead-letter queue replay mechanisms, and tuned consumer offsets.",
+  "datePublished": "2026-09-08T00:00:00Z",
+  "dateModified": "2026-09-09T00:00:00Z",
+  "author": {
+    "@type": "Organization",
+    "name": "WebhookWatch Research Labs"
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://webhookwatch.vercel.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "GitHub Webhook Kafka Architecture",
+      "item": "https://webhookwatch.vercel.app/github-webhook-delivery-kafka-architecture/"
+    }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does Kafka guarantee ordered delivery for GitHub webhooks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By partitioning Kafka topics using the GitHub repository ID (repository.id) as the message key, all events belonging to the same git repository are directed to the same Kafka partition, preserving strict chronological event order for commit pushes, PR merges, and branch creations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why use Kafka/Redpanda instead of standard SQS or RabbitMQ for 100k webhooks/sec?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 100,000 requests per second, traditional message brokers experience queue contention, high memory bloat, and costly API polling overhead. Kafka and Redpanda utilize append-only commit logs with sequential disk I/O and zero-copy transfer, providing sub-millisecond produce latency at massive scale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you prevent GitHub webhook timeout errors during traffic spikes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitHub enforces a strict 10-second response timeout on webhook deliveries. The ingestion gateway verifies the HMAC-SHA256 signature in memory (<4ms), publishes the payload asynchronously to Kafka, and immediately returns HTTP 202 Accepted, completely decoupling network ingress from downstream business logic."
+      }
+    }
+  ]
+};
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [pageSchema, breadcrumbSchema, faqSchema]
+};
+---
+
+<Layout
+  title="GitHub Webhook Delivery Architecture: Handling 100k Webhooks/Sec with Kafka | WebhookWatch"
+  description="Scale webhook ingestion to 100,000 events/sec. Production FastAPI gateway, Redpanda/Kafka partitioning by repo ID, DLQ replay loops, and consumer offset tuning."
+  slug="github-webhook-delivery-kafka-architecture"
+  schema={schema}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <!-- Breadcrumb Nav -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6 font-medium">
+      <a href="/" class="hover:text-orange-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-orange-400">GitHub Webhook Kafka Architecture</span>
+    </nav>
+
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-4">
+      High-Throughput Streaming • Production Blueprint 2026
+    </div>
+
+    <!-- Exact 1 H1 -->
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+      GitHub Webhook Delivery Architecture: Handling 100k Webhooks/Sec with Kafka
+    </h1>
+
+    <!-- 45-60 word Quick Answer box with green accent border -->
+    <div class="bg-emerald-950/20 border-l-4 border-l-emerald-500 border-y border-r border-emerald-500/30 rounded-2xl p-6 mb-8 backdrop-blur-sm shadow-xl">
+      <div class="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-wider mb-2">
+        <span>⚡</span> Quick Answer (The High-Throughput Blueprint)
+      </div>
+      <p class="text-slate-200 text-base leading-relaxed font-medium">
+        Handling 100,000 GitHub webhooks per second requires decoupling ingress from processing via an asynchronous streaming architecture. A lightweight FastAPI gateway verifies HMAC-SHA256 signatures in under 4ms and flushes raw events into Apache Kafka or Redpanda partitioned by repository ID, ensuring strict per-repository ordering, sub-second buffer elasticity, and zero dropped payloads during traffic bursts.
+      </p>
+    </div>
+
+    <div class="space-y-8 text-slate-300 leading-relaxed text-base">
+      <!-- Section 1: Architecture Diagram & System Flow -->
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">1. High-Throughput Architecture Blueprint</h2>
+        <p>
+          At enterprise scale (CI/CD platforms, code security scanners, developer tooling), GitHub webhook traffic is bursty. During morning deployment windows or monorepo pushes, thousands of git refs trigger simultaneous deliveries. GitHub enforces a strict <strong>10-second timeout</strong>: if your webhook receiver executes synchronous DB writes or heavy business logic, requests back up, timeouts cascade, and GitHub disables the webhook integration.
+        </p>
+        <p class="mt-3">
+          The solution is a three-tier decoupled streaming architecture:
+        </p>
+
+        <!-- Architecture Diagram Box -->
+        <div class="my-6 p-6 bg-slate-900/90 border border-slate-800 rounded-2xl font-mono text-xs text-slate-300 overflow-x-auto">
+          <div class="text-slate-400 font-bold mb-3 uppercase tracking-wider text-[11px] flex items-center gap-2">
+            <span>📊</span> Ingestion & Streaming Dataflow
+          </div>
+          <pre class="leading-snug text-cyan-300">
+┌─────────────────┐       HTTPS POST        ┌────────────────────────────────┐
+│  GitHub Servers │ ──────────────────────> │  FastAPI Ingestion Gateway     │
+│  (100k req/sec) │                         │  - HMAC-SHA256 Verification    │
+└─────────────────┘                         │  - Memory Buffer & Batching    │
+                                            └───────────────┬────────────────┘
+                                                            │ Async Producer (librdkafka)
+                                                            ▼ (Key = repo_id)
+┌────────────────────────────────────────────────────────────────────────────┐
+│                    Apache Kafka / Redpanda Cluster                         │
+│  Topic: github-events-raw (64 Partitions, Replication Factor: 3)           │
+│  ├── Partition 0: Repo 1024, Repo 88201... (Strict Chronological Order)   │
+│  ├── Partition 1: Repo 4091, Repo 99212...                                │
+│  └── Partition N: ...                                                      │
+└───────────────────────────────┬────────────────────────────────────────────┘
+                                │ Consumer Group (Parallel Workers)
+                                ▼
+┌────────────────────────────────────────────────────────────────────────────┐
+│                  Downstream Processing & DLQ Replay Loop                   │
+│                                                                            │
+│   ┌─────────────────────┐   Exception   ┌──────────────────────────────┐   │
+│   │ Processing Workers  │ ────────────> │ Retry Topic (Exponential)    │   │
+│   │ (DB write, CI hook) │               └──────────────┬───────────────┘   │
+│   └─────────────────────┘                              │ Max Exhausted     │
+│                                                        ▼                   │
+│                                         ┌──────────────────────────────┐   │
+│                                         │ Dead-Letter Queue (DLQ)      │   │
+│                                         │ - S3/Iceberg Raw Archive     │   │
+│                                         │ - Admin Replay Dashboard     │   │
+│                                         └──────────────────────────────┘   │
+└────────────────────────────────────────────────────────────────────────────┘
+          </pre>
+        </div>
+      </section>
+
+      <!-- Section 2: FastAPI Ingestion Gateway Code Snippet -->
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">
+          2. FastAPI Ingestion Gateway Implementation
+        </h2>
+        <p>
+          The gateway must accomplish exactly two tasks with zero blocking: verify the <code class="text-orange-300 font-mono">X-Hub-Signature-256</code> header using constant-time comparison, and write the raw payload to Kafka using the repository ID as the partition key:
+        </p>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 my-4 font-mono text-xs leading-relaxed text-slate-200 overflow-x-auto">
+          <pre is:raw><code>import hmac
+import hashlib
+import json
+import asyncio
+from fastapi import FastAPI, Request, Header, HTTPException, status
+from fastapi.responses import JSONResponse
+from aiokafka import AIOKafkaProducer
+
+app = FastAPI(title="GitHub Webhook Ingestion Engine")
+
+WEBHOOK_SECRET = b"production_shared_webhook_secret_key_2026"
+KAFKA_BOOTSTRAP = "redpanda-cluster.internal:9092"
+TOPIC_NAME = "github-events-raw"
+
+producer: AIOKafkaProducer | None = None
+
+@app.on_event("startup")
+async def startup_event():
+    global producer
+    producer = AIOKafkaProducer(
+        bootstrap_servers=KAFKA_BOOTSTRAP,
+        compression_type="lz4",
+        linger_ms=5,             # 5ms micro-batching for extreme throughput
+        max_batch_size=131072,   # 128 KB buffer per partition
+        acks=1                   # Leader acknowledgment for low latency
+    )
+    await producer.start()
+
+@app.on_event("shutdown")
+async def shutdown_event():
+    if producer:
+        await producer.stop()
+
+def verify_github_signature(payload_body: bytes, signature_header: str | None) -> bool:
+    if not signature_header or not signature_header.startswith("sha256="):
+        return False
+    expected_hash = hmac.new(WEBHOOK_SECRET, payload_body, hashlib.sha256).hexdigest()
+    received_hash = signature_header[7:]
+    return hmac.compare_digest(expected_hash, received_hash)
+
+@app.post("/webhooks/github")
+async def receive_github_webhook(
+    request: Request,
+    x_hub_signature_256: str = Header(None),
+    x_github_event: str = Header(None),
+    x_github_delivery: str = Header(None)
+):
+    # 1. Read raw body bytes (<1ms)
+    body_bytes = await request.body()
+
+    # 2. Verify cryptographic HMAC signature in constant time
+    if not verify_github_signature(body_bytes, x_hub_signature_256):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid GitHub webhook HMAC-SHA256 signature"
+        )
+
+    # 3. Extract Partition Key (repository ID) without heavy parsing
+    try:
+        raw_json = json.loads(body_bytes)
+        repo_id = str(raw_json.get("repository", {}).get("id", "default"))
+    except Exception:
+        repo_id = "default"
+
+    # 4. Asynchronously push to Kafka topic
+    event_metadata = {
+        "delivery_id": x_github_delivery,
+        "event_type": x_github_event,
+        "payload": raw_json
+    }
+
+    await producer.send(
+        topic=TOPIC_NAME,
+        key=repo_id.encode("utf-8"),
+        value=json.dumps(event_metadata).encode("utf-8")
+    )
+
+    # 5. Immediate 202 Accepted response back to GitHub (<10ms)
+    return JSONResponse(
+        status_code=status.HTTP_202_ACCEPTED,
+        content={"status": "enqueued", "delivery_id": x_github_delivery}
+    )</code></pre>
+        </div>
+      </section>
+
+      <!-- Section 3: Partitioning Strategy & Ordering Guarantees -->
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">
+          3. Partitioning Strategy: Eliminating Cross-Repository Contention
+        </h2>
+        <p>
+          A common architectural mistake is partitioning by <code class="text-orange-300 font-mono">x_github_delivery</code> (random UUID) or round-robin. While this distributes load evenly, it destroys message ordering. If an engineer pushes a commit and immediately opens a Pull Request, random partitioning allows the PR event to be processed before the commit push event, creating race conditions.
+        </p>
+        <p class="mt-3">
+          By utilizing <strong class="text-white">repository ID</strong> (<code class="text-cyan-300 font-mono">repository.id</code>) as the message key:
+        </p>
+        <ul class="list-disc pl-6 space-y-2 mt-2">
+          <li>All actions within a specific repository are routed deterministically to the same partition.</li>
+          <li>Within a partition, events are strictly FIFO (First In, First Out).</li>
+          <li>Separate repositories do not block one another, ensuring high concurrency across organizations.</li>
+        </ul>
+      </section>
+
+      <!-- Section 4: Consumer Offset Tuning Table -->
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">
+          4. Consumer Offset & Batch Tuning Parameters (100k req/sec)
+        </h2>
+        <p>
+          To drain millions of enqueued webhooks without lag spikes or memory exhaustion, configure consumer groups with these production-validated parameters:
+        </p>
+
+        <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/60 my-6">
+          <table class="w-full text-left text-xs sm:text-sm text-slate-300">
+            <thead class="bg-slate-900 border-b border-slate-800 text-[11px] uppercase font-mono text-slate-400">
+              <tr>
+                <th class="p-3">Kafka Parameter</th>
+                <th class="p-3 text-orange-400">Recommended Value</th>
+                <th class="p-3 text-cyan-400">Production Rationale</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-mono text-xs">
+              <tr>
+                <td class="p-3 text-white font-sans font-bold">fetch.min.bytes</td>
+                <td class="p-3 text-emerald-400 font-bold">65,536 (64 KB)</td>
+                <td class="p-3 text-slate-300 font-sans">Forces broker to batch records, saving CPU syscalls during bursts.</td>
+              </tr>
+              <tr>
+                <td class="p-3 text-white font-sans font-bold">fetch.max.wait.ms</td>
+                <td class="p-3 text-emerald-400 font-bold">50 ms</td>
+                <td class="p-3 text-slate-300 font-sans">Upper bound latency if batch size isn't met; balances throughput and real-time feel.</td>
+              </tr>
+              <tr>
+                <td class="p-3 text-white font-sans font-bold">max.poll.records</td>
+                <td class="p-3 text-emerald-400 font-bold">500</td>
+                <td class="p-3 text-slate-300 font-sans">Prevents worker starvation and guarantees completion within poll timeout.</td>
+              </tr>
+              <tr>
+                <td class="p-3 text-white font-sans font-bold">enable.auto.commit</td>
+                <td class="p-3 text-rose-400 font-bold">false</td>
+                <td class="p-3 text-slate-300 font-sans">Manual offset commits after successful DB transaction to guarantee at-least-once.</td>
+              </tr>
+              <tr>
+                <td class="p-3 text-white font-sans font-bold">session.timeout.ms</td>
+                <td class="p-3 text-cyan-400">45,000 ms</td>
+                <td class="p-3 text-slate-300 font-sans">Protects against false-positive consumer rebalances during garbage collection.</td>
+              </tr>
+              <tr>
+                <td class="p-3 text-white font-sans font-bold">compression.type</td>
+                <td class="p-3 text-emerald-400 font-bold">lz4</td>
+                <td class="p-3 text-slate-300 font-sans">Ultra-fast decompression speeds with 60% compression ratio on JSON payloads.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 5: DLQ Replay Pattern -->
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">
+          5. Dead-Letter Queue (DLQ) & Redrive Pattern
+        </h2>
+        <p>
+          When downstream workers encounter unrecoverable errors (schema migration drifts, database deadlocks), messages should not stall the primary partition.
+        </p>
+        <p class="mt-3">
+          Instead, implement a tiered dead-letter retry topology:
+        </p>
+        <ol class="list-decimal pl-6 space-y-2 mt-2">
+          <li><strong>Immediate Retry (Local):</strong> Attempt 3 quick retries with 100ms jittered backoff in worker memory.</li>
+          <li><strong>Delayed Topic (<code class="text-orange-300 font-mono">webhooks-retry-5m</code>):</strong> If local retry fails, emit the record to a delayed topic with a timestamp header. A timer service replays after 5 minutes.</li>
+          <li><strong>Permanent DLQ (<code class="text-rose-400 font-mono">webhooks-dead-letter</code>):</strong> Exhausted messages (after 5 attempts) are routed to long-term storage in Apache Iceberg or AWS S3 with full origin headers. Once bug fixes deploy, an operations engineer triggers a CLI redrive back into the primary queue.</li>
+        </ol>
+      </section>
+    </div>
+
+    <!-- Related Webhook Infrastructure Guides (Internal Links) -->
+    <div class="mt-12 pt-8 border-t border-slate-800">
+      <h3 class="text-lg font-bold text-white mb-4">Explore More Webhook Infrastructure Guides</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+        <a href="/stripe-webhook-signature-verification-fastapi/" class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-orange-500/40 transition-colors">
+          <span class="font-bold text-orange-400 block mb-1">Stripe Webhook Verification with FastAPI →</span>
+          <span class="text-slate-400">Implement timing-safe HMAC validation, raw body caching, and replay protection.</span>
+        </a>
+        <a href="/shopify-webhook-signature-verification-guide/" class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-emerald-500/40 transition-colors">
+          <span class="font-bold text-emerald-400 block mb-1">Shopify HMAC Verification Guide →</span>
+          <span class="text-slate-400">Validate X-Shopify-Hmac-SHA256 headers with middleware and prevent 401 errors.</span>
+        </a>
+        <a href="/webhook-dead-letter-queue-architecture-sqs/" class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-cyan-500/40 transition-colors">
+          <span class="font-bold text-cyan-400 block mb-1">Webhook DLQ Architecture with AWS SQS →</span>
+          <span class="text-slate-400">Terraform templates, redrive allow policies, and CloudWatch alert thresholds.</span>
+        </a>
+        <a href="/webhook-retry-exponential-backoff-jitter-guide/" class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-amber-500/40 transition-colors">
+          <span class="font-bold text-amber-400 block mb-1">Exponential Backoff & Full Jitter Guide →</span>
+          <span class="text-slate-400">Eliminate thundering herd spikes and calculate optimal retry decay formulas.</span>
+        </a>
+      </div>
+
+      <div class="mt-8 flex justify-between items-center text-xs text-slate-500 font-mono">
+        <a href="/" class="text-orange-400 hover:underline">← WebhookWatch Home</a>
+        <span>Published by WebhookWatch Research Labs</span>
+      </div>
+    </div>
+  </article>
+</Layout>

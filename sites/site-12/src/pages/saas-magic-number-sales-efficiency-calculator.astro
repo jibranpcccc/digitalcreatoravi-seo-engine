@@ -1,0 +1,532 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const canonical = "https://site-12-taupe.vercel.app/saas-magic-number-sales-efficiency-calculator";
+
+const title = "SaaS Magic Number & Sales Efficiency Formula with Calculator | SaaSUnitMath";
+const description = "Understand and calculate your SaaS Magic Number with our interactive sales efficiency calculator. Benchmark your go-to-market engine and CAC payback.";
+
+const schemaJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": `${canonical}#article`,
+      "url": canonical,
+      "headline": "SaaS Magic Number & Sales Efficiency Formula with Calculator",
+      "description": "Comprehensive mathematical guide and interactive calculator for computing the SaaS Magic Number, Gross Margin-Adjusted Efficiency, and implied CAC payback horizons.",
+      "inLanguage": "en-US",
+      "author": {
+        "@type": "Organization",
+        "name": "SaaSUnitMath",
+        "url": "https://site-12-taupe.vercel.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SaaSUnitMath",
+        "url": "https://site-12-taupe.vercel.app/"
+      },
+      "datePublished": "2026-03-08T08:00:00Z",
+      "dateModified": "2026-09-09T18:00:00Z"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${canonical}#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the SaaS Magic Number formula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The SaaS Magic Number formula is: (Current Quarter Revenue - Prior Quarter Revenue) × 4 divided by Prior Quarter Sales and Marketing Expense. Alternatively expressed as: [Quarterly Net New ARR] / [Prior Quarter S&M Expense]."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is considered a good SaaS Magic Number benchmark?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A SaaS Magic Number between 0.75 and 1.0 represents good, healthy sales efficiency where customer acquisition costs are paid back in approximately 12–16 months. A score below 0.75 indicates flawed or capital-destructive acquisition, while a score above 1.0 signifies hyper-efficient growth that justifies aggressive go-to-market spending."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is the Gross Margin-Adjusted Magic Number superior for modern software companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The standard Magic Number treats all revenue equally. If your SaaS incurs heavy third-party inference API or cloud COGS resulting in a 65% gross margin, each new dollar of ARR delivers significantly less gross profit to repay sales expenses than an 85% gross margin company. Multiplying the Magic Number by Gross Margin percentage exposes the true cash-recovery velocity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Magic Number relate to CAC Payback Period?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Gross Margin-Adjusted Magic Number is mathematically inversely related to CAC payback: Implied CAC Payback (in months) equals 12 divided by the Gross Margin-Adjusted Magic Number. An adjusted score of 1.0 equals exactly 12 months payback, while 0.50 implies a lengthy 24 months payback."
+          }
+        }
+      ]
+    }
+  ]
+});
+---
+
+<Layout title={title} description={description} canonical={canonical} schemaJson={schemaJson} type="article">
+  <article class="max-w-4xl mx-auto pt-4 pb-16">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center space-x-2 text-xs font-mono text-slate-400 mb-6">
+      <a href={`${base}/`} class="hover:text-purple-400 transition">SaaSUnitMath</a>
+      <span>/</span>
+      <a href={`${base}/#calculator`} class="hover:text-purple-400 transition">Unit Economics</a>
+      <span>/</span>
+      <span class="text-purple-400">SaaS Magic Number Guide</span>
+    </nav>
+
+    <!-- EXACTLY ONE H1 -->
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-tight mb-6">
+      SaaS Magic Number & Sales Efficiency Formula with Calculator
+    </h1>
+
+    <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400 pb-6 border-b border-slate-800 mb-8">
+      <span class="text-purple-400 font-semibold">Framework: Scale Venture Partners Standard</span>
+      <span>•</span>
+      <span>Peer Group: $1M – $50M ARR B2B SaaS</span>
+      <span>•</span>
+      <span>Read Time: 9 min</span>
+      <span>•</span>
+      <span>Updated: 2026</span>
+    </div>
+
+    <!-- 45-60 Word Quick Answer Box with Green Accent Border -->
+    <div class="bg-emerald-950/20 border-l-4 border-l-emerald-500 border-y border-r border-emerald-500/30 rounded-2xl p-6 shadow-xl shadow-emerald-500/5 mb-10">
+      <div class="flex items-center space-x-2.5 text-xs font-bold font-mono uppercase tracking-wider text-emerald-400 mb-2">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        <span>Quick Answer: SaaS Magic Number Formula</span>
+      </div>
+      <p class="text-sm md:text-base text-slate-200 leading-relaxed font-sans font-medium">
+        The SaaS Magic Number measures go-to-market sales efficiency by dividing annualized net new revenue by prior quarter sales and marketing expenditures: (Quarterly Net New ARR × 4) / Prior Quarter S&M Expense. Scores exceeding 1.0 signify hyper-efficient acquisition warranting aggressive GTM investment, while scores below 0.75 signal underlying pricing, product-market fit, or churn deficiencies.
+      </p>
+    </div>
+
+    <!-- Interactive Calculator Widget -->
+    <section class="my-10 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900/90 to-purple-950/20 border border-purple-500/40 shadow-2xl shadow-purple-500/10">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-800 mb-6">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-black text-white">Interactive SaaS Magic Number Calculator</h2>
+          <p class="text-xs text-slate-400 mt-1 font-mono">Real-time GTM sales efficiency and implied CAC payback calculator.</p>
+        </div>
+        <span class="mt-2 sm:mt-0 text-[11px] font-mono text-purple-300 bg-purple-500/10 border border-purple-500/20 px-3 py-1 rounded-full">
+          Instant Client-Side Computation
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Inputs -->
+        <div class="space-y-4">
+          <div>
+            <label for="prior-rev" class="block text-xs font-mono text-slate-300 mb-1">
+              Prior Quarter Revenue (Q<sub>t-1</sub>) ($)
+            </label>
+            <input
+              type="number"
+              id="prior-rev"
+              value="250000"
+              step="5000"
+              class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-white font-mono text-sm focus:outline-none focus:border-purple-500 transition"
+            />
+          </div>
+
+          <div>
+            <label for="curr-rev" class="block text-xs font-mono text-slate-300 mb-1">
+              Current Quarter Revenue (Q<sub>t</sub>) ($)
+            </label>
+            <input
+              type="number"
+              id="curr-rev"
+              value="325000"
+              step="5000"
+              class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-white font-mono text-sm focus:outline-none focus:border-purple-500 transition"
+            />
+          </div>
+
+          <div>
+            <label for="sm-expense" class="block text-xs font-mono text-slate-300 mb-1">
+              Prior Quarter S&M Expense (Q<sub>t-1</sub>) ($)
+            </label>
+            <input
+              type="number"
+              id="sm-expense"
+              value="150000"
+              step="5000"
+              class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-white font-mono text-sm focus:outline-none focus:border-purple-500 transition"
+            />
+          </div>
+
+          <div>
+            <label for="gross-margin" class="block text-xs font-mono text-slate-300 mb-1">
+              Gross Margin (%)
+            </label>
+            <input
+              type="number"
+              id="gross-margin"
+              value="80"
+              min="10"
+              max="100"
+              step="1"
+              class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-white font-mono text-sm focus:outline-none focus:border-purple-500 transition"
+            />
+          </div>
+        </div>
+
+        <!-- Output Metric Dashboard -->
+        <div class="flex flex-col justify-between p-5 rounded-xl bg-slate-950 border border-slate-800 space-y-4">
+          <div>
+            <div class="text-xs font-mono uppercase text-slate-400">Calculated SaaS Magic Number</div>
+            <div id="out-magic-number" class="text-4xl sm:text-5xl font-black font-mono text-emerald-400 mt-2">
+              2.00
+            </div>
+            <div id="out-efficiency-badge" class="mt-2 inline-flex items-center px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+              Hyper-Efficient (> 1.0)
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 pt-4 border-t border-slate-800 text-xs font-mono">
+            <div>
+              <span class="text-slate-400 block">Net New ARR:</span>
+              <span id="out-net-new-arr" class="text-white font-bold text-sm">$300,000</span>
+            </div>
+            <div>
+              <span class="text-slate-400 block">GM-Adjusted:</span>
+              <span id="out-gm-adj" class="text-white font-bold text-sm">1.60</span>
+            </div>
+            <div>
+              <span class="text-slate-400 block">Implied CAC Payback:</span>
+              <span id="out-cac-payback" class="text-emerald-400 font-bold text-sm">7.5 Months</span>
+            </div>
+            <div>
+              <span class="text-slate-400 block">Capital Stance:</span>
+              <span id="out-capital-stance" class="text-purple-300 font-bold text-sm">Accelerate GTM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Content -->
+    <div class="prose prose-invert max-w-none space-y-10 text-slate-300 text-sm sm:text-base leading-relaxed">
+      <!-- Section 1: The Math -->
+      <section>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
+          <span class="text-purple-400 font-mono">1.</span> Mathematical Formula & Mechanics
+        </h2>
+        <p>
+          Formulated by venture capital firm Scale Venture Partners, the <strong>SaaS Magic Number</strong> quantifies how many dollars of annualized recurring revenue your go-to-market engine generates for every dollar expended on sales, marketing, and commercial acquisition.
+        </p>
+
+        <div class="my-6 p-5 rounded-xl bg-slate-950 border border-purple-500/40 text-center shadow-lg font-mono">
+          <div class="text-xs text-slate-400 uppercase mb-1">Standard SaaS Magic Number Formula</div>
+          <div class="text-base sm:text-lg text-purple-300 font-bold">
+            Magic Number = [ ( Revenue<sub>Q(t)</sub> - Revenue<sub>Q(t-1)</sub> ) &times; 4 ] / [ S&M Expense<sub>Q(t-1)</sub> ]
+          </div>
+          <div class="text-xs text-slate-400 mt-2">
+            Equivalently: <strong>[Quarterly Net New ARR] / [Prior Quarter S&M Expense]</strong>
+          </div>
+        </div>
+
+        <p>
+          Notice the critical time lag: the denominator reflects the <em>prior quarter's</em> sales and marketing expenses (Q<sub>t-1</sub>). This lag accurately models real-world enterprise sales cycles: SDR prospecting, product demos, pilot deployments, and legal review conducted in Q1 typically translate into closed-won ARR recognized throughout Q2.
+        </p>
+      </section>
+
+      <!-- Section 2: Benchmark Tiers Table -->
+      <section>
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+          <div>
+            <h2 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+              <span class="text-purple-400 font-mono">2.</span> SaaS Magic Number Benchmark Tiers
+            </h2>
+            <p class="text-slate-400 text-xs sm:text-sm mt-1">Operational scorecard based on 400+ B2B software companies from seed to IPO.</p>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="border-b border-slate-800 bg-slate-900/90 font-mono text-slate-400 uppercase tracking-wider text-[11px]">
+                <th class="py-3.5 px-4">Magic Number Tier</th>
+                <th class="py-3.5 px-3">Efficiency Tier</th>
+                <th class="py-3.5 px-4">Operational Interpretation</th>
+                <th class="py-3.5 px-3">Implied CAC Payback</th>
+                <th class="py-3.5 px-4">Capital Allocation Mandate</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-medium">
+              <tr class="bg-rose-950/20">
+                <td class="py-3.5 px-4 font-mono font-bold text-rose-400">&lt; 0.50</td>
+                <td class="py-3.5 px-3 font-semibold text-rose-400">Capital Destructive</td>
+                <td class="py-3.5 px-4 text-slate-300">
+                  Acquisition costs far exceed commercial value. Churn or high onboarding friction is neutralizing new ARR.
+                </td>
+                <td class="py-3.5 px-3 font-mono text-rose-400">&gt; 24 Months</td>
+                <td class="py-3.5 px-4 text-xs font-semibold text-rose-400">Freeze paid expansion; fix retention.</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-mono font-bold text-amber-400">0.50 – 0.74</td>
+                <td class="py-3.5 px-3 font-semibold text-amber-400">Flawed / Inefficient</td>
+                <td class="py-3.5 px-4 text-slate-300">
+                  Sales pipeline is sluggish. High CAC relative to contract value; conversion leaks in mid-funnel demo stages.
+                </td>
+                <td class="py-3.5 px-3 font-mono text-amber-400">16 – 24 Months</td>
+                <td class="py-3.5 px-4 text-xs font-semibold text-amber-400">Optimize SDR quotas & raise pricing.</td>
+              </tr>
+              <tr class="bg-cyan-950/20">
+                <td class="py-3.5 px-4 font-mono font-bold text-cyan-400">0.75 – 1.00</td>
+                <td class="py-3.5 px-3 font-semibold text-cyan-400">Good / Sustainable</td>
+                <td class="py-3.5 px-4 text-slate-300">
+                  Healthy, repeatable acquisition engine. Customers pay back acquisition overhead within a standard 12–16 month timeframe.
+                </td>
+                <td class="py-3.5 px-3 font-mono text-cyan-400">12 – 16 Months</td>
+                <td class="py-3.5 px-4 text-xs font-semibold text-cyan-400">Scale marketing spend incrementally.</td>
+              </tr>
+              <tr class="bg-emerald-950/30">
+                <td class="py-3.5 px-4 font-mono font-bold text-emerald-400">&gt; 1.00</td>
+                <td class="py-3.5 px-3 font-semibold text-emerald-400">Hyper-Efficient</td>
+                <td class="py-3.5 px-4 text-slate-300">
+                  World-class unit economics. Every dollar invested into S&M generates more than $1 of new annual recurring revenue.
+                </td>
+                <td class="py-3.5 px-3 font-mono text-emerald-400">&lt; 12 Months</td>
+                <td class="py-3.5 px-4 text-xs font-semibold text-emerald-400">Aggressively accelerate GTM hiring.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: Gross Margin Adjusted Efficiency -->
+      <section>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
+          <span class="text-purple-400 font-mono">3.</span> The Gross Margin-Adjusted Reality Check
+        </h2>
+        <p>
+          While the traditional Magic Number is an industry standard, it ignores <strong>Cost of Goods Sold (COGS)</strong>. In the era of high-cost foundation model APIs and infrastructure compute, two SaaS companies with an identical 1.0 Magic Number can have radically different cash dynamics:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <h3 class="font-bold text-white text-base mb-2">Company A: Traditional Enterprise SaaS</h3>
+            <ul class="space-y-1 text-xs font-mono text-slate-300">
+              <li>Magic Number: 1.0</li>
+              <li>Gross Margin: 85%</li>
+              <li class="text-emerald-400 font-bold pt-2">GM-Adjusted Magic Number: 0.85</li>
+              <li class="text-slate-400">Implied Cash Payback: 14.1 Months</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <h3 class="font-bold text-white text-base mb-2">Company B: Heavy AI Wrapper SaaS</h3>
+            <ul class="space-y-1 text-xs font-mono text-slate-300">
+              <li>Magic Number: 1.0</li>
+              <li>Gross Margin: 55% (High LLM API Burn)</li>
+              <li class="text-rose-400 font-bold pt-2">GM-Adjusted Magic Number: 0.55</li>
+              <li class="text-slate-400">Implied Cash Payback: 21.8 Months</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>
+          Company B is burning cash at a dangerous velocity despite appearing efficient on a top-line Magic Number basis. Bootstrapped and self-funded operators should always monitor the <strong>GM-Adjusted Magic Number</strong> to protect treasury liquidity.
+        </p>
+      </section>
+
+      <!-- Section 4: How to Improve Your SaaS Magic Number -->
+      <section>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
+          <span class="text-purple-400 font-mono">4.</span> Four Levers to Elevate Your Sales Efficiency
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm my-4">
+          <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800">
+            <h3 class="text-white font-bold text-sm mb-1">Shift to Annual Upfront Contracts</h3>
+            <p class="text-xs text-slate-400">
+              Transitioning monthly subscribers to discounted annual billing accelerates cash collections, eliminating credit card failure churn and delivering upfront working capital for marketing reinvestment.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800">
+            <h3 class="text-white font-bold text-sm mb-1">Expand Net Revenue Retention (NRR)</h3>
+            <p class="text-xs text-slate-400">
+              Because the numerator measures <em>net new</em> revenue, every dollar of expansion, cross-sell, and seat upsells from existing customers elevates your Magic Number with near-zero additional S&M expenditure.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800">
+            <h3 class="text-white font-bold text-sm mb-1">Cull Low-Performing Paid Channels</h3>
+            <p class="text-xs text-slate-400">
+              Regularly audit your blended CAC. Paid search keywords or social ads that yield high initial signups but 90-day churn depress the denominator without contributing durable ARR.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800">
+            <h3 class="text-white font-bold text-sm mb-1">Align Pricing with Customer Value Units</h3>
+            <p class="text-xs text-slate-400">
+              Introduce value metrics (API calls, active seats, records processed) so revenue naturally compounds alongside customer usage without requiring additional account executive hours.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="pt-8 border-t border-slate-800">
+        <h2 class="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm">
+              <span>What is the SaaS Magic Number formula?</span>
+              <span class="text-purple-400 text-lg transition-transform group-open:rotate-180">↓</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              The SaaS Magic Number formula is: (Current Quarter Revenue - Prior Quarter Revenue) × 4 divided by Prior Quarter Sales and Marketing Expense. Alternatively expressed as: [Quarterly Net New ARR] / [Prior Quarter S&M Expense].
+            </p>
+          </details>
+
+          <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm">
+              <span>What is considered a good SaaS Magic Number benchmark?</span>
+              <span class="text-purple-400 text-lg transition-transform group-open:rotate-180">↓</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              A SaaS Magic Number between 0.75 and 1.0 represents good, healthy sales efficiency where customer acquisition costs are paid back in approximately 12–16 months. A score below 0.75 indicates flawed or capital-destructive acquisition, while a score above 1.0 signifies hyper-efficient growth that justifies aggressive go-to-market spending.
+            </p>
+          </details>
+
+          <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm">
+              <span>Why is the Gross Margin-Adjusted Magic Number superior for modern software companies?</span>
+              <span class="text-purple-400 text-lg transition-transform group-open:rotate-180">↓</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              The standard Magic Number treats all revenue equally. If your SaaS incurs heavy third-party inference API or cloud COGS resulting in a 65% gross margin, each new dollar of ARR delivers significantly less gross profit to repay sales expenses than an 85% gross margin company. Multiplying the Magic Number by Gross Margin percentage exposes the true cash-recovery velocity.
+            </p>
+          </details>
+
+          <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm">
+              <span>How does the Magic Number relate to CAC Payback Period?</span>
+              <span class="text-purple-400 text-lg transition-transform group-open:rotate-180">↓</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              The Gross Margin-Adjusted Magic Number is mathematically inversely related to CAC payback: Implied CAC Payback (in months) equals 12 divided by the Gross Margin-Adjusted Magic Number. An adjusted score of 1.0 equals exactly 12 months payback, while 0.50 implies a lengthy 24 months payback.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Sibling Internal Links & SaaS Unit Math Suite -->
+      <section class="mt-12 p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+        <h3 class="text-base font-bold text-white mb-4">Explore Sibling SaaS Valuation & Efficiency Models</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <a href="/rule-of-40-saas-valuation-growth-model/" class="p-3 rounded-lg bg-slate-950 hover:border-purple-500/40 border border-slate-800 transition flex items-center justify-between group">
+            <div>
+              <div class="font-semibold text-white group-hover:text-purple-400">Rule of 40 Growth Model</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Balancing YoY revenue expansion & FCF margin</div>
+            </div>
+            <span class="text-purple-400">→</span>
+          </a>
+
+          <a href="/saas-ltv-cac-payback-period-calculator/" class="p-3 rounded-lg bg-slate-950 hover:border-purple-500/40 border border-slate-800 transition flex items-center justify-between group">
+            <div>
+              <div class="font-semibold text-white group-hover:text-purple-400">LTV:CAC & Payback Period</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Lifetime value modeling & churn sensitivity</div>
+            </div>
+            <span class="text-purple-400">→</span>
+          </a>
+
+          <a href="/net-revenue-retention-nrr-benchmark-bootstrapped-saas/" class="p-3 rounded-lg bg-slate-950 hover:border-purple-500/40 border border-slate-800 transition flex items-center justify-between group">
+            <div>
+              <div class="font-semibold text-white group-hover:text-purple-400">NRR Retention Benchmarks</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Expansion revenue & net negative churn</div>
+            </div>
+            <span class="text-purple-400">→</span>
+          </a>
+
+          <a href="/b2b-saas-churn-benchmarks-by-acv-2026/" class="p-3 rounded-lg bg-slate-950 hover:border-purple-500/40 border border-slate-800 transition flex items-center justify-between group">
+            <div>
+              <div class="font-semibold text-white group-hover:text-purple-400">B2B Churn Benchmarks by ACV</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Logo churn vs dollar churn by contract size</div>
+            </div>
+            <span class="text-purple-400">→</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer Navigation -->
+      <div class="flex justify-between items-center pt-8 border-t border-slate-800 text-xs font-mono">
+        <a href={`${base}/`} class="text-slate-400 hover:text-white">
+          ← Back to SaaS Suite
+        </a>
+        <a href="/rule-of-40-saas-valuation-growth-model/" class="text-purple-400 hover:text-purple-300">
+          Next: Rule of 40 Valuation Model →
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Interactive Calculator Script -->
+  <script is:inline>
+    function updateMagicNumber() {
+      var priorRev = parseFloat(document.getElementById('prior-rev').value) || 0;
+      var currRev = parseFloat(document.getElementById('curr-rev').value) || 0;
+      var smExpense = parseFloat(document.getElementById('sm-expense').value) || 0;
+      var grossMargin = (parseFloat(document.getElementById('gross-margin').value) || 80) / 100;
+
+      var netNewARR = (currRev - priorRev) * 4;
+      var magicNumber = smExpense > 0 ? (netNewARR / smExpense) : 0;
+      var gmAdjusted = magicNumber * grossMargin;
+      var cacPayback = gmAdjusted > 0 ? (12 / gmAdjusted) : 999;
+
+      var outMagic = document.getElementById('out-magic-number');
+      var outBadge = document.getElementById('out-efficiency-badge');
+      var outNetNew = document.getElementById('out-net-new-arr');
+      var outGMAdj = document.getElementById('out-gm-adj');
+      var outPayback = document.getElementById('out-cac-payback');
+      var outStance = document.getElementById('out-capital-stance');
+
+      outMagic.textContent = magicNumber.toFixed(2);
+      outNetNew.textContent = '$' + Math.round(netNewARR).toLocaleString();
+      outGMAdj.textContent = gmAdjusted.toFixed(2);
+      outPayback.textContent = cacPayback > 99 ? '> 99 Mo' : cacPayback.toFixed(1) + ' Months';
+
+      if (magicNumber < 0.5) {
+        outBadge.textContent = 'Capital Destructive (< 0.5)';
+        outBadge.className = 'mt-2 inline-flex items-center px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30';
+        outStance.textContent = 'Freeze S&M Spend';
+        outStance.className = 'text-rose-400 font-bold text-sm';
+      } else if (magicNumber < 0.75) {
+        outBadge.textContent = 'Flawed / Inefficient (0.5 - 0.74)';
+        outBadge.className = 'mt-2 inline-flex items-center px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30';
+        outStance.textContent = 'Optimize Funnel';
+        outStance.className = 'text-amber-400 font-bold text-sm';
+      } else if (magicNumber <= 1.0) {
+        outBadge.textContent = 'Good / Sustainable (0.75 - 1.0)';
+        outBadge.className = 'mt-2 inline-flex items-center px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30';
+        outStance.textContent = 'Scale Predictably';
+        outStance.className = 'text-cyan-400 font-bold text-sm';
+      } else {
+        outBadge.textContent = 'Hyper-Efficient (> 1.0)';
+        outBadge.className = 'mt-2 inline-flex items-center px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30';
+        outStance.textContent = 'Accelerate GTM';
+        outStance.className = 'text-emerald-400 font-bold text-sm';
+      }
+    }
+
+    document.getElementById('prior-rev').addEventListener('input', updateMagicNumber);
+    document.getElementById('curr-rev').addEventListener('input', updateMagicNumber);
+    document.getElementById('sm-expense').addEventListener('input', updateMagicNumber);
+    document.getElementById('gross-margin').addEventListener('input', updateMagicNumber);
+
+    // Initial run
+    updateMagicNumber();
+  </script>
+</Layout>

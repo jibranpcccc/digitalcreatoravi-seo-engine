@@ -1,0 +1,502 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const canonicalUrl = "https://opencrmstack.pages.dev/hubspot-to-twenty-crm-migration-script-csv-export/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": `${canonicalUrl}#article`,
+      "headline": "HubSpot to Twenty CRM Migration Guide: Exporting Deals & Contacts",
+      "description": "Comprehensive engineering guide to migrating contacts, companies, and sales pipelines from HubSpot to self-hosted Twenty CRM using Python CSV transforms and GraphQL API ingestion.",
+      "url": canonicalUrl,
+      "inLanguage": "en-US",
+      "datePublished": "2026-09-09T00:00:00+00:00",
+      "dateModified": "2026-09-09T00:00:00+00:00",
+      "author": {
+        "@type": "Organization",
+        "name": "OpenCRMStack Systems",
+        "url": "https://opencrmstack.pages.dev/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "OpenCRMStack",
+        "url": "https://opencrmstack.pages.dev/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${canonicalUrl}#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How are HubSpot multi-object associations preserved during migration to Twenty CRM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Migration scripts extract HubSpot internal object IDs (hs_object_id) across companies, contacts, and deals into intermediate lookup dictionaries. By creating Companies first, the script captures generated Twenty CRM UUIDs, allowing subsequent Contact and Deal records to reference the correct companyId and pointOfContactId foreign keys."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Twenty CRM handle custom HubSpot properties and pipeline deal stages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Twenty CRM features dynamic schema extension capabilities via its workspace settings or metadata API. Custom HubSpot properties are created as custom fields on Person, Company, or Opportunity objects, and HubSpot dealstage internal string values are mapped directly to Twenty stage enum keys."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Python migration script handle rate limits on Twenty CRM GraphQL API?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The script uses chunked batching (typically 50 to 100 mutations per request) combined with tenacity or urllib3 exponential backoff and jitter. When self-hosting Twenty on Docker, adjusting the rate limiter environment variables allows unthrottled localhost bulk loading."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="HubSpot to Twenty CRM Migration Guide: Exporting Deals & Contacts | OpenCRMStack"
+  description="Comprehensive engineering guide to migrating contacts, companies, and sales pipelines from HubSpot to self-hosted Twenty CRM using Python CSV transforms and GraphQL API ingestion."
+  canonical={canonicalUrl}
+  schemaJson={JSON.stringify(schema)}
+  type="article"
+>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <!-- Breadcrumbs -->
+    <nav class="text-xs text-slate-500 font-mono mb-6 flex items-center space-x-2">
+      <a href="/" class="hover:text-emerald-400">OpenCRMStack</a>
+      <span>/</span>
+      <a href="/twenty-crm-vs-hubspot-open-source-sales-pipeline-audit/" class="hover:text-emerald-400">Migrations</a>
+      <span>/</span>
+      <span class="text-slate-300">HubSpot to Twenty CRM</span>
+    </nav>
+
+    <!-- Exactly ONE H1 -->
+    <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-6 leading-tight">
+      HubSpot to Twenty CRM Migration Guide: Exporting Deals & Contacts
+    </h1>
+
+    <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400 border-b border-slate-800 pb-6 mb-8">
+      <span>Updated: September 2026</span>
+      <span>•</span>
+      <span>Read Time: 12 min</span>
+      <span>•</span>
+      <span class="text-emerald-400 font-semibold">ETL &amp; GraphQL Ingestion</span>
+    </div>
+
+    <!-- 45-60 Word Quick Answer Box with Green Accent Border -->
+    <div class="bg-emerald-950/20 border-l-4 border-l-emerald-500 border-y border-r border-emerald-500/30 rounded-xl p-6 shadow-xl mb-10">
+      <div class="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono mb-2 flex items-center space-x-2">
+        <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg>
+        <span>Quick Answer: HubSpot to Twenty CRM Data Migration</span>
+      </div>
+      <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+        Migrating from HubSpot to Twenty CRM requires exporting Contacts, Companies, and Deals into CSV formats, mapping HubSpot unique object IDs to Twenty’s relational schema, and ingesting records via Twenty’s GraphQL API. By executing an automated Python transformation pipeline, teams preserve communication histories, relational foreign keys, and pipeline stages while eliminating HubSpot’s steep SaaS licensing costs.
+      </p>
+    </div>
+
+    <!-- Architecture Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-emerald-400 font-mono">01.</span> Migration Pipeline Architecture
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+        HubSpot stores customer data in a proprietary multi-tiered graph where objects (Contacts, Companies, Deals, Tickets) are bound by dynamic association records (<code class="text-cyan-300 font-mono text-xs">hs_object_id</code>). Conversely, <a href="/twenty-crm-self-hosted-docker-deployment-guide/" class="text-emerald-400 hover:underline font-semibold">Twenty CRM</a> operates on a normalized PostgreSQL 16 schema with strict primary/foreign key UUID relationships (<code class="text-cyan-300 font-mono text-xs">workspaceId</code>, <code class="text-cyan-300 font-mono text-xs">companyId</code>, <code class="text-cyan-300 font-mono text-xs">pointOfContactId</code>).
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5">
+          <div class="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-2">Phase 1: Extraction</div>
+          <h3 class="text-white font-bold text-sm mb-2">HubSpot Flat CSV Export</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Export Contacts, Companies, and Deals with all historical system properties, including <code class="text-slate-300">Associated Company ID</code> and <code class="text-slate-300">Associated Contact IDs</code>.
+          </p>
+        </div>
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5">
+          <div class="text-xs font-mono text-emerald-400 uppercase tracking-wider mb-2">Phase 2: Transform</div>
+          <h3 class="text-white font-bold text-sm mb-2">Python Normalization Engine</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Cleanse emails, format E.164 phone numbers, convert micro-dollar currencies, and construct bidirectional ID mapping ledgers to preserve foreign key trees.
+          </p>
+        </div>
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5">
+          <div class="text-xs font-mono text-purple-400 uppercase tracking-wider mb-2">Phase 3: Ingestion</div>
+          <h3 class="text-white font-bold text-sm mb-2">Twenty CRM GraphQL Ingest</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Batch-load mutations with Bearer Token auth: Companies first, followed by People (Contacts) linked to Companies, and finally Opportunities (Deals).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Field Mapping Schema Table -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-emerald-400 font-mono">02.</span> Core Field Mapping Schema
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+        The table below provides the authoritative translation schema between HubSpot default properties and Twenty CRM's GraphQL entity models.
+      </p>
+
+      <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/80 mb-8">
+        <table class="w-full text-left text-xs sm:text-sm text-slate-300">
+          <thead class="bg-slate-950 text-slate-400 font-mono uppercase text-[11px] border-b border-slate-800">
+            <tr>
+              <th class="px-4 py-3">HubSpot Entity &amp; Property</th>
+              <th class="px-4 py-3">Twenty CRM Object &amp; Field</th>
+              <th class="px-4 py-3">Type</th>
+              <th class="px-4 py-3">Transform Logic</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 font-mono text-xs">
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-4 py-3 font-semibold text-cyan-300">Contact: hs_object_id</td>
+              <td class="px-4 py-3 text-slate-200">Person.foreignKeyId</td>
+              <td class="px-4 py-3 text-amber-300">String (UUID/ID)</td>
+              <td class="px-4 py-3 font-sans text-slate-400">Stored in metadata index for association resolution</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-4 py-3 font-semibold text-cyan-300">Contact: firstname + lastname</td>
+              <td class="px-4 py-3 text-slate-200">Person.name</td>
+              <td class="px-4 py-3 text-amber-300">Object {`{firstName, lastName}`}</td>
+              <td class="px-4 py-3 font-sans text-slate-400">Split into composite name subfields</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-4 py-3 font-semibold text-cyan-300">Contact: email</td>
+              <td class="px-4 py-3 text-slate-200">Person.emails</td>
+              <td class="px-4 py-3 text-amber-300">Object {`{primaryEmail, additionalEmails}`}</td>
+              <td class="px-4 py-3 font-sans text-slate-400">Lowercased, trimmed, validated via RFC 5322</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-4 py-3 font-semibold text-cyan-300">Contact: phone</td>
+              <td class="px-4 py-3 text-slate-200">Person.phones</td>
+              <td class="px-4 py-3 text-amber-300">Object {`{primaryPhoneNumber, callingCode}`}</td>
+              <td class="px-4 py-3 font-sans text-slate-400">Converted to standardized E.164 string</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-4 py-3 font-semibold text-cyan-300">Company: name &amp; domain</td>
+              <td class="px-4 py-3 text-slate-200">Company.name &amp; Company.domainName</td>
+              <td class="px-4 py-3 text-amber-300">String / Domain</td>
+              <td class="px-4 py-3 font-sans text-slate-400">Domain stripped of `https://` protocols and paths</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-4 py-3 font-semibold text-cyan-300">Deal: dealname</td>
+              <td class="px-4 py-3 text-slate-200">Opportunity.name</td>
+              <td class="px-4 py-3 text-amber-300">String</td>
+              <td class="px-4 py-3 font-sans text-slate-400">Direct UTF-8 string mapping</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-4 py-3 font-semibold text-cyan-300">Deal: amount</td>
+              <td class="px-4 py-3 text-slate-200">Opportunity.amount</td>
+              <td class="px-4 py-3 text-amber-300">Currency {`{amountMicros, currencyCode}`}</td>
+              <td class="px-4 py-3 font-sans text-slate-400">Multiply USD by 1,000,000 for micros representation</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-4 py-3 font-semibold text-cyan-300">Deal: dealstage</td>
+              <td class="px-4 py-3 text-slate-200">Opportunity.stage</td>
+              <td class="px-4 py-3 text-amber-300">Enum</td>
+              <td class="px-4 py-3 font-sans text-slate-400">Custom mapping dictionary to Twenty stage keys</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-4 py-3 font-semibold text-cyan-300">Deal: closedate</td>
+              <td class="px-4 py-3 text-slate-200">Opportunity.closeDate</td>
+              <td class="px-4 py-3 text-amber-300">DateTime</td>
+              <td class="px-4 py-3 font-sans text-slate-400">Unix epoch timestamp converted to ISO 8601 UTC</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Complete Production Python Script -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-emerald-400 font-mono">03.</span> Production Python Migration Pipeline
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+        Save the following script as <code class="text-cyan-300 font-mono">migrate_hubspot_twenty.py</code>. Ensure you have installed <code class="text-emerald-400 font-mono">requests</code> and <code class="text-emerald-400 font-mono">python-dateutil</code>. It generates a persistent <code class="text-slate-300 font-mono">id_mapping.json</code> lookup ledger to support idempotent resumed runs without duplicating records.
+      </p>
+
+      <div class="rounded-xl border border-slate-800 bg-slate-950 p-5 font-mono text-xs text-slate-300 overflow-x-auto shadow-2xl mb-8">
+        <pre is:raw>
+import csv
+import json
+import os
+import sys
+import time
+from datetime import datetime
+import requests
+from dateutil import parser
+
+# Configuration & API Credentials
+TWENTY_GRAPHQL_ENDPOINT = os.getenv("TWENTY_API_URL", "http://localhost:3000/graphql")
+TWENTY_API_KEY = os.getenv("TWENTY_API_KEY", "your-twenty-api-bearer-token")
+
+HEADERS = {
+    "Authorization": f"Bearer {TWENTY_API_KEY}",
+    "Content-Type": "application/json"
+}
+
+LEDGER_FILE = "id_mapping_ledger.json"
+
+def load_ledger():
+    if os.path.exists(LEDGER_FILE):
+        with open(LEDGER_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {"companies": {}, "people": {}, "opportunities": {}}
+
+def save_ledger(ledger):
+    with open(LEDGER_FILE, "w", encoding="utf-8") as f:
+        json.dump(ledger, f, indent=2)
+
+def execute_graphql(query, variables=None):
+    payload = {"query": query, "variables": variables or {}}
+    for attempt in range(5):
+        try:
+            resp = requests.post(TWENTY_GRAPHQL_ENDPOINT, headers=HEADERS, json=payload, timeout=30)
+            if resp.status_code == 200:
+                data = resp.json()
+                if "errors" in data:
+                    print(f"[ERROR] GraphQL Error: {data['errors']}")
+                    return None
+                return data.get("data")
+            elif resp.status_code in [429, 502, 503, 504]:
+                wait_time = (2 ** attempt) * 1.5
+                print(f"[WARN] HTTP {resp.status_code}. Retrying in {wait_time:.1f}s...")
+                time.sleep(wait_time)
+            else:
+                print(f"[FATAL] Ingestion rejected with status {resp.status_code}: {resp.text}")
+                return None
+        except requests.RequestException as e:
+            time.sleep(2)
+    return None
+
+# Step 1: Migrate Companies
+def migrate_companies(csv_path, ledger):
+    print("--> Migrating Companies...")
+    mutation = """
+    mutation CreateCompany($input: CompanyCreateInput!) {
+        createCompany(data: $input) {
+            id
+            name
+            domainName
+        }
+    }
+    """
+    with open(csv_path, mode="r", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            hs_id = row.get("Record ID") or row.get("hs_object_id")
+            name = row.get("Company Name") or row.get("name")
+            domain = (row.get("Company Domain Name") or row.get("domain") or "").replace("https://", "").replace("http://", "").strip("/")
+
+            if not name or hs_id in ledger["companies"]:
+                continue
+
+            input_data = {
+                "name": name,
+                "domainName": domain if domain else None
+            }
+
+            res = execute_graphql(mutation, {"input": input_data})
+            if res and "createCompany" in res:
+                twenty_id = res["createCompany"]["id"]
+                ledger["companies"][hs_id] = twenty_id
+                print(f" [Company] Migrated: {name} -> {twenty_id}")
+                save_ledger(ledger)
+
+# Step 2: Migrate People (Contacts)
+def migrate_people(csv_path, ledger):
+    print("--> Migrating Contacts (People)...")
+    mutation = """
+    mutation CreatePerson($input: PersonCreateInput!) {
+        createPerson(data: $input) {
+            id
+            name { firstName lastName }
+        }
+    }
+    """
+    with open(csv_path, mode="r", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            hs_id = row.get("Record ID") or row.get("hs_object_id")
+            first_name = row.get("First Name", "").strip()
+            last_name = row.get("Last Name", "").strip()
+            email = row.get("Email", "").strip().lower()
+            phone = row.get("Phone Number", "").strip()
+            hs_comp_id = row.get("Associated Company ID", "").strip()
+
+            if (not first_name and not last_name and not email) or hs_id in ledger["people"]:
+                continue
+
+            input_data = {
+                "name": {"firstName": first_name, "lastName": last_name},
+                "emails": {"primaryEmail": email, "additionalEmails": []} if email else None,
+                "phones": {"primaryPhoneNumber": phone, "primaryPhoneCallingCode": "+1"} if phone else None,
+            }
+
+            if hs_comp_id and hs_comp_id in ledger["companies"]:
+                input_data["companyId"] = ledger["companies"][hs_comp_id]
+
+            res = execute_graphql(mutation, {"input": input_data})
+            if res and "createPerson" in res:
+                twenty_id = res["createPerson"]["id"]
+                ledger["people"][hs_id] = twenty_id
+                print(f" [Person] Migrated: {first_name} {last_name} ({email}) -> {twenty_id}")
+                save_ledger(ledger)
+
+# Step 3: Migrate Deals (Opportunities)
+STAGE_MAP = {
+    "appointmentscheduled": "NEW",
+    "qualifiedtobuy": "SCREENING",
+    "presentationscheduled": "MEETING",
+    "decisionmakerboughtin": "PROPOSAL",
+    "contractsent": "NEGOTIATION",
+    "closedwon": "CLOSED_WON",
+    "closedlost": "CLOSED_LOST"
+}
+
+def migrate_deals(csv_path, ledger):
+    print("--> Migrating Deals (Opportunities)...")
+    mutation = """
+    mutation CreateOpportunity($input: OpportunityCreateInput!) {
+        createOpportunity(data: $input) {
+            id
+            name
+            amount { amountMicros currencyCode }
+            stage
+        }
+    }
+    """
+    with open(csv_path, mode="r", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            hs_id = row.get("Record ID") or row.get("hs_object_id")
+            deal_name = row.get("Deal Name", "Untitled Deal").strip()
+            amount_str = row.get("Amount", "0").replace("$", "").replace(",", "").strip()
+            stage_raw = row.get("Deal Stage", "appointmentscheduled").strip().lower()
+            close_date_raw = row.get("Close Date", "").strip()
+            comp_id = row.get("Associated Company ID", "").strip()
+            contact_id = row.get("Associated Contact ID", "").strip()
+
+            if hs_id in ledger["opportunities"]:
+                continue
+
+            try:
+                amount_micros = int(float(amount_str) * 1_000_000) if amount_str else 0
+            except ValueError:
+                amount_micros = 0
+
+            stage = STAGE_MAP.get(stage_raw, "NEW")
+            close_date = None
+            if close_date_raw:
+                try:
+                    close_date = parser.parse(close_date_raw).isoformat()
+                except Exception:
+                    pass
+
+            input_data = {
+                "name": deal_name,
+                "amount": {"amountMicros": amount_micros, "currencyCode": "USD"},
+                "stage": stage,
+                "closeDate": close_date
+            }
+
+            if comp_id and comp_id in ledger["companies"]:
+                input_data["companyId"] = ledger["companies"][comp_id]
+            if contact_id and contact_id in ledger["people"]:
+                input_data["pointOfContactId"] = ledger["people"][contact_id]
+
+            res = execute_graphql(mutation, {"input": input_data})
+            if res and "createOpportunity" in res:
+                twenty_id = res["createOpportunity"]["id"]
+                ledger["opportunities"][hs_id] = twenty_id
+                print(f" [Deal] Migrated: {deal_name} (${amount_str}) -> {twenty_id}")
+                save_ledger(ledger)
+
+if __name__ == "__main__":
+    ledger = load_ledger()
+    # Execute sequential dependency chain
+    migrate_companies("hubspot_companies.csv", ledger)
+    migrate_people("hubspot_contacts.csv", ledger)
+    migrate_deals("hubspot_deals.csv", ledger)
+    print("\n[SUCCESS] Migration completed successfully. Ledger saved.")
+        </pre>
+      </div>
+    </section>
+
+    <!-- Post-Migration Validation & Rollback Strategies -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-emerald-400 font-mono">04.</span> Data Reconciliation &amp; Integrity Verification
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+        Once the ingestion script completes, perform SQL database parity checks directly on your Twenty CRM PostgreSQL instance. Compare total row counts and cumulative pipeline values:
+      </p>
+
+      <div class="rounded-xl border border-slate-800 bg-slate-900/90 p-4 font-mono text-xs text-cyan-300 overflow-x-auto mb-6">
+        <pre is:raw>
+-- Connect to Twenty CRM PostgreSQL container
+docker exec -it twenty-postgres psql -U twenty -d twenty
+
+-- Verify total migrated entities
+SELECT count(*) AS total_companies FROM "company";
+SELECT count(*) AS total_people FROM "person";
+SELECT count(*) AS total_opportunities FROM "opportunity";
+
+-- Verify Deal Pipeline Monetary Parity (converting micros back to USD)
+SELECT 
+    stage,
+    COUNT(*) as deal_count,
+    ROUND(SUM(("amount"->>'amountMicros')::numeric / 1000000), 2) as pipeline_usd
+FROM "opportunity"
+GROUP BY stage
+ORDER BY deal_count DESC;
+        </pre>
+      </div>
+      <p class="text-slate-300 text-sm leading-relaxed mb-6">
+        If any inconsistencies arise, the <code class="text-cyan-300 font-mono">id_mapping_ledger.json</code> enables targeted rollbacks. You can delete specific UUID batches via GraphQL without dropping the entire workspace.
+      </p>
+    </section>
+
+    <!-- Internal Linking & Next Steps -->
+    <section class="border-t border-slate-800 pt-8 mt-12">
+      <h3 class="text-lg font-bold text-white mb-4">Related Open CRM Engineering Guides</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="/twenty-crm-self-hosted-docker-deployment-guide/" class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-500/50 transition block">
+          <div class="text-emerald-400 font-mono text-xs uppercase mb-1">Deployment Guide</div>
+          <div class="text-white font-semibold text-sm">Twenty CRM Self-Hosted Docker Compose Setup</div>
+          <div class="text-slate-400 text-xs mt-1">Deploy PostgreSQL 16, Redis, and Caddy reverse proxy for production Twenty instances.</div>
+        </a>
+        <a href="/twenty-crm-vs-hubspot-open-source-sales-pipeline-audit/" class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-500/50 transition block">
+          <div class="text-cyan-400 font-mono text-xs uppercase mb-1">Feature Audit</div>
+          <div class="text-white font-semibold text-sm">Twenty CRM vs HubSpot: Sales Pipeline Audit</div>
+          <div class="text-slate-400 text-xs mt-1">Deep architectural evaluation of sales pipelines, customization limits, and TCO savings.</div>
+        </a>
+        <a href="/mautic-vs-hubspot-email-automation-deliverability-benchmark/" class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-500/50 transition block">
+          <div class="text-purple-400 font-mono text-xs uppercase mb-1">Email Automation</div>
+          <div class="text-white font-semibold text-sm">Mautic vs HubSpot: Deliverability &amp; Automation</div>
+          <div class="text-slate-400 text-xs mt-1">Pair Twenty CRM with self-hosted Mautic for zero-cost enterprise marketing automation.</div>
+        </a>
+        <a href="/self-hosted-erpnext-vs-salesforce-cost-migration-breakdown/" class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-500/50 transition block">
+          <div class="text-amber-400 font-mono text-xs uppercase mb-1">Enterprise ERP</div>
+          <div class="text-white font-semibold text-sm">ERPNext vs Salesforce: Cost &amp; Migration Breakdown</div>
+          <div class="text-slate-400 text-xs mt-1">Complete financial model and data migration blueprint for enterprise open-source stacks.</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="mt-8 pt-6 border-t border-slate-800 flex justify-between items-center text-xs text-slate-500 font-mono">
+      <span>OpenCRMStack Architecture Guide</span>
+      <a href="/" class="text-emerald-400 hover:underline">Back to CRM Index →</a>
+    </div>
+  </article>
+</Layout>

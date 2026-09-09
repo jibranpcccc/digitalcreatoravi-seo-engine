@@ -1,0 +1,543 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "HAProxy HTTP Log Format Regex Extractor & Grok Expressions",
+      "url": "https://groklogtester.pages.dev/haproxy-http-log-format-regex-extractor/",
+      "description": "Production guide and regex extractor for parsing HAProxy HTTP access logs. Grok patterns, PCRE regular expressions, latency timers breakdown (%TR/%Tw/%Tc/%Tr/%Ta), and Vector/Fluent Bit pipelines.",
+      "author": {
+        "@type": "Organization",
+        "name": "GrokLogTester Engineering Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GrokLogTester",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://groklogtester.pages.dev/og-banner.png"
+        }
+      },
+      "datePublished": "2026-09-09",
+      "dateModified": "2026-09-09"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://groklogtester.pages.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://groklogtester.pages.dev/#guides"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "HAProxy HTTP Log Regex Extractor",
+          "item": "https://groklogtester.pages.dev/haproxy-http-log-format-regex-extractor/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Parse HAProxy HTTP Access Logs with Grok and PCRE Regex",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Identify Log Mode and Custom Log Format Directives",
+          "text": "Inspect haproxy.cfg under frontend or defaults blocks for option httplog or custom log-format directives to establish field sequencing."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Map HAProxy Format Tokens to Typed Grok Patterns",
+          "text": "Translate %ci:%cp, %t, %ft, %b/%s, and the %TR/%Tw/%Tc/%Tr/%Ta timers into integer and text Grok variables."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Handle Syslog Prefixes and Edge Disconnections",
+          "text": "Account for syslog rsyslog/journald headers and negative timer values (-1) that occur during premature client socket resets."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Deploy Vector VRL or Fluent Bit Parsers",
+          "text": "Implement compiled Oniguruma or Rust-based VRL parsers to deliver structured OpenSearch or Elasticsearch ingest."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the standard HAProxy HTTP log format?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under 'mode http' and 'option httplog', HAProxy emits: %ci:%cp [%tr] %ft %b/%s %TR/%Tw/%Tc/%Tr/%Ta %ST %B %CC %CS %tsc %ac/%fc/%bc/%sc/%rc %sq/%bq %hr %hs %{+Q}r. This captures client socket, exact millisecond request time, frontend, backend, target server, 5 distinct latency timers, status code, payload bytes, termination flags, and HTTP request line."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do the 5 HAProxy latency timers (TR/Tw/Tc/Tr/Ta) represent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TR is the time spent waiting for the full HTTP request from the client; Tw is the queue delay waiting for a free backend connection slot; Tc is the TCP 3-way handshake duration to the backend server; Tr is the backend application response latency (time to first response byte); and Ta is total active request lifetime from initial accept to final packet close."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do some timers show -1 in HAProxy logs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A -1 value indicates that the corresponding connection phase never initiated or completed. For example, if a client disconnects before sending complete HTTP headers, TR will log the duration until reset, while Tw, Tc, and Tr will log -1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does termination state 'cD' or 'sH' mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The first character designates who terminated the session (c = client, s = server, P = proxy). The second character designates which session phase it occurred in (D = data transmission phase, H = HTTP headers phase, R = waiting for request). For instance, 'cD' signifies the client prematurely closed the TCP connection while receiving response data."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const schemaJson = JSON.stringify(schemaData);
+---
+
+<Layout
+  title="HAProxy HTTP Log Format Regex Extractor & Grok Expressions | GrokLogTester"
+  description="Production guide and regex extractor for parsing HAProxy HTTP access logs. Grok patterns, PCRE regex, latency timers breakdown (%TR/%Tw/%Tc/%Tr/%Ta), and Vector/Fluent Bit pipelines."
+  canonical="https://groklogtester.pages.dev/haproxy-http-log-format-regex-extractor/"
+  schemaJson={schemaJson}
+  type="article"
+>
+  <article class="max-w-4xl mx-auto py-4">
+    <!-- Breadcrumb Navigation -->
+    <nav class="flex items-center space-x-2 text-xs font-mono text-slate-400 mb-6">
+      <a href="/" class="hover:text-cyan-400 transition">GrokLogTester</a>
+      <span>/</span>
+      <a href="/#guides" class="hover:text-cyan-400 transition">Guides</a>
+      <span>/</span>
+      <span class="text-cyan-400">HAProxy HTTP Log Regex</span>
+    </nav>
+
+    <!-- Header Section with EXACTLY ONE H1 tag -->
+    <header class="mb-10">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-4">
+        <span>Production Observability &bull; HAProxy 2.8 - 3.2+</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+        HAProxy HTTP Log Format Regex Extractor & Grok Expressions
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+        Extract, parse, and analyze HAProxy HTTP access logs with battle-tested Grok expressions and PCRE regular expressions. Dissect microsecond connection timers, session termination flags, and backend load balancing telemetry.
+      </p>
+    </header>
+
+    <!-- 45-60 Word Featured Snippet Quick Answer Box with Green Accent Border -->
+    <div class="bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/90 border-l-4 border-emerald-500 border-y border-r border-slate-800/80 rounded-r-xl p-5 mb-12 shadow-xl shadow-emerald-950/20 backdrop-blur-md relative overflow-hidden">
+      <div class="flex items-center space-x-2 mb-2 text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span>Quick Answer: HAProxy HTTP Log Parsing</span>
+      </div>
+      <p class="text-sm text-slate-200 leading-relaxed font-sans">
+        HAProxy HTTP logs record microsecond-level latency metrics, connection states, and reverse-proxy routing decisions. Use standard Grok pattern <code is:raw class="text-cyan-300 font-mono text-xs">%{HAPROXYHTTP}</code> or compile explicit PCRE regex to capture client IP, frontend, backend, server, timers (%TR/%Tw/%Tc/%Tr/%Ta), HTTP status, and byte payloads. Structured parsing enables real-time bottleneck detection, 5xx error tracking, and edge telemetry aggregation in Vector, Logstash, and Fluent Bit.
+      </p>
+    </div>
+
+    <!-- Section 1: Standard HAProxy HTTP Log Anatomy -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        1. Anatomy of the Default HAProxy HTTP Log Format
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed mb-4">
+        When <code class="text-cyan-300 bg-slate-800 px-1.5 py-0.5 rounded font-mono text-xs">option httplog</code> is declared inside an HAProxy frontend or defaults block, the proxy emits rich telemetry structured according to the internal format:
+      </p>
+
+      <div is:raw class="bg-slate-950 border border-slate-800 rounded-xl p-4 mb-6 font-mono text-xs text-slate-300 overflow-x-auto">
+        <span class="text-cyan-400 font-bold"># Default option httplog format specification:</span><br/>
+        "%ci:%cp [%tr] %ft %b/%s %TR/%Tw/%Tc/%Tr/%Ta %ST %B %CC %CS %tsc %ac/%fc/%bc/%sc/%rc %sq/%bq %hr %hs %{+Q}r"
+      </div>
+
+      <p class="text-sm text-slate-300 leading-relaxed mb-4">
+        Here is a concrete real-world production log event emitted by HAProxy through local rsyslog:
+      </p>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 mb-6 font-mono text-xs text-emerald-400 overflow-x-auto">
+        Sep  9 15:30:14 lb-edge-01 haproxy[29482]: 198.51.100.44:52841 [09/Sep/2026:15:30:14.281] fe_https~ be_api_cluster/srv_api_03 4/0/1/22/27 200 4582 - - ---- 142/85/32/8/0 0/0 "POST /api/v3/orders/checkout HTTP/1.1"
+      </div>
+    </section>
+
+    <!-- Section 2: Grok Patterns & PCRE Regex -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        2. Production Grok Pattern & Pure PCRE Regular Expression
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed mb-4">
+        While Logstash includes a built-in <code class="text-cyan-300 font-mono text-xs">%&#123;HAPROXYHTTP&#125;</code> pattern, production environments frequently require explicit sub-field extractions, handling negative latency flags (<code class="text-cyan-300 font-mono text-xs">-1</code>), and typed integer conversions.
+      </p>
+
+      <div class="mb-6">
+        <h3 class="text-sm font-bold text-slate-200 mb-2 font-mono">Explicit Grok Pattern (with Type Coercion)</h3>
+        <pre is:raw class="bg-slate-950 text-slate-200 p-4 rounded-xl font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed">^(?:%{SYSLOGTIMESTAMP:syslog_timestamp}\s+%{HOSTNAME:syslog_host}\s+haproxy\[%{POSINT:syslog_pid:int}\]:\s+)?%{IPORHOST:client_ip}:%{POSINT:client_port:int}\s+\[%{NOTSPACE:accept_date}\]\s+%{NOTSPACE:frontend_name}\s+%{NOTSPACE:backend_name}/%{NOTSPACE:server_name}\s+%{INT:time_wait_request:int}/%{INT:time_wait_queue:int}/%{INT:time_connect_tcp:int}/%{INT:time_response_server:int}/%{INT:time_total_active:int}\s+%{INT:status_code:int}\s+%{INT:bytes_read:int}\s+%{NOTSPACE:client_cookie}\s+%{NOTSPACE:server_cookie}\s+%{NOTSPACE:termination_state}\s+%{INT:actconn:int}/%{INT:feconn:int}/%{INT:beconn:int}/%{INT:srvconn:int}/%{INT:retries:int}\s+%{INT:srv_queue:int}/%{INT:backend_queue:int}\s+"(?:%{WORD:http_verb}\s+%{NOTSPACE:http_request}(?:\s+HTTP/%{NUMBER:http_version})?|%{DATA:raw_request})"$</pre>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-sm font-bold text-slate-200 mb-2 font-mono">High-Performance PCRE Regex (Named Capture Groups)</h3>
+        <p class="text-xs text-slate-400 mb-2">Optimized for Fluent Bit, Vector VRL, ClickHouse, and Python re modules:</p>
+        <pre is:raw class="bg-slate-950 text-emerald-300 p-4 rounded-xl font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed">^(?:(?<syslog_timestamp>[A-Z][a-z]{2}\s+\d+\s+\d{2}:\d{2}:\d{2})\s+(?<syslog_host>\S+)\s+haproxy\[(?<syslog_pid>\d+)\]:\s+)?(?<client_ip>[\w\.\:]+):(?<client_port>\d+)\s+\[(?<accept_date>[^\]]+)\]\s+(?<frontend_name>\S+)\s+(?<backend_name>\S+)\/(?<server_name>\S+)\s+(?<time_wait_request>-?\d+)\/(?<time_wait_queue>-?\d+)\/(?<time_connect_tcp>-?\d+)\/(?<time_response_server>-?\d+)\/(?<time_total_active>-?\d+)\s+(?<status_code>\d+)\s+(?<bytes_read>\d+)\s+(?<client_cookie>\S+)\s+(?<server_cookie>\S+)\s+(?<termination_state>[A-Za-z\-]{2,4})\s+(?<actconn>\d+)\/(?<feconn>\d+)\/(?<beconn>\d+)\/(?<srvconn>\d+)\/(?<retries>\d+)\s+(?<srv_queue>\d+)\/(?<backend_queue>\d+)\s+"(?:(?<http_verb>[A-Z]+)\s+(?<http_path>[^\s"]+)(?:\s+HTTP\/(?<http_version>[\d\.]+))?|(?<raw_request>[^"]+))"$</pre>
+      </div>
+    </section>
+
+    <!-- Section 3: Field-by-Field Parsing Cheat Sheet Table -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        3. HAProxy Log Parsing Cheat Sheet Table
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed mb-4">
+        Every field emitted by HAProxy corresponds to critical diagnostic telemetry. The table below outlines each token, meaning, example value, and recommended destination schema type:
+      </p>
+
+      <div class="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-xl shadow-md mb-6">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-950/80 text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">
+              <th class="py-3 px-4">Token</th>
+              <th class="py-3 px-4">Variable Name</th>
+              <th class="py-3 px-4">Description</th>
+              <th class="py-3 px-4">Sample Value</th>
+              <th class="py-3 px-4">Type</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 text-xs font-mono text-slate-300">
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%ci</td>
+              <td class="py-3 px-4 text-slate-400">client_ip</td>
+              <td class="py-3 px-4">Client IPv4 or IPv6 origin address</td>
+              <td class="py-3 px-4 text-white">198.51.100.44</td>
+              <td class="py-3 px-4 text-emerald-400">ip / string</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%cp</td>
+              <td class="py-3 px-4 text-slate-400">client_port</td>
+              <td class="py-3 px-4">Client TCP ephemeral source port</td>
+              <td class="py-3 px-4 text-white">52841</td>
+              <td class="py-3 px-4 text-emerald-400">integer</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%t / [%tr]</td>
+              <td class="py-3 px-4 text-slate-400">accept_date</td>
+              <td class="py-3 px-4">Timestamp when HAProxy accepted connection</td>
+              <td class="py-3 px-4 text-white">09/Sep/2026:15:30:14.281</td>
+              <td class="py-3 px-4 text-emerald-400">date / string</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%ft</td>
+              <td class="py-3 px-4 text-slate-400">frontend_name</td>
+              <td class="py-3 px-4">Frontend identifier that accepted request</td>
+              <td class="py-3 px-4 text-white">fe_https~</td>
+              <td class="py-3 px-4 text-emerald-400">string</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%b</td>
+              <td class="py-3 px-4 text-slate-400">backend_name</td>
+              <td class="py-3 px-4">Backend pool routed to handle request</td>
+              <td class="py-3 px-4 text-white">be_api_cluster</td>
+              <td class="py-3 px-4 text-emerald-400">string</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%s</td>
+              <td class="py-3 px-4 text-slate-400">server_name</td>
+              <td class="py-3 px-4">Backend server member handling connection</td>
+              <td class="py-3 px-4 text-white">srv_api_03</td>
+              <td class="py-3 px-4 text-emerald-400">string</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 bg-slate-950/40">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%TR</td>
+              <td class="py-3 px-4 text-amber-400 font-semibold">time_wait_request</td>
+              <td class="py-3 px-4">Time waiting for complete client HTTP request (ms)</td>
+              <td class="py-3 px-4 text-white">4</td>
+              <td class="py-3 px-4 text-emerald-400">integer (ms)</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 bg-slate-950/40">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%Tw</td>
+              <td class="py-3 px-4 text-amber-400 font-semibold">time_wait_queue</td>
+              <td class="py-3 px-4">Time waiting in backend queue for a slot (ms)</td>
+              <td class="py-3 px-4 text-white">0</td>
+              <td class="py-3 px-4 text-emerald-400">integer (ms)</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 bg-slate-950/40">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%Tc</td>
+              <td class="py-3 px-4 text-amber-400 font-semibold">time_connect_tcp</td>
+              <td class="py-3 px-4">Time to establish TCP 3-way handshake to server (ms)</td>
+              <td class="py-3 px-4 text-white">1</td>
+              <td class="py-3 px-4 text-emerald-400">integer (ms)</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 bg-slate-950/40">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%Tr</td>
+              <td class="py-3 px-4 text-amber-400 font-semibold">time_response_server</td>
+              <td class="py-3 px-4">Time for server to send full response headers (ms)</td>
+              <td class="py-3 px-4 text-white">22</td>
+              <td class="py-3 px-4 text-emerald-400">integer (ms)</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 bg-slate-950/40">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%Ta</td>
+              <td class="py-3 px-4 text-amber-400 font-semibold">time_total_active</td>
+              <td class="py-3 px-4">Total active request duration end-to-end (ms)</td>
+              <td class="py-3 px-4 text-white">27</td>
+              <td class="py-3 px-4 text-emerald-400">integer (ms)</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%ST</td>
+              <td class="py-3 px-4 text-slate-400">status_code</td>
+              <td class="py-3 px-4">HTTP response status code returned to client</td>
+              <td class="py-3 px-4 text-white">200</td>
+              <td class="py-3 px-4 text-emerald-400">integer</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%B</td>
+              <td class="py-3 px-4 text-slate-400">bytes_read</td>
+              <td class="py-3 px-4">Payload bytes sent to client excluding HTTP headers</td>
+              <td class="py-3 px-4 text-white">4582</td>
+              <td class="py-3 px-4 text-emerald-400">integer (bytes)</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%tsc</td>
+              <td class="py-3 px-4 text-slate-400">termination_state</td>
+              <td class="py-3 px-4">Session termination condition flags</td>
+              <td class="py-3 px-4 text-white">---- / cD / sH</td>
+              <td class="py-3 px-4 text-emerald-400">string</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%ac/%fc/%bc/%sc/%rc</td>
+              <td class="py-3 px-4 text-slate-400">conn_counters</td>
+              <td class="py-3 px-4">Concurrent connections & server retry count</td>
+              <td class="py-3 px-4 text-white">142/85/32/8/0</td>
+              <td class="py-3 px-4 text-emerald-400">integers</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%sq/%bq</td>
+              <td class="py-3 px-4 text-slate-400">queue_counters</td>
+              <td class="py-3 px-4">Active queue depth on server and backend pool</td>
+              <td class="py-3 px-4 text-white">0/0</td>
+              <td class="py-3 px-4 text-emerald-400">integers</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30">
+              <td class="py-3 px-4 text-cyan-400 font-bold">%&#123;+Q&#125;r</td>
+              <td class="py-3 px-4 text-slate-400">http_request</td>
+              <td class="py-3 px-4">Quoted HTTP request line with query params</td>
+              <td class="py-3 px-4 text-white">"POST /api/v3/orders HTTP/1.1"</td>
+              <td class="py-3 px-4 text-emerald-400">string</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 4: Deep Dive: Dissecting the 5 Timers (%TR/%Tw/%Tc/%Tr/%Ta) -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        4. Performance Triage: Isolating Bottlenecks with the 5 Latency Timers
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed mb-4">
+        The timer string <code class="text-cyan-300 font-mono text-xs">%TR/%Tw/%Tc/%Tr/%Ta</code> is HAProxy's most powerful observability feature. Rather than treating response time as a black box, parsing these 5 values isolates exactly which layer caused latency:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <h3 class="text-sm font-bold text-amber-400 mb-1 flex items-center gap-1.5 font-mono">
+            <span>High %TR (Request Header Wait)</span>
+          </h3>
+          <p class="text-xs text-slate-300">
+            Indicates slow client connections, mobile packet loss, or a Slowloris DoS attack. If %TR is several seconds while %Tr is low, the delay is outside your infrastructure.
+          </p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <h3 class="text-sm font-bold text-rose-400 mb-1 flex items-center gap-1.5 font-mono">
+            <span>High %Tw (Queue Delay)</span>
+          </h3>
+          <p class="text-xs text-slate-300">
+            Indicates backend pool exhaustion. All server <code class="text-cyan-300 font-mono text-xs">maxconn</code> thresholds are saturated. Requests are backing up in HAProxy queues waiting for available worker processes.
+          </p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <h3 class="text-sm font-bold text-purple-400 mb-1 flex items-center gap-1.5 font-mono">
+            <span>High %Tc (TCP Handshake)</span>
+          </h3>
+          <p class="text-xs text-slate-300">
+            Indicates network congestion or kernel SYN backlog exhaustion between HAProxy and backend application servers. High %Tc points to host infrastructure or AWS VPC peering issues.
+          </p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <h3 class="text-sm font-bold text-red-400 mb-1 flex items-center gap-1.5 font-mono">
+            <span>High %Tr (Backend Processing)</span>
+          </h3>
+          <p class="text-xs text-slate-300">
+            Indicates slow application code, unindexed database queries, or external API deadlocks. The backend server accepted the TCP connection but stalled before emitting response headers.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+        <h3 class="text-sm font-bold text-cyan-400 mb-1 flex items-center gap-1.5 font-mono">
+          <span>High %Ta with Low %Tr (Client Egress Stalling)</span>
+        </h3>
+        <p class="text-xs text-slate-300">
+          When <code class="text-slate-300 font-mono text-xs">%Ta - (%TR + %Tw + %Tc + %Tr)</code> is large, HAProxy completed backend processing quickly, but the client took excessive time reading the payload over a slow broadband or mobile link.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Vector VRL and Fluent Bit Implementations -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        5. Ingestion Pipeline Configurations
+      </h2>
+
+      <!-- Vector VRL -->
+      <div class="mb-6">
+        <h3 class="text-sm font-bold text-slate-200 mb-2 font-mono">Vector Remap Language (VRL) Transform</h3>
+        <p class="text-xs text-slate-400 mb-2">Native Rust parsing with regex pattern extraction, type casting, and timestamp parsing:</p>
+        <pre is:raw class="bg-slate-950 text-slate-200 p-4 rounded-xl font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed"># Vector Remap Language (VRL) - HAProxy HTTP Parser
+parsed, err = parse_regex(.message, r'^(?:(?P<syslog_time>[A-Z][a-z]{2}\s+\d+\s+\d{2}:\d{2}:\d{2})\s+(?P<syslog_host>\S+)\s+haproxy\[(?P<pid>\d+)\]:\s+)?(?P<client_ip>[\w\.\:]+):(?P<client_port>\d+)\s+\[(?P<timestamp>[^\]]+)\]\s+(?P<frontend>\S+)\s+(?P<backend>\S+)\/(?P<server>\S+)\s+(?P<tr_wait>-?\d+)\/(?P<tw_queue>-?\d+)\/(?P<tc_conn>-?\d+)\/(?P<tr_resp>-?\d+)\/(?P<ta_active>-?\d+)\s+(?P<status>\d+)\s+(?P<bytes>\d+)\s+(?P<req_cookie>\S+)\s+(?P<res_cookie>\S+)\s+(?P<term_state>[A-Za-z\-]{2,4})\s+(?P<actconn>\d+)\/(?P<feconn>\d+)\/(?P<beconn>\d+)\/(?P<srvconn>\d+)\/(?P<retries>\d+)\s+(?P<srv_q>\d+)\/(?P<be_q>\d+)\s+"(?:(?P<verb>[A-Z]+)\s+(?P<path>[^\s"]+)(?:\s+HTTP\/(?P<proto>[\d\.]+))?|(?P<raw_req>[^"]+))"$')
+
+if err != null {
+  log("HAProxy parse error: " + err, level: "warn")
+} else {
+  . = merge(., parsed)
+  .client_port = to_int!(.client_port)
+  .status = to_int!(.status)
+  .bytes = to_int!(.bytes)
+  .tr_wait_ms = to_int!(.tr_wait)
+  .tw_queue_ms = to_int!(.tw_queue)
+  .tc_conn_ms = to_int!(.tc_conn)
+  .tr_resp_ms = to_int!(.tr_resp)
+  .ta_active_ms = to_int!(.ta_active)
+  .timestamp = parse_timestamp!(.timestamp, "%d/%b/%Y:%T%.3f")
+  del(.message)
+}</pre>
+      </div>
+
+      <!-- Fluent Bit -->
+      <div class="mb-6">
+        <h3 class="text-sm font-bold text-slate-200 mb-2 font-mono">Fluent Bit Regex Parser (parsers.conf)</h3>
+        <p class="text-xs text-slate-400 mb-2">Oniguruma regex parser configuration for edge logging:</p>
+        <pre is:raw class="bg-slate-950 text-slate-200 p-4 rounded-xl font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed">[PARSER]
+    Name        haproxy_httplog
+    Format      regex
+    Regex       ^(?:(?<syslog_time>[A-Z][a-z]{2}\s+\d+\s+\d{2}:\d{2}:\d{2})\s+(?<syslog_host>\S+)\s+haproxy\[(?<pid>\d+)\]:\s+)?(?<client_ip>[\w\.\:]+):(?<client_port>\d+)\s+\[(?<time>[^\]]+)\]\s+(?<frontend>\S+)\s+(?<backend>\S+)\/(?<server>\S+)\s+(?<tr_wait>-?\d+)\/(?<tw_queue>-?\d+)\/(?<tc_conn>-?\d+)\/(?<tr_resp>-?\d+)\/(?<ta_active>-?\d+)\s+(?<status_code>\d+)\s+(?<bytes_read>\d+)\s+(?<req_cookie>\S+)\s+(?<res_cookie>\S+)\s+(?<term_state>\S+)\s+(?<conn_counters>\S+)\s+(?<queue_counters>\S+)\s+"(?<http_request>[^"]+)"$
+    Time_Key    time
+    Time_Format %d/%b/%Y:%H:%M:%S.%L
+    Types       client_port:integer status_code:integer bytes_read:integer tr_wait:integer tw_queue:integer tc_conn:integer tr_resp:integer ta_active:integer</pre>
+      </div>
+    </section>
+
+    <!-- Section 6: Termination State Flags Cheat Sheet -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        6. Session Termination State Flags (%tsc) Cheat Sheet
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed mb-4">
+        The 4-character termination flag field reveals why and where a session closed. Normal completed sessions display <code class="text-emerald-400 font-mono text-xs">----</code>. Abnormal terminations identify exact failure modes:
+      </p>
+
+      <div class="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-xl shadow-md mb-6">
+        <table class="w-full text-left border-collapse text-xs font-mono">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-950/80 font-bold text-slate-300 uppercase">
+              <th class="py-3 px-4">Flag Code</th>
+              <th class="py-3 px-4">Termination Cause</th>
+              <th class="py-3 px-4">Meaning & Operational Resolution</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 text-slate-300">
+            <tr>
+              <td class="py-3 px-4 text-emerald-400 font-bold">----</td>
+              <td class="py-3 px-4">Clean Termination</td>
+              <td class="py-3 px-4">Request and response completed normally without premature closure.</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-rose-400 font-bold">cD</td>
+              <td class="py-3 px-4">Client Abort (Data)</td>
+              <td class="py-3 px-4">Client closed TCP socket while server was transmitting response data (e.g., browser tab closed).</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-amber-400 font-bold">cH</td>
+              <td class="py-3 px-4">Client Abort (Headers)</td>
+              <td class="py-3 px-4">Client disconnected before receiving full response headers from backend.</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-red-400 font-bold">sH</td>
+              <td class="py-3 px-4">Server Timeout / Reset (Headers)</td>
+              <td class="py-3 px-4">Backend server died or reached <code class="text-cyan-300">timeout server</code> before sending complete headers.</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-purple-400 font-bold">sQ</td>
+              <td class="py-3 px-4">Queue Expired</td>
+              <td class="py-3 px-4">Request timed out in HAProxy queue before any server slot opened (<code class="text-cyan-300">timeout queue</code>).</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-cyan-400 font-bold">PR</td>
+              <td class="py-3 px-4">Proxy Denied</td>
+              <td class="py-3 px-4">HAProxy blocked request via ACL rules (e.g. rate limit, path restriction, or WAF block).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sibling Cross-Linking Footer -->
+    <section class="pt-8 border-t border-slate-800">
+      <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 font-mono mb-4">
+        Related Observability & Log Parsing Guides
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+        <a href="/nginx-access-log-grok-pattern-generator/" class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 hover:bg-slate-800/40 transition flex flex-col justify-between">
+          <span class="text-cyan-400 font-bold mb-1">Nginx Access Log Grok Pattern Generator</span>
+          <span class="text-slate-400">Combined and upstream latency formats for microservices.</span>
+        </a>
+        <a href="/aws-alb-access-log-regex-parser/" class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 hover:bg-slate-800/40 transition flex flex-col justify-between">
+          <span class="text-cyan-400 font-bold mb-1">AWS ALB Access Log Regex Parser</span>
+          <span class="text-slate-400">Parse AWS Application Load Balancer S3 access logs and trace IDs.</span>
+        </a>
+        <a href="/caddy-server-json-access-log-grok-patterns/" class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 hover:bg-slate-800/40 transition flex flex-col justify-between">
+          <span class="text-cyan-400 font-bold mb-1">Caddy Server JSON Access Log Patterns</span>
+          <span class="text-slate-400">Parse modern structured JSON and TLS handshake telemetry.</span>
+        </a>
+        <a href="/high-throughput-log-parsing-vector-vs-fluentbit/" class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 hover:bg-slate-800/40 transition flex flex-col justify-between">
+          <span class="text-cyan-400 font-bold mb-1">Vector vs Fluent Bit Throughput Benchmark</span>
+          <span class="text-slate-400">Engine benchmarking across 500,000 eps ingest pipelines.</span>
+        </a>
+      </div>
+
+      <div class="mt-8 pt-4 border-t border-slate-900 flex items-center justify-between text-xs font-mono">
+        <a href="/" class="text-cyan-400 hover:text-cyan-300 font-bold flex items-center gap-1.5">
+          &larr; Back to Live Grok Pattern Tester
+        </a>
+      </div>
+    </section>
+  </article>
+</Layout>

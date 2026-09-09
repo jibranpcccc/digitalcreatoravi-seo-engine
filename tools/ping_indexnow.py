@@ -21,7 +21,8 @@ SITES_CONFIG = [
             "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-local-setup-ollama/",
             "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/mac-studio-m4-max-llm-benchmarks/",
             "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/agents/custom-mcp-server-python-tutorial/",
-            "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/rtx-5090-vs-4090-local-llm-benchmark/"
+            "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/rtx-5090-vs-4090-local-llm-benchmark/",
+            "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/llama-cpp-vs-exllamav2-quantization-speed/"
         ]
     },
     {
@@ -38,7 +39,8 @@ SITES_CONFIG = [
             "https://jibranpcccc.github.io/workationradar/city/Bansko/",
             "https://jibranpcccc.github.io/workationradar/city/Bali/",
             "https://jibranpcccc.github.io/workationradar/city/Lisbon/",
-            "https://jibranpcccc.github.io/workationradar/split-croatia-coliving-guide/"
+            "https://jibranpcccc.github.io/workationradar/split-croatia-coliving-guide/",
+            "https://jibranpcccc.github.io/workationradar/tbilisi-georgia-coliving-coworking/"
         ]
     },
     {
@@ -126,7 +128,8 @@ SITES_CONFIG = [
             "https://site-9-inky.vercel.app/chiang-mai-vs-bali-runway-calculator/",
             "https://site-9-inky.vercel.app/lisbon-nhr-tax-runway-founder-guide/",
             "https://site-9-inky.vercel.app/top-latin-america-tech-hubs-for-bootstrappers/",
-            "https://site-9-inky.vercel.app/lisbon-d8-visa-minimum-income-bootstrappers/"
+            "https://site-9-inky.vercel.app/lisbon-d8-visa-minimum-income-bootstrappers/",
+            "https://site-9-inky.vercel.app/bansko-bulgaria-cost-of-living-bootstrapped-founders/"
         ]
     },
     {
@@ -162,7 +165,8 @@ SITES_CONFIG = [
             "https://site-12-taupe.vercel.app/saas-ltv-cac-payback-period-calculator/",
             "https://site-12-taupe.vercel.app/b2b-saas-churn-benchmarks-by-acv-2026/",
             "https://site-12-taupe.vercel.app/rule-of-40-saas-valuation-growth-model/",
-            "https://site-12-taupe.vercel.app/net-revenue-retention-nrr-benchmark-bootstrapped-saas/"
+            "https://site-12-taupe.vercel.app/net-revenue-retention-nrr-benchmark-bootstrapped-saas/",
+            "https://site-12-taupe.vercel.app/saas-magic-number-sales-efficiency-calculator/"
         ]
     },
     {
@@ -186,7 +190,8 @@ SITES_CONFIG = [
             "https://site-14-sable.vercel.app/soc-2-type-1-vs-type-2-compliance-timeline-cost/",
             "https://site-14-sable.vercel.app/vanta-vs-drata-vs-secureframe-compliance-automation-review/",
             "https://site-14-sable.vercel.app/soc-2-compliance-for-bootstrapped-startups-under-20k/",
-            "https://site-14-sable.vercel.app/soc-2-continuous-monitoring-tools-open-source/"
+            "https://site-14-sable.vercel.app/soc-2-continuous-monitoring-tools-open-source/",
+            "https://site-14-sable.vercel.app/soc-2-access-review-policy-template-startups/"
         ]
     },
     {
@@ -198,7 +203,8 @@ SITES_CONFIG = [
             "https://site-15-ruby.vercel.app/deel-vs-remote-com-pricing-hidden-fees-breakdown/",
             "https://site-15-ruby.vercel.app/contractor-vs-eor-legal-misclassification-risk-matrix/",
             "https://site-15-ruby.vercel.app/hiring-remote-engineers-in-latin-america-vs-eastern-europe-eor-cost/",
-            "https://site-15-ruby.vercel.app/oyster-vs-deel-pricing-contractor-management-fees/"
+            "https://site-15-ruby.vercel.app/oyster-vs-deel-pricing-contractor-management-fees/",
+            "https://site-15-ruby.vercel.app/philippines-13th-month-pay-mandatory-employer-costs/"
         ]
     },
     {
@@ -210,7 +216,8 @@ SITES_CONFIG = [
             "https://site-16-indol.vercel.app/devcontainer-json-vs-docker-compose-local-development/",
             "https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/",
             "https://site-16-indol.vercel.app/fastest-docker-compose-postgres-redis-local-stack/",
-            "https://site-16-indol.vercel.app/docker-compose-gpu-passthrough-nvidia-container-toolkit/"
+            "https://site-16-indol.vercel.app/docker-compose-gpu-passthrough-nvidia-container-toolkit/",
+            "https://site-16-indol.vercel.app/direnv-nix-flakes-fast-developer-shell-tutorial/"
         ]
     },
     {
@@ -234,7 +241,8 @@ SITES_CONFIG = [
             "https://site-18-chi.vercel.app/github-actions-vs-gitlab-ci-syntax-execution-cost-comparison/",
             "https://site-18-chi.vercel.app/matrix-build-optimization-github-actions-cache-speed/",
             "https://site-18-chi.vercel.app/act-run-github-actions-locally-debugging-guide/",
-            "https://site-18-chi.vercel.app/github-actions-concurrency-cancel-in-progress-pattern/"
+            "https://site-18-chi.vercel.app/github-actions-concurrency-cancel-in-progress-pattern/",
+            "https://site-18-chi.vercel.app/docker-build-push-action-buildx-cache-github-actions/"
         ]
     },
     {
@@ -246,7 +254,8 @@ SITES_CONFIG = [
             "https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/",
             "https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/",
             "https://site-19-nine.vercel.app/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/",
-            "https://site-19-nine.vercel.app/delta-neutral-liquidity-provision-uniswap-v3/"
+            "https://site-19-nine.vercel.app/delta-neutral-liquidity-provision-uniswap-v3/",
+            "https://site-19-nine.vercel.app/implied-volatility-smile-surface-black-scholes/"
         ]
     },
     {
