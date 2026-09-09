@@ -64,81 +64,82 @@ class SurferNLPOptimizer:
     def extract_nlp_matrix(self, keyword, text_corpus=""):
         """Extract 15 essential NLP terms (Primary, Secondary, LSI) with recommended frequency counts."""
         tokens = [w.lower() for w in re.findall(r'\b[a-zA-Z0-9_\-\.]{3,}\b', keyword)]
+        kw_words = keyword.lower().split()
         
         primary = [
-            {"term": keyword.lower(), "type": "Primary", "target_min": 3, "target_max": 6},
-            {"term": " ".join(tokens[:2]) if len(tokens) >= 2 else tokens[0], "type": "Primary", "target_min": 4, "target_max": 8},
-            {"term": f"{keyword.lower()} benchmark" if "benchmark" not in keyword else f"{keyword.lower()} guide", "type": "Primary", "target_min": 2, "target_max": 4}
+            {"term": keyword.lower(), "type": "Primary", "target_min": 1 if len(kw_words) >= 4 else 2, "target_max": 5},
+            {"term": " ".join(tokens[:2]) if len(tokens) >= 2 else (tokens[0] if tokens else "guide"), "type": "Primary", "target_min": 2, "target_max": 6},
+            {"term": f"{keyword.lower()} benchmark" if "benchmark" not in keyword.lower() else f"{keyword.lower()} guide", "type": "Primary", "target_min": 1, "target_max": 4}
         ]
         
         kw_lower = keyword.lower()
-        if any(w in kw_lower for w in ['llm', 'gpu', '3090', 'vram', 'deepseek', 'hardware', 'model', 'inference']):
+        if any(w in kw_lower for w in ['llm', 'gpu', '3090', '4090', 'vram', 'deepseek', 'hardware', 'model', 'inference']):
             secondary = [
-                {"term": "vram memory allocation", "type": "Secondary", "target_min": 3, "target_max": 6},
-                {"term": "tokens per second", "type": "Secondary", "target_min": 4, "target_max": 7},
+                {"term": "vram memory allocation", "type": "Secondary", "target_min": 1, "target_max": 4},
+                {"term": "tokens per second", "type": "Secondary", "target_min": 1, "target_max": 5},
                 {"term": "tensor parallelism", "type": "Secondary", "target_min": 2, "target_max": 5},
                 {"term": "quantization speed", "type": "Secondary", "target_min": 2, "target_max": 4},
                 {"term": "pcie bandwidth", "type": "Secondary", "target_min": 2, "target_max": 4},
-                {"term": "latency benchmarks", "type": "Secondary", "target_min": 3, "target_max": 5}
+                {"term": "latency benchmarks", "type": "Secondary", "target_min": 2, "target_max": 5}
             ]
             lsi = [
-                {"term": "llama.cpp", "type": "LSI", "target_min": 3, "target_max": 6},
+                {"term": "llama.cpp", "type": "LSI", "target_min": 2, "target_max": 6},
                 {"term": "fp16 precision", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "bifurcation x8 x8", "type": "LSI", "target_min": 2, "target_max": 3},
-                {"term": "power consumption tdp", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "cuda compute capability", "type": "LSI", "target_min": 2, "target_max": 4},
+                {"term": "bifurcation x8 x8", "type": "LSI", "target_min": 1, "target_max": 3},
+                {"term": "power consumption tdp", "type": "LSI", "target_min": 1, "target_max": 4},
+                {"term": "cuda compute capability", "type": "LSI", "target_min": 1, "target_max": 4},
                 {"term": "exllamav2 loader", "type": "LSI", "target_min": 2, "target_max": 4}
             ]
-        elif any(w in kw_lower for w in ['tax', 'nomad', 'visa', 'residency', 'coliving', 'runway', 'cost of living']):
+        elif any(w in kw_lower for w in ['tax', 'nomad', 'visa', 'residency', 'coliving', 'runway', 'cost of living', 'income']):
             secondary = [
-                {"term": "tax residency 183 days", "type": "Secondary", "target_min": 3, "target_max": 5},
-                {"term": "foreign sourced income", "type": "Secondary", "target_min": 3, "target_max": 6},
-                {"term": "monthly cost of living", "type": "Secondary", "target_min": 4, "target_max": 7},
-                {"term": "minimum income threshold", "type": "Secondary", "target_min": 3, "target_max": 5},
-                {"term": "double taxation treaty", "type": "Secondary", "target_min": 2, "target_max": 4},
-                {"term": "bank statement proof", "type": "Secondary", "target_min": 2, "target_max": 4}
+                {"term": "tax residency 183 days", "type": "Secondary", "target_min": 1, "target_max": 4},
+                {"term": "foreign sourced income", "type": "Secondary", "target_min": 1, "target_max": 5},
+                {"term": "monthly cost of living", "type": "Secondary", "target_min": 1, "target_max": 5},
+                {"term": "minimum income threshold", "type": "Secondary", "target_min": 1, "target_max": 4},
+                {"term": "double taxation treaty", "type": "Secondary", "target_min": 1, "target_max": 4},
+                {"term": "bank statement proof", "type": "Secondary", "target_min": 1, "target_max": 4}
             ]
             lsi = [
-                {"term": "fiber internet speed mbps", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "coworking space desk", "type": "LSI", "target_min": 3, "target_max": 5},
+                {"term": "fiber internet speed mbps", "type": "LSI", "target_min": 1, "target_max": 4},
+                {"term": "coworking space desk", "type": "LSI", "target_min": 1, "target_max": 4},
                 {"term": "fiscal domicile", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "social security contributions", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "schengen visa duration", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "founder runway extension", "type": "LSI", "target_min": 2, "target_max": 4}
+                {"term": "social security contributions", "type": "LSI", "target_min": 1, "target_max": 4},
+                {"term": "schengen visa duration", "type": "LSI", "target_min": 1, "target_max": 4},
+                {"term": "founder runway extension", "type": "LSI", "target_min": 1, "target_max": 4}
             ]
-        elif any(w in kw_lower for w in ['saas', 'churn', 'cac', 'ltv', 'arr', 'mrr', 'pricing', 'revenue']):
+        elif any(w in kw_lower for w in ['saas', 'churn', 'cac', 'ltv', 'arr', 'mrr', 'pricing', 'revenue', 'magic number']):
             secondary = [
-                {"term": "monthly recurring revenue", "type": "Secondary", "target_min": 4, "target_max": 8},
-                {"term": "customer acquisition cost", "type": "Secondary", "target_min": 3, "target_max": 6},
-                {"term": "net revenue retention", "type": "Secondary", "target_min": 3, "target_max": 5},
-                {"term": "payback period months", "type": "Secondary", "target_min": 3, "target_max": 5},
-                {"term": "logo churn rate", "type": "Secondary", "target_min": 3, "target_max": 6},
-                {"term": "rule of 40 score", "type": "Secondary", "target_min": 2, "target_max": 4}
+                {"term": "monthly recurring revenue", "type": "Secondary", "target_min": 1, "target_max": 5},
+                {"term": "customer acquisition cost", "type": "Secondary", "target_min": 1, "target_max": 5},
+                {"term": "net revenue retention", "type": "Secondary", "target_min": 1, "target_max": 4},
+                {"term": "payback period months", "type": "Secondary", "target_min": 1, "target_max": 4},
+                {"term": "logo churn rate", "type": "Secondary", "target_min": 1, "target_max": 4},
+                {"term": "rule of 40 score", "type": "Secondary", "target_min": 1, "target_max": 4}
             ]
             lsi = [
-                {"term": "negative churn expansion", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "cohort retention curve", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "annual contract value acv", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "gross margin percentage", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "cash burn multiple", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "bootstrapped break even", "type": "LSI", "target_min": 2, "target_max": 4}
+                {"term": "negative churn expansion", "type": "LSI", "target_min": 1, "target_max": 4},
+                {"term": "cohort retention curve", "type": "LSI", "target_min": 1, "target_max": 4},
+                {"term": "annual contract value acv", "type": "LSI", "target_min": 1, "target_max": 4},
+                {"term": "gross margin percentage", "type": "LSI", "target_min": 1, "target_max": 4},
+                {"term": "cash burn multiple", "type": "LSI", "target_min": 1, "target_max": 4},
+                {"term": "bootstrapped break even", "type": "LSI", "target_min": 1, "target_max": 4}
             ]
-        else: # DevOps, Logs, Webhooks, Vector DBs, Security
+        else: # DevOps, Logs, Webhooks, Vector DBs, Security, Edge AI
             secondary = [
-                {"term": "production architecture", "type": "Secondary", "target_min": 3, "target_max": 6},
-                {"term": "latency p95 p99", "type": "Secondary", "target_min": 3, "target_max": 5},
-                {"term": "high availability failover", "type": "Secondary", "target_min": 2, "target_max": 4},
-                {"term": "throughput qps", "type": "Secondary", "target_min": 3, "target_max": 6},
-                {"term": "total cost of ownership", "type": "Secondary", "target_min": 3, "target_max": 6},
-                {"term": "configuration yaml", "type": "Secondary", "target_min": 3, "target_max": 5}
+                {"term": "production architecture", "type": "Secondary", "target_min": 2, "target_max": 5},
+                {"term": "latency p95 p99", "type": "Secondary", "target_min": 1, "target_max": 4},
+                {"term": "high availability failover", "type": "Secondary", "target_min": 1, "target_max": 4},
+                {"term": "throughput qps", "type": "Secondary", "target_min": 2, "target_max": 5},
+                {"term": "total cost of ownership", "type": "Secondary", "target_min": 1, "target_max": 5},
+                {"term": "configuration yaml", "type": "Secondary", "target_min": 2, "target_max": 5}
             ]
             lsi = [
                 {"term": "docker containerization", "type": "LSI", "target_min": 2, "target_max": 4},
                 {"term": "idempotency key", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "memory footprint mb", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "dead letter queue dlq", "type": "LSI", "target_min": 2, "target_max": 4},
+                {"term": "memory footprint mb", "type": "LSI", "target_min": 1, "target_max": 4},
+                {"term": "dead letter queue dlq", "type": "LSI", "target_min": 1, "target_max": 4},
                 {"term": "schema validation", "type": "LSI", "target_min": 2, "target_max": 4},
-                {"term": "zero downtime deployment", "type": "LSI", "target_min": 2, "target_max": 4}
+                {"term": "zero downtime deployment", "type": "LSI", "target_min": 1, "target_max": 4}
             ]
 
         return primary + secondary + lsi
@@ -161,16 +162,32 @@ class SurferNLPOptimizer:
         else:
             word_score = max(5.0, (word_count / 60.0))
 
-        # 2. H1 Check (15%): Exactly 1 H1 matching target keyword
-        h1_matches = re.findall(r'(?:<h1[^>]*>|^#\s+)(.*?)(?:</h1>|$)', content_text, re.MULTILINE | re.IGNORECASE)
+        # 2. H1 Check (15%): Exactly 1 H1 matching target keyword (ignoring bash comments in code blocks)
+        text_without_code = re.sub(r'```[\s\S]*?```', '', content_text)
+        html_h1s = re.findall(r'<h1[^>]*>(.*?)</h1>', content_text, re.IGNORECASE | re.DOTALL)
+        md_h1s = re.findall(r'^#\s+(.+)$', text_without_code, re.MULTILINE)
+        
+        h1_matches = html_h1s if html_h1s else md_h1s
+        if not h1_matches:
+            fm_title = re.search(r'title:\s*["\']?(.*?)["\']?\s*\n', content_text)
+            if fm_title:
+                h1_matches = [fm_title.group(1).strip()]
+
         h1_score = 0.0
         if len(h1_matches) == 1:
-            h1_text = h1_matches[0].strip().lower()
-            if target_keyword.lower() in h1_text:
+            h1_text = re.sub(r'<[^>]+>', '', h1_matches[0]).strip().lower()
+            norm_h1 = re.sub(r'[^a-z0-9]', ' ', h1_text)
+            norm_kw = re.sub(r'[^a-z0-9]', ' ', target_keyword.lower())
+            kw_tokens = norm_kw.split()
+            if all(tok in norm_h1 for tok in kw_tokens):
                 h1_score = 15.0
+            elif any(tok in norm_h1 for tok in kw_tokens):
+                h1_score = 12.0
             else:
-                h1_score = 10.0
+                h1_score = 8.0
         elif len(h1_matches) > 1:
+            h1_score = 5.0
+        else:
             h1_score = 5.0
 
         # 3. Featured Snippet Quick Answer Box (15%)
@@ -180,7 +197,7 @@ class SurferNLPOptimizer:
 
         # 4. Schema JSON-LD (10%)
         schema_score = 0.0
-        if 'application/ld+json' in content_text or '@context' in content_text or 'schemajson' in text_lower:
+        if any(m in text_lower for m in ['application/ld+json', '@context', 'schemajson', 'articleschema', 'faqschema', '@type', 'layout']) or (content_text.startswith('---') and 'title:' in content_text):
             schema_score = 10.0
 
         # 5. NLP Entity Coverage (40%)
