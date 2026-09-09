@@ -1,5 +1,5 @@
 ---
-title: "Mac Studio M4 Max LLM Speed Tokens Per Sec: Full Benchmark Report (2026)"
+title: "Mac Studio M4 Max LLM Benchmarks & Tok/s Speed (2026)"
 description: "Empirical tokens-per-second, unified memory bandwidth, and power consumption benchmarks for running 8B to 70B parameter models on the M4 Max and M4 Ultra."
 datePublished: "2026-08-05"
 dateModified: "2026-09-04"

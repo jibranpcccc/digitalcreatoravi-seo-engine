@@ -1,5 +1,5 @@
 ---
-title: "Next.js vs Astro for Micro-SaaS in 2026: Speed, Hosting Cost & SEO"
+title: "Next.js vs Astro for Micro-SaaS: Speed, Cost & SEO"
 description: "Comprehensive benchmark comparing Next.js and Astro for building profitable micro-SaaS products, edge latency, Vercel compute bills, and search visibility."
 category: "stacks"
 slug: "nextjs-vs-astro-for-micro-saas-speed-cost-seo"

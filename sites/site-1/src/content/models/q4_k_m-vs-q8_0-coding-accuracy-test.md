@@ -1,5 +1,5 @@
 ---
-title: "Q4_K_M vs Q8_0: Coding Accuracy & HumanEval Benchmark (2026)"
+title: "Q4_K_M vs Q8_0: Coding Accuracy & Benchmark (2026)"
 description: "Empirical pass@1 coding accuracy, perplexity retention, and memory savings benchmarks comparing Q4_K_M and Q8_0 GGUF quantization levels on local coding models."
 datePublished: "2026-09-07"
 dateModified: "2026-09-07"

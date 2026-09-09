@@ -1,5 +1,5 @@
 ---
-title: "2x RTX 3090 vs 1x RTX 4090 for Local AI Inference: 48GB VRAM Math (2026)"
+title: "2x RTX 3090 vs 1x RTX 4090: Local AI Inference (2026)"
 description: "Empirical tokens/sec, VRAM pooling, and power draw benchmarks comparing dual NVIDIA RTX 3090 (48GB) against a single RTX 4090 (24GB) for local 70B LLM inference."
 datePublished: "2026-09-06"
 dateModified: "2026-09-06"

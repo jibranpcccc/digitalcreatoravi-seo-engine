@@ -1,5 +1,5 @@
 ---
-title: "Local RAG Stack with ChromaDB & Ollama: Air-Gapped Setup (2026)"
+title: "Local RAG Stack with ChromaDB & Ollama: 2026 Setup"
 description: "Step-by-step tutorial building a private, zero-cloud local RAG retrieval pipeline using Ollama, ChromaDB vector store, and BGE-M3 embeddings."
 datePublished: "2026-09-08"
 dateModified: "2026-09-08"

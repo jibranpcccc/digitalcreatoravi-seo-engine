@@ -1,5 +1,5 @@
 ---
-title: "Cloudflare Pages vs Vercel Bandwidth & Compute Invoice Audit: The Pricing Trap"
+title: "Cloudflare Pages vs Vercel: Bandwidth Pricing Audit"
 description: "Forensic cost breakdown comparing Cloudflare Pages unlimited bandwidth vs Vercel Pro/Enterprise overage fees ($40/100GB) for bootstrapped SaaS."
 pubDate: 2026-09-10
 date: "2026-09-10"

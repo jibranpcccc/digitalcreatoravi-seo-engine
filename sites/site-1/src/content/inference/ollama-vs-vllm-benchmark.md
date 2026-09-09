@@ -1,5 +1,5 @@
 ---
-title: "Ollama vs vLLM: High-Concurrency Speed & VRAM Benchmark (2026)"
+title: "Ollama vs vLLM: High-Concurrency VRAM Benchmark (2026)"
 description: "Empirical tokens-per-second, memory allocation, and concurrency benchmarks comparing Ollama and vLLM on local consumer and workstation GPUs."
 datePublished: "2026-06-15"
 dateModified: "2026-08-20"

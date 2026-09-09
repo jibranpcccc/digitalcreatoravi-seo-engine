@@ -1,5 +1,5 @@
 ---
-title: "RTX 5090 vs 4090 Local LLM Benchmark: 32GB VRAM Speed & Throughput"
+title: "RTX 5090 vs 4090 Local LLM Benchmark: 32GB Speed (2026)"
 description: "Empirical RTX 5090 vs 4090 benchmarks for local LLM inference: 32GB GDDR7 bandwidth, tokens/sec on 70B models, VRAM requirements, and power efficiency."
 datePublished: "2026-09-08"
 dateModified: "2026-09-09"

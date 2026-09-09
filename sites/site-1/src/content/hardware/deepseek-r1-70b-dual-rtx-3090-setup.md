@@ -1,5 +1,5 @@
 ---
-title: "Run DeepSeek-R1 70B on 48GB VRAM with Dual RTX 3090: The Budget Rig"
+title: "Run DeepSeek-R1 70B on Dual RTX 3090: 48GB Rig (2026)"
 description: "Complete hardware build guide, PCIe lane bandwidth math, and llama.cpp/ExLlamaV2 configuration for running DeepSeek-R1 70B across dual RTX 3090 GPUs."
 pubDate: 2026-09-10
 date: "2026-09-10"

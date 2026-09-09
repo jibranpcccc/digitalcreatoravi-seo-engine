@@ -3,13 +3,32 @@ import Layout from '../../layouts/Layout.astro';
 import properties from '../../data/properties.json';
 
 export async function getStaticPaths() {
-  return properties.map(prop => ({
-    params: { slug: prop.slug },
-    props: { prop }
-  }));
+  const dedicatedSlugs = new Set([
+    'ponta-do-sol-nomad-coliving',
+    'coworking-bansko-coliving',
+    'dojo-coliving-canggu',
+    'sun-and-co-javea',
+    'altschool-chiang-mai',
+    'outsite-lisbon-intendente',
+    'the-roof-las-palmas',
+    'coasis-coliving-medellin',
+    'cape-town-workation-loft',
+    'enso-coliving-da-nang',
+    'blink-community-roppongi-tokyo',
+  ]);
+
+  return properties
+    .filter(prop => !dedicatedSlugs.has(prop.slug))
+    .map(prop => ({
+      params: { slug: prop.slug },
+      props: { prop }
+    }));
 }
 
 const { prop } = Astro.props;
+const baseSpaceTitle = `${prop.name} Review: Speeds & Workspace (2026)`;
+const spacePageTitle = baseSpaceTitle.length > 60 ? `${prop.name}: Speed & Ergonomics Guide 2026` : baseSpaceTitle;
+
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const pageUrl = `https://workationradar.com/space/${prop.slug}`;
 const coverUrl = `${base}/images/spaces/${prop.slug}.webp`;
@@ -83,7 +102,7 @@ const schemaData = {
 ---
 
 <Layout 
-  title={`${prop.name} Review: Verified Speedtest & Ergonomics (${prop.city})`}
+  title={spacePageTitle}
   description={`Independent verification of ${prop.name} in ${prop.city}, ${prop.country}. Tested ${prop.download_mbps} Mbps fiber speed, ${prop.chair_model} chairs, and power backup status.`}
   canonical={pageUrl}
   image={coverUrl}

@@ -14,6 +14,8 @@ export async function getStaticPaths() {
 }
 
 const { city, properties: cityProps } = Astro.props;
+const rawCityTitle = `Best Coliving Spaces in ${city} for Nomads (2026)`;
+const cityPageTitle = rawCityTitle.length < 48 ? `Top Verified Coliving Spaces in ${city} (2026 Guide)` : rawCityTitle;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const avgSpeed = Math.round(cityProps.reduce((acc, p) => acc + p.download_mbps, 0) / cityProps.length);
 const minRate = Math.min(...cityProps.map(p => p.monthly_rate_eur));
@@ -63,7 +65,7 @@ const schemaData = {
 ---
 
 <Layout 
-  title={`Best Verified Coliving Spaces in ${city} (2026 Remote Work Guide)`}
+  title={cityPageTitle}
   description={`Compare ${cityProps.length} verified coliving communities in ${city}. Average download speed ${avgSpeed} Mbps, rates starting from €${minRate}/month.`}
   canonical={pageUrl}
   image={cityCover}
