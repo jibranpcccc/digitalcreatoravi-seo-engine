@@ -1,0 +1,484 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Kubernetes Ingress-Nginx Log Parser for Fluent Bit & Vector: Grok Regex Guide",
+      "url": "https://groklogtester.pages.dev/kubernetes-ingress-nginx-log-parser-fluentbit/",
+      "description": "Production guide and regular expression patterns for parsing default Kubernetes Ingress-Nginx access logs in Fluent Bit and Vector, extracting upstream timing, status codes, and request IDs.",
+      "inLanguage": "en-US",
+      "author": {
+        "@type": "Organization",
+        "name": "GrokLogTester Engineering Team",
+        "url": "https://groklogtester.pages.dev/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GrokLogTester",
+        "url": "https://groklogtester.pages.dev/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://groklogtester.pages.dev/og-banner.png"
+        }
+      },
+      "datePublished": "2026-09-09T00:00:00Z",
+      "dateModified": "2026-09-09T00:00:00Z"
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Parse Kubernetes Ingress-Nginx Logs with Fluent Bit and Vector",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Understand the Ingress-Nginx Log Format",
+          "text": "Identify the 17 fields in the default log-format-upstream directive of the ingress-nginx controller ConfigMap."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Configure Fluent Bit parsers.conf",
+          "text": "Add the k8s_ingress_nginx regex parser block with typed numeric casts for status, payload lengths, and latency."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Implement Vector VRL Transform",
+          "text": "Deploy a Vector remap transform handling nullable upstream response timers and error states."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Extract CRI-O / Containerd Metadata",
+          "text": "Unpack the outer Kubernetes container log prefix before feeding the raw stream into the ingress parser."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the default log format of the Kubernetes Ingress-Nginx controller?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The default format is defined by log-format-upstream: $remote_addr - $remote_user [$time_local] \"$request\" $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\" $request_length $request_time [$proxy_upstream_name] [$proxy_alternative_upstream_name] $upstream_addr $upstream_response_length $upstream_response_time $upstream_status $req_id."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do upstream_response_time and upstream_status break standard float parsers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When Ingress-Nginx encounters an upstream connection refusal, TLS handshake failure, or client disconnect before proxying, it writes a literal hyphen (-) instead of a numeric value. Parsers must treat these fields as nullable or use regular expression unions (?:[0-9.]+|-) to prevent drop errors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you parse containerd CRI log prefixes before parsing Ingress-Nginx logs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Kubernetes, container engines write logs with a CRI prefix like '2026-09-09T14:22:01.123456789Z stdout F <log_line>'. In Fluent Bit, apply the cri parser or Docker parser first before applying the k8s_ingress_nginx parser in a MULTILINE or regex parser filter."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const schemaJson = JSON.stringify(schemaData);
+
+const rawGrokPattern = `^%{IPORHOST:client_ip} - (?:%{USER:ident}|-) \\[%{HTTPDATE:timestamp}\\] "(?:%{WORD:http_method} %{NOTSPACE:request_uri}(?: HTTP/%{NUMBER:http_version})?|%{DATA:raw_request})" %{NUMBER:status_code:int} %{NUMBER:body_bytes_sent:int} "(?:%{NOTSPACE:http_referer}|-)" "(?<user_agent>[^"]*)" %{NUMBER:request_length:int} %{NUMBER:request_time:float} \\[(?:%{NOTSPACE:proxy_upstream_name}|-)\\] \\[(?:%{NOTSPACE:proxy_alternative_upstream_name}|-)\\] (?:%{IPORHOST:upstream_ip}:%{NUMBER:upstream_port:int}|%{NOTSPACE:upstream_addr}|-) (?:%{NUMBER:upstream_response_length:int}|-) (?:%{NUMBER:upstream_response_time:float}|-) (?:%{NUMBER:upstream_status:int}|-) %{NOTSPACE:req_id}$`;
+
+const sampleLogSuccess = `10.244.1.45 - - [09/Sep/2026:15:23:45 +0000] "GET /api/v1/checkout/session?cart_id=89231 HTTP/2.0" 200 4521 "https://app.example.com/checkout" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36" 1420 0.042 [default-cart-svc-8080] [default-cart-svc-8080] 10.244.2.89:8080 4390 0.040 200 e7439bf25e362143719001392fa98c31`;
+
+const sampleLogFailure = `198.51.100.22 - - [09/Sep/2026:15:24:02 +0000] "POST /api/v2/webhooks HTTP/1.1" 504 182 "-" "Stripe/1.0 (+https://stripe.com/docs/webhooks)" 832 10.002 [default-webhook-svc-3000] [-] 10.244.3.14:3000 - - 504 c8a19b023de918451122a034f71bb289`;
+
+const flbParserConfig = `[PARSER]
+    Name        k8s_ingress_nginx
+    Format      regex
+    Regex       ^(?<client_ip>[^ ]+) - (?<user>[^ ]+) \\[(?<time>[^\\]]+)\\] "(?<method>\\S+)(?: +(?<path>[^\\"]*?)(?: +HTTP\\/(?<http_version>[0-9.]+))?)?" (?<status_code>[0-9]+) (?<body_bytes_sent>[0-9]+) "(?<referer>[^\\"]*)" "(?<user_agent>[^\\"]*)" (?<request_length>[0-9]+) (?<request_time>[0-9.]+) \\[(?<proxy_upstream_name>[^\\]]*)\\] \\[(?<proxy_alternative_upstream_name>[^\\]]*)\\] (?<upstream_addr>[^ ]*) (?<upstream_response_length>[0-9-]*) (?<upstream_response_time>[0-9.-]*) (?<upstream_status>[0-9-]*) (?<req_id>[^ ]*)$
+    Time_Key    time
+    Time_Format %d/%b/%Y:%H:%M:%S %z
+    Types       status_code:integer body_bytes_sent:integer request_length:integer request_time:float`;
+
+const flbFilterPipeline = `# Fluent Bit Kubernetes Log Pipeline
+[FILTER]
+    Name                parser
+    Match               kube.*ingress-nginx*
+    Key_Name            log
+    Parser              k8s_ingress_nginx
+    Reserve_Data        True`;
+
+const vectorVrlCode = `# Vector Remap Language (VRL) for Kubernetes Ingress-Nginx
+.parsed, err = parse_regex(
+  .message,
+  r'^(?P<client_ip>[^ ]+) - (?P<user>[^ ]+) \\[(?P<time_local>[^\\]]+)\\] "(?P<http_method>\\S+)(?: +(?P<request_uri>[^\\"]*?)(?: +HTTP\\/(?P<http_version>[0-9.]+))?)?" (?P<status_code>[0-9]+) (?P<body_bytes_sent>[0-9]+) "(?P<http_referer>[^\\"]*)" "(?P<http_user_agent>[^\\"]*)" (?P<request_length>[0-9]+) (?P<request_time>[0-9.]+) \\[(?P<proxy_upstream_name>[^\\]]*)\\] \\[(?P<proxy_alternative_upstream_name>[^\\]]*)\\] (?P<upstream_addr>[^ ]*) (?P<upstream_response_length>[0-9-]*) (?P<upstream_response_time>[0-9.-]*) (?P<upstream_status>[0-9-]*) (?P<req_id>[^ ]*)$'
+)
+
+if err != null {
+  log("Ingress-Nginx regex parse failed: " + err, level: "warn")
+  .parse_error = true
+} else {
+  . = merge(., .parsed)
+  del(.parsed)
+
+  # Cast numeric measurements
+  .status_code = to_int!(.status_code)
+  .body_bytes_sent = to_int!(.body_bytes_sent)
+  .request_length = to_int!(.request_length)
+  .request_time = to_float!(.request_time)
+
+  # Safely handle nullable hyphen fields
+  if .upstream_response_length != "-" && .upstream_response_length != "" {
+    .upstream_response_length = to_int(.upstream_response_length) ?? null
+  } else {
+    .upstream_response_length = null
+  }
+
+  if .upstream_response_time != "-" && .upstream_response_time != "" {
+    .upstream_response_time = to_float(.upstream_response_time) ?? null
+  } else {
+    .upstream_response_time = null
+  }
+
+  if .upstream_status != "-" && .upstream_status != "" {
+    .upstream_status = to_int(.upstream_status) ?? null
+  } else {
+    .upstream_status = null
+  }
+
+  # Parse RFC 2822 / Nginx time format to RFC 3339 timestamp
+  .timestamp = parse_timestamp(.time_local, format: "%d/%b/%Y:%H:%M:%S %z") ?? .timestamp
+  del(.time_local)
+}`;
+---
+
+<Layout
+  title="Kubernetes Ingress-Nginx Log Parser for Fluent Bit & Vector | GrokLogTester"
+  description="Master parsing Kubernetes Ingress-Nginx logs. Complete Grok patterns, Oniguruma regex for Fluent Bit, and Vector VRL transforms for downstream telemetry."
+  canonical="https://groklogtester.pages.dev/kubernetes-ingress-nginx-log-parser-fluentbit/"
+  schemaJson={schemaJson}
+  type="article"
+>
+  <article class="max-w-4xl mx-auto py-6">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center space-x-2 text-xs font-mono text-slate-400 mb-6">
+      <a href="/" class="hover:text-cyan-400 transition">Home</a>
+      <span>/</span>
+      <span class="text-cyan-400">Kubernetes Log Parsers</span>
+      <span>/</span>
+      <span class="text-slate-300">Ingress-Nginx Fluent Bit &amp; Vector</span>
+    </nav>
+
+    <!-- Header Section with exact 1 H1 -->
+    <header class="mb-10">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-4">
+        <span>Cloud Native Telemetry &bull; Kubernetes 1.28 - 1.32 &bull; Ingress-Nginx v1.9+</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+        Kubernetes Ingress-Nginx Log Parser for Fluent Bit & Vector: Grok Regex Guide
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+        Extract client IPs, latency timers, upstream pods, and distributed tracing correlation IDs from the Kubernetes Ingress-Nginx controller using production-grade Grok and Oniguruma regex engines.
+      </p>
+    </header>
+
+    <!-- 45-60 Word Quick Answer Box with Green Accent Border -->
+    <div class="bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/90 border-l-4 border-emerald-500 border-y border-r border-slate-800 rounded-xl p-5 mb-12 shadow-xl shadow-emerald-950/20 backdrop-blur-md relative overflow-hidden">
+      <div class="flex items-center space-x-2 mb-2 text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span>Quick Answer: Parsing Kubernetes Ingress-Nginx Logs</span>
+      </div>
+      <p class="text-sm text-slate-200 leading-relaxed font-sans">
+        Kubernetes Ingress-Nginx uses a specialized access log format containing upstream performance metrics and proxy identifiers. To parse this format in Fluent Bit or Vector, deploy a grok or regular expression parser that extracts client IP, request path, status, latency timers, upstream addresses, and correlation request IDs into typed JSON telemetry for real-time observability.
+      </p>
+    </div>
+
+    <!-- Section 1: Anatomy of Ingress-Nginx log-format-upstream -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        1. Default Ingress-Nginx Upstream Log Structure
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed mb-4">
+        Unlike standard standalone Nginx combined logs, the official Kubernetes <code class="text-cyan-300 font-mono text-xs">ingress-nginx</code> controller defaults to a 17-field format known as <code class="text-cyan-300 font-mono text-xs">log-format-upstream</code>. This format provides granular visibility into Kubernetes Service backends, upstream round-trip latencies, and request tracing IDs.
+      </p>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 mb-6">
+        <div class="text-xs font-mono text-slate-400 mb-2 font-bold uppercase">Default Ingress-Nginx Log Directive:</div>
+        <pre class="bg-slate-900 text-cyan-300 p-3 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800" is:raw>$remote_addr - $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" $request_length $request_time [$proxy_upstream_name] [$proxy_alternative_upstream_name] $upstream_addr $upstream_response_length $upstream_response_time $upstream_status $req_id</pre>
+      </div>
+
+      <!-- Breakdown Table -->
+      <div class="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-xl shadow-md mb-6">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-950/80 text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">
+              <th class="py-3 px-4">Index</th>
+              <th class="py-3 px-4">Nginx Variable</th>
+              <th class="py-3 px-4">Sample Value</th>
+              <th class="py-3 px-4">Parser Handling &amp; Cast</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 text-xs font-mono text-slate-300">
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">01</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">$remote_addr</td>
+              <td class="py-2.5 px-4">10.244.1.45</td>
+              <td class="py-2.5 px-4 text-slate-400">Client IP or upstream Ingress node IP</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">02</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">$remote_user</td>
+              <td class="py-2.5 px-4">-</td>
+              <td class="py-2.5 px-4 text-slate-400">HTTP Basic Auth user (or hyphen)</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">03</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">[$time_local]</td>
+              <td class="py-2.5 px-4">[09/Sep/2026:15:23:45 +0000]</td>
+              <td class="py-2.5 px-4 text-emerald-400">Common Log Format date string</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">04</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">"$request"</td>
+              <td class="py-2.5 px-4">"GET /api/v1/checkout HTTP/2.0"</td>
+              <td class="py-2.5 px-4 text-slate-400">Method, URI, and HTTP protocol version</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">05</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">$status</td>
+              <td class="py-2.5 px-4">200</td>
+              <td class="py-2.5 px-4 text-emerald-400">HTTP status code (integer cast)</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">06</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">$body_bytes_sent</td>
+              <td class="py-2.5 px-4">4521</td>
+              <td class="py-2.5 px-4 text-emerald-400">Response body size in bytes (integer)</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">07</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">"$http_referer"</td>
+              <td class="py-2.5 px-4">"https://app.example.com/checkout"</td>
+              <td class="py-2.5 px-4 text-slate-400">Referer header value or hyphen</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">08</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">"$http_user_agent"</td>
+              <td class="py-2.5 px-4">"Mozilla/5.0..."</td>
+              <td class="py-2.5 px-4 text-slate-400">Client user agent string</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">09</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">$request_length</td>
+              <td class="py-2.5 px-4">1420</td>
+              <td class="py-2.5 px-4 text-emerald-400">Total client request payload bytes</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">10</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">$request_time</td>
+              <td class="py-2.5 px-4">0.042</td>
+              <td class="py-2.5 px-4 text-emerald-400">Total roundtrip latency in seconds (float)</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">11</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">[$proxy_upstream_name]</td>
+              <td class="py-2.5 px-4">[default-cart-svc-8080]</td>
+              <td class="py-2.5 px-4 text-slate-400">Kubernetes Namespace-Service-Port target</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">12</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">[$proxy_alternative_upstream_name]</td>
+              <td class="py-2.5 px-4">[-]</td>
+              <td class="py-2.5 px-4 text-slate-400">Canary or mirror upstream backend identifier</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">13</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">$upstream_addr</td>
+              <td class="py-2.5 px-4">10.244.2.89:8080</td>
+              <td class="py-2.5 px-4 text-slate-400">Backend Pod IP and target container port</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">14</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">$upstream_response_length</td>
+              <td class="py-2.5 px-4">4390</td>
+              <td class="py-2.5 px-4 text-amber-400">Backend body bytes or hyphen on failure</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">15</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">$upstream_response_time</td>
+              <td class="py-2.5 px-4">0.040</td>
+              <td class="py-2.5 px-4 text-amber-400">Backend latency float or hyphen on timeout</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">16</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">$upstream_status</td>
+              <td class="py-2.5 px-4">200</td>
+              <td class="py-2.5 px-4 text-amber-400">Backend HTTP status or hyphen on 502/504</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-4 text-slate-500">17</td>
+              <td class="py-2.5 px-4 text-cyan-400 font-bold">$req_id</td>
+              <td class="py-2.5 px-4">e7439bf25e36214371...</td>
+              <td class="py-2.5 px-4 text-emerald-400">Unique correlation ID (X-Request-ID)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 2: Universal Grok Pattern -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        2. Production Grok Pattern for Ingress-Nginx
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed mb-4">
+        Logstash, Elasticsearch, and Vector grok engines use named patterns. The following pattern cleanly handles both normal HTTP 200 responses and upstream connection timeouts where backend variables produce hyphens:
+      </p>
+
+      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 mb-6">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-sm font-bold text-cyan-400 font-mono uppercase tracking-wider">
+            Ingress-Nginx Master Grok Pattern
+          </h3>
+          <span class="text-[11px] font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800">Nullable Safe</span>
+        </div>
+        <pre class="bg-slate-950 text-cyan-300 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed" is:raw>{rawGrokPattern}</pre>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <div class="text-xs font-mono text-emerald-400 font-bold mb-1">Standard 200 Success Line:</div>
+          <pre class="bg-slate-950 text-slate-300 p-3 rounded font-mono text-[11px] overflow-x-auto border border-slate-800" is:raw>{sampleLogSuccess}</pre>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <div class="text-xs font-mono text-amber-400 font-bold mb-1">504 Upstream Timeout Line:</div>
+          <pre class="bg-slate-950 text-slate-300 p-3 rounded font-mono text-[11px] overflow-x-auto border border-slate-800" is:raw>{sampleLogFailure}</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Fluent Bit [PARSER] Configuration -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        3. Fluent Bit [PARSER] Configuration (parsers.conf)
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed mb-4">
+        Fluent Bit's C-based regex engine uses Oniguruma regular expressions. Save this parser inside your Fluent Bit ConfigMap under <code class="text-cyan-300 font-mono text-xs">parsers.conf</code> to transform raw string lines into structured key-value maps:
+      </p>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 mb-6">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-mono text-slate-400 font-bold">/fluent-bit/etc/parsers.conf</span>
+          <span class="text-[11px] font-mono text-cyan-400">Format: regex</span>
+        </div>
+        <pre class="bg-slate-900 text-slate-200 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed" is:raw>{flbParserConfig}</pre>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 mb-6">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-mono text-slate-400 font-bold">Fluent Bit Filter Pipeline</span>
+          <span class="text-[11px] font-mono text-emerald-400">Match: kube.*ingress-nginx*</span>
+        </div>
+        <pre class="bg-slate-900 text-slate-200 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed" is:raw>{flbFilterPipeline}</pre>
+      </div>
+    </section>
+
+    <!-- Section 4: Vector VRL Transform Script -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        4. Vector Remap Language (VRL) Parsing Script
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed mb-4">
+        Vector handles high-throughput Kubernetes ingress logs via its SIMD-accelerated Vector Remap Language (VRL). The script below uses <code class="text-cyan-300 font-mono text-xs">parse_regex</code>, converts numeric types, and safely coerces upstream timeout hyphens into nullable fields to prevent pipeline aborts:
+      </p>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 mb-6">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-mono text-slate-400 font-bold">vector.yaml &bull; remap transform</span>
+          <span class="text-[11px] font-mono text-emerald-400">VRL Engine</span>
+        </div>
+        <pre class="bg-slate-900 text-slate-200 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed" is:raw>{vectorVrlCode}</pre>
+      </div>
+    </section>
+
+    <!-- Section 5: Common Traps in Ingress Log Collection -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+        5. Hardening &amp; Production Edge Cases
+      </h2>
+      <div class="space-y-4">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+          <h3 class="text-sm font-bold text-rose-400 mb-1">1. Containerd / CRI-O Outer Log Prefix</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            In modern Kubernetes clusters running Containerd or CRI-O, log files located under <code class="text-cyan-300 font-mono text-xs">/var/log/pods/ingress-nginx_.../*.log</code> are not raw Nginx strings. They are prefixed with a CRI header: <code class="text-slate-400 font-mono text-xs">2026-09-09T12:00:00.123456789Z stdout F &lt;nginx_log&gt;</code>. Ensure your collector uses the <code class="text-cyan-300 font-mono text-xs">cri</code> parser before feeding the payload into the Ingress parser.
+          </p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+          <h3 class="text-sm font-bold text-amber-400 mb-1">2. Upstream Retries &amp; Multiple IP Addresses</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            When an upstream pod returns a 502 Bad Gateway and Ingress-Nginx retries a second replica, <code class="text-slate-400 font-mono text-xs">$upstream_addr</code> contains comma-separated entries such as <code class="text-slate-400 font-mono text-xs">10.244.2.89:8080, 10.244.3.12:8080</code> and <code class="text-slate-400 font-mono text-xs">$upstream_response_time</code> contains <code class="text-slate-400 font-mono text-xs">0.002, 0.045</code>. Strict single-IP patterns fail on retries; parsing as a string or regex token list prevents drops.
+          </p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+          <h3 class="text-sm font-bold text-emerald-400 mb-1">3. Switching to Native JSON in Ingress-Nginx</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            If you control the Ingress-Nginx Helm chart or ConfigMap, configure <code class="text-slate-400 font-mono text-xs">log-format-escape-json: "true"</code> and write a structured JSON format directly in the ConfigMap data. Both Fluent Bit and Vector parse JSON 3x-5x faster than complex regular expressions, reducing logging DaemonSet CPU utilization on high-throughput clusters.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sibling Internal Links -->
+    <section class="pt-8 border-t border-slate-800">
+      <h3 class="text-sm font-mono uppercase tracking-wider text-slate-400 font-bold mb-4">
+        Related Production Log Parser Guides
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+        <a
+          href="/nginx-access-log-grok-pattern-generator/"
+          class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-cyan-500/50 hover:bg-slate-900 transition block group"
+        >
+          <div class="text-cyan-400 font-bold group-hover:underline mb-1">Nginx Access Log Grok Generator &rarr;</div>
+          <div class="text-slate-400 font-sans">Combined and custom formats with upstream timing metrics.</div>
+        </a>
+        <a
+          href="/high-throughput-log-parsing-vector-vs-fluentbit/"
+          class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-cyan-500/50 hover:bg-slate-900 transition block group"
+        >
+          <div class="text-cyan-400 font-bold group-hover:underline mb-1">Vector vs Fluent Bit Benchmark &rarr;</div>
+          <div class="text-slate-400 font-sans">Performance, memory footprint, and regex throughput analysis.</div>
+        </a>
+        <a
+          href="/aws-alb-access-log-regex-parser/"
+          class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-cyan-500/50 hover:bg-slate-900 transition block group"
+        >
+          <div class="text-cyan-400 font-bold group-hover:underline mb-1">AWS ALB Access Log Regex Parser &rarr;</div>
+          <div class="text-slate-400 font-sans">Parse AWS Application Load Balancer access logs with regex.</div>
+        </a>
+        <a
+          href="/haproxy-http-log-format-regex-extractor/"
+          class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-cyan-500/50 hover:bg-slate-900 transition block group"
+        >
+          <div class="text-cyan-400 font-bold group-hover:underline mb-1">HAProxy HTTP Log Format Extractor &rarr;</div>
+          <div class="text-slate-400 font-sans">Extract client timers, session state, and termination codes.</div>
+        </a>
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="/" class="text-xs font-mono text-cyan-400 hover:text-cyan-300 underline">
+          &larr; Return to Grok Pattern Tester
+        </a>
+      </div>
+    </section>
+  </article>
+</Layout>

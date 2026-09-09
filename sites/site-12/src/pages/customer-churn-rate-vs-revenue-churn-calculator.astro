@@ -1,0 +1,533 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const canonical = "https://site-12-taupe.vercel.app/customer-churn-rate-vs-revenue-churn-calculator";
+
+const title = "Customer Churn Rate vs Revenue Churn Rate: Formulas & Calculator | SaaSUnitMath";
+const description = "Understand customer vs revenue churn with exact mathematical formulas, negative churn mechanics, and an interactive 12-month MRR cohort trajectory calculator.";
+
+const schemaJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": `${canonical}#article`,
+      "url": canonical,
+      "headline": "Customer Churn Rate vs Revenue Churn Rate: Formulas, Spreadsheets & Math",
+      "description": "Exhaustive mathematical analysis comparing customer (logo) churn against gross and net revenue churn. Detailed formula breakdowns, negative churn expansion mechanics, and an interactive 12-month cohort calculator.",
+      "inLanguage": "en-US",
+      "author": {
+        "@type": "Organization",
+        "name": "SaaSUnitMath",
+        "url": "https://site-12-taupe.vercel.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SaaSUnitMath",
+        "url": "https://site-12-taupe.vercel.app/"
+      },
+      "datePublished": "2026-03-09T08:00:00Z",
+      "dateModified": "2026-09-09T18:00:00Z"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${canonical}#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between Customer (Logo) Churn and Revenue Churn?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Customer (logo) churn measures the percentage of customer accounts that cancel during a given timeframe. Revenue churn measures the percentage of Monthly Recurring Revenue (MRR) lost through cancellations and account downgrades. In businesses with tiered pricing, a company can lose many low-tier customers while maintaining or growing revenue if high-tier accounts expand."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Negative Revenue Churn and how does it occur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Negative revenue churn occurs when expansion revenue (upsells, seat additions, cross-sells, usage growth) and reactivation revenue from existing customers exceeds the total revenue lost to cancellations and contractions. When net revenue churn is negative, a SaaS business grows in total MRR each month even with zero new customer acquisition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the formula for Gross MRR Churn vs Net MRR Churn?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gross MRR Churn % = [(Churned MRR + Contraction MRR) / Starting MRR] × 100. It measures raw loss and is strictly non-negative. Net MRR Churn % = [((Churned MRR + Contraction MRR) - (Expansion MRR + Reactivation MRR)) / Starting MRR] × 100. It can be negative when expansion outpaces loss."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Net Revenue Churn relate to Net Revenue Retention (NRR)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Net Revenue Churn and Net Revenue Retention (NRR) are inverse expressions of the exact same economic reality: NRR % = 100% - Net Revenue Churn %. A monthly net revenue churn of -2% equates to a monthly NRR of 102%, which compounds to approximately 126.8% annualized NRR."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do venture capitalists and acquirers prioritize Revenue Churn over Logo Churn?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Revenue churn directly dictates customer lifetime value (LTV), capital efficiency, and valuation multiples. A SaaS with high logo churn in its self-serve tier can still generate an industry-leading Net Expansion Rate from mid-market and enterprise cohorts, resulting in durable compound growth that justifies 10x+ ARR valuation multiples."
+          }
+        }
+      ]
+    }
+  ]
+});
+---
+
+<Layout title={title} description={description} canonical={canonical} schemaJson={schemaJson} type="article">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs font-mono text-slate-400 mb-6">
+      <a href={`${base}/`} class="hover:text-indigo-400 transition">SaaSUnitMath</a>
+      <span>/</span>
+      <a href={`${base}/#metrics`} class="hover:text-indigo-400 transition">Retention & Churn</a>
+      <span>/</span>
+      <span class="text-indigo-400">Customer vs Revenue Churn</span>
+    </nav>
+
+    <!-- Header Badge -->
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-4 font-mono">
+      <span>📐</span> Unit Economics Deep Dive
+    </div>
+
+    <!-- EXACTLY ONE H1 TAG -->
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+      Customer Churn Rate vs Revenue Churn Rate: Formulas, Spreadsheets & Math
+    </h1>
+
+    <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400 pb-6 border-b border-slate-800">
+      <span class="text-indigo-400 font-semibold">Classification: SaaS Retention Mechanics</span>
+      <span>•</span>
+      <span>Math: Logo vs Gross vs Net Churn</span>
+      <span>•</span>
+      <span>Interactive: 12-Month Cohort Simulator</span>
+      <span>•</span>
+      <span>Read Time: 12 min</span>
+    </div>
+
+    <!-- 45-60 Word Quick Answer Box with Green Accent Border -->
+    <div class="my-8 p-6 rounded-2xl bg-emerald-950/20 border-l-4 border-l-emerald-500 border-y border-r border-emerald-500/30 shadow-xl">
+      <div class="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2 font-mono">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+        Featured Snippet: Quick Answer
+      </div>
+      <p class="text-slate-200 text-sm sm:text-base leading-relaxed font-sans">
+        Customer churn rate measures the percentage of logo cancellations, whereas revenue churn measures lost monthly recurring revenue. A SaaS company can experience a high 5% customer churn while achieving negative 2% net revenue churn if remaining enterprise accounts expand contract values, proving that revenue retention dictates enterprise valuation and capital efficiency.
+      </p>
+    </div>
+
+    <!-- Core Theoretical Divergence -->
+    <div class="space-y-10 text-slate-300 text-sm sm:text-base leading-relaxed">
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">The Dual Dimensions of Churn: Count vs Capital</h2>
+        <p>
+          In early-stage software companies, founders frequently bundle all retention signals into a single generic "churn" number. This failure of distinction obscures vital unit economic reality. A software business operates across two distinct retention axes: <strong>Logo (Customer) Retention</strong> and <strong>Dollar (Revenue) Retention</strong>.
+        </p>
+        <p class="mt-3">
+          Logo churn treats a $29/month hobbyist subscriber with the exact same mathematical weight as a $10,000/month enterprise anchor client. If a self-serve developer tier sheds 50 users while your top 10 enterprise accounts upgrade their seat counts by 40%, logo churn screams catastrophe while cash flow hits all-time records. Disentangling customer churn from gross and net revenue churn is the prerequisite for calculating accurate Customer Lifetime Value (LTV), payback periods, and fundable growth models.
+        </p>
+      </section>
+
+      <!-- The Three Fundamental Formulas -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-bold text-white tracking-tight">The Three Definitive Churn Formulas</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Formula 1: Logo Churn -->
+          <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-mono font-bold text-indigo-400 uppercase">01. Logo Churn Rate %</span>
+              <h3 class="text-sm font-bold text-white mt-1">Customer Account Loss</h3>
+              <div class="my-3 p-3 rounded-lg bg-slate-950 font-mono text-xs text-indigo-300 border border-slate-800/80">
+                Logo Churn % = (Logos Lost / Starting Logos) × 100
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Calculates the pure count attrition of paying customer accounts over a specific calendar month or billing period, ignoring contract size variations.
+              </p>
+            </div>
+            <div class="mt-4 pt-2 border-t border-slate-800/80 text-[11px] text-slate-500 font-mono">Range: 0% to 100%</div>
+          </div>
+
+          <!-- Formula 2: Gross MRR Churn -->
+          <div class="p-5 rounded-xl bg-slate-900/80 border border-rose-500/30 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-mono font-bold text-rose-400 uppercase">02. Gross MRR Churn %</span>
+              <h3 class="text-sm font-bold text-white mt-1">Total Baseline Dollar Loss</h3>
+              <div class="my-3 p-3 rounded-lg bg-slate-950 font-mono text-xs text-rose-300 border border-slate-800/80">
+                Gross Churn % = [(Churn MRR + Contraction MRR) / Start MRR] × 100
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Measures the raw dollar value lost via cancellations and plan downgrades. Completely excludes any upsells or new revenue. It is strictly bounded by 0% and 100%.
+              </p>
+            </div>
+            <div class="mt-4 pt-2 border-t border-slate-800/80 text-[11px] text-rose-400 font-mono">Always &ge; 0% (Absolute Loss)</div>
+          </div>
+
+          <!-- Formula 3: Net Revenue Churn -->
+          <div class="p-5 rounded-xl bg-slate-900/80 border border-emerald-500/40 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-mono font-bold text-emerald-400 uppercase">03. Net Revenue Churn %</span>
+              <h3 class="text-sm font-bold text-white mt-1">Net Economic Cohort Shift</h3>
+              <div class="my-3 p-3 rounded-lg bg-slate-950 font-mono text-xs text-emerald-300 border border-slate-800/80">
+                Net Churn % = [(Loss MRR - Expansion MRR) / Start MRR] × 100
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Nets lost revenue against account expansion and reactivation. When expansion outpaces losses, Net Churn drops below zero—unlocking <strong>Negative Churn</strong>.
+              </p>
+            </div>
+            <div class="mt-4 pt-2 border-t border-slate-800/80 text-[11px] text-emerald-400 font-mono">Can be Negative (&lt; 0%)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Superpower of Negative Churn -->
+      <section class="p-6 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-slate-800 space-y-4">
+        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+          <span>⚡</span> The Mathematics of Negative Churn: The Holy Grail of SaaS
+        </h2>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          Negative revenue churn occurs whenever:
+        </p>
+        <div class="p-4 rounded-xl bg-slate-950 border border-emerald-500/30 font-mono text-xs sm:text-sm text-emerald-300">
+          Expansion MRR + Reactivation MRR &gt; Churned MRR + Contraction MRR
+        </div>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          In a company with <strong>-2% monthly net revenue churn</strong>, each cohort of customers grows in aggregate billings by 2% each month, completely independent of marketing campaigns or new customer acquisition. If you shut down your sales and marketing departments entirely, the company's existing installed customer base will still expand organically month-over-month.
+        </p>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          This dynamic fundamentally alters the relationship between Logo Churn and Net Revenue Retention (NRR):
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono pt-2">
+          <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
+            <div class="text-slate-400">Monthly Net Revenue Churn:</div>
+            <div class="text-base text-emerald-400 font-bold">-2.0%</div>
+            <div class="text-[11px] text-slate-500 mt-1">Monthly NRR = 100% - (-2%) = 102.0%</div>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
+            <div class="text-slate-400">Annualized Compound Expansion (NRR):</div>
+            <div class="text-base text-cyan-400 font-bold">126.8% NRR</div>
+            <div class="text-[11px] text-slate-500 mt-1">(1.02)¹² = 1.2682 &rarr; 126.8% Year-over-Year</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive 12-Month Cohort Comparison Simulator -->
+      <section class="space-y-6 pt-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between">
+          <div>
+            <h2 class="text-2xl font-bold text-white tracking-tight">Interactive 12-Month Cohort Trajectory Simulator</h2>
+            <p class="text-slate-400 text-xs sm:text-sm mt-1">
+              Simulate a starting cohort of customers over 12 months with 3% logo churn vs -2% net revenue churn.
+            </p>
+          </div>
+          <span class="mt-2 sm:mt-0 inline-flex text-xs font-mono font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
+            Live Client-Side Math
+          </span>
+        </div>
+
+        <!-- Simulator Input Controls -->
+        <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-xl space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div>
+              <label for="input-starting-mrr" class="block text-xs font-mono text-slate-400 mb-1">Starting Cohort MRR ($)</label>
+              <input
+                id="input-starting-mrr"
+                type="number"
+                value="100000"
+                step="5000"
+                min="1000"
+                class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-white font-mono text-sm focus:border-indigo-500 focus:outline-none"
+              />
+            </div>
+            <div>
+              <label for="input-starting-logos" class="block text-xs font-mono text-slate-400 mb-1">Starting Customer Logos</label>
+              <input
+                id="input-starting-logos"
+                type="number"
+                value="500"
+                step="25"
+                min="10"
+                class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-white font-mono text-sm focus:border-indigo-500 focus:outline-none"
+              />
+            </div>
+            <div>
+              <label for="input-logo-churn" class="block text-xs font-mono text-slate-400 mb-1">Monthly Logo Churn (%)</label>
+              <input
+                id="input-logo-churn"
+                type="number"
+                value="3.0"
+                step="0.1"
+                min="0"
+                max="20"
+                class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-rose-300 font-mono text-sm focus:border-indigo-500 focus:outline-none"
+              />
+            </div>
+            <div>
+              <label for="input-net-churn" class="block text-xs font-mono text-slate-400 mb-1">Monthly Net Rev Churn (%)</label>
+              <input
+                id="input-net-churn"
+                type="number"
+                value="-2.0"
+                step="0.1"
+                min="-10"
+                max="10"
+                class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-emerald-300 font-mono text-sm focus:border-indigo-500 focus:outline-none"
+              />
+            </div>
+          </div>
+          <p class="text-[11px] font-mono text-slate-400">
+            Note: Negative Net Revenue Churn (e.g. -2.0%) indicates that account expansion outpaces churn by 2.0% per month.
+          </p>
+        </div>
+
+        <!-- Dynamic Results Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="border-b border-slate-800 bg-slate-900/90 font-mono text-slate-400 uppercase tracking-wider text-[11px]">
+                <th class="py-3 px-3">Month</th>
+                <th class="py-3 px-3 text-slate-300">Remaining Logos</th>
+                <th class="py-3 px-3 text-rose-400 bg-rose-950/10">MRR (Flat ARPU Decay)</th>
+                <th class="py-3 px-3 text-emerald-400 bg-emerald-950/20">MRR (Net Rev Churn)</th>
+                <th class="py-3 px-3 text-cyan-400">Expansion Surplus</th>
+                <th class="py-3 px-3 text-amber-300">Effective ARPU</th>
+              </tr>
+            </thead>
+            <tbody id="trajectory-table-body" class="divide-y divide-slate-800/60 font-mono">
+              <!-- Dynamically populated via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Client-Side Trajectory Calculator Script -->
+      <script is:inline>
+        (function() {
+          function formatUSD(val) {
+            return '$' + Math.round(val).toLocaleString('en-US');
+          }
+
+          function recalculateTrajectory() {
+            var startMRR = parseFloat(document.getElementById('input-starting-mrr').value) || 100000;
+            var startLogos = parseInt(document.getElementById('input-starting-logos').value, 10) || 500;
+            var logoChurnRate = (parseFloat(document.getElementById('input-logo-churn').value) || 3.0) / 100.0;
+            var netChurnRate = (parseFloat(document.getElementById('input-net-churn').value) || -2.0) / 100.0;
+
+            var tbody = document.getElementById('trajectory-table-body');
+            if (!tbody) return;
+
+            var html = '';
+            var currentLogos = startLogos;
+            var currentFlatMRR = startMRR;
+            var currentNetMRR = startMRR;
+
+            for (var m = 0; m <= 12; m++) {
+              if (m > 0) {
+                currentLogos = currentLogos * (1.0 - logoChurnRate);
+                currentFlatMRR = currentFlatMRR * (1.0 - logoChurnRate);
+                currentNetMRR = currentNetMRR * (1.0 - netChurnRate);
+              }
+
+              var surplus = currentNetMRR - currentFlatMRR;
+              var effectiveARPU = currentLogos > 0 ? (currentNetMRR / currentLogos) : 0;
+              var rowHighlight = (m === 12) ? 'bg-slate-900/90 font-bold border-t-2 border-slate-700' : '';
+
+              html += '<tr class="' + rowHighlight + '">';
+              html += '<td class="py-2.5 px-3 font-semibold text-white">Month ' + m + (m === 0 ? ' (Base)' : (m === 12 ? ' (1 Year)' : '')) + '</td>';
+              html += '<td class="py-2.5 px-3 text-slate-300">' + Math.round(currentLogos) + ' accounts</td>';
+              html += '<td class="py-2.5 px-3 text-rose-300 bg-rose-950/10">' + formatUSD(currentFlatMRR) + '</td>';
+              html += '<td class="py-2.5 px-3 text-emerald-300 bg-emerald-950/20 font-bold">' + formatUSD(currentNetMRR) + '</td>';
+              html += '<td class="py-2.5 px-3 text-cyan-300">+' + formatUSD(surplus) + '</td>';
+              html += '<td class="py-2.5 px-3 text-amber-300 font-semibold">' + formatUSD(effectiveARPU) + ' / mo</td>';
+              html += '</tr>';
+            }
+
+            tbody.innerHTML = html;
+          }
+
+          window.addEventListener('DOMContentLoaded', function() {
+            recalculateTrajectory();
+
+            var inputs = ['input-starting-mrr', 'input-starting-logos', 'input-logo-churn', 'input-net-churn'];
+            inputs.forEach(function(id) {
+              var el = document.getElementById(id);
+              if (el) {
+                el.addEventListener('input', recalculateTrajectory);
+                el.addEventListener('change', recalculateTrajectory);
+              }
+            });
+          });
+
+          // Run immediately in case DOM is already parsed
+          if (document.readyState === 'interactive' || document.readyState === 'complete') {
+            recalculateTrajectory();
+          }
+        })();
+      </script>
+
+      <!-- Key Insights: The ARPU Surge -->
+      <section class="space-y-6 text-slate-300 text-sm sm:text-base leading-relaxed">
+        <h2 class="text-2xl font-bold text-white tracking-tight">Understanding the ARPU Expansion Surge</h2>
+        <p>
+          Notice the striking relationship revealed in the table above between customer account count and Average Revenue Per User (ARPU). Even as total active customer accounts drop from <strong>500 down to 347</strong> (a 30.6% logo erosion over 12 months at 3% monthly churn), overall MRR actually surges from <strong>$100,000 up to $126,824</strong>.
+        </p>
+        <p>
+          Consequently, the effective ARPU expands from <strong>$200/month to over $365/month</strong>. This occurs because the surviving customers are those extracting mission-critical value from the product, expanding user seats, consuming more computational API credits, or adopting higher-tier features.
+        </p>
+      </section>
+
+      <!-- Comparison Matrix: When to Track Which Metric -->
+      <section class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-4">
+        <h2 class="text-xl font-bold text-white">Strategic Metric Allocation: When to Prioritize Logo vs Revenue Churn</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-xl bg-slate-950 border border-indigo-500/30">
+            <div class="font-bold text-indigo-400 uppercase font-mono text-xs mb-2">Focus on Logo Churn If:</div>
+            <ul class="space-y-2 list-disc list-inside text-slate-300">
+              <li>You operate a high-volume, low-ACV self-serve product ($10–$99/month).</li>
+              <li>Your customer acquisition relies heavily on viral word-of-mouth referral loops.</li>
+              <li>You need early warning signals of product usability friction before revenue drops.</li>
+              <li>You sell single-tier, flat-rate pricing with zero expansion vectors.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-950 border border-emerald-500/30">
+            <div class="font-bold text-emerald-400 uppercase font-mono text-xs mb-2">Focus on Net Revenue Churn If:</div>
+            <ul class="space-y-2 list-disc list-inside text-slate-300">
+              <li>You operate a B2B SaaS with seat-based, usage-based, or tiered pricing.</li>
+              <li>Your Customer Acquisition Cost (CAC) payback exceeds 12 months.</li>
+              <li>You are preparing for institutional fundraising (Series A/B) or strategic acquisition.</li>
+              <li>Enterprise expansion revenue constitutes a major engine of ARR growth.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="pt-8 border-t border-slate-800 mb-12">
+        <h2 class="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm">
+              <span>What is the difference between Customer (Logo) Churn and Revenue Churn?</span>
+              <span class="text-indigo-400 text-lg transition-transform group-open:rotate-180">↓</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Customer (logo) churn measures the percentage of customer accounts that cancel during a given timeframe. Revenue churn measures the percentage of Monthly Recurring Revenue (MRR) lost through cancellations and account downgrades. In businesses with tiered pricing, a company can lose many low-tier customers while maintaining or growing revenue if high-tier accounts expand.
+            </p>
+          </details>
+
+          <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm">
+              <span>What is Negative Revenue Churn and how does it occur?</span>
+              <span class="text-indigo-400 text-lg transition-transform group-open:rotate-180">↓</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Negative revenue churn occurs when expansion revenue (upsells, seat additions, cross-sells, usage growth) and reactivation revenue from existing customers exceeds the total revenue lost to cancellations and contractions. When net revenue churn is negative, a SaaS business grows in total MRR each month even with zero new customer acquisition.
+            </p>
+          </details>
+
+          <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm">
+              <span>What is the formula for Gross MRR Churn vs Net MRR Churn?</span>
+              <span class="text-indigo-400 text-lg transition-transform group-open:rotate-180">↓</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Gross MRR Churn % = [(Churned MRR + Contraction MRR) / Starting MRR] × 100. It measures raw loss and is strictly non-negative. Net MRR Churn % = [((Churned MRR + Contraction MRR) - (Expansion MRR + Reactivation MRR)) / Starting MRR] × 100. It can be negative when expansion outpaces loss.
+            </p>
+          </details>
+
+          <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm">
+              <span>How does Net Revenue Churn relate to Net Revenue Retention (NRR)?</span>
+              <span class="text-indigo-400 text-lg transition-transform group-open:rotate-180">↓</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Net Revenue Churn and Net Revenue Retention (NRR) are inverse expressions of the exact same economic reality: NRR % = 100% - Net Revenue Churn %. A monthly net revenue churn of -2% equates to a monthly NRR of 102%, which compounds to approximately 126.8% annualized NRR.
+            </p>
+          </details>
+
+          <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm">
+              <span>Why do venture capitalists and acquirers prioritize Revenue Churn over Logo Churn?</span>
+              <span class="text-indigo-400 text-lg transition-transform group-open:rotate-180">↓</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Revenue churn directly dictates customer lifetime value (LTV), capital efficiency, and valuation multiples. A SaaS with high logo churn in its self-serve tier can still generate an industry-leading Net Expansion Rate from mid-market and enterprise cohorts, resulting in durable compound growth that justifies 10x+ ARR valuation multiples.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Sibling Internal Links & Cross-Calculator Hub -->
+      <section class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+        <h3 class="text-base font-bold text-white mb-4">Related SaaS Unit Economics & Valuation Guides</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <a href={`${base}/b2b-saas-churn-benchmarks-by-acv-2026/`} class="p-3 rounded-lg bg-slate-950 hover:border-indigo-500/40 border border-slate-800 transition flex items-center justify-between group">
+            <div>
+              <div class="font-semibold text-white group-hover:text-indigo-400">B2B SaaS Churn Benchmarks by ACV</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Median logo & net revenue churn by contract value</div>
+            </div>
+            <span class="text-indigo-400">&rarr;</span>
+          </a>
+
+          <a href={`${base}/net-revenue-retention-nrr-benchmark-bootstrapped-saas/`} class="p-3 rounded-lg bg-slate-950 hover:border-indigo-500/40 border border-slate-800 transition flex items-center justify-between group">
+            <div>
+              <div class="font-semibold text-white group-hover:text-indigo-400">NRR Benchmarks for Bootstrapped SaaS</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Top-quartile retention benchmarks without VC subsidies</div>
+            </div>
+            <span class="text-indigo-400">&rarr;</span>
+          </a>
+
+          <a href={`${base}/saas-magic-number-sales-efficiency-calculator/`} class="p-3 rounded-lg bg-slate-950 hover:border-indigo-500/40 border border-slate-800 transition flex items-center justify-between group">
+            <div>
+              <div class="font-semibold text-white group-hover:text-indigo-400">SaaS Magic Number & Sales Efficiency</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Interactive CAC payback & growth efficiency calculator</div>
+            </div>
+            <span class="text-indigo-400">&rarr;</span>
+          </a>
+
+          <a href={`${base}/rule-of-40-saas-valuation-growth-model/`} class="p-3 rounded-lg bg-slate-950 hover:border-indigo-500/40 border border-slate-800 transition flex items-center justify-between group">
+            <div>
+              <div class="font-semibold text-white group-hover:text-indigo-400">Rule of 40 Valuation Model</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Revenue growth rate + EBITDA margin valuation trade-offs</div>
+            </div>
+            <span class="text-indigo-400">&rarr;</span>
+          </a>
+
+          <a href={`${base}/saas-ltv-cac-payback-period-calculator/`} class="p-3 rounded-lg bg-slate-950 hover:border-indigo-500/40 border border-slate-800 transition flex items-center justify-between group">
+            <div>
+              <div class="font-semibold text-white group-hover:text-indigo-400">LTV / CAC Payback Calculator</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Gross margin-adjusted payback period math</div>
+            </div>
+            <span class="text-indigo-400">&rarr;</span>
+          </a>
+
+          <a href={`${base}/`} class="p-3 rounded-lg bg-slate-950 hover:border-indigo-500/40 border border-slate-800 transition flex items-center justify-between group">
+            <div>
+              <div class="font-semibold text-white group-hover:text-indigo-400">SaaSUnitMath Master Index</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">All unit metric financial models & calculators</div>
+            </div>
+            <span class="text-indigo-400">&rarr;</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <div class="flex justify-between items-center pt-8 border-t border-slate-800 text-xs font-mono">
+        <a href={`${base}/b2b-saas-churn-benchmarks-by-acv-2026/`} class="text-slate-400 hover:text-white">
+          &larr; Previous: Churn Benchmarks by ACV
+        </a>
+        <a href={`${base}/net-revenue-retention-nrr-benchmark-bootstrapped-saas/`} class="text-indigo-400 hover:text-indigo-300">
+          Next: NRR Benchmark Guide &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

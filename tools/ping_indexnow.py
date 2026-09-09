@@ -293,7 +293,27 @@ def ping_indexnow(site):
         print(f"[{site['name']}] IndexNow HTTP Error: {e.code} {e.reason}")
         return False
     except Exception as e:
-        print(f"[{site['name']}] IndexNow Ping Exception: {e}")
+        print(f"[{site['name']}    "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/deepseek-r1-70b-dual-rtx-3090-setup/",
+    "https://jibranpcccc.github.io/workationradar/florianopolis-brazil-coliving-guide/",
+    "https://openagentstack.pages.dev/agents/smolagents-coding-agent-claude-tutorial/",
+    "https://indiestackaudit.pages.dev/billing/cloudflare-pages-vs-vercel-bandwidth-pricing-trap/",
+    "https://vectorbench-hq.netlify.app/hnsw-vs-ivfflat-memory-consumption-pgvector-tuning/",
+    "https://nomadtreaty.vercel.app/italy-digital-nomad-visa-flat-tax-vs-spain/",
+    "https://webhookwatch.vercel.app/webhook-idempotency-redis-redlock-guide/",
+    "https://localdocprivacy.netlify.app/gdpr-article-32-client-side-safeguards/",
+    "https://site-9-inky.vercel.app/medellin-vs-buenos-aires-software-founder-runway/",
+    "https://raginspect.pages.dev/reranking-models-cohere-vs-bge-reranker-large-mteb/",
+    "https://nomadpassportindex.netlify.app/malaysia-de-rantau-digital-nomad-pass-tech-freelancers/",
+    "https://site-12-taupe.vercel.app/customer-churn-rate-vs-revenue-churn-calculator/",
+    "https://groklogtester.pages.dev/kubernetes-ingress-nginx-log-parser-fluentbit/",
+    "https://site-14-sable.vercel.app/pentest-requirements-for-soc-2-type-2-audit/",
+    "https://site-15-ruby.vercel.app/b2b-contract-vs-eor-permanent-establishment-risk/",
+    "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/",
+    "https://opencrmstack.pages.dev/espocrm-vs-suitecrm-lightweight-php-open-source/",
+    "https://site-18-chi.vercel.app/github-actions-reusable-workflows-vs-composite-actions/",
+    "https://site-19-nine.vercel.app/impermanent-loss-vs-fee-apr-uniswap-v3-formula/",
+    "https://edgeruntimehq.pages.dev/onnx-runtime-webgpu-fp16-model-optimization/",
+] IndexNow Ping Exception: {e}")
         return False
 
 def main():

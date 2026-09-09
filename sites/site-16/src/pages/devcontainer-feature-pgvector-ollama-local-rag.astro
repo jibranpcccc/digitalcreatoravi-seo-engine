@@ -1,0 +1,506 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/#article",
+      "headline": "DevContainer Feature for pgvector + Ollama: Instant Zero-Install Local RAG",
+      "description": "Production blueprint for instant local RAG development with DevContainers, pgvector (PostgreSQL 16), and GPU-accelerated Ollama. Includes copy-pasteable configs and a 30-second quickstart script.",
+      "url": "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/",
+      "datePublished": "2026-09-09T00:00:00Z",
+      "dateModified": "2026-09-09T00:00:00Z",
+      "author": {
+        "@type": "Organization",
+        "name": "DevConfigHub Core Architecture Team",
+        "url": "https://site-16-indol.vercel.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DevConfigHub",
+        "url": "https://site-16-indol.vercel.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://site-16-indol.vercel.app/og-banner.png"
+        }
+      }
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Build a Zero-Install Local RAG Stack with DevContainers",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Configure DevContainer and Docker Compose",
+          "text": "Link your application container with pgvector/pgvector:pg16 and ollama/ollama services via docker-compose.yml."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Enable NVIDIA GPU Passthrough for Ollama",
+          "text": "Configure device reservations in docker-compose.yml with driver: nvidia and gpu capabilities for hardware inference acceleration."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Automate Initialization in postCreateCommand",
+          "text": "Run automated scripts to download embedding models (e.g. nomic-embed-text) and initialize the pgvector PostgreSQL extension."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Execute Vector Ingestion and Cosine Search",
+          "text": "Run the 30-second Python test script to generate embeddings, persist vectors, and query nearest neighbors via HNSW cosine indexing."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why use pgvector instead of dedicated vector databases like Milvus or Pinecone for local RAG?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "pgvector combines relational metadata, ACID transactions, and HNSW/IVFFlat vector indexing inside a single familiar PostgreSQL instance. This eliminates distributed data sync issues and avoids paying third-party SaaS API fees during local prototyping."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Ollama in DevContainers access host GPUs on Windows (WSL2) and Linux?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. By installing the NVIDIA Container Toolkit on the host machine and specifying GPU device reservations under the ollama service in docker-compose.yml, Docker Desktop (WSL2 backend) and native Linux daemons pass the CUDA hardware driver directly into the container."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which local embedding model offers the best balance of latency and retrieval accuracy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "nomic-embed-text (8192 context window, 768 dimensions) and all-minilm:l6-v2 (384 dimensions) are the industry standards for local development. Both execute embedding inference in under 15ms per chunk on modern GPUs."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const canonicalUrl = "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/";
+const pageTitle = "DevContainer Feature for pgvector + Ollama: Instant Zero-Install Local RAG";
+const pageDescription = "Zero-install local RAG development stack with VS Code DevContainers, pgvector (Postgres 16), and GPU-accelerated Ollama. Complete configs and testing script.";
+
+const devcontainerJsonCode = `{
+  "name": "Local RAG (pgvector + Ollama)",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11",
+      "installTools": true
+    },
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "username": "vscode"
+    }
+  },
+  "forwardPorts": [5432, 11434],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg",
+        "cweijan.vscode-database-client2"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "sqltools.connections": [
+          {
+            "name": "Local pgvector DB",
+            "dialect": "PostgreSQL",
+            "server": "db",
+            "port": 5432,
+            "database": "rag_db",
+            "username": "postgres",
+            "password": "rag_password"
+          }
+        ]
+      }
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "remoteUser": "vscode"
+}`;
+
+const dockerComposeCode = `version: "3.8"
+
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/base:ubuntu-24.04
+    volumes:
+      - ..:/workspace:cached
+    network_mode: service:db
+    command: sleep infinity
+
+  db:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: rag_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: rag_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgvector-data:/var/lib/postgresql/data
+    networks:
+      - rag-net
+
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+    networks:
+      - rag-net
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+volumes:
+  pgvector-data:
+  ollama-models:
+
+networks:
+  rag-net:
+    driver: bridge`;
+
+const setupShCode = `#!/usr/bin/env bash
+set -e
+
+echo "==> Waiting for PostgreSQL pgvector service..."
+until pg_isready -h db -U postgres; do
+  sleep 1
+done
+
+echo "==> Initializing pgvector extension..."
+PGPASSWORD=rag_password psql -h db -U postgres -d rag_db -c "CREATE EXTENSION IF NOT EXISTS vector;"
+
+echo "==> Installing Python RAG dependencies..."
+pip install --no-cache-dir psycopg[binary] pgvector requests numpy
+
+echo "==> Pulling Ollama embedding model (nomic-embed-text)..."
+curl -s -X POST http://ollama:11434/api/pull -d '{"name": "nomic-embed-text"}'
+
+echo "==> Local RAG DevContainer is ready!"`;
+
+const testPythonCode = `"""
+Quickstart: Test pgvector + Ollama local RAG in < 30 seconds
+Executes embedding generation, table creation, HNSW indexing, and cosine search.
+"""
+import json
+import urllib.request
+import psycopg
+from pgvector.psycopg import register_vector
+
+OLLAMA_URL = "http://ollama:11434/api/embeddings"
+MODEL_NAME = "nomic-embed-text"
+
+def get_embedding(text: str) -> list[float]:
+    req = urllib.request.Request(
+        OLLAMA_URL,
+        data=json.dumps({"model": MODEL_NAME, "prompt": text}).encode("utf-8"),
+        headers={"Content-Type": "application/json"}
+    )
+    with urllib.request.urlopen(req) as response:
+        data = json.loads(response.read().decode("utf-8"))
+        return data["embedding"]
+
+def main():
+    print("1. Connecting to pgvector PostgreSQL database...")
+    conn = psycopg.connect(
+        "host=db dbname=rag_db user=postgres password=rag_password"
+    )
+    register_vector(conn)
+
+    with conn.cursor() as cur:
+        cur.execute("CREATE EXTENSION IF NOT EXISTS vector;")
+        cur.execute("DROP TABLE IF EXISTS documents;")
+        cur.execute("""
+            CREATE TABLE documents (
+                id SERIAL PRIMARY KEY,
+                content TEXT NOT NULL,
+                embedding vector(768)
+            );
+        """)
+
+        # Sample Knowledge Base
+        corpus = [
+            "DevContainers configure reproducible Docker development environments using devcontainer.json.",
+            "PostgreSQL pgvector extension enables fast vector similarity queries using HNSW indexing.",
+            "Ollama runs open-source large language models and embeddings natively with local GPU acceleration.",
+            "Kubernetes Ingress-Nginx directs incoming HTTP traffic to backend containerized cluster pods."
+        ]
+
+        print("2. Generating local embeddings with Ollama...")
+        for doc in corpus:
+            vec = get_embedding(doc)
+            cur.execute(
+                "INSERT INTO documents (content, embedding) VALUES (%s, %s);",
+                (doc, vec)
+            )
+        conn.commit()
+
+        # Build HNSW Cosine Distance Index
+        print("3. Building HNSW vector index (cosine distance)...")
+        cur.execute("""
+            CREATE INDEX ON documents 
+            USING hnsw (embedding vector_cosine_ops)
+            WITH (m = 16, ef_construction = 64);
+        """)
+        conn.commit()
+
+        # Test Semantic Query
+        query = "How do I run AI models locally in containers?"
+        print(f"\\n4. Querying: '{query}'")
+        q_vec = get_embedding(query)
+
+        # '<=>' operator computes cosine distance in pgvector
+        cur.execute("""
+            SELECT id, content, 1 - (embedding <=> %s) AS cosine_similarity
+            FROM documents
+            ORDER BY embedding <=> %s
+            LIMIT 2;
+        """, (q_vec, q_vec))
+
+        results = cur.fetchall()
+        print("\\n=== Nearest Neighbor Semantic Search Results ===")
+        for row in results:
+            doc_id, content, sim = row
+            print(f"[Score: {sim:.4f}] #{doc_id}: {content}")
+
+    conn.close()
+
+if __name__ == "__main__":
+    main()`;
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonicalUrl}
+  schemaJson={JSON.stringify(schemaData)}
+  type="article"
+>
+  <article class="max-w-4xl mx-auto py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs font-mono text-slate-400 mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-emerald-400 transition">DevConfigHub</a>
+      <span>/</span>
+      <a href="/devcontainer-json-vs-docker-compose-local-development/" class="hover:text-emerald-400 transition">DevContainers</a>
+      <span>/</span>
+      <span class="text-emerald-400">pgvector + Ollama Local RAG</span>
+    </nav>
+
+    <!-- EXACTLY ONE H1 -->
+    <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-6">
+      DevContainer Feature for pgvector + Ollama: Instant Zero-Install Local RAG
+    </h1>
+
+    <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400 font-mono mb-8">
+      <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Stack: PostgreSQL 16 &bull; pgvector &bull; Ollama</span>
+      <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-emerald-400">GPU Acceleration: NVIDIA Container Toolkit</span>
+      <span>Updated: September 2026</span>
+    </div>
+
+    <!-- 45-60 Word Quick Answer Featured Snippet Box with Green Accent Border -->
+    <div class="my-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-emerald-950/40 via-slate-900/60 to-slate-950/80 border-l-4 border-emerald-500 border-y border-r border-slate-800 shadow-xl shadow-emerald-950/20">
+      <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold mb-2.5">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span>Quick Answer: DevContainer Local RAG Architecture</span>
+      </div>
+      <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+        Setting up a local Retrieval-Augmented Generation (RAG) stack without polluting host machines requires combining a DevContainer with pgvector and Ollama. By pairing the pgvector/pgvector:pg16 image with Ollama's local LLM daemon, engineers obtain an ephemeral, GPU-accelerated embedding and vector search environment that spins up in seconds with zero manual database or runtime installation.
+      </p>
+    </div>
+
+    <div class="prose prose-invert max-w-none space-y-10 text-slate-300 text-sm sm:text-base leading-relaxed">
+      
+      <!-- Section 1: Architecture Overview -->
+      <section>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
+          <span class="text-emerald-400 font-mono">1.</span> Architectural Blueprint: The Zero-Install Local RAG Topology
+        </h2>
+        <p>
+          Local development of generative AI and Retrieval-Augmented Generation (RAG) applications frequently suffers from dependency sprawl: developers must install local PostgreSQL binaries, compile C extensions for pgvector, configure Ollama runtimes, and balance CUDA toolkit versions.
+        </p>
+        <p class="mt-4">
+          By unifying this toolchain into a multi-container <strong>VS Code DevContainer</strong> specification, any engineer on macOS, Linux, or Windows WSL2 can run <code class="text-emerald-300 font-mono text-xs">Reopen in Container</code> and obtain a production-identical vector development environment within seconds.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+            <div class="text-xs font-mono text-emerald-400 font-bold uppercase mb-1">App Container</div>
+            <div class="text-sm font-bold text-white mb-2">Python 3.11 Workspace</div>
+            <p class="text-xs text-slate-400">Pre-wired with psycopg, pgvector-python, and VS Code SQL/Python extensions.</p>
+          </div>
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+            <div class="text-xs font-mono text-cyan-400 font-bold uppercase mb-1">Vector DB</div>
+            <div class="text-sm font-bold text-white mb-2">pgvector / Postgres 16</div>
+            <p class="text-xs text-slate-400">Hardware-optimized HNSW and IVFFlat index builds on named Docker volumes.</p>
+          </div>
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+            <div class="text-xs font-mono text-purple-400 font-bold uppercase mb-1">Inference Engine</div>
+            <div class="text-sm font-bold text-white mb-2">Ollama Daemon (GPU)</div>
+            <p class="text-xs text-slate-400">NVIDIA container toolkit passthrough for sub-15ms local embedding extraction.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: devcontainer.json -->
+      <section>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
+          <span class="text-emerald-400 font-mono">2.</span> DevContainer Configuration (.devcontainer/devcontainer.json)
+        </h2>
+        <p class="text-xs text-slate-400 mb-3">
+          This configuration connects VS Code to the Docker Compose topology, forwards ports 5432 and 11434, injects database management extensions, and triggers the automated setup script:
+        </p>
+        <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 mb-6">
+          <div class="flex items-center justify-between mb-3 text-xs font-mono text-slate-400">
+            <span>.devcontainer/devcontainer.json</span>
+            <span class="text-emerald-400">JSON5</span>
+          </div>
+          <pre class="bg-slate-900 text-slate-200 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed" is:raw>{devcontainerJsonCode}</pre>
+        </div>
+      </section>
+
+      <!-- Section 3: docker-compose.yml -->
+      <section>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
+          <span class="text-emerald-400 font-mono">3.</span> Multi-Container Service Definition (.devcontainer/docker-compose.yml)
+        </h2>
+        <p class="text-xs text-slate-400 mb-3">
+          Defines the official <code class="text-emerald-300 font-mono text-xs">pgvector/pgvector:pg16</code> image and the GPU-accelerated Ollama container with dedicated model volume persistence:
+        </p>
+        <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 mb-6">
+          <div class="flex items-center justify-between mb-3 text-xs font-mono text-slate-400">
+            <span>.devcontainer/docker-compose.yml</span>
+            <span class="text-cyan-400">YAML</span>
+          </div>
+          <pre class="bg-slate-900 text-slate-200 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed" is:raw>{dockerComposeCode}</pre>
+        </div>
+      </section>
+
+      <!-- Section 4: Automated Setup Script -->
+      <section>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
+          <span class="text-emerald-400 font-mono">4.</span> Lifecycle Automation Script (.devcontainer/setup.sh)
+        </h2>
+        <p class="text-xs text-slate-400 mb-3">
+          Executes inside the container during <code class="text-emerald-300 font-mono text-xs">postCreateCommand</code>. Waits for PostgreSQL health, creates the vector extension, installs Python client packages, and pre-downloads the embedding model:
+        </p>
+        <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 mb-6">
+          <div class="flex items-center justify-between mb-3 text-xs font-mono text-slate-400">
+            <span>.devcontainer/setup.sh</span>
+            <span class="text-emerald-400">Bash</span>
+          </div>
+          <pre class="bg-slate-900 text-slate-200 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed" is:raw>{setupShCode}</pre>
+        </div>
+      </section>
+
+      <!-- Section 5: 30-Second Quickstart Test Script -->
+      <section>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
+          <span class="text-emerald-400 font-mono">5.</span> 30-Second Quickstart Python Test Script (test_rag.py)
+        </h2>
+        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+          Test your complete end-to-end vector pipeline immediately. This script generates 768-dimensional embeddings with Ollama, saves them into pgvector, builds an HNSW index using <code class="text-emerald-300 font-mono text-xs">vector_cosine_ops</code>, and performs a semantic cosine search:
+        </p>
+
+        <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 mb-6">
+          <div class="flex items-center justify-between mb-3 text-xs font-mono text-slate-400">
+            <span>test_rag.py</span>
+            <span class="text-purple-400">Python 3</span>
+          </div>
+          <pre class="bg-slate-900 text-slate-200 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed" is:raw>{testPythonCode}</pre>
+        </div>
+      </section>
+
+      <!-- Section 6: Performance & Tuning -->
+      <section>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
+          <span class="text-emerald-400 font-mono">6.</span> Hardware Acceleration &amp; HNSW Tuning Tips
+        </h2>
+        <div class="space-y-4">
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+            <h3 class="text-sm font-bold text-emerald-400 mb-1">1. Enabling NVIDIA Container Toolkit on Host</h3>
+            <p class="text-xs text-slate-300">
+              For GPU inference in Ollama, install <code class="text-slate-400 font-mono text-xs">nvidia-container-toolkit</code> on your Linux host or enable WSL2 GPU support in Docker Desktop. If running on Apple Silicon, remove the <code class="text-slate-400 font-mono text-xs">deploy.resources</code> block; Docker Desktop on macOS utilizes Metal via virtualization without NVIDIA drivers.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+            <h3 class="text-sm font-bold text-cyan-400 mb-1">2. Tuning HNSW Vector Indexes for Sub-Millisecond Search</h3>
+            <p class="text-xs text-slate-300">
+              For production RAG datasets with &gt;100k chunks, increase <code class="text-slate-400 font-mono text-xs">m = 24</code> and <code class="text-slate-400 font-mono text-xs">ef_construction = 128</code> when building the HNSW index. Ensure PostgreSQL parameter <code class="text-slate-400 font-mono text-xs">maintenance_work_mem</code> is set to at least 512MB in the database environment variables to accelerate index generation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sibling Internal Links -->
+      <section class="pt-8 border-t border-slate-800">
+        <h3 class="text-sm font-mono uppercase tracking-wider text-slate-400 font-bold mb-4">
+          Related Developer Infrastructure &amp; DevContainer Guides
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+          <a
+            href="/devcontainer-json-vs-docker-compose-local-development/"
+            class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-500/50 hover:bg-slate-900 transition block group"
+          >
+            <div class="text-emerald-400 font-bold group-hover:underline mb-1">DevContainer vs Docker Compose &rarr;</div>
+            <div class="text-slate-400 font-sans">Architecture comparison, lifecycle hooks, and filesystem caching.</div>
+          </a>
+          <a
+            href="/docker-compose-gpu-passthrough-nvidia-container-toolkit/"
+            class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-500/50 hover:bg-slate-900 transition block group"
+          >
+            <div class="text-emerald-400 font-bold group-hover:underline mb-1">Docker Compose GPU Passthrough &rarr;</div>
+            <div class="text-slate-400 font-sans">NVIDIA container toolkit installation, CDI specs, and CUDA testing.</div>
+          </a>
+          <a
+            href="/fastest-docker-compose-postgres-redis-local-stack/"
+            class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-500/50 hover:bg-slate-900 transition block group"
+          >
+            <div class="text-emerald-400 font-bold group-hover:underline mb-1">Fastest Postgres + Redis Local Stack &rarr;</div>
+            <div class="text-slate-400 font-sans">RAM-disk tmpfs tuning, ephemeral databases, and speed optimizations.</div>
+          </a>
+          <a
+            href="/direnv-nix-flakes-fast-developer-shell-tutorial/"
+            class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-500/50 hover:bg-slate-900 transition block group"
+          >
+            <div class="text-emerald-400 font-bold group-hover:underline mb-1">direnv + Nix Flakes Fast Shell &rarr;</div>
+            <div class="text-slate-400 font-sans">Zero-latency reproducible developer environments without containers.</div>
+          </a>
+        </div>
+
+        <div class="mt-8 text-center">
+          <a href="/" class="text-xs font-mono text-emerald-400 hover:text-emerald-300 underline">
+            &larr; Return to DevConfigHub Architecture Library
+          </a>
+        </div>
+      </section>
+    </div>
+  </article>
+</Layout>
