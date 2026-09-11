@@ -78,7 +78,17 @@ def main():
         "site-17": "open-crm-migration-tco",
         "site-18": "github-actions-dag-validator",
         "site-19": "options-greeks-visualizer",
-        "site-20": "webgpu-edge-inference-bench"
+        "site-20": "webgpu-edge-inference-bench",
+        "site-21": "llm-eval-promptfoo-benchmark",
+        "site-22": "task-queue-memory-benchmark",
+        "site-23": "opentelemetry-tail-sampling-collector",
+        "site-24": "postgres-autovacuum-index-tuner",
+        "site-25": "api-gateway-latency-benchmarks",
+        "site-26": "s3-zero-egress-cost-audit",
+        "site-27": "jwt-paseto-token-security-matrix",
+        "site-28": "anycast-dns-latency-benchmarks",
+        "site-29": "feature-flags-openfeature-tco",
+        "site-30": "minimal-docker-base-image-cve"
     }
 
     tools_data = []

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>OpenTelemetryLab Research & Engineering Feed</title>
+    <link>https://opentelemetrylab.pages.dev/</link>
+    <description>OpenTelemetry Collector Pipelines, Tail-Sampling Math & Distributed Tracing Recipes</description>
+    <language>en-us</language>
+    <item>
+      <title>OpenTelemetry Collector Tail Sampling: Production YAML Config</title>
+      <link>https://opentelemetrylab.pages.dev/opentelemetry-collector-tail-sampling-rules-config/</link>
+      <description>Complete engineering guide and technical benchmarks for OpenTelemetry Collector Tail Sampling: Production YAML Config in high-performance production systems.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://opentelemetrylab.pages.dev/opentelemetry-collector-tail-sampling-rules-config/</guid>
+    </item>
+    <item>
+      <title>Grafana Tempo vs Jaeger: Storage Cost & S3 Object Storage Shootout</title>
+      <link>https://opentelemetrylab.pages.dev/tempo-vs-jaeger-storage-cost-query-latency/</link>
+      <description>Architectural analysis and total cost of ownership shootout for Grafana Tempo vs Jaeger: Storage Cost & S3 Object Storage Shootout.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://opentelemetrylab.pages.dev/tempo-vs-jaeger-storage-cost-query-latency/</guid>
+    </item>
+    <item>
+      <title>FastAPI OpenTelemetry Instrumentation: Context Propagation & Spans</title>
+      <link>https://opentelemetrylab.pages.dev/fastapi-opentelemetry-manual-instrumentation-guide/</link>
+      <description>Step-by-step implementation guide, code snippets, and automated testing procedures for FastAPI OpenTelemetry Instrumentation: Context Propagation & Spans.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://opentelemetrylab.pages.dev/fastapi-opentelemetry-manual-instrumentation-guide/</guid>
+    </item>
+  </channel>
+</rss>

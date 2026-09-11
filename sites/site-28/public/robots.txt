@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dnsperf-hq.pages.dev/sitemap.xml

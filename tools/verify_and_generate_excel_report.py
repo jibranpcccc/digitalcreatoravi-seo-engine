@@ -109,7 +109,17 @@ def build_all_backlinks_catalog():
         {"site_id": "site-17", "repo": "open-crm-migration-tco", "slug": "opencrmstack"},
         {"site_id": "site-18", "repo": "github-actions-dag-validator", "slug": "cipipelinegraph"},
         {"site_id": "site-19", "repo": "options-greeks-visualizer", "slug": "greekvisualizer"},
-        {"site_id": "site-20", "repo": "webgpu-edge-inference-bench", "slug": "edgeruntimehq"}
+        {"site_id": "site-20", "repo": "webgpu-edge-inference-bench", "slug": "edgeruntimehq"},
+        {"site_id": "site-21", "repo": "llm-eval-promptfoo-benchmark", "slug": "promptevalhq"},
+        {"site_id": "site-22", "repo": "task-queue-memory-benchmark", "slug": "queuecost"},
+        {"site_id": "site-23", "repo": "opentelemetry-tail-sampling-collector", "slug": "opentelemetrylab"},
+        {"site_id": "site-24", "repo": "postgres-autovacuum-index-tuner", "slug": "postgrescale"},
+        {"site_id": "site-25", "repo": "api-gateway-latency-benchmarks", "slug": "apigatewaymatrix"},
+        {"site_id": "site-26", "repo": "s3-zero-egress-cost-audit", "slug": "s3egressaudit"},
+        {"site_id": "site-27", "repo": "jwt-paseto-token-security-matrix", "slug": "authtokenaudit"},
+        {"site_id": "site-28", "repo": "anycast-dns-latency-benchmarks", "slug": "dnsperf-hq"},
+        {"site_id": "site-29", "repo": "feature-flags-openfeature-tco", "slug": "featureflagaudit"},
+        {"site_id": "site-30", "repo": "minimal-docker-base-image-cve", "slug": "tinycontainerhq"}
     ]
 
     catalog = []
@@ -261,11 +271,16 @@ def build_all_backlinks_catalog():
             "anchor": f"Documentation: {s['name']} (Raw CDN)"
         })
 
-    # 8. 20 PDF Whitepapers / Cheatsheets (DA 95 Ready)
+    repo_map = {r["site_id"]: r["repo"] for r in repos_config}
+
+    # 8. 30 PDF Whitepapers / Cheatsheets (DA 95 Ready)
     for s in sites:
         site_id = s["id"]
         if site_id == "site-2":
             pdf_url = "https://raw.githubusercontent.com/jibranpcccc/workationradar/master/public/benchmark-cheatsheet.pdf"
+        elif int(site_id.replace("site-", "")) >= 21:
+            r_name = repo_map.get(site_id, "")
+            pdf_url = f"https://raw.githubusercontent.com/jibranpcccc/{r_name}/main/benchmark-cheatsheet.pdf"
         else:
             pdf_url = f"{s['url'].rstrip('/')}/benchmark-cheatsheet.pdf"
 
@@ -280,11 +295,14 @@ def build_all_backlinks_catalog():
             "anchor": f"Official Specification: {s['name']}"
         })
 
-    # 9. 20 RSS 2.0 XML Feeds (Edge Anycast)
+    # 9. 30 RSS 2.0 XML Feeds (Edge Anycast)
     for s in sites:
         site_id = s["id"]
         if site_id == "site-2":
             rss_url = "https://raw.githubusercontent.com/jibranpcccc/workationradar/master/public/rss.xml"
+        elif int(site_id.replace("site-", "")) >= 21:
+            r_name = repo_map.get(site_id, "")
+            rss_url = f"https://raw.githubusercontent.com/jibranpcccc/{r_name}/main/rss.xml"
         else:
             rss_url = f"{s['url'].rstrip('/')}/rss.xml"
 
@@ -526,7 +544,7 @@ def generate_excel_and_csv(verified_results):
     # -------------------------------------------------------------
     # SHEET 2: Summary by Website (20 Sites)
     # -------------------------------------------------------------
-    ws2 = wb.create_sheet(title="Summary by Website (20 Sites)")
+    ws2 = wb.create_sheet(title="Summary by Website (30 Sites)")
     ws2.views.sheetView[0].showGridLines = True
 
     headers2 = [

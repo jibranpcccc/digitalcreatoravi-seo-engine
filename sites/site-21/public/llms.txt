@@ -1,0 +1,12 @@
+# PromptEvalHQ - Empirical Prompt Regression Testing & LLM Evaluation Framework Benchmarks
+
+> Authority reference dataset and benchmarks for LLM Evaluation & Prompt Regression Testing Benchmarks.
+> All metrics and guides are 100% free and open-source.
+
+## Core Architectural Guides
+- [Promptfoo vs DeepEval: LLM Benchmark & CI/CD Testing Shootout](https://promptevalhq.pages.dev/promptfoo-vs-deepeval-llm-evaluation-benchmark/): Empirical comparison of Promptfoo vs DeepEval for production LLM CI/CD pipelines, regression testing, hallucination scoring, and execution speed.
+- [Ragas Evaluation Metrics: Faithfulness & Answer Relevance Tutorial](https://promptevalhq.pages.dev/ragas-metrics-rag-evaluation-python-tutorial/): Step-by-step tutorial on calculating Faithfulness, Answer Relevance, and Context Recall using Ragas with LangChain and LlamaIndex.
+- [LLM-as-a-Judge: Best Practices & Cost Optimization Guide](https://promptevalhq.pages.dev/llm-judge-synthetic-dataset-generator-guide/): How to design reliable LLM-as-a-Judge evaluation systems: overcoming position bias, verbosity bias, self-enhancement bias, and minimizing evaluation costs.
+
+## Interactive Tools
+- [PromptEvalHQ Sizing Calculator](https://promptevalhq.pages.dev/): Real-time architectural estimator.

@@ -1,0 +1,12 @@
+# PostgresScale - PostgreSQL Index Sizing Math, Autovacuum Tuning & Connection Pool Architecture
+
+> Authority reference dataset and benchmarks for PostgreSQL Query Optimization & Index Sizing.
+> All metrics and guides are 100% free and open-source.
+
+## Core Architectural Guides
+- [BRIN vs B-Tree Index in PostgreSQL: 100M Row Benchmark](https://postgrescale.pages.dev/brin-vs-btree-index-postgres-time-series-benchmark/): Complete engineering guide and technical benchmarks for BRIN vs B-Tree Index in PostgreSQL: 100M Row Benchmark in high-performance production systems.
+- [PostgreSQL Autovacuum Tuning: Preventing Transaction ID Wraparound](https://postgrescale.pages.dev/postgres-autovacuum-tuning-table-bloat-prevention/): Architectural analysis and total cost of ownership shootout for PostgreSQL Autovacuum Tuning: Preventing Transaction ID Wraparound.
+- [PgBouncer Transaction vs Session Mode: Prepared Statements Guide](https://postgrescale.pages.dev/pgbouncer-transaction-vs-session-pooling-guide/): Step-by-step implementation guide, code snippets, and automated testing procedures for PgBouncer Transaction vs Session Mode: Prepared Statements Guide.
+
+## Interactive Tools
+- [PostgresScale Sizing Calculator](https://postgrescale.pages.dev/): Real-time architectural estimator.

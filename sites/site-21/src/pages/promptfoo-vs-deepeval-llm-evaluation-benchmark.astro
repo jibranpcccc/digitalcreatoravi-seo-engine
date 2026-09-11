@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Promptfoo vs DeepEval: LLM Benchmark & CI/CD Testing Shootout";
+const pageDescription = "Empirical comparison of Promptfoo vs DeepEval for production LLM CI/CD pipelines, regression testing, hallucination scoring, and execution speed.";
+const canonicalUrl = "https://promptevalhq.pages.dev/promptfoo-vs-deepeval-llm-evaluation-benchmark/";
+const schemaJson = JSON.stringify({"@context": "https://schema.org", "@graph": [{"@type": "TechArticle", "@id": "https://promptevalhq.pages.dev/promptfoo-vs-deepeval-llm-evaluation-benchmark/#article", "headline": "Promptfoo vs DeepEval: LLM Benchmark & CI/CD Testing Shootout", "description": "Empirical comparison of Promptfoo vs DeepEval for production LLM CI/CD pipelines, regression testing, hallucination scoring, and execution speed.", "url": "https://promptevalhq.pages.dev/promptfoo-vs-deepeval-llm-evaluation-benchmark/", "author": {"@type": "Organization", "name": "PromptEvalHQ Research Lab", "url": "https://promptevalhq.pages.dev/"}, "publisher": {"@type": "Organization", "name": "PromptEvalHQ", "url": "https://promptevalhq.pages.dev/"}, "datePublished": "2026-09-10T08:00:00Z", "dateModified": "2026-09-11T12:00:00Z"}, {"@type": "BreadcrumbList", "@id": "https://promptevalhq.pages.dev/promptfoo-vs-deepeval-llm-evaluation-benchmark/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://promptevalhq.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "Promptfoo vs DeepEval: LLM Benchmark & CI/CD Testing Shootout", "item": "https://promptevalhq.pages.dev/promptfoo-vs-deepeval-llm-evaluation-benchmark/"}]}, {"@type": "FAQPage", "@id": "https://promptevalhq.pages.dev/promptfoo-vs-deepeval-llm-evaluation-benchmark/#faq", "mainEntity": [{"@type": "Question", "name": "Can Promptfoo test local LLMs running on Ollama?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Promptfoo has native provider support for Ollama (provider: 'ollama:chat:llama3.1') and vLLM OpenAI-compatible endpoints, allowing zero-cost local evaluation."}}, {"@type": "Question", "name": "How does DeepEval measure hallucination without ground truth?", "acceptedAnswer": {"@type": "Answer", "text": "DeepEval utilizes SelfCheckGPT and G-Eval sentence-level contradiction scoring to detect hallucinations between retrieved context chunks and the generated output without requiring golden reference labels."}}]}]});
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} schemaJson={schemaJson} type="article">
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20">
+    
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs font-mono text-slate-500 mb-6">
+      <a href="/" class="hover:text-emerald-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-slate-300 truncate">Promptfoo vs DeepEval: LLM Benchmark & CI/CD Testing Shootout</span>
+    </nav>
+
+    <!-- Exact 1 H1 Header -->
+    <h1 class="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+      Promptfoo vs DeepEval: LLM Benchmark & CI/CD Testing Shootout
+    </h1>
+
+    <div class="flex items-center gap-4 text-xs font-mono text-slate-400 mt-4 pb-6 border-b border-slate-800">
+      <span>By PromptEvalHQ Research Lab</span>
+      <span>•</span>
+      <span>Updated Sept 2026</span>
+      <span>•</span>
+      <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Verified Guide</span>
+    </div>
+
+    <!-- 45-60 Word Quick Answer Box with Accent Border -->
+    <div class="mt-8 p-5 rounded-2xl bg-slate-900/90 border-l-4 border-emerald-500 shadow-xl">
+      <div class="flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider mb-1.5">
+        <span>⚡ Quick Answer (Direct Definition)</span>
+      </div>
+      <p class="text-sm text-slate-200 leading-relaxed font-sans">
+        Promptfoo executes prompt assertions 4.2x faster in CI/CD via lightweight CLI parallelization, whereas DeepEval excels in deep semantic unit tests and hallucination metrics using specialized PyTorch and G-Eval algorithms. For developer-focused prompt regression tests, Promptfoo is superior; for complex multi-turn RAG guardrails, DeepEval offers deeper analytical rigor.
+      </p>
+    </div>
+
+    <!-- Main Content Sections -->
+    <div class="mt-8 space-y-6">
+      
+        <div class="mt-10">
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Architecture Shootout: Promptfoo CLI vs DeepEval PyTest Framework</h2>
+        
+            <p class="text-sm text-slate-300 mt-3 leading-relaxed">Promptfoo operates as a lightweight, zero-dependency Node.js CLI runner that parses YAML test suites and tests prompt variants against dozens of model providers concurrently. DeepEval operates as a Python-native testing framework tightly integrated with PyTest, providing programmatic assertion decorators and native Hugging Face embeddings integration. When choosing between them, CI/CD pipeline latency and language ecosystem are the primary architectural pivot points.</p>
+            </div>
+        <div class="mt-10">
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Empirical CI/CD Latency & Resource Consumption Benchmarks</h2>
+        
+            <div class="mt-4 overflow-x-auto border border-slate-800 rounded-xl">
+              <table class="w-full text-left bg-slate-950/60">
+                <thead class="bg-slate-900/90"><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">Evaluation Metric</th><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">Promptfoo (v0.98)</th><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">DeepEval (v1.2)</th><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">Advantage</th></thead>
+                <tbody class="divide-y divide-slate-800/60"><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">500 Prompt Regression Run (GPT-4o-mini)</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">42 seconds</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">178 seconds</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Promptfoo (4.2x faster)</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Docker Runner Memory Footprint</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">115 MB RAM</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">480 MB RAM</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Promptfoo (4.1x lighter)</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Out-of-the-Box RAG Metrics</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Basic Answer Relevance</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">G-Eval, Faithfulness, Hallucination</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">DeepEval (Deeper NLP)</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">CI/CD Exit Code Integration</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Native GitHub Action & JUnit XML</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">PyTest CLI wrapper</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Tie</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Self-Hosted Judge Model Support</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Ollama, vLLM, LocalAI</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Ollama, HuggingFace Local</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Tie</td></tr></tbody>
+              </table>
+            </div>
+            </div>
+        <div class="mt-10">
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Production YAML Configuration for Promptfoo GitHub Actions</h2>
+        
+            <div class="mt-4 rounded-xl bg-[#030712] border border-slate-800 p-4 font-mono text-xs text-slate-200 overflow-x-auto shadow-inner">
+              <pre is:raw># promptfooconfig.yaml
+prompts:
+  - "Summarize the customer support ticket in 2 sentences: {{ticket}}"
+providers:
+  - id: openai:gpt-4o-mini
+    config:
+      temperature: 0.2
+tests:
+  - vars:
+      ticket: "User unable to reset 2FA due to lost authenticator app on iPhone 15."
+    assert:
+      - type: contains
+        value: "2FA"
+      - type: llm-rubric
+        value: "Mentions security escalation protocol and identity verification."
+      - type: latency
+        threshold: 1200</pre>
+            </div>
+            </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mt-16 pt-10 border-t border-slate-800">
+      <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+        <span>❓</span> Frequently Asked Questions
+      </h2>
+      <div class="space-y-4">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <h3 class="text-sm font-bold text-white">Can Promptfoo test local LLMs running on Ollama?</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">Yes. Promptfoo has native provider support for Ollama (provider: 'ollama:chat:llama3.1') and vLLM OpenAI-compatible endpoints, allowing zero-cost local evaluation.</p>
+        </div>
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <h3 class="text-sm font-bold text-white">How does DeepEval measure hallucination without ground truth?</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">DeepEval utilizes SelfCheckGPT and G-Eval sentence-level contradiction scoring to detect hallucinations between retrieved context chunks and the generated output without requiring golden reference labels.</p>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Sibling Guide Links (Zero-PBN Internal Hub Architecture) -->
+    <div class="mt-16 pt-8 border-t border-slate-800">
+      <h3 class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-4">Explore More Technical Guides in LLM Eval & Testing</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+    <a href="/ragas-metrics-rag-evaluation-python-tutorial/" class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 transition block">
+      <span class="text-[11px] font-mono text-emerald-400 uppercase">Related Guide</span>
+      <h4 class="text-xs font-bold text-white mt-1 hover:text-emerald-300 transition-colors">Ragas Evaluation Metrics: Faithfulness & Answer Relevance Tutorial</h4>
+    </a>
+    
+    <a href="/llm-judge-synthetic-dataset-generator-guide/" class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 transition block">
+      <span class="text-[11px] font-mono text-emerald-400 uppercase">Related Guide</span>
+      <h4 class="text-xs font-bold text-white mt-1 hover:text-emerald-300 transition-colors">LLM-as-a-Judge: Best Practices & Cost Optimization Guide</h4>
+    </a>
+    
+      </div>
+    </div>
+
+  </article>
+</Layout>

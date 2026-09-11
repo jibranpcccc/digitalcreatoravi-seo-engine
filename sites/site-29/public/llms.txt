@@ -1,0 +1,12 @@
+# FeatureFlagAudit - Feature Flag Pricing Models, OpenFeature Standardization & Evaluation Latency
+
+> Authority reference dataset and benchmarks for Feature Flags & OpenFeature Architecture TCO.
+> All metrics and guides are 100% free and open-source.
+
+## Core Architectural Guides
+- [Flagsmith vs LaunchDarkly: Self-Hosted vs Managed TCO](https://featureflagaudit.pages.dev/flagsmith-vs-launchdarkly-enterprise-cost-comparison/): Complete engineering guide and technical benchmarks for Flagsmith vs LaunchDarkly: Self-Hosted vs Managed TCO in high-performance production systems.
+- [Unleash vs PostHog: In-Memory Edge Evaluation Latency Benchmarks](https://featureflagaudit.pages.dev/unleash-vs-posthog-feature-flag-evaluation-latency/): Architectural analysis and total cost of ownership shootout for Unleash vs PostHog: In-Memory Edge Evaluation Latency Benchmarks.
+- [OpenFeature Specification: Vendor-Agnostic Flags in TypeScript](https://featureflagaudit.pages.dev/openfeature-sdk-standardization-nodejs-typescript-tutorial/): Step-by-step implementation guide, code snippets, and automated testing procedures for OpenFeature Specification: Vendor-Agnostic Flags in TypeScript.
+
+## Interactive Tools
+- [FeatureFlagAudit Sizing Calculator](https://featureflagaudit.pages.dev/): Real-time architectural estimator.

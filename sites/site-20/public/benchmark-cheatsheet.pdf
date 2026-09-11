@@ -2,7 +2,7 @@
 %“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 13 0 R
+/F1 2 0 R /F2 3 0 R /F3 19 0 R
 >>
 endobj
 2 0 obj
@@ -33,74 +33,116 @@ endobj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/)
->> /Border [ 0 0 0 ] /Rect [ 247 482.3125 399.0285 496.3125 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 247 489.3125 399.0285 503.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 7 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/)
->> /Border [ 0 0 0 ] /Rect [ 247 455.3125 561.602 469.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/cloudflare-workers-ai-vs-cerebras-latency-benchmarks/)
+>> /Border [ 0 0 0 ] /Rect [ 247 469.3125 562.6945 483.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/)
->> /Border [ 0 0 0 ] /Rect [ 247 441.3125 339.397 455.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/cloudflare-workers-ai-vs-cerebras-latency-benchmarks/)
+>> /Border [ 0 0 0 ] /Rect [ 247 455.3125 333.583 469.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/onnx-runtime-vs-tensorrt-edge-server-latency/)
->> /Border [ 0 0 0 ] /Rect [ 247 421.3125 560.5475 435.3125 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 247 435.3125 560.5475 449.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/onnx-runtime-vs-tensorrt-edge-server-latency/)
->> /Border [ 0 0 0 ] /Rect [ 247 407.3125 294.519 421.3125 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 247 421.3125 294.519 435.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/running-whisper-speech-to-text-locally-in-browser-webgpu/)
->> /Border [ 0 0 0 ] /Rect [ 247 387.3125 563.711 401.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/onnx-runtime-webgpu-fp16-model-optimization/)
+>> /Border [ 0 0 0 ] /Rect [ 247 401.3125 561.583 415.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 12 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/running-whisper-speech-to-text-locally-in-browser-webgpu/)
->> /Border [ 0 0 0 ] /Rect [ 247 373.3125 350.987 387.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/onnx-runtime-webgpu-fp16-model-optimization/)
+>> /Border [ 0 0 0 ] /Rect [ 247 387.3125 299.782 401.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 13 0 obj
 <<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/A <<
+/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/running-whisper-speech-to-text-locally-in-browser-webgpu/)
+>> /Border [ 0 0 0 ] /Rect [ 247 367.3125 563.711 381.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 14 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/llms.txt)
->> /Border [ 0 0 0 ] /Rect [ 46 205.6 216.5535 217 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/running-whisper-speech-to-text-locally-in-browser-webgpu/)
+>> /Border [ 0 0 0 ] /Rect [ 247 353.3125 350.987 367.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 15 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev)
->> /Border [ 0 0 0 ] /Rect [ 309.4 149.5 418.63 158.5 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/transformers-js-v3-webgpu-browser-inference-tutorial/)
+>> /Border [ 0 0 0 ] /Rect [ 247 333.3125 564.775 347.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 16 0 obj
 <<
-/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 14 0 R 
-  15 0 R ] /Contents 20 0 R /MediaBox [ 0 0 612 792 ] /Parent 19 0 R /Resources <<
+/A <<
+/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/transformers-js-v3-webgpu-browser-inference-tutorial/)
+>> /Border [ 0 0 0 ] /Rect [ 247 319.3125 327.237 333.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+17 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/)
+>> /Border [ 0 0 0 ] /Rect [ 247 299.3125 561.602 313.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+18 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/)
+>> /Border [ 0 0 0 ] /Rect [ 247 285.3125 339.397 299.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+19 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+20 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev/llms.txt)
+>> /Border [ 0 0 0 ] /Rect [ 46 117.6 216.5535 129 ] /Subtype /Link /Type /Annot
+>>
+endobj
+21 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://edgeruntimehq.pages.dev)
+>> /Border [ 0 0 0 ] /Rect [ 309.4 61.5 418.63 70.5 ] /Subtype /Link /Type /Annot
+>>
+endobj
+22 0 obj
+<<
+/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 
+  14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 20 0 R 21 0 R ] /Contents 26 0 R /MediaBox [ 0 0 612 792 ] /Parent 25 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -108,31 +150,31 @@ endobj
 >> /Type /Page
 >>
 endobj
-17 0 obj
+23 0 obj
 <<
-/PageMode /UseNone /Pages 19 0 R /Type /Catalog
+/PageMode /UseNone /Pages 25 0 R /Type /Catalog
 >>
 endobj
-18 0 obj
+24 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260907124646+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260907124646+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/Author (\(anonymous\)) /CreationDate (D:20260912001152+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260912001152+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
 >>
 endobj
-19 0 obj
+25 0 obj
 <<
-/Count 1 /Kids [ 16 0 R ] /Type /Pages
+/Count 1 /Kids [ 22 0 R ] /Type /Pages
 >>
 endobj
-20 0 obj
+26 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2050
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2316
 >>
 stream
-GauHLD0+Dj&H9tYfU:#AZkGNer.b$5->?*`P*F>ZIE5+&fE0P@S'!K3p[[3[-,0Edd-DZqiPj(dBqKfs[C\0p$XZ;O7rs2>,<1$CJ5@(WJ2jD.UHVqB>2NP[)X2M)gCsmfbTr3a"W];a:5@OUQiSM9(P%m]E$<Z2mD3IrlVcr2bGn"c=+f8aY]k*DLGr;d([hUl_dD?ip?JCH(58O?br+8ihZmmn&$@O39(E<Y?X`S1!W%VUD,@U75Wt6U*NOk)Ka3AW+N#rdlG@3<<$P9@WML/pQAYr-GRZ2:G[M01nLY:=6J1gm%?"3V3ICe2$R6G3;BCMu>g-:uo,2$N?Ga7/AmDW4(4t)8/Z#KGY2D#rA;KCQ4!6Tl0l_!!KP6n*ml33krq.A#%O&RLC7Nm<R^'"rUck_*ZpDN`o,^jXjG<KkqYE/Gbf9*h5=$rn0Yu1n_4OQKXd-;4-5.G?[.MhOs*S6,fH1[OSk6K6]4Yab&Vs?^m(9e6V^sc:[QI(eIP`>R<quL;1B#"pI+6WM>oKB2ZoT.\mol]^2@#SKCBA]AQ6ZB8LAcj8>;N>dFaOo)W"0V?S(PHW%3d-(4g:lHI*(<LR*S.iLics6K#)uZ=VbXA2LR\uR,[6g&t>>m##g4%JNsO+^[^\PJOLNE.j1T)cTsI?\5JHu#T$1M6=`^t[p7b-73m/E_AM)j6`f29;j`>\`pcXIRqFHK:`-&aA2lYM_biTt&Y&8(Q^MBYNhG+-p5^E>KM.X&C!'mJSY]7iM@!8S]a/VX$oNSZWd;m#V-gHP-<UKs;hMsj&Mbe[PXDt;<,FO#E1ubKO0E/H:H0h%98(KM-fI&$V/olp9FM*r'Rj[=1Sb;OD`jT-MN%X"QuL0p"JhrPqO7!X+ha-KRN6D#=m!PF./3^>WP'g=rH,\M'7R%i\uNE9-l??*,hda7N%Ku]jUIcWo)2AkfNttBbeR:l+u(+]%]HsRU9Fp%]guC8)dlKo?@^/`f)G$idcC_5f4BP7[:dBl&,1b6)XS.oSAC<K/Au?4:D<'61hs-???1U2)(lOCIFHRuA6#:?bdI)])A"5UCCAOY#[Gu%.irm0HeW,-;f:r]n>_CTQ'U%t\'MpYM/a;g\D%.5\[P>WNAfSX*c3S+aWg-=_tJ`$IC9pr(1hLhDQ8Aqbi/0hh4TZG)/hpOat^[(qh'Wm%I-9j^VVI<)Hd$$Rf1lf`!rT1l(Tkt\ZlM5\\V3S>XCB47/]2Mk:qtP=D-ea]\<>sGV+QH"Kg;sYr'eFE7EDe^&`Dt`)9HlUo)Q=C8Q5m@/]9$Anh*L<'MdSV8b-`TdCVtmrF%_,:Tl>AFp.\,+#9$W1U=9X6SHcb-JraVuq4^j_T9&+"$X[i_u)gNE$;@^b>%%%#L744\-e`9,cGrdUjVg+hilh&,>tS_VWM3^&j9@=IAdah5.,X%3_mC+u.\\6J\W<X_Hh^\rEa:Rq'TJT?edk=%i(dOePo-.GiTQY>YbtVO#n1-,Z3M7]fRP]%3<64tkj&lg?1Z2YE)-^hj_hRgn+;2/KkaN-CVnBCI=P=;C3QU4Q!3TX9lfBH*Oh]6MJ>3`XF*lQ!(^)lG4$N^=[G<>=`@fmWs+*RbpJPD8j[OU8#adSoq0@m:a8$*\!.'Y&q5jOi.7U"4Yhr`'b@_!S_676[Fid4K._[^<qC\!HfqML2kC]LHu38=%+7-TUmk7=N[=PIbNl3JA-4`f#eR;TXEmB28G@oIR5-P5"?L0^i?hoS;Vs#T%4tja?'TE3irOEL.CA.6a*N4HBlpek6Ds4J8RmM=/-boFOXC3Q<N0[MUA3cc7aS.<[V"JII1fBFA=B8!qAc=i3&"Di]%-L:n03T1XpF<2CkU,L8i705LLciWOR^,rmpG6b1d^p)VGBohe:1mF@=FNs&f\I5le7?qd29(<YhHUTS?0eNgS2]pf:b.Q?DnNsEV\Q!K4/R<9&**p%oG*2d+_q`2r#O8G3_D8e8"Ti2QcQ;180h,BY>%ro&OIQnfbqJ>n.53I3`jUu&*K<soue&Nl\V.tei?:CP0V3F?.r29X"IfiVFnC@~>endstream
+GauHLD0+Dj&H9tYfU:#AZr9&PN,@KW8ocLH8CE/tmmC\J`X#CUCa.'Lo^;_UX^p*M!cE@O2@8:mH?o5;e\6iiK>0gh7gjk!,<5[^!22*8!bp=>(_,D>e@99*1U?+0i)1PR17PX5Vpbk)D7?M1J_d$<o/e(,%:"]gC\oehi49WV`Nj7+k1T70J(="Y%,gg3H11.ijQ^s!^-(`SIm`1nIrPrW,RAo]e;(BZ^66-Zd4L;`.R<ImG8Cs1.o6bPIbQ<EmbkpT#fq%&LO(XX"4`2A5jBbN[c=&J/c=rpUuR)%r)VbNW#*=Bbh,pe8A8JMhfiMIU3XVN0S\GSKef,R-K-tTLhP'[Me"GBM:tg22;dJB_Whj*^!7\?/VTR:,u-c`:)^KD/j]L0&(iI#!oMHdcZq?[?+lB/W1M?="WpM9?rY2Ylc&\qTC@u&hctV\IPPJd,nYdE_9=JiCL0]44Q<=(LTA8OKsfjC6U5]FjYH-C+#?;-MV[H>p+i/Cbau%=/LC2?PRpsWlWqC<3kc9c5&JoH*Aj#;c@r;XNC6QHJ4J.&%+fil,Jc[#K8O)=1TUk!"j-pd5MV(+`!otR&@(3\$]B&I<t)8'`?H#j87sRj%#.I$dn(IUZhlf&'K;)8\CC4/(upnb3_H(3NIP98j3Ys0$HQo+1Q[kHY*J0%_^,u#'^5t\/Q31D4H_g$@#X6=,M(2o.p.IFcL=QS>GMoJUG,@gOQ,V'%7g4fH#1\<>\9F^dXt0"Rc!Z])bsPUB*k'kkq&7];G?"<GBo!CAZ,nDENAt1Rf*CoUllT4W>ZbrLlb3EUC>#aTk^mPOpct.^5!F:I*-FR[7%M3GoViS>WTdq_Uqa??boej;G2m$qTP-@XP"H;Jh`T3<Btj[Y:ho>ETs#r:n<DgA(e9h:n7K>;KlIZqdFuN2Z-DbFCqVI-lA[o`7f[<N%M/1AITZVZGTKFd(m/oh$K=785.cX4&gWCU+cnPZUe;l<ktF4XT6h:NPj/OU!jNMYL<V3\S"QN+"5QnH8c5YE"#f!@j+<GGSjPlVGUt^nWXCibKu/moN?O]'f1l]2:p4h90a?TS/k!:,&gi."I$OmIUKJ@>]4nSabA@Fd@#[hlYX4@.O#oZ?>EI+pmp[Di3qMKai=Wppultj*hO_Fh8i%"E>X"ARSTe8SnIhcMU*+S<,PlNcpO"U"WlI^eNn[0d^q,$f=7-:$J5$8;aUJ'G+o>V[4]7!+h(L?'cHLA**28LHJ#p=M7p=P\t/;5WPe4J0K.<M;*&/XQAV_?=%D`efJO<Z2IR/3K_=,$\:-KJBp*kKbSQ.7WPJsVW<lU[Qo>=:+O:sR/Z4X'"TH!M.42VY][o11X,<Yk=1q_q!%k;8Zc)Koq8Ad^>NXLY8UO/YI4MFm(W^aaYG3lr:Z.p;A>4nWM"Q\+<X*9#`d%Wh7Ckr=_j\boKhYVa[>\.jIQF0s^i$7^lk[<D!G4nS/_CkR`McC_)g/H2@Z:bd%/k>8]&0,X%Vma2@?P'<[D9Rghe'*59ki/^6[T(,Em?6Q-hF."?2"Tqc@9J.DIL"l1Mc*<:0Wl`@HV3mBuq>F7I3fbR=,-G9nA3Gp#F0eY`"dL<P%L(0W]eA=t(1jl\YR?]G_D;TWZ1KZ0dcqXT"c.79.THIDU;cYM07>?Tno5>QjM'?.[J@W+s<`gq'Ke(V1)U:T>qGqD>\Jdn7aUR,Zl@1F^n97Z(!,e>]7h7S88Q"nbhd?,)W`;^Fkn0N*9JV1./)nY)2Xj]690'6OY`lEeG*rc*onrErE\:Yk_CeG-0U_sO%5W5?/a8gjKdh+-s67;hC:j,G(c9h4SCMRq[8eXu#&BXLQ;YL][+mC+]UK$o9WBH%K5`HCbilnh]]bZ3BYMe+B6DI$VcD2'XsKM@$"_DoSWp*moApCh[eRPun2n-gp.NA'i7jfqQt<G0bh,Mde-fBURFn+7UMOh"$@YG2M1dl]_W_GSug*kd.MQ;!Sn:Sa/'j1HE2ZcT9#C<;t-5+"8^C@)W"]@S7/_j<bUi%?T#/s\&nY1$Vu`?u;qlZ')\HB+""c*9inSo2s)_mr(lEQAeuA6e9WQtLL,:\/+Ki=m:MLAfL0`W;.)(1_Rpcbe7^U)Q,Z*0Bq`6BifH#m8M^0*,U?s*n9O*FkJ\D#'o0lVN?I-h6=W7B51gX[X'4^6JKn!iCQ(I3Gmq8k8)fVN4^Zfqpp94=DssaD,W)gA?IpT[$YZW4aRh61]JN?TIL<1j<?Om4+"@"^?^5YHWOdl\9`(>k7;&r'<;;p"drBE=_t*bp5=SH=h-tQ/"l<-IjseG$7f)qPpq?qSZHtd.eFP5Q[e~>endstream
 endobj
 xref
-0 21
+0 27
 0000000000 65535 f 
 0000000061 00000 n 
 0000000113 00000 n 
@@ -141,29 +183,35 @@ xref
 0000000505 00000 n 
 0000000679 00000 n 
 0000000858 00000 n 
-0000001087 00000 n 
-0000001316 00000 n 
-0000001540 00000 n 
-0000001764 00000 n 
-0000002000 00000 n 
-0000002236 00000 n 
-0000002342 00000 n 
-0000002521 00000 n 
-0000002694 00000 n 
-0000002976 00000 n 
-0000003046 00000 n 
-0000003327 00000 n 
-0000003388 00000 n 
+0000001090 00000 n 
+0000001321 00000 n 
+0000001545 00000 n 
+0000001769 00000 n 
+0000001992 00000 n 
+0000002215 00000 n 
+0000002451 00000 n 
+0000002687 00000 n 
+0000002919 00000 n 
+0000003151 00000 n 
+0000003381 00000 n 
+0000003611 00000 n 
+0000003717 00000 n 
+0000003896 00000 n 
+0000004067 00000 n 
+0000004391 00000 n 
+0000004461 00000 n 
+0000004742 00000 n 
+0000004803 00000 n 
 trailer
 <<
 /ID 
-[<27b1c4611c20564ae10bbca740c3e7dc><27b1c4611c20564ae10bbca740c3e7dc>]
+[<218d9eaf718fc719498683fe157f9d57><218d9eaf718fc719498683fe157f9d57>]
 % ReportLab generated PDF document -- digest (opensource)
 
-/Info 18 0 R
-/Root 17 0 R
-/Size 21
+/Info 24 0 R
+/Root 23 0 R
+/Size 27
 >>
 startxref
-5530
+7211
 %%EOF

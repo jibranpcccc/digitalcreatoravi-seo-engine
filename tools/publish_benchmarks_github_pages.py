@@ -34,7 +34,17 @@ REPOS_CONFIG = [
     {"site_id": "site-17", "slug": "opencrmstack", "name": "OpenCRMStack", "url": "https://opencrmstack.pages.dev/", "category": "Open Source CRM & Migration", "headline": "HubSpot to Twenty CRM Migration Architecture & 3-Year TCO Savings"},
     {"site_id": "site-18", "slug": "cipipelinegraph", "name": "CIPipelineGraph", "url": "https://site-18-chi.vercel.app/", "category": "CI/CD Optimization & DAG Validators", "headline": "Docker Buildx Cache with GitHub Actions Backend & Build Speedup"},
     {"site_id": "site-19", "slug": "greekvisualizer", "name": "GreekVisualizer", "url": "https://site-19-nine.vercel.app/", "category": "Financial Math & Options Greeks", "headline": "Black-Scholes Implied Volatility Surface & Uniswap v3 Impermanent Loss"},
-    {"site_id": "site-20", "slug": "edgeruntimehq", "name": "EdgeRuntimeHQ", "url": "https://edgeruntimehq.pages.dev/", "category": "Edge AI Inference & WebGPU", "headline": "WebGPU vs ONNX Runtime Web vs Cerebras Edge Latency Leaderboard"}
+    {"site_id": "site-20", "slug": "edgeruntimehq", "name": "EdgeRuntimeHQ", "url": "https://edgeruntimehq.pages.dev/", "category": "Edge AI Inference & WebGPU", "headline": "WebGPU vs ONNX Runtime Web vs Cerebras Edge Latency Leaderboard"},
+    {"site_id": "site-21", "slug": "promptevalhq", "name": "PromptEvalHQ", "url": "https://promptevalhq.pages.dev/", "category": "LLM Evaluation & Prompt Benchmarks", "headline": "Promptfoo vs DeepEval & RAG Triad Metric Calculator"},
+    {"site_id": "site-22", "slug": "queuecost", "name": "QueueCost", "url": "https://queuecost.pages.dev/", "category": "Background Queues & Message Brokers", "headline": "BullMQ vs Celery vs Temporal Worker Memory & Throughput Sizer"},
+    {"site_id": "site-23", "slug": "opentelemetrylab", "name": "OpenTelemetryLab", "url": "https://opentelemetrylab.pages.dev/", "category": "Observability & OpenTelemetry Collector", "headline": "OpenTelemetry Collector Tail-Sampling Latency & Egress Sizer"},
+    {"site_id": "site-24", "slug": "postgrescale", "name": "PostgresScale", "url": "https://postgrescale.pages.dev/", "category": "Database Tuning & PostgreSQL Optimization", "headline": "PostgreSQL Autovacuum, Work_Mem & Index Memory Sizing Calculator"},
+    {"site_id": "site-25", "slug": "apigatewaymatrix", "name": "APIGatewayMatrix", "url": "https://apigatewaymatrix.pages.dev/", "category": "API Gateways & Reverse Proxies", "headline": "Envoy vs Kong vs Traefik vs Caddy Latency & Concurrency Calculator"},
+    {"site_id": "site-26", "slug": "s3egressaudit", "name": "S3EgressAudit", "url": "https://s3egressaudit.pages.dev/", "category": "Cloud Storage & Egress Economics", "headline": "Cloudflare R2 vs AWS S3 Multi-Region Egress Cost Simulator"},
+    {"site_id": "site-27", "slug": "authtokenaudit", "name": "AuthTokenAudit", "url": "https://authtokenaudit.pages.dev/", "category": "Authentication & Cryptographic Tokens", "headline": "JWT vs PASETO Header Overhead, Security & Cookie Payload Sizer"},
+    {"site_id": "site-28", "slug": "dnsperf-hq", "name": "DNSPerfHQ", "url": "https://dnsperf-hq.pages.dev/", "category": "Anycast DNS & Global Propagation", "headline": "Cloudflare vs Route 53 Anycast DNS Latency & TTL Migration Sizer"},
+    {"site_id": "site-29", "slug": "featureflagaudit", "name": "FeatureFlagAudit", "url": "https://featureflagaudit.pages.dev/", "category": "Feature Management & OpenFeature", "headline": "LaunchDarkly vs Flagsmith vs Unleash TCO & Evaluation Latency Sizer"},
+    {"site_id": "site-30", "slug": "tinycontainerhq", "name": "TinyContainerHQ", "url": "https://tinycontainerhq.pages.dev/", "category": "Container Security & Minimal Images", "headline": "Chainguard vs Distroless vs Alpine Image Size & CVE Reduction Sizer"}
 ]
 
 HTML_TEMPLATE = """<!DOCTYPE html>
@@ -244,7 +254,7 @@ def publish_all_benchmark_pages():
         )
         content_b64 = base64.b64encode(html_content.encode("utf-8")).decode("ascii")
         
-        print(f"[{idx}/20] Uploading {path}...")
+        print(f"[{idx}/{len(REPOS_CONFIG)}] Uploading {path}...")
         sha = get_file_sha(repo_full, path)
         
         payload = {

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>S3EgressAudit Research & Engineering Feed</title>
+    <link>https://s3egressaudit.pages.dev/</link>
+    <description>AWS S3 vs Cloudflare R2 vs Backblaze B2: Forensic Egress Cost Math</description>
+    <language>en-us</language>
+    <item>
+      <title>Cloudflare R2 vs AWS S3: Complete Cost Breakdown at 50TB Egress</title>
+      <link>https://s3egressaudit.pages.dev/cloudflare-r2-vs-aws-s3-egress-fee-breakdown/</link>
+      <description>Complete engineering guide and technical benchmarks for Cloudflare R2 vs AWS S3: Complete Cost Breakdown at 50TB Egress in high-performance production systems.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://s3egressaudit.pages.dev/cloudflare-r2-vs-aws-s3-egress-fee-breakdown/</guid>
+    </item>
+    <item>
+      <title>Backblaze B2 vs Wasabi: Minimum Retention & API Pricing Math</title>
+      <link>https://s3egressaudit.pages.dev/backblaze-b2-vs-wasabi-hot-cloud-storage-math/</link>
+      <description>Architectural analysis and total cost of ownership shootout for Backblaze B2 vs Wasabi: Minimum Retention & API Pricing Math.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://s3egressaudit.pages.dev/backblaze-b2-vs-wasabi-hot-cloud-storage-math/</guid>
+    </item>
+    <item>
+      <title>S3 Multipart Upload Optimization: High-Throughput Python Guide</title>
+      <link>https://s3egressaudit.pages.dev/s3-multipart-upload-part-size-tuning-python/</link>
+      <description>Step-by-step implementation guide, code snippets, and automated testing procedures for S3 Multipart Upload Optimization: High-Throughput Python Guide.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://s3egressaudit.pages.dev/s3-multipart-upload-part-size-tuning-python/</guid>
+    </item>
+  </channel>
+</rss>

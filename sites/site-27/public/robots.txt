@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://authtokenaudit.pages.dev/sitemap.xml

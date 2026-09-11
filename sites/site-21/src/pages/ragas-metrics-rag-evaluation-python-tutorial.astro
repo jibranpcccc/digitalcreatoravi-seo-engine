@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Ragas Evaluation Metrics: Faithfulness & Answer Relevance Tutorial";
+const pageDescription = "Step-by-step tutorial on calculating Faithfulness, Answer Relevance, and Context Recall using Ragas with LangChain and LlamaIndex.";
+const canonicalUrl = "https://promptevalhq.pages.dev/ragas-metrics-rag-evaluation-python-tutorial/";
+const schemaJson = JSON.stringify({"@context": "https://schema.org", "@graph": [{"@type": "TechArticle", "@id": "https://promptevalhq.pages.dev/ragas-metrics-rag-evaluation-python-tutorial/#article", "headline": "Ragas Evaluation Metrics: Faithfulness & Answer Relevance in Python", "description": "Step-by-step tutorial on calculating Faithfulness, Answer Relevance, and Context Recall using Ragas with LangChain and LlamaIndex.", "url": "https://promptevalhq.pages.dev/ragas-metrics-rag-evaluation-python-tutorial/", "author": {"@type": "Organization", "name": "PromptEvalHQ Research Lab", "url": "https://promptevalhq.pages.dev/"}, "publisher": {"@type": "Organization", "name": "PromptEvalHQ", "url": "https://promptevalhq.pages.dev/"}, "datePublished": "2026-09-10T08:00:00Z", "dateModified": "2026-09-11T12:00:00Z"}, {"@type": "BreadcrumbList", "@id": "https://promptevalhq.pages.dev/ragas-metrics-rag-evaluation-python-tutorial/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://promptevalhq.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "Ragas Evaluation Metrics: Faithfulness & Answer Relevance Tutorial", "item": "https://promptevalhq.pages.dev/ragas-metrics-rag-evaluation-python-tutorial/"}]}, {"@type": "FAQPage", "@id": "https://promptevalhq.pages.dev/ragas-metrics-rag-evaluation-python-tutorial/#faq", "mainEntity": [{"@type": "Question", "name": "What is the cost of running Ragas across 1,000 test cases?", "acceptedAnswer": {"@type": "Answer", "text": "Using gpt-4o-mini as the evaluator LLM, 1,000 test cases with an average context length of 1,500 tokens costs approximately $0.45-$0.75 in total API usage."}}, {"@type": "Question", "name": "Can Ragas evaluate multi-modal RAG systems?", "acceptedAnswer": {"@type": "Answer", "text": "Ragas v0.2+ introduces multi-modal faithfulness and aspect critique metrics supporting image context and vision language models (VLMs)."}}]}]});
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} schemaJson={schemaJson} type="article">
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20">
+    
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs font-mono text-slate-500 mb-6">
+      <a href="/" class="hover:text-emerald-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-slate-300 truncate">Ragas Evaluation Metrics: Faithfulness & Answer Relevance Tutorial</span>
+    </nav>
+
+    <!-- Exact 1 H1 Header -->
+    <h1 class="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+      Ragas Evaluation Metrics: Faithfulness & Answer Relevance in Python
+    </h1>
+
+    <div class="flex items-center gap-4 text-xs font-mono text-slate-400 mt-4 pb-6 border-b border-slate-800">
+      <span>By PromptEvalHQ Research Lab</span>
+      <span>•</span>
+      <span>Updated Sept 2026</span>
+      <span>•</span>
+      <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Verified Guide</span>
+    </div>
+
+    <!-- 45-60 Word Quick Answer Box with Accent Border -->
+    <div class="mt-8 p-5 rounded-2xl bg-slate-900/90 border-l-4 border-emerald-500 shadow-xl">
+      <div class="flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider mb-1.5">
+        <span>⚡ Quick Answer (Direct Definition)</span>
+      </div>
+      <p class="text-sm text-slate-200 leading-relaxed font-sans">
+        Ragas (Retrieval Augmented Generation Assessment) quantifies RAG pipeline quality using four core metrics: Faithfulness (measuring factual grounding against context), Answer Relevance (checking query-answer semantic alignment), Context Precision (ranking of retrieved chunks), and Context Recall (measuring ground-truth coverage). A production pipeline requires a minimum Faithfulness score of 0.85 to prevent hallucinations.
+      </p>
+    </div>
+
+    <!-- Main Content Sections -->
+    <div class="mt-8 space-y-6">
+      
+        <div class="mt-10">
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">The 4 Pillars of RAG Evaluation: Mathematical Formulations</h2>
+        
+            <p class="text-sm text-slate-300 mt-3 leading-relaxed">Faithfulness evaluates whether every claim in the generated answer can be mathematically inferred from the retrieved context. Ragas breaks down the generated answer into atomic claims, prompts an evaluator LLM to verify whether each claim is supported by the context, and calculates the ratio of supported claims divided by total claims. Answer relevance uses embedding cosine similarity between the original query and synthetic queries generated from the output.</p>
+            </div>
+        <div class="mt-10">
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Production Metric Thresholds for Production Enterprise RAG</h2>
+        
+            <div class="mt-4 overflow-x-auto border border-slate-800 rounded-xl">
+              <table class="w-full text-left bg-slate-950/60">
+                <thead class="bg-slate-900/90"><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">Ragas Metric</th><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">Target Threshold</th><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">Primary Failure Mode</th><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">Remediation Strategy</th></thead>
+                <tbody class="divide-y divide-slate-800/60"><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Faithfulness</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">>= 0.88</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Model hallucinating outside context</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Lower temperature; add strict system prompt grounding</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Answer Relevance</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">>= 0.82</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Evasive or incomplete answers</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Improve query rewriting; enforce structured response format</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Context Precision</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">>= 0.75</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Noisy or irrelevant top-k chunks</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Implement Cohere or BGE cross-encoder reranking</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Context Recall</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">>= 0.85</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Missing critical source facts</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Increase chunk overlap; use hybrid BM25 + dense search</td></tr></tbody>
+              </table>
+            </div>
+            </div>
+        <div class="mt-10">
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Complete Python Implementation: Automated Ragas Evaluation Script</h2>
+        
+            <div class="mt-4 rounded-xl bg-[#030712] border border-slate-800 p-4 font-mono text-xs text-slate-200 overflow-x-auto shadow-inner">
+              <pre is:raw>from datasets import Dataset
+from ragas import evaluate
+from ragas.metrics import faithfulness, answer_relevance, context_precision, context_recall
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+
+data_samples = {
+    'question': ['How does Redis Streams consumer group handle pending messages?'],
+    'answer': ['Consumer groups track unacknowledged messages in the Pending Entries List (PEL). Workers claim idle messages with XAUTOCLAIM.'],
+    'contexts': [['Redis Streams maintains a Pending Entries List (PEL) per consumer group to log delivered but unacked messages.']],
+    'ground_truth': ['Redis tracks delivered messages in the Pending Entries List (PEL), allowing recovery with XCLAIM or XAUTOCLAIM.']
+}
+
+dataset = Dataset.from_dict(data_samples)
+evaluator_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+
+results = evaluate(
+    dataset,
+    metrics=[faithfulness, answer_relevance, context_precision, context_recall],
+    llm=evaluator_llm
+)
+print(results.to_pandas())</pre>
+            </div>
+            </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mt-16 pt-10 border-t border-slate-800">
+      <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+        <span>❓</span> Frequently Asked Questions
+      </h2>
+      <div class="space-y-4">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <h3 class="text-sm font-bold text-white">What is the cost of running Ragas across 1,000 test cases?</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">Using gpt-4o-mini as the evaluator LLM, 1,000 test cases with an average context length of 1,500 tokens costs approximately $0.45-$0.75 in total API usage.</p>
+        </div>
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <h3 class="text-sm font-bold text-white">Can Ragas evaluate multi-modal RAG systems?</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">Ragas v0.2+ introduces multi-modal faithfulness and aspect critique metrics supporting image context and vision language models (VLMs).</p>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Sibling Guide Links (Zero-PBN Internal Hub Architecture) -->
+    <div class="mt-16 pt-8 border-t border-slate-800">
+      <h3 class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-4">Explore More Technical Guides in LLM Eval & Testing</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+    <a href="/promptfoo-vs-deepeval-llm-evaluation-benchmark/" class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 transition block">
+      <span class="text-[11px] font-mono text-emerald-400 uppercase">Related Guide</span>
+      <h4 class="text-xs font-bold text-white mt-1 hover:text-emerald-300 transition-colors">Promptfoo vs DeepEval: LLM Benchmark & CI/CD Testing Shootout</h4>
+    </a>
+    
+    <a href="/llm-judge-synthetic-dataset-generator-guide/" class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 transition block">
+      <span class="text-[11px] font-mono text-emerald-400 uppercase">Related Guide</span>
+      <h4 class="text-xs font-bold text-white mt-1 hover:text-emerald-300 transition-colors">LLM-as-a-Judge: Best Practices & Cost Optimization Guide</h4>
+    </a>
+    
+      </div>
+    </div>
+
+  </article>
+</Layout>

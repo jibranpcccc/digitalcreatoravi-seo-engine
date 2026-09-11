@@ -2,7 +2,7 @@
 %“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 15 0 R
+/F1 2 0 R /F2 3 0 R /F3 32 0 R
 >>
 endobj
 2 0 obj
@@ -32,89 +32,183 @@ endobj
 6 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://openagentstack.pages.dev/)
->> /Border [ 0 0 0 ] /Rect [ 247 482.3125 402.7335 496.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/agents/langgraph-vs-autogen-multi-agent-orchestration-cost/)
+>> /Border [ 0 0 0 ] /Rect [ 247 489.3125 564.775 503.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 7 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://openagentstack.pages.dev/frameworks/browser-use-vs-playwright-mcp-web-automation-benchmark/)
->> /Border [ 0 0 0 ] /Rect [ 247 455.3125 564.813 469.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/agents/langgraph-vs-autogen-multi-agent-orchestration-cost/)
+>> /Border [ 0 0 0 ] /Rect [ 247 475.3125 361.5415 489.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://openagentstack.pages.dev/frameworks/browser-use-vs-playwright-mcp-web-automation-benchmark/)
->> /Border [ 0 0 0 ] /Rect [ 247 441.3125 416.955 455.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/protocols/building-production-mcp-servers-fastapi-sse/)
+>> /Border [ 0 0 0 ] /Rect [ 247 455.3125 564.2335 469.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://openagentstack.pages.dev/agents/langgraph-vs-autogen-multi-agent-orchestration-cost/)
->> /Border [ 0 0 0 ] /Rect [ 247 421.3125 564.775 435.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/protocols/building-production-mcp-servers-fastapi-sse/)
+>> /Border [ 0 0 0 ] /Rect [ 247 441.3125 336.2335 455.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://openagentstack.pages.dev/agents/langgraph-vs-autogen-multi-agent-orchestration-cost/)
->> /Border [ 0 0 0 ] /Rect [ 247 407.3125 361.5415 421.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/frameworks/smolagents-vs-crewai-lightweight-python-agents/)
+>> /Border [ 0 0 0 ] /Rect [ 247 421.3125 563.7585 435.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://openagentstack.pages.dev/protocols/building-production-mcp-servers-fastapi-sse/)
->> /Border [ 0 0 0 ] /Rect [ 247 387.3125 564.2335 401.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/frameworks/smolagents-vs-crewai-lightweight-python-agents/)
+>> /Border [ 0 0 0 ] /Rect [ 247 407.3125 365.75 421.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 12 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://openagentstack.pages.dev/protocols/building-production-mcp-servers-fastapi-sse/)
->> /Border [ 0 0 0 ] /Rect [ 247 373.3125 336.2335 387.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/mcp-server-docker-kubernetes-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 387.3125 559.5215 401.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 13 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://openagentstack.pages.dev/frameworks/smolagents-vs-crewai-lightweight-python-agents/)
->> /Border [ 0 0 0 ] /Rect [ 247 353.3125 563.7585 367.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/mcp-server-docker-kubernetes-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 373.3125 260.7275 387.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 14 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://openagentstack.pages.dev/frameworks/smolagents-vs-crewai-lightweight-python-agents/)
->> /Border [ 0 0 0 ] /Rect [ 247 339.3125 365.75 353.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/)
+>> /Border [ 0 0 0 ] /Rect [ 247 353.3125 402.7335 367.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 15 0 obj
 <<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/agents/langgraph-postgres-checkpointer-persistence/)
+>> /Border [ 0 0 0 ] /Rect [ 247 333.3125 561.0985 347.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 16 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://openagentstack.pages.dev/llms.txt)
->> /Border [ 0 0 0 ] /Rect [ 46 171.6 220.2585 183 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/agents/langgraph-postgres-checkpointer-persistence/)
+>> /Border [ 0 0 0 ] /Rect [ 247 319.3125 331.9965 333.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 17 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://openagentstack.pages.dev)
->> /Border [ 0 0 0 ] /Rect [ 309.415 115.5 421.57 124.5 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/agents/smolagents-coding-agent-claude-tutorial/)
+>> /Border [ 0 0 0 ] /Rect [ 247 299.3125 562.6755 313.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 18 0 obj
 <<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/agents/smolagents-coding-agent-claude-tutorial/)
+>> /Border [ 0 0 0 ] /Rect [ 247 285.3125 307.173 299.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+19 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/frameworks/browser-use-vs-playwright-mcp-web-automation-benchmark/)
+>> /Border [ 0 0 0 ] /Rect [ 247 265.3125 564.813 279.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+20 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/frameworks/browser-use-vs-playwright-mcp-web-automation-benchmark/)
+>> /Border [ 0 0 0 ] /Rect [ 247 251.3125 416.955 265.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+21 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/frameworks/langgraph-vs-crewai-vs-autogen-multi-agent-benchmark-2026/)
+>> /Border [ 0 0 0 ] /Rect [ 247 231.3125 564.813 245.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+22 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/frameworks/langgraph-vs-crewai-vs-autogen-multi-agent-benchmark-2026/)
+>> /Border [ 0 0 0 ] /Rect [ 247 217.3125 422.2465 231.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+23 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/frameworks/smolagents-minimalist-code-agents-huggingface-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 197.3125 564.8035 211.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+24 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/frameworks/smolagents-minimalist-code-agents-huggingface-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 183.3125 393.737 197.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+25 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/mcp/local-deepseek-r1-tool-calling-ollama-mcp/)
+>> /Border [ 0 0 0 ] /Rect [ 247 163.3125 562.1625 177.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+26 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/mcp/local-deepseek-r1-tool-calling-ollama-mcp/)
+>> /Border [ 0 0 0 ] /Rect [ 247 149.3125 302.4325 163.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+27 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/mcp/mcp-server-docker-kubernetes-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 129.3125 564.281 143.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+28 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/mcp/mcp-server-docker-kubernetes-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 115.3125 278.141 129.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+29 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/mcp/top-15-production-mcp-servers-docker-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 95.3125 560.557 109.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+30 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/mcp/top-15-production-mcp-servers-docker-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 81.3125 317.737 95.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+31 0 obj
+<<
 /Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 
-  14 0 R 16 0 R 17 0 R ] /Contents 22 0 R /MediaBox [ 0 0 612 792 ] /Parent 21 0 R /Resources <<
+  14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 
+  24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R ] /Contents 39 0 R /MediaBox [ 0 0 612 792 ] /Parent 38 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -122,31 +216,67 @@ endobj
 >> /Type /Page
 >>
 endobj
-19 0 obj
+32 0 obj
 <<
-/PageMode /UseNone /Pages 21 0 R /Type /Catalog
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
 >>
 endobj
-20 0 obj
+33 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260907124646+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260907124646+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev/llms.txt)
+>> /Border [ 0 0 0 ] /Rect [ 46 608.6 220.2585 620 ] /Subtype /Link /Type /Annot
+>>
+endobj
+34 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openagentstack.pages.dev)
+>> /Border [ 0 0 0 ] /Rect [ 309.415 552.5 421.57 561.5 ] /Subtype /Link /Type /Annot
+>>
+endobj
+35 0 obj
+<<
+/Annots [ 33 0 R 34 0 R ] /Contents 40 0 R /MediaBox [ 0 0 612 792 ] /Parent 38 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+36 0 obj
+<<
+/PageMode /UseNone /Pages 38 0 R /Type /Catalog
+>>
+endobj
+37 0 obj
+<<
+/Author (\(anonymous\)) /CreationDate (D:20260912001152+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260912001152+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
 >>
 endobj
-21 0 obj
+38 0 obj
 <<
-/Count 1 /Kids [ 18 0 R ] /Type /Pages
+/Count 2 /Kids [ 31 0 R 35 0 R ] /Type /Pages
 >>
 endobj
-22 0 obj
+39 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2136
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2219
 >>
 stream
-Gau`T=``:f&:WeDFB,>MP-Ta1-h84r`$&o4@Zu4\<D&&J-IrpVaM`H'p[&h=J.4JB959Fe\ZM;!qWhY&7DQ\T;4h8*E'Aiu#6MhsaW-,=gG$0i_5-b;7B/Fd(HfmZRo-$rgG/UYkZ50.=q9c18K??;I*ofj8@,c5P8O$OTj)Cb2f0'pj5KC0hn+L3_0,e<W-A+Xgl2R;i<L&lL,[_':HT.]_fT=+0pIiF0_kp:pCbhcHu4Kk]+WULWS9:&W*=N9<Wlq_*"nQO86iabTG]Y:qZcRrd"uObL5XVJq^/(0Da>%V-\CjH$mmf9-7fQLkV$Wmpl\MUDejaf?61_eTV3cS$C:pcd6l8da56pGQ5GHW@jFHN1qg&/&S,/FJ8Q%[\W4OOc,(bi;i6eMeUf^O$BZZLS/**/"WZC9W'?#VSr,?u,7]2h[A_[)^7!;MaO%LO[oY5,<.b(_L\=W%N1Y5R.C'^;SWYin_eZF$ki4ran?'bSYep.4QL=ROiM!!Kjd86C8*RA<p9Ks^AMH0Ar/T]Qa*,DUbH9B8CFO-IQ*r(=NquS7BbAOpPXRuq_%.G"Jj!#A/)iP0T9.*BMZ+VnYtSeEPV/O;)(*INM8V/l7tIXkOao(gdaS!WfY1cPcB^^B9?'7SdC59IQ3A/N+j8>)$oBRiAjn+MR_Y.7i=`CZn5G,FZ)%/gf#?m47OS\.)5*>e5i.OlKoFQ<-+M2^c.DL`=q'Y75ri-pF=,T?9bt5Dbu)CQ,"MhMJRU5s*D]p>MK9]6Jl__HH#jN?1b*M]EX;4_C"bDh=>#.p:[gnr2J8sZD@nu8/./6dDU!19+OUCNkpcNro2HA`7NG,;YbG&]f0r@e1^nYDik6]95VR,SIZk1qh4u-OKJMGW9<DKrl<d&]WPe0^6\EMjP(O>N77=!4/h"uO$gA.$RJ;60"Je1lWV8Pi-8O%-/Dl]LMCC+L1(/q7PQ@4Ecj_[YhqDF3>O%;9maY`R<[Z+GeLhd,9=rq)B^!5`jYXcIqP'?p/2N:Y_@)Z>on@k5_?Ues[rbAdb_FBML0@[]_YRk\+^,P1qc["jme$7^b=K*9l&GJ<NkFPQM#:Jh98bp.cl8:Me\qB@4G`6:SV/ZOU[5+`jj,!ep-*;rea1Rf*/MINNkiqcSut&t[4e&e,DU7Q4KWY4=:/2G)HtGPP,:9m_rNYYIZg6"fNr-%??tjfGG^WG"fL'!f<Whb`W.hdMo/6+U8.rp=(>6W[AHnF,2+83i;"in(70<./LATGZ<u#_7R\Si[N0oXQuJ8tFZ:?d\q0P?GqOfA#]3[7)^N=a720OBZCuiQDUm/E,8)S%\N!!]jW,S-$PputboNu`@X2/6d2WZM%P&lllSK-^k`(?&q/&t,H@E3s7.3f"/$sF`U#NLHc:`5c3Ecu)9]MWaV"P)<hSj2._NqI]cfqGg4G,.e,Z[ln2W2SNfT[\^U`QE,s/6LA0gg\6Lh6c`M]1qtF0nW/TiFt)_idgjrmnrXfJPeu)iZQ@d.Ppo+F@W%\S@/g=<5i\8iFjeqeXgMF"Q(XVu6#,Q,II6hKh&agffS:N>0'38b&gH]%ou7(U_Jm.iDZX1=IZEbO8X7kEeo.AWe'.Q0FdYBW<U(7[rf:8@HjEs.A[r/RH4K*M[MJW^u_3287R4b!o!Ejfa=.[G@t].(R[_?><uQp$1bJTNaj_l=Sag@(Z/8K8/,)OZbM)3(n=d`e7:c`\DaNF:RptLl+IEY8de,YL\.!rnSI)frT#27p&0Z]^g44%9:0(s/*++L&T%KRY0(.!e6eL@YfW.SA@eQb+G3@#u,#7aq>lZYN=3Shi4?=Rp0mih?!6Ih*HOTcS1q`%I4ki@dDdNS\U(o=t$guD@46,G3.(P6W(G04<Yd*3(K>Ra2KlEI#.qkOj%cB`'B()E3b2fMM3nG<3P7p3)%RrkDYD"nc=DX,3TO<3.Pn*>trH>0+S1H;&"(Wr$XMY2cE!q>#2:fWilUu*p,!eC1N!C:8s[J1MLuf@96/5nj^23LmeSV.mNNU1E3TCPo$0";<G9-Piid7)#>kW]?adN<A(a+bnu1Y7@7#"5n\?Z3i%.Pp+6$CJn_5Sm\fUngILUf0KLmM#;TM1a]"".3XcZaZ`nR%b3)mlemgrAJ_!$ndU=!~>endstream
+Gau`TgN)%,&:N/3lr-C<";Gbu7DCjgP<,sYeQ1Fk]YG4,U#rI&AAsscI!7jhPT5TqB,&Cp7*M)&c8f"p"V02[lfdds"aE+ad5qRQ(ZnA0I*7<@-(N9dIh/(3:-X9UF7EkL=cP_TUBt&ZAE%oFYTh[:#8*3$!D_^C\HA4s33N^RH<QbZG^_N^\@Iuu?GbIg:X`[S:2`>5mHf4HnICQMMsF1.fa1#bD)[":ZO=(OLA>11s+LIOL;3VYg^/OX@LXZ-%<W0lhMQhgNItWL2W:t.1",R])VIk"JE6o_BEuT_L=_.#:0/W<[u/6#-SQA,3g29o@(I+Y<GN`l]P?sG:Wmu7Q&*tf'_$Pr(SVFd0TM_*kn?O!ggY@FNR81_^?;0Kq?JS/EPc+b0n,;U>+Ff1oH*9&L2a_$H'YB(V?5#8JlcnKS\_DO<?C<p"ogjZ:qOm>HF]9F7!??&>^ec02B:S#(p9,RWftgY8(G+UP>njq**:]X4S4M^+"`3L>Prjc=CDor+YGVA`bpIaUY#+qk5?FOO/4ORl'fET1XeAC6#AuaXf&QQ.K,A%*S82_>gMq,:G[#B3<(2^NKOeRDDu:Pb=C'%RcFBR$+8%pH'5?PqhU@oh]hSqCTP?/cKIM]#23eh)uGcbRa!0%o<kYb)=Q=CRh`RI,nsqiJ<![X@'PQRbVQaB=hI5*pXL3R\QTC=da+cc66p7*f`H,Z8kujjI7:l=a:+tLk%3`%ht&!!c9rs[R97gW+L2a-+\H"umg[U-<*UroEK/"22%,`pc';tncfo&5+>fca)-=UHo?n%9>0)kW-]da>9"C1r&5Bt_\4l['Jl>`1+&A8eWH\MP7@>r3U=[M'"^>sO\93X-&rE;7`nt"*H^oB]eMf-Ks#+#nSl!2j:T`JpU$@,SWb]EmX[;3q2NS,EkS/lHNB7fJ?tZhe3\j]jTfNaFRn+WT`"IclfO!Xe<==MCSmF`*s$c^NlejD2ns@2O?olXp#,Tq^^hj_.%d<t@0-o8h)Dd?17T=tL9`6<(mQBXch1K@G`8D$P7)nuT4)Vu7Pk[$#5&9Hh><j%^lodb-%KUfO'1JMKmen/I-M8=kj'GI"]B%Z1IE@C)4B+?m^D@bmD%\._FthtEf18n@9#$VrGDGs:\Gftb4q-k+0mck=7gY>\&IJ/-0odO+bYh0Pi7GHDI"t/1ik/0aK4L'9i#P,C[i:_daPCK7&>VR6.nYa>'l9^M)jp)=V+tY>r<aKG5@3<CNM`J_L'HsQ3D8D,;n/k'YU*3*Kk+10HGt$%,D^]9k"-#P*-bYEmHMRr>ftT#D$>>,GdBn6M4)X(rTY;+5@3/Wa]#Ih0c,j"6\Lsh7Nu*C`1ZQ)YsK+4NUQTilpg"[-p5a1`A(ninnSoF"]h"('OR(r[KbpX+hIC1f5TKFEJNo$CJ6oq]-^bCnNC4H2g;"?KG#$;g;6*^oX_(Brc^*qKALo/5A)&8R\t`;p1kBA:Q5jeqH\sSBOenBAsSinaBb'uo<CfBmu(GF+-kB5f`Wj>Yl'r`:%kVtE;bG@;`#b%X@X8u2&fR-qFXV"n!2IQXpo&a3i3SWYNg4Q_=pf>R&1FlMul)'Z"jE=$/bA3ITfnO`Uih!m#*``3k2H)M^nq".89+T[X`e+3oNqVG+!8'BX$AE6$[%-nAfB;d?cW_$2c7?pA0kMf+Yj'G.:j8XkYd%2O0rJ;Ue)CGfhBJ+L)m5Ki:^!R3&J3C$ulFI'3OPoCl!/g'*5%RM=WP/+*;""MRrj2Ym6d1burrF_U7$7V>1\9"e]ga2m@(0gU"8-ZC@fRIUKu'uc9;]58_u*?+U/D80=&J%f)Y%>1et`@)q!!f=$</*o5s9-+J<NtV;"%\4htA85^pKt(bS%a=MaX!O>_]'$!$I%;NFjZ>2bH@aPN=68r5Or[#E;3Js^@1/l.&WP4I$>H`SVU<MUCFU#`H40[]Uq,<98S2q=.lhhX+&+?=KaQ:Ap"0!mQf^i3^,!&''&RiY@jJO/?I0k`JTd:'atCd:p1$D'Q7j_aap[?jTD"td\6V&Ib'[%6&,>s9?qhsKQ.f8laDE$&qY6M>EY7!U*$qHX0Sr8@VJAqP^%R]"[HuaKs7b7qI<X+CER\1*aD\.:1=i+hJO[ZE#-AV1XjrEd`_%Ic%?37#Z$Iu+)B#U3@\?S6Fi"mrNJuD'1!n!Dm<1?*[FV!V/D/oskdE"PG-)Qd>J5K4k5=#8O"+T-07!ZB7f~>endstream
+endobj
+40 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 892
+>>
+stream
+Gatm7?#SFN'Rf.G*2ui0<GUTAVf/YP[n_&2=rreQP8Hh,*+h:6e[5@jlN!J@XF&T_aOc<Qm;pT6Qc#Sb[q!,PhMfgrk28Em;t,m&(_(IBl?qpe9kG4enM<e7J!A2b%\V;TGiCXRYC5oU*Pj^2i\7&CHV#--q#M"h!.'B+^i1gj>V:[]F&Co)/nBZG>Z/MRS4YA5/l+0I`9>^%pe:,dO>otc5Zedk?C$1SRqjd'/#R/D$Kn\kU;09d6;(!JgN/_uV5[8$?KUc/FqDR0Mqstq])74MY-e1NJCI;k/NlJnNppa3eR0_hIBXpqqAV9Z)eI3H7(HFNg4DqeTAe2I$AG!:Y!geG/&.I7L1&dUT3U:[GIfDqgm40nI,n!JgtZ]`kQtEs8^OaoAeLGK5>jMMd0`+L`X:IfmKL0PWQT!)Ms_Io;AIBd<7_#?>Iu^.rI.J.Ku7^HB""MG@>.s/J%f0pe?ilD3rj>Lnu<aNCQ/5,U%^e<'!dhko7sp)`:1QG>u$iSX^a+a4tdXj;VIGDf2+r)IfN:&Y@ZkT)A5QK(7Y-l7:G=U%,.V5F4X*cd`c9R7MSgRN/ZM\d140)R7h*:gVQ&(;A<S<&c*HR)Bc5KPtr0lJQRc7C0-,Fib*XKm!u_e6tC,+8&V]#n2EZ1<OFO)5-5@m6Q$;bWkuW\SiMFGf2EB`JB;rEZinR[N0Z<M)G=.S::;rVk^;568i<BtaE;7kih1[oK41r5Oe`6[6M1r^lb8DKSX)H]=OM@N=;jSV7`K-+#]Tg()Vj^b+S&g>n8R<W0\N&-UNsL*H*WPpE&<af_[U&%=p7FKfT/">c]@giIjcYO(:Mf?)"T#hqq>.m#MJ^kFmD:UkJC?VW2ZYmWR2Yo[S:$8oFFjgOc7R='lB.m~>endstream
 endobj
 xref
-0 23
+0 41
 0000000000 65535 f 
 0000000061 00000 n 
 0000000113 00000 n 
@@ -154,32 +284,50 @@ xref
 0000000332 00000 n 
 0000000505 00000 n 
 0000000678 00000 n 
-0000000858 00000 n 
-0000001103 00000 n 
-0000001348 00000 n 
-0000001586 00000 n 
-0000001826 00000 n 
-0000002061 00000 n 
-0000002296 00000 n 
-0000002535 00000 n 
-0000002772 00000 n 
-0000002878 00000 n 
-0000003058 00000 n 
-0000003234 00000 n 
-0000003530 00000 n 
-0000003600 00000 n 
-0000003881 00000 n 
-0000003942 00000 n 
+0000000916 00000 n 
+0000001155 00000 n 
+0000001389 00000 n 
+0000001623 00000 n 
+0000001862 00000 n 
+0000002099 00000 n 
+0000002315 00000 n 
+0000002531 00000 n 
+0000002712 00000 n 
+0000002944 00000 n 
+0000003176 00000 n 
+0000003404 00000 n 
+0000003631 00000 n 
+0000003877 00000 n 
+0000004123 00000 n 
+0000004372 00000 n 
+0000004622 00000 n 
+0000004866 00000 n 
+0000005109 00000 n 
+0000005336 00000 n 
+0000005563 00000 n 
+0000005782 00000 n 
+0000006001 00000 n 
+0000006227 00000 n 
+0000006452 00000 n 
+0000006849 00000 n 
+0000006955 00000 n 
+0000007135 00000 n 
+0000007311 00000 n 
+0000007533 00000 n 
+0000007603 00000 n 
+0000007884 00000 n 
+0000007952 00000 n 
+0000010263 00000 n 
 trailer
 <<
 /ID 
-[<74df4208521da3a896360d1d814800c9><74df4208521da3a896360d1d814800c9>]
+[<12d56cdaa079ef944641c7bf577546ed><12d56cdaa079ef944641c7bf577546ed>]
 % ReportLab generated PDF document -- digest (opensource)
 
-/Info 20 0 R
-/Root 19 0 R
-/Size 23
+/Info 37 0 R
+/Root 36 0 R
+/Size 41
 >>
 startxref
-6170
+11246
 %%EOF

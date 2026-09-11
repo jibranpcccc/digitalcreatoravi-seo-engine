@@ -2,7 +2,7 @@
 %“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 15 0 R
+/F1 2 0 R /F2 3 0 R /F3 25 0 R
 >>
 endobj
 2 0 obj
@@ -32,89 +32,146 @@ endobj
 6 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/)
->> /Border [ 0 0 0 ] /Rect [ 247 482.3125 399.57 496.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/drizzle-vs-prisma-neon-postgres-cold-starts/)
+>> /Border [ 0 0 0 ] /Rect [ 247 489.3125 563.2075 503.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 7 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/stacks/nextjs-vs-astro-for-micro-saas-speed-cost-seo/)
->> /Border [ 0 0 0 ] /Rect [ 247 455.3125 563.2265 469.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/drizzle-vs-prisma-neon-postgres-cold-starts/)
+>> /Border [ 0 0 0 ] /Rect [ 247 475.3125 284.4775 489.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/stacks/nextjs-vs-astro-for-micro-saas-speed-cost-seo/)
->> /Border [ 0 0 0 ] /Rect [ 247 441.3125 327.769 455.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/)
+>> /Border [ 0 0 0 ] /Rect [ 247 455.3125 399.57 469.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/)
->> /Border [ 0 0 0 ] /Rect [ 247 421.3125 561.108 435.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/billing/better-auth-vs-clerk-migration-cost/)
+>> /Border [ 0 0 0 ] /Rect [ 247 435.3125 559.512 449.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/)
->> /Border [ 0 0 0 ] /Rect [ 247 407.3125 380.5795 421.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/billing/better-auth-vs-clerk-migration-cost/)
+>> /Border [ 0 0 0 ] /Rect [ 247 421.3125 278.141 435.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/stacks/self-hosted-supabase-vs-managed-neon-postgres-cost-math/)
->> /Border [ 0 0 0 ] /Rect [ 247 387.3125 560.063 401.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/billing/cloudflare-pages-vs-vercel-bandwidth-pricing-trap/)
+>> /Border [ 0 0 0 ] /Rect [ 247 401.3125 564.813 415.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 12 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/stacks/self-hosted-supabase-vs-managed-neon-postgres-cost-math/)
->> /Border [ 0 0 0 ] /Rect [ 247 373.3125 395.314 387.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/billing/cloudflare-pages-vs-vercel-bandwidth-pricing-trap/)
+>> /Border [ 0 0 0 ] /Rect [ 247 387.3125 342 401.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 13 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/billing/open-source-auth-comparison-clerk-lucia-better-auth/)
->> /Border [ 0 0 0 ] /Rect [ 247 353.3125 561.621 367.3125 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 247 367.3125 561.621 381.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 14 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/billing/open-source-auth-comparison-clerk-lucia-better-auth/)
->> /Border [ 0 0 0 ] /Rect [ 247 339.3125 358.378 353.3125 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 247 353.3125 358.378 367.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 15 0 obj
 <<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/A <<
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/)
+>> /Border [ 0 0 0 ] /Rect [ 247 333.3125 561.108 347.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 16 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/llms.txt)
->> /Border [ 0 0 0 ] /Rect [ 46 171.6 216.0215 183 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/)
+>> /Border [ 0 0 0 ] /Rect [ 247 319.3125 380.5795 333.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 17 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev)
->> /Border [ 0 0 0 ] /Rect [ 304.825 115.5 413.635 124.5 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/stacks/drizzle-vs-prisma-neon-postgres-cold-starts/)
+>> /Border [ 0 0 0 ] /Rect [ 247 299.3125 564.2715 313.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 18 0 obj
 <<
+/A <<
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/stacks/drizzle-vs-prisma-neon-postgres-cold-starts/)
+>> /Border [ 0 0 0 ] /Rect [ 247 285.3125 315.628 299.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+19 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/stacks/nextjs-vs-astro-for-micro-saas-speed-cost-seo/)
+>> /Border [ 0 0 0 ] /Rect [ 247 265.3125 563.2265 279.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+20 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/stacks/nextjs-vs-astro-for-micro-saas-speed-cost-seo/)
+>> /Border [ 0 0 0 ] /Rect [ 247 251.3125 327.769 265.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+21 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/stacks/self-hosted-supabase-vs-managed-neon-postgres-cost-math/)
+>> /Border [ 0 0 0 ] /Rect [ 247 231.3125 560.063 245.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+22 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/stacks/self-hosted-supabase-vs-managed-neon-postgres-cost-math/)
+>> /Border [ 0 0 0 ] /Rect [ 247 217.3125 395.314 231.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+23 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/stacks/zero-cost-saas-stack-cloudflare-pages-turso-resend/)
+>> /Border [ 0 0 0 ] /Rect [ 247 197.3125 560.063 211.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+24 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/stacks/zero-cost-saas-stack-cloudflare-pages-turso-resend/)
+>> /Border [ 0 0 0 ] /Rect [ 247 183.3125 355.7465 197.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+25 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+26 0 obj
+<<
 /Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 
-  14 0 R 16 0 R 17 0 R ] /Contents 22 0 R /MediaBox [ 0 0 612 792 ] /Parent 21 0 R /Resources <<
+  14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 
+  24 0 R ] /Contents 33 0 R /MediaBox [ 0 0 612 792 ] /Parent 32 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -122,31 +179,62 @@ endobj
 >> /Type /Page
 >>
 endobj
-19 0 obj
+27 0 obj
 <<
-/PageMode /UseNone /Pages 21 0 R /Type /Catalog
+/A <<
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev/llms.txt)
+>> /Border [ 0 0 0 ] /Rect [ 46 720.6 216.0215 732 ] /Subtype /Link /Type /Annot
 >>
 endobj
-20 0 obj
+28 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260907124646+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260907124646+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/A <<
+/S /URI /Type /Action /URI (https://indiestackaudit.pages.dev)
+>> /Border [ 0 0 0 ] /Rect [ 304.825 664.5 413.635 673.5 ] /Subtype /Link /Type /Annot
+>>
+endobj
+29 0 obj
+<<
+/Annots [ 27 0 R 28 0 R ] /Contents 34 0 R /MediaBox [ 0 0 612 792 ] /Parent 32 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+30 0 obj
+<<
+/PageMode /UseNone /Pages 32 0 R /Type /Catalog
+>>
+endobj
+31 0 obj
+<<
+/Author (\(anonymous\)) /CreationDate (D:20260912001152+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260912001152+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
 >>
 endobj
-21 0 obj
+32 0 obj
 <<
-/Count 1 /Kids [ 18 0 R ] /Type /Pages
+/Count 2 /Kids [ 26 0 R 29 0 R ] /Type /Pages
 >>
 endobj
-22 0 obj
+33 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2166
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2321
 >>
 stream
-GauHLgN)"=&:N^l\gg]qP-SVXY/kMaPJgVa3/66:=/?*UJ/f^]RZSV'GQ3*'7i/B=3*T$%^*%X^EmEp@So-9en;HPgd0eh!"A[f.?oC^@^g,?BaTW)#SSoNLO*#dU*#f-Xc"*tiKfq,\?I*dW0LM=TIL*oeK+"r-D'()T>h=^:[4Eo`*KI;JYKmIP$[=bG*./UrYCD>teSoL,%ZQ\D:R?%<JcKW1p0i2h:6sKc\V8-E!q[AF*eUbF"R:iomo^CT7sJu$!jXZnJn8/>bHsC-iSnK`Z-W`>q/0U9a9K6=kq!T[`M9X8EYb]SR##FD`Xu!SYS:?aV%<u_K74Ca@jN=!(8=+LI:'uMYn+J8Kj.Bb"Hn$>8B*JW46X3b6co!c0O;["hpW]$j(Kl:og[YlH9rE;EE$JgR.IRP%@W#>YbUP'hSr,"V[N8=l?UWDh,!Wf*5tJ<O6__eMe^.Is$M"0<%^sB:1@*rd[$Df1NU8Ad[Z0+]n51'(50Lerd=("60MMRmaQ;?4%(1T%3;s-hb!LJ'mMWb-8=;^*"-rT)moH&>$mHA%ES@T+)YUNbR#7`M4$'q/tu7_G65eGC;l)9P];d"!_,L.ZWWT)Mhc`!8=ep7*8C*BQoZE/KOc3Dj1"3+QJFTlJ4u96"P$!"4b[.dF&>2/A9Sl,Ore4HUuEqZWCWd1@f7d;@E$bpi%I63Q-D^K7\7mJ_qCQ7UO>GuMG\rJbd4#Qj.D/Q'@)8i(TEeL<"S9qQOsC=nu^uPMA=b&EST\BWd=,#X>2):#T4*6$)/*5La*4Rj!9I]*Z'JmH%7tR`:Fg)U*]RTNtX]OE+t0pn\e8o8fY_ZJWNl_5UjeC`>$[G8ZXTk!MsL?^<q:'5X.g@m>9Ka.W]Mb<9O7[e_-7prc>I#-N)Of1p$X@,)e30&j^t.'-]B\a<*H1ak]c2&>(H8LB5djBmQ'Yg@VA@_OOCLObHIB0PlJmJGG\[m^1]q[ge4uD[!beC,T2k82qmOh$Q!/^pT8UA!2PD8TeO3D651W`<Bj`(aLg_+Gu4q0c("bLs<JrT%F%[,\K8,Zk`_pFg`;uepDdpm2)MVflaV!Cpe8dce)"eBYI3\r7O0bXUoDYXmb?f'DKUD+:,mUC)G]]D\qe$KM1i@RC<gs,kRo_17_(h&tQm!(LhRCatq,7g946ZlR169NU:;&Zr*Ej8E*YgGLGEf_*ALM8op)a\'UrpM2Mrh"[e/`T==n`J@8t3Wjs6d0/2dj0`G)[n`,0/='<BJGUM)<G/0<?9_a'V>?JX*gM(fTTZ4p%`(c&AX@U^qGmg4rOOhjI$XlF\(%_QmPl#QGJj\`QP.C)`]o)&u>ipFVV,i"tGM`I=QQf(,W)krr;=)E?UiQq0f>Xs>&kbs9O>R=WH*n,ic,N;:NKMgDWaM]%A$=#[&G]6W;Ic5^73nO5W[65*X.1!2bgKG6q4dYAP.+7@8uuZ6GN#Mirq3Od&IGF.(`Z,?Ho6bga@8R.N.`#b;k]F(o[n!^J&Iu6%T^Zb*>!8P@H$kul:um[B#JuP?IgWT?.0IPc>><'1rXQHfc3rhn+2quBW]*s2KSf9MGL>h*F;t?WNl<5g5$9!c#IM<5#aGpWqN@:B)g3'b:CVF>KSHXZk$#?3@5g/NFI3%`O,%;B%r6&BCK``C.bKefYVs(OEP288S.\hm:"3*p?INmf%FD1D7$l?';,j-l2]@WNFA4jl`hN1E=^l,n>%=4;h40hV.(A&<Lspt[h-T!Man1f@LhCX-RDjRMo6t'MgNpdH$p%'i+h(t1mo/PgTtSX?$W6X!?<=r$NYmd94Wj\EsdC;iK7!64?A1kVU.OgL*Mi+ngmNNfj?jM8,oq$.*'b;h/p,V]m7<C8(FZ#VcLu$6jU=M4A&ug0=>Mn28b$,7n]r:@A%tEoj+g3-1ebOFHoqh1l:<,n"qk2@5!JR%AWO:,E*FY,Z6)8#+gCZekF]GrGt6[;[$$a.P,uJ>L\Y8X=YUpf/nVK,[!];IBQ]+eT*r?=Z<gIp9,E0).D'gF@ur363pjuk!V;J^oJC^)CX28;B%r"m0L83V.8r%SAV]eWl+6FjHTpZQFY9)r_oEo[EflA)<9)G"nO3&OC1#Ua/\lM:QrQtT4YY^J#H\neb'=Tk`?9j5CJ?l\A`1RJr8>]^\=a_*rH0RFT)H/%VOi~>endstream
+GauHLgN)%,&:N/3lqBLGdP5Im7#H;sAZ'N`3N8hJaYOs+KHrMkaUk+MVsV6C(F10WQC)4JEI8A)-@g.I%^<b&@,[HSI`H5SZT4PgZb^fm^&ZnD4d]Tm`OtrUB/aaT4p8$@04W55]n$n._/tH"`uT[J3qg?"Tj7;q,?sp0_gIIB3\[YIV,$n(PE2'ZbOOg3S6]B\hbR"F^V]?t`VB!E#3V<pY2RA1!cT^2LPtasMS+Z=*R'!W5el:0@o1I45Wsu#6`Yt<#S4Y,J/j8q?o]"]19CT*nF/6@m*H!dp:\94OU^q9Z\5ZQN8dX2<Pmi'jt'hM4H<;VY?3'hMD5EUi3\GE>d@I4-#:p%J$+%5]!2'aE">R%5h^i+UhqWD:,)<F)^SSc_";G)n-9<]231gTU]s_\W#G;:_W*C1Al1B`W'SfB#^2A,iJaZ`c^+&22!s"JqB$I\*ciV%qt00!V^cY1rh7)iZ4Ndp'2H[V)DWMubT^4G@4#g>.1#o$6#='OT3lnV&GfFX,7WI['B1"2!F;)lgri['2%1K$9OYB-4$,F#DkQcGQ+eNA(XV7'GW:fFg2>gu9"#$BJ$HMHI)B>mXk-GGJ23/VP/2gn<M&8c^3o,g7d<*+i]?3eJS?*<6V%6HD>YH"U#kJE-Qr!q(Eg*fn&]T=<3R!m1>ebX"?e#1/:!i'/^*,g@f7R4@3*H)_dBG"3_rk8_'hr!a4:j9Nq"Fk'jZCH/Fl]npfi,V_Dr9WRB_F6!m?n^%4cF[cW-3$/gDZKKYonXfo04BFY6f!+fC[%'[\X<nlS/aZ]`tPi$Df-+(2uY^>Ls^FV/I7Sjp1<FtKr5-oE8WZX`dI&@*i!.%1")h#bl.asC4(:`A`s<ppMc5M6,1MWgW]ZdTBV\pkW@p[),@m8h8\5?`mrRX$"f->8@&dCc#+<Z(!V+)6QDLS<_=&"4eTL&o[iBnhom3qTDI_EFMlU5N]@JDo-?&$Yi.GBd?ZWGI4HX/t59WFgpn&$DrK7_]-:-ST+`7C^IVdnOt_R:C(QT(<S=@i2*`2^%\3PV$!o.q5uiV&HdmOKA*\d8gMpS8cj=Y]%5t:ROAIQh?BTRbW*nnh4>]b_PEc2?H(.>c]1*8CGFALQtaVr[O(eomsc%3;X<F/Zs$9abR]\Fltq[CA>e<(kmQZA1Z&c+r>9&11A+HWYm(:+@bAO+FF;6I(Q?6+kX-Eq1[eDqg?WoBt%9^GH,e)e?=e\`>]WEo9J1XN31DRh-8)@PEM3NBdHhkVK'c$:Er^5oRnm`>ohec#sko:4R8<2`Ut-]\udd/a_a`s65jC9QtR?&L4DacTt,jC'\*Os@"jWi]Liqg-6N"R:e=gF:1KTMi!_Ee4\t/(M5JI6;)PLX'K+Gu%/!+gG,&^f\'\7+RLUo]U-T*lk`XT<'_D>Nr_TiCR,o'WWSL/V*nC69\Z[JFIVOfY+JX-Q]Z'Q$''DYM-lTL=j*Y-#\1Km"X`AJTN/SdPGDbaA0-Kfo%oEL/EoJMuRshFVqspDC:6)c]pB_<$*Fh&:8[lbZf.2_0'Ff)$8i/q16R<iaT(j-HMM/6BbeQST>buP62!>;"WO2>]3F1h>&R8gH7%NYFW7&9^X4$q)':0?cHGu,OJtb'-C[=cQs-CkMfIroa2>^%8GA7LL73gmYC9bI3TSEopP%0JiN+b;<%:1d&28WtHiD+7)&Q(6D![]k#J<&1$Kcu80b&N/DH'bo+9;K*99,GTp*"=P-Z`8h!,G?)>_&M)@A)uQbQ><#GWNH&T=g$.Q&;cYr@>KX@.D=T[E5^nl.2>:K$ZW)e05s1GY8I1NmFG^q23LjCS"7%NSQDZ/\&YoT)S`l%l5j6COu?DW24DF:L;#f^80VK8a=L!XWV[)&h"AnMd&3);)'TFrDht):Al2D1;;UX9jBC@fl%uE%]&)JUoq"(IqbI+Ak:Ku[Dkm*W7NK._ekpbAd6L3SSZ"VdU\LX[Lqef+;]E,s('?_aW7tdS-QTVKdHIQhqX%\iFtD7o`1!''eSOKVAc(6RH@tSqp=(#e`!b'6>SD=@Sa+XVW_9?SQL)A/5D'buD2FtVFkDWcd\(bh@PE3+*k2])_kt:9h/l^9G"TM8],"Wg2JYV7o*rmMm%HS\s4g!A#C'/7feS(lPu2N-pq"O>WCgpGE$m?i-Yrg"';ZH#gA_j,IsF!OS$sX;!KRAp*nQuWn6'\+Q5VW<<HS`-@EF\Kq"u$Ji`aL_miu(XZ4]YP3,/h.8&oS%l`8*P-7SrE`I.<]?E0CJ1O7I,"8:koB9h<1@j(5/WiM]t]/P=?M+>;7WkQ-?Zf2_G:_Hbobb&3KU%]XlL2c,~>endstream
+endobj
+34 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 547
+>>
+stream
+GatU.bAItJ']%q&cE\SXN9?U;(Sh*uW@2;Ch)M!qM.,BM[\pK^ch/PLC4R,.jWe'gk;ei!Gg#@&#N/m?q0NF9U=hip,"JuZ9f)Z$P@r4S7$Zj"bVo0\^Ct.W.*rqn.`TCXFYrG-;EdNU-]H`ci&Y-!NSE=b4gc,D9+GB+\6UueHmF'P)+LM1CST!t'"CqfD_,0U;Q\[HK]NQ@,9*9\)sB#lGc1jYqWV"6=(o=AGmtqg,,lA`H*KoH!hrG$;:\YNq[eeem<iefCWHaW^T4Us5o_nk(G.eoqu5MBGW]R7`uG0(^;jYqWV:<B@XU^W>BoPZ0lUK[Y]Ib7i,FWbCH1m\SDI&%A31imS?^nHmji7,$>-MK>YH]d(Z*K6.-mhd+4c-Vl6hE*J+D'dRAfC+WL/K1<hsl`)#;8Bou#!KOTuS7`#bD_e1'ZU`b2$40/]rYRV.cG$6h\J<h*]VK\`P[7%0nt<g!/O,^pVfa'*<bVo%A`E%e7!*sWn_Igd)OD9&+"-`qdSYao9GUCJMI41UpsqB)tLd#?X2>@Z6-~>endstream
 endobj
 xref
-0 23
+0 35
 0000000000 65535 f 
 0000000061 00000 n 
 0000000113 00000 n 
@@ -154,32 +242,44 @@ xref
 0000000332 00000 n 
 0000000507 00000 n 
 0000000682 00000 n 
-0000000861 00000 n 
-0000001095 00000 n 
-0000001328 00000 n 
-0000001573 00000 n 
-0000001820 00000 n 
-0000002064 00000 n 
-0000002308 00000 n 
-0000002549 00000 n 
-0000002790 00000 n 
-0000002896 00000 n 
-0000003077 00000 n 
-0000003255 00000 n 
-0000003551 00000 n 
-0000003621 00000 n 
-0000003902 00000 n 
-0000003963 00000 n 
+0000000907 00000 n 
+0000001132 00000 n 
+0000001311 00000 n 
+0000001535 00000 n 
+0000001760 00000 n 
+0000001999 00000 n 
+0000002234 00000 n 
+0000002475 00000 n 
+0000002716 00000 n 
+0000002962 00000 n 
+0000003209 00000 n 
+0000003442 00000 n 
+0000003674 00000 n 
+0000003909 00000 n 
+0000004143 00000 n 
+0000004387 00000 n 
+0000004631 00000 n 
+0000004870 00000 n 
+0000005110 00000 n 
+0000005216 00000 n 
+0000005571 00000 n 
+0000005752 00000 n 
+0000005930 00000 n 
+0000006152 00000 n 
+0000006222 00000 n 
+0000006503 00000 n 
+0000006571 00000 n 
+0000008984 00000 n 
 trailer
 <<
 /ID 
-[<0a8dfb2c1a0a4e1a8bfbc2fc14d4b829><0a8dfb2c1a0a4e1a8bfbc2fc14d4b829>]
+[<7f2a912387da96c40d189d0b84d1553b><7f2a912387da96c40d189d0b84d1553b>]
 % ReportLab generated PDF document -- digest (opensource)
 
-/Info 20 0 R
-/Root 19 0 R
-/Size 23
+/Info 31 0 R
+/Root 30 0 R
+/Size 35
 >>
 startxref
-6221
+9622
 %%EOF

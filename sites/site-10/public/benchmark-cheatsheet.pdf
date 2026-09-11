@@ -2,7 +2,7 @@
 %“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 13 0 R
+/F1 2 0 R /F2 3 0 R /F3 19 0 R
 >>
 endobj
 2 0 obj
@@ -33,74 +33,116 @@ endobj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://raginspect.pages.dev/)
->> /Border [ 0 0 0 ] /Rect [ 247 482.3125 378.4515 496.3125 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 247 489.3125 378.4515 503.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 7 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://raginspect.pages.dev/semantic-chunking-vs-fixed-size-rag-benchmarks/)
->> /Border [ 0 0 0 ] /Rect [ 247 455.3125 563.2075 469.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://raginspect.pages.dev/colpali-vs-bge-m3-multimodal-document-retrieval/)
+>> /Border [ 0 0 0 ] /Rect [ 247 469.3125 564.775 483.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://raginspect.pages.dev/semantic-chunking-vs-fixed-size-rag-benchmarks/)
->> /Border [ 0 0 0 ] /Rect [ 247 441.3125 288.7145 455.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://raginspect.pages.dev/colpali-vs-bge-m3-multimodal-document-retrieval/)
+>> /Border [ 0 0 0 ] /Rect [ 247 455.3125 286.6055 469.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://raginspect.pages.dev/hybrid-search-bm25-vs-dense-vector-accuracy/)
->> /Border [ 0 0 0 ] /Rect [ 247 421.3125 564.281 435.3125 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 247 435.3125 564.281 449.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://raginspect.pages.dev/hybrid-search-bm25-vs-dense-vector-accuracy/)
->> /Border [ 0 0 0 ] /Rect [ 247 407.3125 274.987 421.3125 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 247 421.3125 274.987 435.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://raginspect.pages.dev/ragas-vs-trulens-rag-evaluation-frameworks/)
->> /Border [ 0 0 0 ] /Rect [ 247 387.3125 562.685 401.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://raginspect.pages.dev/late-chunking-vs-sentence-window-retrieval-benchmark/)
+>> /Border [ 0 0 0 ] /Rect [ 247 401.3125 563.2075 415.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 12 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://raginspect.pages.dev/ragas-vs-trulens-rag-evaluation-frameworks/)
->> /Border [ 0 0 0 ] /Rect [ 247 373.3125 263.9005 387.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://raginspect.pages.dev/late-chunking-vs-sentence-window-retrieval-benchmark/)
+>> /Border [ 0 0 0 ] /Rect [ 247 387.3125 316.692 401.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 13 0 obj
 <<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/A <<
+/S /URI /Type /Action /URI (https://raginspect.pages.dev/ragas-vs-trulens-rag-evaluation-frameworks/)
+>> /Border [ 0 0 0 ] /Rect [ 247 367.3125 562.685 381.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 14 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://raginspect.pages.dev/llms.txt)
->> /Border [ 0 0 0 ] /Rect [ 46 205.6 197.012 217 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://raginspect.pages.dev/ragas-vs-trulens-rag-evaluation-frameworks/)
+>> /Border [ 0 0 0 ] /Rect [ 247 353.3125 263.9005 367.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 15 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://raginspect.pages.dev)
->> /Border [ 0 0 0 ] /Rect [ 293.1475 163.5 386.95 172.5 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://raginspect.pages.dev/reranking-models-cohere-vs-bge-reranker-large-mteb/)
+>> /Border [ 0 0 0 ] /Rect [ 247 333.3125 563.749 347.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 16 0 obj
 <<
-/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 14 0 R 
-  15 0 R ] /Contents 20 0 R /MediaBox [ 0 0 612 792 ] /Parent 19 0 R /Resources <<
+/A <<
+/S /URI /Type /Action /URI (https://raginspect.pages.dev/reranking-models-cohere-vs-bge-reranker-large-mteb/)
+>> /Border [ 0 0 0 ] /Rect [ 247 319.3125 305.064 333.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+17 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://raginspect.pages.dev/semantic-chunking-vs-fixed-size-rag-benchmarks/)
+>> /Border [ 0 0 0 ] /Rect [ 247 299.3125 563.2075 313.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+18 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://raginspect.pages.dev/semantic-chunking-vs-fixed-size-rag-benchmarks/)
+>> /Border [ 0 0 0 ] /Rect [ 247 285.3125 288.7145 299.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+19 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+20 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://raginspect.pages.dev/llms.txt)
+>> /Border [ 0 0 0 ] /Rect [ 46 117.6 197.012 129 ] /Subtype /Link /Type /Annot
+>>
+endobj
+21 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://raginspect.pages.dev)
+>> /Border [ 0 0 0 ] /Rect [ 293.1475 75.5 386.95 84.5 ] /Subtype /Link /Type /Annot
+>>
+endobj
+22 0 obj
+<<
+/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 
+  14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 20 0 R 21 0 R ] /Contents 26 0 R /MediaBox [ 0 0 612 792 ] /Parent 25 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -108,31 +150,31 @@ endobj
 >> /Type /Page
 >>
 endobj
-17 0 obj
+23 0 obj
 <<
-/PageMode /UseNone /Pages 19 0 R /Type /Catalog
+/PageMode /UseNone /Pages 25 0 R /Type /Catalog
 >>
 endobj
-18 0 obj
+24 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260907124646+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260907124646+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/Author (\(anonymous\)) /CreationDate (D:20260912001152+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260912001152+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
 >>
 endobj
-19 0 obj
+25 0 obj
 <<
-/Count 1 /Kids [ 16 0 R ] /Type /Pages
+/Count 1 /Kids [ 22 0 R ] /Type /Pages
 >>
 endobj
-20 0 obj
+26 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2044
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2326
 >>
 stream
-GauHLCK&tI'`FV1EG%=2dLJ1$hp/\2Bq$^U)RB=[9ZOE'7)c@`EZj2os1VS*,68Fdh.7B.n_E>JFRG:Z;$^k19B?*q"ur0iaZBPlLY2`bWL>NQJC1ImX[hZBV@AQZ@q1Is`3_AI"k@Qth690;FCNoEjNASS7,"n_R)M%f%W4/*(plMr>`YfCZf)(XN\8XA9SV$Ri9#?-2L^Ftg%ahFDMdD(Y3@j'cGq."#%h4Np/V1iKYNR6l)k$Z,\jqp"n`HKCl3abM*o),21\EN/6mpdn"*!2)cU:9Nb7<dTKaI2+"'KH"$V5Q%9<cCr!:SKeE=f.;@]m=Qj5.]Ysk)0#&+$ba[4\bgU=aX!)8$*=:IG\,X1%(9nOSCncr-X&BD4)^.T6CkWhlgo-ZWl!F`l'b@ng,MJ12oN[7?:3i+rOFH&pQV+InKrVWgK5G@N&9\@*`/6K]leaLtFkC^sn@0o2K`HbJm:/5hZaXZl2b[8db%I(Hf'7<AH#i+J+@o%50>B=`rf<B?-1F2-=@/@U(aDN_7\p0:oB$YG73CpF(;J\m]"f%q>;NLG.7(PYma,m>F.Z>E^:ia"AE)XbIg'4N=961FRb#`;E7d4sB[4jnjF!QLC=qXN27fo7fLkOf\AU9g%k$.nSX]PV:(#ci&?05cVLFc6QW4,)UKOqr%R_ZR1n1hjF?W$_Kqo*8?,7OE?#V#K@7<=D@Kk,mF$<X+7OAN8/78l(gF=ed**r8+%.i$?D_3PB:j`iUJ0i4>!bhl#WiJdYs;'4uX'YFX7dl?Hr`g)G$IY<g%n3PI[d3K2Dq585PEj;WX")F@3"iK$33<%WEO["nGquR,r,DEIk*lE2jV[CcK5Q\]uF25FXN&+]rP1FN(-5.CLh]<6o%dD92g*r0L4Eqc%p)RYX/7Dh<cODt23Y,]u'3%VX.t<PXU7$$Snf^f3i\4=5L0a6ueT8YaOVLqR4C,TmQEUdRm7C,.@KD?]0En\*gH0f2p1+1jhIWD-lftg_C)aX=gb&I31n:6&$L6[1$Vq;fSSl$Im<Hos9GX-e/@^nlR*l/_;6RT[2;,58KSQ/m#gnqD**9K?,_rmjGI@DP<BN=BCI+fm!,cbni[tPkP-V^U%]2b!Qi(<\2Cl^-=R/l@Fc`48`.0_5e,]1oGs>T\-Z9:CSho[6hQ[;(.Q?]UKir^lPGdbh'%=_o8R;m:lQi@+JLa"q>Zhlc638eO\:U99q%!&n]^-ilE*e(A&"@ji655a@1rCFanJp<mi,k\tK%k@8'O(h6=mE5TcPG&\bNDLW<iXEIb[]HAKSBQ1ZBcmR5M5B;\Z/C[?\$>!^Vn!@Us8K$!g-I[d;4InE3NP.qm2gg@9")Tao#MUbQVlM+4'Hg9aW==;7K85"-c7Ba7MQ4d3$`s7soaPTcLI^7pna')BS49FJcpH+enkB#fO"WLaV01>3BKScE2ri[])H=hNJe"'?-k-MFjnEps_]K[gqCb'/RinL(@9Xf;b7WHSa-Kk69SDX??a@d-[/Jd"Vmk?&plU*_i*IE.=:%##E8Ol_7VlaK)6/`2oaab).eM/A0#kDI&IF38J_&kPjO!U,0Te740TqrtTA;ck\</b=)+X?u_Lp>l)fWpfa?>$L%V,h9dkZ3nZ/S]C"Li)8Ic4hRZf7,:Fe9c.8*NrBND6r0W43oV(H7\/)`+-1JrPJ[Vj8NWsIPpq`_8320!3V(CRLhR,S.rb<h&clqr6r]Z:MD`T[_gO"UJ)_Z4L0iba+BVO:XAWHZu3?$q'.B.WQ'#L-:0]pefVh^2(^nVc3@:"CnBs5^*`:+rj6CELO&O?`@A3>3lnU^r(W)aj^$JP#HqQJipOSFJrO=$J]E5;@qNcF4krdT7G4GffB;#*I9cllI#_e=BGiaV3L/lDg4b;_g$)^VC]?=PaqiW/XPHV`%NmTAbIk.^&$qo%=Rp5,iL[AB,NkJ+b5'?aDMR8j&tR[lLaL7f<YB@]IR(%[$U>MULR[k^$LrPG2)ntrjp^:!cu(*(kTEZBq<3D;>^?Z>YF=BGp33V$C;Wp*0*N<$Z,!N,tTCB~>endstream
+GauHL=`YKO&:WeDFB,=lSFWh+p&s66KP_@+'d1VVW`%%.!+YDIB4d9jj1hL)p&I[g-)]f0+]ci-?[pn\`t5KE7J,Ic"h7[Mq0N1]L;aLUCV$a;^hD-kg*,!;f8%/HEA5O/id+Y?#H#u9fo?;Lh^4rP#JTWa6DRc=LII*dg<_@:<Ju#je*HO?Ho[_4`TYe4a6@R:1X*$mQfIfg>`:msJf>=*?sC&MUT:Y_]S4<@=T#)trIV5nT^86OogJ*>X:jeC4?+#Ufc#WtAQoM.BmHY3Mk>EUoR/EMmfo)=g-Bj?r%QF7Q:>lp$Q<k;(53'"DJ1H;L/J=r@*#)PP;o;pZj,7_:p?=q_=kSA&V.%$8%]`^+W?snoN[.og\M.KQ]T#W1qla:g<bE-8D?p9kQ8VUCUU&Gb:'):Z<NWs&aPBJcKGa<\=d!38OIqWi,>RVf,JltY?!2`39o,KjS@e=E7tJg]9.+a#3Y/3>dKSUEuV9]0Oq\0jTOJ0'*<CQri'B3IGYBNPFggfIC,*mbCS?%:8Xqci7[BOJbbGi88saOTV:#c'IuZ/5a`\f_i8Jf3.[j4+XW09BiIX3UG+?!,jbW3]Z`Bi.@$AbcBEYSd&*0SjuF'p2E_MHnj`b0,u=fd?dJ+DG%5RsA?fPEAE/>eb3QLpQ?(XKI#%\Je3dJ/P3!Q4)[!j-1mAr:J+UB1O(j3_0T.*pfqB=Eo!NL@jY-a:3EIh4X(5>0A[sr78\9WC9E!"d.k914UTn-dB'9YfEnpJ+&S@3J:bs$Lh@DqRJ2g8E8Ln&V)B:(0=Y1_P)NU_7KZHAP[u;i>OpBW:c;k?t;sT+KO<rj@_=[sa)CC2L.=DGN;P"hjLQMdi8!eaL9pfIi23QN1K\@%j?G6pZbmA*nT@rKRANY2eFcM0\Dg#RDK\pNf7[5!Yr_rHT">t[]VP7;T9%cR%/o_dZ!B[6mg$Ar99k:)53IP+[C6gO_W8hU(SlWY2$(:ip5B]dlg5\onaLb1]G*RIc[._=*)H#s@#o_+:kl_GMpqkKfHSE^Qp(OVH7q9AH_P19%)Det!*<#PLY,*MsJ2$1iNtC]8^icb/^)XQT'9e\OrP5h@CcELi7L!c$0i+bUOsc+<RP[+?0EIg$[Ojn>T>]Z_f/YM8RIj8AI[MS8@DZD"i8VYqQoY>:(($SZ4N7qQIJ(=rU\hh^Bk:n;l\3QQ#1lIAPUB['DX<%]>Z2kiN3iV'`-G=X1m:B2T@`R:3Hb2%_!/mp-"esVb9M"/PRQJZC3pDe$,+r9!6MujkHr(uI6$+sj@4E^NFcjOMVa_4Jf6]jRWB^4U'?*udJKW&:Wn(g4t!$d89%2O*%e4CL%.7Jir&5TM[j.Ic=_dqqsp-tE[.TG.k3uIr(\Iq9!<%F5j1[9/[Q*/OB:@_(9TA<,G,?M9[Lf#=s7r<:,"UIe/\?@@taV\H#6r;?WsuAY3;)io1p\A'H#!\Ks%)-'b=5hQg`9"X_8s.H$Ss?#oF%+Q1\ui(IXVc#1FH%2'-A=i7-/^r1A">'(U1q.l9]E25Wcb3nl02SSu_4s-6n";gE1^TGiqnViJ.Gf6aFW7\\Be;G!4W1r"XccEVQ4Ji.ig%c4O=)B3bkk8mS#oftC<m@=//P_ohBUL:=S\-:mC%ZCY-_-[rFa6<F-hd8FsJ,+8\E$B$)laXZH79)R,W:$+S0@b3;H;]`*e#GENX&_k'a->IFT4qfK=@r%^O]maog.P"6YFqI*WT2T.HtoJ@$C)<tC8p*kK_SBeS9c]`hT<2uXQm.3qTJK!hY)RH28/DL?DFBA9UHm0F]3EtFC,q.YABiI;\aOWa&d02YI<\r>tJ2>)nu1A*#m[><Q;(^g.V6o/!loP>mG\@lfqrjqZH1HW'+OU'q&geJ>M"j9AR1nK.d:qZ^@ngMRW3gJ^r!e`4G3i]H+cuE4p1;Oc650FA-QR>;qL_Z\`&<G`@"Il4`H7`DHhhSI+XN$ZS(TZatiQHO"1?Mmk^iUlr3XZEo%L9t&\Rad_]QN&PZZ/J/u7_]nO5/#$s$'\A#a>FHH$]\pm":h'!&(7M6^kX&B!Wa9#@j*B45P'BLde?S87[i!`911=XEftPO:aoPcbVW5W?N"Zu+lHcQj@It(?h6IL1JAc(5U)[s;HO3@cpA2)7s'Mt-cBBLgVS"Pu3n;<h0\P?Y8@<S_I3Bf[[Lsa_K>K(f2]l8#EJ4<l[B"$b4m9bXML3`s5sQuA`(0[h%]MS/hQ'nM"dXGXb5P<a#F1Dl74^Kk>LDMs]ITFgClah4\-E7e&h\6R[I[4$o7"o;Wr13]8*XIlZ\KqC'#kfT;Z\I$h8,=C?h<+d3r]7:C@Kg~>endstream
 endobj
 xref
-0 21
+0 27
 0000000000 65535 f 
 0000000061 00000 n 
 0000000113 00000 n 
@@ -142,28 +184,34 @@ xref
 0000000673 00000 n 
 0000000849 00000 n 
 0000001072 00000 n 
-0000001295 00000 n 
-0000001514 00000 n 
-0000001734 00000 n 
-0000001953 00000 n 
-0000002173 00000 n 
-0000002279 00000 n 
-0000002454 00000 n 
-0000002627 00000 n 
-0000002909 00000 n 
-0000002979 00000 n 
-0000003260 00000 n 
-0000003321 00000 n 
+0000001296 00000 n 
+0000001515 00000 n 
+0000001735 00000 n 
+0000001965 00000 n 
+0000002194 00000 n 
+0000002413 00000 n 
+0000002633 00000 n 
+0000002860 00000 n 
+0000003087 00000 n 
+0000003311 00000 n 
+0000003535 00000 n 
+0000003641 00000 n 
+0000003816 00000 n 
+0000003987 00000 n 
+0000004311 00000 n 
+0000004381 00000 n 
+0000004662 00000 n 
+0000004723 00000 n 
 trailer
 <<
 /ID 
-[<cb3cdca3bc85d5b4923a299bcb05bd45><cb3cdca3bc85d5b4923a299bcb05bd45>]
+[<2f1ff9eb5aab7c7182a3d5145f721609><2f1ff9eb5aab7c7182a3d5145f721609>]
 % ReportLab generated PDF document -- digest (opensource)
 
-/Info 18 0 R
-/Root 17 0 R
-/Size 21
+/Info 24 0 R
+/Root 23 0 R
+/Size 27
 >>
 startxref
-5457
+7141
 %%EOF

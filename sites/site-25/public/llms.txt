@@ -1,0 +1,12 @@
+# APIGatewayMatrix - Cloud-Native API Gateway Latency, Plugin Overhead & Reverse Proxy Shootouts
+
+> Authority reference dataset and benchmarks for Cloud-Native API Gateways & Reverse Proxy Benchmarks.
+> All metrics and guides are 100% free and open-source.
+
+## Core Architectural Guides
+- [Traefik vs Kong API Gateway: p99 Latency & Memory Footprint](https://apigatewaymatrix.pages.dev/traefik-vs-kong-api-gateway-latency-benchmark/): Complete engineering guide and technical benchmarks for Traefik vs Kong API Gateway: p99 Latency & Memory Footprint in high-performance production systems.
+- [Caddy vs Nginx in 2026: Automatic HTTPS & Benchmarks](https://apigatewaymatrix.pages.dev/caddy-vs-nginx-performance-ssl-automation-shootout/): Architectural analysis and total cost of ownership shootout for Caddy vs Nginx in 2026: Automatic HTTPS & Benchmarks.
+- [Envoy Proxy Global Rate Limiting: Redis Service Setup](https://apigatewaymatrix.pages.dev/envoy-proxy-global-rate-limiting-redis-config/): Step-by-step implementation guide, code snippets, and automated testing procedures for Envoy Proxy Global Rate Limiting: Redis Service Setup.
+
+## Interactive Tools
+- [APIGatewayMatrix Sizing Calculator](https://apigatewaymatrix.pages.dev/): Real-time architectural estimator.

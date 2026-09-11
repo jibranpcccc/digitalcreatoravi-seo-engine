@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>AuthTokenAudit Research & Engineering Feed</title>
+    <link>https://authtokenaudit.pages.dev/</link>
+    <description>Token Security Audits, JWT vs PASETO Vulnerabilities & Passkey Implementation</description>
+    <language>en-us</language>
+    <item>
+      <title>JWT vs PASETO: Cryptographic Pitfalls & Header Confusion</title>
+      <link>https://authtokenaudit.pages.dev/jwt-vs-paseto-token-security-vulnerabilities/</link>
+      <description>Complete engineering guide and technical benchmarks for JWT vs PASETO: Cryptographic Pitfalls & Header Confusion in high-performance production systems.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://authtokenaudit.pages.dev/jwt-vs-paseto-token-security-vulnerabilities/</guid>
+    </item>
+    <item>
+      <title>Refresh Token Rotation in Redis: Handling Concurrent Network Races</title>
+      <link>https://authtokenaudit.pages.dev/refresh-token-rotation-redis-grace-period-handling/</link>
+      <description>Architectural analysis and total cost of ownership shootout for Refresh Token Rotation in Redis: Handling Concurrent Network Races.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://authtokenaudit.pages.dev/refresh-token-rotation-redis-grace-period-handling/</guid>
+    </item>
+    <item>
+      <title>WebAuthn & Passkeys in Python: Production FastAPI Guide</title>
+      <link>https://authtokenaudit.pages.dev/webauthn-passkey-fido2-fastapi-backend-tutorial/</link>
+      <description>Step-by-step implementation guide, code snippets, and automated testing procedures for WebAuthn & Passkeys in Python: Production FastAPI Guide.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://authtokenaudit.pages.dev/webauthn-passkey-fido2-fastapi-backend-tutorial/</guid>
+    </item>
+  </channel>
+</rss>

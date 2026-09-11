@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>APIGatewayMatrix Research & Engineering Feed</title>
+    <link>https://apigatewaymatrix.pages.dev/</link>
+    <description>Cloud-Native API Gateway Latency, Plugin Overhead & Reverse Proxy Shootouts</description>
+    <language>en-us</language>
+    <item>
+      <title>Traefik vs Kong API Gateway: p99 Latency & Memory Footprint</title>
+      <link>https://apigatewaymatrix.pages.dev/traefik-vs-kong-api-gateway-latency-benchmark/</link>
+      <description>Complete engineering guide and technical benchmarks for Traefik vs Kong API Gateway: p99 Latency & Memory Footprint in high-performance production systems.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://apigatewaymatrix.pages.dev/traefik-vs-kong-api-gateway-latency-benchmark/</guid>
+    </item>
+    <item>
+      <title>Caddy vs Nginx in 2026: Automatic HTTPS & Benchmarks</title>
+      <link>https://apigatewaymatrix.pages.dev/caddy-vs-nginx-performance-ssl-automation-shootout/</link>
+      <description>Architectural analysis and total cost of ownership shootout for Caddy vs Nginx in 2026: Automatic HTTPS & Benchmarks.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://apigatewaymatrix.pages.dev/caddy-vs-nginx-performance-ssl-automation-shootout/</guid>
+    </item>
+    <item>
+      <title>Envoy Proxy Global Rate Limiting: Redis Service Setup</title>
+      <link>https://apigatewaymatrix.pages.dev/envoy-proxy-global-rate-limiting-redis-config/</link>
+      <description>Step-by-step implementation guide, code snippets, and automated testing procedures for Envoy Proxy Global Rate Limiting: Redis Service Setup.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://apigatewaymatrix.pages.dev/envoy-proxy-global-rate-limiting-redis-config/</guid>
+    </item>
+  </channel>
+</rss>

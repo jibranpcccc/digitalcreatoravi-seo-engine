@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>PostgresScale Research & Engineering Feed</title>
+    <link>https://postgrescale.pages.dev/</link>
+    <description>PostgreSQL Index Sizing Math, Autovacuum Tuning & Connection Pool Architecture</description>
+    <language>en-us</language>
+    <item>
+      <title>BRIN vs B-Tree Index in PostgreSQL: 100M Row Benchmark</title>
+      <link>https://postgrescale.pages.dev/brin-vs-btree-index-postgres-time-series-benchmark/</link>
+      <description>Complete engineering guide and technical benchmarks for BRIN vs B-Tree Index in PostgreSQL: 100M Row Benchmark in high-performance production systems.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://postgrescale.pages.dev/brin-vs-btree-index-postgres-time-series-benchmark/</guid>
+    </item>
+    <item>
+      <title>PostgreSQL Autovacuum Tuning: Preventing Transaction ID Wraparound</title>
+      <link>https://postgrescale.pages.dev/postgres-autovacuum-tuning-table-bloat-prevention/</link>
+      <description>Architectural analysis and total cost of ownership shootout for PostgreSQL Autovacuum Tuning: Preventing Transaction ID Wraparound.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://postgrescale.pages.dev/postgres-autovacuum-tuning-table-bloat-prevention/</guid>
+    </item>
+    <item>
+      <title>PgBouncer Transaction vs Session Mode: Prepared Statements Guide</title>
+      <link>https://postgrescale.pages.dev/pgbouncer-transaction-vs-session-pooling-guide/</link>
+      <description>Step-by-step implementation guide, code snippets, and automated testing procedures for PgBouncer Transaction vs Session Mode: Prepared Statements Guide.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://postgrescale.pages.dev/pgbouncer-transaction-vs-session-pooling-guide/</guid>
+    </item>
+  </channel>
+</rss>

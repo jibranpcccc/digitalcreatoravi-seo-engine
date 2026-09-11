@@ -2,7 +2,7 @@
 %“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 13 0 R
+/F1 2 0 R /F2 3 0 R /F3 19 0 R
 >>
 endobj
 2 0 obj
@@ -33,74 +33,116 @@ endobj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://site-19-nine.vercel.app/)
->> /Border [ 0 0 0 ] /Rect [ 247 482.3125 383.7335 496.3125 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 247 489.3125 383.7335 503.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 7 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/)
->> /Border [ 0 0 0 ] /Rect [ 247 455.3125 563.2075 469.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 469.3125 563.711 483.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/)
->> /Border [ 0 0 0 ] /Rect [ 247 441.3125 357.333 455.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 455.3125 314.5735 469.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/)
->> /Border [ 0 0 0 ] /Rect [ 247 421.3125 561.089 435.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/delta-neutral-liquidity-provision-uniswap-v3/)
+>> /Border [ 0 0 0 ] /Rect [ 247 435.3125 561.621 449.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/)
->> /Border [ 0 0 0 ] /Rect [ 247 407.3125 328.8235 421.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/delta-neutral-liquidity-provision-uniswap-v3/)
+>> /Border [ 0 0 0 ] /Rect [ 247 421.3125 269.173 435.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/)
->> /Border [ 0 0 0 ] /Rect [ 247 387.3125 563.711 401.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/impermanent-loss-vs-fee-apr-uniswap-v3-formula/)
+>> /Border [ 0 0 0 ] /Rect [ 247 401.3125 563.7395 415.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 12 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/)
->> /Border [ 0 0 0 ] /Rect [ 247 373.3125 314.5735 387.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/impermanent-loss-vs-fee-apr-uniswap-v3-formula/)
+>> /Border [ 0 0 0 ] /Rect [ 247 387.3125 292.923 401.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 13 0 obj
 <<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/A <<
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/implied-volatility-smile-surface-black-scholes/)
+>> /Border [ 0 0 0 ] /Rect [ 247 367.3125 564.2905 381.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 14 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/llms.txt)
->> /Border [ 0 0 0 ] /Rect [ 46 205.6 202.807 217 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/implied-volatility-smile-surface-black-scholes/)
+>> /Border [ 0 0 0 ] /Rect [ 247 353.3125 274.455 367.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 15 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-19-nine.vercel.app)
->> /Border [ 0 0 0 ] /Rect [ 305.6425 163.5 404.02 172.5 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/)
+>> /Border [ 0 0 0 ] /Rect [ 247 333.3125 561.089 347.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 16 0 obj
 <<
-/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 14 0 R 
-  15 0 R ] /Contents 20 0 R /MediaBox [ 0 0 612 792 ] /Parent 19 0 R /Resources <<
+/A <<
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/)
+>> /Border [ 0 0 0 ] /Rect [ 247 319.3125 328.8235 333.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+17 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/)
+>> /Border [ 0 0 0 ] /Rect [ 247 299.3125 563.2075 313.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+18 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/)
+>> /Border [ 0 0 0 ] /Rect [ 247 285.3125 357.333 299.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+19 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+20 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app/llms.txt)
+>> /Border [ 0 0 0 ] /Rect [ 46 117.6 202.807 129 ] /Subtype /Link /Type /Annot
+>>
+endobj
+21 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://site-19-nine.vercel.app)
+>> /Border [ 0 0 0 ] /Rect [ 305.6425 75.5 404.02 84.5 ] /Subtype /Link /Type /Annot
+>>
+endobj
+22 0 obj
+<<
+/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 
+  14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 20 0 R 21 0 R ] /Contents 26 0 R /MediaBox [ 0 0 612 792 ] /Parent 25 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -108,31 +150,31 @@ endobj
 >> /Type /Page
 >>
 endobj
-17 0 obj
+23 0 obj
 <<
-/PageMode /UseNone /Pages 19 0 R /Type /Catalog
+/PageMode /UseNone /Pages 25 0 R /Type /Catalog
 >>
 endobj
-18 0 obj
+24 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260907124646+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260907124646+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/Author (\(anonymous\)) /CreationDate (D:20260912001152+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260912001152+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
 >>
 endobj
-19 0 obj
+25 0 obj
 <<
-/Count 1 /Kids [ 16 0 R ] /Type /Pages
+/Count 1 /Kids [ 22 0 R ] /Type /Pages
 >>
 endobj
-20 0 obj
+26 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2060
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2307
 >>
 stream
-GauHL?$"^\&:N_ClqD%!mDP#r@iOS_-)@@r8Q.tQPaRPA"K4%5[H44>O8jZij:=dJ82JN(+^iW*XcC[JmB0i-iPkG%ZljZRVYt!obbjop=P)ofpk/k3erLTIT'Uda4#S.7c"(,3$@65D]q4W$A-Or5]n!Ck$]\?LgS=9?IVnA8DO&\ri:MCV)YO\;khY0us5EThoESZl&,O1R(rsNiB6;7CT5;^EBQ,e-Q8^Z":?/ejctC#ZK!K_1e30kaZV%0?nDI.DZ8E*qbI/*;drM^P0!9cE!fp%;Fa_HNC8g_fj8AbSaGV_fJ+DrV`]T\;+pqiFcZpr13TlQ3dpX$:L#e@I11$aC]J%3Vn&"M'_%r8@"d6DR8B*JWg[B8*#0QT\R9dg[cda/a6o='3H6O@t4eP07Q;XMM:3m@05T]H*6,U[)B8\J&M56=lcfm9NF8DB+iUqSh:Xc;!"P3B[FRmef2EWSolHH)0jp1e\3ES"<?mHrTjpfW\*h2,/\W[c@2(OW'nc%/rrP5aebgUW<4$]J2F:O;e[h:i?6*@>m0jSU8a8AG!p)B/89sWcclRN-H5"oKKbjc^e+D0'[-]\T`DE(o9Maa#8^hH$X31Y(M:FBkHc;qOmVRUo-`3E$<K;iD'-r:*_Er<Q*^p9H..j3l_a@S9F]N)OIL'T7\Zh+HZbLOk5LfF$2MC6dk=Kh<Z=s265+*u]dSa[K90UYapd@kk+p6cP1N+h<09s\"kCJ@#F-55:u@[?M?p:uk0]^ZDOr@#NN$5mRg6d3!]AHa7;McB6S8ZEgA@t<Vq'@D."&7kCO;IjMKnVSG;0bp'H\Hm+?&VjFB>j(Sm`eG08^.6hbW?JT%\e`DHDYY"jLp<$C9*@VAn8$a%W;9g]BXYnJLm^=n;<EE+<bGY9HF@L(PJ5T^%B;B9&l,-]R$V7B9B/R^6YEItEN"g9YM)Q[i2^F@R\&UD[^p4ROT3jcA?N*P@+Ym-T]t4^j!hF5.hB_Q'uI,rcGlkIC^e!A3[JInV\.7#LkJFq'C<^mgKG+M&fEG\oj\S>COM0:P\8VcRq"$5YQfbSBAGk\-3AWJG=umWn*WBJT2<M=(lC.&U3Wa_Yr,ZC\o7;qUZ'VdA^@I(h%K5^euD2(OhLK2Kn4Qo?@\LuM9'VQ-/COOY_Z50m44mh'Cc/J(D</1RG?;rI[-??naj:?9'jQW@mh9gNOZuG#U"$C=6\1iOZj4b[A\m]!o-5LZ`Tl`Qf:JR+\EVX@-/aj_]Fg#>_Z'^'Q0(]ZqA2hLiu[$_trgN:.srn9OTmN$G.GrFCV&<)tO7pT?PfO\IQLc8Ui+q0>MBg>:jDYa$ha\\TWX?d2u[$!1<:N:3d8XB=u"rnSVt=04H.8h3aMT%E4\Hf$M77!h98[>.pl?/&C8&U&0R]e:,@5HOE!+BDW#l<a_U6"M0.a4WG$i2K`N'.u1]7c!8`S3H][M>;i*&^O8))3F6RA?"6=5.P'q%X4OD2\>a=?\$Fti[+SJ?PIf=$I=>;I*S9+FdiI1iM43k"]$"h,\Pq&"ktZ?+]s9eOB>\4Za"'FZeMMiGQ'HLInC5421LIUmQ#YnuG:DE/C\b@D*U6WKeA\fdMXIlLCXb0j'%O?$;Il4fh6HCqpDe&(KMRH^KQ.#eIT-+A`e)CZjdQ?u7H[C[gBb.2UcQPMOmY3f"j)9ns6'k!_GMnY^Y1^%d3<KN:qLTlgO%H4a^gfs7(*UEO6n;Q:\u7+h&(1cf`q'=c-D,ihA3r[>8-tA"k,?V?1>eB8./h%6]%E2WmIYrf8pUTXpI)8D>BX9XXL;Y8WQYi_ro!=/9#Ku&@)^r%k5ulE-qoNM*Tn@\QQg+d*>F/lZP65U`pd;:g57G.1(d'NQ/`T9YYR*h2gSbDT\TJYK(s83fM[G.&gg^:,7*ZM5:>)[:^V(I0a#V77U0[e[_[bq*m^m<V5H9cO-b_mB"*LQ<?)@3gK^DOdWaCF'FRgh2epM7G:W*6@I[I.(:I/&Tqg"XSag9riSHlY>Tf$>EutuHq8>/j$At5[7_$o<>=SYL<29i2(S<[/*3NZr::#urWQ7FpXK~>endstream
+GauHL>>s9;&:Vs/fU:#Mg;1e7@lrh4L<ue&.##$(b]FOh8_!T;9+K4Wr:dO\0+!^W3/87Tp2"jHp=kLK7DQcIUAp!'^tUR`Se</(N+YD%Ae2mo0H>:cF@\9pkCN*S3#H3Rl+'jA#Lhr3D8uf9Y_hZLOO$"u&8B_h?l\4<2Y>1(eY:mYq;pgT1cR[O\&4-?qt&jK5N)BY3#J3\E'3uA!B7sk_7".jL*n2lGn&eP0RfbsIDXmRT^9AoF\h;qXV0n>4?+#Ufc#WtAQoM.Bt:03&"eDA!Y7uaomFqMD4pbYBC,L3/d`Ne5?WF<@hp[0*mt;u$V$sp0IC3=Nq75+,n":HZPm]T?,<G?%D1d->>Y#-8E/2C$.0l4^Ya)<;QbMblk/6(Xp00f_Z`-M)egP^$!m=n8Y.71Zjm.'T!2-'UGub/9G<^_3(nsUF"/!q2cS8lrOO(`1ELSdoCLMc_mQm[[i7SV+_<!\%M&`K@Z\ArGf%ZNb<m&51s9'*_2i2^^b("!FA+pg/0FWN40BTsU%EL<>eTGKH<L`[Xe$,0Dcr+q4%],bOr[9&ij@l!&&A-_,MOB%mq@E2$,`Ad/0nRX\1Zd.jt#M7OQHtsR9ZQ:1eQr32T6@h&!8i[l"Vo;>7q4+5a`Vlgg4CANR\c*nU_.1N>p_(^WS#D's]r-U;mT51+bh(I@.5a>ThVdiW*Gp1rFfh?CXbnKL2,$+iW,6%7g5!3GjH#&hluMg54BErO=YOpmp@7KMD+H/=GO5/B>GQ'JtqW;U$B(h,ZjC&98PaP#Y%N24-i=P0'5LleO"Qc/O]F8qgp^kYQZHE?hjo>uD`k8VB_E>`V@/j=r^rN8)jD3=WapA.H(b!bfN.99(JG6]L-X['t;Q]l_VS7D$O_<i7?e^jW2g/Uoq<Bl+Nte.`?B4"(`ed6AgURZV1$M6_o^<an!e!k)J3Y8R+-9r+Y)3J"<(ROZP].Nn,MWtd=)Jp)[tS'LF9gX.AZP-7Xe]/k*n[._:))H#s@#oX<4M?ua,iPPNr].qR=ee:i(NgUah&J)Wls0uMoQ=F<=cF*;_)A$LAlOKXH&\+uDAX'=j^1X`,\2X>d3X2cXiuoa=Gb;tm^@U1DK[usPnVJX^c>=ZFbD//fGj'Ct(7ulN]BRLf,T$a].[)<O(<KO$iYBG25L(Vr"*DgrY6jk8(.i7GYbIDM#1HM-WSp%5R8<uEAgMBudhFTO%G[=c\-XZrUHsnXBZ4+220;T1V:GsElqtAPBIH5=&Y/A5\1O$t\5_XC:o?UJ2!@+N>hmc`#I.mMJb@4>?1Xt-Me_TJ<b"&q%Cj6H),$lm;TjIhDlm,nV=X2X4&,=VLt7CUYX"lKI+F[64eI+]eqam>YnY3:TuUbj`?Z)K5^//iWD"8+5'[/qOi9k^7UOT"l;Mp2f.k=9]SApU5,7G6g`=`i/C^W*Q.-`'DrFZ(2jOnr6R_;U.$5I4#`B*YKT-=s'MmC?:7Z70l#Sk%$@Re3.9p@sP[T;-JFS4_MC3dB=.>%hQ*g,H4S,NImsLuYDI]hg,Ae`E6Rp`U:_C.@BOJ12>^\&s9"]6E#d#a!qL]JtKgbAlh8lX4:3CGfBD$J2g'"lpKH%-S;Q<=ulU,DC7tam\V>3#i5N(^/#FdBmp(_Vt_nqQhd%.+M`Xq<M;ZOhK"B9<>.r4u<Vs`#Kal\u]gP7S%/0-5i^,8fhO]lNLn`pq>>9e:'>)I6X'MVn*nZA+'rCVl![EPVZEpB33X2M$02:bP6bBr"8\!6Wqdsm5FhD'/jeb!tHWi+<?l#_97qZ*3;`iG9:Em131-;_=;ZD9EAp#e@oo_MQVYL[Ekl8PkOr7[PZkZ?'2lg!mg\CXT[;8ZCrW;[7Q?.3'Dk4J_g$*7U5C^+]IUB2J5X,;P5,e3*q]KUpKWn+.Qho<XQjrD2W8OM<]i[U<l(^s.l:a'!&$2h1aYVRlLrXnMKIHCG/m'C5kV*'n;8'QqgNs+G@5M1SJPah)!QoD3Q/`L]\cQ^'Y2au&3R%B-D4\Lb"Zp:^3/?um['`+P3%p^VhTH5f6*I><oPYcVG;lZn=)WT"M&ok1lUl%Su)BW6&c:?nV(sb2(0YtsOSq3I2<-N?&,J_G@X"hh>P5UW\`TA1+;i(I7CT>9#MM3L/Q>>l&n)660hks#QHZc;2_OP6O;5opK8([JYR8Q(6YH+*o23;\Ik$^]nBY?;H(>7[oJ\"K(j4SjCb;8$2[i*o3DeHhjZ_P$!hs49!\L$p+VAn89jfRtLQp7@0<8[PRb,aFoWDEgO3os2Wk]*m8WK8f+AiW'H6Jo)76XTU0&j$$or;?R-~>endstream
 endobj
 xref
-0 21
+0 27
 0000000000 65535 f 
 0000000061 00000 n 
 0000000113 00000 n 
@@ -141,29 +183,35 @@ xref
 0000000505 00000 n 
 0000000678 00000 n 
 0000000857 00000 n 
-0000001098 00000 n 
-0000001338 00000 n 
-0000001570 00000 n 
-0000001804 00000 n 
-0000002039 00000 n 
-0000002275 00000 n 
-0000002381 00000 n 
-0000002559 00000 n 
-0000002735 00000 n 
-0000003017 00000 n 
-0000003087 00000 n 
-0000003368 00000 n 
-0000003429 00000 n 
+0000001091 00000 n 
+0000001326 00000 n 
+0000001549 00000 n 
+0000001773 00000 n 
+0000002000 00000 n 
+0000002226 00000 n 
+0000002453 00000 n 
+0000002679 00000 n 
+0000002912 00000 n 
+0000003146 00000 n 
+0000003388 00000 n 
+0000003629 00000 n 
+0000003735 00000 n 
+0000003913 00000 n 
+0000004087 00000 n 
+0000004411 00000 n 
+0000004481 00000 n 
+0000004762 00000 n 
+0000004823 00000 n 
 trailer
 <<
 /ID 
-[<9b5f1e2bcd50aae4a20e4139e04edb1f><9b5f1e2bcd50aae4a20e4139e04edb1f>]
+[<ad6f36abd2618f89f7cbc12fbf55ac20><ad6f36abd2618f89f7cbc12fbf55ac20>]
 % ReportLab generated PDF document -- digest (opensource)
 
-/Info 18 0 R
-/Root 17 0 R
-/Size 21
+/Info 24 0 R
+/Root 23 0 R
+/Size 27
 >>
 startxref
-5581
+7222
 %%EOF

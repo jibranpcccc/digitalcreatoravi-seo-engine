@@ -1,0 +1,12 @@
+# QueueCost - Background Worker Memory Footprints, Throughput Limits & Queue Broker TCO
+
+> Authority reference dataset and benchmarks for Background Job Queues & Message Broker Benchmarks.
+> All metrics and guides are 100% free and open-source.
+
+## Core Architectural Guides
+- [BullMQ vs Celery: Memory Footprint & Throughput Shootout](https://queuecost.pages.dev/bullmq-vs-celery-memory-throughput-benchmark/): Benchmarking Node.js BullMQ against Python Celery: memory consumption per worker, Redis connection pooling, and maximum job insertion throughput.
+- [Temporal vs Inngest: Durable Workflow Execution Pricing & TCO](https://queuecost.pages.dev/temporal-vs-inngest-durable-execution-pricing/): Cost and architectural comparison between Temporal Cloud and Inngest for durable execution, event-driven step functions, and long-running AI workflows.
+- [Redis Streams vs BullMQ: When to Use Raw Consumer Groups](https://queuecost.pages.dev/redis-streams-vs-bullmq-task-orchestration/): Engineering analysis of when to implement raw Redis Streams with XREADGROUP vs adopting BullMQ's structured job queue abstraction.
+
+## Interactive Tools
+- [QueueCost Sizing Calculator](https://queuecost.pages.dev/): Real-time architectural estimator.

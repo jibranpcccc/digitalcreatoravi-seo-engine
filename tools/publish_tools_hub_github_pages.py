@@ -57,7 +57,17 @@ tools_html = """<!DOCTYPE html>
         {"@type": "ListItem", "position": 17, "name": "OpenCRMStack", "url": "https://opencrmstack.pages.dev/"},
         {"@type": "ListItem", "position": 18, "name": "CIPipelineGraph", "url": "https://site-18-chi.vercel.app/"},
         {"@type": "ListItem", "position": 19, "name": "GreekVisualizer", "url": "https://site-19-nine.vercel.app/"},
-        {"@type": "ListItem", "position": 20, "name": "EdgeRuntimeHQ", "url": "https://edgeruntimehq.pages.dev/"}
+        {"@type": "ListItem", "position": 20, "name": "EdgeRuntimeHQ", "url": "https://edgeruntimehq.pages.dev/"},
+        {"@type": "ListItem", "position": 21, "name": "PromptEvalHQ", "url": "https://promptevalhq.pages.dev/"},
+        {"@type": "ListItem", "position": 22, "name": "QueueCost", "url": "https://queuecost.pages.dev/"},
+        {"@type": "ListItem", "position": 23, "name": "OpenTelemetryLab", "url": "https://opentelemetrylab.pages.dev/"},
+        {"@type": "ListItem", "position": 24, "name": "PostgresScale", "url": "https://postgrescale.pages.dev/"},
+        {"@type": "ListItem", "position": 25, "name": "APIGatewayMatrix", "url": "https://apigatewaymatrix.pages.dev/"},
+        {"@type": "ListItem", "position": 26, "name": "S3EgressAudit", "url": "https://s3egressaudit.pages.dev/"},
+        {"@type": "ListItem", "position": 27, "name": "AuthTokenAudit", "url": "https://authtokenaudit.pages.dev/"},
+        {"@type": "ListItem", "position": 28, "name": "DNSPerfHQ", "url": "https://dnsperf-hq.pages.dev/"},
+        {"@type": "ListItem", "position": 29, "name": "FeatureFlagAudit", "url": "https://featureflagaudit.pages.dev/"},
+        {"@type": "ListItem", "position": 30, "name": "TinyContainerHQ", "url": "https://tinycontainerhq.pages.dev/"}
       ]
     }
     </script>
@@ -72,7 +82,7 @@ tools_html = """<!DOCTYPE html>
             </a>
             <nav class="flex items-center gap-4 text-sm">
                 <a href="https://jibranpcccc.github.io/" class="text-slate-400 hover:text-white transition">Directories</a>
-                <a href="https://jibranpcccc.github.io/tools.html" class="text-indigo-400 font-semibold">Web Utilities (20)</a>
+                <a href="https://jibranpcccc.github.io/tools.html" class="text-indigo-400 font-semibold">Web Utilities (30)</a>
                 <a href="https://github.com/jibranpcccc" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-mono text-slate-200 transition">GitHub Profile</a>
             </nav>
         </div>
@@ -83,7 +93,7 @@ tools_html = """<!DOCTYPE html>
         <div class="text-center max-w-3xl mx-auto mb-16">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-mono mb-4">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>20 Production Applications Deployed</span>
+                <span>30 Production Applications Deployed</span>
             </div>
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-6">
                 Open Web Utilities & Empirical Benchmarks
@@ -245,6 +255,75 @@ tools_html = """<!DOCTYPE html>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">GreekVisualizer</h3>
                     <p class="text-xs text-slate-400 mb-4">Black-Scholes options Greeks (Delta, Gamma, Theta, Vega) & Uniswap v3 Impermanent Loss calculator.</p>
                     <a href="https://site-19-nine.vercel.app/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sector 5: Cloud Architecture, Observability & Security -->
+        <div class="mb-14">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                <span>⚡</span> Sector 5: Cloud Architecture, Observability & Platform Engineering
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
+                    <span class="text-xs font-mono text-indigo-400">site-21 • Cloudflare Pages</span>
+                    <h3 class="text-lg font-bold text-white mt-1 mb-2">PromptEvalHQ</h3>
+                    <p class="text-xs text-slate-400 mb-4">LLM evaluation regression suites, Promptfoo vs DeepEval & Ragas metric cost calculator.</p>
+                    <a href="https://promptevalhq.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
+                    <span class="text-xs font-mono text-indigo-400">site-22 • Cloudflare Pages</span>
+                    <h3 class="text-lg font-bold text-white mt-1 mb-2">QueueCost</h3>
+                    <p class="text-xs text-slate-400 mb-4">Background task queues, BullMQ vs Celery memory benchmarks & Temporal throughput sizer.</p>
+                    <a href="https://queuecost.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
+                    <span class="text-xs font-mono text-indigo-400">site-23 • Cloudflare Pages</span>
+                    <h3 class="text-lg font-bold text-white mt-1 mb-2">OpenTelemetryLab</h3>
+                    <p class="text-xs text-slate-400 mb-4">OTel collector tail-sampling configurations, Tempo vs Jaeger storage math & latency sizer.</p>
+                    <a href="https://opentelemetrylab.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
+                    <span class="text-xs font-mono text-indigo-400">site-24 • Cloudflare Pages</span>
+                    <h3 class="text-lg font-bold text-white mt-1 mb-2">PostgresScale</h3>
+                    <p class="text-xs text-slate-400 mb-4">PostgreSQL autovacuum tuning, BRIN vs B-Tree indexing & PgBouncer pool sizing.</p>
+                    <a href="https://postgrescale.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
+                    <span class="text-xs font-mono text-indigo-400">site-25 • Cloudflare Pages</span>
+                    <h3 class="text-lg font-bold text-white mt-1 mb-2">APIGatewayMatrix</h3>
+                    <p class="text-xs text-slate-400 mb-4">Envoy, Kong, Traefik & Caddy p99 latency benchmarks and global rate-limiting calculator.</p>
+                    <a href="https://apigatewaymatrix.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
+                    <span class="text-xs font-mono text-indigo-400">site-26 • Cloudflare Pages</span>
+                    <h3 class="text-lg font-bold text-white mt-1 mb-2">S3EgressAudit</h3>
+                    <p class="text-xs text-slate-400 mb-4">Cloudflare R2 vs AWS S3 zero-egress cost simulator & Backblaze B2 economics.</p>
+                    <a href="https://s3egressaudit.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
+                    <span class="text-xs font-mono text-indigo-400">site-27 • Cloudflare Pages</span>
+                    <h3 class="text-lg font-bold text-white mt-1 mb-2">AuthTokenAudit</h3>
+                    <p class="text-xs text-slate-400 mb-4">JWT vs PASETO token cryptographic security, refresh rotation & cookie payload sizer.</p>
+                    <a href="https://authtokenaudit.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
+                    <span class="text-xs font-mono text-indigo-400">site-28 • Cloudflare Pages</span>
+                    <h3 class="text-lg font-bold text-white mt-1 mb-2">DNSPerfHQ</h3>
+                    <p class="text-xs text-slate-400 mb-4">Anycast DNS latency benchmarks, Cloudflare vs Route 53 & TTL migration countdown planner.</p>
+                    <a href="https://dnsperf-hq.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
+                    <span class="text-xs font-mono text-indigo-400">site-29 • Cloudflare Pages</span>
+                    <h3 class="text-lg font-bold text-white mt-1 mb-2">FeatureFlagAudit</h3>
+                    <p class="text-xs text-slate-400 mb-4">LaunchDarkly vs Flagsmith vs Unleash TCO calculator & OpenFeature evaluation latency.</p>
+                    <a href="https://featureflagaudit.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
+                    <span class="text-xs font-mono text-indigo-400">site-30 • Cloudflare Pages</span>
+                    <h3 class="text-lg font-bold text-white mt-1 mb-2">TinyContainerHQ</h3>
+                    <p class="text-xs text-slate-400 mb-4">Chainguard vs Distroless vs Alpine image size, CVE vulnerability & scratch build sizer.</p>
+                    <a href="https://tinycontainerhq.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
                 </div>
             </div>
         </div>

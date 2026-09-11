@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>QueueCost Research & Engineering Feed</title>
+    <link>https://queuecost.pages.dev/</link>
+    <description>Background Worker Memory Footprints, Throughput Limits & Queue Broker TCO</description>
+    <language>en-us</language>
+    <item>
+      <title>BullMQ vs Celery: Memory Footprint & Throughput Shootout</title>
+      <link>https://queuecost.pages.dev/bullmq-vs-celery-memory-throughput-benchmark/</link>
+      <description>Benchmarking Node.js BullMQ against Python Celery: memory consumption per worker, Redis connection pooling, and maximum job insertion throughput.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://queuecost.pages.dev/bullmq-vs-celery-memory-throughput-benchmark/</guid>
+    </item>
+    <item>
+      <title>Temporal vs Inngest: Durable Workflow Execution Pricing & TCO</title>
+      <link>https://queuecost.pages.dev/temporal-vs-inngest-durable-execution-pricing/</link>
+      <description>Cost and architectural comparison between Temporal Cloud and Inngest for durable execution, event-driven step functions, and long-running AI workflows.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://queuecost.pages.dev/temporal-vs-inngest-durable-execution-pricing/</guid>
+    </item>
+    <item>
+      <title>Redis Streams vs BullMQ: When to Use Raw Consumer Groups</title>
+      <link>https://queuecost.pages.dev/redis-streams-vs-bullmq-task-orchestration/</link>
+      <description>Engineering analysis of when to implement raw Redis Streams with XREADGROUP vs adopting BullMQ's structured job queue abstraction.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://queuecost.pages.dev/redis-streams-vs-bullmq-task-orchestration/</guid>
+    </item>
+  </channel>
+</rss>

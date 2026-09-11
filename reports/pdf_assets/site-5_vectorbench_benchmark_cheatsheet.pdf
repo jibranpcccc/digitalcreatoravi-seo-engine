@@ -2,7 +2,7 @@
 %“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 12 0 R
+/F1 2 0 R /F2 3 0 R /F3 18 0 R
 >>
 endobj
 2 0 obj
@@ -33,66 +33,109 @@ endobj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/)
->> /Border [ 0 0 0 ] /Rect [ 247 482.3125 402.7145 496.3125 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 247 489.3125 402.7145 503.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 7 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/qdrant-vs-pinecone-benchmark-2026/)
->> /Border [ 0 0 0 ] /Rect [ 247 455.3125 563.7205 469.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/)
+>> /Border [ 0 0 0 ] /Rect [ 247 469.3125 562.666 483.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/qdrant-vs-pinecone-benchmark-2026/)
->> /Border [ 0 0 0 ] /Rect [ 247 441.3125 254.923 455.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/)
+>> /Border [ 0 0 0 ] /Rect [ 247 455.3125 273.9135 469.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/pgvector-production-tuning-guide/)
->> /Border [ 0 0 0 ] /Rect [ 247 414.3125 558.9325 428.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/hnsw-vs-ivfflat-memory-consumption-pgvector-tuning/)
+>> /Border [ 0 0 0 ] /Rect [ 247 435.3125 560.538 449.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/)
->> /Border [ 0 0 0 ] /Rect [ 247 387.3125 562.666 401.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/hnsw-vs-ivfflat-memory-consumption-pgvector-tuning/)
+>> /Border [ 0 0 0 ] /Rect [ 247 421.3125 336.718 435.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/)
->> /Border [ 0 0 0 ] /Rect [ 247 373.3125 273.9135 387.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/milvus-vs-qdrant-billion-scale-benchmark/)
+>> /Border [ 0 0 0 ] /Rect [ 247 401.3125 562.666 415.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 12 0 obj
 <<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/A <<
+/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/milvus-vs-qdrant-billion-scale-benchmark/)
+>> /Border [ 0 0 0 ] /Rect [ 247 387.3125 278.1505 401.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 13 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/llms.txt)
->> /Border [ 0 0 0 ] /Rect [ 46 205.6 218.1305 217 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/pgvector-production-tuning-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 360.3125 558.9325 374.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 14 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app)
->> /Border [ 0 0 0 ] /Rect [ 295.6525 149.5 406.1275 158.5 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/qdrant-vs-pinecone-benchmark-2026/)
+>> /Border [ 0 0 0 ] /Rect [ 247 333.3125 563.7205 347.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 15 0 obj
 <<
-/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 13 0 R 14 0 R ] /Contents 19 0 R /MediaBox [ 0 0 612 792 ] /Parent 18 0 R /Resources <<
+/A <<
+/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/qdrant-vs-pinecone-benchmark-2026/)
+>> /Border [ 0 0 0 ] /Rect [ 247 319.3125 254.923 333.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+16 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/voyage-ai-vs-openai-embeddings-rag-cost/)
+>> /Border [ 0 0 0 ] /Rect [ 247 299.3125 560.025 313.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+17 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/voyage-ai-vs-openai-embeddings-rag-cost/)
+>> /Border [ 0 0 0 ] /Rect [ 247 285.3125 283.423 299.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+18 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+19 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app/llms.txt)
+>> /Border [ 0 0 0 ] /Rect [ 46 117.6 218.1305 129 ] /Subtype /Link /Type /Annot
+>>
+endobj
+20 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://vectorbench-hq.netlify.app)
+>> /Border [ 0 0 0 ] /Rect [ 295.6525 61.5 406.1275 70.5 ] /Subtype /Link /Type /Annot
+>>
+endobj
+21 0 obj
+<<
+/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 
+  14 0 R 15 0 R 16 0 R 17 0 R 19 0 R 20 0 R ] /Contents 25 0 R /MediaBox [ 0 0 612 792 ] /Parent 24 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -100,31 +143,31 @@ endobj
 >> /Type /Page
 >>
 endobj
-16 0 obj
+22 0 obj
 <<
-/PageMode /UseNone /Pages 18 0 R /Type /Catalog
+/PageMode /UseNone /Pages 24 0 R /Type /Catalog
 >>
 endobj
-17 0 obj
+23 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260907124646+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260907124646+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/Author (\(anonymous\)) /CreationDate (D:20260912001152+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260912001152+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
 >>
 endobj
-18 0 obj
+24 0 obj
 <<
-/Count 1 /Kids [ 15 0 R ] /Type /Pages
+/Count 1 /Kids [ 21 0 R ] /Type /Pages
 >>
 endobj
-19 0 obj
+25 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1989
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2267
 >>
 stream
-GauHL=`<%S&:XAW(na.S(6Kg+<o+h:D;C3#eF@]h!Yi"0gM1k"U7>hVs1UkcY`dXRM[&i#@8(]*IWJBi1jfu4lc0!<$TNE!JEX4>!ARRf()JZ-$uQ<G*bj?d(ci-rR7^.Go3>*$f@:<<<)4m-m6SH-i'O5FgP/.Ulg!D/bDJ`DPM+K.4ro\:i,!EoIQ&4js+'F9aa!XdKo>2N9=Q.*"1kAa0KGa4aX^J@J]2C*kTde`K$mp*lB0S>[0l1$4?+#Ukn8c%V/$.!W`ch@'<dus4<%7/RuV+@DIE6rq)lpJ=Q46o@DVk9')FG:nV0nIC`)4%&k9FH#rrJHF4MHS^+I6Qp#3>2D\#05!$kSIO:V^pG?iT>8@NttC(fOYQ3;FMqAXT-'hJMM#t#P(Tn3d;B*`Ji03Jj>aVs5@@[_cui*WF\20t!!<iaRXEIWJ`0:o<q"c#e__[Yd3EI)Z2Q("%+PHq`!'?6edFg'4ElQl\KOq7\=pjGA'*RE:V<95$am\,')7K_dk#DnrdK;FKA"P8!d,L/T(SX*VMngio\*FX3BLPg2+(lfd66r]P$@t)P;/VE@E7dBE(cuGL1Qnc<HK/?3PpO*tooK5QOkc,rFeD<a3'*;TZr)fhol)hc*OMrOtJ@?SE-X8:!)9X2Hdk*Ub+`;n[k@'gpZ8M5.`0>0WrlBA))R'L$1^P;Dfi/AMq-*Q/'IL?6$GE>0T@T\HqN2-JX9dDa$fk!IXDnu@UQ4)l-9U?gE^s!MIDK^L3K$h]C':LQ9Hs\\GTQ\bcqY^g3"'d.4h?D#bJR>9MSp-L9>cQ<,@%gqok:/j0P8Ap2p5-RkLBM]E8IiGT^eb<LU]3PVY0b>mN./O7"6-brDlgC*MEi9a&6DSWqpF"eQ&tY:!]WDJKS?T4qZc)?_WrjVOS#uaQ-;?L.]7clf_2/7r/iQEAbY_`Dt?>WEo]NYoL:T742aN=M5aqcDC\HA<;%=%.q-JFEVM20Z]Uu<hSCSk,_r)o.)rKVk%P5[[VL_k%HOf8"or_qSo&-=H3UPcIM!o"qW+@m/`q%&\+uUm4f)j+3(J_*Ns]a767E9Ek8%MK9r^LG67-(H/sFr:R5Ir6JTC\QfIN^m?</nYkjM$`kIH$-g`@9O$Se_!k&8;U"fEX_KP04p&Qa.2oGH)G)So0I*g&4MsCW43=P<\ppl[bQ#34*21DCH^C&t=iS/c[)U:-8RB8!0E4)_MM_YkS,pVW\`U`HfqCb/1o[B:9-;F++3Eh&Afi9e]9D"+C:VHB`"+0'&T#Oa6E^;EkS=cA''b>BNj)WejDL\/p^X3L=M-d]#,gZchL"5)r0rp"gr!(>m<5-EAQN=Nt[dFE[LfhP_m`BWNZsALOY"eeu9`3mFoNuH*Ai(N2,O(5frd?hk(j7.C]2jeYXJL0n88YgOi_:XRbZ]`[Pt]dZ:#al?qY7EC)j[n0,TF>n*$s97@FjhZAto$_c"!um0Kjub]1qpC[0(]^)Gb#m<>ehRnZhS*B"E+"(@1Toim+OEBq3HK[rsf8$\pC.;n7(-@9t:Tf7G^%d[\Jbo,,1UQtlc3!k+q&8NHZQ@#Om7\f'A;3e\C+N.ba:AL(L+[L3sN?hT?O2[e1F`oi\u(HbVBnBXs_9k7BHS\e7Q!ZiB"&PI^,%21AThiEhns&rD?G"2CA\-M6BX'Tl"p)\/"NFt7cQn!L)=JB&uAW@ak3;154;Y'Jnr<U`:=;T#`SPGA4Pf/!1o>Xe@N']Yd##HWISheZR@5_CR^j$If/1Ht?^f.HH%qOFK9b(Gb/F$=H3W$es%kjK.]hLu2G+:[OU:=%q[q`H@/NJcah78:K!;.M2nFJ?oo!e_$S2#;<ai(oAFM59U'Ed$kT5K(uY:WWD[f"(sQX>PcX*%bu;sLQYG)9q5q`7aSZ-f,rk_:2u*RUqpZRS$B_JXIR<0(Ctd=4HKWB@6;=3kO9V$0BP5jt5!E#g8!4tS`fP?!Xp]TeIEWhIc=huEu]"+DKK-N~>endstream
+GauHL=]='9'RnB33&>cUU`F8&n)5jOd&*.+)KORKAibsS,\k#$bCSI1^Y^8]8V"aUdgU'_*%^@'G<VQd">p$'nuj,9S5%u'JcO2,3X9,o-;6($3:5LD8G/ioK4F-?1>5]:>$B5UeSngMYX%U?`3O`O/NPj'C$)j4)WA=i\E1),ddD(%4dq<6rC]*h?4B)Wqia8'k'B!(?(c0uqK)nM`,S&oF;ott,@Pj*e*eu=-NJS7n&M)C=+GU+[9]nfq?RVGML]f*6bq,-JP4NEgkLZX4cT)M:l0$MRZ4q1mMG0[,Whd+^H@3!op7E)]atB@lLB6n.>Kk/cho*LpgTB5)JSqo_#i>FgU;Di&=NYCZ"efB8:\;3RKc'hjVOjB+c^D2J60s%dSm]<FJ'W#L&M?Mk\u!*&;SYl"p'Vu+L_u/foI-PKka`':A<4bc?tBDqeL6JHqnD.ms=1M3D]7qPEV8:GpZQiQ?R(;H-#,`eP"@l6L\%h6Jro75B^#(B57u0jVjHA6iY4B%@Ffs`,\r_Q7b?g\CiSWEVAth2#J8T?U:US#fktO\<(S>__L5DL^M$)l5,tm.,5LK;R]+^#>%Bn9_gFMOt^%?gGUDBH&fhi<D.qCe4?5[%)UcoA!oJSD]CB[9U@:8hC.l"81sR5RR*Ag.hl2?*eM8l/;[fd\G6scO"Vs]OlN/]THP5e3.M-%HfB1T08*Y!(?75m<)'-[7aQL)Ur#.:fcm;E*(f/oc9a<lj0%l\cF>74o5Kt;cE!ct)C:nS#SQ[5(Eti]1ZmlYD&jl?V(<;,__nN/`o[[G&lX$*O+lFA`2RgJcO1K5,'jZIdk"@@k4q4Ec?hSSFC*$J_lY(<NTP#f>6MW^qO>s\mNo8@#j%1uC,L0gWa?OAY+irdHA7[q"9E#^7#5&sK5RE_E\;__K2]K+.KSA)1op<iYt_%5eVp(P4s`o?lGXpr9hT@hd0]XLk3kA.UM34F)'iN8"22i2>J%=07iHC)h%DQ7^kCk"_tXR7j6>,K?/#cMB,UOS"sNSf88V&aS7_!#mBN*"=9HD?V`dAR+TgiWW[P1%hbRKX*p>1m<>k7;1`\%]Hq5GDZ&AQ`6#NK$n:`lGn#AU5`[?+qfI/oC`>^2m4q*'TQ:)dqEk(bg#No`tn9'R*WsU+/BT@A/XZZ$Zo!?1*6@SW\HN?FH`367_,o$-,R6iF^MAXm::GO5`[F/d]%RB34X.-;EbgDc8MpUK<M?E^*BdcTZ-3JAq8XpSo.anBU@=QRfF>gX8K?e%uh[;3mC-G/c8gKNLIZ8TiB<7neE[$2R0ugJ!E]*._jGmBQ.WRiDk9.[\"\:=u1DY^sa\nc,B`iA'+2^Oq:2Y^M29:b&IR3Fn`37BWkXplWP:C$8"(#U-2G,!1!(L`?_Y'c[\Y^6F$'@2A)_Rti9/04H)0O`d$]^2H2e?!c77@tbD=e]!cPl]FX(7$<]Z+cJLP0QF0"C;+#3kjKL;]RGdbkrp=p[$70t[@L+tF\.,1C9/8lM'+#etq.[rQ`o._d6E9Y@+"75dB,2"$En`ArA)<EL'O2)*Nm$[N/DFs::Ua-B&rGYCqj-$,#@%H(LEeEG`j@qj54Z2"u]^NZo9Z?8[Q7*lhfBg(-AMO"T8h)?Wc,`=_R,^QMggG8&3X0uiZ;uZOe80*W)b)/uS<GS\i`_)bI#4^2F%D0(.;e&6B<*"CHXgVFOnY*B/ohn8mP-1'P`Fk2'oCIQ>\"+NC]5G-6.+etD`nR';=EJ/\[1%5FXj>p^o"$=!.i%cXAU7fc;ASMS/Uf6<#LfeiF>6R<S\B5Zimc+.^o`hO/*61@Ygjh4&At<"74/9j8s>4Wp@B-8k8=+!3X<7e_SY@*>E00Z2s[o10b"'6:(^$O?\G^>br=)EAJ^4'V?*:L_>+i6Kbml#ruC.Q@M\de.3-kIimBJ#d5XZ1(3<paq&qirY?<?o^5:`jG6#=)gZf8]f1cr6pYYT?Jm(iJ`\$:!.5Ktoc`pE?'p>aZW$?eK&JbSVfhUO-PSuQtD8^QO$X(3^?F.GSSH8!m`hVcCN0hbdEDG%&Sq9[_+Ib-F_\g`S[p`#Ci>5V1h9Is%p$Z0ESV1F9X8JZ]DI:9krGZg._?GJTMB_dNQ?%6g!V;7JH+T2rIJYG+W\"r=dS74,BZRA>OgeX&\@]V9,>MBeXK@-1KNWI]iT&,7V]L%3NuN[^<2!I"AX-"%Cu+@l.;rh-O8bt79B7tU]"GWQJ2mn#J^PNqZeCJl^6aaqAY.jn<lgcYo$tY8.733IG2DHS~>endstream
 endobj
 xref
-0 20
+0 26
 0000000000 65535 f 
 0000000061 00000 n 
 0000000113 00000 n 
@@ -133,28 +176,34 @@ xref
 0000000506 00000 n 
 0000000684 00000 n 
 0000000866 00000 n 
-0000001082 00000 n 
-0000001297 00000 n 
-0000001512 00000 n 
-0000001731 00000 n 
-0000001951 00000 n 
-0000002057 00000 n 
-0000002239 00000 n 
-0000002420 00000 n 
-0000002692 00000 n 
-0000002762 00000 n 
-0000003043 00000 n 
-0000003104 00000 n 
+0000001084 00000 n 
+0000001303 00000 n 
+0000001535 00000 n 
+0000001768 00000 n 
+0000001991 00000 n 
+0000002215 00000 n 
+0000002431 00000 n 
+0000002648 00000 n 
+0000002864 00000 n 
+0000003086 00000 n 
+0000003308 00000 n 
+0000003414 00000 n 
+0000003596 00000 n 
+0000003775 00000 n 
+0000004092 00000 n 
+0000004162 00000 n 
+0000004443 00000 n 
+0000004504 00000 n 
 trailer
 <<
 /ID 
-[<aac520a67d221163404a26b78a737586><aac520a67d221163404a26b78a737586>]
+[<2a6741c5875bfc3f00c78473fe8202f6><2a6741c5875bfc3f00c78473fe8202f6>]
 % ReportLab generated PDF document -- digest (opensource)
 
-/Info 17 0 R
-/Root 16 0 R
-/Size 20
+/Info 23 0 R
+/Root 22 0 R
+/Size 26
 >>
 startxref
-5185
+6863
 %%EOF

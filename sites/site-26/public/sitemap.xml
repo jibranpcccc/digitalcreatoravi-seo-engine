@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://s3egressaudit.pages.dev/</loc>
+    <lastmod>2026-09-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://s3egressaudit.pages.dev/cloudflare-r2-vs-aws-s3-egress-fee-breakdown/</loc>
+    <lastmod>2026-09-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://s3egressaudit.pages.dev/backblaze-b2-vs-wasabi-hot-cloud-storage-math/</loc>
+    <lastmod>2026-09-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://s3egressaudit.pages.dev/s3-multipart-upload-part-size-tuning-python/</loc>
+    <lastmod>2026-09-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

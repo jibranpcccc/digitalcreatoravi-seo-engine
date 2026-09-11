@@ -39,7 +39,17 @@ SITES_CONFIG = [
     {"site_id": "site-17", "name": "OpenCRMStack", "url": "https://opencrmstack.pages.dev/", "category": "Open Source CRM & Migration", "endpoint": "/api/v1/tco-calculator"},
     {"site_id": "site-18", "name": "CIPipelineGraph", "url": "https://site-18-chi.vercel.app/", "category": "CI/CD Optimization & DAG Validators", "endpoint": "/api/v1/validate-dag"},
     {"site_id": "site-19", "name": "GreekVisualizer", "url": "https://site-19-nine.vercel.app/", "category": "Financial Math & Options Greeks", "endpoint": "/api/v1/options-greeks"},
-    {"site_id": "site-20", "name": "EdgeRuntimeHQ", "url": "https://edgeruntimehq.pages.dev/", "category": "Edge AI Inference & WebGPU", "endpoint": "/api/v1/runtime-bench"}
+    {"site_id": "site-20", "name": "EdgeRuntimeHQ", "url": "https://edgeruntimehq.pages.dev/", "category": "Edge AI Inference & WebGPU", "endpoint": "/api/v1/runtime-bench"},
+    {"site_id": "site-21", "name": "PromptEvalHQ", "url": "https://promptevalhq.pages.dev/", "category": "LLM Evaluation & Prompt Benchmarks", "endpoint": "/api/v1/eval-cost"},
+    {"site_id": "site-22", "name": "QueueCost", "url": "https://queuecost.pages.dev/", "category": "Background Queues & Message Brokers", "endpoint": "/api/v1/worker-sizer"},
+    {"site_id": "site-23", "name": "OpenTelemetryLab", "url": "https://opentelemetrylab.pages.dev/", "category": "Observability & OpenTelemetry Collector", "endpoint": "/api/v1/tail-sampling"},
+    {"site_id": "site-24", "name": "PostgresScale", "url": "https://postgrescale.pages.dev/", "category": "Database Tuning & PostgreSQL Optimization", "endpoint": "/api/v1/autovacuum-tuner"},
+    {"site_id": "site-25", "name": "APIGatewayMatrix", "url": "https://apigatewaymatrix.pages.dev/", "category": "API Gateways & Reverse Proxies", "endpoint": "/api/v1/gateway-latency"},
+    {"site_id": "site-26", "name": "S3EgressAudit", "url": "https://s3egressaudit.pages.dev/", "category": "Cloud Storage & Egress Economics", "endpoint": "/api/v1/egress-calc"},
+    {"site_id": "site-27", "name": "AuthTokenAudit", "url": "https://authtokenaudit.pages.dev/", "category": "Authentication & Cryptographic Tokens", "endpoint": "/api/v1/token-sizer"},
+    {"site_id": "site-28", "name": "DNSPerfHQ", "url": "https://dnsperf-hq.pages.dev/", "category": "Anycast DNS & Global Propagation", "endpoint": "/api/v1/dns-latency"},
+    {"site_id": "site-29", "name": "FeatureFlagAudit", "url": "https://featureflagaudit.pages.dev/", "category": "Feature Management & OpenFeature", "endpoint": "/api/v1/feature-flag-tco"},
+    {"site_id": "site-30", "name": "TinyContainerHQ", "url": "https://tinycontainerhq.pages.dev/", "category": "Container Security & Minimal Images", "endpoint": "/api/v1/container-cve"}
 ]
 
 def get_file_sha(repo_full, path):
@@ -121,7 +131,7 @@ def publish_all_apiv1_descriptors():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
 
-    print(f"\nAll 20 API v1 descriptors published and saved to {OUTPUT_FILE}")
+    print(f"\nAll {len(SITES_CONFIG)} API v1 descriptors published and saved to {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     publish_all_apiv1_descriptors()

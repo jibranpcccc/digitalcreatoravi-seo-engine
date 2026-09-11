@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://featureflagaudit.pages.dev/</loc>
+    <lastmod>2026-09-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://featureflagaudit.pages.dev/flagsmith-vs-launchdarkly-enterprise-cost-comparison/</loc>
+    <lastmod>2026-09-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://featureflagaudit.pages.dev/unleash-vs-posthog-feature-flag-evaluation-latency/</loc>
+    <lastmod>2026-09-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://featureflagaudit.pages.dev/openfeature-sdk-standardization-nodejs-typescript-tutorial/</loc>
+    <lastmod>2026-09-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

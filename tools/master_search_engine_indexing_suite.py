@@ -133,7 +133,7 @@ def main():
     conn.close()
 
     print("==========================================================================")
-    print("🚀 MASTER SEARCH ENGINE & WEBSUB INDEXING DISPATCHER (20 SITES)")
+    print("🚀 MASTER SEARCH ENGINE & WEBSUB INDEXING DISPATCHER (30 SITES)")
     print("==========================================================================\n")
 
     results_summary = []

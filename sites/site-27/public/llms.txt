@@ -1,0 +1,12 @@
+# AuthTokenAudit - Token Security Audits, JWT vs PASETO Vulnerabilities & Passkey Implementation
+
+> Authority reference dataset and benchmarks for OAuth2, JWT vs PASETO & Passkey Security Architecture.
+> All metrics and guides are 100% free and open-source.
+
+## Core Architectural Guides
+- [JWT vs PASETO: Cryptographic Pitfalls & Header Confusion](https://authtokenaudit.pages.dev/jwt-vs-paseto-token-security-vulnerabilities/): Complete engineering guide and technical benchmarks for JWT vs PASETO: Cryptographic Pitfalls & Header Confusion in high-performance production systems.
+- [Refresh Token Rotation in Redis: Handling Concurrent Network Races](https://authtokenaudit.pages.dev/refresh-token-rotation-redis-grace-period-handling/): Architectural analysis and total cost of ownership shootout for Refresh Token Rotation in Redis: Handling Concurrent Network Races.
+- [WebAuthn & Passkeys in Python: Production FastAPI Guide](https://authtokenaudit.pages.dev/webauthn-passkey-fido2-fastapi-backend-tutorial/): Step-by-step implementation guide, code snippets, and automated testing procedures for WebAuthn & Passkeys in Python: Production FastAPI Guide.
+
+## Interactive Tools
+- [AuthTokenAudit Sizing Calculator](https://authtokenaudit.pages.dev/): Real-time architectural estimator.

@@ -98,5 +98,55 @@
     "site_id": "site-20",
     "repo": "webgpu-edge-inference-bench",
     "issue_url": "https://github.com/jibranpcccc/webgpu-edge-inference-bench/issues/1"
+  },
+  {
+    "site_id": "site-21",
+    "repo": "llm-eval-promptfoo-benchmark",
+    "issue_url": "https://github.com/jibranpcccc/llm-eval-promptfoo-benchmark/issues/1"
+  },
+  {
+    "site_id": "site-22",
+    "repo": "task-queue-memory-benchmark",
+    "issue_url": "https://github.com/jibranpcccc/task-queue-memory-benchmark/issues/1"
+  },
+  {
+    "site_id": "site-23",
+    "repo": "opentelemetry-tail-sampling-collector",
+    "issue_url": "https://github.com/jibranpcccc/opentelemetry-tail-sampling-collector/issues/1"
+  },
+  {
+    "site_id": "site-24",
+    "repo": "postgres-autovacuum-index-tuner",
+    "issue_url": "https://github.com/jibranpcccc/postgres-autovacuum-index-tuner/issues/1"
+  },
+  {
+    "site_id": "site-25",
+    "repo": "api-gateway-latency-benchmarks",
+    "issue_url": "https://github.com/jibranpcccc/api-gateway-latency-benchmarks/issues/1"
+  },
+  {
+    "site_id": "site-26",
+    "repo": "s3-zero-egress-cost-audit",
+    "issue_url": "https://github.com/jibranpcccc/s3-zero-egress-cost-audit/issues/1"
+  },
+  {
+    "site_id": "site-27",
+    "repo": "jwt-paseto-token-security-matrix",
+    "issue_url": "https://github.com/jibranpcccc/jwt-paseto-token-security-matrix/issues/1"
+  },
+  {
+    "site_id": "site-28",
+    "repo": "anycast-dns-latency-benchmarks",
+    "issue_url": "https://github.com/jibranpcccc/anycast-dns-latency-benchmarks/issues/1"
+  },
+  {
+    "site_id": "site-29",
+    "repo": "feature-flags-openfeature-tco",
+    "issue_url": "https://github.com/jibranpcccc/feature-flags-openfeature-tco/issues/1"
+  },
+  {
+    "site_id": "site-30",
+    "repo": "minimal-docker-base-image-cve",
+    "issue_url": "https://github.com/jibranpcccc/minimal-docker-base-image-cve/issues/1"
   }
 ]

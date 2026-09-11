@@ -1,0 +1,12 @@
+# OpenTelemetryLab - OpenTelemetry Collector Pipelines, Tail-Sampling Math & Distributed Tracing Recipes
+
+> Authority reference dataset and benchmarks for OpenTelemetry Tracing & Collector Cheatsheets.
+> All metrics and guides are 100% free and open-source.
+
+## Core Architectural Guides
+- [OpenTelemetry Collector Tail Sampling: Production YAML Config](https://opentelemetrylab.pages.dev/opentelemetry-collector-tail-sampling-rules-config/): Complete engineering guide and technical benchmarks for OpenTelemetry Collector Tail Sampling: Production YAML Config in high-performance production systems.
+- [Grafana Tempo vs Jaeger: Storage Cost & S3 Object Storage Shootout](https://opentelemetrylab.pages.dev/tempo-vs-jaeger-storage-cost-query-latency/): Architectural analysis and total cost of ownership shootout for Grafana Tempo vs Jaeger: Storage Cost & S3 Object Storage Shootout.
+- [FastAPI OpenTelemetry Instrumentation: Context Propagation & Spans](https://opentelemetrylab.pages.dev/fastapi-opentelemetry-manual-instrumentation-guide/): Step-by-step implementation guide, code snippets, and automated testing procedures for FastAPI OpenTelemetry Instrumentation: Context Propagation & Spans.
+
+## Interactive Tools
+- [OpenTelemetryLab Sizing Calculator](https://opentelemetrylab.pages.dev/): Real-time architectural estimator.

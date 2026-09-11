@@ -1,0 +1,12 @@
+# DNSPerfHQ - Global DNS Lookup Latency, Anycast PoP Routing & DNSSEC Optimization
+
+> Authority reference dataset and benchmarks for Managed Anycast DNS Latency & Propagation Benchmarks.
+> All metrics and guides are 100% free and open-source.
+
+## Core Architectural Guides
+- [Cloudflare DNS vs Route 53: Anycast Resolution Latency Shootout](https://dnsperf-hq.pages.dev/cloudflare-dns-vs-aws-route53-global-latency-benchmarks/): Complete engineering guide and technical benchmarks for Cloudflare DNS vs Route 53: Anycast Resolution Latency Shootout in high-performance production systems.
+- [DNSSEC Algorithm 13 (ECDSA P-256): Zero-Packet-Fragmentation Guide](https://dnsperf-hq.pages.dev/dnssec-algorithm-13-ecdsa-p256-vs-rsa-setup/): Architectural analysis and total cost of ownership shootout for DNSSEC Algorithm 13 (ECDSA P-256): Zero-Packet-Fragmentation Guide.
+- [Zero-Downtime DNS Migration: Step-by-Step TTL Countdown](https://dnsperf-hq.pages.dev/zero-downtime-dns-migration-ttl-lowering-checklist/): Step-by-step implementation guide, code snippets, and automated testing procedures for Zero-Downtime DNS Migration: Step-by-Step TTL Countdown.
+
+## Interactive Tools
+- [DNSPerfHQ Sizing Calculator](https://dnsperf-hq.pages.dev/): Real-time architectural estimator.

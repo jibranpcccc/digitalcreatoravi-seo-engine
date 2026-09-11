@@ -198,5 +198,105 @@
     "link_type": "API v1 JSON Service Descriptor",
     "da": 96,
     "anchor": "API v1 Service Descriptor: EdgeRuntimeHQ"
+  },
+  {
+    "site_id": "site-21",
+    "site_name": "PromptEvalHQ",
+    "target_url": "https://promptevalhq.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-21.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: PromptEvalHQ"
+  },
+  {
+    "site_id": "site-22",
+    "site_name": "QueueCost",
+    "target_url": "https://queuecost.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-22.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: QueueCost"
+  },
+  {
+    "site_id": "site-23",
+    "site_name": "OpenTelemetryLab",
+    "target_url": "https://opentelemetrylab.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-23.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: OpenTelemetryLab"
+  },
+  {
+    "site_id": "site-24",
+    "site_name": "PostgresScale",
+    "target_url": "https://postgrescale.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-24.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: PostgresScale"
+  },
+  {
+    "site_id": "site-25",
+    "site_name": "APIGatewayMatrix",
+    "target_url": "https://apigatewaymatrix.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-25.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: APIGatewayMatrix"
+  },
+  {
+    "site_id": "site-26",
+    "site_name": "S3EgressAudit",
+    "target_url": "https://s3egressaudit.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-26.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: S3EgressAudit"
+  },
+  {
+    "site_id": "site-27",
+    "site_name": "AuthTokenAudit",
+    "target_url": "https://authtokenaudit.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-27.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: AuthTokenAudit"
+  },
+  {
+    "site_id": "site-28",
+    "site_name": "DNSPerfHQ",
+    "target_url": "https://dnsperf-hq.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-28.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: DNSPerfHQ"
+  },
+  {
+    "site_id": "site-29",
+    "site_name": "FeatureFlagAudit",
+    "target_url": "https://featureflagaudit.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-29.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: FeatureFlagAudit"
+  },
+  {
+    "site_id": "site-30",
+    "site_name": "TinyContainerHQ",
+    "target_url": "https://tinycontainerhq.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-30.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: TinyContainerHQ"
   }
 ]

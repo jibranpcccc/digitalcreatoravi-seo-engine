@@ -22,7 +22,7 @@ for r in c.execute("SELECT id, url FROM sites").fetchall():
 
 synced_count = 0
 
-for i in range(1, 21):
+for i in range(1, 31):
     site_id = f"site-{i}"
     base_url = site_urls.get(site_id, "")
     if not base_url:

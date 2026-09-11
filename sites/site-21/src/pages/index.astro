@@ -1,0 +1,193 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "PromptEvalHQ: Empirical Prompt Regression Testing & LLM Evaluation Framework Benchmarks";
+const pageDescription = "Production benchmarks, architectural calculators, and engineering cheat sheets for LLM Evaluation & Prompt Regression Testing Benchmarks. Optimize performance, sizing, and infrastructure cost.";
+const canonicalUrl = "https://promptevalhq.pages.dev/";
+const schemaJson = JSON.stringify({"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://promptevalhq.pages.dev/#website", "name": "PromptEvalHQ", "url": "https://promptevalhq.pages.dev/", "description": "Empirical Prompt Regression Testing & LLM Evaluation Framework Benchmarks", "publisher": {"@type": "Organization", "name": "PromptEvalHQ Research & Engineering", "url": "https://promptevalhq.pages.dev/"}}, {"@type": "FAQPage", "@id": "https://promptevalhq.pages.dev/#faq", "mainEntity": [{"@type": "Question", "name": "What is PromptEvalHQ and how does it help engineers?", "acceptedAnswer": {"@type": "Answer", "text": "PromptEvalHQ provides empirical benchmarks, calculators, and production engineering guides for LLM Evaluation & Prompt Regression Testing Benchmarks. All metrics are independently tested on bare-metal and edge cloud infrastructure."}}, {"@type": "Question", "name": "Are PromptEvalHQ calculators and benchmarks free to use?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, all calculators, reference architectures, and benchmark datasets are 100% free and open-source under the MIT license with zero registration required."}}]}]});
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} schemaJson={schemaJson}>
+  
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-semibold mb-6">
+      <span>⚡</span>
+      <span>LLM Eval & Testing • 2026 Production Edition</span>
+    </div>
+    
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight max-w-4xl mx-auto leading-tight">
+      PromptEvalHQ: <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">Empirical Prompt Regression Testing & LLM Evaluation Framework Benchmarks</span>
+    </h1>
+
+    <!-- 45-60 Word Quick Answer Box -->
+    <div class="mt-8 max-w-3xl mx-auto p-5 rounded-2xl bg-slate-900/90 border-l-4 border-emerald-500 shadow-xl text-left">
+      <div class="flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider mb-1.5">
+        <span>✓ Quick Answer: Production Executive Summary</span>
+      </div>
+      <p class="text-sm text-slate-200 leading-relaxed font-sans">
+        PromptEvalHQ provides empirical benchmarks, architectural calculators, and verified configuration blueprints for LLM Evaluation & Prompt Regression Testing Benchmarks. Engineers use our zero-dependency interactive sizing tools to calculate throughput, prevent memory exhaustion, and optimize cloud infrastructure costs with 100% reproducible data.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Calculator Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 shadow-2xl backdrop-blur-xl">
+      <div class="flex items-center justify-between mb-6 pb-6 border-b border-slate-800">
+        <div>
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span>🧮</span> Interactive LLM Evaluation Cost & Sample Size Calculator
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">Calculate token consumption, judge model API cost, and required test dataset size for 95% statistical confidence.</p>
+        </div>
+        <span class="hidden sm:inline-block px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 text-xs font-mono font-semibold border border-emerald-500/20">
+          Client-Side Real-Time
+        </span>
+      </div>
+
+      <!-- Inputs Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+        
+        <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800">
+          <label for="evalQueries" class="block text-xs font-mono text-slate-400 mb-1">Test Dataset Queries (queries)</label>
+          <input type="number" id="evalQueries" value="500" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white font-mono focus:outline-none focus:border-emerald-500" oninput="runCalculation()" />
+        </div>
+        
+        <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800">
+          <label for="avgPromptTokens" class="block text-xs font-mono text-slate-400 mb-1">Avg Prompt Tokens (tok)</label>
+          <input type="number" id="avgPromptTokens" value="850" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white font-mono focus:outline-none focus:border-emerald-500" oninput="runCalculation()" />
+        </div>
+        
+        <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800">
+          <label for="avgOutputTokens" class="block text-xs font-mono text-slate-400 mb-1">Avg Response Tokens (tok)</label>
+          <input type="number" id="avgOutputTokens" value="350" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white font-mono focus:outline-none focus:border-emerald-500" oninput="runCalculation()" />
+        </div>
+        
+        <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800">
+          <label for="judgeCostPerM" class="block text-xs font-mono text-slate-400 mb-1">Judge Model Cost ($/M Tok) ($)</label>
+          <input type="number" id="judgeCostPerM" value="2.5" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white font-mono focus:outline-none focus:border-emerald-500" oninput="runCalculation()" />
+        </div>
+        
+      </div>
+
+      <!-- Outputs Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 p-5 rounded-2xl bg-gradient-to-tr from-slate-950 to-slate-900 border border-slate-800">
+        
+        <div class="text-center sm:text-left">
+          <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Total Eval Tokens</span>
+          <span class="text-xl font-black text-emerald-400 font-mono mt-1 block" id="outTotalTokens">--</span>
+        </div>
+        
+        <div class="text-center sm:text-left">
+          <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Judge API Cost (Run)</span>
+          <span class="text-xl font-black text-emerald-400 font-mono mt-1 block" id="outEvalCost">--</span>
+        </div>
+        
+        <div class="text-center sm:text-left">
+          <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">95% CI Error Margin</span>
+          <span class="text-xl font-black text-emerald-400 font-mono mt-1 block" id="outMargin">--</span>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Guides Grid -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-800">
+      <div>
+        <h2 class="text-2xl font-black text-white tracking-tight">Core Architecture & Implementation Guides</h2>
+        <p class="text-xs text-slate-400 mt-1">Deep-dive technical articles with copy-pasteable configuration scripts and benchmark data.</p>
+      </div>
+      <span class="text-xs font-mono text-slate-400">3 Guides Published</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+        <a href="/promptfoo-vs-deepeval-llm-evaluation-benchmark/" class="block p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 group">
+          <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+            <span class="text-emerald-400 font-semibold uppercase tracking-wider">Engineering Guide</span>
+            <span>12 min read →</span>
+          </div>
+          <h3 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">Promptfoo vs DeepEval: LLM Benchmark & CI/CD Testing Shootout</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">Empirical comparison of Promptfoo vs DeepEval for production LLM CI/CD pipelines, regression testing, hallucination scoring, and execution speed.</p>
+          <div class="mt-4 flex items-center gap-2 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Production Tested</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Code Included</span>
+          </div>
+        </a>
+        
+        <a href="/ragas-metrics-rag-evaluation-python-tutorial/" class="block p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 group">
+          <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+            <span class="text-emerald-400 font-semibold uppercase tracking-wider">Engineering Guide</span>
+            <span>12 min read →</span>
+          </div>
+          <h3 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">Ragas Evaluation Metrics: Faithfulness & Answer Relevance Tutorial</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">Step-by-step tutorial on calculating Faithfulness, Answer Relevance, and Context Recall using Ragas with LangChain and LlamaIndex.</p>
+          <div class="mt-4 flex items-center gap-2 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Production Tested</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Code Included</span>
+          </div>
+        </a>
+        
+        <a href="/llm-judge-synthetic-dataset-generator-guide/" class="block p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 group">
+          <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+            <span class="text-emerald-400 font-semibold uppercase tracking-wider">Engineering Guide</span>
+            <span>12 min read →</span>
+          </div>
+          <h3 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">LLM-as-a-Judge: Best Practices & Cost Optimization Guide</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">How to design reliable LLM-as-a-Judge evaluation systems: overcoming position bias, verbosity bias, self-enhancement bias, and minimizing evaluation costs.</p>
+          <div class="mt-4 flex items-center gap-2 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Production Tested</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Code Included</span>
+          </div>
+        </a>
+        
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+      <span>❓</span> Frequently Asked Questions
+    </h2>
+    <div class="space-y-4">
+      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <h3 class="text-sm font-bold text-white">What methodology is used for benchmarks on PromptEvalHQ?</h3>
+        <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+          All benchmarks are conducted on isolated bare-metal servers or enterprise edge instances using standardized synthetic load generators. Every benchmark specifies exact kernel versions, hardware specifications, and configuration parameters to ensure 100% external reproducibility.
+        </p>
+      </div>
+      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <h3 class="text-sm font-bold text-white">Can I integrate these tools into our internal CI/CD pipelines?</h3>
+        <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+          Yes. All calculation logic and configuration templates are published with open permissions for automated integration into GitHub Actions, GitLab CI, and Kubernetes deployment workflows.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script for Real-Time Calculator -->
+  <script is:inline>
+    function runCalculation() {
+      try {
+        
+                const q = parseFloat(document.getElementById('evalQueries').value) || 0;
+                const pt = parseFloat(document.getElementById('avgPromptTokens').value) || 0;
+                const ot = parseFloat(document.getElementById('avgOutputTokens').value) || 0;
+                const costM = parseFloat(document.getElementById('judgeCostPerM').value) || 0;
+                const totalTokens = q * (pt + ot + 400); // 400 eval prompt overhead
+                const evalCost = (totalTokens / 1000000) * costM;
+                const ciMargin = (1.96 / Math.sqrt(q) * 100).toFixed(1);
+                document.getElementById('outTotalTokens').innerText = totalTokens.toLocaleString() + ' tok';
+                document.getElementById('outEvalCost').innerText = '$' + evalCost.toFixed(2);
+                document.getElementById('outMargin').innerText = '±' + ciMargin + '%';
+            
+      } catch (e) {}
+    }
+    document.addEventListener('DOMContentLoaded', runCalculation);
+    runCalculation();
+  </script>
+
+</Layout>

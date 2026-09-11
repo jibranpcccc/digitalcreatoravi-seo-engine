@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Redis Streams vs BullMQ: When to Use Raw Consumer Groups";
+const pageDescription = "Engineering analysis of when to implement raw Redis Streams with XREADGROUP vs adopting BullMQ's structured job queue abstraction.";
+const canonicalUrl = "https://queuecost.pages.dev/redis-streams-vs-bullmq-task-orchestration/";
+const schemaJson = JSON.stringify({"@context": "https://schema.org", "@graph": [{"@type": "TechArticle", "@id": "https://queuecost.pages.dev/redis-streams-vs-bullmq-task-orchestration/#article", "headline": "Redis Streams vs BullMQ: When to Use Raw Consumer Groups", "description": "Engineering analysis of when to implement raw Redis Streams with XREADGROUP vs adopting BullMQ's structured job queue abstraction.", "url": "https://queuecost.pages.dev/redis-streams-vs-bullmq-task-orchestration/", "author": {"@type": "Organization", "name": "QueueCost Research Lab", "url": "https://queuecost.pages.dev/"}, "publisher": {"@type": "Organization", "name": "QueueCost", "url": "https://queuecost.pages.dev/"}, "datePublished": "2026-09-10T08:00:00Z", "dateModified": "2026-09-11T12:00:00Z"}, {"@type": "BreadcrumbList", "@id": "https://queuecost.pages.dev/redis-streams-vs-bullmq-task-orchestration/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://queuecost.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "Redis Streams vs BullMQ: When to Use Raw Consumer Groups", "item": "https://queuecost.pages.dev/redis-streams-vs-bullmq-task-orchestration/"}]}, {"@type": "FAQPage", "@id": "https://queuecost.pages.dev/redis-streams-vs-bullmq-task-orchestration/#faq", "mainEntity": [{"@type": "Question", "name": "Can Redis Streams lose data if a worker crashes?", "acceptedAnswer": {"@type": "Answer", "text": "No. Unacknowledged messages remain in the Pending Entries List (PEL). Other workers can claim idle messages using XAUTOCLAIM after a configurable idle timeout."}}, {"@type": "Question", "name": "How much RAM does Redis Streams consume per million events?", "acceptedAnswer": {"@type": "Answer", "text": "With 1KB payload size, 1,000,000 stream entries consume approximately 1.1GB RAM in Redis."}}]}]});
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} schemaJson={schemaJson} type="article">
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20">
+    
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs font-mono text-slate-500 mb-6">
+      <a href="/" class="hover:text-blue-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-slate-300 truncate">Redis Streams vs BullMQ: When to Use Raw Consumer Groups</span>
+    </nav>
+
+    <!-- Exact 1 H1 Header -->
+    <h1 class="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+      Redis Streams vs BullMQ: When to Use Raw Consumer Groups
+    </h1>
+
+    <div class="flex items-center gap-4 text-xs font-mono text-slate-400 mt-4 pb-6 border-b border-slate-800">
+      <span>By QueueCost Research Lab</span>
+      <span>•</span>
+      <span>Updated Sept 2026</span>
+      <span>•</span>
+      <span class="px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Verified Guide</span>
+    </div>
+
+    <!-- 45-60 Word Quick Answer Box with Accent Border -->
+    <div class="mt-8 p-5 rounded-2xl bg-slate-900/90 border-l-4 border-blue-500 shadow-xl">
+      <div class="flex items-center gap-2 text-xs font-mono font-bold text-blue-400 uppercase tracking-wider mb-1.5">
+        <span>⚡ Quick Answer (Direct Definition)</span>
+      </div>
+      <p class="text-sm text-slate-200 leading-relaxed font-sans">
+        Use Redis Streams directly when building high-speed event streaming, append-only audit logs, or cross-language data fanout pipelines where multiple microservices read the same event stream. Use BullMQ when you require job-specific orchestration primitives: delayed execution, rate limiting, parent-child workflow dependencies, retry backoffs, and UI progress reporting.
+      </p>
+    </div>
+
+    <!-- Main Content Sections -->
+    <div class="mt-8 space-y-6">
+      
+        <div class="mt-10">
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Feature Comparison: Streams Primitive vs Queue Abstraction</h2>
+        
+            <div class="mt-4 overflow-x-auto border border-slate-800 rounded-xl">
+              <table class="w-full text-left bg-slate-950/60">
+                <thead class="bg-slate-900/90"><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">Capability</th><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">Raw Redis Streams (XADD/XREAD)</th><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">BullMQ (Redis Hash/ZSET)</th></thead>
+                <tbody class="divide-y divide-slate-800/60"><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Message Ordering</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Strict log append (XADD ID)</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">FIFO, LIFO, or Priority score</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Fanout Broadcast</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Native (multiple consumer groups)</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Requires separate queues per subscriber</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Delayed Execution</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Requires manual ZSET worker</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Native delayed jobs with precision</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Job Concurrency Limits</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Manual consumer throttling</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Native concurrency setting per worker</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Job State UI</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Requires Redis Insight</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Bull-Board UI dashboard ready</td></tr></tbody>
+              </table>
+            </div>
+            </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mt-16 pt-10 border-t border-slate-800">
+      <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+        <span>❓</span> Frequently Asked Questions
+      </h2>
+      <div class="space-y-4">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <h3 class="text-sm font-bold text-white">Can Redis Streams lose data if a worker crashes?</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">No. Unacknowledged messages remain in the Pending Entries List (PEL). Other workers can claim idle messages using XAUTOCLAIM after a configurable idle timeout.</p>
+        </div>
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <h3 class="text-sm font-bold text-white">How much RAM does Redis Streams consume per million events?</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">With 1KB payload size, 1,000,000 stream entries consume approximately 1.1GB RAM in Redis.</p>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Sibling Guide Links (Zero-PBN Internal Hub Architecture) -->
+    <div class="mt-16 pt-8 border-t border-slate-800">
+      <h3 class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-4">Explore More Technical Guides in Job Queues & Brokers</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+    <a href="/bullmq-vs-celery-memory-throughput-benchmark/" class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/40 transition block">
+      <span class="text-[11px] font-mono text-blue-400 uppercase">Related Guide</span>
+      <h4 class="text-xs font-bold text-white mt-1 hover:text-blue-300 transition-colors">BullMQ vs Celery: Memory Footprint & Throughput Shootout</h4>
+    </a>
+    
+    <a href="/temporal-vs-inngest-durable-execution-pricing/" class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/40 transition block">
+      <span class="text-[11px] font-mono text-blue-400 uppercase">Related Guide</span>
+      <h4 class="text-xs font-bold text-white mt-1 hover:text-blue-300 transition-colors">Temporal vs Inngest: Durable Workflow Execution Pricing & TCO</h4>
+    </a>
+    
+      </div>
+    </div>
+
+  </article>
+</Layout>

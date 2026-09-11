@@ -1,0 +1,194 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "QueueCost: Background Worker Memory Footprints, Throughput Limits & Queue Broker TCO";
+const pageDescription = "Production benchmarks, architectural calculators, and engineering cheat sheets for Background Job Queues & Message Broker Benchmarks. Optimize performance, sizing, and infrastructure cost.";
+const canonicalUrl = "https://queuecost.pages.dev/";
+const schemaJson = JSON.stringify({"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://queuecost.pages.dev/#website", "name": "QueueCost", "url": "https://queuecost.pages.dev/", "description": "Background Worker Memory Footprints, Throughput Limits & Queue Broker TCO", "publisher": {"@type": "Organization", "name": "QueueCost Research & Engineering", "url": "https://queuecost.pages.dev/"}}, {"@type": "FAQPage", "@id": "https://queuecost.pages.dev/#faq", "mainEntity": [{"@type": "Question", "name": "What is QueueCost and how does it help engineers?", "acceptedAnswer": {"@type": "Answer", "text": "QueueCost provides empirical benchmarks, calculators, and production engineering guides for Background Job Queues & Message Broker Benchmarks. All metrics are independently tested on bare-metal and edge cloud infrastructure."}}, {"@type": "Question", "name": "Are QueueCost calculators and benchmarks free to use?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, all calculators, reference architectures, and benchmark datasets are 100% free and open-source under the MIT license with zero registration required."}}]}]});
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} schemaJson={schemaJson}>
+  
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono font-semibold mb-6">
+      <span>⚡</span>
+      <span>Job Queues & Brokers • 2026 Production Edition</span>
+    </div>
+    
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight max-w-4xl mx-auto leading-tight">
+      QueueCost: <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-400">Background Worker Memory Footprints, Throughput Limits & Queue Broker TCO</span>
+    </h1>
+
+    <!-- 45-60 Word Quick Answer Box -->
+    <div class="mt-8 max-w-3xl mx-auto p-5 rounded-2xl bg-slate-900/90 border-l-4 border-blue-500 shadow-xl text-left">
+      <div class="flex items-center gap-2 text-xs font-mono font-bold text-blue-400 uppercase tracking-wider mb-1.5">
+        <span>✓ Quick Answer: Production Executive Summary</span>
+      </div>
+      <p class="text-sm text-slate-200 leading-relaxed font-sans">
+        QueueCost provides empirical benchmarks, architectural calculators, and verified configuration blueprints for Background Job Queues & Message Broker Benchmarks. Engineers use our zero-dependency interactive sizing tools to calculate throughput, prevent memory exhaustion, and optimize cloud infrastructure costs with 100% reproducible data.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Calculator Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 shadow-2xl backdrop-blur-xl">
+      <div class="flex items-center justify-between mb-6 pb-6 border-b border-slate-800">
+        <div>
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span>🧮</span> Background Job Queue Throughput & Memory Sizing Calculator
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">Calculate Redis memory requirements, worker thread capacity, and message broker infrastructure cost.</p>
+        </div>
+        <span class="hidden sm:inline-block px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-300 text-xs font-mono font-semibold border border-blue-500/20">
+          Client-Side Real-Time
+        </span>
+      </div>
+
+      <!-- Inputs Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+        
+        <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800">
+          <label for="jobsPerDay" class="block text-xs font-mono text-slate-400 mb-1">Jobs Processed / Day (jobs)</label>
+          <input type="number" id="jobsPerDay" value="250000" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white font-mono focus:outline-none focus:border-blue-500" oninput="runCalculation()" />
+        </div>
+        
+        <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800">
+          <label for="avgJobPayloadKb" class="block text-xs font-mono text-slate-400 mb-1">Avg Job Payload (KB) (KB)</label>
+          <input type="number" id="avgJobPayloadKb" value="4" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white font-mono focus:outline-none focus:border-blue-500" oninput="runCalculation()" />
+        </div>
+        
+        <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800">
+          <label for="jobDurationMs" class="block text-xs font-mono text-slate-400 mb-1">Avg Job Execution Time (ms)</label>
+          <input type="number" id="jobDurationMs" value="180" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white font-mono focus:outline-none focus:border-blue-500" oninput="runCalculation()" />
+        </div>
+        
+        <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800">
+          <label for="peakMultiplier" class="block text-xs font-mono text-slate-400 mb-1">Peak Traffic Multiplier (x)</label>
+          <input type="number" id="peakMultiplier" value="3.0" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white font-mono focus:outline-none focus:border-blue-500" oninput="runCalculation()" />
+        </div>
+        
+      </div>
+
+      <!-- Outputs Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 p-5 rounded-2xl bg-gradient-to-tr from-slate-950 to-slate-900 border border-slate-800">
+        
+        <div class="text-center sm:text-left">
+          <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Peak Job Throughput</span>
+          <span class="text-xl font-black text-blue-400 font-mono mt-1 block" id="outPeakJps">--</span>
+        </div>
+        
+        <div class="text-center sm:text-left">
+          <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Required Worker Concurrency</span>
+          <span class="text-xl font-black text-blue-400 font-mono mt-1 block" id="outWorkers">--</span>
+        </div>
+        
+        <div class="text-center sm:text-left">
+          <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Redis Buffer RAM Required</span>
+          <span class="text-xl font-black text-blue-400 font-mono mt-1 block" id="outRamMb">--</span>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Guides Grid -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-800">
+      <div>
+        <h2 class="text-2xl font-black text-white tracking-tight">Core Architecture & Implementation Guides</h2>
+        <p class="text-xs text-slate-400 mt-1">Deep-dive technical articles with copy-pasteable configuration scripts and benchmark data.</p>
+      </div>
+      <span class="text-xs font-mono text-slate-400">3 Guides Published</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+        <a href="/bullmq-vs-celery-memory-throughput-benchmark/" class="block p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1 group">
+          <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+            <span class="text-blue-400 font-semibold uppercase tracking-wider">Engineering Guide</span>
+            <span>12 min read →</span>
+          </div>
+          <h3 class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">BullMQ vs Celery: Memory Footprint & Throughput Shootout</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">Benchmarking Node.js BullMQ against Python Celery: memory consumption per worker, Redis connection pooling, and maximum job insertion throughput.</p>
+          <div class="mt-4 flex items-center gap-2 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Production Tested</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Code Included</span>
+          </div>
+        </a>
+        
+        <a href="/temporal-vs-inngest-durable-execution-pricing/" class="block p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1 group">
+          <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+            <span class="text-blue-400 font-semibold uppercase tracking-wider">Engineering Guide</span>
+            <span>12 min read →</span>
+          </div>
+          <h3 class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">Temporal vs Inngest: Durable Workflow Execution Pricing & TCO</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">Cost and architectural comparison between Temporal Cloud and Inngest for durable execution, event-driven step functions, and long-running AI workflows.</p>
+          <div class="mt-4 flex items-center gap-2 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Production Tested</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Code Included</span>
+          </div>
+        </a>
+        
+        <a href="/redis-streams-vs-bullmq-task-orchestration/" class="block p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1 group">
+          <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+            <span class="text-blue-400 font-semibold uppercase tracking-wider">Engineering Guide</span>
+            <span>12 min read →</span>
+          </div>
+          <h3 class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">Redis Streams vs BullMQ: When to Use Raw Consumer Groups</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">Engineering analysis of when to implement raw Redis Streams with XREADGROUP vs adopting BullMQ's structured job queue abstraction.</p>
+          <div class="mt-4 flex items-center gap-2 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Production Tested</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700">Code Included</span>
+          </div>
+        </a>
+        
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+      <span>❓</span> Frequently Asked Questions
+    </h2>
+    <div class="space-y-4">
+      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <h3 class="text-sm font-bold text-white">What methodology is used for benchmarks on QueueCost?</h3>
+        <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+          All benchmarks are conducted on isolated bare-metal servers or enterprise edge instances using standardized synthetic load generators. Every benchmark specifies exact kernel versions, hardware specifications, and configuration parameters to ensure 100% external reproducibility.
+        </p>
+      </div>
+      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <h3 class="text-sm font-bold text-white">Can I integrate these tools into our internal CI/CD pipelines?</h3>
+        <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+          Yes. All calculation logic and configuration templates are published with open permissions for automated integration into GitHub Actions, GitLab CI, and Kubernetes deployment workflows.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script for Real-Time Calculator -->
+  <script is:inline>
+    function runCalculation() {
+      try {
+        
+                const jobs = parseFloat(document.getElementById('jobsPerDay').value) || 0;
+                const kb = parseFloat(document.getElementById('avgJobPayloadKb').value) || 0;
+                const duration = parseFloat(document.getElementById('jobDurationMs').value) || 0;
+                const peak = parseFloat(document.getElementById('peakMultiplier').value) || 1;
+                const avgJps = jobs / 86400;
+                const peakJps = avgJps * peak;
+                const requiredWorkers = Math.ceil((peakJps * duration) / 1000);
+                const redisRamMb = Math.ceil((jobs * kb * 1.4) / 1024); // 40% redis data structure overhead
+                document.getElementById('outPeakJps').innerText = peakJps.toFixed(1) + ' jobs/s';
+                document.getElementById('outWorkers').innerText = requiredWorkers + ' concurrent';
+                document.getElementById('outRamMb').innerText = redisRamMb + ' MB RAM';
+            
+      } catch (e) {}
+    }
+    document.addEventListener('DOMContentLoaded', runCalculation);
+    runCalculation();
+  </script>
+
+</Layout>

@@ -1,0 +1,12 @@
+# S3EgressAudit - AWS S3 vs Cloudflare R2 vs Backblaze B2: Forensic Egress Cost Math
+
+> Authority reference dataset and benchmarks for Cloud Object Storage & Zero-Egress Economics.
+> All metrics and guides are 100% free and open-source.
+
+## Core Architectural Guides
+- [Cloudflare R2 vs AWS S3: Complete Cost Breakdown at 50TB Egress](https://s3egressaudit.pages.dev/cloudflare-r2-vs-aws-s3-egress-fee-breakdown/): Complete engineering guide and technical benchmarks for Cloudflare R2 vs AWS S3: Complete Cost Breakdown at 50TB Egress in high-performance production systems.
+- [Backblaze B2 vs Wasabi: Minimum Retention & API Pricing Math](https://s3egressaudit.pages.dev/backblaze-b2-vs-wasabi-hot-cloud-storage-math/): Architectural analysis and total cost of ownership shootout for Backblaze B2 vs Wasabi: Minimum Retention & API Pricing Math.
+- [S3 Multipart Upload Optimization: High-Throughput Python Guide](https://s3egressaudit.pages.dev/s3-multipart-upload-part-size-tuning-python/): Step-by-step implementation guide, code snippets, and automated testing procedures for S3 Multipart Upload Optimization: High-Throughput Python Guide.
+
+## Interactive Tools
+- [S3EgressAudit Sizing Calculator](https://s3egressaudit.pages.dev/): Real-time architectural estimator.

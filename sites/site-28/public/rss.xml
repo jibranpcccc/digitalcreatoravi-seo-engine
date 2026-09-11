@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>DNSPerfHQ Research & Engineering Feed</title>
+    <link>https://dnsperf-hq.pages.dev/</link>
+    <description>Global DNS Lookup Latency, Anycast PoP Routing & DNSSEC Optimization</description>
+    <language>en-us</language>
+    <item>
+      <title>Cloudflare DNS vs Route 53: Anycast Resolution Latency Shootout</title>
+      <link>https://dnsperf-hq.pages.dev/cloudflare-dns-vs-aws-route53-global-latency-benchmarks/</link>
+      <description>Complete engineering guide and technical benchmarks for Cloudflare DNS vs Route 53: Anycast Resolution Latency Shootout in high-performance production systems.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://dnsperf-hq.pages.dev/cloudflare-dns-vs-aws-route53-global-latency-benchmarks/</guid>
+    </item>
+    <item>
+      <title>DNSSEC Algorithm 13 (ECDSA P-256): Zero-Packet-Fragmentation Guide</title>
+      <link>https://dnsperf-hq.pages.dev/dnssec-algorithm-13-ecdsa-p256-vs-rsa-setup/</link>
+      <description>Architectural analysis and total cost of ownership shootout for DNSSEC Algorithm 13 (ECDSA P-256): Zero-Packet-Fragmentation Guide.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://dnsperf-hq.pages.dev/dnssec-algorithm-13-ecdsa-p256-vs-rsa-setup/</guid>
+    </item>
+    <item>
+      <title>Zero-Downtime DNS Migration: Step-by-Step TTL Countdown</title>
+      <link>https://dnsperf-hq.pages.dev/zero-downtime-dns-migration-ttl-lowering-checklist/</link>
+      <description>Step-by-step implementation guide, code snippets, and automated testing procedures for Zero-Downtime DNS Migration: Step-by-Step TTL Countdown.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://dnsperf-hq.pages.dev/zero-downtime-dns-migration-ttl-lowering-checklist/</guid>
+    </item>
+  </channel>
+</rss>

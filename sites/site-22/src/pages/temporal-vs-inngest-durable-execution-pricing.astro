@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Temporal vs Inngest: Durable Workflow Execution Pricing & TCO";
+const pageDescription = "Cost and architectural comparison between Temporal Cloud and Inngest for durable execution, event-driven step functions, and long-running AI workflows.";
+const canonicalUrl = "https://queuecost.pages.dev/temporal-vs-inngest-durable-execution-pricing/";
+const schemaJson = JSON.stringify({"@context": "https://schema.org", "@graph": [{"@type": "TechArticle", "@id": "https://queuecost.pages.dev/temporal-vs-inngest-durable-execution-pricing/#article", "headline": "Temporal vs Inngest: Durable Workflow Execution Pricing & TCO", "description": "Cost and architectural comparison between Temporal Cloud and Inngest for durable execution, event-driven step functions, and long-running AI workflows.", "url": "https://queuecost.pages.dev/temporal-vs-inngest-durable-execution-pricing/", "author": {"@type": "Organization", "name": "QueueCost Research Lab", "url": "https://queuecost.pages.dev/"}, "publisher": {"@type": "Organization", "name": "QueueCost", "url": "https://queuecost.pages.dev/"}, "datePublished": "2026-09-10T08:00:00Z", "dateModified": "2026-09-11T12:00:00Z"}, {"@type": "BreadcrumbList", "@id": "https://queuecost.pages.dev/temporal-vs-inngest-durable-execution-pricing/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://queuecost.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "Temporal vs Inngest: Durable Workflow Execution Pricing & TCO", "item": "https://queuecost.pages.dev/temporal-vs-inngest-durable-execution-pricing/"}]}, {"@type": "FAQPage", "@id": "https://queuecost.pages.dev/temporal-vs-inngest-durable-execution-pricing/#faq", "mainEntity": [{"@type": "Question", "name": "What is the maximum execution duration for an Inngest step?", "acceptedAnswer": {"@type": "Answer", "text": "Inngest steps run inside your existing HTTP framework (Next.js, FastAPI), so individual steps are limited to serverless timeout limits (typically 30-300 seconds), but the overall workflow can sleep or wait for events for up to 365 days."}}, {"@type": "Question", "name": "Does Temporal support Python and TypeScript?", "acceptedAnswer": {"@type": "Answer", "text": "Temporal provides official, production-grade SDKs for TypeScript, Python, Go, Java, and .NET, with full cross-language workflow invocation capabilities."}}]}]});
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} schemaJson={schemaJson} type="article">
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20">
+    
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs font-mono text-slate-500 mb-6">
+      <a href="/" class="hover:text-blue-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-slate-300 truncate">Temporal vs Inngest: Durable Workflow Execution Pricing & TCO</span>
+    </nav>
+
+    <!-- Exact 1 H1 Header -->
+    <h1 class="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+      Temporal vs Inngest: Durable Workflow Execution Pricing & TCO
+    </h1>
+
+    <div class="flex items-center gap-4 text-xs font-mono text-slate-400 mt-4 pb-6 border-b border-slate-800">
+      <span>By QueueCost Research Lab</span>
+      <span>•</span>
+      <span>Updated Sept 2026</span>
+      <span>•</span>
+      <span class="px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Verified Guide</span>
+    </div>
+
+    <!-- 45-60 Word Quick Answer Box with Accent Border -->
+    <div class="mt-8 p-5 rounded-2xl bg-slate-900/90 border-l-4 border-blue-500 shadow-xl">
+      <div class="flex items-center gap-2 text-xs font-mono font-bold text-blue-400 uppercase tracking-wider mb-1.5">
+        <span>⚡ Quick Answer (Direct Definition)</span>
+      </div>
+      <p class="text-sm text-slate-200 leading-relaxed font-sans">
+        Temporal Cloud charges by Actions and Storage ($25/million actions plus $0.042/GB-hour state), making it ideal for high-scale enterprise systems requiring strict state replay guarantees. Inngest charges per step execution ($5/million steps on Pro tier) with an event-driven HTTP push architecture that requires zero persistent worker daemons, slashing devops overhead for serverless teams.
+      </p>
+    </div>
+
+    <!-- Main Content Sections -->
+    <div class="mt-8 space-y-6">
+      
+        <div class="mt-10">
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Durable Execution Models: Self-Hosted Temporal vs Inngest Serverless</h2>
+        
+            <p class="text-sm text-slate-300 mt-3 leading-relaxed">Temporal uses a replay-based event sourcing model where worker code re-executes workflow code while retrieving recorded activity results from Temporal Server's history. This requires stateful, long-running worker processes. Inngest employs an event-driven HTTP webhook dispatch model: when an event fires, Inngest invokes serverless endpoints step-by-step with state passed through signed JWT payloads.</p>
+            </div>
+        <div class="mt-10">
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Monthly Cost Projection: 10 Million Step Executions</h2>
+        
+            <div class="mt-4 overflow-x-auto border border-slate-800 rounded-xl">
+              <table class="w-full text-left bg-slate-950/60">
+                <thead class="bg-slate-900/90"><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">Infrastructure Layer</th><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">Temporal Cloud</th><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">Inngest Managed</th><th class="p-3 border-b border-slate-800 text-left text-xs font-mono uppercase text-slate-300">Self-Hosted Temporal (AWS)</th></thead>
+                <tbody class="divide-y divide-slate-800/60"><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Step / Action Ingestion</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">$250 / mo</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">$50 / mo</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">$0 (Self-Hosted)</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">State History Storage</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">$140 / mo</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Included in plan</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">$85 / mo (Postgres/Cassandra RDS)</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Compute Runners</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">$180 / mo (ECS Fargate)</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">$45 / mo (Vercel/Lambda)</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">$240 / mo (3x c6g.large EC2)</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">DevOps Maintenance Hours</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">0.5 hrs / mo</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">0.2 hrs / mo</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">12-20 hrs / mo</td></tr><tr class="hover:bg-slate-900/40"><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">Total Estimated Monthly TCO</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">$570 / month</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">$95 / month</td><td class="p-3 border-b border-slate-800/80 text-xs font-mono text-slate-300">$325 / mo + engineer time</td></tr></tbody>
+              </table>
+            </div>
+            </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mt-16 pt-10 border-t border-slate-800">
+      <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+        <span>❓</span> Frequently Asked Questions
+      </h2>
+      <div class="space-y-4">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <h3 class="text-sm font-bold text-white">What is the maximum execution duration for an Inngest step?</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">Inngest steps run inside your existing HTTP framework (Next.js, FastAPI), so individual steps are limited to serverless timeout limits (typically 30-300 seconds), but the overall workflow can sleep or wait for events for up to 365 days.</p>
+        </div>
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <h3 class="text-sm font-bold text-white">Does Temporal support Python and TypeScript?</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">Temporal provides official, production-grade SDKs for TypeScript, Python, Go, Java, and .NET, with full cross-language workflow invocation capabilities.</p>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Sibling Guide Links (Zero-PBN Internal Hub Architecture) -->
+    <div class="mt-16 pt-8 border-t border-slate-800">
+      <h3 class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-4">Explore More Technical Guides in Job Queues & Brokers</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+    <a href="/bullmq-vs-celery-memory-throughput-benchmark/" class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/40 transition block">
+      <span class="text-[11px] font-mono text-blue-400 uppercase">Related Guide</span>
+      <h4 class="text-xs font-bold text-white mt-1 hover:text-blue-300 transition-colors">BullMQ vs Celery: Memory Footprint & Throughput Shootout</h4>
+    </a>
+    
+    <a href="/redis-streams-vs-bullmq-task-orchestration/" class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/40 transition block">
+      <span class="text-[11px] font-mono text-blue-400 uppercase">Related Guide</span>
+      <h4 class="text-xs font-bold text-white mt-1 hover:text-blue-300 transition-colors">Redis Streams vs BullMQ: When to Use Raw Consumer Groups</h4>
+    </a>
+    
+      </div>
+    </div>
+
+  </article>
+</Layout>

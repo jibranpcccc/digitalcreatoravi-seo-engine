@@ -2,7 +2,7 @@
 %“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 13 0 R
+/F1 2 0 R /F2 3 0 R /F3 19 0 R
 >>
 endobj
 2 0 obj
@@ -33,74 +33,116 @@ endobj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://site-16-indol.vercel.app/)
->> /Border [ 0 0 0 ] /Rect [ 247 482.3125 386.897 496.3125 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 247 489.3125 386.897 503.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 7 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/devcontainer-json-vs-docker-compose-local-development/)
->> /Border [ 0 0 0 ] /Rect [ 247 455.3125 564.794 469.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/)
+>> /Border [ 0 0 0 ] /Rect [ 247 469.3125 563.2075 483.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/devcontainer-json-vs-docker-compose-local-development/)
->> /Border [ 0 0 0 ] /Rect [ 247 441.3125 333.051 455.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/)
+>> /Border [ 0 0 0 ] /Rect [ 247 455.3125 286.596 469.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/)
->> /Border [ 0 0 0 ] /Rect [ 247 421.3125 563.1885 435.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/devcontainer-json-vs-docker-compose-local-development/)
+>> /Border [ 0 0 0 ] /Rect [ 247 435.3125 564.794 449.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/)
->> /Border [ 0 0 0 ] /Rect [ 247 407.3125 340.955 421.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/devcontainer-json-vs-docker-compose-local-development/)
+>> /Border [ 0 0 0 ] /Rect [ 247 421.3125 333.051 435.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/fastest-docker-compose-postgres-redis-local-stack/)
->> /Border [ 0 0 0 ] /Rect [ 247 387.3125 560.5665 401.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/direnv-nix-flakes-fast-developer-shell-tutorial/)
+>> /Border [ 0 0 0 ] /Rect [ 247 401.3125 561.6305 415.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 12 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/fastest-docker-compose-postgres-redis-local-stack/)
->> /Border [ 0 0 0 ] /Rect [ 247 373.3125 307.192 387.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/direnv-nix-flakes-fast-developer-shell-tutorial/)
+>> /Border [ 0 0 0 ] /Rect [ 247 387.3125 278.673 401.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 13 0 obj
 <<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/A <<
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/docker-compose-gpu-passthrough-nvidia-container-toolkit/)
+>> /Border [ 0 0 0 ] /Rect [ 247 367.3125 561.0795 381.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 14 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/llms.txt)
->> /Border [ 0 0 0 ] /Rect [ 46 205.6 204.916 217 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/docker-compose-gpu-passthrough-nvidia-container-toolkit/)
+>> /Border [ 0 0 0 ] /Rect [ 247 353.3125 340.955 367.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 15 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-16-indol.vercel.app)
->> /Border [ 0 0 0 ] /Rect [ 301.48 163.5 401.5225 172.5 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/fastest-docker-compose-postgres-redis-local-stack/)
+>> /Border [ 0 0 0 ] /Rect [ 247 333.3125 560.5665 347.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 16 0 obj
 <<
-/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 14 0 R 
-  15 0 R ] /Contents 20 0 R /MediaBox [ 0 0 612 792 ] /Parent 19 0 R /Resources <<
+/A <<
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/fastest-docker-compose-postgres-redis-local-stack/)
+>> /Border [ 0 0 0 ] /Rect [ 247 319.3125 307.192 333.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+17 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/)
+>> /Border [ 0 0 0 ] /Rect [ 247 299.3125 563.1885 313.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+18 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/)
+>> /Border [ 0 0 0 ] /Rect [ 247 285.3125 340.955 299.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+19 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+20 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app/llms.txt)
+>> /Border [ 0 0 0 ] /Rect [ 46 117.6 204.916 129 ] /Subtype /Link /Type /Annot
+>>
+endobj
+21 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://site-16-indol.vercel.app)
+>> /Border [ 0 0 0 ] /Rect [ 301.48 75.5 401.5225 84.5 ] /Subtype /Link /Type /Annot
+>>
+endobj
+22 0 obj
+<<
+/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 
+  14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 20 0 R 21 0 R ] /Contents 26 0 R /MediaBox [ 0 0 612 792 ] /Parent 25 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -108,31 +150,31 @@ endobj
 >> /Type /Page
 >>
 endobj
-17 0 obj
+23 0 obj
 <<
-/PageMode /UseNone /Pages 19 0 R /Type /Catalog
+/PageMode /UseNone /Pages 25 0 R /Type /Catalog
 >>
 endobj
-18 0 obj
+24 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260907124646+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260907124646+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/Author (\(anonymous\)) /CreationDate (D:20260912001152+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260912001152+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
 >>
 endobj
-19 0 obj
+25 0 obj
 <<
-/Count 1 /Kids [ 16 0 R ] /Type /Pages
+/Count 1 /Kids [ 22 0 R ] /Type /Pages
 >>
 endobj
-20 0 obj
+26 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2029
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2285
 >>
 stream
-GauHL>>s9;&:Vs/fU:#Mg;1f"h7V,Hg9a+Za>m&?FH!=I.ZWlLEe&6,mq3qR@N[Dm*2Z!*B4J&-IJ[`&AHE)8'(nIm!PG&@i@+e:_JB_#enpeF_0@m50d-.Q[L8[<ikoHYM<u.2&%^m"VWE=LR)EtHa;4r#6sAJ#bZ<rZ"M\t-SIW^'Q]pZEFF4;]`ttM3kJu&tE-4/^9hs(qRs_bsCZ9VI)Q!o&PDQZZL"U[;]p!u\ipUARVCt4uZ+@YH6%+Ck+%8Gl_BE?UL;]o-%PGZ=CLE7>"eE03B=PGi(nT+I.-5NYpfQAm_2LiVcD!"Dd?96Y=AgVV&!$6paTRSkRF;B*n3b<,g'?DUJh7ONM3'\+6:)AQe+7F7+Q)GhFINifFVM\#(+nd5RRfkD%2crb.UaNK)"TW.;neu2FC5pS&(H6#=b^;GEu$JMp;cgl\OU5`*I/JSKuf.H_nuPdd"n_W*iFk/VKkQC4j:3<1@V'[+E3+.:BTD\>f4I9I*45H%$$e&K'A$k=2S(sR.?]]eJ<AIgW?SLEbd+A-'bndUQ4s)7&EC(cVc8;3fNNA<!p(2E)j&A@K(fI*i1lNF"3J)/hgQnoIWb"o,NTulAbpE99DI^%5QB,kLb>o[_\7pAkQ0TB[q;Sjd(T<bot9Z2%$II2fT]AQ?'L/4B`r[gYr36Tib4jVoGjeQmQJTGml-^%cu_a?V%:GN2)kfRW#R^MKsu3FF:#p$Vk1hNq*AMTK1<eUC=\@,#ld?36+B0lA9Sn8d2?[:Z]K&K$^I;=]@YBeC%@:EX=^>W?%^lfUUngdRCYU=VBR:kdj$/@A4(:U'L0(bu7?t@<B]f!q,7]@-A4M(bQ5BC%^>Eh';(M`c&=QIus;/*E9ZLWR]^gVLD[GV@J)6r/Bqa8-[@:&db^h&*$&6m6h.GjeZEF<!&@iD]V(2j>)i6hlm/\?568'k2dX0Ni*YcR08-Bo65iCR<5)/$o5!nJQZ'@cDk1*$Yi<C/'r5@;d.NZ;_'t)V4D%lYo.f'Em2?R8m$29`%e*0Rc@`<N]#>%"qYB*it8!p&a7hcC*'h&qf0]5?Z#"e]'=<kbFpq_]87k4o2*O9A3jq[?)^PO(qKPE:=>]l;<oOC=GH3KfNu_QLHBK`h'K6i:3YOjpB(*Q]"mDt[u.(`Q55sAg1I3gE`uR0aj"^>09R!tFjtrn,^=03BX%WB72:'L7A!-3>$S$lk0ZA1X_lUh5t]l)V*>u+Y^8?(_V7,N:MEfPR+rRG%p6L>!DL['Zk2uiU0i-SXP^fFBD:+bJ_(IGQ?U,[R0'SR?0iKMD5P]TR4<OYI0Fpm_a;^:4AdV6VM/.51?Z*uVDQ<XrN^OIho>)s_Z!N9=cFHdN`cb)cmnDu!pf,0<^5R+qZ%QlfCU=n"E.ZW#ZR!;)`@hCf2diqWYtA&G&D.MB/RA-A*H0UIJ\C;Z/!?VGHDT)<Eo!rZ+>C$`1+bYfsM9-.[t-O1WaDge(<d5giAo:e_Dq9f;Rht%d2ZN9id?D[@Qj]Re@/]M&tsi?>D!gV[;FcUoN@A/,pSOeCf:V^nm\&,2P=RH&_eSn8&!%1-0dbh<ntZ):K%]N>aM#>:rlnH2oG^a)hf5*@>>GkVoKqDoB=1?GAXT2fQ=lClsaV9N9d#[P5TQ;I(Vu:#cD2dE)Qp#1$`urn^/mMR(l!K)MQtgcp=;b2Y$a>Y+`bRq;WWG+oD7.WIW,L@b7YD`h9KMd4K.C&XI\@dEM0UKkE'9>h7Z!ZUBn;UMn-6GfKH7oE;>T(63P`m<_bQb)+ung7di4G]]lf_GLS)9sV97i9QS7!V)k"s,+]0NKd[nH?^_4CuUV9()pkk3R3eD8Q<;kKq*l=V\NXYFOupk2A;Q*12DL^-9:G;9gpoSQ+`3V5h+=En(ceY&7D(K='*a7lC<8mid8WgC=P.2tWs\F^F0S9H:h;q"T9^dnkC6W%CRob0R5IE[pc/;:h[4Wg>T(2Z6d'PH+616hNM',M!X["H%4N2sE&HLp.0$K[4_Pk,!BL;Eam10,e6f+7-o2l2~>endstream
+GauHLgJZce'Re;/m$Z-ag1"Rf)Y6Ec.-]]RL9sb#FH!=I.ZWoMEe&6,pTl1#8q=k,.0I&(2O:_Wp<p[2J:ZTGrXBYDT-gdl9RrKaR0'X9)^_I:Qume"8H#FQJnLMH1>6hZ4,2Vph<OZ,b5pEXM<"GocT4#t;00?'=l?q>oVuWEUtrl?BK.(,%o;05i4OP[Fu]I//k:Qnn/..KiPdf^&^LR.0O5M8%>En,9Rak>K)kNY^E8%_HNM\AX4oE[W"8CUWsHe23!:e]&@ci"_/7j"ko7Qb5pri&)(t=]\jpkq:Qm5sSWq_20VRGf@:9^7Ing)PbUMYX",D.]B:O^hb\70eqmg5LD$02erW\1e5Y.CL+X%Jll1JkN+Q)_tFINifFX4hF(=)/q>Y'0;%d:cD.UXHJ(aMb?VoaN;Hjt6"s$AlI=f$I"S[+@9Y]&RNV_^r_G0`O"c?WG1m-bb3Kgo=,,uGTH9:CVmeq5Mh,m/WC)$FjIpIe$NI+Rk,Tq:A54uu3:B>O@a-]u:^i0`L[L<C%T&T92/T&S=ag^5NJ:O!o3_hCdB=Ipg_7!':$dBM\J8`?s[/;!d@rS:7j$>5UL;qtbA]5QGk+Qk0dbL@O=VNrD,?PnHon].n__c4ns5ULPQ!*AHt'lqKLN965`kn8\NLkho;3D1$qVF`a;X>e*>/-8#5pd^?KU_/U6(aK]h3'%VSUO=Jr)RBRERATdP4%d_$1o0/)"e-epP2g42_`;Cj/,UlLKJOZ?joSfJ^>S\$3F/GNf'B6njWI$+PijSK+@']+,%J.`*%Pd9-mLW]\<*(%=9^;dY%+!5_"iRaj(q$Ui,>'^)UF'*L*\XcV:U7#M]$0;1#tdf]ck!Vbj,L@*JJYal)d"F:A\P%[4+fJ[SBO;^,PruC*s8kc;5-.mX5?=6o44$3((]^@QRNjVH6DkpH>cUjJ?Kk^*u5l:Di65))Q2#DEoua3WZ*"3nkln7j]'`?7#`[c7WnEG/6QbESoRZ2!i,I(,WhR$BIR=g+^uX%6S)[`aJ#N/A.,)(t0qYnLUc&2<;OW&4SV=!MU;@33Q0aOcB?hjKe&5YDK=*G*g+g!.uGbU^K;iZgAVrmR42P_?@Jng#li7r`1!k.aNG2^.E5^K'E@+!6(>C0ntWbBEY(u2HuoFnDU-'g_XrM/:ms@[^*6Vog3i1K6roULb?RL]f*">CCP;9Q$B]=D*S4t/IuHqZs*GZe#NF!0WH]43(h(-A@\<bZF!`!+=`\de#IB#0s(Mj[OedVU=[6h]r'`.P#WJgj"qFKVj1Q*Gm/@9$mE_*5/K=lKB"r$T`qGO.6(oq$n#&8AJeVcaAJP;Z`A&Y!P8uXQEWGf.^<d<T\p93824`D(iuMT?_WpmhJ;0%,Hi9E#Ps,"UMhgnMLs1G[%,A_QHX<kp`.So\&SORlO?sE.*l$sC=rs,L6[nT5f<_@V/Ms&nI986XgP-%D6OZ'VmP%ra67&;n4-=U7VT\O3G*cb5!',2Qpt1MHEH73^R9fTJD=jmrG`7eC@#,aE#&(5X$Qk/a7,skelU5b.K[\m[=7mZFH<hZZF;$c/@[6KgM)'l<nAPrVQ5(R]9Z%T>)n[ZIP&CU5bkA(^Y$Km(]=6b_+)X+4TQK\@:65#b@X^1AdIs.<JCla)i?#jTrFX.C3m>.ZMmVlhkq\nX=7p84t3P+XN&CT]OhB<Uo]m:=Resc;&QbVT,OcbX,Zo$fW8[6X'*P$.]hX9_><h=h/Bm]L:Z9LHEU3?><8:VpNL8E^QT+A[(6$]!`)e[Fff#Od]]#-`N#`6oefhK30jkoY:fLe4RM80g9ljj.+s2YX^kRRGMg5_T='7Zj"_2u*AEEW3L=%<*lr@LU/R`.+>*akIu"d-K=G"=X7lkg%S!K?)!M=L=>m[hg$&^7lppU'1n%;*+._G0Yd@']T3VjT]I\4:@(0i-GP>L3-;g)7KF@Zua):W9[8;VF(Vf6Q_KkggeK<YFgFQfP^FK'h\_&rJA2M[ddh4CQ+ifoG\s.=(TTI#NVCh#TY!#K_;%i$qH0`"iGuS+j$ql`has=jBKgLO#iT($Z;\mfWTR$\N@p'Abk3d0ofM5jX-5%rEj+(i\m9W$][m.F.g5k8_U%>m2Z>FGC*6,%['eYfUD`Wb0B,Ro@1o<:8gE3]d&9V&5\)Kiff!C,hs$c6r!\qb#SbV2JWB/>MX5'IqL;(dYmUJb6[A,<>/rIuXBlY]k"\i'q6`Nf8#=nbM\5)-Kd!^'(H\.Y-'nMMfLa.55gkSuU?k#<EnM;i[-#<2=CL9V!kC49orNc~>endstream
 endobj
 xref
-0 21
+0 27
 0000000000 65535 f 
 0000000061 00000 n 
 0000000113 00000 n 
@@ -141,29 +183,35 @@ xref
 0000000506 00000 n 
 0000000682 00000 n 
 0000000861 00000 n 
-0000001094 00000 n 
-0000001327 00000 n 
-0000001565 00000 n 
-0000001803 00000 n 
-0000002034 00000 n 
-0000002264 00000 n 
-0000002370 00000 n 
-0000002549 00000 n 
-0000002726 00000 n 
-0000003008 00000 n 
-0000003078 00000 n 
-0000003359 00000 n 
-0000003420 00000 n 
+0000001088 00000 n 
+0000001314 00000 n 
+0000001547 00000 n 
+0000001781 00000 n 
+0000002010 00000 n 
+0000002238 00000 n 
+0000002475 00000 n 
+0000002711 00000 n 
+0000002942 00000 n 
+0000003172 00000 n 
+0000003411 00000 n 
+0000003649 00000 n 
+0000003755 00000 n 
+0000003934 00000 n 
+0000004109 00000 n 
+0000004433 00000 n 
+0000004503 00000 n 
+0000004784 00000 n 
+0000004845 00000 n 
 trailer
 <<
 /ID 
-[<028dd0e10eea5dc851827440b419c943><028dd0e10eea5dc851827440b419c943>]
+[<80e6d48c807eab2e56cdbf9c06a4904c><80e6d48c807eab2e56cdbf9c06a4904c>]
 % ReportLab generated PDF document -- digest (opensource)
 
-/Info 18 0 R
-/Root 17 0 R
-/Size 21
+/Info 24 0 R
+/Root 23 0 R
+/Size 27
 >>
 startxref
-5541
+7222
 %%EOF

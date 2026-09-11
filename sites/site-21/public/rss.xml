@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>PromptEvalHQ Research & Engineering Feed</title>
+    <link>https://promptevalhq.pages.dev/</link>
+    <description>Empirical Prompt Regression Testing & LLM Evaluation Framework Benchmarks</description>
+    <language>en-us</language>
+    <item>
+      <title>Promptfoo vs DeepEval: LLM Benchmark & CI/CD Testing Shootout</title>
+      <link>https://promptevalhq.pages.dev/promptfoo-vs-deepeval-llm-evaluation-benchmark/</link>
+      <description>Empirical comparison of Promptfoo vs DeepEval for production LLM CI/CD pipelines, regression testing, hallucination scoring, and execution speed.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://promptevalhq.pages.dev/promptfoo-vs-deepeval-llm-evaluation-benchmark/</guid>
+    </item>
+    <item>
+      <title>Ragas Evaluation Metrics: Faithfulness & Answer Relevance Tutorial</title>
+      <link>https://promptevalhq.pages.dev/ragas-metrics-rag-evaluation-python-tutorial/</link>
+      <description>Step-by-step tutorial on calculating Faithfulness, Answer Relevance, and Context Recall using Ragas with LangChain and LlamaIndex.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://promptevalhq.pages.dev/ragas-metrics-rag-evaluation-python-tutorial/</guid>
+    </item>
+    <item>
+      <title>LLM-as-a-Judge: Best Practices & Cost Optimization Guide</title>
+      <link>https://promptevalhq.pages.dev/llm-judge-synthetic-dataset-generator-guide/</link>
+      <description>How to design reliable LLM-as-a-Judge evaluation systems: overcoming position bias, verbosity bias, self-enhancement bias, and minimizing evaluation costs.</description>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 GMT</pubDate>
+      <guid>https://promptevalhq.pages.dev/llm-judge-synthetic-dataset-generator-guide/</guid>
+    </item>
+  </channel>
+</rss>

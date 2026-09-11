@@ -2,7 +2,7 @@
 %“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 13 0 R
+/F1 2 0 R /F2 3 0 R /F3 19 0 R
 >>
 endobj
 2 0 obj
@@ -33,74 +33,116 @@ endobj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://webhookwatch.vercel.app/)
->> /Border [ 0 0 0 ] /Rect [ 247 482.3125 399.038 496.3125 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 247 489.3125 399.038 503.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 7 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/stripe-webhook-signature-verification-fastapi/)
->> /Border [ 0 0 0 ] /Rect [ 247 455.3125 563.2075 469.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/github-webhook-delivery-kafka-architecture/)
+>> /Border [ 0 0 0 ] /Rect [ 247 469.3125 564.794 483.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/stripe-webhook-signature-verification-fastapi/)
->> /Border [ 0 0 0 ] /Rect [ 247 441.3125 289.2275 455.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/github-webhook-delivery-kafka-architecture/)
+>> /Border [ 0 0 0 ] /Rect [ 247 455.3125 281.314 469.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/)
->> /Border [ 0 0 0 ] /Rect [ 247 421.3125 563.198 435.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/shopify-webhook-signature-verification-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 435.3125 562.6755 449.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/)
->> /Border [ 0 0 0 ] /Rect [ 247 407.3125 296.0865 421.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/shopify-webhook-signature-verification-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 421.3125 292.391 435.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/)
->> /Border [ 0 0 0 ] /Rect [ 247 387.3125 562.6755 401.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/stripe-webhook-signature-verification-fastapi/)
+>> /Border [ 0 0 0 ] /Rect [ 247 401.3125 563.2075 415.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 12 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/)
->> /Border [ 0 0 0 ] /Rect [ 247 373.3125 287.1185 387.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/stripe-webhook-signature-verification-fastapi/)
+>> /Border [ 0 0 0 ] /Rect [ 247 387.3125 289.2275 401.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 13 0 obj
 <<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/A <<
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/)
+>> /Border [ 0 0 0 ] /Rect [ 247 367.3125 562.6755 381.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 14 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/llms.txt)
->> /Border [ 0 0 0 ] /Rect [ 46 205.6 216.012 217 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/)
+>> /Border [ 0 0 0 ] /Rect [ 247 353.3125 287.1185 367.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 15 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://webhookwatch.vercel.app)
->> /Border [ 0 0 0 ] /Rect [ 305.65 149.5 414.4525 158.5 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/webhook-idempotency-redis-redlock-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 333.3125 564.794 347.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 16 0 obj
 <<
-/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 14 0 R 
-  15 0 R ] /Contents 20 0 R /MediaBox [ 0 0 612 792 ] /Parent 19 0 R /Resources <<
+/A <<
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/webhook-idempotency-redis-redlock-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 319.3125 278.141 333.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+17 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 299.3125 563.198 313.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+18 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 285.3125 296.0865 299.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+19 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+20 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app/llms.txt)
+>> /Border [ 0 0 0 ] /Rect [ 46 117.6 216.012 129 ] /Subtype /Link /Type /Annot
+>>
+endobj
+21 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://webhookwatch.vercel.app)
+>> /Border [ 0 0 0 ] /Rect [ 305.65 61.5 414.4525 70.5 ] /Subtype /Link /Type /Annot
+>>
+endobj
+22 0 obj
+<<
+/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 
+  14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 20 0 R 21 0 R ] /Contents 26 0 R /MediaBox [ 0 0 612 792 ] /Parent 25 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -108,31 +150,31 @@ endobj
 >> /Type /Page
 >>
 endobj
-17 0 obj
+23 0 obj
 <<
-/PageMode /UseNone /Pages 19 0 R /Type /Catalog
+/PageMode /UseNone /Pages 25 0 R /Type /Catalog
 >>
 endobj
-18 0 obj
+24 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260907124646+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260907124646+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/Author (\(anonymous\)) /CreationDate (D:20260912001152+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260912001152+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
 >>
 endobj
-19 0 obj
+25 0 obj
 <<
-/Count 1 /Kids [ 16 0 R ] /Type /Pages
+/Count 1 /Kids [ 22 0 R ] /Type /Pages
 >>
 endobj
-20 0 obj
+26 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1990
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2210
 >>
 stream
-GauHLD0+Dj&H9tYfU:#AZkGNe?ZEfV5^W,oRLno`,r6QM$W(;Ka-Mp00E:uOndCNrEh2>F"RK8BmA";9mB.R>i/=P[?j6%.$7?o%&/1p^+LZ1*F:?'$kIs<`-Z'Y^bJ]1`VA%]=r#Y'&Y@h#Kke9V.f8"1i_21]=[gUY"c>,bMS5rD=*M-Vu-DURn(d8?]qS/Pm9n%f^b@,nm&WP8eQOC;HSd2-$\hG+_Uu`UjDdiKK!kQ8#/h"%R5s;Ka4em\AK*NJe5c2CA@@;kgV&Kms_oA`q&DmY^\@-%[\/OR[A[>s2gjQ"C=J!Bo"j<8<1kP^i;3<LL'CZd_Z=(cX$Ug,^)J]"F_*`AO\EioA&8d8c3&O#h'LL:7fbQlfeK=!5+eJ!JKGQaQZ;]jU78OHW63V`A)a^+"Lsm6&\6-XU:lVL2FMH&_4Q*`^h^7CH;_#]acpN"+7%0a>S33+O+!kXt"3U`]kql*FP(@O?#(]9lJ*uNlmi!8Dkuj&2@rRYo$RVK,Yo:%Pa->0]Y$7bJhHk*5L0I;j/#fm=)0PS,N_G@5Su!2jF;TI>5p?"*KBm!SU=gGVlmKm93>9R]9VQ(&5.!#cc#Y.rWB1G\,t.mL1rr5J^LR.qf`YL\R4`apU/BgC$u&=4Q9grc%k+eihLn<?GS7oQ`PE1lhW;e^U12766]G:r+cF]<it)hC:$(DK?V%:g4N;*t8QKW)On*r1kqHL*?c4Kp"'N:P8Q^^"mL'p@/uYM)U6B^P.aJu:-%]+s')=5@&/u9#%s"?,K<8%C8]4KDD&7?5k8YMa.Hglq&Y2?MFcQ(@8/$BiNo:M7-(;ngE6$uBTFM!4LHml&%#J]j?F,&FbhG4ofa<M0U`U:;\_Wl]XgU@b_a65'pq>g&=9UuGE/pBCE:%Qu:+Xp"1)MJqjnk_aYhX!fke8F2M7iHhb;\N_nUu0oDF3?-C&sbp0F0@^hq=Vo40$.?o;WFj<I*8$[>UM?m>5]e)GX+B3MWN9Ga_:7L7-%ni.,Gg;WpV5\5VCSYW9mG1Mi+0eA)t6AiF3)d=qpsf5OoF6[H@kf6fk!]-X8ub@<"5(hSu_?+)[QC:WC1bHP7RhL\priYN7$a^,fdG"IC]D:.a(4njGc><ZU--eF_WW(JhAQiiVGJB&*hQYWiga@ud&?W+3PgIp>_$G0>eXlVE`m9tX\_&[<4RL>ST6^1d2.o9Dj3PfgK`p/g90uHD<8cAg(`FM/f8&!rdqj@i.Z@eB"Yl8]9CG%E"?"4i?g8r5qh)<%`DG:kKK:KY"V#s1S(c1CnXpS2`\EOLC=#]SsHja0Y2l.[,f-5oS]9h/->%)9`/+McrGoN<HnU90.*m?K)#noTDR,rbHLWZ1s5s7+`@ATuU]T^TCe#lhr]2i.ET..O'5*B#cD8j-,MLhk1GZS,*?=h'Eg1K$'%<"k.Bp>4M[J"_8]O"g&do*A$ds[4%D<Z#Rh3abV`_:N@@=-ON#1(4*Wu>8XaKOCodOQb^[-#M\#L@71Y:@q?T#5,clb)</]!J&2ktVu9mMje2CE(>K.:Utf!FMZp-<0kf%(A6onW;"H4j^.Cb4dJXl$`/@\i9(Qi=0%0H<4W%-mFrORi\D!"4]m#f.:/\kRT:b0rW\@r]J').Z4/f'TVGgn`UgM=<+1EO+jsUYXa`QDZ$<_1l7]>$d-^@D[hHe[V3Xe?KD`-lgQ33Z$)ZP#T:nj(7n[&aEiao_He-+-*#Kji^5+cmkp+LQc1N8Gk)<;LdTC>W+%_.9m8:OH,/F0kqtTIkVQ6Zg"?Yp!g>YJ8M&M<!I1d#C?@sEs!Nhp-W.7nFn*/8CL=+PB@5j(,c(2"FHQl2f0srpR:hJXK2!g3*MDVrL/^@X2LT`nTV)WZIdeaN]XH<V>Z\-*9pJG&rY/%B>Arh8h5:kZWealBAQ5@/&a#<DOG)GW%Olmkg"H.13_RsODI*6Vo1P5SPQklD.!OrZ]FM19JPePUn<t*R),`Wob!.7=k8ttFl3I~>endstream
+GauHL>>s99'RnB33&@*SBa5U#f9eK(fodsa0%oV"1EFG8&f&GF[LCDerqdbY[fd=2Vs0A&c&&:gl-m2#J:TAJ^4QU)LG9eH7Y$j[ScZ0>)ocME*;AlJUjCI4_6Zg_(hGb5*Q&tLD@HfIjaccg`,U4HAj)Z?1ip8_?JrIC%*E;GV#B9Jjlh#4HuoQ7L)7n.k==.=_p.<4Gk;p^a.prsE(`;(9Z(s\GVYGFG;0"#j7a25'u&6bR0*c\M:<O_-.Fe7pa?2!'b1Pn1aF^0E,Z[Q?@@J$0'L6]4i>7h5lV4]b`h,U$PgMU&B68ga#p",*7#K;q4'/?DrE)Pk$5,U'H*sFp-0<TA6luVa56mEQ3`=G,:#Z#1qeHW&`d0pJSl.\\W0"$_1Oa0</T08WW@OHJ?NBKW7NT[FM]7TQLGDaUM;[bcdO<R3%jZ\la,bQ.`(h\L]1P71d=)^GV!u%9%*>:Q3AhfBps4.JKI;bJOfWclKOo/)BS/]=H;Y+jsY?f>^u+ZC=iS-;dL]Yfe=H:[W:[kgffS>8Ytgr>t9=AaL$cb=_^5jLZ*Fm'S8P'\1&1$ROsZ?irlnTB4@Hc8X.Gb>mlkO4@`kK\td&?VF\Lh!kHeTG&6%iS'@6a`cI`(BWUZ"DJ;^AQ9grc%qoXe]EsK]n0E_pMh=$!^!$.Y6,fAQQQ!>(65H8V`ZZTeR``ZJ5*NDnnJJ0l-<Y1IN@AeT+WX<[c=\j>eNanrE"\J1MYi"FJd\TWUSq^kMb8'1(5ZE6J4)Rp,K.Si`e,6Zl<oO7B+f46E8*lEi_tkpj:q6;nq^$bS3"^dBVYsK@/KF0b7[N[1q;T9%+#IbpC;ap>T"1'fR(kdLG>uYIcCdk];0Wh6L!o6V:MM'otuN!lL8H2c`l++ahTpj7"f?*Mu1Fjm6kiH$;C8=W!#etZ<?#Xj>)jaJRSAO]IKL,c:]NAD+?0C1C7q#9],TQLXMd:0Z^oL"D3p*<`\U>M)=5'q^#o85XW^47GEHmZ#jQEBs[t<G_SZp`t8jMP]9s7.Eg'U<lZ+n?k!C:S$@^H,m*6eW[P/m^Ro=Fl-Ls#<Md<sd<MU8E1/?)@qXOPJm(^?n<F<'X4A(Rn\J6C0%ulhl;a%a2?4i03%ZIO)EP^%Ja/S;q<5&&mSe4BN'Elo[('F6c?=.[YqtEL?;.`kB.^4#CNjlH7l>"D]RaCkV3=d"hZ9K2o-EGHAOG\k`a,T2Ep<FOMWP@#*lCDZFu.k1qW3[u-2<5C]EYQ&eDOQl8Z\nMeB+]Km"/0[3@T<+;J6NGJ%69bDGD-U^Re@-^5Gm\1r*U<8om9shF4G7G/.hXnhc"U-3R?u<s:)kh"FOhY&<-6X=H>'D/fGo:0X'_Tb]*Hg:[VrH9Hjs*FD^8hre9u>-C^E0,$ARYqEo9.1V[5L_1!C>KE:%hT,Yj,e,phbD\T+o4e/2Re_4mH&GtO,]*9.iAU14G55F>V4,SCX>ZDIgo!`fYYN.Up]D:ka`OPMD*WO/dK7"jr4f5T,]o$Rd'ZFO?2N3-:h@.@)?#5\D`qp9>gnm5&\*B\S$1O<fjZ,/a/6dZW$5$oa^2%4^9"pCW[4^lPeTC(Bju'a8b&sG)NE6[V8TEIOEZ]6Ebd,\2,^f98r@i#e/_LT]W#ICXidY$R7<$5?>HWDcO5!HoemNRVD[!p!H74A^=oQWb>(d>Rc3Bap),tqDHB8RAVkl4`g9k#=gVtIHomW#p7SG=jZM@AqoSqs='Mj3K?AL?jkP=fWsqu8)6Sm"p1D+fs"gAFd=(eU@p0>p'\EMI$7a][*+S;9n$[`CmL\5_#]#l3A0WKHQ&+0s7g%:Cim00G0fVA-^r9\HNoBFib]9H!pC:W8DAi3B@?8B9RdaEMq$We&pMZfS`@ad<p,AX\e(D[bn2;:Z&UXD3cO\ZcXi'=d`S+$a+CmGE=9hM,7Fk\M,"toi;PJL+A:$m"nJGdAB+pWN,i\V>43o)\1"W08_tduYL@L3-/C'Yi_o!Td6e.nON<$Sb=?qtdJpeHNo@<9CW=".7h!#r=(:c'3QZI$0h;Kbs%nMB'?6*,.!L?l_4IDLJN2`#$<%^3sUT6FTq&jGln&Bm0C)c`hZ[oriaPobr.m;V>ae>*^ee>2.dQZK)YM*ke;N)r9=)9nY%S4$G9o"r\Ztiut7OO$RdohuL\>MnNcn<[!LXJnXiamX/.#d/"L=`LT:R'A(4$Ho&hLA\Dp=f~>endstream
 endobj
 xref
-0 21
+0 27
 0000000000 65535 f 
 0000000061 00000 n 
 0000000113 00000 n 
@@ -141,29 +183,35 @@ xref
 0000000505 00000 n 
 0000000680 00000 n 
 0000000858 00000 n 
-0000001083 00000 n 
-0000001308 00000 n 
-0000001533 00000 n 
-0000001760 00000 n 
-0000001983 00000 n 
-0000002206 00000 n 
-0000002312 00000 n 
-0000002490 00000 n 
-0000002666 00000 n 
-0000002948 00000 n 
-0000003018 00000 n 
-0000003299 00000 n 
-0000003360 00000 n 
+0000001079 00000 n 
+0000001300 00000 n 
+0000001524 00000 n 
+0000001748 00000 n 
+0000001974 00000 n 
+0000002200 00000 n 
+0000002423 00000 n 
+0000002646 00000 n 
+0000002865 00000 n 
+0000003084 00000 n 
+0000003310 00000 n 
+0000003537 00000 n 
+0000003643 00000 n 
+0000003821 00000 n 
+0000003995 00000 n 
+0000004319 00000 n 
+0000004389 00000 n 
+0000004670 00000 n 
+0000004731 00000 n 
 trailer
 <<
 /ID 
-[<181047c6dfc0dc55bbd202d8c6d67b20><181047c6dfc0dc55bbd202d8c6d67b20>]
+[<abfe3c6d007f30f5294e2a90796cf48b><abfe3c6d007f30f5294e2a90796cf48b>]
 % ReportLab generated PDF document -- digest (opensource)
 
-/Info 18 0 R
-/Root 17 0 R
-/Size 21
+/Info 24 0 R
+/Root 23 0 R
+/Size 27
 >>
 startxref
-5442
+7033
 %%EOF

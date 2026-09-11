@@ -111,7 +111,7 @@ def main():
             print(f"[-] Error deploying {file_path}: {res.stderr}")
         time.sleep(0.5)
 
-    print(f"\nSUCCESS: Deployed {len(deployed_urls)}/20 dedicated landing pages on jibranpcccc.github.io (DA 96).")
+    print(f"\nSUCCESS: Deployed {len(deployed_urls)}/{len(sites)} dedicated landing pages on jibranpcccc.github.io (DA 96).")
 
 if __name__ == "__main__":
     main()

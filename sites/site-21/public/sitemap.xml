@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://promptevalhq.pages.dev/</loc>
+    <lastmod>2026-09-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://promptevalhq.pages.dev/promptfoo-vs-deepeval-llm-evaluation-benchmark/</loc>
+    <lastmod>2026-09-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://promptevalhq.pages.dev/ragas-metrics-rag-evaluation-python-tutorial/</loc>
+    <lastmod>2026-09-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://promptevalhq.pages.dev/llm-judge-synthetic-dataset-generator-guide/</loc>
+    <lastmod>2026-09-11T12:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

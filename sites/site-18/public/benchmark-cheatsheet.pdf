@@ -2,7 +2,7 @@
 %“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 13 0 R
+/F1 2 0 R /F2 3 0 R /F3 19 0 R
 >>
 endobj
 2 0 obj
@@ -33,74 +33,116 @@ endobj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://site-18-chi.vercel.app/)
->> /Border [ 0 0 0 ] /Rect [ 247 482.3125 377.929 496.3125 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 247 489.3125 377.929 503.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 7 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/github-actions-vs-gitlab-ci-syntax-execution-cost-comparison/)
->> /Border [ 0 0 0 ] /Rect [ 247 455.3125 563.2075 469.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/act-run-github-actions-locally-debugging-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 469.3125 563.1885 483.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/github-actions-vs-gitlab-ci-syntax-execution-cost-comparison/)
->> /Border [ 0 0 0 ] /Rect [ 247 441.3125 343.596 455.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/act-run-github-actions-locally-debugging-guide/)
+>> /Border [ 0 0 0 ] /Rect [ 247 455.3125 278.141 469.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/matrix-build-optimization-github-actions-cache-speed/)
->> /Border [ 0 0 0 ] /Rect [ 247 421.3125 563.179 435.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/docker-build-push-action-buildx-cache-github-actions/)
+>> /Border [ 0 0 0 ] /Rect [ 247 435.3125 564.7845 449.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/matrix-build-optimization-github-actions-cache-speed/)
->> /Border [ 0 0 0 ] /Rect [ 247 407.3125 307.192 421.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/docker-build-push-action-buildx-cache-github-actions/)
+>> /Border [ 0 0 0 ] /Rect [ 247 421.3125 306.641 435.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/act-run-github-actions-locally-debugging-guide/)
->> /Border [ 0 0 0 ] /Rect [ 247 387.3125 563.1885 401.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/github-actions-concurrency-cancel-in-progress-pattern/)
+>> /Border [ 0 0 0 ] /Rect [ 247 401.3125 560.5665 415.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 12 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/act-run-github-actions-locally-debugging-guide/)
->> /Border [ 0 0 0 ] /Rect [ 247 373.3125 278.141 387.3125 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/github-actions-concurrency-cancel-in-progress-pattern/)
+>> /Border [ 0 0 0 ] /Rect [ 247 387.3125 316.1505 401.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 13 0 obj
 <<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/A <<
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/github-actions-reusable-workflows-vs-composite-actions/)
+>> /Border [ 0 0 0 ] /Rect [ 247 367.3125 563.2075 381.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 14 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/llms.txt)
->> /Border [ 0 0 0 ] /Rect [ 46 205.6 196.993 217 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/github-actions-reusable-workflows-vs-composite-actions/)
+>> /Border [ 0 0 0 ] /Rect [ 247 353.3125 322.487 367.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 15 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://site-18-chi.vercel.app)
->> /Border [ 0 0 0 ] /Rect [ 307.735 163.5 401.5225 172.5 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/github-actions-vs-gitlab-ci-syntax-execution-cost-comparison/)
+>> /Border [ 0 0 0 ] /Rect [ 247 333.3125 563.2075 347.3125 ] /Subtype /Link /Type /Annot
 >>
 endobj
 16 0 obj
 <<
-/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 14 0 R 
-  15 0 R ] /Contents 20 0 R /MediaBox [ 0 0 612 792 ] /Parent 19 0 R /Resources <<
+/A <<
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/github-actions-vs-gitlab-ci-syntax-execution-cost-comparison/)
+>> /Border [ 0 0 0 ] /Rect [ 247 319.3125 343.596 333.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+17 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/matrix-build-optimization-github-actions-cache-speed/)
+>> /Border [ 0 0 0 ] /Rect [ 247 299.3125 563.179 313.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+18 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/matrix-build-optimization-github-actions-cache-speed/)
+>> /Border [ 0 0 0 ] /Rect [ 247 285.3125 307.192 299.3125 ] /Subtype /Link /Type /Annot
+>>
+endobj
+19 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+20 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app/llms.txt)
+>> /Border [ 0 0 0 ] /Rect [ 46 117.6 196.993 129 ] /Subtype /Link /Type /Annot
+>>
+endobj
+21 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://site-18-chi.vercel.app)
+>> /Border [ 0 0 0 ] /Rect [ 307.735 75.5 401.5225 84.5 ] /Subtype /Link /Type /Annot
+>>
+endobj
+22 0 obj
+<<
+/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 
+  14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 20 0 R 21 0 R ] /Contents 26 0 R /MediaBox [ 0 0 612 792 ] /Parent 25 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -108,31 +150,31 @@ endobj
 >> /Type /Page
 >>
 endobj
-17 0 obj
+23 0 obj
 <<
-/PageMode /UseNone /Pages 19 0 R /Type /Catalog
+/PageMode /UseNone /Pages 25 0 R /Type /Catalog
 >>
 endobj
-18 0 obj
+24 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260907124646+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260907124646+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/Author (\(anonymous\)) /CreationDate (D:20260912001152+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260912001152+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
 >>
 endobj
-19 0 obj
+25 0 obj
 <<
-/Count 1 /Kids [ 16 0 R ] /Type /Pages
+/Count 1 /Kids [ 22 0 R ] /Type /Pages
 >>
 endobj
-20 0 obj
+26 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2044
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2292
 >>
 stream
-GauHL=``:f&:WeDFB,=B8Qi>g2guu:*4!:fZ[$RkC6/Xe6qE1lnr_c,n(TWZN3SK)h<^RtU-6QK?_8PE#/5oi%Q4=Uk&C*e!&7or"Cg[TbYMV-msXYeC8C6KB:1^rANI(:A*AP_q7^Q'TFXcV\3n><4^<e"CV):Xi4:91jg&pS_=[A/Fu^M&:>jt#D#E76FSQk\>ti;FpF)QXcHkF;GTN6,l,%NtPEIjYrsJA,'$r"R4U,Ko'%Drkoo0UL,<Rq"!LX:MKOl&7QYnd]L5jfY6&%#U`3hbG7;ZEdSmCiM76G2&),8^Q0PA3_joLHL]Ok.(CW6LiL/A_f\R9t:101.j*#C_J?.`FqfRhP;+Gj$L,Xd2?4l<[R;Qg!a[gDS07tEe__3uCDNKb%*KE7$ELZ8\Gh8b-(_.O\VOGY=,&aa5&(\mk4_d@m[26l"PE5#TJJ>7k6?_0Ac<=/@\!"@FFV"rEs@?,_K`7L(frJ"kaMfbDbSTNd[d6Z\+59G6`2foK>\+)&j*28/:DAHIupL6!s"-+h6&R;^p8%cP%H4@KP@TS_,Hd_Pr+)YUm`:>IU&(+g3a+?YI)[9B_Aj`nOjD^W"$r33m-XdW6X8=Ng,W/A[=JkL70U4j8(eT@d281)XBUFdi-'7qkk9(]C]9NkmdZe=)B#tLn=tXa1+qQkn@DUr2NEEsW#I'n2c1"BNgE[r#:e9UX&tD\XE0RQ%[n9HB@@:Z&pGB&NN#1_4@6%]6/6$[n]Y\efIK875)@J0r@ZTM4pUR4\ce'QVXMU(?_)+K'9Op9,JSkW(gS?rqi1kWa=5ll5)p'Di%HS1-7(@?!ld86:I)?Eo0dW:0B^h#%/%B-u5k@ELE)[=XBfs*V]Yg:a1-cK`h6t`nh4Y8S?)cA?Z<ln#V@K56MPcXZ,RLC4)%i'URkU.C'57uBT^r%X$!;'[6i,/nC*GOL@1>qV<E*DLQ_?qi:FVs)"RQ34\%V`C[ASlkP-9ap=]LnBX^)>A'cDW:1`X@Yb8J8=$bJEACRSs"9UtS\P;/"@*dgocEQOLt_iWNBCT*(I+A?dp,=E&1i4=Zl@N=AlNaVGrY:)2Im8$peKN:+qi^9ta>^iKC3/>UhYBcAHjFno5/eN#1Xib[.g-4;M!\5t(+LETR:>"%_9D+uZq^.Y_SBqH%TqeWB*AlhVq)IW7VLeE(bj<CD$oKOff#9tN-$8N$f2.'%8IN%o/*%UIJ/eDG:(*4ii7B<P):+MVMdWTfNkNs:FpL:.QtGgF4N2uqJ#F7cY8`"%MB)k\m3K2roq)o1;-:4p_4sh"[Ld49e2R.)M-nG)`kkJ[IfZ_tR:]4@8M?"s!8GCrW"cil<r55[,^G-rs+sce:!8DA,Y!V?Zs"l#_"t<N'[Tg;cpm4hr-[m?Hfgcg7#JJ`9`7?/UrmiiESWO,@\ZPL]T[bJe&ba8-W`sLa-?UP3g3Z`/]G=kMFOVAGZROD^CoO#/[Oe9L,YsQ1s2BM[GL/sdirZi:.l2.9_VU&ED)W!qTuR>b+;<bSRHjoHNMO3's#2W\^@Y8AghjLA`;3Fq0)74BDY]bQKrYEm]H)F=1b%-IcYmUH4F8t:>b\o=pBlNdXZ8a,SR1<4b0`'"!M2J?oKnlW*iu.f7"nBp#,\k&\N^RVR>6;ngGn1>"4d!?YjFq'c*qhN$i8:&0Al$pnOHks&nF],O!b8A,cQ*/.U-^a.e(5XOutORJpRG@H3=45o[u42k:.mh%kJp>BB\"rPd>BPI"B'8d`KD,Cp/B;3XWm4UJO3G%7W-n-Aqr;&VZ_';+T>08`3:nRrn/&Vo#pTI7YAD#O_##nL..1VJO@@J_+G<c'Yq\mhpp+Gg96'7e,pX[^&SU]:6'H5K)?>ShVG;YsXB(e"t5,p>4N%PE$gnPlG3$7n!Qe<q\L3X=ki<MM#KZE=*fW7]EXNs<O@3uS[fd&[.E-.79m2C=Hf[ro(GY+`POd$>pnS^4HpE_>aG;:h[4b/ZBO0ou9;U<[rVjYNG<f^kb7TN=m"N/lopJ7?3^`QJ[n=eQn/PXBrf@g;/q%9n,?Vu~>endstream
+GauHLD0+Dj&H9tYfU:#AZkGNeNGZlu9":*lP,8QQIE>/Q(]eB1m928:H?]Df<q6WOJ=G>iD$"mhH?o53UXcLQ=SP8UGIRd#2hn(l#S7rp1E[^E"63;sNa(CFUhn`S^isU2N&HlA>V##il#aPGj+80$`:X2Qjt.R/e73hZ?K/IQFGjSXT^C^k`TV>!kb#`(iVDF1=o\%g\@NLe7Xq(N4Sj:4f>RF"[VQJ/a!5/@"64;RI]EHs_OlUVm&gDtAbEW8!VHI7Cl3aZNC1Of/VVBT>]c`ncbL`U#:At%^?)%IclS,uGfh3OZ]g?FM]Rg[\;5E$,8_sKQ"%RsK\+Ss_?H8WP^17u[-a'I:K\?ScOG&jlmRt6X[!Mn6/$dsit/"krr]SpM!qkmj>d_eXJ[GoMl8_E@5'_\*5g<T/En1&Tb3npR:HBHIc2Kk^OIs8lQ7N:<\q-Jc=T3"ki(^Je&S4u_gVVOHQcrMH:LI,q(P@k5[qqPb<cu41eeqR^lP@F^b("!ZqN^R/0CeS3j'L]$L-4`\3+KE]%[j&><O4@g+aT;pTj,:loLS@7:sSA998]'7(,H&hpME7'8C]^bU$UN\B:.2Rb]3DK-XrG`oJ>3-;cP5DfSNKo,*<oS#urolB+?)$u2p7fBi^,>q`Yg11"o#ZI[p8&mS%-Q9grc/!QK!0@N%J4GdL`ic'HNDo<eMWE_.Tdf#KRPXT8]nIuW&9iZ8Ac]q\!dKRjXXAD\Eje&KmKOZA(4D%OJQc4"c#OR<94f>RGP%s\=c>tXL3I/W1M.@oe6oChR_IG@]T`D[/Ok;GNR0"Jd"%nEr3)69(TI\/03f.fhJ`G/!OF5.[!APmTb\27=j#Po#$/kAC>]Oor\Z$<N&`+YnXU%blLZZ!")s'n4qe`C?.qCeIY-nXD.Z/uB3[bWd:`0jDlZUKSC)j;IciHc*LJ#AU9BDUnYM;N\\s=#^lD^c"OKZ*eh/Th)L.uV-@.q%:5H;0a@>!Y,6btBNRLQG`Y`VEI]3TrA,Ih99;2hca*E+o.g"*ap1!_Nj_][stNRl,rS$<C2`+E@LGH:dQLpJ-F=qcJI>%K8<\_^O`<c%(2I?c2;eS%(`L^<I5-#VN6rhDc+;U>-V_fkLUblRWR0+&54kNn9Ukrt&1p.tBK?S04\W!AZ7I#&$+OBR=$Hk%N/^<\2"54@ga-/^Td)nDqf4dDKDo!?H3Tes&;2We6snqfX?J4>de?t;rr(V%NJ[0q^!UQ)'1_3:_&+88dXE.`X8iA_-^n-F9*o4WFT4Pn-C/UGc;C5qO\P<.6UNJW7'Uq'Tl]G?ep,G^^Q+Q^!AS(or#CUl)`D*]:D`!qkhbVKtqmX$X\(dar8fI/X1Z=KOa"Aqm1NU'YE];<tqN?)/%cj_$8Bi[<gYmVeQ;R.ikimoJ1:[KIOKoXH.-/$No8o=g6C*q\fA=4e.B-XfAXP_6<<^J`_/*OuFnQhnCYd:7Kep7,FnmlK:63Vs>3l+4e<u(gl27PE89cC!RSp:=L'Xc",=tm'76>d'gggD%>NF)jI0G+r4Q7:(g8/eo5&uX@t^Ln80e3!Gm@`$6:kStLIYGJ9D(q+;DpG^L3e54>-Rqr)]51OEC70"+gLtP5_#Q/sb@56ot^;>fl/PPd<?';5I%+3n^C#Mr;L?_K5Bm&7o<-;DVfkaUbn)Kut-Bt>AheK2l>HP;upsfZ8XgU8sA];.4MMkbDnZB*Ch9q*4Q-H;*EiPODX2(a,("Q0APCD9XG9m-qds[(Kh_CB=f/;EQWpt1n3o-A'5(]\1oJ4fIjVX62"DUt8,l37nIU1!K::JI=eMtgarl4np?V/n$DCK"bD7<lg<h6WfXjT[=eH*^PRRpf/*l9kknh=W2?n3/W<3i]"rEi.j\paOS#I!'[/ql5p*JJc,M[caUO!P?t_PVAYKB%#p8EO%`Iiert=*&B.K7g2X4?.ur(/ND4a7>m)O*K$aoa^u?MB$tJ[s+OYIabeLriUT"db0+[oF/ET9T34-2Qi2_YsMf,KUCgh&47b;(GSg^bP!fC4&HXb$*j/9eac-mM7?Yq6CZ"o9P./DE&JV!^j+!h((4_TnF-RX;k6&C7tAQX/-3'tamLEnZ$A'#T,Rb0dcr6<QGSl1`DHG(Ics;fgD-\70/#@SR.4/@.h.kWN9NEe<;@N.k/tPA2.R[!H<@I+)Qsd07<YUT:cD%dDK]CJ.a>HH?0gio0=,"<Z_OHfl#fUegk'f?e$\S+ic96ia()E<kaS7BiWf0@*q1QaeDsHnd!g?a;QLm/nLVRjQKu`FU?Tj-8j_i.NE5tp~>endstream
 endobj
 xref
-0 21
+0 27
 0000000000 65535 f 
 0000000061 00000 n 
 0000000113 00000 n 
@@ -141,29 +183,35 @@ xref
 0000000504 00000 n 
 0000000678 00000 n 
 0000000855 00000 n 
-0000001094 00000 n 
-0000001332 00000 n 
-0000001562 00000 n 
-0000001793 00000 n 
-0000002019 00000 n 
-0000002244 00000 n 
-0000002350 00000 n 
-0000002527 00000 n 
-0000002703 00000 n 
-0000002985 00000 n 
-0000003055 00000 n 
-0000003336 00000 n 
-0000003397 00000 n 
+0000001080 00000 n 
+0000001304 00000 n 
+0000001535 00000 n 
+0000001766 00000 n 
+0000001999 00000 n 
+0000002232 00000 n 
+0000002466 00000 n 
+0000002699 00000 n 
+0000002939 00000 n 
+0000003178 00000 n 
+0000003409 00000 n 
+0000003640 00000 n 
+0000003746 00000 n 
+0000003923 00000 n 
+0000004097 00000 n 
+0000004421 00000 n 
+0000004491 00000 n 
+0000004772 00000 n 
+0000004833 00000 n 
 trailer
 <<
 /ID 
-[<6914704ecc04e15ba4b3013714124911><6914704ecc04e15ba4b3013714124911>]
+[<9becbc80710c8aab5f8386ba4bf8002f><9becbc80710c8aab5f8386ba4bf8002f>]
 % ReportLab generated PDF document -- digest (opensource)
 
-/Info 18 0 R
-/Root 17 0 R
-/Size 21
+/Info 24 0 R
+/Root 23 0 R
+/Size 27
 >>
 startxref
-5533
+7217
 %%EOF
