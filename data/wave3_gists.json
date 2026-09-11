@@ -1,0 +1,122 @@
+[
+  {
+    "site_id": "site-1",
+    "title": "Dual RTX 3090 DeepSeek-R1 70B llama.cpp Tensor-Split & Flags",
+    "url": "https://gist.github.com/jibranpcccc/40172eea9fbe12e07ca96d5567e8477b",
+    "filename": "deepseek_r1_dual_3090_flags.py"
+  },
+  {
+    "site_id": "site-2",
+    "title": "Florianopolis & Tbilisi Coliving Fiber Speed & Nomad Budget Index",
+    "url": "https://gist.github.com/jibranpcccc/101589b97f035ec7aa37ffbb84bd1310",
+    "filename": "coliving_fiber_budget_index.py"
+  },
+  {
+    "site_id": "site-3",
+    "title": "Smolagents Autonomous Coding Agent with Claude 3.5 Sonnet",
+    "url": "https://gist.github.com/jibranpcccc/4ebc8914729926e0c20a5a2b3674e947",
+    "filename": "smolagents_coding_agent.py"
+  },
+  {
+    "site_id": "site-4",
+    "title": "Cloudflare Pages Unlimited Bandwidth vs Vercel Overage Audit",
+    "url": "https://gist.github.com/jibranpcccc/4184b6353527eb72a309f90ec252aa8e",
+    "filename": "bandwidth_invoice_audit.py"
+  },
+  {
+    "site_id": "site-5",
+    "title": "pgvector HNSW vs IVFFlat Index Memory & Recall Sizer",
+    "url": "https://gist.github.com/jibranpcccc/302850e404edafa69033dea5bf9127d2",
+    "filename": "pgvector_index_sizer.py"
+  },
+  {
+    "site_id": "site-6",
+    "title": "Italy Digital Nomad Visa Flat Tax vs Spain Beckham Law Net Payoff",
+    "url": "https://gist.github.com/jibranpcccc/e480c996c9facab4de3f704682329c6c",
+    "filename": "italy_vs_spain_nomad_tax.py"
+  },
+  {
+    "site_id": "site-7",
+    "title": "Webhook Idempotency with Redis Redlock & Atomic SETNX",
+    "url": "https://gist.github.com/jibranpcccc/e9632cda454a3eab499ee90bebf30402",
+    "filename": "webhook_redis_idempotency.py"
+  },
+  {
+    "site_id": "site-8",
+    "title": "GDPR Article 32 Client-Side WASM Document PII Redactor",
+    "url": "https://gist.github.com/jibranpcccc/ced29a412d472aba9511364eea915217",
+    "filename": "gdpr_wasm_redaction_audit.py"
+  },
+  {
+    "site_id": "site-9",
+    "title": "Medell\u00edn vs Buenos Aires Bootstrapped Founder Runway Guide",
+    "url": "https://gist.github.com/jibranpcccc/aa2490b5a17c9cc0d497633365ace6a0",
+    "filename": "medellin_vs_buenosaires_runway.py"
+  },
+  {
+    "site_id": "site-10",
+    "title": "Cohere Rerank 3 vs BGE-Reranker-Large Precision Benchmarks",
+    "url": "https://gist.github.com/jibranpcccc/23a6720e2ba03713a33dd372608f1389",
+    "filename": "cohere_vs_bge_reranker.py"
+  },
+  {
+    "site_id": "site-11",
+    "title": "Malaysia DE Rantau Nomad Pass Income & Tax Exemption Guide",
+    "url": "https://gist.github.com/jibranpcccc/8403cbc7cd642f0abfcf1e29db2b1e0d",
+    "filename": "malaysia_de_rantau_calc.py"
+  },
+  {
+    "site_id": "site-12",
+    "title": "SaaS Customer Churn Rate vs Net Revenue Churn Math",
+    "url": "https://gist.github.com/jibranpcccc/f9a48fa84fc715369a26538c8f77e811",
+    "filename": "saas_churn_math.py"
+  },
+  {
+    "site_id": "site-13",
+    "title": "HAProxy & Ingress-Nginx High-Throughput Log Grok Regex Extractor",
+    "url": "https://gist.github.com/jibranpcccc/9657bc4e8007677f5781bed496f1d728",
+    "filename": "haproxy_grok_parser.py"
+  },
+  {
+    "site_id": "site-14",
+    "title": "SOC 2 CC6.3 Quarterly User Access Review Automation Script",
+    "url": "https://gist.github.com/jibranpcccc/6152f1c4655455aaa01dd6a80d24cb7a",
+    "filename": "soc2_access_review.py"
+  },
+  {
+    "site_id": "site-15",
+    "title": "Philippines 13th Month Pay & Mandatory SSS/PhilHealth Cost Calculator",
+    "url": "https://gist.github.com/jibranpcccc/ff3634ef75e4c8a885dbac8587876189",
+    "filename": "philippines_eor_costs.py"
+  },
+  {
+    "site_id": "site-16",
+    "title": "direnv + Nix Flakes Instant Reproducible Dev Shell Generator",
+    "url": "https://gist.github.com/jibranpcccc/f4648aa100a20792e57127ed54fa429d",
+    "filename": "direnv_nix_flakes.py"
+  },
+  {
+    "site_id": "site-17",
+    "title": "HubSpot to Twenty CRM Migration Architecture & Ingestion Script",
+    "url": "https://gist.github.com/jibranpcccc/e6b44d8980b5fa76aba7e6fb0aeed059",
+    "filename": "hubspot_twenty_migration.py"
+  },
+  {
+    "site_id": "site-18",
+    "title": "Docker Buildx GHA Cache Speedup & GitHub Actions Optimization",
+    "url": "https://gist.github.com/jibranpcccc/fc172146ab589d04e2251964db1f35cb",
+    "filename": "docker_buildx_gha_cache.py"
+  },
+  {
+    "site_id": "site-19",
+    "title": "Implied Volatility Smile & Surface Inversion via Black-Scholes",
+    "url": "https://gist.github.com/jibranpcccc/34860b2b00cf662ae660bf8444b7c792",
+    "filename": "black_scholes_iv_surface.py"
+  },
+  {
+    "site_id": "site-20",
+    "title": "Cloudflare Workers AI vs Groq & Cerebras Latency Benchmarks",
+    "url": "https://gist.github.com/jibranpcccc/fbf6e35bf735a71f6784daa3e12157d1",
+    "filename": "workers_ai_vs_groq_bench.py"
+  }
+]

@@ -68,7 +68,7 @@ def main():
         "GitHub Pages (DA 96)",
         "GitHub Pages Root (DA 96)"
     ]
-    targets = [b for b in all_backlinks if any(t in b.get("Platform Tier", "") for t in ["GitHub", "Raw CDN"])]
+    targets = [b for b in all_backlinks if any(t in b.get("Platform Tier", "") for t in ["GitHub", "Raw CDN", "Google Colab"])]
 
     print(f"Selected {len(targets)} authority backlink targets for immediate broadcast...")
 

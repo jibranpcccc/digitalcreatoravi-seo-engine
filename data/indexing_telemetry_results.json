@@ -148,7 +148,7 @@
     "name": "EdgeRuntimeHQ",
     "host": "edgeruntimehq.pages.dev",
     "urls_count": 9,
-    "google_websub": 204,
+    "google_websub": 0,
     "bing_indexnow": 200,
     "central_indexnow": 200,
     "pingomatic": true,

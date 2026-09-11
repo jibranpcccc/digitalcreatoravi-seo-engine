@@ -1,0 +1,222 @@
+[
+  {
+    "site_id": "site-1",
+    "site_name": "LocalAgentStack",
+    "target_url": "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/",
+    "repo": "local-agent-hardware-stack",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/local-agent-hardware-stack/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: LocalAgentStack"
+  },
+  {
+    "site_id": "site-2",
+    "site_name": "WorkationRadar",
+    "target_url": "https://jibranpcccc.github.io/workationradar/",
+    "repo": "workation-coliving-radar",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/workation-coliving-radar/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: WorkationRadar"
+  },
+  {
+    "site_id": "site-3",
+    "site_name": "OpenAgentStack",
+    "target_url": "https://openagentstack.pages.dev/",
+    "repo": "open-agent-protocol-hub",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/open-agent-protocol-hub/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: OpenAgentStack"
+  },
+  {
+    "site_id": "site-4",
+    "site_name": "IndieStackAudit",
+    "target_url": "https://indiestackaudit.pages.dev/",
+    "repo": "indie-saas-stack-audit",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/indie-saas-stack-audit/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: IndieStackAudit"
+  },
+  {
+    "site_id": "site-5",
+    "site_name": "VectorBench",
+    "target_url": "https://vectorbench-hq.netlify.app/",
+    "repo": "vector-database-benchmarks",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/vector-database-benchmarks/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: VectorBench"
+  },
+  {
+    "site_id": "site-6",
+    "site_name": "NomadTreaty",
+    "target_url": "https://nomadtreaty.vercel.app/",
+    "repo": "nomad-tax-treaty-calculator",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/nomad-tax-treaty-calculator/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: NomadTreaty"
+  },
+  {
+    "site_id": "site-7",
+    "site_name": "WebhookWatch",
+    "target_url": "https://webhookwatch.vercel.app/",
+    "repo": "webhook-signature-audit",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/webhook-signature-audit/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: WebhookWatch"
+  },
+  {
+    "site_id": "site-8",
+    "site_name": "LocalDocPrivacy",
+    "target_url": "https://localdocprivacy.netlify.app/",
+    "repo": "local-pdf-privacy-redactor",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/local-pdf-privacy-redactor/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: LocalDocPrivacy"
+  },
+  {
+    "site_id": "site-9",
+    "site_name": "FounderRunway",
+    "target_url": "https://site-9-inky.vercel.app/",
+    "repo": "founder-runway-calculator",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/founder-runway-calculator/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: FounderRunway"
+  },
+  {
+    "site_id": "site-10",
+    "site_name": "RAGInspect",
+    "target_url": "https://raginspect.pages.dev/",
+    "repo": "rag-semantic-chunking-bench",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/rag-semantic-chunking-bench/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: RAGInspect"
+  },
+  {
+    "site_id": "site-11",
+    "site_name": "NomadPassportIndex",
+    "target_url": "https://nomadpassportindex.netlify.app/",
+    "repo": "nomad-passport-visa-index",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/nomad-passport-visa-index/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: NomadPassportIndex"
+  },
+  {
+    "site_id": "site-12",
+    "site_name": "SaaSUnitMath",
+    "target_url": "https://site-12-taupe.vercel.app/",
+    "repo": "saas-unit-economics-calculator",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/saas-unit-economics-calculator/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: SaaSUnitMath"
+  },
+  {
+    "site_id": "site-13",
+    "site_name": "GrokLogTester",
+    "target_url": "https://groklogtester.pages.dev/",
+    "repo": "nginx-grok-log-tester",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/nginx-grok-log-tester/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: GrokLogTester"
+  },
+  {
+    "site_id": "site-14",
+    "site_name": "SOC2Ready",
+    "target_url": "https://site-14-sable.vercel.app/",
+    "repo": "soc2-readiness-checklist",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/soc2-readiness-checklist/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: SOC2Ready"
+  },
+  {
+    "site_id": "site-15",
+    "site_name": "EORCalculator",
+    "target_url": "https://site-15-ruby.vercel.app/",
+    "repo": "global-eor-payroll-calculator",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/global-eor-payroll-calculator/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: EORCalculator"
+  },
+  {
+    "site_id": "site-16",
+    "site_name": "DevConfigHub",
+    "target_url": "https://site-16-indol.vercel.app/",
+    "repo": "devcontainer-docker-generator",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/devcontainer-docker-generator/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: DevConfigHub"
+  },
+  {
+    "site_id": "site-17",
+    "site_name": "OpenCRMStack",
+    "target_url": "https://opencrmstack.pages.dev/",
+    "repo": "open-crm-migration-tco",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/open-crm-migration-tco/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: OpenCRMStack"
+  },
+  {
+    "site_id": "site-18",
+    "site_name": "CIPipelineGraph",
+    "target_url": "https://site-18-chi.vercel.app/",
+    "repo": "github-actions-dag-validator",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/github-actions-dag-validator/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: CIPipelineGraph"
+  },
+  {
+    "site_id": "site-19",
+    "site_name": "GreekVisualizer",
+    "target_url": "https://site-19-nine.vercel.app/",
+    "repo": "options-greeks-visualizer",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/options-greeks-visualizer/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: GreekVisualizer"
+  },
+  {
+    "site_id": "site-20",
+    "site_name": "EdgeRuntimeHQ",
+    "target_url": "https://edgeruntimehq.pages.dev/",
+    "repo": "webgpu-edge-inference-bench",
+    "backlink_url": "https://raw.githubusercontent.com/jibranpcccc/webgpu-edge-inference-bench/main/openapi.json",
+    "platform": "GitHub Raw CDN (Fastly Anycast DA 96)",
+    "link_type": "OpenAPI 3.1 Specification JSON",
+    "da": 96,
+    "anchor": "OpenAPI 3.1 Spec: EdgeRuntimeHQ"
+  }
+]

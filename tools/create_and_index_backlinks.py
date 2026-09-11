@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Master Antigravity CLI: Autonomous Backlinks & Multi-Protocol Indexing Suite
 Single command runner for:
@@ -42,6 +42,7 @@ def main():
 
     if do_index_fleet:
         run_step("2. Multi-Protocol Fleet Search Engine Indexing", "tools/master_search_engine_indexing_suite.py")
+        run_step("2b. GitHub Pages & API v1 IndexNow Submission", "tools/ping_github_pages_indexnow.py")
 
     if do_index_backlinks:
         run_step("3. XML-RPC Broadcast for All Backlink Hubs", "tools/broadcast_all_backlinks_xmlrpc.py")

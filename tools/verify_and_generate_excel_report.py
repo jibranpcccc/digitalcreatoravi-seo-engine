@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Master Backlink Verifier & Excel Report Generator (266-Backlink Authority Fleet Edition)
-Probes all 266 deployed live backlinks, GitHub repositories, releases, issues, gists,
-landing pages, raw CDN docs, and edge assets across GitHub and Cloud CDNs.
+Master Backlink Verifier & Excel Report Generator (346-Backlink Authority Fleet Edition)
+Probes all 346 deployed live backlinks, Google Colab notebooks, GitHub repositories, releases, issues, gists,
+landing pages, OpenAPI specs, API v1 descriptors, raw CDN docs, and edge assets across Google, GitHub, and Cloud CDNs.
 Generates an executive-styled multi-sheet .xlsx Excel report and companion .csv file.
 """
 
@@ -369,6 +369,69 @@ def build_all_backlinks_catalog():
             "anchor": f"Empirical Benchmarks: {s['name']} (Raw CDN)"
         })
 
+    # 15. 20 Google Colab Runnable Notebooks (DA 98) [NEW WAVE 3]
+    for r in repos_config:
+        s = site_map[r["site_id"]]
+        catalog.append({
+            "site_id": r["site_id"],
+            "site_name": s["name"],
+            "target_url": s["url"],
+            "backlink_url": f"https://colab.research.google.com/github/jibranpcccc/{r['repo']}/blob/main/benchmark_calculator.ipynb",
+            "platform": "Google Colab (DA 98)",
+            "link_type": "Runnable Cloud Notebook & Interactive Math",
+            "da": 98,
+            "anchor": f"⚡ Run live in Google Colab: {s['name']}"
+        })
+
+    # 16. 20 GitHub Raw CDN OpenAPI 3.1 Specs - openapi.json (DA 96) [NEW WAVE 3]
+    for r in repos_config:
+        s = site_map[r["site_id"]]
+        catalog.append({
+            "site_id": r["site_id"],
+            "site_name": s["name"],
+            "target_url": s["url"],
+            "backlink_url": f"https://raw.githubusercontent.com/jibranpcccc/{r['repo']}/main/openapi.json",
+            "platform": "GitHub Raw CDN OpenAPI (DA 96)",
+            "link_type": "OpenAPI 3.1 Specification JSON",
+            "da": 96,
+            "anchor": f"OpenAPI 3.1 Spec: {s['name']} (Raw CDN)"
+        })
+
+    # 17. 20 GitHub Pages API v1 Service Descriptors (DA 96) [NEW WAVE 3]
+    for s in sites:
+        site_id = s["id"]
+        catalog.append({
+            "site_id": site_id,
+            "site_name": s["name"],
+            "target_url": s["url"],
+            "backlink_url": f"https://jibranpcccc.github.io/api/v1/{site_id}.json",
+            "platform": "GitHub Pages API v1 (DA 96)",
+            "link_type": "API v1 JSON Service Descriptor",
+            "da": 96,
+            "anchor": f"API v1 Service Descriptor: {s['name']}"
+        })
+
+    # 18. 20 Dedicated Public GitHub Gists - Wave 3 (DA 96) [NEW WAVE 3]
+    wave3_file = os.path.join(DATA_DIR, "wave3_gists.json")
+    if os.path.exists(wave3_file):
+        with open(wave3_file, "r", encoding="utf-8") as f:
+            wave3_gists = json.load(f)
+    else:
+        wave3_gists = []
+
+    for g in wave3_gists:
+        s = site_map[g["site_id"]]
+        catalog.append({
+            "site_id": g["site_id"],
+            "site_name": s["name"],
+            "target_url": s["url"],
+            "backlink_url": g["url"],
+            "platform": "GitHub Gist Wave 3 (DA 96)",
+            "link_type": "Advanced Guide & Automation Script",
+            "da": 96,
+            "anchor": f"⚡ Production Code & Architecture: {s['name']}"
+        })
+
     return catalog
 
 def probe_all_backlinks(catalog):
@@ -468,9 +531,9 @@ def generate_excel_and_csv(verified_results):
 
     headers2 = [
         "Site ID", "Brand Name", "Target Live URL",
-        "DA 96 Repos", "DA 96 Releases", "DA 96 Issues", "DA 96 Gists",
-        "DA 96 Pages", "DA 96 Raw CDN", "PDF Whitepapers", "RSS Feeds",
-        "Total Live Links", "Max Authority"
+        "DA 98 Colab", "DA 96 Repos", "DA 96 Releases", "DA 96 Issues", "DA 96 Gists",
+        "DA 96 Pages", "DA 96 Raw CDN", "DA 96 OpenAPI", "DA 96 API Registry",
+        "PDF Whitepapers", "RSS Feeds", "Total Live Links", "Max Authority"
     ]
     ws2.append(headers2)
     for col_idx in range(1, len(headers2) + 1):
@@ -490,12 +553,15 @@ def generate_excel_and_csv(verified_results):
     for idx, s in enumerate(sites, 1):
         s_id = s["id"]
         site_links = [l for l in verified_results if l["site_id"] == s_id]
+        colab_count = len([l for l in site_links if "Colab" in l["platform"]])
         repos_count = len([l for l in site_links if "Repository" in l["platform"]])
         releases_count = len([l for l in site_links if "Release" in l["platform"]])
         issues_count = len([l for l in site_links if "Issue" in l["platform"]])
         gists_count = len([l for l in site_links if "Gist" in l["platform"]])
-        pages_count = len([l for l in site_links if "Pages" in l["platform"] or "Profile" in l["platform"]])
-        raw_count = len([l for l in site_links if "Raw CDN" in l["platform"]])
+        pages_count = len([l for l in site_links if "Pages Profile" in l["platform"] or "Benchmark Hub" in l["platform"]])
+        raw_count = len([l for l in site_links if "Raw CDN Docs" in l["platform"] or "Raw CDN Benchmarks" in l["platform"]])
+        openapi_count = len([l for l in site_links if "OpenAPI" in l["platform"]])
+        api_count = len([l for l in site_links if "API v1" in l["platform"]])
         pdf_count = len([l for l in site_links if "PDF" in l["platform"]])
         rss_count = len([l for l in site_links if "RSS" in l["platform"]])
         total_for_site = len(site_links)
@@ -504,16 +570,19 @@ def generate_excel_and_csv(verified_results):
             s_id,
             s["name"],
             s["url"],
+            colab_count,
             repos_count,
             releases_count,
             issues_count,
             gists_count,
             pages_count,
             raw_count,
+            openapi_count,
+            api_count,
             pdf_count,
             rss_count,
             total_for_site,
-            "DA 96"
+            "DA 98"
         ]
         ws2.append(row_data)
         row_num = idx + 1
@@ -522,7 +591,7 @@ def generate_excel_and_csv(verified_results):
             cell = ws2.cell(row=row_num, column=col_idx)
             cell.font = Font(name="Calibri", size=10)
             cell.border = border_thin
-            if col_idx in (1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13):
+            if col_idx in (1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16):
                 cell.alignment = Alignment(horizontal="center", vertical="center")
             else:
                 cell.alignment = Alignment(horizontal="left", vertical="center")
@@ -544,6 +613,7 @@ def generate_excel_and_csv(verified_results):
     ws3.row_dimensions[1].height = 28
 
     platforms_summary = [
+        ["Google Colab Interactive Notebooks", "colab.research.google.com/github/...", "DA 98", "20 Links", "Runnable Cloud Notebook & Interactive Math", "Instant / 12 Hours"],
         ["GitHub Standalone Repositories", "github.com/jibranpcccc/*", "DA 96", "20 Links", "Dofollow Homepage Metadata & README", "24–48 Hours"],
         ["GitHub v1.0.0 Tagged Releases", "github.com/.../releases/tag/v1.0.0", "DA 96", "20 Links", "Dofollow Release Notes", "24–48 Hours"],
         ["GitHub v1.1.0 Advanced Releases", "github.com/.../releases/tag/v1.1.0", "DA 96", "20 Links", "Empirical Benchmarks Release Notes", "24–48 Hours"],
@@ -551,10 +621,13 @@ def generate_excel_and_csv(verified_results):
         ["GitHub Technical RFC Issues #2", "github.com/.../issues/2", "DA 96", "20 Links", "Official Architecture RFC Specification", "12–24 Hours"],
         ["Public GitHub Gists (Wave 1)", "gist.github.com/jibranpcccc/*", "DA 96", "20 Links", "Dofollow Runnable Code Snippets", "24–48 Hours"],
         ["Public GitHub Gists (Wave 2)", "gist.github.com/jibranpcccc/*", "DA 96", "20 Links", "Deep-Tech Runnable Guides & Math", "24–48 Hours"],
+        ["Public GitHub Gists (Wave 3)", "gist.github.com/jibranpcccc/*", "DA 96", "20 Links", "Advanced Tech Guides & Benchmark Scripts", "24–48 Hours"],
         ["GitHub Pages Tools Directory", "jibranpcccc.github.io/tools/*", "DA 96", "20 Links", "Dofollow CTA & Directory Profile", "Hours"],
         ["GitHub Pages Benchmark Hub", "jibranpcccc.github.io/benchmarks/*", "DA 96", "20 Links", "Dofollow Benchmark Architecture Hub", "Hours"],
+        ["GitHub Pages API v1 Service Registry", "jibranpcccc.github.io/api/v1/*.json", "DA 96", "20 Links", "JSON Schema & Machine Discovery", "Hours"],
         ["GitHub Raw CDN Documentation", "raw.githubusercontent.com/.../README.md", "DA 96", "20 Links", "Direct Markdown API Endpoints", "Instant"],
         ["GitHub Raw CDN Benchmark Specs", "raw.githubusercontent.com/.../BENCHMARKS.md", "DA 96", "20 Links", "Direct Benchmark Markdown Specs", "Instant"],
+        ["GitHub Raw CDN OpenAPI 3.1 Specs", "raw.githubusercontent.com/.../openapi.json", "DA 96", "20 Links", "OpenAPI 3.1 JSON Specification", "Instant"],
         ["GitHub Profile Portfolio Showcase", "github.com/jibranpcccc", "DA 96", "Sitewide Hub", "Dofollow Technical Portfolio", "Hours"],
         ["GitHub Monorepo Index", "github.com/.../digitalcreatoravi-seo-engine", "DA 96", "Directory Table", "Dofollow Monorepo README", "Hours"],
         ["GitHub Pages Central Tools Hub", "jibranpcccc.github.io/tools.html", "DA 96", "Directory Hub", "Dofollow Directory Hub", "Hours"],
@@ -594,7 +667,7 @@ def generate_excel_and_csv(verified_results):
         ["Auditor Agent", "Antigravity Autonomous SEO Intelligence Engine"],
         ["Total Live URLs Monitored", len(verified_results)],
         ["Fleet Size Covered", "20 Production Websites (100% Coverage)"],
-        ["Primary External Authority Domain", "GitHub (DA 96)"],
+        ["Primary External Authority Domain", "Google Colab (DA 98) & GitHub (DA 96)"],
         ["Live Verified Pass Rate", f"{pass_pct} ({passed_count}/{len(verified_results)} Verified HTTP 200/202)"],
         ["Average Response Latency (TTFB)", f"{avg_latency} ms"],
         ["Anti-PBN Quarantine Enforcement", "Zero Cross-Site Links (Complete Topical Isolation)"],

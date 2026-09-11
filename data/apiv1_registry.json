@@ -1,0 +1,202 @@
+[
+  {
+    "site_id": "site-1",
+    "site_name": "LocalAgentStack",
+    "target_url": "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-1.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: LocalAgentStack"
+  },
+  {
+    "site_id": "site-2",
+    "site_name": "WorkationRadar",
+    "target_url": "https://jibranpcccc.github.io/workationradar/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-2.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: WorkationRadar"
+  },
+  {
+    "site_id": "site-3",
+    "site_name": "OpenAgentStack",
+    "target_url": "https://openagentstack.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-3.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: OpenAgentStack"
+  },
+  {
+    "site_id": "site-4",
+    "site_name": "IndieStackAudit",
+    "target_url": "https://indiestackaudit.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-4.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: IndieStackAudit"
+  },
+  {
+    "site_id": "site-5",
+    "site_name": "VectorBench",
+    "target_url": "https://vectorbench-hq.netlify.app/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-5.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: VectorBench"
+  },
+  {
+    "site_id": "site-6",
+    "site_name": "NomadTreaty",
+    "target_url": "https://nomadtreaty.vercel.app/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-6.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: NomadTreaty"
+  },
+  {
+    "site_id": "site-7",
+    "site_name": "WebhookWatch",
+    "target_url": "https://webhookwatch.vercel.app/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-7.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: WebhookWatch"
+  },
+  {
+    "site_id": "site-8",
+    "site_name": "LocalDocPrivacy",
+    "target_url": "https://localdocprivacy.netlify.app/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-8.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: LocalDocPrivacy"
+  },
+  {
+    "site_id": "site-9",
+    "site_name": "FounderRunway",
+    "target_url": "https://site-9-inky.vercel.app/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-9.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: FounderRunway"
+  },
+  {
+    "site_id": "site-10",
+    "site_name": "RAGInspect",
+    "target_url": "https://raginspect.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-10.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: RAGInspect"
+  },
+  {
+    "site_id": "site-11",
+    "site_name": "NomadPassportIndex",
+    "target_url": "https://nomadpassportindex.netlify.app/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-11.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: NomadPassportIndex"
+  },
+  {
+    "site_id": "site-12",
+    "site_name": "SaaSUnitMath",
+    "target_url": "https://site-12-taupe.vercel.app/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-12.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: SaaSUnitMath"
+  },
+  {
+    "site_id": "site-13",
+    "site_name": "GrokLogTester",
+    "target_url": "https://groklogtester.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-13.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: GrokLogTester"
+  },
+  {
+    "site_id": "site-14",
+    "site_name": "SOC2Ready",
+    "target_url": "https://site-14-sable.vercel.app/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-14.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: SOC2Ready"
+  },
+  {
+    "site_id": "site-15",
+    "site_name": "EORCalculator",
+    "target_url": "https://site-15-ruby.vercel.app/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-15.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: EORCalculator"
+  },
+  {
+    "site_id": "site-16",
+    "site_name": "DevConfigHub",
+    "target_url": "https://site-16-indol.vercel.app/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-16.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: DevConfigHub"
+  },
+  {
+    "site_id": "site-17",
+    "site_name": "OpenCRMStack",
+    "target_url": "https://opencrmstack.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-17.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: OpenCRMStack"
+  },
+  {
+    "site_id": "site-18",
+    "site_name": "CIPipelineGraph",
+    "target_url": "https://site-18-chi.vercel.app/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-18.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: CIPipelineGraph"
+  },
+  {
+    "site_id": "site-19",
+    "site_name": "GreekVisualizer",
+    "target_url": "https://site-19-nine.vercel.app/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-19.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: GreekVisualizer"
+  },
+  {
+    "site_id": "site-20",
+    "site_name": "EdgeRuntimeHQ",
+    "target_url": "https://edgeruntimehq.pages.dev/",
+    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-20.json",
+    "platform": "GitHub Pages (Fastly CDN DA 96)",
+    "link_type": "API v1 JSON Service Descriptor",
+    "da": 96,
+    "anchor": "API v1 Service Descriptor: EdgeRuntimeHQ"
+  }
+]

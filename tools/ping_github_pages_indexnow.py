@@ -29,9 +29,10 @@ def main():
     ]
 
     for s in sites:
-        slug = f"{s['id']}-{s['name'].lower()}"
+        site_id = s["id"]
+        slug = f"{site_id}-{s['name'].lower()}"
         url_list.append(f"https://jibranpcccc.github.io/tools/{slug}.html")
-        url_list.append(f"https://jibranpcccc.github.io/benchmarks/{slug}.html")
+        url_list.append(f"https://jibranpcccc.github.io/api/v1/{site_id}.json")
 
     payload = {
         "host": "jibranpcccc.github.io",
