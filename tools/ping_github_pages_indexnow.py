@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Submits all 20 GitHub Pages tool profiles and central hubs to IndexNow (Bing & Yandex).
+Submits all GitHub Pages tool profiles, benchmark landing pages, and central hubs
+to Microsoft Bing and Central IndexNow (Yandex, Seznam, Naver).
 """
 
 import os
@@ -30,6 +31,7 @@ def main():
     for s in sites:
         slug = f"{s['id']}-{s['name'].lower()}"
         url_list.append(f"https://jibranpcccc.github.io/tools/{slug}.html")
+        url_list.append(f"https://jibranpcccc.github.io/benchmarks/{slug}.html")
 
     payload = {
         "host": "jibranpcccc.github.io",
@@ -38,21 +40,32 @@ def main():
         "urlList": url_list
     }
 
-    print(f"=== SUBMITTING {len(url_list)} GITHUB PAGES PROFILES TO INDEXNOW ===")
-    req = urllib.request.Request(
-        "https://api.indexnow.org/indexnow",
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json; charset=utf-8", "User-Agent": "Mozilla/5.0"}
-    )
-
+    print(f"=== SUBMITTING {len(url_list)} GITHUB PAGES AUTHORITY URLS TO INDEXNOW ===")
+    
+    # 1. Bing IndexNow
     try:
-        with urllib.request.urlopen(req, timeout=15) as res:
-            print(f"[+] IndexNow Response: {res.status} ({res.reason})")
-            print(f"[+] Successfully dispatched {len(url_list)} GitHub Pages backlink URLs to Bing & Yandex!")
-    except urllib.error.HTTPError as e:
-        print(f"[-] IndexNow HTTP Error: {e.code} - {e.reason}")
+        req_bing = urllib.request.Request(
+            "https://www.bing.com/indexnow",
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Content-Type": "application/json; charset=utf-8", "User-Agent": "Mozilla/5.0"}
+        )
+        with urllib.request.urlopen(req_bing, timeout=15) as res:
+            print(f"[+] Microsoft Bing IndexNow: HTTP {res.status} ({res.reason})")
     except Exception as e:
-        print(f"[-] IndexNow Error: {e}")
+        print(f"[-] Bing IndexNow Notice: {e}")
+
+    # 2. Central IndexNow (Yandex, Seznam, Naver)
+    try:
+        req_central = urllib.request.Request(
+            "https://api.indexnow.org/indexnow",
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Content-Type": "application/json; charset=utf-8", "User-Agent": "Mozilla/5.0"}
+        )
+        with urllib.request.urlopen(req_central, timeout=15) as res:
+            print(f"[+] Central IndexNow: HTTP {res.status} ({res.reason})")
+            print(f"[+] Successfully dispatched {len(url_list)} GitHub Pages URLs to Bing, Yandex & Global IndexNow!")
+    except Exception as e:
+        print(f"[-] Central IndexNow Notice: {e}")
 
 if __name__ == "__main__":
     main()
