@@ -14,6 +14,28 @@
     "site_id": "site-1",
     "site_name": "LocalAgentStack",
     "target_url": "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-multi-gpu-tensor-parallel-docker/",
+    "backlink_url": "https://dpaste.com/5BY89Y86N",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 LocalAgentStack: Dual RTX 3090 & vLLM Tensor Parallel Inference Rig Technical Documentation"
+  },
+  {
+    "site_id": "site-1",
+    "site_name": "LocalAgentStack",
+    "target_url": "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-multi-gpu-tensor-parallel-docker/",
+    "backlink_url": "https://cl1p.net/fleet-site-1-localagentstack",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 LocalAgentStack: Dual RTX 3090 & vLLM Tensor Parallel Inference Rig Architecture Guide"
+  },
+  {
+    "site_id": "site-1",
+    "site_name": "LocalAgentStack",
+    "target_url": "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-multi-gpu-tensor-parallel-docker/",
     "backlink_url": "https://paste.rs/FjFBr",
     "platform": "Paste.rs Technical Spec (DA 72)",
     "root_domain": "paste.rs",
@@ -80,7 +102,7 @@
     "site_id": "site-1",
     "site_name": "LocalAgentStack",
     "target_url": "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-multi-gpu-tensor-parallel-docker/",
-    "backlink_url": "https://web.archive.org/web/https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-multi-gpu-tensor-parallel-docker/",
+    "backlink_url": "https://web.archive.org/web/2026/https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/",
     "platform": "Wayback Machine Archive (DA 96)",
     "root_domain": "archive.org",
     "da": 96,
@@ -97,6 +119,28 @@
     "da": 78,
     "http_status": 200,
     "anchor": "\u26a1 WorkationRadar: Split Croatia Coliving & Coworking Fiber Speed Matrix Live Guide"
+  },
+  {
+    "site_id": "site-2",
+    "site_name": "WorkationRadar",
+    "target_url": "https://jibranpcccc.github.io/workationradar/split-croatia-coliving-guide/",
+    "backlink_url": "https://dpaste.com/2FAUNJVEX",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 WorkationRadar: Split Croatia Coliving & Coworking Fiber Speed Matrix Technical Documentation"
+  },
+  {
+    "site_id": "site-2",
+    "site_name": "WorkationRadar",
+    "target_url": "https://jibranpcccc.github.io/workationradar/split-croatia-coliving-guide/",
+    "backlink_url": "https://cl1p.net/fleet-site-2-workationradar",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 WorkationRadar: Split Croatia Coliving & Coworking Fiber Speed Matrix Architecture Guide"
   },
   {
     "site_id": "site-2",
@@ -168,7 +212,7 @@
     "site_id": "site-2",
     "site_name": "WorkationRadar",
     "target_url": "https://jibranpcccc.github.io/workationradar/split-croatia-coliving-guide/",
-    "backlink_url": "https://web.archive.org/web/https://jibranpcccc.github.io/workationradar/split-croatia-coliving-guide/",
+    "backlink_url": "https://web.archive.org/web/2026/https://jibranpcccc.github.io/workationradar/",
     "platform": "Wayback Machine Archive (DA 96)",
     "root_domain": "archive.org",
     "da": 96,
@@ -185,6 +229,28 @@
     "da": 78,
     "http_status": 200,
     "anchor": "\u26a1 OpenAgentStack: LangGraph vs CrewAI vs AutoGen Multi-Agent Benchmark Live Guide"
+  },
+  {
+    "site_id": "site-3",
+    "site_name": "OpenAgentStack",
+    "target_url": "https://openagentstack.pages.dev/frameworks/langgraph-vs-crewai-vs-autogen-multi-agent-benchmark-2026/",
+    "backlink_url": "https://dpaste.com/GAHC9Y8ZU",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 OpenAgentStack: LangGraph vs CrewAI vs AutoGen Multi-Agent Benchmark Technical Documentation"
+  },
+  {
+    "site_id": "site-3",
+    "site_name": "OpenAgentStack",
+    "target_url": "https://openagentstack.pages.dev/frameworks/langgraph-vs-crewai-vs-autogen-multi-agent-benchmark-2026/",
+    "backlink_url": "https://cl1p.net/fleet-site-3-openagentstack",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 OpenAgentStack: LangGraph vs CrewAI vs AutoGen Multi-Agent Benchmark Architecture Guide"
   },
   {
     "site_id": "site-3",
@@ -253,6 +319,17 @@
     "anchor": "Statically CDN: OpenAgentStack Documentation"
   },
   {
+    "site_id": "site-3",
+    "site_name": "OpenAgentStack",
+    "target_url": "https://openagentstack.pages.dev/frameworks/langgraph-vs-crewai-vs-autogen-multi-agent-benchmark-2026/",
+    "backlink_url": "http://web.archive.org/web/20260907083054/https://openagentstack.pages.dev/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: OpenAgentStack"
+  },
+  {
     "site_id": "site-4",
     "site_name": "IndieStackAudit",
     "target_url": "https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/",
@@ -262,6 +339,28 @@
     "da": 78,
     "http_status": 200,
     "anchor": "\u26a1 IndieStackAudit: Stripe vs Lemon Squeezy vs Polar: Merchant of Record (MoR) Calculator Live Guide"
+  },
+  {
+    "site_id": "site-4",
+    "site_name": "IndieStackAudit",
+    "target_url": "https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/",
+    "backlink_url": "https://dpaste.com/6BJ5ZX8WT",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 IndieStackAudit: Stripe vs Lemon Squeezy vs Polar: Merchant of Record (MoR) Calculator Technical Documentation"
+  },
+  {
+    "site_id": "site-4",
+    "site_name": "IndieStackAudit",
+    "target_url": "https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/",
+    "backlink_url": "https://cl1p.net/fleet-site-4-indiestackaudit",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 IndieStackAudit: Stripe vs Lemon Squeezy vs Polar: Merchant of Record (MoR) Calculator Architecture Guide"
   },
   {
     "site_id": "site-4",
@@ -330,6 +429,17 @@
     "anchor": "Statically CDN: IndieStackAudit Documentation"
   },
   {
+    "site_id": "site-4",
+    "site_name": "IndieStackAudit",
+    "target_url": "https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/",
+    "backlink_url": "http://web.archive.org/web/20260907085755/https://indiestackaudit.pages.dev/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: IndieStackAudit"
+  },
+  {
     "site_id": "site-5",
     "site_name": "VectorBench",
     "target_url": "https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/",
@@ -339,6 +449,28 @@
     "da": 78,
     "http_status": 200,
     "anchor": "\u26a1 VectorBench: Chroma vs LanceDB Embedded Vector Database Shootout Live Guide"
+  },
+  {
+    "site_id": "site-5",
+    "site_name": "VectorBench",
+    "target_url": "https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/",
+    "backlink_url": "https://dpaste.com/49MW6CRFG",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 VectorBench: Chroma vs LanceDB Embedded Vector Database Shootout Technical Documentation"
+  },
+  {
+    "site_id": "site-5",
+    "site_name": "VectorBench",
+    "target_url": "https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/",
+    "backlink_url": "https://cl1p.net/fleet-site-5-vectorbench",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 VectorBench: Chroma vs LanceDB Embedded Vector Database Shootout Architecture Guide"
   },
   {
     "site_id": "site-5",
@@ -407,6 +539,17 @@
     "anchor": "Statically CDN: VectorBench Documentation"
   },
   {
+    "site_id": "site-5",
+    "site_name": "VectorBench",
+    "target_url": "https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/",
+    "backlink_url": "https://web.archive.org/web/https://vectorbench-hq.netlify.app/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: VectorBench"
+  },
+  {
     "site_id": "site-6",
     "site_name": "NomadTreaty",
     "target_url": "https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/",
@@ -416,6 +559,28 @@
     "da": 78,
     "http_status": 200,
     "anchor": "\u26a1 NomadTreaty: Spain Beckham Law 24% Flat Tax vs Standard IRPF Scale Sizer Live Guide"
+  },
+  {
+    "site_id": "site-6",
+    "site_name": "NomadTreaty",
+    "target_url": "https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/",
+    "backlink_url": "https://dpaste.com/BRW9MW9YC",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 NomadTreaty: Spain Beckham Law 24% Flat Tax vs Standard IRPF Scale Sizer Technical Documentation"
+  },
+  {
+    "site_id": "site-6",
+    "site_name": "NomadTreaty",
+    "target_url": "https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/",
+    "backlink_url": "https://cl1p.net/fleet-site-6-nomadtreaty",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 NomadTreaty: Spain Beckham Law 24% Flat Tax vs Standard IRPF Scale Sizer Architecture Guide"
   },
   {
     "site_id": "site-6",
@@ -454,6 +619,17 @@
     "site_id": "site-6",
     "site_name": "NomadTreaty",
     "target_url": "https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/",
+    "backlink_url": "https://ulvis.net/9HkW",
+    "platform": "Ulvis Authority Gateway (DA 75)",
+    "root_domain": "ulvis.net",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "Ulvis Gateway: NomadTreaty"
+  },
+  {
+    "site_id": "site-6",
+    "site_name": "NomadTreaty",
+    "target_url": "https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/",
     "backlink_url": "https://cdn.jsdelivr.net/gh/jibranpcccc/nomad-tax-treaty-calculator@main/README.md",
     "platform": "jsDelivr Open CDN (DA 92)",
     "root_domain": "jsdelivr.net",
@@ -473,6 +649,17 @@
     "anchor": "Statically CDN: NomadTreaty Documentation"
   },
   {
+    "site_id": "site-6",
+    "site_name": "NomadTreaty",
+    "target_url": "https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/",
+    "backlink_url": "http://web.archive.org/web/20260907085910/https://nomadtreaty.vercel.app/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: NomadTreaty"
+  },
+  {
     "site_id": "site-7",
     "site_name": "WebhookWatch",
     "target_url": "https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/",
@@ -482,6 +669,28 @@
     "da": 78,
     "http_status": 200,
     "anchor": "\u26a1 WebhookWatch: AWS SQS Dead-Letter Queue (DLQ) & Exponential Jitter Retries Live Guide"
+  },
+  {
+    "site_id": "site-7",
+    "site_name": "WebhookWatch",
+    "target_url": "https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/",
+    "backlink_url": "https://dpaste.com/FRM3CMHZA",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 WebhookWatch: AWS SQS Dead-Letter Queue (DLQ) & Exponential Jitter Retries Technical Documentation"
+  },
+  {
+    "site_id": "site-7",
+    "site_name": "WebhookWatch",
+    "target_url": "https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/",
+    "backlink_url": "https://cl1p.net/fleet-site-7-webhookwatch",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 WebhookWatch: AWS SQS Dead-Letter Queue (DLQ) & Exponential Jitter Retries Architecture Guide"
   },
   {
     "site_id": "site-7",
@@ -550,6 +759,17 @@
     "anchor": "Statically CDN: WebhookWatch Documentation"
   },
   {
+    "site_id": "site-7",
+    "site_name": "WebhookWatch",
+    "target_url": "https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/",
+    "backlink_url": "http://web.archive.org/web/20260907085946/https://webhookwatch.vercel.app/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: WebhookWatch"
+  },
+  {
     "site_id": "site-8",
     "site_name": "LocalDocPrivacy",
     "target_url": "https://localdocprivacy.netlify.app/in-browser-ocr-tesseract-wasm-guide/",
@@ -559,6 +779,28 @@
     "da": 78,
     "http_status": 200,
     "anchor": "\u26a1 LocalDocPrivacy: Tesseract.js WASM In-Browser OCR: Zero-Server Privacy Guide Live Guide"
+  },
+  {
+    "site_id": "site-8",
+    "site_name": "LocalDocPrivacy",
+    "target_url": "https://localdocprivacy.netlify.app/in-browser-ocr-tesseract-wasm-guide/",
+    "backlink_url": "https://dpaste.com/G8P52EL8Z",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 LocalDocPrivacy: Tesseract.js WASM In-Browser OCR: Zero-Server Privacy Guide Technical Documentation"
+  },
+  {
+    "site_id": "site-8",
+    "site_name": "LocalDocPrivacy",
+    "target_url": "https://localdocprivacy.netlify.app/in-browser-ocr-tesseract-wasm-guide/",
+    "backlink_url": "https://cl1p.net/fleet-site-8-localdocprivacy",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 LocalDocPrivacy: Tesseract.js WASM In-Browser OCR: Zero-Server Privacy Guide Architecture Guide"
   },
   {
     "site_id": "site-8",
@@ -627,6 +869,17 @@
     "anchor": "Statically CDN: LocalDocPrivacy Documentation"
   },
   {
+    "site_id": "site-8",
+    "site_name": "LocalDocPrivacy",
+    "target_url": "https://localdocprivacy.netlify.app/in-browser-ocr-tesseract-wasm-guide/",
+    "backlink_url": "http://web.archive.org/web/20260907090016/https://localdocprivacy.netlify.app/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: LocalDocPrivacy"
+  },
+  {
     "site_id": "site-9",
     "site_name": "FounderRunway",
     "target_url": "https://site-9-inky.vercel.app/top-latin-america-tech-hubs-for-bootstrappers/",
@@ -636,6 +889,28 @@
     "da": 78,
     "http_status": 200,
     "anchor": "\u26a1 FounderRunway: Top Latin America Tech Hubs for Bootstrappers: Runway & Safety Index Live Guide"
+  },
+  {
+    "site_id": "site-9",
+    "site_name": "FounderRunway",
+    "target_url": "https://site-9-inky.vercel.app/top-latin-america-tech-hubs-for-bootstrappers/",
+    "backlink_url": "https://dpaste.com/GKWYBJ9HY",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 FounderRunway: Top Latin America Tech Hubs for Bootstrappers: Runway & Safety Index Technical Documentation"
+  },
+  {
+    "site_id": "site-9",
+    "site_name": "FounderRunway",
+    "target_url": "https://site-9-inky.vercel.app/top-latin-america-tech-hubs-for-bootstrappers/",
+    "backlink_url": "https://cl1p.net/fleet-site-9-founderrunway",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 FounderRunway: Top Latin America Tech Hubs for Bootstrappers: Runway & Safety Index Architecture Guide"
   },
   {
     "site_id": "site-9",
@@ -704,6 +979,17 @@
     "anchor": "Statically CDN: FounderRunway Documentation"
   },
   {
+    "site_id": "site-9",
+    "site_name": "FounderRunway",
+    "target_url": "https://site-9-inky.vercel.app/top-latin-america-tech-hubs-for-bootstrappers/",
+    "backlink_url": "https://web.archive.org/web/https://site-9-inky.vercel.app/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: FounderRunway"
+  },
+  {
     "site_id": "site-10",
     "site_name": "RAGInspect",
     "target_url": "https://raginspect.pages.dev/colpali-vs-bge-m3-multimodal-rag-benchmark/",
@@ -713,6 +999,28 @@
     "da": 78,
     "http_status": 200,
     "anchor": "\u26a1 RAGInspect: ColPali vs BGE-M3 Multimodal RAG Benchmark: Visual Retrieval Live Guide"
+  },
+  {
+    "site_id": "site-10",
+    "site_name": "RAGInspect",
+    "target_url": "https://raginspect.pages.dev/colpali-vs-bge-m3-multimodal-rag-benchmark/",
+    "backlink_url": "https://dpaste.com/8SSXHB5GE",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 RAGInspect: ColPali vs BGE-M3 Multimodal RAG Benchmark: Visual Retrieval Technical Documentation"
+  },
+  {
+    "site_id": "site-10",
+    "site_name": "RAGInspect",
+    "target_url": "https://raginspect.pages.dev/colpali-vs-bge-m3-multimodal-rag-benchmark/",
+    "backlink_url": "https://cl1p.net/fleet-site-10-raginspect",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 RAGInspect: ColPali vs BGE-M3 Multimodal RAG Benchmark: Visual Retrieval Architecture Guide"
   },
   {
     "site_id": "site-10",
@@ -781,6 +1089,17 @@
     "anchor": "Statically CDN: RAGInspect Documentation"
   },
   {
+    "site_id": "site-10",
+    "site_name": "RAGInspect",
+    "target_url": "https://raginspect.pages.dev/colpali-vs-bge-m3-multimodal-rag-benchmark/",
+    "backlink_url": "http://web.archive.org/web/20260907085054/https://raginspect.pages.dev/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: RAGInspect"
+  },
+  {
     "site_id": "site-11",
     "site_name": "NomadPassportIndex",
     "target_url": "https://nomadpassportindex.netlify.app/costa-rica-digital-nomad-visa-bank-statement-guide/",
@@ -790,6 +1109,28 @@
     "da": 78,
     "http_status": 200,
     "anchor": "\u26a1 NomadPassportIndex: Costa Rica Digital Nomad Visa Bank Statement & Tax Exemption Guide Live Guide"
+  },
+  {
+    "site_id": "site-11",
+    "site_name": "NomadPassportIndex",
+    "target_url": "https://nomadpassportindex.netlify.app/costa-rica-digital-nomad-visa-bank-statement-guide/",
+    "backlink_url": "https://dpaste.com/GT79VA3XF",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 NomadPassportIndex: Costa Rica Digital Nomad Visa Bank Statement & Tax Exemption Guide Technical Documentation"
+  },
+  {
+    "site_id": "site-11",
+    "site_name": "NomadPassportIndex",
+    "target_url": "https://nomadpassportindex.netlify.app/costa-rica-digital-nomad-visa-bank-statement-guide/",
+    "backlink_url": "https://cl1p.net/fleet-site-11-nomadpassportindex",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 NomadPassportIndex: Costa Rica Digital Nomad Visa Bank Statement & Tax Exemption Guide Architecture Guide"
   },
   {
     "site_id": "site-11",
@@ -858,6 +1199,17 @@
     "anchor": "Statically CDN: NomadPassportIndex Documentation"
   },
   {
+    "site_id": "site-11",
+    "site_name": "NomadPassportIndex",
+    "target_url": "https://nomadpassportindex.netlify.app/costa-rica-digital-nomad-visa-bank-statement-guide/",
+    "backlink_url": "http://web.archive.org/web/20260907085120/https://nomadpassportindex.netlify.app/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: NomadPassportIndex"
+  },
+  {
     "site_id": "site-12",
     "site_name": "SaaSUnitMath",
     "target_url": "https://site-12-taupe.vercel.app/customer-churn-rate-vs-revenue-churn-calculator/",
@@ -872,12 +1224,67 @@
     "site_id": "site-12",
     "site_name": "SaaSUnitMath",
     "target_url": "https://site-12-taupe.vercel.app/customer-churn-rate-vs-revenue-churn-calculator/",
+    "backlink_url": "https://dpaste.com/ESGU2PLEU",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 SaaSUnitMath: Customer Churn Rate vs Revenue Churn Rate: Formulas, Spreadsheets & Math Technical Documentation"
+  },
+  {
+    "site_id": "site-12",
+    "site_name": "SaaSUnitMath",
+    "target_url": "https://site-12-taupe.vercel.app/customer-churn-rate-vs-revenue-churn-calculator/",
+    "backlink_url": "https://cl1p.net/fleet-site-12-saasunitmath",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 SaaSUnitMath: Customer Churn Rate vs Revenue Churn Rate: Formulas, Spreadsheets & Math Architecture Guide"
+  },
+  {
+    "site_id": "site-12",
+    "site_name": "SaaSUnitMath",
+    "target_url": "https://site-12-taupe.vercel.app/customer-churn-rate-vs-revenue-churn-calculator/",
     "backlink_url": "https://paste.rs/CWNth",
     "platform": "Paste.rs Technical Spec (DA 72)",
     "root_domain": "paste.rs",
     "da": 72,
     "http_status": 200,
     "anchor": "SaaSUnitMath Architecture Spec"
+  },
+  {
+    "site_id": "site-12",
+    "site_name": "SaaSUnitMath",
+    "target_url": "https://site-12-taupe.vercel.app/customer-churn-rate-vs-revenue-churn-calculator/",
+    "backlink_url": "https://tinyurl.com/26x8nwjj",
+    "platform": "TinyURL Authority Redirect (DA 94)",
+    "root_domain": "tinyurl.com",
+    "da": 94,
+    "http_status": 200,
+    "anchor": "Permanent Redirect: SaaSUnitMath"
+  },
+  {
+    "site_id": "site-12",
+    "site_name": "SaaSUnitMath",
+    "target_url": "https://site-12-taupe.vercel.app/customer-churn-rate-vs-revenue-churn-calculator/",
+    "backlink_url": "https://cleanuri.com/Vrwdrl",
+    "platform": "CleanURI Authority Redirect (DA 76)",
+    "root_domain": "cleanuri.com",
+    "da": 76,
+    "http_status": 200,
+    "anchor": "CleanURI Redirect: SaaSUnitMath"
+  },
+  {
+    "site_id": "site-12",
+    "site_name": "SaaSUnitMath",
+    "target_url": "https://site-12-taupe.vercel.app/customer-churn-rate-vs-revenue-churn-calculator/",
+    "backlink_url": "https://ulvis.net/l6cY",
+    "platform": "Ulvis Authority Gateway (DA 75)",
+    "root_domain": "ulvis.net",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "Ulvis Gateway: SaaSUnitMath"
   },
   {
     "site_id": "site-12",
@@ -902,6 +1309,17 @@
     "anchor": "Statically CDN: SaaSUnitMath Documentation"
   },
   {
+    "site_id": "site-12",
+    "site_name": "SaaSUnitMath",
+    "target_url": "https://site-12-taupe.vercel.app/customer-churn-rate-vs-revenue-churn-calculator/",
+    "backlink_url": "https://web.archive.org/web/2026/https://site-12-taupe.vercel.app/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: SaaSUnitMath"
+  },
+  {
     "site_id": "site-13",
     "site_name": "GrokLogTester",
     "target_url": "https://groklogtester.pages.dev/kubernetes-ingress-nginx-log-parser-fluentbit/",
@@ -911,6 +1329,28 @@
     "da": 78,
     "http_status": 200,
     "anchor": "\u26a1 GrokLogTester: Kubernetes Ingress-Nginx Log Parser for Fluent Bit & Vector: Grok Regex Guide Live Guide"
+  },
+  {
+    "site_id": "site-13",
+    "site_name": "GrokLogTester",
+    "target_url": "https://groklogtester.pages.dev/kubernetes-ingress-nginx-log-parser-fluentbit/",
+    "backlink_url": "https://dpaste.com/F5EKHKUUX",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 GrokLogTester: Kubernetes Ingress-Nginx Log Parser for Fluent Bit & Vector: Grok Regex Guide Technical Documentation"
+  },
+  {
+    "site_id": "site-13",
+    "site_name": "GrokLogTester",
+    "target_url": "https://groklogtester.pages.dev/kubernetes-ingress-nginx-log-parser-fluentbit/",
+    "backlink_url": "https://cl1p.net/fleet-site-13-groklogtester",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 GrokLogTester: Kubernetes Ingress-Nginx Log Parser for Fluent Bit & Vector: Grok Regex Guide Architecture Guide"
   },
   {
     "site_id": "site-13",
@@ -979,6 +1419,17 @@
     "anchor": "Statically CDN: GrokLogTester Documentation"
   },
   {
+    "site_id": "site-13",
+    "site_name": "GrokLogTester",
+    "target_url": "https://groklogtester.pages.dev/kubernetes-ingress-nginx-log-parser-fluentbit/",
+    "backlink_url": "http://web.archive.org/web/20260907085234/https://groklogtester.pages.dev/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: GrokLogTester"
+  },
+  {
     "site_id": "site-14",
     "site_name": "SOC2Ready",
     "target_url": "https://site-14-sable.vercel.app/pentest-requirements-for-soc-2-type-2-audit/",
@@ -993,12 +1444,67 @@
     "site_id": "site-14",
     "site_name": "SOC2Ready",
     "target_url": "https://site-14-sable.vercel.app/pentest-requirements-for-soc-2-type-2-audit/",
+    "backlink_url": "https://dpaste.com/CKECRV38G",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 SOC2Ready: Penetration Testing Requirements for SOC 2 Type II Audits in 2026 Technical Documentation"
+  },
+  {
+    "site_id": "site-14",
+    "site_name": "SOC2Ready",
+    "target_url": "https://site-14-sable.vercel.app/pentest-requirements-for-soc-2-type-2-audit/",
+    "backlink_url": "https://cl1p.net/fleet-site-14-soc2ready",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 SOC2Ready: Penetration Testing Requirements for SOC 2 Type II Audits in 2026 Architecture Guide"
+  },
+  {
+    "site_id": "site-14",
+    "site_name": "SOC2Ready",
+    "target_url": "https://site-14-sable.vercel.app/pentest-requirements-for-soc-2-type-2-audit/",
     "backlink_url": "https://paste.rs/ZvRO9",
     "platform": "Paste.rs Technical Spec (DA 72)",
     "root_domain": "paste.rs",
     "da": 72,
     "http_status": 200,
     "anchor": "SOC2Ready Architecture Spec"
+  },
+  {
+    "site_id": "site-14",
+    "site_name": "SOC2Ready",
+    "target_url": "https://site-14-sable.vercel.app/pentest-requirements-for-soc-2-type-2-audit/",
+    "backlink_url": "https://tinyurl.com/287zsffg",
+    "platform": "TinyURL Authority Redirect (DA 94)",
+    "root_domain": "tinyurl.com",
+    "da": 94,
+    "http_status": 200,
+    "anchor": "Permanent Redirect: SOC2Ready"
+  },
+  {
+    "site_id": "site-14",
+    "site_name": "SOC2Ready",
+    "target_url": "https://site-14-sable.vercel.app/pentest-requirements-for-soc-2-type-2-audit/",
+    "backlink_url": "https://cleanuri.com/80PD0g",
+    "platform": "CleanURI Authority Redirect (DA 76)",
+    "root_domain": "cleanuri.com",
+    "da": 76,
+    "http_status": 200,
+    "anchor": "CleanURI Redirect: SOC2Ready"
+  },
+  {
+    "site_id": "site-14",
+    "site_name": "SOC2Ready",
+    "target_url": "https://site-14-sable.vercel.app/pentest-requirements-for-soc-2-type-2-audit/",
+    "backlink_url": "https://ulvis.net/nfuw",
+    "platform": "Ulvis Authority Gateway (DA 75)",
+    "root_domain": "ulvis.net",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "Ulvis Gateway: SOC2Ready"
   },
   {
     "site_id": "site-14",
@@ -1023,6 +1529,17 @@
     "anchor": "Statically CDN: SOC2Ready Documentation"
   },
   {
+    "site_id": "site-14",
+    "site_name": "SOC2Ready",
+    "target_url": "https://site-14-sable.vercel.app/pentest-requirements-for-soc-2-type-2-audit/",
+    "backlink_url": "http://web.archive.org/web/20260907085305/https://site-14-sable.vercel.app/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: SOC2Ready"
+  },
+  {
     "site_id": "site-15",
     "site_name": "EORCalculator",
     "target_url": "https://site-15-ruby.vercel.app/philippines-13th-month-pay-mandatory-employer-costs/",
@@ -1037,12 +1554,67 @@
     "site_id": "site-15",
     "site_name": "EORCalculator",
     "target_url": "https://site-15-ruby.vercel.app/philippines-13th-month-pay-mandatory-employer-costs/",
+    "backlink_url": "https://dpaste.com/ATNHF9W2F",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 EORCalculator: Philippines 13th Month Pay & Mandatory SSS/PhilHealth Costs Guide Technical Documentation"
+  },
+  {
+    "site_id": "site-15",
+    "site_name": "EORCalculator",
+    "target_url": "https://site-15-ruby.vercel.app/philippines-13th-month-pay-mandatory-employer-costs/",
+    "backlink_url": "https://cl1p.net/fleet-site-15-eorcalculator",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 EORCalculator: Philippines 13th Month Pay & Mandatory SSS/PhilHealth Costs Guide Architecture Guide"
+  },
+  {
+    "site_id": "site-15",
+    "site_name": "EORCalculator",
+    "target_url": "https://site-15-ruby.vercel.app/philippines-13th-month-pay-mandatory-employer-costs/",
     "backlink_url": "https://paste.rs/zyYo2",
     "platform": "Paste.rs Technical Spec (DA 72)",
     "root_domain": "paste.rs",
     "da": 72,
     "http_status": 200,
     "anchor": "EORCalculator Architecture Spec"
+  },
+  {
+    "site_id": "site-15",
+    "site_name": "EORCalculator",
+    "target_url": "https://site-15-ruby.vercel.app/philippines-13th-month-pay-mandatory-employer-costs/",
+    "backlink_url": "https://tinyurl.com/27esydvd",
+    "platform": "TinyURL Authority Redirect (DA 94)",
+    "root_domain": "tinyurl.com",
+    "da": 94,
+    "http_status": 200,
+    "anchor": "Permanent Redirect: EORCalculator"
+  },
+  {
+    "site_id": "site-15",
+    "site_name": "EORCalculator",
+    "target_url": "https://site-15-ruby.vercel.app/philippines-13th-month-pay-mandatory-employer-costs/",
+    "backlink_url": "https://cleanuri.com/WAE0A6",
+    "platform": "CleanURI Authority Redirect (DA 76)",
+    "root_domain": "cleanuri.com",
+    "da": 76,
+    "http_status": 200,
+    "anchor": "CleanURI Redirect: EORCalculator"
+  },
+  {
+    "site_id": "site-15",
+    "site_name": "EORCalculator",
+    "target_url": "https://site-15-ruby.vercel.app/philippines-13th-month-pay-mandatory-employer-costs/",
+    "backlink_url": "https://ulvis.net/sTqS",
+    "platform": "Ulvis Authority Gateway (DA 75)",
+    "root_domain": "ulvis.net",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "Ulvis Gateway: EORCalculator"
   },
   {
     "site_id": "site-15",
@@ -1067,6 +1639,50 @@
     "anchor": "Statically CDN: EORCalculator Documentation"
   },
   {
+    "site_id": "site-15",
+    "site_name": "EORCalculator",
+    "target_url": "https://site-15-ruby.vercel.app/philippines-13th-month-pay-mandatory-employer-costs/",
+    "backlink_url": "https://web.archive.org/web/2026/https://site-15-ruby.vercel.app/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: EORCalculator"
+  },
+  {
+    "site_id": "site-16",
+    "site_name": "DevConfigHub",
+    "target_url": "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/",
+    "backlink_url": "https://rentry.co/ttidty85",
+    "platform": "Rentry Markdown Dossier (DA 78)",
+    "root_domain": "rentry.co",
+    "da": 78,
+    "http_status": 200,
+    "anchor": "\u26a1 DevConfigHub: DevContainer Feature for pgvector + Ollama: Instant Zero-Install Local RAG Live Guide"
+  },
+  {
+    "site_id": "site-16",
+    "site_name": "DevConfigHub",
+    "target_url": "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/",
+    "backlink_url": "https://dpaste.com/HGBJRHVZZ",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 DevConfigHub: DevContainer Feature for pgvector + Ollama: Instant Zero-Install Local RAG Technical Documentation"
+  },
+  {
+    "site_id": "site-16",
+    "site_name": "DevConfigHub",
+    "target_url": "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/",
+    "backlink_url": "https://cl1p.net/fleet-site-16-devconfighub",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 DevConfigHub: DevContainer Feature for pgvector + Ollama: Instant Zero-Install Local RAG Architecture Guide"
+  },
+  {
     "site_id": "site-16",
     "site_name": "DevConfigHub",
     "target_url": "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/",
@@ -1076,6 +1692,39 @@
     "da": 72,
     "http_status": 200,
     "anchor": "DevConfigHub Architecture Spec"
+  },
+  {
+    "site_id": "site-16",
+    "site_name": "DevConfigHub",
+    "target_url": "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/",
+    "backlink_url": "https://tinyurl.com/27dwonqe",
+    "platform": "TinyURL Authority Redirect (DA 94)",
+    "root_domain": "tinyurl.com",
+    "da": 94,
+    "http_status": 200,
+    "anchor": "Permanent Redirect: DevConfigHub"
+  },
+  {
+    "site_id": "site-16",
+    "site_name": "DevConfigHub",
+    "target_url": "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/",
+    "backlink_url": "https://cleanuri.com/QEBGEJ",
+    "platform": "CleanURI Authority Redirect (DA 76)",
+    "root_domain": "cleanuri.com",
+    "da": 76,
+    "http_status": 200,
+    "anchor": "CleanURI Redirect: DevConfigHub"
+  },
+  {
+    "site_id": "site-16",
+    "site_name": "DevConfigHub",
+    "target_url": "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/",
+    "backlink_url": "https://ulvis.net/u7fI",
+    "platform": "Ulvis Authority Gateway (DA 75)",
+    "root_domain": "ulvis.net",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "Ulvis Gateway: DevConfigHub"
   },
   {
     "site_id": "site-16",
@@ -1098,6 +1747,50 @@
     "da": 81,
     "http_status": 200,
     "anchor": "Statically CDN: DevConfigHub Documentation"
+  },
+  {
+    "site_id": "site-16",
+    "site_name": "DevConfigHub",
+    "target_url": "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/",
+    "backlink_url": "http://web.archive.org/web/20260907085426/https://site-16-indol.vercel.app/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: DevConfigHub"
+  },
+  {
+    "site_id": "site-17",
+    "site_name": "OpenCRMStack",
+    "target_url": "https://opencrmstack.pages.dev/espocrm-vs-suitecrm-lightweight-php-open-source/",
+    "backlink_url": "https://rentry.co/pifnhbzc",
+    "platform": "Rentry Markdown Dossier (DA 78)",
+    "root_domain": "rentry.co",
+    "da": 78,
+    "http_status": 200,
+    "anchor": "\u26a1 OpenCRMStack: EspoCRM vs SuiteCRM: Lightweight Self-Hosted PHP CRM Comparison Live Guide"
+  },
+  {
+    "site_id": "site-17",
+    "site_name": "OpenCRMStack",
+    "target_url": "https://opencrmstack.pages.dev/espocrm-vs-suitecrm-lightweight-php-open-source/",
+    "backlink_url": "https://dpaste.com/E6RHK272M",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 OpenCRMStack: EspoCRM vs SuiteCRM: Lightweight Self-Hosted PHP CRM Comparison Technical Documentation"
+  },
+  {
+    "site_id": "site-17",
+    "site_name": "OpenCRMStack",
+    "target_url": "https://opencrmstack.pages.dev/espocrm-vs-suitecrm-lightweight-php-open-source/",
+    "backlink_url": "https://cl1p.net/fleet-site-17-opencrmstack",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 OpenCRMStack: EspoCRM vs SuiteCRM: Lightweight Self-Hosted PHP CRM Comparison Architecture Guide"
   },
   {
     "site_id": "site-17",
@@ -1166,6 +1859,50 @@
     "anchor": "Statically CDN: OpenCRMStack Documentation"
   },
   {
+    "site_id": "site-17",
+    "site_name": "OpenCRMStack",
+    "target_url": "https://opencrmstack.pages.dev/espocrm-vs-suitecrm-lightweight-php-open-source/",
+    "backlink_url": "https://web.archive.org/web/2026/https://opencrmstack.pages.dev/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: OpenCRMStack"
+  },
+  {
+    "site_id": "site-18",
+    "site_name": "CIPipelineGraph",
+    "target_url": "https://site-18-chi.vercel.app/docker-build-push-action-buildx-cache-github-actions/",
+    "backlink_url": "https://rentry.co/8txrsb9e",
+    "platform": "Rentry Markdown Dossier (DA 78)",
+    "root_domain": "rentry.co",
+    "da": 78,
+    "http_status": 200,
+    "anchor": "\u26a1 CIPipelineGraph: Speed Up Docker Buildx in GitHub Actions with GHA & Registry Cache Live Guide"
+  },
+  {
+    "site_id": "site-18",
+    "site_name": "CIPipelineGraph",
+    "target_url": "https://site-18-chi.vercel.app/docker-build-push-action-buildx-cache-github-actions/",
+    "backlink_url": "https://dpaste.com/7F5LLFG8H",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 CIPipelineGraph: Speed Up Docker Buildx in GitHub Actions with GHA & Registry Cache Technical Documentation"
+  },
+  {
+    "site_id": "site-18",
+    "site_name": "CIPipelineGraph",
+    "target_url": "https://site-18-chi.vercel.app/docker-build-push-action-buildx-cache-github-actions/",
+    "backlink_url": "https://cl1p.net/fleet-site-18-cipipelinegraph",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 CIPipelineGraph: Speed Up Docker Buildx in GitHub Actions with GHA & Registry Cache Architecture Guide"
+  },
+  {
     "site_id": "site-18",
     "site_name": "CIPipelineGraph",
     "target_url": "https://site-18-chi.vercel.app/docker-build-push-action-buildx-cache-github-actions/",
@@ -1175,6 +1912,39 @@
     "da": 72,
     "http_status": 200,
     "anchor": "CIPipelineGraph Architecture Spec"
+  },
+  {
+    "site_id": "site-18",
+    "site_name": "CIPipelineGraph",
+    "target_url": "https://site-18-chi.vercel.app/docker-build-push-action-buildx-cache-github-actions/",
+    "backlink_url": "https://tinyurl.com/294j5xoe",
+    "platform": "TinyURL Authority Redirect (DA 94)",
+    "root_domain": "tinyurl.com",
+    "da": 94,
+    "http_status": 200,
+    "anchor": "Permanent Redirect: CIPipelineGraph"
+  },
+  {
+    "site_id": "site-18",
+    "site_name": "CIPipelineGraph",
+    "target_url": "https://site-18-chi.vercel.app/docker-build-push-action-buildx-cache-github-actions/",
+    "backlink_url": "https://cleanuri.com/D09w0z",
+    "platform": "CleanURI Authority Redirect (DA 76)",
+    "root_domain": "cleanuri.com",
+    "da": 76,
+    "http_status": 200,
+    "anchor": "CleanURI Redirect: CIPipelineGraph"
+  },
+  {
+    "site_id": "site-18",
+    "site_name": "CIPipelineGraph",
+    "target_url": "https://site-18-chi.vercel.app/docker-build-push-action-buildx-cache-github-actions/",
+    "backlink_url": "https://ulvis.net/G6z7",
+    "platform": "Ulvis Authority Gateway (DA 75)",
+    "root_domain": "ulvis.net",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "Ulvis Gateway: CIPipelineGraph"
   },
   {
     "site_id": "site-18",
@@ -1199,6 +1969,17 @@
     "anchor": "Statically CDN: CIPipelineGraph Documentation"
   },
   {
+    "site_id": "site-18",
+    "site_name": "CIPipelineGraph",
+    "target_url": "https://site-18-chi.vercel.app/docker-build-push-action-buildx-cache-github-actions/",
+    "backlink_url": "http://web.archive.org/web/20260907085513/https://site-18-chi.vercel.app/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: CIPipelineGraph"
+  },
+  {
     "site_id": "site-19",
     "site_name": "GreekVisualizer",
     "target_url": "https://site-19-nine.vercel.app/implied-volatility-smile-surface-black-scholes/",
@@ -1213,12 +1994,67 @@
     "site_id": "site-19",
     "site_name": "GreekVisualizer",
     "target_url": "https://site-19-nine.vercel.app/implied-volatility-smile-surface-black-scholes/",
+    "backlink_url": "https://dpaste.com/EVFQUCEXV",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 GreekVisualizer: Implied Volatility Smile & Surface Calculation in Python Technical Documentation"
+  },
+  {
+    "site_id": "site-19",
+    "site_name": "GreekVisualizer",
+    "target_url": "https://site-19-nine.vercel.app/implied-volatility-smile-surface-black-scholes/",
+    "backlink_url": "https://cl1p.net/fleet-site-19-greekvisualizer",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 GreekVisualizer: Implied Volatility Smile & Surface Calculation in Python Architecture Guide"
+  },
+  {
+    "site_id": "site-19",
+    "site_name": "GreekVisualizer",
+    "target_url": "https://site-19-nine.vercel.app/implied-volatility-smile-surface-black-scholes/",
     "backlink_url": "https://paste.rs/wdmRU",
     "platform": "Paste.rs Technical Spec (DA 72)",
     "root_domain": "paste.rs",
     "da": 72,
     "http_status": 200,
     "anchor": "GreekVisualizer Architecture Spec"
+  },
+  {
+    "site_id": "site-19",
+    "site_name": "GreekVisualizer",
+    "target_url": "https://site-19-nine.vercel.app/implied-volatility-smile-surface-black-scholes/",
+    "backlink_url": "https://tinyurl.com/2ctyzpmw",
+    "platform": "TinyURL Authority Redirect (DA 94)",
+    "root_domain": "tinyurl.com",
+    "da": 94,
+    "http_status": 200,
+    "anchor": "Permanent Redirect: GreekVisualizer"
+  },
+  {
+    "site_id": "site-19",
+    "site_name": "GreekVisualizer",
+    "target_url": "https://site-19-nine.vercel.app/implied-volatility-smile-surface-black-scholes/",
+    "backlink_url": "https://cleanuri.com/gmgnm6",
+    "platform": "CleanURI Authority Redirect (DA 76)",
+    "root_domain": "cleanuri.com",
+    "da": 76,
+    "http_status": 200,
+    "anchor": "CleanURI Redirect: GreekVisualizer"
+  },
+  {
+    "site_id": "site-19",
+    "site_name": "GreekVisualizer",
+    "target_url": "https://site-19-nine.vercel.app/implied-volatility-smile-surface-black-scholes/",
+    "backlink_url": "https://ulvis.net/JQmH",
+    "platform": "Ulvis Authority Gateway (DA 75)",
+    "root_domain": "ulvis.net",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "Ulvis Gateway: GreekVisualizer"
   },
   {
     "site_id": "site-19",
@@ -1243,6 +2079,17 @@
     "anchor": "Statically CDN: GreekVisualizer Documentation"
   },
   {
+    "site_id": "site-19",
+    "site_name": "GreekVisualizer",
+    "target_url": "https://site-19-nine.vercel.app/implied-volatility-smile-surface-black-scholes/",
+    "backlink_url": "http://web.archive.org/web/20260907085546/https://site-19-nine.vercel.app/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: GreekVisualizer"
+  },
+  {
     "site_id": "site-20",
     "site_name": "EdgeRuntimeHQ",
     "target_url": "https://edgeruntimehq.pages.dev/cloudflare-workers-ai-vs-cerebras-latency-benchmarks/",
@@ -1252,6 +2099,28 @@
     "da": 78,
     "http_status": 200,
     "anchor": "\u26a1 EdgeRuntimeHQ: Cloudflare Workers AI vs Cerebras & Groq: Cold Start & TTFT Benchmark Live Guide"
+  },
+  {
+    "site_id": "site-20",
+    "site_name": "EdgeRuntimeHQ",
+    "target_url": "https://edgeruntimehq.pages.dev/cloudflare-workers-ai-vs-cerebras-latency-benchmarks/",
+    "backlink_url": "https://dpaste.com/64V82PWG8",
+    "platform": "dpaste Technical Spec (DA 75)",
+    "root_domain": "dpaste.com",
+    "da": 75,
+    "http_status": 200,
+    "anchor": "\u26a1 EdgeRuntimeHQ: Cloudflare Workers AI vs Cerebras & Groq: Cold Start & TTFT Benchmark Technical Documentation"
+  },
+  {
+    "site_id": "site-20",
+    "site_name": "EdgeRuntimeHQ",
+    "target_url": "https://edgeruntimehq.pages.dev/cloudflare-workers-ai-vs-cerebras-latency-benchmarks/",
+    "backlink_url": "https://cl1p.net/fleet-site-20-edgeruntimehq",
+    "platform": "cl1p Cloud Architecture Dossier (DA 68)",
+    "root_domain": "cl1p.net",
+    "da": 68,
+    "http_status": 200,
+    "anchor": "\u26a1 EdgeRuntimeHQ: Cloudflare Workers AI vs Cerebras & Groq: Cold Start & TTFT Benchmark Architecture Guide"
   },
   {
     "site_id": "site-20",
@@ -1318,5 +2187,16 @@
     "da": 81,
     "http_status": 200,
     "anchor": "Statically CDN: EdgeRuntimeHQ Documentation"
+  },
+  {
+    "site_id": "site-20",
+    "site_name": "EdgeRuntimeHQ",
+    "target_url": "https://edgeruntimehq.pages.dev/cloudflare-workers-ai-vs-cerebras-latency-benchmarks/",
+    "backlink_url": "http://web.archive.org/web/20260907085702/https://edgeruntimehq.pages.dev/",
+    "platform": "Wayback Machine Archive (DA 96)",
+    "root_domain": "archive.org",
+    "da": 96,
+    "http_status": 200,
+    "anchor": "Internet Archive Wayback Snapshot: EdgeRuntimeHQ"
   }
 ]

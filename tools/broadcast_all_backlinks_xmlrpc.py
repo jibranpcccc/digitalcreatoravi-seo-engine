@@ -66,7 +66,7 @@ def main():
     print("==========================================================================\n")
 
     targets = [b for b in all_backlinks if any(t.lower() in b.get("Platform Tier", "").lower() for t in [
-        "github", "raw cdn", "google colab", "rentry", "paste.rs", "tinyurl", "cleanuri", "ulvis", "jsdelivr", "statically", "wayback"
+        "github", "raw cdn", "google colab", "rentry", "dpaste", "cl1p", "paste.rs", "tinyurl", "cleanuri", "ulvis", "jsdelivr", "statically", "wayback"
     ])]
 
     print(f"Selected {len(targets)} authority backlink targets for concurrent broadcast...", flush=True)

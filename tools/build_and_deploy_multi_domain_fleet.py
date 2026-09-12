@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """
 Multi-Domain Authority Backlink Generator & Verifier for All 20 Fleet Sites.
-Deploys verified backlinks across 8 completely unique external root domains (DA 72 to DA 96):
+Deploys verified backlinks across 10 completely unique external root domains (DA 68 to DA 96):
 1. rentry.co (DA 78) - Markdown Publishing & Technical Guides
-2. paste.rs (DA 72) - Rust Web/Raw Technical Paste Platform
-3. tinyurl.com (DA 94) - High-Authority Permanent 301 Redirects
-4. cleanuri.com (DA 76) - Fast Cloudflare-Protected Authority Redirects
-5. ulvis.net (DA 75) - RESTful Authority Redirect Gateway
-6. jsdelivr.net (DA 92) - Global Open CDN Network (Fastly + Cloudflare)
-7. statically.io (DA 81) - Multi-CDN Cloudflare/Fastly Developer Hub
-8. archive.org (DA 96) - Wayback Machine Permanent Web Archives
+2. dpaste.com (DA 75) - High-Performance Markdown & Code Snippet Platform
+3. cl1p.net (DA 68) - Fast Internet Clipboard Architecture Guides
+4. paste.rs (DA 72) - Rust Web/Raw Technical Paste Platform
+5. tinyurl.com (DA 94) - High-Authority Permanent 301 Redirects
+6. cleanuri.com (DA 76) - Fast Cloudflare-Protected Authority Redirects
+7. ulvis.net (DA 75) - RESTful Authority Redirect Gateway
+8. jsdelivr.net (DA 92) - Global Open CDN Network (Fastly + Cloudflare)
+9. statically.io (DA 81) - Multi-CDN Cloudflare/Fastly Developer Hub
+10. archive.org (DA 96) - Wayback Machine Permanent Web Archives
 """
 
 import os
@@ -256,44 +258,117 @@ Verified live engineering documentation: {site['target_url']}
         print(f"    [!] paste.rs error for {site['site_id']}: {e}")
     return None, 0, 72
 
+def create_dpaste_backlink(site):
+    content = f"""# {site['name']}: {site['topic']}
+Target Production Engine: {site['target_url']}
+
+> {site['desc']}
+
+⚡ Verified Production Architecture & Documentation:
+{site['target_url']}
+
+- Reference ID: {site['site_id']}
+- Platform: {site['name']}
+- Canonical URL: {site['target_url']}
+"""
+    for attempt in range(3):
+        try:
+            data = urllib.parse.urlencode({'content': content}).encode('utf-8')
+            req = urllib.request.Request(
+                'https://dpaste.com/api/',
+                data=data,
+                headers={'User-Agent': USER_AGENT}
+            )
+            with urllib.request.urlopen(req, timeout=12) as res:
+                url = res.read().decode('utf-8').strip()
+                if url.startswith('http'):
+                    return url, 200, 75
+        except Exception as e:
+            if attempt < 2:
+                time.sleep(1.0)
+            else:
+                print(f"    [!] dpaste.com error for {site['site_id']}: {e}")
+    return None, 0, 75
+
+def create_cl1p_backlink(site):
+    slug = f"fleet-{site['site_id']}-{site['name'].lower()}"
+    url = f"https://cl1p.net/{slug}"
+    content = f"""# {site['name']}: {site['topic']}
+Target URL: {site['target_url']}
+
+{site['desc']}
+
+Verified Production Engineering Guide & Architecture:
+{site['target_url']}
+"""
+    for attempt in range(3):
+        try:
+            data = urllib.parse.urlencode({'content': content}).encode('utf-8')
+            req = urllib.request.Request(
+                url,
+                data=data,
+                headers={'User-Agent': USER_AGENT}
+            )
+            with urllib.request.urlopen(req, timeout=12) as res:
+                if res.status in (200, 201):
+                    return url, 200, 68
+        except Exception as e:
+            if attempt < 2:
+                time.sleep(1.0)
+            else:
+                print(f"    [!] cl1p.net error for {site['site_id']}: {e}")
+    return None, 0, 68
+
 def create_tinyurl_backlink(site):
-    try:
-        api_url = f"https://tinyurl.com/api-create.php?url={urllib.parse.quote(site['target_url'])}"
-        req = urllib.request.Request(api_url, headers={'User-Agent': USER_AGENT})
-        with urllib.request.urlopen(req, timeout=12) as res:
-            short_url = res.read().decode('utf-8').strip()
-            if short_url.startswith('http'):
-                return short_url, 200, 94
-    except Exception as e:
-        print(f"    [!] tinyurl error for {site['site_id']}: {e}")
+    for attempt in range(3):
+        try:
+            api_url = f"https://tinyurl.com/api-create.php?url={urllib.parse.quote(site['target_url'])}"
+            req = urllib.request.Request(api_url, headers={'User-Agent': USER_AGENT})
+            with urllib.request.urlopen(req, timeout=12) as res:
+                short_url = res.read().decode('utf-8').strip()
+                if short_url.startswith('http'):
+                    return short_url, 200, 94
+        except Exception as e:
+            if attempt < 2:
+                time.sleep(1.0)
+            else:
+                print(f"    [!] tinyurl error for {site['site_id']}: {e}")
     return None, 0, 94
 
 def create_cleanuri_backlink(site):
-    try:
-        data = urllib.parse.urlencode({'url': site['target_url']}).encode('utf-8')
-        req = urllib.request.Request(
-            'https://cleanuri.com/api/v1/shorten',
-            data=data,
-            headers={'User-Agent': USER_AGENT}
-        )
-        with urllib.request.urlopen(req, timeout=12) as res:
-            resp = json.loads(res.read().decode('utf-8'))
-            if resp.get('result_url'):
-                return resp['result_url'], 200, 76
-    except Exception as e:
-        print(f"    [!] cleanuri error for {site['site_id']}: {e}")
+    for attempt in range(3):
+        try:
+            data = urllib.parse.urlencode({'url': site['target_url']}).encode('utf-8')
+            req = urllib.request.Request(
+                'https://cleanuri.com/api/v1/shorten',
+                data=data,
+                headers={'User-Agent': USER_AGENT}
+            )
+            with urllib.request.urlopen(req, timeout=12) as res:
+                resp = json.loads(res.read().decode('utf-8'))
+                if resp.get('result_url'):
+                    return resp['result_url'], 200, 76
+        except Exception as e:
+            if attempt < 2:
+                time.sleep(1.0)
+            else:
+                print(f"    [!] cleanuri error for {site['site_id']}: {e}")
     return None, 0, 76
 
 def create_ulvis_backlink(site):
-    try:
-        api_url = f"https://ulvis.net/API/write/get?url={urllib.parse.quote(site['target_url'])}&type=json"
-        req = urllib.request.Request(api_url, headers={'User-Agent': USER_AGENT})
-        with urllib.request.urlopen(req, timeout=12) as res:
-            resp = json.loads(res.read().decode('utf-8'))
-            if resp.get('success') and resp.get('data', {}).get('url'):
-                return resp['data']['url'], 200, 75
-    except Exception as e:
-        print(f"    [!] ulvis error for {site['site_id']}: {e}")
+    for attempt in range(3):
+        try:
+            api_url = f"https://ulvis.net/API/write/get?url={urllib.parse.quote(site['target_url'])}&type=json"
+            req = urllib.request.Request(api_url, headers={'User-Agent': USER_AGENT})
+            with urllib.request.urlopen(req, timeout=12) as res:
+                resp = json.loads(res.read().decode('utf-8'))
+                if resp.get('success') and resp.get('data', {}).get('url'):
+                    return resp['data']['url'], 200, 75
+        except Exception as e:
+            if attempt < 2:
+                time.sleep(1.0)
+            else:
+                print(f"    [!] ulvis error for {site['site_id']}: {e}")
     return None, 0, 75
 
 def get_jsdelivr_backlink(site):
@@ -319,14 +394,25 @@ def get_statically_backlink(site):
     return None, 0, 81
 
 def get_wayback_backlink(site):
+    wayback_file = os.path.join(DATA_DIR, "wayback_snapshots.json")
+    if os.path.exists(wayback_file):
+        try:
+            with open(wayback_file, "r", encoding="utf-8") as f:
+                snaps = json.load(f)
+                for s in snaps:
+                    if s.get("site_id") == site["site_id"] and s.get("archive_url"):
+                        return s["archive_url"], 200, 96
+        except Exception:
+            pass
     url = f"https://web.archive.org/web/{site['target_url']}"
     return url, 200, 96
 
 def main():
     print("==========================================================================")
     print("BUILDING MULTI-DOMAIN BACKLINK FLEET FOR ALL 20 SITES")
-    print("Distinct Root Domains: rentry.co, paste.rs, tinyurl.com, cleanuri.com,")
-    print("                      ulvis.net, jsdelivr.net, statically.io, archive.org")
+    print("Distinct Root Domains: rentry.co, dpaste.com, cl1p.net, paste.rs,")
+    print("                      tinyurl.com, cleanuri.com, ulvis.net, jsdelivr.net,")
+    print("                      statically.io, archive.org")
     print("==========================================================================\n")
 
     cache = load_existing_cache()
@@ -361,7 +447,55 @@ def main():
                 cache[k] = item
             time.sleep(0.4)
 
-        # 2. Paste.rs (DA 72)
+        # 2. dpaste.com (DA 75)
+        k = (sid, "dpaste.com")
+        if k in cache:
+            results.append(cache[k])
+            print(f"  [✓ cached] dpaste.com (DA 75) -> {cache[k]['backlink_url']}")
+        else:
+            dp_url, dp_st, dp_da = create_dpaste_backlink(site)
+            if dp_url:
+                print(f"  [✓ created] dpaste.com (DA {dp_da}) -> {dp_url}")
+                item = {
+                    "site_id": sid,
+                    "site_name": sname,
+                    "target_url": site["target_url"],
+                    "backlink_url": dp_url,
+                    "platform": f"dpaste Technical Spec (DA {dp_da})",
+                    "root_domain": "dpaste.com",
+                    "da": dp_da,
+                    "http_status": dp_st,
+                    "anchor": f"⚡ {sname}: {site['topic']} Technical Documentation"
+                }
+                results.append(item)
+                cache[k] = item
+            time.sleep(0.5)
+
+        # 3. cl1p.net (DA 68)
+        k = (sid, "cl1p.net")
+        if k in cache:
+            results.append(cache[k])
+            print(f"  [✓ cached] cl1p.net (DA 68) -> {cache[k]['backlink_url']}")
+        else:
+            cl_url, cl_st, cl_da = create_cl1p_backlink(site)
+            if cl_url:
+                print(f"  [✓ created] cl1p.net (DA {cl_da}) -> {cl_url}")
+                item = {
+                    "site_id": sid,
+                    "site_name": sname,
+                    "target_url": site["target_url"],
+                    "backlink_url": cl_url,
+                    "platform": f"cl1p Cloud Architecture Dossier (DA {cl_da})",
+                    "root_domain": "cl1p.net",
+                    "da": cl_da,
+                    "http_status": cl_st,
+                    "anchor": f"⚡ {sname}: {site['topic']} Architecture Guide"
+                }
+                results.append(item)
+                cache[k] = item
+            time.sleep(0.4)
+
+        # 4. Paste.rs (DA 72)
         k = (sid, "paste.rs")
         if k in cache:
             results.append(cache[k])
@@ -385,7 +519,7 @@ def main():
                 cache[k] = item
             time.sleep(0.4)
 
-        # 3. TinyURL.com (DA 94)
+        # 5. TinyURL.com (DA 94)
         k = (sid, "tinyurl.com")
         if k in cache:
             results.append(cache[k])
@@ -409,7 +543,7 @@ def main():
                 cache[k] = item
             time.sleep(0.4)
 
-        # 4. CleanURI.com (DA 76)
+        # 6. CleanURI.com (DA 76)
         k = (sid, "cleanuri.com")
         if k in cache:
             results.append(cache[k])
@@ -433,7 +567,7 @@ def main():
                 cache[k] = item
             time.sleep(0.4)
 
-        # 5. Ulvis.net (DA 75)
+        # 7. Ulvis.net (DA 75)
         k = (sid, "ulvis.net")
         if k in cache:
             results.append(cache[k])
@@ -457,7 +591,7 @@ def main():
                 cache[k] = item
             time.sleep(0.4)
 
-        # 6. jsDelivr (DA 92)
+        # 8. jsDelivr (DA 92)
         k = (sid, "jsdelivr.net")
         if k in cache:
             results.append(cache[k])
@@ -480,7 +614,7 @@ def main():
                 results.append(item)
                 cache[k] = item
 
-        # 7. Statically (DA 81)
+        # 9. Statically (DA 81)
         k = (sid, "statically.io")
         if k in cache:
             results.append(cache[k])
@@ -503,7 +637,7 @@ def main():
                 results.append(item)
                 cache[k] = item
 
-        # 8. Archive.org / Wayback (DA 96)
+        # 10. Archive.org / Wayback (DA 96)
         k = (sid, "archive.org")
         if k in cache:
             results.append(cache[k])
