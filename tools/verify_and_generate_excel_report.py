@@ -450,6 +450,27 @@ def build_all_backlinks_catalog():
             "anchor": f"⚡ Production Code & Architecture: {s['name']}"
         })
 
+    # 19. 10 Dedicated Public GitHub Gists - Wave 4 (Older Sites 1-10) (DA 96) [NEW WAVE 4]
+    wave4_file = os.path.join(DATA_DIR, "wave4_gists.json")
+    if os.path.exists(wave4_file):
+        with open(wave4_file, "r", encoding="utf-8") as f:
+            wave4_gists = json.load(f)
+    else:
+        wave4_gists = []
+
+    for g in wave4_gists:
+        s = site_map[g["site_id"]]
+        catalog.append({
+            "site_id": g["site_id"],
+            "site_name": s["name"],
+            "target_url": g.get("target_url", s["url"]),
+            "backlink_url": g["url"],
+            "platform": "GitHub Gist Wave 4 (DA 96)",
+            "link_type": "Deep Guide Runnable Snippet & Technical Documentation",
+            "da": 96,
+            "anchor": f"⚡ Production Code & Benchmarks: {s['name']}"
+        })
+
     return catalog
 
 def probe_all_backlinks(catalog):

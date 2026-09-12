@@ -1,0 +1,92 @@
+[
+  {
+    "site_id": "site-1",
+    "site_name": "LocalAgentStack",
+    "target_url": "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-multi-gpu-tensor-parallel-docker/",
+    "title": "vLLM Multi-GPU Tensor-Parallel Docker Compose Production Blueprint",
+    "url": "https://gist.github.com/jibranpcccc/beebb64abf02a2d92e2d087565b245d1",
+    "filename": "vllm_tensor_parallel_docker.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-2",
+    "site_name": "WorkationRadar",
+    "target_url": "https://jibranpcccc.github.io/workationradar/split-croatia-coliving-guide/",
+    "title": "Split Croatia Digital Nomad Coliving & Symmetric Fiber Speed Matrix 2026",
+    "url": "https://gist.github.com/jibranpcccc/4bc53061818975b53f95fcb79bad77f0",
+    "filename": "split_croatia_coliving_metrics.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-3",
+    "site_name": "OpenAgentStack",
+    "target_url": "https://openagentstack.pages.dev/frameworks/langgraph-vs-crewai-vs-autogen-multi-agent-benchmark-2026/",
+    "title": "Multi-Agent Orchestration Benchmark: LangGraph vs CrewAI vs AutoGen Execution Latency",
+    "url": "https://gist.github.com/jibranpcccc/3d58f77bf0a30c9282db29c6838a13ff",
+    "filename": "multi_agent_execution_benchmark.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-4",
+    "site_name": "IndieStackAudit",
+    "target_url": "https://indiestackaudit.pages.dev/billing/stripe-vs-lemonsqueezy-vs-polar-saas-fee-calculator-2026/",
+    "title": "Stripe vs Lemon Squeezy vs Polar: Merchant of Record (MoR) Net Revenue Calculator",
+    "url": "https://gist.github.com/jibranpcccc/f1a9f03a7ac4186db76154f887db47ec",
+    "filename": "saas_mor_payout_calculator.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-5",
+    "site_name": "VectorBench",
+    "target_url": "https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/",
+    "title": "Embedded Vector DB Benchmark: Chroma vs LanceDB on Apple Silicon M-Series",
+    "url": "https://gist.github.com/jibranpcccc/0f4ed1059317622a848d40dbb2a7836a",
+    "filename": "chroma_vs_lancedb_benchmark.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-6",
+    "site_name": "NomadTreaty",
+    "target_url": "https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/",
+    "title": "Spain Beckham Law 24% Flat Tax vs Standard IRPF Progressive Scale Sizer",
+    "url": "https://gist.github.com/jibranpcccc/3da95b20b1ef514f995f3105003c76f4",
+    "filename": "spain_beckham_law_tax_calculator.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-7",
+    "site_name": "WebhookWatch",
+    "target_url": "https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/",
+    "title": "AWS SQS Dead-Letter Queue (DLQ) & Exponential Jitter Retries for SaaS Webhooks",
+    "url": "https://gist.github.com/jibranpcccc/b7d0683be4cc41eedb14c0f1cbf47f99",
+    "filename": "sqs_webhook_dlq_backoff.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-8",
+    "site_name": "LocalDocPrivacy",
+    "target_url": "https://localdocprivacy.netlify.app/in-browser-ocr-tesseract-wasm-guide/",
+    "title": "Tesseract.js WASM In-Browser OCR: Zero-Server Privacy-Preserving Extraction",
+    "url": "https://gist.github.com/jibranpcccc/e4eed350fca6e2bee62cf8e9b9e1b04f",
+    "filename": "tesseract_wasm_ocr_pipeline.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-9",
+    "site_name": "FounderRunway",
+    "target_url": "https://site-9-inky.vercel.app/top-latin-america-tech-hubs-for-bootstrappers/",
+    "title": "Top Latin America Tech Hubs for Bootstrappers: Cost, Safety & Runway Index",
+    "url": "https://gist.github.com/jibranpcccc/6d9098d38bb8b61710cfd07417efcb7f",
+    "filename": "latam_founder_runway_index.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-10",
+    "site_name": "RAGInspect",
+    "target_url": "https://raginspect.pages.dev/colpali-vs-bge-m3-multimodal-rag-benchmark/",
+    "title": "ColPali vs BGE-M3 Multimodal RAG Benchmark: Visual Document Retrieval Precision",
+    "url": "https://gist.github.com/jibranpcccc/071ad479bb07c93922b2883c7871707b",
+    "filename": "colpali_vs_bge_m3_evaluator.py",
+    "http_status": 200
+  }
+]
