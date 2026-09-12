@@ -1,37 +1,11 @@
 [
   {
     "brand": "Fleet Master (All 20 Sites)",
-    "url": "https://github.com/jibranpcccc",
-    "tier": "GitHub Profile (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "Fleet Master (All 20 Sites)",
-    "url": "https://github.com/jibranpcccc/digitalcreatoravi-seo-engine",
-    "tier": "GitHub Monorepo (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "Fleet Master (All 20 Sites)",
     "url": "https://jibranpcccc.github.io/tools.html",
     "tier": "GitHub Pages (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog already checked recently."
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -52,51 +26,12 @@
     }
   },
   {
-    "brand": "Fleet Master (All 20 Sites)",
-    "url": "https://jibranpcccc.github.io/api/v1/tools.json",
-    "tier": "GitHub Pages API (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "Fleet Master (All 20 Sites)",
-    "url": "https://jibranpcccc.github.io/sitemap-tools.xml",
-    "tier": "GitHub Pages Sitemap (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "LocalAgentStack",
-    "url": "https://github.com/jibranpcccc/local-agent-hardware-stack",
-    "tier": "GitHub Repository (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
     "brand": "WorkationRadar",
     "url": "https://github.com/jibranpcccc/workation-coliving-radar",
     "tier": "GitHub Repository (DA 96)",
     "blogs": {
-      "success": true,
-      "msg": "Succeeded."
+      "success": false,
+      "msg": "<ProtocolError for ping.blo.gs/: 429 Too Many Requests>"
     },
     "twingly": {
       "success": true,
@@ -104,47 +39,8 @@
     }
   },
   {
-    "brand": "OpenAgentStack",
-    "url": "https://github.com/jibranpcccc/open-agent-protocol-hub",
-    "tier": "GitHub Repository (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "IndieStackAudit",
-    "url": "https://github.com/jibranpcccc/indie-saas-stack-audit",
-    "tier": "GitHub Repository (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "VectorBench",
-    "url": "https://github.com/jibranpcccc/vector-database-benchmarks",
-    "tier": "GitHub Repository (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "NomadTreaty",
-    "url": "https://github.com/jibranpcccc/nomad-tax-treaty-calculator",
+    "brand": "GrokLogTester",
+    "url": "https://github.com/jibranpcccc/nginx-grok-log-tester",
     "tier": "GitHub Repository (DA 96)",
     "blogs": {
       "success": true,
@@ -169,47 +65,8 @@
     }
   },
   {
-    "brand": "LocalDocPrivacy",
-    "url": "https://github.com/jibranpcccc/local-pdf-privacy-redactor",
-    "tier": "GitHub Repository (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "FounderRunway",
-    "url": "https://github.com/jibranpcccc/founder-runway-calculator",
-    "tier": "GitHub Repository (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "RAGInspect",
-    "url": "https://github.com/jibranpcccc/rag-semantic-chunking-bench",
-    "tier": "GitHub Repository (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "NomadPassportIndex",
-    "url": "https://github.com/jibranpcccc/nomad-passport-visa-index",
+    "brand": "LocalAgentStack",
+    "url": "https://github.com/jibranpcccc/local-agent-hardware-stack",
     "tier": "GitHub Repository (DA 96)",
     "blogs": {
       "success": true,
@@ -234,8 +91,60 @@
     }
   },
   {
-    "brand": "GrokLogTester",
-    "url": "https://github.com/jibranpcccc/nginx-grok-log-tester",
+    "brand": "RAGInspect",
+    "url": "https://github.com/jibranpcccc/rag-semantic-chunking-bench",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenAgentStack",
+    "url": "https://github.com/jibranpcccc/open-agent-protocol-hub",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "Fleet Master (All 20 Sites)",
+    "url": "https://jibranpcccc.github.io/sitemap-tools.xml",
+    "tier": "GitHub Pages Sitemap (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://github.com/jibranpcccc/nomad-passport-visa-index",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://github.com/jibranpcccc/nomad-tax-treaty-calculator",
     "tier": "GitHub Repository (DA 96)",
     "blogs": {
       "success": true,
@@ -260,8 +169,21 @@
     }
   },
   {
-    "brand": "EORCalculator",
-    "url": "https://github.com/jibranpcccc/global-eor-payroll-calculator",
+    "brand": "Fleet Master (All 20 Sites)",
+    "url": "https://github.com/jibranpcccc",
+    "tier": "GitHub Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FounderRunway",
+    "url": "https://github.com/jibranpcccc/founder-runway-calculator",
     "tier": "GitHub Repository (DA 96)",
     "blogs": {
       "success": true,
@@ -273,8 +195,73 @@
     }
   },
   {
-    "brand": "DevConfigHub",
-    "url": "https://github.com/jibranpcccc/devcontainer-docker-generator",
+    "brand": "Fleet Master (All 20 Sites)",
+    "url": "https://jibranpcccc.github.io/api/v1/tools.json",
+    "tier": "GitHub Pages API (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "Fleet Master (All 20 Sites)",
+    "url": "https://github.com/jibranpcccc/digitalcreatoravi-seo-engine",
+    "tier": "GitHub Monorepo (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://github.com/jibranpcccc/indie-saas-stack-audit",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
+    "url": "https://github.com/jibranpcccc/local-pdf-privacy-redactor",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "VectorBench",
+    "url": "https://github.com/jibranpcccc/vector-database-benchmarks",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EORCalculator",
+    "url": "https://github.com/jibranpcccc/global-eor-payroll-calculator",
     "tier": "GitHub Repository (DA 96)",
     "blogs": {
       "success": true,
@@ -299,6 +286,19 @@
     }
   },
   {
+    "brand": "GreekVisualizer",
+    "url": "https://github.com/jibranpcccc/options-greeks-visualizer",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "CIPipelineGraph",
     "url": "https://github.com/jibranpcccc/github-actions-dag-validator",
     "tier": "GitHub Repository (DA 96)",
@@ -312,8 +312,99 @@
     }
   },
   {
-    "brand": "GreekVisualizer",
-    "url": "https://github.com/jibranpcccc/options-greeks-visualizer",
+    "brand": "APIGatewayMatrix",
+    "url": "https://github.com/jibranpcccc/api-gateway-latency-benchmarks",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenTelemetryLab",
+    "url": "https://github.com/jibranpcccc/opentelemetry-tail-sampling-collector",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PromptEvalHQ",
+    "url": "https://github.com/jibranpcccc/llm-eval-promptfoo-benchmark",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "QueueCost",
+    "url": "https://github.com/jibranpcccc/task-queue-memory-benchmark",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DevConfigHub",
+    "url": "https://github.com/jibranpcccc/devcontainer-docker-generator",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "S3EgressAudit",
+    "url": "https://github.com/jibranpcccc/s3-zero-egress-cost-audit",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "AuthTokenAudit",
+    "url": "https://github.com/jibranpcccc/jwt-paseto-token-security-matrix",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PostgresScale",
+    "url": "https://github.com/jibranpcccc/postgres-autovacuum-index-tuner",
     "tier": "GitHub Repository (DA 96)",
     "blogs": {
       "success": true,
@@ -338,9 +429,9 @@
     }
   },
   {
-    "brand": "LocalAgentStack",
-    "url": "https://github.com/jibranpcccc/local-agent-hardware-stack/releases/tag/v1.0.0",
-    "tier": "GitHub Release v1.0 (DA 96)",
+    "brand": "DNSPerfHQ",
+    "url": "https://github.com/jibranpcccc/anycast-dns-latency-benchmarks",
+    "tier": "GitHub Repository (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."
@@ -351,9 +442,22 @@
     }
   },
   {
-    "brand": "WorkationRadar",
-    "url": "https://github.com/jibranpcccc/workation-coliving-radar/releases/tag/v1.0.0",
-    "tier": "GitHub Release v1.0 (DA 96)",
+    "brand": "TinyContainerHQ",
+    "url": "https://github.com/jibranpcccc/minimal-docker-base-image-cve",
+    "tier": "GitHub Repository (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FeatureFlagAudit",
+    "url": "https://github.com/jibranpcccc/feature-flags-openfeature-tco",
+    "tier": "GitHub Repository (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."
@@ -366,6 +470,19 @@
   {
     "brand": "OpenAgentStack",
     "url": "https://github.com/jibranpcccc/open-agent-protocol-hub/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://github.com/jibranpcccc/local-agent-hardware-stack/releases/tag/v1.0.0",
     "tier": "GitHub Release v1.0 (DA 96)",
     "blogs": {
       "success": true,
@@ -390,8 +507,8 @@
     }
   },
   {
-    "brand": "VectorBench",
-    "url": "https://github.com/jibranpcccc/vector-database-benchmarks/releases/tag/v1.0.0",
+    "brand": "WorkationRadar",
+    "url": "https://github.com/jibranpcccc/workation-coliving-radar/releases/tag/v1.0.0",
     "tier": "GitHub Release v1.0 (DA 96)",
     "blogs": {
       "success": true,
@@ -416,47 +533,21 @@
     }
   },
   {
+    "brand": "VectorBench",
+    "url": "https://github.com/jibranpcccc/vector-database-benchmarks/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "WebhookWatch",
     "url": "https://github.com/jibranpcccc/webhook-signature-audit/releases/tag/v1.0.0",
-    "tier": "GitHub Release v1.0 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "LocalDocPrivacy",
-    "url": "https://github.com/jibranpcccc/local-pdf-privacy-redactor/releases/tag/v1.0.0",
-    "tier": "GitHub Release v1.0 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "FounderRunway",
-    "url": "https://github.com/jibranpcccc/founder-runway-calculator/releases/tag/v1.0.0",
-    "tier": "GitHub Release v1.0 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "RAGInspect",
-    "url": "https://github.com/jibranpcccc/rag-semantic-chunking-bench/releases/tag/v1.0.0",
     "tier": "GitHub Release v1.0 (DA 96)",
     "blogs": {
       "success": true,
@@ -494,8 +585,8 @@
     }
   },
   {
-    "brand": "GrokLogTester",
-    "url": "https://github.com/jibranpcccc/nginx-grok-log-tester/releases/tag/v1.0.0",
+    "brand": "LocalDocPrivacy",
+    "url": "https://github.com/jibranpcccc/local-pdf-privacy-redactor/releases/tag/v1.0.0",
     "tier": "GitHub Release v1.0 (DA 96)",
     "blogs": {
       "success": true,
@@ -520,19 +611,6 @@
     }
   },
   {
-    "brand": "EORCalculator",
-    "url": "https://github.com/jibranpcccc/global-eor-payroll-calculator/releases/tag/v1.0.0",
-    "tier": "GitHub Release v1.0 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
     "brand": "DevConfigHub",
     "url": "https://github.com/jibranpcccc/devcontainer-docker-generator/releases/tag/v1.0.0",
     "tier": "GitHub Release v1.0 (DA 96)",
@@ -546,8 +624,86 @@
     }
   },
   {
+    "brand": "EORCalculator",
+    "url": "https://github.com/jibranpcccc/global-eor-payroll-calculator/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://github.com/jibranpcccc/nginx-grok-log-tester/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "OpenCRMStack",
     "url": "https://github.com/jibranpcccc/open-crm-migration-tco/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "RAGInspect",
+    "url": "https://github.com/jibranpcccc/rag-semantic-chunking-bench/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FounderRunway",
+    "url": "https://github.com/jibranpcccc/founder-runway-calculator/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EdgeRuntimeHQ",
+    "url": "https://github.com/jibranpcccc/webgpu-edge-inference-bench/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenTelemetryLab",
+    "url": "https://github.com/jibranpcccc/opentelemetry-tail-sampling-collector/releases/tag/v1.0.0",
     "tier": "GitHub Release v1.0 (DA 96)",
     "blogs": {
       "success": true,
@@ -585,8 +741,8 @@
     }
   },
   {
-    "brand": "EdgeRuntimeHQ",
-    "url": "https://github.com/jibranpcccc/webgpu-edge-inference-bench/releases/tag/v1.0.0",
+    "brand": "PromptEvalHQ",
+    "url": "https://github.com/jibranpcccc/llm-eval-promptfoo-benchmark/releases/tag/v1.0.0",
     "tier": "GitHub Release v1.0 (DA 96)",
     "blogs": {
       "success": true,
@@ -598,8 +754,99 @@
     }
   },
   {
-    "brand": "LocalAgentStack",
-    "url": "https://github.com/jibranpcccc/local-agent-hardware-stack/issues/1",
+    "brand": "PostgresScale",
+    "url": "https://github.com/jibranpcccc/postgres-autovacuum-index-tuner/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "TinyContainerHQ",
+    "url": "https://github.com/jibranpcccc/minimal-docker-base-image-cve/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "QueueCost",
+    "url": "https://github.com/jibranpcccc/task-queue-memory-benchmark/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "S3EgressAudit",
+    "url": "https://github.com/jibranpcccc/s3-zero-egress-cost-audit/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "AuthTokenAudit",
+    "url": "https://github.com/jibranpcccc/jwt-paseto-token-security-matrix/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "APIGatewayMatrix",
+    "url": "https://github.com/jibranpcccc/api-gateway-latency-benchmarks/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FeatureFlagAudit",
+    "url": "https://github.com/jibranpcccc/feature-flags-openfeature-tco/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://github.com/jibranpcccc/nomad-tax-treaty-calculator/issues/1",
     "tier": "GitHub Issue #1 (DA 96)",
     "blogs": {
       "success": true,
@@ -637,35 +884,9 @@
     }
   },
   {
-    "brand": "IndieStackAudit",
-    "url": "https://github.com/jibranpcccc/indie-saas-stack-audit/issues/1",
-    "tier": "GitHub Issue #1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "VectorBench",
-    "url": "https://github.com/jibranpcccc/vector-database-benchmarks/issues/1",
-    "tier": "GitHub Issue #1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "NomadTreaty",
-    "url": "https://github.com/jibranpcccc/nomad-tax-treaty-calculator/issues/1",
-    "tier": "GitHub Issue #1 (DA 96)",
+    "brand": "DNSPerfHQ",
+    "url": "https://github.com/jibranpcccc/anycast-dns-latency-benchmarks/releases/tag/v1.0.0",
+    "tier": "GitHub Release v1.0 (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."
@@ -678,6 +899,19 @@
   {
     "brand": "WebhookWatch",
     "url": "https://github.com/jibranpcccc/webhook-signature-audit/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://github.com/jibranpcccc/local-agent-hardware-stack/issues/1",
     "tier": "GitHub Issue #1 (DA 96)",
     "blogs": {
       "success": true,
@@ -702,32 +936,6 @@
     }
   },
   {
-    "brand": "FounderRunway",
-    "url": "https://github.com/jibranpcccc/founder-runway-calculator/issues/1",
-    "tier": "GitHub Issue #1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "RAGInspect",
-    "url": "https://github.com/jibranpcccc/rag-semantic-chunking-bench/issues/1",
-    "tier": "GitHub Issue #1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
     "brand": "NomadPassportIndex",
     "url": "https://github.com/jibranpcccc/nomad-passport-visa-index/issues/1",
     "tier": "GitHub Issue #1 (DA 96)",
@@ -741,8 +949,34 @@
     }
   },
   {
-    "brand": "SaaSUnitMath",
-    "url": "https://github.com/jibranpcccc/saas-unit-economics-calculator/issues/1",
+    "brand": "VectorBench",
+    "url": "https://github.com/jibranpcccc/vector-database-benchmarks/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://github.com/jibranpcccc/indie-saas-stack-audit/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FounderRunway",
+    "url": "https://github.com/jibranpcccc/founder-runway-calculator/issues/1",
     "tier": "GitHub Issue #1 (DA 96)",
     "blogs": {
       "success": true,
@@ -780,6 +1014,58 @@
     }
   },
   {
+    "brand": "CIPipelineGraph",
+    "url": "https://github.com/jibranpcccc/github-actions-dag-validator/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenCRMStack",
+    "url": "https://github.com/jibranpcccc/open-crm-migration-tco/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SaaSUnitMath",
+    "url": "https://github.com/jibranpcccc/saas-unit-economics-calculator/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "RAGInspect",
+    "url": "https://github.com/jibranpcccc/rag-semantic-chunking-bench/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "EORCalculator",
     "url": "https://github.com/jibranpcccc/global-eor-payroll-calculator/issues/1",
     "tier": "GitHub Issue #1 (DA 96)",
@@ -806,34 +1092,73 @@
     }
   },
   {
-    "brand": "OpenCRMStack",
-    "url": "https://github.com/jibranpcccc/open-crm-migration-tco/issues/1",
-    "tier": "GitHub Issue #1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "CIPipelineGraph",
-    "url": "https://github.com/jibranpcccc/github-actions-dag-validator/issues/1",
-    "tier": "GitHub Issue #1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
     "brand": "GreekVisualizer",
     "url": "https://github.com/jibranpcccc/options-greeks-visualizer/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PromptEvalHQ",
+    "url": "https://github.com/jibranpcccc/llm-eval-promptfoo-benchmark/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "QueueCost",
+    "url": "https://github.com/jibranpcccc/task-queue-memory-benchmark/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenTelemetryLab",
+    "url": "https://github.com/jibranpcccc/opentelemetry-tail-sampling-collector/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "S3EgressAudit",
+    "url": "https://github.com/jibranpcccc/s3-zero-egress-cost-audit/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "APIGatewayMatrix",
+    "url": "https://github.com/jibranpcccc/api-gateway-latency-benchmarks/issues/1",
     "tier": "GitHub Issue #1 (DA 96)",
     "blogs": {
       "success": true,
@@ -858,6 +1183,45 @@
     }
   },
   {
+    "brand": "PostgresScale",
+    "url": "https://github.com/jibranpcccc/postgres-autovacuum-index-tuner/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "AuthTokenAudit",
+    "url": "https://github.com/jibranpcccc/jwt-paseto-token-security-matrix/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DNSPerfHQ",
+    "url": "https://github.com/jibranpcccc/anycast-dns-latency-benchmarks/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "LocalAgentStack",
     "url": "https://gist.github.com/jibranpcccc/74dfc5b52a7bec99b7b4b110ad856700",
     "tier": "GitHub Gist Wave 1 (DA 96)",
@@ -871,22 +1235,9 @@
     }
   },
   {
-    "brand": "WorkationRadar",
-    "url": "https://gist.github.com/jibranpcccc/1bcfdd9a4be516b770d6d83830503cf4",
-    "tier": "GitHub Gist Wave 1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "OpenAgentStack",
-    "url": "https://gist.github.com/jibranpcccc/5101ea68840c5e14f98df76da470d5b0",
-    "tier": "GitHub Gist Wave 1 (DA 96)",
+    "brand": "TinyContainerHQ",
+    "url": "https://github.com/jibranpcccc/minimal-docker-base-image-cve/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."
@@ -899,32 +1250,6 @@
   {
     "brand": "IndieStackAudit",
     "url": "https://gist.github.com/jibranpcccc/3b510315581c75a58295e4f66a940a98",
-    "tier": "GitHub Gist Wave 1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "VectorBench",
-    "url": "https://gist.github.com/jibranpcccc/a945da4bada9be6fc0775656c21e3bd8",
-    "tier": "GitHub Gist Wave 1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "NomadTreaty",
-    "url": "https://gist.github.com/jibranpcccc/73685778110a6224a97102e57e641257",
     "tier": "GitHub Gist Wave 1 (DA 96)",
     "blogs": {
       "success": true,
@@ -949,8 +1274,21 @@
     }
   },
   {
-    "brand": "LocalDocPrivacy",
-    "url": "https://gist.github.com/jibranpcccc/cae5acbadda12f1f7f1787849af57fb8",
+    "brand": "FeatureFlagAudit",
+    "url": "https://github.com/jibranpcccc/feature-flags-openfeature-tco/issues/1",
+    "tier": "GitHub Issue #1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://gist.github.com/jibranpcccc/73685778110a6224a97102e57e641257",
     "tier": "GitHub Gist Wave 1 (DA 96)",
     "blogs": {
       "success": true,
@@ -975,8 +1313,47 @@
     }
   },
   {
+    "brand": "WorkationRadar",
+    "url": "https://gist.github.com/jibranpcccc/1bcfdd9a4be516b770d6d83830503cf4",
+    "tier": "GitHub Gist Wave 1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
+    "url": "https://gist.github.com/jibranpcccc/cae5acbadda12f1f7f1787849af57fb8",
+    "tier": "GitHub Gist Wave 1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "RAGInspect",
     "url": "https://gist.github.com/jibranpcccc/da853c8cb9041a17f163626bb2256cb8",
+    "tier": "GitHub Gist Wave 1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "VectorBench",
+    "url": "https://gist.github.com/jibranpcccc/a945da4bada9be6fc0775656c21e3bd8",
     "tier": "GitHub Gist Wave 1 (DA 96)",
     "blogs": {
       "success": true,
@@ -1001,8 +1378,8 @@
     }
   },
   {
-    "brand": "SaaSUnitMath",
-    "url": "https://gist.github.com/jibranpcccc/0ab1d5a5b420edd57b6c0f6041804902",
+    "brand": "OpenAgentStack",
+    "url": "https://gist.github.com/jibranpcccc/5101ea68840c5e14f98df76da470d5b0",
     "tier": "GitHub Gist Wave 1 (DA 96)",
     "blogs": {
       "success": true,
@@ -1027,21 +1404,8 @@
     }
   },
   {
-    "brand": "SOC2Ready",
-    "url": "https://gist.github.com/jibranpcccc/fc626b240a3563aec83e17978a263e00",
-    "tier": "GitHub Gist Wave 1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "EORCalculator",
-    "url": "https://gist.github.com/jibranpcccc/f46a3224d6e085ad5f011c4e6e8e21bc",
+    "brand": "SaaSUnitMath",
+    "url": "https://gist.github.com/jibranpcccc/0ab1d5a5b420edd57b6c0f6041804902",
     "tier": "GitHub Gist Wave 1 (DA 96)",
     "blogs": {
       "success": true,
@@ -1066,8 +1430,8 @@
     }
   },
   {
-    "brand": "OpenCRMStack",
-    "url": "https://gist.github.com/jibranpcccc/166275767db159c1cbd403feb93831a2",
+    "brand": "EORCalculator",
+    "url": "https://gist.github.com/jibranpcccc/f46a3224d6e085ad5f011c4e6e8e21bc",
     "tier": "GitHub Gist Wave 1 (DA 96)",
     "blogs": {
       "success": true,
@@ -1079,9 +1443,9 @@
     }
   },
   {
-    "brand": "CIPipelineGraph",
-    "url": "https://gist.github.com/jibranpcccc/d542e2a15d85e736124b5ddbf8cba684",
-    "tier": "GitHub Gist Wave 1 (DA 96)",
+    "brand": "RAGInspect",
+    "url": "https://jibranpcccc.github.io/tools/site-10-raginspect.html",
+    "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."
@@ -1092,8 +1456,8 @@
     }
   },
   {
-    "brand": "GreekVisualizer",
-    "url": "https://gist.github.com/jibranpcccc/245ba6c022253ae4b7d7c6a24b935976",
+    "brand": "SOC2Ready",
+    "url": "https://gist.github.com/jibranpcccc/fc626b240a3563aec83e17978a263e00",
     "tier": "GitHub Gist Wave 1 (DA 96)",
     "blogs": {
       "success": true,
@@ -1118,12 +1482,25 @@
     }
   },
   {
+    "brand": "OpenCRMStack",
+    "url": "https://gist.github.com/jibranpcccc/166275767db159c1cbd403feb93831a2",
+    "tier": "GitHub Gist Wave 1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "LocalAgentStack",
     "url": "https://jibranpcccc.github.io/tools/site-1-localagentstack.html",
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1131,38 +1508,12 @@
     }
   },
   {
-    "brand": "RAGInspect",
-    "url": "https://jibranpcccc.github.io/tools/site-10-raginspect.html",
-    "tier": "GitHub Pages Profile (DA 96)",
+    "brand": "GreekVisualizer",
+    "url": "https://gist.github.com/jibranpcccc/245ba6c022253ae4b7d7c6a24b935976",
+    "tier": "GitHub Gist Wave 1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "NomadPassportIndex",
-    "url": "https://jibranpcccc.github.io/tools/site-11-nomadpassportindex.html",
-    "tier": "GitHub Pages Profile (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "SaaSUnitMath",
-    "url": "https://jibranpcccc.github.io/tools/site-12-saasunitmath.html",
-    "tier": "GitHub Pages Profile (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1175,7 +1526,7 @@
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1183,12 +1534,25 @@
     }
   },
   {
-    "brand": "SOC2Ready",
-    "url": "https://jibranpcccc.github.io/tools/site-14-soc2ready.html",
+    "brand": "SaaSUnitMath",
+    "url": "https://jibranpcccc.github.io/tools/site-12-saasunitmath.html",
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://jibranpcccc.github.io/tools/site-11-nomadpassportindex.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1201,7 +1565,7 @@
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1209,12 +1573,12 @@
     }
   },
   {
-    "brand": "DevConfigHub",
-    "url": "https://jibranpcccc.github.io/tools/site-16-devconfighub.html",
-    "tier": "GitHub Pages Profile (DA 96)",
+    "brand": "CIPipelineGraph",
+    "url": "https://gist.github.com/jibranpcccc/d542e2a15d85e736124b5ddbf8cba684",
+    "tier": "GitHub Gist Wave 1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1222,12 +1586,12 @@
     }
   },
   {
-    "brand": "OpenCRMStack",
-    "url": "https://jibranpcccc.github.io/tools/site-17-opencrmstack.html",
+    "brand": "SOC2Ready",
+    "url": "https://jibranpcccc.github.io/tools/site-14-soc2ready.html",
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1240,7 +1604,20 @@
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenCRMStack",
+    "url": "https://jibranpcccc.github.io/tools/site-17-opencrmstack.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1253,7 +1630,46 @@
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DevConfigHub",
+    "url": "https://jibranpcccc.github.io/tools/site-16-devconfighub.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PromptEvalHQ",
+    "url": "https://jibranpcccc.github.io/tools/site-21-promptevalhq.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "QueueCost",
+    "url": "https://jibranpcccc.github.io/tools/site-22-queuecost.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1266,7 +1682,7 @@
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1274,12 +1690,12 @@
     }
   },
   {
-    "brand": "EdgeRuntimeHQ",
-    "url": "https://jibranpcccc.github.io/tools/site-20-edgeruntimehq.html",
+    "brand": "OpenTelemetryLab",
+    "url": "https://jibranpcccc.github.io/tools/site-23-opentelemetrylab.html",
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1287,12 +1703,38 @@
     }
   },
   {
-    "brand": "OpenAgentStack",
-    "url": "https://jibranpcccc.github.io/tools/site-3-openagentstack.html",
+    "brand": "APIGatewayMatrix",
+    "url": "https://jibranpcccc.github.io/tools/site-25-apigatewaymatrix.html",
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DNSPerfHQ",
+    "url": "https://jibranpcccc.github.io/tools/site-28-dnsperfhq.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "AuthTokenAudit",
+    "url": "https://jibranpcccc.github.io/tools/site-27-authtokenaudit.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1305,7 +1747,33 @@
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PostgresScale",
+    "url": "https://jibranpcccc.github.io/tools/site-24-postgresscale.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "S3EgressAudit",
+    "url": "https://jibranpcccc.github.io/tools/site-26-s3egressaudit.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1318,7 +1786,7 @@
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1326,12 +1794,12 @@
     }
   },
   {
-    "brand": "NomadTreaty",
-    "url": "https://jibranpcccc.github.io/tools/site-6-nomadtreaty.html",
+    "brand": "TinyContainerHQ",
+    "url": "https://jibranpcccc.github.io/tools/site-30-tinycontainerhq.html",
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1339,12 +1807,12 @@
     }
   },
   {
-    "brand": "WebhookWatch",
-    "url": "https://jibranpcccc.github.io/tools/site-7-webhookwatch.html",
+    "brand": "OpenAgentStack",
+    "url": "https://jibranpcccc.github.io/tools/site-3-openagentstack.html",
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1352,12 +1820,12 @@
     }
   },
   {
-    "brand": "LocalDocPrivacy",
-    "url": "https://jibranpcccc.github.io/tools/site-8-localdocprivacy.html",
+    "brand": "FeatureFlagAudit",
+    "url": "https://jibranpcccc.github.io/tools/site-29-featureflagaudit.html",
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1370,7 +1838,46 @@
     "tier": "GitHub Pages Profile (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WebhookWatch",
+    "url": "https://jibranpcccc.github.io/tools/site-7-webhookwatch.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
+    "url": "https://jibranpcccc.github.io/tools/site-8-localdocprivacy.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://jibranpcccc.github.io/tools/site-6-nomadtreaty.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -1404,8 +1911,34 @@
     }
   },
   {
+    "brand": "EdgeRuntimeHQ",
+    "url": "https://jibranpcccc.github.io/tools/site-20-edgeruntimehq.html",
+    "tier": "GitHub Pages Profile (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "OpenAgentStack",
     "url": "https://raw.githubusercontent.com/jibranpcccc/open-agent-protocol-hub/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/nomad-tax-treaty-calculator/main/README.md",
     "tier": "GitHub Raw CDN Docs (DA 96)",
     "blogs": {
       "success": true,
@@ -1443,8 +1976,8 @@
     }
   },
   {
-    "brand": "NomadTreaty",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/nomad-tax-treaty-calculator/main/README.md",
+    "brand": "LocalDocPrivacy",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/local-pdf-privacy-redactor/main/README.md",
     "tier": "GitHub Raw CDN Docs (DA 96)",
     "blogs": {
       "success": true,
@@ -1458,19 +1991,6 @@
   {
     "brand": "WebhookWatch",
     "url": "https://raw.githubusercontent.com/jibranpcccc/webhook-signature-audit/main/README.md",
-    "tier": "GitHub Raw CDN Docs (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "LocalDocPrivacy",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/local-pdf-privacy-redactor/main/README.md",
     "tier": "GitHub Raw CDN Docs (DA 96)",
     "blogs": {
       "success": true,
@@ -1508,34 +2028,34 @@
     }
   },
   {
-    "brand": "NomadPassportIndex",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/nomad-passport-visa-index/main/README.md",
-    "tier": "GitHub Raw CDN Docs (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "SaaSUnitMath",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/saas-unit-economics-calculator/main/README.md",
-    "tier": "GitHub Raw CDN Docs (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
     "brand": "GrokLogTester",
     "url": "https://raw.githubusercontent.com/jibranpcccc/nginx-grok-log-tester/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenCRMStack",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/open-crm-migration-tco/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/nomad-passport-visa-index/main/README.md",
     "tier": "GitHub Raw CDN Docs (DA 96)",
     "blogs": {
       "success": true,
@@ -1573,47 +2093,8 @@
     }
   },
   {
-    "brand": "DevConfigHub",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/devcontainer-docker-generator/main/README.md",
-    "tier": "GitHub Raw CDN Docs (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "OpenCRMStack",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/open-crm-migration-tco/main/README.md",
-    "tier": "GitHub Raw CDN Docs (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
     "brand": "CIPipelineGraph",
     "url": "https://raw.githubusercontent.com/jibranpcccc/github-actions-dag-validator/main/README.md",
-    "tier": "GitHub Raw CDN Docs (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "GreekVisualizer",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/options-greeks-visualizer/main/README.md",
     "tier": "GitHub Raw CDN Docs (DA 96)",
     "blogs": {
       "success": true,
@@ -1638,9 +2119,165 @@
     }
   },
   {
+    "brand": "SaaSUnitMath",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/saas-unit-economics-calculator/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PromptEvalHQ",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/llm-eval-promptfoo-benchmark/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenTelemetryLab",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/opentelemetry-tail-sampling-collector/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PostgresScale",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/postgres-autovacuum-index-tuner/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GreekVisualizer",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/options-greeks-visualizer/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "AuthTokenAudit",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/jwt-paseto-token-security-matrix/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DevConfigHub",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/devcontainer-docker-generator/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "APIGatewayMatrix",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/api-gateway-latency-benchmarks/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "QueueCost",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/task-queue-memory-benchmark/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DNSPerfHQ",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/anycast-dns-latency-benchmarks/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "LocalAgentStack",
     "url": "https://gist.github.com/jibranpcccc/44972a0946304b11e233b7a108fb4b6f",
     "tier": "GitHub Gist Wave 2 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FeatureFlagAudit",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/feature-flags-openfeature-tco/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "TinyContainerHQ",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/minimal-docker-base-image-cve/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."
@@ -1677,6 +2314,19 @@
     }
   },
   {
+    "brand": "S3EgressAudit",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/s3-zero-egress-cost-audit/main/README.md",
+    "tier": "GitHub Raw CDN Docs (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "IndieStackAudit",
     "url": "https://gist.github.com/jibranpcccc/0a251d0c8e6b9f2a0f3abf3300c649b8",
     "tier": "GitHub Gist Wave 2 (DA 96)",
@@ -1703,47 +2353,21 @@
     }
   },
   {
+    "brand": "NomadPassportIndex",
+    "url": "https://gist.github.com/jibranpcccc/9ff0582a3875ab1e6099f60e274e047f",
+    "tier": "GitHub Gist Wave 2 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "NomadTreaty",
     "url": "https://gist.github.com/jibranpcccc/ad283f0b9e7876f27c0e9bfbb72a84b1",
-    "tier": "GitHub Gist Wave 2 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "WebhookWatch",
-    "url": "https://gist.github.com/jibranpcccc/9f4ac3b6d9a9e3a45de07e42cb640db8",
-    "tier": "GitHub Gist Wave 2 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "LocalDocPrivacy",
-    "url": "https://gist.github.com/jibranpcccc/d5dc9ce8ae43b1fc340559f429f271c7",
-    "tier": "GitHub Gist Wave 2 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "FounderRunway",
-    "url": "https://gist.github.com/jibranpcccc/a6662e75d77903b10a4b1ebad7980552",
     "tier": "GitHub Gist Wave 2 (DA 96)",
     "blogs": {
       "success": true,
@@ -1768,8 +2392,8 @@
     }
   },
   {
-    "brand": "NomadPassportIndex",
-    "url": "https://gist.github.com/jibranpcccc/9ff0582a3875ab1e6099f60e274e047f",
+    "brand": "EORCalculator",
+    "url": "https://gist.github.com/jibranpcccc/2eaa7f57ab6afd9e3bc98e3b18fcaa70",
     "tier": "GitHub Gist Wave 2 (DA 96)",
     "blogs": {
       "success": true,
@@ -1781,8 +2405,8 @@
     }
   },
   {
-    "brand": "SaaSUnitMath",
-    "url": "https://gist.github.com/jibranpcccc/05b4e36b0f72746030acbb2dab764bb6",
+    "brand": "WebhookWatch",
+    "url": "https://gist.github.com/jibranpcccc/9f4ac3b6d9a9e3a45de07e42cb640db8",
     "tier": "GitHub Gist Wave 2 (DA 96)",
     "blogs": {
       "success": true,
@@ -1820,21 +2444,8 @@
     }
   },
   {
-    "brand": "EORCalculator",
-    "url": "https://gist.github.com/jibranpcccc/2eaa7f57ab6afd9e3bc98e3b18fcaa70",
-    "tier": "GitHub Gist Wave 2 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "DevConfigHub",
-    "url": "https://gist.github.com/jibranpcccc/998e635ae0ad22da8365dc6164a265ab",
+    "brand": "LocalDocPrivacy",
+    "url": "https://gist.github.com/jibranpcccc/d5dc9ce8ae43b1fc340559f429f271c7",
     "tier": "GitHub Gist Wave 2 (DA 96)",
     "blogs": {
       "success": true,
@@ -1872,6 +2483,19 @@
     }
   },
   {
+    "brand": "FounderRunway",
+    "url": "https://gist.github.com/jibranpcccc/a6662e75d77903b10a4b1ebad7980552",
+    "tier": "GitHub Gist Wave 2 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "GreekVisualizer",
     "url": "https://gist.github.com/jibranpcccc/f4ed3fdd7c2f6180f92cc3292406ecc5",
     "tier": "GitHub Gist Wave 2 (DA 96)",
@@ -1898,6 +2522,19 @@
     }
   },
   {
+    "brand": "SaaSUnitMath",
+    "url": "https://gist.github.com/jibranpcccc/05b4e36b0f72746030acbb2dab764bb6",
+    "tier": "GitHub Gist Wave 2 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "LocalAgentStack",
     "url": "https://github.com/jibranpcccc/local-agent-hardware-stack/releases/tag/v1.1.0",
     "tier": "GitHub Release v1.1 (DA 96)",
@@ -1911,35 +2548,9 @@
     }
   },
   {
-    "brand": "WorkationRadar",
-    "url": "https://github.com/jibranpcccc/workation-coliving-radar/releases/tag/v1.1.0",
-    "tier": "GitHub Release v1.1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "OpenAgentStack",
-    "url": "https://github.com/jibranpcccc/open-agent-protocol-hub/releases/tag/v1.1.0",
-    "tier": "GitHub Release v1.1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "IndieStackAudit",
-    "url": "https://github.com/jibranpcccc/indie-saas-stack-audit/releases/tag/v1.1.0",
-    "tier": "GitHub Release v1.1 (DA 96)",
+    "brand": "DevConfigHub",
+    "url": "https://gist.github.com/jibranpcccc/998e635ae0ad22da8365dc6164a265ab",
+    "tier": "GitHub Gist Wave 2 (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."
@@ -1976,19 +2587,6 @@
     }
   },
   {
-    "brand": "WebhookWatch",
-    "url": "https://github.com/jibranpcccc/webhook-signature-audit/releases/tag/v1.1.0",
-    "tier": "GitHub Release v1.1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
     "brand": "LocalDocPrivacy",
     "url": "https://github.com/jibranpcccc/local-pdf-privacy-redactor/releases/tag/v1.1.0",
     "tier": "GitHub Release v1.1 (DA 96)",
@@ -2002,8 +2600,34 @@
     }
   },
   {
-    "brand": "FounderRunway",
-    "url": "https://github.com/jibranpcccc/founder-runway-calculator/releases/tag/v1.1.0",
+    "brand": "WorkationRadar",
+    "url": "https://github.com/jibranpcccc/workation-coliving-radar/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WebhookWatch",
+    "url": "https://github.com/jibranpcccc/webhook-signature-audit/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://github.com/jibranpcccc/indie-saas-stack-audit/releases/tag/v1.1.0",
     "tier": "GitHub Release v1.1 (DA 96)",
     "blogs": {
       "success": true,
@@ -2028,8 +2652,8 @@
     }
   },
   {
-    "brand": "NomadPassportIndex",
-    "url": "https://github.com/jibranpcccc/nomad-passport-visa-index/releases/tag/v1.1.0",
+    "brand": "GrokLogTester",
+    "url": "https://github.com/jibranpcccc/nginx-grok-log-tester/releases/tag/v1.1.0",
     "tier": "GitHub Release v1.1 (DA 96)",
     "blogs": {
       "success": true,
@@ -2054,8 +2678,8 @@
     }
   },
   {
-    "brand": "GrokLogTester",
-    "url": "https://github.com/jibranpcccc/nginx-grok-log-tester/releases/tag/v1.1.0",
+    "brand": "OpenAgentStack",
+    "url": "https://github.com/jibranpcccc/open-agent-protocol-hub/releases/tag/v1.1.0",
     "tier": "GitHub Release v1.1 (DA 96)",
     "blogs": {
       "success": true,
@@ -2080,47 +2704,34 @@
     }
   },
   {
+    "brand": "FounderRunway",
+    "url": "https://github.com/jibranpcccc/founder-runway-calculator/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://github.com/jibranpcccc/nomad-passport-visa-index/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "EORCalculator",
     "url": "https://github.com/jibranpcccc/global-eor-payroll-calculator/releases/tag/v1.1.0",
-    "tier": "GitHub Release v1.1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "DevConfigHub",
-    "url": "https://github.com/jibranpcccc/devcontainer-docker-generator/releases/tag/v1.1.0",
-    "tier": "GitHub Release v1.1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "OpenCRMStack",
-    "url": "https://github.com/jibranpcccc/open-crm-migration-tco/releases/tag/v1.1.0",
-    "tier": "GitHub Release v1.1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "CIPipelineGraph",
-    "url": "https://github.com/jibranpcccc/github-actions-dag-validator/releases/tag/v1.1.0",
     "tier": "GitHub Release v1.1 (DA 96)",
     "blogs": {
       "success": true,
@@ -2158,6 +2769,175 @@
     }
   },
   {
+    "brand": "DevConfigHub",
+    "url": "https://github.com/jibranpcccc/devcontainer-docker-generator/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "CIPipelineGraph",
+    "url": "https://github.com/jibranpcccc/github-actions-dag-validator/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "QueueCost",
+    "url": "https://github.com/jibranpcccc/task-queue-memory-benchmark/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenCRMStack",
+    "url": "https://github.com/jibranpcccc/open-crm-migration-tco/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PostgresScale",
+    "url": "https://github.com/jibranpcccc/postgres-autovacuum-index-tuner/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenTelemetryLab",
+    "url": "https://github.com/jibranpcccc/opentelemetry-tail-sampling-collector/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PromptEvalHQ",
+    "url": "https://github.com/jibranpcccc/llm-eval-promptfoo-benchmark/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "APIGatewayMatrix",
+    "url": "https://github.com/jibranpcccc/api-gateway-latency-benchmarks/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "S3EgressAudit",
+    "url": "https://github.com/jibranpcccc/s3-zero-egress-cost-audit/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "TinyContainerHQ",
+    "url": "https://github.com/jibranpcccc/minimal-docker-base-image-cve/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DNSPerfHQ",
+    "url": "https://github.com/jibranpcccc/anycast-dns-latency-benchmarks/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "AuthTokenAudit",
+    "url": "https://github.com/jibranpcccc/jwt-paseto-token-security-matrix/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FeatureFlagAudit",
+    "url": "https://github.com/jibranpcccc/feature-flags-openfeature-tco/releases/tag/v1.1.0",
+    "tier": "GitHub Release v1.1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "LocalAgentStack",
     "url": "https://github.com/jibranpcccc/local-agent-hardware-stack/issues/2",
     "tier": "GitHub Issue #2 RFC (DA 96)",
@@ -2171,21 +2951,8 @@
     }
   },
   {
-    "brand": "WorkationRadar",
-    "url": "https://github.com/jibranpcccc/workation-coliving-radar/issues/2",
-    "tier": "GitHub Issue #2 RFC (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "OpenAgentStack",
-    "url": "https://github.com/jibranpcccc/open-agent-protocol-hub/issues/2",
+    "brand": "NomadTreaty",
+    "url": "https://github.com/jibranpcccc/nomad-tax-treaty-calculator/issues/2",
     "tier": "GitHub Issue #2 RFC (DA 96)",
     "blogs": {
       "success": true,
@@ -2223,8 +2990,8 @@
     }
   },
   {
-    "brand": "NomadTreaty",
-    "url": "https://github.com/jibranpcccc/nomad-tax-treaty-calculator/issues/2",
+    "brand": "WorkationRadar",
+    "url": "https://github.com/jibranpcccc/workation-coliving-radar/issues/2",
     "tier": "GitHub Issue #2 RFC (DA 96)",
     "blogs": {
       "success": true,
@@ -2236,21 +3003,8 @@
     }
   },
   {
-    "brand": "WebhookWatch",
-    "url": "https://github.com/jibranpcccc/webhook-signature-audit/issues/2",
-    "tier": "GitHub Issue #2 RFC (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "LocalDocPrivacy",
-    "url": "https://github.com/jibranpcccc/local-pdf-privacy-redactor/issues/2",
+    "brand": "OpenAgentStack",
+    "url": "https://github.com/jibranpcccc/open-agent-protocol-hub/issues/2",
     "tier": "GitHub Issue #2 RFC (DA 96)",
     "blogs": {
       "success": true,
@@ -2288,8 +3042,8 @@
     }
   },
   {
-    "brand": "NomadPassportIndex",
-    "url": "https://github.com/jibranpcccc/nomad-passport-visa-index/issues/2",
+    "brand": "WebhookWatch",
+    "url": "https://github.com/jibranpcccc/webhook-signature-audit/issues/2",
     "tier": "GitHub Issue #2 RFC (DA 96)",
     "blogs": {
       "success": true,
@@ -2327,21 +3081,8 @@
     }
   },
   {
-    "brand": "SOC2Ready",
-    "url": "https://github.com/jibranpcccc/soc2-readiness-checklist/issues/2",
-    "tier": "GitHub Issue #2 RFC (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "EORCalculator",
-    "url": "https://github.com/jibranpcccc/global-eor-payroll-calculator/issues/2",
+    "brand": "LocalDocPrivacy",
+    "url": "https://github.com/jibranpcccc/local-pdf-privacy-redactor/issues/2",
     "tier": "GitHub Issue #2 RFC (DA 96)",
     "blogs": {
       "success": true,
@@ -2366,6 +3107,32 @@
     }
   },
   {
+    "brand": "SOC2Ready",
+    "url": "https://github.com/jibranpcccc/soc2-readiness-checklist/issues/2",
+    "tier": "GitHub Issue #2 RFC (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://github.com/jibranpcccc/nomad-passport-visa-index/issues/2",
+    "tier": "GitHub Issue #2 RFC (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "OpenCRMStack",
     "url": "https://github.com/jibranpcccc/open-crm-migration-tco/issues/2",
     "tier": "GitHub Issue #2 RFC (DA 96)",
@@ -2379,8 +3146,21 @@
     }
   },
   {
-    "brand": "CIPipelineGraph",
-    "url": "https://github.com/jibranpcccc/github-actions-dag-validator/issues/2",
+    "brand": "EORCalculator",
+    "url": "https://github.com/jibranpcccc/global-eor-payroll-calculator/issues/2",
+    "tier": "GitHub Issue #2 RFC (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PromptEvalHQ",
+    "url": "https://github.com/jibranpcccc/llm-eval-promptfoo-benchmark/issues/2",
     "tier": "GitHub Issue #2 RFC (DA 96)",
     "blogs": {
       "success": true,
@@ -2405,8 +3185,125 @@
     }
   },
   {
+    "brand": "QueueCost",
+    "url": "https://github.com/jibranpcccc/task-queue-memory-benchmark/issues/2",
+    "tier": "GitHub Issue #2 RFC (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenTelemetryLab",
+    "url": "https://github.com/jibranpcccc/opentelemetry-tail-sampling-collector/issues/2",
+    "tier": "GitHub Issue #2 RFC (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "CIPipelineGraph",
+    "url": "https://github.com/jibranpcccc/github-actions-dag-validator/issues/2",
+    "tier": "GitHub Issue #2 RFC (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "EdgeRuntimeHQ",
     "url": "https://github.com/jibranpcccc/webgpu-edge-inference-bench/issues/2",
+    "tier": "GitHub Issue #2 RFC (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PostgresScale",
+    "url": "https://github.com/jibranpcccc/postgres-autovacuum-index-tuner/issues/2",
+    "tier": "GitHub Issue #2 RFC (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "S3EgressAudit",
+    "url": "https://github.com/jibranpcccc/s3-zero-egress-cost-audit/issues/2",
+    "tier": "GitHub Issue #2 RFC (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenAgentStack",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-3-openagentstack.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DNSPerfHQ",
+    "url": "https://github.com/jibranpcccc/anycast-dns-latency-benchmarks/issues/2",
+    "tier": "GitHub Issue #2 RFC (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-2-workationradar.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "APIGatewayMatrix",
+    "url": "https://github.com/jibranpcccc/api-gateway-latency-benchmarks/issues/2",
     "tier": "GitHub Issue #2 RFC (DA 96)",
     "blogs": {
       "success": true,
@@ -2431,12 +3328,12 @@
     }
   },
   {
-    "brand": "WorkationRadar",
-    "url": "https://jibranpcccc.github.io/benchmarks/site-2-workationradar.html",
-    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "brand": "FeatureFlagAudit",
+    "url": "https://github.com/jibranpcccc/feature-flags-openfeature-tco/issues/2",
+    "tier": "GitHub Issue #2 RFC (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -2444,12 +3341,12 @@
     }
   },
   {
-    "brand": "OpenAgentStack",
-    "url": "https://jibranpcccc.github.io/benchmarks/site-3-openagentstack.html",
-    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "brand": "AuthTokenAudit",
+    "url": "https://github.com/jibranpcccc/jwt-paseto-token-security-matrix/issues/2",
+    "tier": "GitHub Issue #2 RFC (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -2483,12 +3380,12 @@
     }
   },
   {
-    "brand": "NomadTreaty",
-    "url": "https://jibranpcccc.github.io/benchmarks/site-6-nomadtreaty.html",
-    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "brand": "TinyContainerHQ",
+    "url": "https://github.com/jibranpcccc/minimal-docker-base-image-cve/issues/2",
+    "tier": "GitHub Issue #2 RFC (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -2509,21 +3406,8 @@
     }
   },
   {
-    "brand": "LocalDocPrivacy",
-    "url": "https://jibranpcccc.github.io/benchmarks/site-8-localdocprivacy.html",
-    "tier": "GitHub Pages Benchmark Hub (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "FounderRunway",
-    "url": "https://jibranpcccc.github.io/benchmarks/site-9-founderrunway.html",
+    "brand": "NomadTreaty",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-6-nomadtreaty.html",
     "tier": "GitHub Pages Benchmark Hub (DA 96)",
     "blogs": {
       "success": true,
@@ -2548,8 +3432,8 @@
     }
   },
   {
-    "brand": "NomadPassportIndex",
-    "url": "https://jibranpcccc.github.io/benchmarks/site-11-nomadpassportindex.html",
+    "brand": "SaaSUnitMath",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-12-saasunitmath.html",
     "tier": "GitHub Pages Benchmark Hub (DA 96)",
     "blogs": {
       "success": true,
@@ -2561,8 +3445,8 @@
     }
   },
   {
-    "brand": "SaaSUnitMath",
-    "url": "https://jibranpcccc.github.io/benchmarks/site-12-saasunitmath.html",
+    "brand": "LocalDocPrivacy",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-8-localdocprivacy.html",
     "tier": "GitHub Pages Benchmark Hub (DA 96)",
     "blogs": {
       "success": true,
@@ -2587,34 +3471,8 @@
     }
   },
   {
-    "brand": "SOC2Ready",
-    "url": "https://jibranpcccc.github.io/benchmarks/site-14-soc2ready.html",
-    "tier": "GitHub Pages Benchmark Hub (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "EORCalculator",
-    "url": "https://jibranpcccc.github.io/benchmarks/site-15-eorcalculator.html",
-    "tier": "GitHub Pages Benchmark Hub (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "DevConfigHub",
-    "url": "https://jibranpcccc.github.io/benchmarks/site-16-devconfighub.html",
+    "brand": "NomadPassportIndex",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-11-nomadpassportindex.html",
     "tier": "GitHub Pages Benchmark Hub (DA 96)",
     "blogs": {
       "success": true,
@@ -2639,6 +3497,45 @@
     }
   },
   {
+    "brand": "DevConfigHub",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-16-devconfighub.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PromptEvalHQ",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-21-promptevalhq.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SOC2Ready",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-14-soc2ready.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "CIPipelineGraph",
     "url": "https://jibranpcccc.github.io/benchmarks/site-18-cipipelinegraph.html",
     "tier": "GitHub Pages Benchmark Hub (DA 96)",
@@ -2652,12 +3549,64 @@
     }
   },
   {
-    "brand": "GreekVisualizer",
-    "url": "https://jibranpcccc.github.io/benchmarks/site-19-greekvisualizer.html",
+    "brand": "PostgresScale",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-24-postgrescale.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EORCalculator",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-15-eorcalculator.html",
     "tier": "GitHub Pages Benchmark Hub (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenTelemetryLab",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-23-opentelemetrylab.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "APIGatewayMatrix",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-25-apigatewaymatrix.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DNSPerfHQ",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-28-dnsperf-hq.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -2678,9 +3627,9 @@
     }
   },
   {
-    "brand": "LocalAgentStack",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/local-agent-hardware-stack/main/BENCHMARKS.md",
-    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "brand": "S3EgressAudit",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-26-s3egressaudit.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."
@@ -2691,9 +3640,61 @@
     }
   },
   {
-    "brand": "WorkationRadar",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/workation-coliving-radar/main/BENCHMARKS.md",
-    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "brand": "FeatureFlagAudit",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-29-featureflagaudit.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "AuthTokenAudit",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-27-authtokenaudit.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GreekVisualizer",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-19-greekvisualizer.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "TinyContainerHQ",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-30-tinycontainerhq.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "QueueCost",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-22-queuecost.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."
@@ -2709,7 +3710,7 @@
     "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2722,7 +3723,20 @@
     "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/local-agent-hardware-stack/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2735,46 +3749,7 @@
     "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "NomadTreaty",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/nomad-tax-treaty-calculator/main/BENCHMARKS.md",
-    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "WebhookWatch",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/webhook-signature-audit/main/BENCHMARKS.md",
-    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "LocalDocPrivacy",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/local-pdf-privacy-redactor/main/BENCHMARKS.md",
-    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2783,24 +3758,11 @@
   },
   {
     "brand": "FounderRunway",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/founder-runway-calculator/main/BENCHMARKS.md",
-    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "url": "https://jibranpcccc.github.io/benchmarks/site-9-founderrunway.html",
+    "tier": "GitHub Pages Benchmark Hub (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "RAGInspect",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/rag-semantic-chunking-bench/main/BENCHMARKS.md",
-    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2813,7 +3775,7 @@
     "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2826,7 +3788,7 @@
     "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2834,12 +3796,12 @@
     }
   },
   {
-    "brand": "GrokLogTester",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/nginx-grok-log-tester/main/BENCHMARKS.md",
+    "brand": "WebhookWatch",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/webhook-signature-audit/main/BENCHMARKS.md",
     "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2847,12 +3809,38 @@
     }
   },
   {
-    "brand": "SOC2Ready",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/soc2-readiness-checklist/main/BENCHMARKS.md",
+    "brand": "NomadTreaty",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/nomad-tax-treaty-calculator/main/BENCHMARKS.md",
     "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/workation-coliving-radar/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "RAGInspect",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/rag-semantic-chunking-bench/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2865,7 +3853,7 @@
     "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2873,12 +3861,12 @@
     }
   },
   {
-    "brand": "DevConfigHub",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/devcontainer-docker-generator/main/BENCHMARKS.md",
+    "brand": "LocalDocPrivacy",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/local-pdf-privacy-redactor/main/BENCHMARKS.md",
     "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2891,7 +3879,7 @@
     "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2899,12 +3887,51 @@
     }
   },
   {
-    "brand": "CIPipelineGraph",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/github-actions-dag-validator/main/BENCHMARKS.md",
+    "brand": "FounderRunway",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/founder-runway-calculator/main/BENCHMARKS.md",
     "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/nginx-grok-log-tester/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DevConfigHub",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/devcontainer-docker-generator/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SOC2Ready",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/soc2-readiness-checklist/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2917,7 +3944,20 @@
     "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "CIPipelineGraph",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/github-actions-dag-validator/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2930,7 +3970,7 @@
     "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Succeeded."
+      "msg": "Weblog hasn't changed."
     },
     "twingly": {
       "success": true,
@@ -2938,9 +3978,9 @@
     }
   },
   {
-    "brand": "LocalAgentStack",
-    "url": "https://colab.research.google.com/github/jibranpcccc/local-agent-hardware-stack/blob/main/benchmark_calculator.ipynb",
-    "tier": "Google Colab (DA 98)",
+    "brand": "PromptEvalHQ",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/llm-eval-promptfoo-benchmark/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."
@@ -2951,9 +3991,100 @@
     }
   },
   {
-    "brand": "WorkationRadar",
-    "url": "https://colab.research.google.com/github/jibranpcccc/workation-coliving-radar/blob/main/benchmark_calculator.ipynb",
-    "tier": "Google Colab (DA 98)",
+    "brand": "PostgresScale",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/postgres-autovacuum-index-tuner/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "QueueCost",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/task-queue-memory-benchmark/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "APIGatewayMatrix",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/api-gateway-latency-benchmarks/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenTelemetryLab",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/opentelemetry-tail-sampling-collector/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "AuthTokenAudit",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/jwt-paseto-token-security-matrix/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FeatureFlagAudit",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/feature-flags-openfeature-tco/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "S3EgressAudit",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/s3-zero-egress-cost-audit/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DNSPerfHQ",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/anycast-dns-latency-benchmarks/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."
@@ -2977,8 +4108,8 @@
     }
   },
   {
-    "brand": "IndieStackAudit",
-    "url": "https://colab.research.google.com/github/jibranpcccc/indie-saas-stack-audit/blob/main/benchmark_calculator.ipynb",
+    "brand": "LocalAgentStack",
+    "url": "https://colab.research.google.com/github/jibranpcccc/local-agent-hardware-stack/blob/main/benchmark_calculator.ipynb",
     "tier": "Google Colab (DA 98)",
     "blogs": {
       "success": true,
@@ -3003,6 +4134,32 @@
     }
   },
   {
+    "brand": "LocalDocPrivacy",
+    "url": "https://colab.research.google.com/github/jibranpcccc/local-pdf-privacy-redactor/blob/main/benchmark_calculator.ipynb",
+    "tier": "Google Colab (DA 98)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "TinyContainerHQ",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/minimal-docker-base-image-cve/main/BENCHMARKS.md",
+    "tier": "GitHub Raw CDN Benchmarks (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "NomadTreaty",
     "url": "https://colab.research.google.com/github/jibranpcccc/nomad-tax-treaty-calculator/blob/main/benchmark_calculator.ipynb",
     "tier": "Google Colab (DA 98)",
@@ -3016,21 +4173,8 @@
     }
   },
   {
-    "brand": "WebhookWatch",
-    "url": "https://colab.research.google.com/github/jibranpcccc/webhook-signature-audit/blob/main/benchmark_calculator.ipynb",
-    "tier": "Google Colab (DA 98)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "LocalDocPrivacy",
-    "url": "https://colab.research.google.com/github/jibranpcccc/local-pdf-privacy-redactor/blob/main/benchmark_calculator.ipynb",
+    "brand": "IndieStackAudit",
+    "url": "https://colab.research.google.com/github/jibranpcccc/indie-saas-stack-audit/blob/main/benchmark_calculator.ipynb",
     "tier": "Google Colab (DA 98)",
     "blogs": {
       "success": true,
@@ -3055,8 +4199,8 @@
     }
   },
   {
-    "brand": "RAGInspect",
-    "url": "https://colab.research.google.com/github/jibranpcccc/rag-semantic-chunking-bench/blob/main/benchmark_calculator.ipynb",
+    "brand": "WebhookWatch",
+    "url": "https://colab.research.google.com/github/jibranpcccc/webhook-signature-audit/blob/main/benchmark_calculator.ipynb",
     "tier": "Google Colab (DA 98)",
     "blogs": {
       "success": true,
@@ -3068,8 +4212,8 @@
     }
   },
   {
-    "brand": "NomadPassportIndex",
-    "url": "https://colab.research.google.com/github/jibranpcccc/nomad-passport-visa-index/blob/main/benchmark_calculator.ipynb",
+    "brand": "RAGInspect",
+    "url": "https://colab.research.google.com/github/jibranpcccc/rag-semantic-chunking-bench/blob/main/benchmark_calculator.ipynb",
     "tier": "Google Colab (DA 98)",
     "blogs": {
       "success": true,
@@ -3094,8 +4238,8 @@
     }
   },
   {
-    "brand": "GrokLogTester",
-    "url": "https://colab.research.google.com/github/jibranpcccc/nginx-grok-log-tester/blob/main/benchmark_calculator.ipynb",
+    "brand": "NomadPassportIndex",
+    "url": "https://colab.research.google.com/github/jibranpcccc/nomad-passport-visa-index/blob/main/benchmark_calculator.ipynb",
     "tier": "Google Colab (DA 98)",
     "blogs": {
       "success": true,
@@ -3109,6 +4253,32 @@
   {
     "brand": "SOC2Ready",
     "url": "https://colab.research.google.com/github/jibranpcccc/soc2-readiness-checklist/blob/main/benchmark_calculator.ipynb",
+    "tier": "Google Colab (DA 98)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://colab.research.google.com/github/jibranpcccc/workation-coliving-radar/blob/main/benchmark_calculator.ipynb",
+    "tier": "Google Colab (DA 98)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://colab.research.google.com/github/jibranpcccc/nginx-grok-log-tester/blob/main/benchmark_calculator.ipynb",
     "tier": "Google Colab (DA 98)",
     "blogs": {
       "success": true,
@@ -3146,6 +4316,19 @@
     }
   },
   {
+    "brand": "EdgeRuntimeHQ",
+    "url": "https://colab.research.google.com/github/jibranpcccc/webgpu-edge-inference-bench/blob/main/benchmark_calculator.ipynb",
+    "tier": "Google Colab (DA 98)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "OpenCRMStack",
     "url": "https://colab.research.google.com/github/jibranpcccc/open-crm-migration-tco/blob/main/benchmark_calculator.ipynb",
     "tier": "Google Colab (DA 98)",
@@ -3159,8 +4342,8 @@
     }
   },
   {
-    "brand": "CIPipelineGraph",
-    "url": "https://colab.research.google.com/github/jibranpcccc/github-actions-dag-validator/blob/main/benchmark_calculator.ipynb",
+    "brand": "PostgresScale",
+    "url": "https://colab.research.google.com/github/jibranpcccc/postgres-autovacuum-index-tuner/blob/main/benchmark_calculator.ipynb",
     "tier": "Google Colab (DA 98)",
     "blogs": {
       "success": true,
@@ -3185,8 +4368,21 @@
     }
   },
   {
-    "brand": "EdgeRuntimeHQ",
-    "url": "https://colab.research.google.com/github/jibranpcccc/webgpu-edge-inference-bench/blob/main/benchmark_calculator.ipynb",
+    "brand": "PromptEvalHQ",
+    "url": "https://colab.research.google.com/github/jibranpcccc/llm-eval-promptfoo-benchmark/blob/main/benchmark_calculator.ipynb",
+    "tier": "Google Colab (DA 98)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "AuthTokenAudit",
+    "url": "https://colab.research.google.com/github/jibranpcccc/jwt-paseto-token-security-matrix/blob/main/benchmark_calculator.ipynb",
     "tier": "Google Colab (DA 98)",
     "blogs": {
       "success": true,
@@ -3211,6 +4407,71 @@
     }
   },
   {
+    "brand": "S3EgressAudit",
+    "url": "https://colab.research.google.com/github/jibranpcccc/s3-zero-egress-cost-audit/blob/main/benchmark_calculator.ipynb",
+    "tier": "Google Colab (DA 98)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "TinyContainerHQ",
+    "url": "https://colab.research.google.com/github/jibranpcccc/minimal-docker-base-image-cve/blob/main/benchmark_calculator.ipynb",
+    "tier": "Google Colab (DA 98)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "APIGatewayMatrix",
+    "url": "https://colab.research.google.com/github/jibranpcccc/api-gateway-latency-benchmarks/blob/main/benchmark_calculator.ipynb",
+    "tier": "Google Colab (DA 98)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "CIPipelineGraph",
+    "url": "https://colab.research.google.com/github/jibranpcccc/github-actions-dag-validator/blob/main/benchmark_calculator.ipynb",
+    "tier": "Google Colab (DA 98)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/indie-saas-stack-audit/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "WorkationRadar",
     "url": "https://raw.githubusercontent.com/jibranpcccc/workation-coliving-radar/main/openapi.json",
     "tier": "GitHub Raw CDN OpenAPI (DA 96)",
@@ -3224,12 +4485,12 @@
     }
   },
   {
-    "brand": "OpenAgentStack",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/open-agent-protocol-hub/main/openapi.json",
-    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "brand": "OpenTelemetryLab",
+    "url": "https://colab.research.google.com/github/jibranpcccc/opentelemetry-tail-sampling-collector/blob/main/benchmark_calculator.ipynb",
+    "tier": "Google Colab (DA 98)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3237,8 +4498,8 @@
     }
   },
   {
-    "brand": "IndieStackAudit",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/indie-saas-stack-audit/main/openapi.json",
+    "brand": "OpenAgentStack",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/open-agent-protocol-hub/main/openapi.json",
     "tier": "GitHub Raw CDN OpenAPI (DA 96)",
     "blogs": {
       "success": true,
@@ -3276,19 +4537,6 @@
     }
   },
   {
-    "brand": "WebhookWatch",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/webhook-signature-audit/main/openapi.json",
-    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
     "brand": "LocalDocPrivacy",
     "url": "https://raw.githubusercontent.com/jibranpcccc/local-pdf-privacy-redactor/main/openapi.json",
     "tier": "GitHub Raw CDN OpenAPI (DA 96)",
@@ -3315,6 +4563,45 @@
     }
   },
   {
+    "brand": "QueueCost",
+    "url": "https://colab.research.google.com/github/jibranpcccc/task-queue-memory-benchmark/blob/main/benchmark_calculator.ipynb",
+    "tier": "Google Colab (DA 98)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DNSPerfHQ",
+    "url": "https://colab.research.google.com/github/jibranpcccc/anycast-dns-latency-benchmarks/blob/main/benchmark_calculator.ipynb",
+    "tier": "Google Colab (DA 98)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WebhookWatch",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/webhook-signature-audit/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "RAGInspect",
     "url": "https://raw.githubusercontent.com/jibranpcccc/rag-semantic-chunking-bench/main/openapi.json",
     "tier": "GitHub Raw CDN OpenAPI (DA 96)",
@@ -3328,38 +4615,12 @@
     }
   },
   {
-    "brand": "NomadPassportIndex",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/nomad-passport-visa-index/main/openapi.json",
-    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "brand": "FeatureFlagAudit",
+    "url": "https://colab.research.google.com/github/jibranpcccc/feature-flags-openfeature-tco/blob/main/benchmark_calculator.ipynb",
+    "tier": "Google Colab (DA 98)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "SaaSUnitMath",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/saas-unit-economics-calculator/main/openapi.json",
-    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "GrokLogTester",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/nginx-grok-log-tester/main/openapi.json",
-    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3393,8 +4654,8 @@
     }
   },
   {
-    "brand": "DevConfigHub",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/devcontainer-docker-generator/main/openapi.json",
+    "brand": "OpenCRMStack",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/open-crm-migration-tco/main/openapi.json",
     "tier": "GitHub Raw CDN OpenAPI (DA 96)",
     "blogs": {
       "success": true,
@@ -3406,8 +4667,21 @@
     }
   },
   {
-    "brand": "OpenCRMStack",
-    "url": "https://raw.githubusercontent.com/jibranpcccc/open-crm-migration-tco/main/openapi.json",
+    "brand": "NomadPassportIndex",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/nomad-passport-visa-index/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DevConfigHub",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/devcontainer-docker-generator/main/openapi.json",
     "tier": "GitHub Raw CDN OpenAPI (DA 96)",
     "blogs": {
       "success": true,
@@ -3432,12 +4706,64 @@
     }
   },
   {
+    "brand": "PromptEvalHQ",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/llm-eval-promptfoo-benchmark/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SaaSUnitMath",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/saas-unit-economics-calculator/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PostgresScale",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/postgres-autovacuum-index-tuner/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "GreekVisualizer",
     "url": "https://raw.githubusercontent.com/jibranpcccc/options-greeks-visualizer/main/openapi.json",
     "tier": "GitHub Raw CDN OpenAPI (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "QueueCost",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/task-queue-memory-benchmark/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3458,12 +4784,51 @@
     }
   },
   {
-    "brand": "LocalAgentStack",
-    "url": "https://jibranpcccc.github.io/api/v1/site-1.json",
-    "tier": "GitHub Pages API v1 (DA 96)",
+    "brand": "S3EgressAudit",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/s3-zero-egress-cost-audit/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/nginx-grok-log-tester/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Weblog hasn't changed."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DNSPerfHQ",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/anycast-dns-latency-benchmarks/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenTelemetryLab",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/opentelemetry-tail-sampling-collector/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3476,7 +4841,7 @@
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3484,12 +4849,12 @@
     }
   },
   {
-    "brand": "NomadPassportIndex",
-    "url": "https://jibranpcccc.github.io/api/v1/site-11.json",
-    "tier": "GitHub Pages API v1 (DA 96)",
+    "brand": "TinyContainerHQ",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/minimal-docker-base-image-cve/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3502,7 +4867,7 @@
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3510,12 +4875,25 @@
     }
   },
   {
-    "brand": "GrokLogTester",
-    "url": "https://jibranpcccc.github.io/api/v1/site-13.json",
+    "brand": "APIGatewayMatrix",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/api-gateway-latency-benchmarks/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://jibranpcccc.github.io/api/v1/site-11.json",
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3528,46 +4906,7 @@
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "EORCalculator",
-    "url": "https://jibranpcccc.github.io/api/v1/site-15.json",
-    "tier": "GitHub Pages API v1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "DevConfigHub",
-    "url": "https://jibranpcccc.github.io/api/v1/site-16.json",
-    "tier": "GitHub Pages API v1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "OpenCRMStack",
-    "url": "https://jibranpcccc.github.io/api/v1/site-17.json",
-    "tier": "GitHub Pages API v1 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3580,7 +4919,59 @@
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://jibranpcccc.github.io/api/v1/site-13.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "AuthTokenAudit",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/jwt-paseto-token-security-matrix/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DevConfigHub",
+    "url": "https://jibranpcccc.github.io/api/v1/site-16.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FeatureFlagAudit",
+    "url": "https://raw.githubusercontent.com/jibranpcccc/feature-flags-openfeature-tco/main/openapi.json",
+    "tier": "GitHub Raw CDN OpenAPI (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3593,7 +4984,7 @@
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3601,12 +4992,12 @@
     }
   },
   {
-    "brand": "WorkationRadar",
-    "url": "https://jibranpcccc.github.io/api/v1/site-2.json",
+    "brand": "OpenCRMStack",
+    "url": "https://jibranpcccc.github.io/api/v1/site-17.json",
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3619,7 +5010,7 @@
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3627,12 +5018,12 @@
     }
   },
   {
-    "brand": "OpenAgentStack",
-    "url": "https://jibranpcccc.github.io/api/v1/site-3.json",
+    "brand": "OpenTelemetryLab",
+    "url": "https://jibranpcccc.github.io/api/v1/site-23.json",
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3640,12 +5031,12 @@
     }
   },
   {
-    "brand": "IndieStackAudit",
-    "url": "https://jibranpcccc.github.io/api/v1/site-4.json",
+    "brand": "LocalAgentStack",
+    "url": "https://jibranpcccc.github.io/api/v1/site-1.json",
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3653,12 +5044,12 @@
     }
   },
   {
-    "brand": "VectorBench",
-    "url": "https://jibranpcccc.github.io/api/v1/site-5.json",
+    "brand": "WorkationRadar",
+    "url": "https://jibranpcccc.github.io/api/v1/site-2.json",
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3666,12 +5057,90 @@
     }
   },
   {
-    "brand": "NomadTreaty",
-    "url": "https://jibranpcccc.github.io/api/v1/site-6.json",
+    "brand": "EORCalculator",
+    "url": "https://jibranpcccc.github.io/api/v1/site-15.json",
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PostgresScale",
+    "url": "https://jibranpcccc.github.io/api/v1/site-24.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "QueueCost",
+    "url": "https://jibranpcccc.github.io/api/v1/site-22.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "PromptEvalHQ",
+    "url": "https://jibranpcccc.github.io/api/v1/site-21.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "S3EgressAudit",
+    "url": "https://jibranpcccc.github.io/api/v1/site-26.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "AuthTokenAudit",
+    "url": "https://jibranpcccc.github.io/api/v1/site-27.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "APIGatewayMatrix",
+    "url": "https://jibranpcccc.github.io/api/v1/site-25.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3684,7 +5153,7 @@
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3692,12 +5161,12 @@
     }
   },
   {
-    "brand": "LocalDocPrivacy",
-    "url": "https://jibranpcccc.github.io/api/v1/site-8.json",
+    "brand": "FeatureFlagAudit",
+    "url": "https://jibranpcccc.github.io/api/v1/site-29.json",
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3710,7 +5179,7 @@
     "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
-      "msg": "Weblog hasn't changed."
+      "msg": "Succeeded."
     },
     "twingly": {
       "success": true,
@@ -3718,9 +5187,9 @@
     }
   },
   {
-    "brand": "LocalAgentStack",
-    "url": "https://gist.github.com/jibranpcccc/40172eea9fbe12e07ca96d5567e8477b",
-    "tier": "GitHub Gist Wave 3 (DA 96)",
+    "brand": "VectorBench",
+    "url": "https://jibranpcccc.github.io/api/v1/site-5.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."
@@ -3731,8 +5200,34 @@
     }
   },
   {
-    "brand": "WorkationRadar",
-    "url": "https://gist.github.com/jibranpcccc/101589b97f035ec7aa37ffbb84bd1310",
+    "brand": "DNSPerfHQ",
+    "url": "https://jibranpcccc.github.io/api/v1/site-28.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://jibranpcccc.github.io/api/v1/site-4.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://gist.github.com/jibranpcccc/40172eea9fbe12e07ca96d5567e8477b",
     "tier": "GitHub Gist Wave 3 (DA 96)",
     "blogs": {
       "success": true,
@@ -3757,6 +5252,19 @@
     }
   },
   {
+    "brand": "OpenAgentStack",
+    "url": "https://jibranpcccc.github.io/api/v1/site-3.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "IndieStackAudit",
     "url": "https://gist.github.com/jibranpcccc/4184b6353527eb72a309f90ec252aa8e",
     "tier": "GitHub Gist Wave 3 (DA 96)",
@@ -3770,9 +5278,9 @@
     }
   },
   {
-    "brand": "VectorBench",
-    "url": "https://gist.github.com/jibranpcccc/302850e404edafa69033dea5bf9127d2",
-    "tier": "GitHub Gist Wave 3 (DA 96)",
+    "brand": "TinyContainerHQ",
+    "url": "https://jibranpcccc.github.io/api/v1/site-30.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."
@@ -3810,6 +5318,19 @@
   },
   {
     "brand": "LocalDocPrivacy",
+    "url": "https://jibranpcccc.github.io/api/v1/site-8.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
     "url": "https://gist.github.com/jibranpcccc/ced29a412d472aba9511364eea915217",
     "tier": "GitHub Gist Wave 3 (DA 96)",
     "blogs": {
@@ -3824,19 +5345,6 @@
   {
     "brand": "FounderRunway",
     "url": "https://gist.github.com/jibranpcccc/aa2490b5a17c9cc0d497633365ace6a0",
-    "tier": "GitHub Gist Wave 3 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "RAGInspect",
-    "url": "https://gist.github.com/jibranpcccc/23a6720e2ba03713a33dd372608f1389",
     "tier": "GitHub Gist Wave 3 (DA 96)",
     "blogs": {
       "success": true,
@@ -3874,6 +5382,45 @@
     }
   },
   {
+    "brand": "NomadTreaty",
+    "url": "https://jibranpcccc.github.io/api/v1/site-6.json",
+    "tier": "GitHub Pages API v1 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EORCalculator",
+    "url": "https://gist.github.com/jibranpcccc/ff3634ef75e4c8a885dbac8587876189",
+    "tier": "GitHub Gist Wave 3 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://gist.github.com/jibranpcccc/101589b97f035ec7aa37ffbb84bd1310",
+    "tier": "GitHub Gist Wave 3 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "GrokLogTester",
     "url": "https://gist.github.com/jibranpcccc/9657bc4e8007677f5781bed496f1d728",
     "tier": "GitHub Gist Wave 3 (DA 96)",
@@ -3887,21 +5434,8 @@
     }
   },
   {
-    "brand": "SOC2Ready",
-    "url": "https://gist.github.com/jibranpcccc/6152f1c4655455aaa01dd6a80d24cb7a",
-    "tier": "GitHub Gist Wave 3 (DA 96)",
-    "blogs": {
-      "success": true,
-      "msg": "Succeeded."
-    },
-    "twingly": {
-      "success": true,
-      "msg": "Thanks for the ping."
-    }
-  },
-  {
-    "brand": "EORCalculator",
-    "url": "https://gist.github.com/jibranpcccc/ff3634ef75e4c8a885dbac8587876189",
+    "brand": "OpenCRMStack",
+    "url": "https://gist.github.com/jibranpcccc/e6b44d8980b5fa76aba7e6fb0aeed059",
     "tier": "GitHub Gist Wave 3 (DA 96)",
     "blogs": {
       "success": true,
@@ -3926,8 +5460,21 @@
     }
   },
   {
-    "brand": "OpenCRMStack",
-    "url": "https://gist.github.com/jibranpcccc/e6b44d8980b5fa76aba7e6fb0aeed059",
+    "brand": "SOC2Ready",
+    "url": "https://gist.github.com/jibranpcccc/6152f1c4655455aaa01dd6a80d24cb7a",
+    "tier": "GitHub Gist Wave 3 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "VectorBench",
+    "url": "https://gist.github.com/jibranpcccc/302850e404edafa69033dea5bf9127d2",
     "tier": "GitHub Gist Wave 3 (DA 96)",
     "blogs": {
       "success": true,
@@ -3965,9 +5512,1712 @@
     }
   },
   {
+    "brand": "RAGInspect",
+    "url": "https://gist.github.com/jibranpcccc/23a6720e2ba03713a33dd372608f1389",
+    "tier": "GitHub Gist Wave 3 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenAgentStack",
+    "url": "https://gist.github.com/jibranpcccc/3d58f77bf0a30c9282db29c6838a13ff",
+    "tier": "GitHub Gist Wave 4 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://gist.github.com/jibranpcccc/beebb64abf02a2d92e2d087565b245d1",
+    "tier": "GitHub Gist Wave 4 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://gist.github.com/jibranpcccc/f1a9f03a7ac4186db76154f887db47ec",
+    "tier": "GitHub Gist Wave 4 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://gist.github.com/jibranpcccc/4bc53061818975b53f95fcb79bad77f0",
+    "tier": "GitHub Gist Wave 4 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
     "brand": "EdgeRuntimeHQ",
     "url": "https://gist.github.com/jibranpcccc/fbf6e35bf735a71f6784daa3e12157d1",
     "tier": "GitHub Gist Wave 3 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "VectorBench",
+    "url": "https://gist.github.com/jibranpcccc/0f4ed1059317622a848d40dbb2a7836a",
+    "tier": "GitHub Gist Wave 4 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
+    "url": "https://gist.github.com/jibranpcccc/e4eed350fca6e2bee62cf8e9b9e1b04f",
+    "tier": "GitHub Gist Wave 4 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WebhookWatch",
+    "url": "https://gist.github.com/jibranpcccc/b7d0683be4cc41eedb14c0f1cbf47f99",
+    "tier": "GitHub Gist Wave 4 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FounderRunway",
+    "url": "https://gist.github.com/jibranpcccc/6d9098d38bb8b61710cfd07417efcb7f",
+    "tier": "GitHub Gist Wave 4 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "RAGInspect",
+    "url": "https://gist.github.com/jibranpcccc/071ad479bb07c93922b2883c7871707b",
+    "tier": "GitHub Gist Wave 4 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://rentry.co/yrbmertb",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://gist.github.com/jibranpcccc/3da95b20b1ef514f995f3105003c76f4",
+    "tier": "GitHub Gist Wave 4 (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://tinyurl.com/2ap2gyz3",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://paste.rs/FjFBr",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://ulvis.net/UkOn",
+    "tier": "Ulvis Authority Gateway (DA 75)",
+    "blogs": {
+      "success": true,
+      "msg": "Got 403 response for https://ulvis.net/UkOn"
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/local-agent-hardware-stack/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://cleanuri.com/4JXvgg",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/local-agent-hardware-stack@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://rentry.co/w76t5fcq",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://ulvis.net/n3mD",
+    "tier": "Ulvis Authority Gateway (DA 75)",
+    "blogs": {
+      "success": true,
+      "msg": "Got 403 response for https://ulvis.net/n3mD"
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://paste.rs/yAEGR",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://cleanuri.com/wlM5G9",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/workation-coliving-radar@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenAgentStack",
+    "url": "https://rentry.co/d4gvuu6n",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://tinyurl.com/2a8dh7c8",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenAgentStack",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/open-agent-protocol-hub@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenAgentStack",
+    "url": "https://tinyurl.com/28763667",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/workation-coliving-radar/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenAgentStack",
+    "url": "https://cleanuri.com/E6VEXY",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenAgentStack",
+    "url": "https://ulvis.net/Ja9t",
+    "tier": "Ulvis Authority Gateway (DA 75)",
+    "blogs": {
+      "success": true,
+      "msg": "Got 403 response for https://ulvis.net/Ja9t"
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenAgentStack",
+    "url": "https://paste.rs/SrFOs",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WorkationRadar",
+    "url": "https://web.archive.org/web/https://jibranpcccc.github.io/workationradar/split-croatia-coliving-guide/",
+    "tier": "Wayback Machine Archive (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://rentry.co/3qk86c25",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalAgentStack",
+    "url": "https://web.archive.org/web/https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-multi-gpu-tensor-parallel-docker/",
+    "tier": "Wayback Machine Archive (DA 96)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://paste.rs/8fYsj",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/indie-saas-stack-audit@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenAgentStack",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/open-agent-protocol-hub/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "VectorBench",
+    "url": "https://rentry.co/86srp8w6",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://ulvis.net/tWYR",
+    "tier": "Ulvis Authority Gateway (DA 75)",
+    "blogs": {
+      "success": true,
+      "msg": "Got 403 response for https://ulvis.net/tWYR"
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://cleanuri.com/OrRYpZ",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://tinyurl.com/264cgl3d",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "VectorBench",
+    "url": "https://ulvis.net/Uy1r",
+    "tier": "Ulvis Authority Gateway (DA 75)",
+    "blogs": {
+      "success": true,
+      "msg": "Got 403 response for https://ulvis.net/Uy1r"
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "VectorBench",
+    "url": "https://paste.rs/Kxpdf",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "VectorBench",
+    "url": "https://tinyurl.com/2bvsgku3",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "IndieStackAudit",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/indie-saas-stack-audit/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "VectorBench",
+    "url": "https://cleanuri.com/p5PLg5",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "VectorBench",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/vector-database-benchmarks/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://paste.rs/gt1B6",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://rentry.co/2ere5zqv",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "VectorBench",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/vector-database-benchmarks@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://cleanuri.com/bwvePr",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WebhookWatch",
+    "url": "https://rentry.co/r3d7nagn",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/nomad-tax-treaty-calculator@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WebhookWatch",
+    "url": "https://ulvis.net/4j5f",
+    "tier": "Ulvis Authority Gateway (DA 75)",
+    "blogs": {
+      "success": true,
+      "msg": "Got 403 response for https://ulvis.net/4j5f"
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://tinyurl.com/2caskfxm",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadTreaty",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/nomad-tax-treaty-calculator/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WebhookWatch",
+    "url": "https://paste.rs/dLmI6",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WebhookWatch",
+    "url": "https://tinyurl.com/26m94lol",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WebhookWatch",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/webhook-signature-audit@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WebhookWatch",
+    "url": "https://cleanuri.com/Lryk7M",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
+    "url": "https://rentry.co/3mohfcfn",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
+    "url": "https://paste.rs/ELVbm",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "WebhookWatch",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/webhook-signature-audit/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
+    "url": "https://tinyurl.com/233cnnya",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
+    "url": "https://ulvis.net/WAyq",
+    "tier": "Ulvis Authority Gateway (DA 75)",
+    "blogs": {
+      "success": true,
+      "msg": "Got 403 response for https://ulvis.net/WAyq"
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FounderRunway",
+    "url": "https://ulvis.net/L861",
+    "tier": "Ulvis Authority Gateway (DA 75)",
+    "blogs": {
+      "success": true,
+      "msg": "Got 403 response for https://ulvis.net/L861"
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/local-pdf-privacy-redactor@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
+    "url": "https://cleanuri.com/7drQJ1",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FounderRunway",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/founder-runway-calculator@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "LocalDocPrivacy",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/local-pdf-privacy-redactor/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FounderRunway",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/founder-runway-calculator/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FounderRunway",
+    "url": "https://tinyurl.com/27nbr9o6",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FounderRunway",
+    "url": "https://rentry.co/okqqazt8",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "RAGInspect",
+    "url": "https://rentry.co/ikct7pp4",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FounderRunway",
+    "url": "https://cleanuri.com/AMdrXO",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "RAGInspect",
+    "url": "https://cleanuri.com/kmRw2l",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "FounderRunway",
+    "url": "https://paste.rs/efMDQ",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "RAGInspect",
+    "url": "https://paste.rs/QWFrj",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "RAGInspect",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/rag-semantic-chunking-bench/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://paste.rs/1mj8e",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://rentry.co/737kcihm",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/nomad-passport-visa-index@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://tinyurl.com/2xsyhs9o",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "RAGInspect",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/rag-semantic-chunking-bench@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "RAGInspect",
+    "url": "https://ulvis.net/hULF",
+    "tier": "Ulvis Authority Gateway (DA 75)",
+    "blogs": {
+      "success": true,
+      "msg": "Got 403 response for https://ulvis.net/hULF"
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/nomad-passport-visa-index/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://ulvis.net/SEWm",
+    "tier": "Ulvis Authority Gateway (DA 75)",
+    "blogs": {
+      "success": true,
+      "msg": "Got 403 response for https://ulvis.net/SEWm"
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "RAGInspect",
+    "url": "https://tinyurl.com/2bfmfxzq",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SaaSUnitMath",
+    "url": "https://rentry.co/rs3zqhbb",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SaaSUnitMath",
+    "url": "https://paste.rs/CWNth",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SaaSUnitMath",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/saas-unit-economics-calculator@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SaaSUnitMath",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/saas-unit-economics-calculator/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://rentry.co/swiqdvh9",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "NomadPassportIndex",
+    "url": "https://cleanuri.com/NY2lZ1",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/nginx-grok-log-tester@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://ulvis.net/FWqE",
+    "tier": "Ulvis Authority Gateway (DA 75)",
+    "blogs": {
+      "success": true,
+      "msg": "Got 403 response for https://ulvis.net/FWqE"
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://paste.rs/xzSUr",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SOC2Ready",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/soc2-readiness-checklist@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://tinyurl.com/22wlcbaj",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SOC2Ready",
+    "url": "https://paste.rs/ZvRO9",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EORCalculator",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/global-eor-payroll-calculator@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EORCalculator",
+    "url": "https://rentry.co/nwn33u2h",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/nginx-grok-log-tester/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GrokLogTester",
+    "url": "https://cleanuri.com/Yw1jnv",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SOC2Ready",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/soc2-readiness-checklist/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EORCalculator",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/global-eor-payroll-calculator/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "SOC2Ready",
+    "url": "https://rentry.co/fayxaby9",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EORCalculator",
+    "url": "https://paste.rs/zyYo2",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DevConfigHub",
+    "url": "https://paste.rs/dXBoc",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenCRMStack",
+    "url": "https://paste.rs/Ck5Hn",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DevConfigHub",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/devcontainer-docker-generator/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenCRMStack",
+    "url": "https://ulvis.net/2GIm",
+    "tier": "Ulvis Authority Gateway (DA 75)",
+    "blogs": {
+      "success": true,
+      "msg": "Got 403 response for https://ulvis.net/2GIm"
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenCRMStack",
+    "url": "https://tinyurl.com/29frzlmr",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenCRMStack",
+    "url": "https://cleanuri.com/zE0Jkj",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "DevConfigHub",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/devcontainer-docker-generator@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenCRMStack",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/open-crm-migration-tco@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "OpenCRMStack",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/open-crm-migration-tco/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GreekVisualizer",
+    "url": "https://rentry.co/6mavszkf",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "CIPipelineGraph",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/github-actions-dag-validator@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "CIPipelineGraph",
+    "url": "https://paste.rs/SbSYq",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EdgeRuntimeHQ",
+    "url": "https://rentry.co/6ndwtshr",
+    "tier": "Rentry Markdown Dossier (DA 78)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "CIPipelineGraph",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/github-actions-dag-validator/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GreekVisualizer",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/options-greeks-visualizer@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EdgeRuntimeHQ",
+    "url": "https://paste.rs/qbzG5",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EdgeRuntimeHQ",
+    "url": "https://tinyurl.com/28bysfxc",
+    "tier": "TinyURL Authority Redirect (DA 94)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GreekVisualizer",
+    "url": "https://paste.rs/wdmRU",
+    "tier": "Paste.rs Technical Spec (DA 72)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EdgeRuntimeHQ",
+    "url": "https://ulvis.net/57ro",
+    "tier": "Ulvis Authority Gateway (DA 75)",
+    "blogs": {
+      "success": true,
+      "msg": "Got 403 response for https://ulvis.net/57ro"
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EdgeRuntimeHQ",
+    "url": "https://cleanuri.com/80PDMQ",
+    "tier": "CleanURI Authority Redirect (DA 76)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "GreekVisualizer",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/options-greeks-visualizer/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EdgeRuntimeHQ",
+    "url": "https://cdn.jsdelivr.net/gh/jibranpcccc/webgpu-edge-inference-bench@main/README.md",
+    "tier": "jsDelivr Open CDN (DA 92)",
+    "blogs": {
+      "success": true,
+      "msg": "Succeeded."
+    },
+    "twingly": {
+      "success": true,
+      "msg": "Thanks for the ping."
+    }
+  },
+  {
+    "brand": "EdgeRuntimeHQ",
+    "url": "https://cdn.statically.io/gh/jibranpcccc/webgpu-edge-inference-bench/main/README.md",
+    "tier": "Statically Multi-CDN (DA 81)",
     "blogs": {
       "success": true,
       "msg": "Succeeded."

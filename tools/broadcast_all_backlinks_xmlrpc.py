@@ -11,6 +11,7 @@ import time
 import socket
 import xmlrpc.client
 import json
+import concurrent.futures
 
 socket.setdefaulttimeout(12.0)
 
@@ -36,6 +37,21 @@ def ping_twingly(title, url):
     except Exception as e:
         return False, str(e)
 
+def ping_worker(item):
+    brand = item["Brand Name"]
+    backlink_url = item["Live Backlink URL"]
+    tier = item["Platform Tier"]
+    title = f"{brand} - {tier}"
+    blogs_ok, blogs_msg = ping_blogs(title, backlink_url)
+    twingly_ok, twingly_msg = ping_twingly(title, backlink_url)
+    return {
+        "brand": brand,
+        "url": backlink_url,
+        "tier": tier,
+        "blogs": {"success": blogs_ok, "msg": blogs_msg},
+        "twingly": {"success": twingly_ok, "msg": twingly_msg}
+    }
+
 def main():
     if not os.path.exists(CSV_PATH):
         print(f"Error: {CSV_PATH} not found.")
@@ -49,49 +65,20 @@ def main():
     print(f"BROADCASTING XML-RPC PINGS ACROSS {len(all_backlinks)} LIVE BACKLINKS")
     print("==========================================================================\n")
 
+    targets = [b for b in all_backlinks if any(t.lower() in b.get("Platform Tier", "").lower() for t in [
+        "github", "raw cdn", "google colab", "rentry", "paste.rs", "tinyurl", "cleanuri", "ulvis", "jsdelivr", "statically", "wayback"
+    ])]
+
+    print(f"Selected {len(targets)} authority backlink targets for concurrent broadcast...", flush=True)
+
     telemetry = []
-
-    # Filter to high-priority hubs: Repos, Releases, Issues, Gists, Pages, CDNs
-    high_priority_tiers = [
-        "GitHub Repository (DA 96)",
-        "GitHub Release v1.0 (DA 96)",
-        "GitHub Release v1.1 (DA 96)",
-        "GitHub Issue #1 (DA 96)",
-        "GitHub Issue #2 RFC (DA 96)",
-        "GitHub Gist Wave 1 (DA 96)",
-        "GitHub Gist Wave 2 (DA 96)",
-        "GitHub Pages Profile (DA 96)",
-        "GitHub Pages Benchmark Hub (DA 96)",
-        "GitHub Raw CDN Docs (DA 96)",
-        "GitHub Raw CDN Benchmarks (DA 96)",
-        "GitHub Profile (DA 96)",
-        "GitHub Pages (DA 96)",
-        "GitHub Pages Root (DA 96)"
-    ]
-    targets = [b for b in all_backlinks if any(t in b.get("Platform Tier", "") for t in ["GitHub", "Raw CDN", "Google Colab"])]
-
-    print(f"Selected {len(targets)} authority backlink targets for immediate broadcast...")
-
-    for idx, item in enumerate(targets, 1):
-        brand = item["Brand Name"]
-        backlink_url = item["Live Backlink URL"]
-        tier = item["Platform Tier"]
-        title = f"{brand} - {tier}"
-
-        print(f"[{idx:3d}/{len(targets)}] Pinging: {backlink_url} ({brand})")
-
-        blogs_ok, blogs_msg = ping_blogs(title, backlink_url)
-        twingly_ok, twingly_msg = ping_twingly(title, backlink_url)
-
-        telemetry.append({
-            "brand": brand,
-            "url": backlink_url,
-            "tier": tier,
-            "blogs": {"success": blogs_ok, "msg": blogs_msg},
-            "twingly": {"success": twingly_ok, "msg": twingly_msg}
-        })
-
-        time.sleep(0.2)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+        futures = [executor.submit(ping_worker, item) for item in targets]
+        for idx, f in enumerate(concurrent.futures.as_completed(futures), 1):
+            res = f.result()
+            telemetry.append(res)
+            if idx % 50 == 0 or idx == len(targets):
+                print(f"  [{idx:3d}/{len(targets)}] Broadcasted: {res['url']} ({res['brand']})", flush=True)
 
     out_json = os.path.join(ROOT_DIR, "data", "backlinks_xmlrpc_telemetry.json")
     with open(out_json, "w", encoding="utf-8") as f:
