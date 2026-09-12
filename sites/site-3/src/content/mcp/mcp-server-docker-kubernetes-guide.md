@@ -7,8 +7,6 @@ author: "OpenAgentStack Core"
 date: "2026-09-08"
 ---
 
-# Containerizing Model Context Protocol (MCP) Servers in Docker & Kubernetes
-
 > **Quick Answer**: Containerizing **Model Context Protocol (MCP)** servers requires bridging local stdin/stdout process pipes to distributed network primitives. In production, wrap MCP servers with a **Server-Sent Events (SSE) or WebSocket transport gateway** (e.g. `mcp-proxy`), packaged in minimal multi-stage Alpine Docker containers, and orchestrated in Kubernetes as stateless Deployments with horizontal pod autoscalers (HPA).
 
 ## Key Takeaways

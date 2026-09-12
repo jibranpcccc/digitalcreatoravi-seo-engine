@@ -2,56 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://openagentstack.pages.dev/</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://openagentstack.pages.dev/frameworks/browser-use-vs-playwright-mcp-web-automation-benchmark/</loc>
-    <lastmod>2026-09-05</lastmod>
+    <loc>https://openagentstack.pages.dev/agents/langgraph-vs-autogen-multi-agent-orchestration-cost/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://openagentstack.pages.dev/frameworks/langgraph-vs-crewai-vs-autogen-multi-agent-benchmark-2026/</loc>
-    <lastmod>2026-09-05</lastmod>
+    <loc>https://openagentstack.pages.dev/protocols/building-production-mcp-servers-fastapi-sse/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://openagentstack.pages.dev/mcp/top-15-production-mcp-servers-docker-guide/</loc>
-    <lastmod>2026-09-05</lastmod>
+    <loc>https://openagentstack.pages.dev/frameworks/smolagents-vs-crewai-lightweight-python-agents/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://openagentstack.pages.dev/frameworks/smolagents-minimalist-code-agents-huggingface-guide/</loc>
-    <lastmod>2026-09-05</lastmod>
+    <loc>https://openagentstack.pages.dev/mcp-server-docker-kubernetes-guide/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://openagentstack.pages.dev/mcp/local-deepseek-r1-tool-calling-ollama-mcp/</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://openagentstack.pages.dev/mcp/mcp-server-docker-kubernetes-guide/</loc>
-    <lastmod>2026-09-09T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://openagentstack.pages.dev/agents/langgraph-postgres-checkpointer-persistence/</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://openagentstack.pages.dev/agents/smolagents-coding-agent-claude-tutorial/</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://openagentstack.pages.dev/frameworks/browser-use-vs-playwright-mcp-web-automation-benchmark/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://openagentstack.pages.dev/frameworks/langgraph-vs-crewai-vs-autogen-multi-agent-benchmark-2026/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://openagentstack.pages.dev/frameworks/smolagents-minimalist-code-agents-huggingface-guide/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://openagentstack.pages.dev/mcp/local-deepseek-r1-tool-calling-ollama-mcp/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://openagentstack.pages.dev/mcp/mcp-server-docker-kubernetes-guide/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://openagentstack.pages.dev/mcp/top-15-production-mcp-servers-docker-guide/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

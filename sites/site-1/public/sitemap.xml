@@ -2,86 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/ollama-vs-vllm-benchmark/</loc>
-    <lastmod>2026-09-05</lastmod>
+    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/rtx-5090-vs-4090-local-llm-benchmark/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/vram-requirements-calculator-70b/</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-local-setup-ollama/</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/mac-studio-m4-max-llm-benchmarks/</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/agents/custom-mcp-server-python-tutorial/</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/2x-rtx-3090-vs-1x-rtx-4090-ai-inference/</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/q4_k_m-vs-q8_0-coding-accuracy-test/</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/local-rag-stack-chromadb-ollama/</loc>
-    <lastmod>2026-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/agents/claude-code-scheduled-tasks-cron/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/agents/custom-mcp-server-python-tutorial/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/2x-rtx-3090-vs-1x-rtx-4090-ai-inference/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/deepseek-r1-70b-dual-rtx-3090-setup/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/mac-studio-m4-max-llm-benchmarks/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/rtx-5090-vs-4090-local-llm-benchmark/</loc>
-    <lastmod>2026-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/vram-requirements-calculator-70b/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/llama-cpp-vs-exllamav2-quantization-speed/</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/local-rag-stack-chromadb-ollama/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/ollama-vs-vllm-benchmark/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-multi-gpu-tensor-parallel-docker/</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/deepseek-r1-70b-dual-rtx-3090-setup/</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-local-setup-ollama/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/q4_k_m-vs-q8_0-coding-accuracy-test/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

@@ -2,44 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nomadpassportindex.netlify.app/</loc>
-    <lastmod>2026-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nomadpassportindex.netlify.app/spain-digital-nomad-visa-income-requirements/</loc>
-    <lastmod>2026-09-06T00:00:00+00:00</lastmod>
+    <loc>https://nomadpassportindex.netlify.app/costa-rica-digital-nomad-visa-bank-statement-guide/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nomadpassportindex.netlify.app/japan-digital-nomad-visa-guide-tax-exemption/</loc>
-    <lastmod>2026-09-06T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nomadpassportindex.netlify.app/easiest-digital-nomad-visas-in-europe-2026/</loc>
-    <lastmod>2026-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nomadpassportindex.netlify.app/greece-digital-nomad-visa-income-requirements/</loc>
-    <lastmod>2026-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nomadpassportindex.netlify.app/costa-rica-digital-nomad-visa-bank-statement-guide/</loc>
-    <lastmod>2026-09-09</lastmod>
+    <loc>https://nomadpassportindex.netlify.app/japan-digital-nomad-visa-guide-tax-exemption/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nomadpassportindex.netlify.app/malaysia-de-rantau-digital-nomad-pass-tech-freelancers/</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nomadpassportindex.netlify.app/spain-digital-nomad-visa-income-requirements/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

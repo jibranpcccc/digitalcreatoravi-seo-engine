@@ -9,8 +9,6 @@ author: "OpenAgentStack Core"
 tags: ["langgraph", "checkpointer", "postgresql", "agents", "persistence"]
 ---
 
-# LangGraph State Persistence with PostgreSQL Checkpointers in Production
-
 > **Quick Answer**: In production multi-agent architectures, **LangGraph's AsyncPostgresSaver** provides fault-tolerant state persistence across distributed worker instances with sub-5ms write overhead. By combining asynchronous connection pooling via `psycopg_pool` with automatic schema migrations and serialized JSON checkpoint deltas, teams achieve enterprise-grade time-travel debugging, seamless human-in-the-loop pause/resume workflows, and zero memory loss during container rollouts.
 
 *Published: September 10, 2026 | Verified for LangGraph v0.2.x+ and PostgreSQL 16+*

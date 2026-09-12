@@ -3,6 +3,7 @@ interface Props {
   title: string;
   description: string;
   slug?: string;
+  canonical?: string;
   type?: string;
   schema?: any;
 }
@@ -11,13 +12,14 @@ const {
   title,
   description,
   slug = "",
+  canonical: explicitCanonical,
   type = "website",
   schema = null
 } = Astro.props;
 
-const canonical = slug 
-  ? `https://vectorbench-hq.netlify.app/${slug}/`
-  : "https://vectorbench-hq.netlify.app/";
+const canonical = explicitCanonical 
+  ? explicitCanonical 
+  : (slug ? `https://vectorbench-hq.netlify.app/${slug}/` : "https://vectorbench-hq.netlify.app/");
 
 const ogImage = "https://vectorbench-hq.netlify.app/og-vectorbench.png";
 ---

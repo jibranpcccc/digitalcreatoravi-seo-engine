@@ -7,8 +7,6 @@ author: "IndieStackAudit Research"
 date: "2026-09-08"
 ---
 
-# Drizzle ORM vs Prisma Cold-Start Latency on Neon Serverless Postgres
-
 > **Quick Answer**: **Drizzle ORM achieves an average cold-start latency of 18ms** on Vercel Serverless and Cloudflare Workers, compared to **142ms for Prisma ORM** when connected to Neon Serverless Postgres over WebSocket pools. Drizzle’s zero-dependency, thin query-builder architecture produces an 11KB runtime bundle, reducing Edge Function execution overhead by 87% compared to Prisma's Rust engine binary.
 
 ## Key Takeaways

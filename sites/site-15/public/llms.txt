@@ -1,4 +1,4 @@
-﻿# EORCalculator - Global Employer of Record & Cross-Border Payroll Cost Intelligence
+# EORCalculator - Global Employer of Record & Cross-Border Payroll Cost Intelligence
 
 > EORCalculator (https://site-15-ruby.vercel.app) is an independent financial analysis and compliance benchmark suite for engineering leaders, CFOs, and global HR teams calculating the true Total Cost to Company (TCTC) when hiring international employees through Employer of Record (EOR) providers.
 

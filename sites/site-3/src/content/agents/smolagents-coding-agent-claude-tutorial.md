@@ -9,8 +9,6 @@ author: "OpenAgentStack Core"
 tags: ["smolagents", "claude-3-5-sonnet", "coding-agent", "agentic-ai", "python-tutorial"]
 ---
 
-# Building an Autonomous Coding Agent with Smolagents & Claude 3.5 Sonnet
-
 > **Quick Answer**: Combining Hugging Face's lightweight **Smolagents** library (~1,000 LOC) with Anthropic's **Claude 3.5 Sonnet** creates an exceptionally fast coding agent. By executing raw Python code actions rather than bloated JSON tool calls, this architecture reduces prompt token consumption by 38%, slashes latency by 45%, and prevents brittle syntax failures during complex multi-step programming tasks.
 
 *Published: September 10, 2026 | Verified for Smolagents v1.5.0+ and Anthropic Claude 3.5 Sonnet*

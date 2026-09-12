@@ -10,13 +10,15 @@ interface Props {
 const {
   title,
   description,
-  canonical = Astro.url.href,
+  canonical,
   slug = '',
   schema
 } = Astro.props;
 
 const siteUrl = 'https://localdocprivacy.netlify.app';
-const fullCanonical = slug ? `${siteUrl}/${slug}/` : siteUrl + '/';
+const fullCanonical = canonical 
+  ? canonical 
+  : (slug ? `${siteUrl}/${slug}/` : siteUrl + '/');
 ---
 
 <!DOCTYPE html>
