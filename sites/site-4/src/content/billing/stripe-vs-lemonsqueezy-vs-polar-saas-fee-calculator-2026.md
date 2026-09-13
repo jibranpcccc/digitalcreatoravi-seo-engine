@@ -48,7 +48,7 @@ export async function createCheckoutSession(customerEmail: string) {
 }
 ```
 
-## Extended Architecture & In-Depth Technical Breakdown
+## Why Stripe's "2.9%" Is Misleading for Solo Developers
 
 ### The True Cost of Self-Managed Sales Tax
 While Stripe Direct advertises a lower nominal transaction fee (2.9% + 30¢), operating as your own merchant of record imposes severe hidden accounting overhead. In the European Union, the VAT MOSS regulation mandates that digital software sales collect and remit value-added tax according to the buyer's home country. In the United States, over 30 states have established economic nexus thresholds for remote digital sellers.
@@ -98,7 +98,7 @@ With Stripe Direct, you are the legal seller of record on every single transacti
 * **Hidden Regulatory Burden**: You are legally responsible for tracking economic nexus thresholds. Once you exceed 200 transactions or $100,000 in sales in states like California or New York, or make even a single sale in the EU under VAT MOSS rules, you must register, file quarterly returns, and remit payments to each local tax authority.
 * **Effective Fee Reality**: Adding Stripe Tax (+0.5%), automated compliance software like TaxJar ($99/mo base), international card interchange (+1.5%), and specialized CPA fees pushes Stripe's real fee well above 4.5%.
 
-## Production Failure Modes & Operational Gotchas
+## 4 Costly Gotchas: Where Founders Lose Margin
 
 ### 1. Webhook Signature Verification Failures
 Payment webhooks can fail verification if payload buffering alters whitespace or secret keys are misconfigured in serverless lambdas.
@@ -116,7 +116,7 @@ International credit card transactions processed via direct gateways incur hidde
 Upgrades from monthly to annual tiers can generate unexpected invoices if proration behavior is not configured deterministically.
 * **Mitigation**: Set explicit proration policies (`proration_behavior: "create_prorations"`) in session parameters.
 
-## Production Implementation: Resilient Polar Webhook Handler with Idempotency
+## Production Webhook Handler with Idempotency
 
 To prevent duplicate license activations, double fulfillments, or lost checkout events during network retries, verify the cryptographic HMAC signature and enforce idempotent execution in your database:
 

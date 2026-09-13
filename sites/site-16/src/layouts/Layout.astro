@@ -94,6 +94,209 @@ const ogImageUrl = image.startsWith('http') ? image : `https://site-16-indol.ver
       gtag('config', 'G-DCH1626016', { anonymize_ip: true });
     </script>
 
+      <style is:global>
+      /* Masterclass Editorial & Technical Typography for DevConfigHub */
+      .prose {
+        color: #cbd5e1;
+        font-size: 1.0625rem;
+        line-height: 1.85;
+        max-width: 100%;
+      }
+
+      .prose h1, .prose h2, .prose h3, .prose h4 {
+        color: #f8fafc;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+      }
+
+      .prose h2 {
+        font-size: 1.75rem;
+        margin-top: 3.5rem;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .prose h3 {
+        font-size: 1.35rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: #e2e8f0;
+      }
+
+      .prose h4 {
+        font-size: 1.125rem;
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+        color: #38bdf8;
+      }
+
+      .prose p {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        color: #cbd5e1;
+        line-height: 1.85;
+      }
+
+      .prose strong {
+        color: #ffffff;
+        font-weight: 700;
+      }
+
+      .prose a {
+        color: #38bdf8;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        font-weight: 500;
+        transition: color 0.15s ease;
+      }
+      .prose a:hover {
+        color: #ffffff;
+      }
+
+      .prose ul {
+        list-style-type: disc !important;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding-left: 1.75rem !important;
+      }
+
+      .prose ol {
+        list-style-type: decimal !important;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding-left: 1.75rem !important;
+      }
+
+      .prose li {
+        margin-top: 0.625rem;
+        margin-bottom: 0.625rem;
+        line-height: 1.8;
+        color: #cbd5e1;
+        display: list-item !important;
+      }
+
+      .prose li::marker {
+        color: #0284c7;
+      }
+
+      .prose blockquote {
+        margin: 2.25rem 0;
+        padding: 1.5rem 1.75rem;
+        background: linear-gradient(135deg, rgba(2, 132, 199, 0.25) 0%, rgba(8, 47, 73, 0.7) 100%);
+        border-left: 4px solid #0284c7;
+        border-top: 1px solid rgba(148, 163, 184, 0.15);
+        border-right: 1px solid rgba(148, 163, 184, 0.15);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+        border-radius: 0 1rem 1rem 0;
+        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+      }
+
+      .prose blockquote p {
+        color: #e2e8f0;
+        margin: 0.5rem 0;
+        line-height: 1.8;
+      }
+
+      .prose blockquote strong {
+        color: #ffffff;
+      }
+
+      /* Modern Data Tables */
+      .prose table {
+        width: 100%;
+        border-collapse: separate !important;
+        border-spacing: 0;
+        margin: 2.5rem 0;
+        border-radius: 0.875rem;
+        overflow: hidden;
+        border: 1px solid #334155;
+        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+        font-size: 0.9375rem;
+      }
+
+      .prose thead {
+        background: #0f172a;
+      }
+
+      .prose th {
+        padding: 1.125rem 1.25rem;
+        font-size: 0.8125rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #f1f5f9;
+        text-align: left;
+        border-bottom: 2px solid #334155;
+        background: #0f172a;
+      }
+
+      .prose td {
+        padding: 1rem 1.25rem;
+        color: #cbd5e1;
+        border-bottom: 1px solid #1e293b;
+        vertical-align: middle;
+      }
+
+      .prose tr:last-child td {
+        border-bottom: none;
+      }
+
+      .prose tbody tr {
+        background: rgba(15, 23, 42, 0.5);
+        transition: background 0.15s ease;
+      }
+
+      .prose tbody tr:nth-child(even) {
+        background: rgba(30, 41, 59, 0.4);
+      }
+
+      .prose tbody tr:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      /* Code and Syntax */
+      .prose code:not(pre code) {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.875em;
+        font-weight: 600;
+        color: #38bdf8;
+        background: rgba(15, 23, 42, 0.8);
+        padding: 0.2em 0.45em;
+        border-radius: 0.375rem;
+        border: 1px solid rgba(148, 163, 184, 0.2);
+      }
+
+      .prose pre {
+        margin: 2.25rem 0;
+        padding: 1.35rem 1.5rem;
+        background: #090d16 !important;
+        border: 1px solid #1e293b;
+        border-radius: 0.875rem;
+        overflow-x: auto;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+      }
+
+      .prose pre code {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.875rem;
+        line-height: 1.7;
+        color: #e2e8f0;
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+      }
+
+      .prose hr {
+        margin: 3.5rem 0;
+        border: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.25), transparent);
+      }
+    </style>
   </head>
   <body class="bg-[#0B0F19] text-slate-100 antialiased font-['Plus_Jakarta_Sans',sans-serif] selection:bg-emerald-500/30 selection:text-emerald-200 min-h-screen flex flex-col relative overflow-x-hidden">
 
