@@ -144,32 +144,3 @@ Yes. You can deploy Supabase GoTrue and Studio independently and configure the `
 
 ### How do point-in-time recovery (PITR) workflows compare between the two?
 Neon provides instantaneous point-in-time recovery and copy-on-write branching at any historical second within your retention window. Self-hosted Supabase requires configuring WAL-G or pgBackRest with continuous S3 WAL archiving.
-
-
----
-
-## Semantic Architecture & NLP Entity Optimization
-
-Authoritative production deployment of **self hosted supabase managed** requires rigorous alignment with industry standard parameters. In enterprise environments, configuring **production architecture**, **latency p95 p99**, **high availability failover** alongside **docker containerization**, **idempotency key**, **memory footprint mb** guarantees deterministic execution, zero configuration drift, and verified throughput SLAs.
-
-Furthermore, architectural optimization targeting **throughput qps**, **total cost of ownership**, **configuration yaml** requires systematic calibration against **dead letter queue dlq**, **schema validation**, **zero downtime deployment**. Production deployments maintaining continuous telemetry and hardware verification ensure sustained uptime and full compliance across **self hosted supabase managed**, **self hosted**, **self hosted supabase managed benchmark**.
-
-| Core Entity | Classification | Target Parameter / SLA | Production Status |
-| :--- | :--- | :--- | :--- |
-| **self hosted supabase managed** | Primary Entity | Calibrated for peak efficiency | Verified SLA |
-| **self hosted** | Primary Entity | Calibrated for peak efficiency | Verified SLA |
-| **self hosted supabase managed benchmark** | Primary Entity | Calibrated for peak efficiency | Verified SLA |
-| **production architecture** | Secondary Entity | Calibrated for peak efficiency | Verified SLA |
-| **latency p95 p99** | Secondary Entity | Calibrated for peak efficiency | Verified SLA |
-| **high availability failover** | Secondary Entity | Calibrated for peak efficiency | Verified SLA |
-| **throughput qps** | Secondary Entity | Calibrated for peak efficiency | Verified SLA |
-| **total cost of ownership** | Secondary Entity | Calibrated for peak efficiency | Verified SLA |
-| **configuration yaml** | Secondary Entity | Calibrated for peak efficiency | Verified SLA |
-| **docker containerization** | LSI Entity | Calibrated for peak efficiency | Verified SLA |
-| **idempotency key** | LSI Entity | Calibrated for peak efficiency | Verified SLA |
-| **memory footprint mb** | LSI Entity | Calibrated for peak efficiency | Verified SLA |
-| **dead letter queue dlq** | LSI Entity | Calibrated for peak efficiency | Verified SLA |
-| **schema validation** | LSI Entity | Calibrated for peak efficiency | Verified SLA |
-| **zero downtime deployment** | LSI Entity | Calibrated for peak efficiency | Verified SLA |
-
-Continuous monitoring and semantic validation ensure all interrelated components maintain low latency and full compliance with target specifications for **self hosted supabase managed**.
