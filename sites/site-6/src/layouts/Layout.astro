@@ -15,9 +15,9 @@ const {
   schema = null
 } = Astro.props;
 
-const canonical = slug 
-  ? `https://nomadtreaty.vercel.app/${slug}/`
-  : "https://nomadtreaty.vercel.app/";
+let cleanPath = Astro.url.pathname;
+if (!cleanPath.endsWith('/')) cleanPath += '/';
+const canonical = `${'https://nomadtreaty.vercel.app'}${cleanPath === '/' ? '/' : cleanPath}`;
 
 const ogImage = "https://nomadtreaty.vercel.app/og-nomadtreaty.png";
 ---

@@ -17,9 +17,9 @@ const {
   schema = null
 } = Astro.props;
 
-const canonical = explicitCanonical 
-  ? explicitCanonical 
-  : (slug ? `https://vectorbench-hq.netlify.app/${slug}/` : "https://vectorbench-hq.netlify.app/");
+let cleanPath = Astro.url.pathname;
+if (!cleanPath.endsWith('/')) cleanPath += '/';
+const canonical = explicitCanonical || `${'https://vectorbench-hq.netlify.app'}${cleanPath === '/' ? '/' : cleanPath}`;
 
 const ogImage = "https://vectorbench-hq.netlify.app/og-vectorbench.png";
 ---

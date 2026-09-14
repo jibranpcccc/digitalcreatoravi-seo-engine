@@ -16,7 +16,9 @@ const {
 } = Astro.props;
 
 const siteUrl = 'https://edgeruntimehq.pages.dev';
-const fullCanonical = canonical || (slug ? `${siteUrl}/${slug.replace(/^\/|\/$/g, '')}/` : `${siteUrl}/`);
+let cleanPath = Astro.url.pathname;
+if (!cleanPath.endsWith('/')) cleanPath += '/';
+const fullCanonical = canonical || `${'https://edgeruntimehq.pages.dev'}${cleanPath === '/' ? '/' : cleanPath}`;
 ---
 
 <!DOCTYPE html>

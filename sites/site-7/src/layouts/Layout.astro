@@ -15,9 +15,9 @@ const {
   schema = null
 } = Astro.props;
 
-const canonical = slug 
-  ? `https://webhookwatch.vercel.app/${slug}/`
-  : "https://webhookwatch.vercel.app/";
+let cleanPath = Astro.url.pathname;
+if (!cleanPath.endsWith('/')) cleanPath += '/';
+const canonical = `${'https://webhookwatch.vercel.app'}${cleanPath === '/' ? '/' : cleanPath}`;
 
 const ogImage = "https://webhookwatch.vercel.app/og-webhookwatch.png";
 ---

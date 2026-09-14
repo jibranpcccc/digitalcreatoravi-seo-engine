@@ -16,7 +16,9 @@ const {
 } = Astro.props;
 
 const siteUrl = 'https://site-9-inky.vercel.app';
-const fullCanonical = canonical || (slug ? `${siteUrl}/${slug}/` : siteUrl + '/');
+let cleanPath = Astro.url.pathname;
+if (!cleanPath.endsWith('/')) cleanPath += '/';
+const fullCanonical = canonical || `${'https://site-9-inky.vercel.app'}${cleanPath === '/' ? '/' : cleanPath}`;
 const ogImage = `${siteUrl}/og-preview.png`;
 ---
 

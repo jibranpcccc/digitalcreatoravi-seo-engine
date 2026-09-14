@@ -16,7 +16,9 @@ const {
 } = Astro.props;
 
 const siteUrl = 'https://nomadpassportindex.netlify.app';
-const canonicalUrl = canonical || (slug ? `${siteUrl}/${slug.replace(/^\/+|\/+$/g, '')}/` : `${siteUrl}/`);
+let cleanPath = Astro.url.pathname;
+if (!cleanPath.endsWith('/')) cleanPath += '/';
+const canonicalUrl = canonical || `${'https://nomadpassportindex.netlify.app'}${cleanPath === '/' ? '/' : cleanPath}`;
 const ogImageUrl = `${siteUrl}/og-nomad-passport.png`;
 ---
 

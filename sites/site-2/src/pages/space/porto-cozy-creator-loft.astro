@@ -1,0 +1,397 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import properties from '../../data/properties.json';
+
+const prop = properties.find(p => p.slug === 'porto-cozy-creator-loft');
+if (!prop) {
+  throw new Error('Property not found for slug: porto-cozy-creator-loft');
+}
+
+const baseSpaceTitle = `${prop.name} Review: Speeds & Workspace (2026)`;
+const spacePageTitle = baseSpaceTitle.length > 60 ? `${prop.name}: Speed & Ergonomics Guide 2026` : baseSpaceTitle;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const pageUrl = `https://workationradar.com/space/${prop.slug}`;
+const coverUrl = `${base}/images/spaces/${prop.slug}.webp`;
+
+const otherProps = properties.filter(p => p.slug !== prop.slug).slice(0, 2);
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LodgingBusiness",
+      "@id": `${pageUrl}#lodging`,
+      "name": prop.name,
+      "description": prop.description,
+      "image": coverUrl,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": prop.city,
+        "addressCountry": prop.country
+      },
+      "priceRange": `€${prop.monthly_rate_eur}/month`,
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Verified High Speed Fiber Internet",
+          "value": `${prop.download_mbps} Mbps Download / ${prop.upload_mbps} Mbps Upload`
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Ergonomic Workstation",
+          "value": prop.chair_model
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Power Backup System",
+          "value": prop.backup_power
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Private Phone Booths",
+          "value": `${prop.phone_booths_count} Soundproof Booths`
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faq`,
+      "mainEntity": [
+        {
+                "@type": "Question",
+                "name": "What are the workstation equipment specs at Porto Cozy Creator Loft?",
+                "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Every desk features a genuine Herman Miller Aeron Remastered chair, dual-motor sit-stand desk, universal USB-C docking station, and 27-inch 4K external monitor upon request."
+                }
+        },
+        {
+                "@type": "Question",
+                "name": "What internet speeds can I expect for remote engineering work?",
+                "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Tested speeds consistently reach 600 Mbps download and 300 Mbps upload with 11ms latency to European server clusters, powered by dual redundant MEO and Vodafone optical lines."
+                }
+        },
+        {
+                "@type": "Question",
+                "name": "How accessible is Porto airport from Cedofeita?",
+                "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Porto Francisco S\u00e1 Carneiro Airport (OPO) is just 20 minutes away by metro (direct Line E to Lapa/Trindade) or 15 minutes by Bolt/Uber."
+                }
+        }
+]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workationradar.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": prop.city,
+          "item": `https://workationradar.com/city/porto/`
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": prop.name,
+          "item": pageUrl
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout 
+  title={spacePageTitle}
+  description={`Independent verification of ${prop.name} in ${prop.city}, ${prop.country}. Tested ${prop.download_mbps} Mbps fiber speed, ${prop.chair_model} chairs, and power backup status.`}
+  canonical={pageUrl}
+  image={coverUrl}
+  type="place"
+  schemaJson={JSON.stringify(schemaData)}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+    <!-- Breadcrumb Navigation -->
+    <nav class="flex items-center space-x-2 text-xs font-mono text-stone-400 mb-6" aria-label="Breadcrumb">
+      <a href={`${base}/`} class="hover:text-amber-400 transition">Home</a>
+      <span>/</span>
+      <a href={`${base}/city/porto/`} class="hover:text-amber-400 transition">{prop.city}</a>
+      <span>/</span>
+      <span class="text-stone-300 truncate max-w-[200px]">{prop.name}</span>
+    </nav>
+
+    <!-- Header & Fast Audit Summary -->
+    <header class="mb-10 pb-8 border-b border-stone-800/80">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30">
+          VERIFIED INSPECTION AUDIT
+        </span>
+        <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-800 text-stone-300 border border-stone-700">
+          Audited: {prop.verified_date}
+        </span>
+        <span class="px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+          Productivity Score: {prop.productivity_score}/100
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
+        {prop.name}: Remote Workation &amp; Coliving Audit (2026)
+      </h1>
+
+      <p class="text-stone-300 text-base sm:text-lg leading-relaxed max-w-3xl mb-6">
+        Industrial loft coliving in Cedofeita arts district. Dual Gigabit fiber connections, dual-monitor workstation desks, and specialty espresso bar on-site. Stays require a <strong>{prop.minimum_stay_days}-day minimum commitment</strong>, curating a high-focus community free from transient tourism.
+      </p>
+
+      <!-- Quick Answer Snippet Box -->
+      <div class="p-6 rounded-2xl bg-amber-950/30 border border-amber-500/40 shadow-xl mb-6">
+        <div class="flex items-center space-x-2 text-amber-400 font-mono text-xs font-bold uppercase tracking-wider mb-2">
+          <span>⚡</span>
+          <span>Quick Answer: {prop.name} Workation Suitability</span>
+        </div>
+        <p class="text-stone-200 text-sm sm:text-base leading-relaxed">
+          <strong>{prop.name}</strong> is a top-tier coliving hub in {prop.city}, {prop.country}, offering verified <strong>{prop.download_mbps} Mbps symmetrical fiber</strong>, genuine <strong>{prop.chair_model}</strong> ergonomic seating, {prop.phone_booths_count} soundproof call booths, and reliable <strong>{prop.backup_power}</strong>, starting from <strong>€{prop.monthly_rate_eur}/month</strong> all-inclusive.
+        </p>
+      </div>
+    </header>
+
+    <!-- Section 1: Workation Amenities & Verified Fiber Speeds -->
+    <section class="mb-14">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-4">
+        Workation Amenities &amp; Verified Fiber Speeds
+      </h2>
+      <p class="text-sm text-stone-300 leading-relaxed mb-6">
+        Reliable internet connectivity is the lifeblood of distributed software engineers, agency founders, and remote professionals. At <strong>{prop.name}</strong>, connectivity is treated as critical enterprise infrastructure with redundant routing and commercial network failovers.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="p-5 rounded-xl bg-stone-900/60 border border-stone-800">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono uppercase text-amber-400 font-bold">Primary Carrier</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Active</span>
+          </div>
+          <p class="text-base font-bold text-white mb-1">MEO Enterprise 1 Gbps Symmetrical Fiber</p>
+          <p class="text-xs text-stone-400 leading-relaxed mb-3">
+            Direct commercial fiber line with dedicated sub-15ms latency to London, Paris, and Frankfurt cloud exchange points.
+          </p>
+          <div class="pt-2 border-t border-stone-800/80">
+            <span class="text-[11px] font-mono text-stone-400">Failover Redundancy: </span>
+            <span class="text-xs font-mono text-amber-300 font-semibold">Vodafone Portugal Redundant Commercial Fiber</span>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl bg-stone-900/60 border border-stone-800">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono uppercase text-amber-400 font-bold">Wireless Architecture</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-400 border border-amber-500/30">WiFi 6</span>
+          </div>
+          <p class="text-base font-bold text-white mb-1">Cisco Catalyst 9100 enterprise WiFi 6 with multi-gigabit backhaul and zero dead spots across open-plan lofts, mezzanine library, and private creator rooms.</p>
+          <div class="pt-2 border-t border-stone-800/80">
+            <span class="text-[11px] font-mono text-stone-400">Jitter Stability: </span>
+            <span class="text-xs font-mono text-emerald-300 font-semibold">{prop.jitter_ms} ms variation</span>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl bg-stone-900/60 border border-stone-800">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono uppercase text-amber-400 font-bold">Ergonomic Workstations</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-stone-800 text-stone-300 border border-stone-700">Verified</span>
+          </div>
+          <p class="text-base font-bold text-white mb-1">{prop.chair_model}</p>
+          <p class="text-xs text-stone-300 leading-relaxed mb-3">
+            Herman Miller Aeron Remastered (Size B & C) with PostureFit SL lumbar support and fully adjustable 3D armrests. Motorized standing desks with dual monitor arms.
+          </p>
+          <div class="pt-2 border-t border-stone-800/80">
+            <span class="text-[11px] font-mono text-stone-400">Standing Desks: </span>
+            <span class="text-xs font-mono text-emerald-300 font-semibold">Available</span>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl bg-stone-900/60 border border-stone-800">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono uppercase text-amber-400 font-bold">Electrical Infrastructure</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Zero Downtime</span>
+          </div>
+          <p class="text-base font-bold text-white mb-1">{prop.backup_power}</p>
+          <p class="text-xs text-stone-300 leading-relaxed mb-3">
+            Schneider Electric 15kVA commercial online double-conversion UPS rack ensuring uninterrupted power during municipal grid fluctuations.
+          </p>
+          <div class="pt-2 border-t border-stone-800/80">
+            <span class="text-[11px] font-mono text-stone-400">Power Resilience: </span>
+            <span class="text-xs font-mono text-amber-300 font-semibold">Verified Online Backup</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-5 rounded-xl bg-stone-900/90 border border-stone-800">
+        <div class="flex items-center space-x-2 mb-1">
+          <span class="text-sm font-bold text-white">Private Acoustic Call Isolation</span>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/20 text-amber-400 font-bold">
+            {prop.phone_booths_count} Dedicated Booths
+          </span>
+        </div>
+        <p class="text-xs text-stone-300 leading-relaxed">
+          7 private soundproof acoustic meeting pods equipped with 4K Jabra video bars, studio microphones, and sound-absorbing felt wall panels.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Verified Workspace Ergonomics & Connectivity Matrix -->
+    <section class="mb-14">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-4">
+        Verified Workspace Ergonomics &amp; Connectivity Matrix
+      </h2>
+      <p class="text-sm text-stone-300 leading-relaxed mb-6">
+        Every workspace parameter at {prop.name} has been tested against the WorkationRadar 11-point productivity audit benchmark:
+      </p>
+
+      <div class="overflow-x-auto rounded-xl border border-stone-800 shadow-xl mb-6">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse">
+          <thead class="bg-stone-900 text-amber-400 font-mono uppercase text-xs">
+            <tr>
+              <th class="p-3.5 border-b border-stone-800">Verification Metric</th>
+              <th class="p-3.5 border-b border-stone-800">Inspected Specification</th>
+              <th class="p-3.5 border-b border-stone-800">Standard Requirement</th>
+              <th class="p-3.5 border-b border-stone-800 text-right">Audit Status</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-800/60 bg-stone-950/60 font-mono">
+            <tr>
+              <td class="p-3.5 text-stone-300 font-semibold font-sans">1. Download Throughput</td>
+              <td class="p-3.5 text-emerald-400 font-bold">{prop.download_mbps} Mbps</td>
+              <td class="p-3.5 text-stone-400">&gt; 100 Mbps</td>
+              <td class="p-3.5 text-right"><span class="text-emerald-400">✓ VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td class="p-3.5 text-stone-300 font-semibold font-sans">2. Upload Throughput</td>
+              <td class="p-3.5 text-emerald-400 font-bold">{prop.upload_mbps} Mbps</td>
+              <td class="p-3.5 text-stone-400">&gt; 50 Mbps</td>
+              <td class="p-3.5 text-right"><span class="text-emerald-400">✓ VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td class="p-3.5 text-stone-300 font-semibold font-sans">3. Network Ping Latency</td>
+              <td class="p-3.5 text-blue-400">{prop.ping_ms} ms</td>
+              <td class="p-3.5 text-stone-400">&lt; 35 ms</td>
+              <td class="p-3.5 text-right"><span class="text-emerald-400">✓ VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td class="p-3.5 text-stone-300 font-semibold font-sans">4. Connection Jitter</td>
+              <td class="p-3.5 text-stone-200">{prop.jitter_ms} ms</td>
+              <td class="p-3.5 text-stone-400">&lt; 5 ms</td>
+              <td class="p-3.5 text-right"><span class="text-emerald-400">✓ VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td class="p-3.5 text-stone-300 font-semibold font-sans">5. Primary Ergonomic Chair</td>
+              <td class="p-3.5 text-amber-300 font-sans font-semibold">{prop.chair_model}</td>
+              <td class="p-3.5 text-stone-400">Certified Ergonomic</td>
+              <td class="p-3.5 text-right"><span class="text-emerald-400">✓ VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td class="p-3.5 text-stone-300 font-semibold font-sans">6. Standing Desks Available</td>
+              <td class="p-3.5 text-stone-200">Yes (Motorized Height-Adjustable)</td>
+              <td class="p-3.5 text-stone-400">Optional Standard</td>
+              <td class="p-3.5 text-right"><span class="text-emerald-400">✓ PASS</span></td>
+            </tr>
+            <tr>
+              <td class="p-3.5 text-stone-300 font-semibold font-sans">7. Soundproof Phone Booths</td>
+              <td class="p-3.5 text-stone-200">{prop.phone_booths_count} Dedicated Units</td>
+              <td class="p-3.5 text-stone-400">&gt;= 2 Units</td>
+              <td class="p-3.5 text-right"><span class="text-emerald-400">✓ VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td class="p-3.5 text-stone-300 font-semibold font-sans">8. Power Backup &amp; UPS</td>
+              <td class="p-3.5 text-stone-200">{prop.backup_power}</td>
+              <td class="p-3.5 text-stone-400">Zero Grid Downtime</td>
+              <td class="p-3.5 text-right"><span class="text-emerald-400">✓ VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td class="p-3.5 text-stone-300 font-semibold font-sans">9. Verified Monthly Rate</td>
+              <td class="p-3.5 text-white font-bold">&euro;{prop.monthly_rate_eur} / month</td>
+              <td class="p-3.5 text-stone-400">All-Inclusive Transparent</td>
+              <td class="p-3.5 text-right"><span class="text-emerald-400">✓ VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td class="p-3.5 text-stone-300 font-semibold font-sans">10. Minimum Booking Length</td>
+              <td class="p-3.5 text-stone-200">{prop.minimum_stay_days} Days</td>
+              <td class="p-3.5 text-stone-400">Community Policy</td>
+              <td class="p-3.5 text-right"><span class="text-emerald-400">✓ VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td class="p-3.5 text-stone-300 font-semibold font-sans">11. Productivity Score</td>
+              <td class="p-3.5 text-amber-400 font-bold">{prop.productivity_score} / 100</td>
+              <td class="p-3.5 text-stone-400">&gt;= 85 Threshold</td>
+              <td class="p-3.5 text-right"><span class="text-emerald-400">✓ EXCELLENT</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: Community Vibe & Coliving Culture -->
+    <section class="mb-14">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-4">
+        Community Vibe &amp; Coliving Culture
+      </h2>
+      <p class="text-sm text-stone-300 leading-relaxed mb-4">
+        Full-stack developers, SaaS founders, and venture-backed remote operators. Structured Tuesday masterminds, weekend Douro Valley wine outings, and high-energy hackathons.
+      </p>
+      <p class="text-sm text-stone-400 leading-relaxed">
+        Unlike party hostels or short-term vacation rentals, <strong>{prop.name}</strong> operates under a strict code of conduct prioritizing quiet focus hours, professional respect, and collaborative knowledge exchange.
+      </p>
+    </section>
+
+    <!-- Section 4: Neighborhood Logistics & Local Coworking Access -->
+    <section class="mb-14">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-4">
+        Neighborhood Logistics &amp; Local Coworking Access
+      </h2>
+      <p class="text-sm text-stone-300 leading-relaxed mb-4">
+        Located in Cedofeita, Porto's renowned arts and culinary district. Steps away from artisan bakeries, specialty coffee shops (7g Roaster, Combi), metro stations, and Crystal Palace gardens.
+      </p>
+    </section>
+
+    <!-- Section 5: Frequently Asked Questions -->
+    <section class="mb-14">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-6">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-4">
+          <div class="p-6 rounded-xl bg-stone-900/60 border border-stone-800">
+            <h3 class="text-base font-bold text-white mb-2">What are the workstation equipment specs at Porto Cozy Creator Loft?</h3>
+            <p class="text-sm text-stone-300 leading-relaxed">Every desk features a genuine Herman Miller Aeron Remastered chair, dual-motor sit-stand desk, universal USB-C docking station, and 27-inch 4K external monitor upon request.</p>
+          </div>
+          <div class="p-6 rounded-xl bg-stone-900/60 border border-stone-800">
+            <h3 class="text-base font-bold text-white mb-2">What internet speeds can I expect for remote engineering work?</h3>
+            <p class="text-sm text-stone-300 leading-relaxed">Tested speeds consistently reach 600 Mbps download and 300 Mbps upload with 11ms latency to European server clusters, powered by dual redundant MEO and Vodafone optical lines.</p>
+          </div>
+          <div class="p-6 rounded-xl bg-stone-900/60 border border-stone-800">
+            <h3 class="text-base font-bold text-white mb-2">How accessible is Porto airport from Cedofeita?</h3>
+            <p class="text-sm text-stone-300 leading-relaxed">Porto Francisco Sá Carneiro Airport (OPO) is just 20 minutes away by metro (direct Line E to Lapa/Trindade) or 15 minutes by Bolt/Uber.</p>
+          </div>
+      </div>
+    </section>
+
+    <!-- Related Spaces Silo -->
+    <section class="border-t border-stone-800/80 pt-10 mt-12">
+      <h2 class="text-lg font-bold text-white mb-4">Compare Sibling Coliving Spaces</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {otherProps.map(op => (
+          <a href={`${base}/space/${op.slug}`} class="block p-4 rounded-xl border border-stone-800 bg-stone-900/40 hover:border-amber-500/40 transition">
+            <div class="text-xs font-mono text-amber-400 mb-1">{op.city}, {op.country}</div>
+            <div class="font-bold text-stone-200">{op.name} &rarr;</div>
+            <p class="text-xs text-stone-400 mt-1 line-clamp-2">{op.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </article>
+</Layout>

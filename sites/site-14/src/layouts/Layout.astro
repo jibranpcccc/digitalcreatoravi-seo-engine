@@ -17,7 +17,11 @@ const {
   type = "website"
 } = Astro.props;
 
-const canonicalUrl = canonical.endsWith('/') ? canonical : `${canonical}/`;
+let cleanPath = Astro.url.pathname;
+if (!cleanPath.endsWith('/')) cleanPath += '/';
+const canonicalUrl = (canonical && canonical !== 'https://site-14-sable.vercel.app' && canonical !== 'https://site-14-sable.vercel.app/')
+  ? canonical
+  : `${'https://site-14-sable.vercel.app'}${cleanPath === '/' ? '/' : cleanPath}`;
 const ogImageUrl = image.startsWith('http') ? image : `https://site-14-sable.vercel.app${image.startsWith('/') ? '' : '/'}${image}`;
 ---
 

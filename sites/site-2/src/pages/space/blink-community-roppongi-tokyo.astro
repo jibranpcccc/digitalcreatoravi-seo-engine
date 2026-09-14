@@ -98,7 +98,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "name": prop.city,
-          "item": `https://workationradar.com/city/${encodeURIComponent(prop.city)}`
+          "item": `https://workationradar.com/city//`
         },
         {
           "@type": "ListItem",
@@ -125,7 +125,7 @@ const schemaData = {
     <nav class="flex items-center space-x-2 text-xs font-mono text-stone-400 mb-6" aria-label="Breadcrumb">
       <a href={`${base}/`} class="hover:text-amber-400 transition">Home</a>
       <span>/</span>
-      <a href={`${base}/city/${encodeURIComponent(prop.city)}`} class="hover:text-amber-400 transition">{prop.city}</a>
+      <a href={`/city//`} class="hover:text-amber-400 transition">{prop.city}</a>
       <span>/</span>
       <span class="text-stone-300 truncate max-w-[200px]">{prop.name}</span>
     </nav>
@@ -640,7 +640,7 @@ const schemaData = {
           <h3 class="text-xl font-extrabold text-white tracking-tight">Alternative Workation Hubs</h3>
           <p class="text-xs text-stone-400 mt-0.5">Explore corresponding verified remote work locations</p>
         </div>
-        <a href={`${base}/city/${encodeURIComponent(prop.city)}`} class="text-xs font-mono text-amber-400 hover:text-amber-300">
+        <a href={`/city//`} class="text-xs font-mono text-amber-400 hover:text-amber-300">
           View All {prop.city} Spaces &rarr;
         </a>
       </div>

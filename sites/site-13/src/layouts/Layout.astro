@@ -17,7 +17,11 @@ const {
   type = "website"
 } = Astro.props;
 
-const canonicalUrl = canonical.endsWith('/') ? canonical : `${canonical}/`;
+let cleanPath = Astro.url.pathname;
+if (!cleanPath.endsWith('/')) cleanPath += '/';
+const canonicalUrl = (canonical && canonical !== 'https://groklogtester.pages.dev' && canonical !== 'https://groklogtester.pages.dev/')
+  ? canonical
+  : `${'https://groklogtester.pages.dev'}${cleanPath === '/' ? '/' : cleanPath}`;
 const ogImageUrl = image.startsWith('http') ? image : `https://groklogtester.pages.dev${image.startsWith('/') ? '' : '/'}${image}`;
 ---
 

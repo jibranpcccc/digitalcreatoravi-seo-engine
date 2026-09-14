@@ -2,24 +2,29 @@
 import Layout from '../../layouts/Layout.astro';
 import properties from '../../data/properties.json';
 
+export function cityToSlug(cityName: string): string {
+  return cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
 export async function getStaticPaths() {
   const cities = [...new Set(properties.map(p => p.city))];
   return cities.map(city => {
     const cityProps = properties.filter(p => p.city === city);
+    const slug = cityToSlug(city);
     return {
-      params: { city },
-      props: { city, properties: cityProps }
+      params: { city: slug },
+      props: { city, citySlug: slug, properties: cityProps }
     };
   });
 }
 
-const { city, properties: cityProps } = Astro.props;
+const { city, citySlug, properties: cityProps } = Astro.props;
 const rawCityTitle = `Best Coliving Spaces in ${city} for Nomads (2026)`;
 const cityPageTitle = rawCityTitle.length < 48 ? `Top Verified Coliving Spaces in ${city} (2026 Guide)` : rawCityTitle;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const avgSpeed = Math.round(cityProps.reduce((acc, p) => acc + p.download_mbps, 0) / cityProps.length);
 const minRate = Math.min(...cityProps.map(p => p.monthly_rate_eur));
-const pageUrl = `https://workationradar.com/city/${encodeURIComponent(city)}`;
+const pageUrl = `https://workationradar.com/city/${citySlug}/`;
 const cityCover = cityProps[0] ? `${base}/images/spaces/${cityProps[0].slug}.webp` : `${base}/images/spaces/ponta-do-sol-nomad-coliving.webp`;
 
 const schemaData = {

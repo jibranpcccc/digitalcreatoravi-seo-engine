@@ -16,9 +16,9 @@ const {
 } = Astro.props;
 
 const siteUrl = 'https://localdocprivacy.netlify.app';
-const fullCanonical = canonical 
-  ? canonical 
-  : (slug ? `${siteUrl}/${slug}/` : siteUrl + '/');
+let cleanPath = Astro.url.pathname;
+if (!cleanPath.endsWith('/')) cleanPath += '/';
+const fullCanonical = canonical || `${'https://localdocprivacy.netlify.app'}${cleanPath === '/' ? '/' : cleanPath}`;
 ---
 
 <!DOCTYPE html>

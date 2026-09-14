@@ -15,9 +15,10 @@ const {
   type = "website"
 } = Astro.props;
 
-const canonical = slug 
-  ? `https://openagentstack.pages.dev/${category}/${slug}/`
-  : "https://openagentstack.pages.dev/";
+// Dynamic self-referential canonical URL derivation
+let cleanPath = Astro.url.pathname;
+if (!cleanPath.endsWith('/')) cleanPath += '/';
+const canonical = `${'https://openagentstack.pages.dev'}${cleanPath === '/' ? '/' : cleanPath}`;
 
 const ogImage = slug
   ? `https://openagentstack.pages.dev/images/covers/${slug}.webp`
