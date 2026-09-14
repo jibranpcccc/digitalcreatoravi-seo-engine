@@ -8,10 +8,10 @@ const schemaData = {
       "@type": "TechArticle",
       "@id": "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/#article",
       "headline": "DevContainer Feature for pgvector + Ollama: Instant Zero-Install Local RAG",
-      "description": "Production blueprint for instant local RAG development with DevContainers, pgvector (PostgreSQL 16), and GPU-accelerated Ollama. Includes copy-pasteable configs and a 30-second quickstart script.",
+      "description": "Production blueprint for instant local RAG development with DevContainers, pgvector (PostgreSQL 16), and GPU-accelerated Ollama. Includes copy-pasteable configs, HNSW tuning, and a 30-second quickstart script.",
       "url": "https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/",
       "datePublished": "2026-09-09T00:00:00Z",
-      "dateModified": "2026-09-09T00:00:00Z",
+      "dateModified": "2026-09-14T00:00:00Z",
       "author": {
         "@type": "Organization",
         "name": "DevConfigHub Core Architecture Team",
@@ -50,6 +50,11 @@ const schemaData = {
           "@type": "HowToStep",
           "name": "Execute Vector Ingestion and Cosine Search",
           "text": "Run the 30-second Python test script to generate embeddings, persist vectors, and query nearest neighbors via HNSW cosine indexing."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Tune HNSW Index Parameters for Scale",
+          "text": "Configure m and ef_construction parameters alongside PostgreSQL maintenance_work_mem for optimal sub-millisecond retrieval."
         }
       ]
     },
@@ -79,6 +84,22 @@ const schemaData = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "nomic-embed-text (8192 context window, 768 dimensions) and all-minilm:l6-v2 (384 dimensions) are the industry standards for local development. Both execute embedding inference in under 15ms per chunk on modern GPUs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between HNSW and IVFFlat indexes in pgvector?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HNSW (Hierarchical Navigable Small World) builds a multi-layer graph index that offers superior query latency and higher recall (>98%) without requiring a training step, but consumes more memory. IVFFlat divides vectors into inverted lists, requiring training centroids and fewer resources, but sacrifices recall speed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do DevContainers handle volume persistence between rebuilds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By mapping PostgreSQL data to a named Docker volume (pgvector-data) and Ollama weights to a model volume (ollama-models), your embedded knowledge base and multi-gigabyte neural weights survive container rebuilds, restarts, and VS Code updates."
           }
         }
       ]
@@ -152,6 +173,7 @@ services:
       POSTGRES_DB: rag_db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: rag_password
+      POSTGRES_HOST_AUTH_METHOD: md5
     ports:
       - "5432:5432"
     volumes:
@@ -187,21 +209,24 @@ networks:
 const setupShCode = `#!/usr/bin/env bash
 set -e
 
-echo "==> Waiting for PostgreSQL pgvector service..."
+echo "==> Waiting for PostgreSQL pgvector service to initialize..."
 until pg_isready -h db -U postgres; do
   sleep 1
 done
 
-echo "==> Initializing pgvector extension..."
+echo "==> Initializing pgvector extension in rag_db..."
 PGPASSWORD=rag_password psql -h db -U postgres -d rag_db -c "CREATE EXTENSION IF NOT EXISTS vector;"
 
-echo "==> Installing Python RAG dependencies..."
+echo "==> Installing Python RAG client libraries..."
 pip install --no-cache-dir psycopg[binary] pgvector requests numpy
 
-echo "==> Pulling Ollama embedding model (nomic-embed-text)..."
+echo "==> Pulling Ollama embedding model (nomic-embed-text:latest)..."
 curl -s -X POST http://ollama:11434/api/pull -d '{"name": "nomic-embed-text"}'
 
-echo "==> Local RAG DevContainer is ready!"`;
+echo "==> Pre-pulling optional local chat model (llama3.2:1b)..."
+curl -s -X POST http://ollama:11434/api/pull -d '{"name": "llama3.2:1b"}'
+
+echo "==> Local RAG DevContainer is fully configured and ready!"`;
 
 const testPythonCode = `"""
 Quickstart: Test pgvector + Ollama local RAG in < 30 seconds
@@ -239,24 +264,26 @@ def main():
             CREATE TABLE documents (
                 id SERIAL PRIMARY KEY,
                 content TEXT NOT NULL,
+                metadata JSONB DEFAULT '{}'::jsonb,
                 embedding vector(768)
             );
         """)
 
-        # Sample Knowledge Base
+        # Sample Knowledge Base with Metadata
         corpus = [
-            "DevContainers configure reproducible Docker development environments using devcontainer.json.",
-            "PostgreSQL pgvector extension enables fast vector similarity queries using HNSW indexing.",
-            "Ollama runs open-source large language models and embeddings natively with local GPU acceleration.",
-            "Kubernetes Ingress-Nginx directs incoming HTTP traffic to backend containerized cluster pods."
+            ("DevContainers configure reproducible Docker development environments using devcontainer.json.", {"category": "devops"}),
+            ("PostgreSQL pgvector extension enables fast vector similarity queries using HNSW indexing.", {"category": "database"}),
+            ("Ollama runs open-source large language models and embeddings natively with local GPU acceleration.", {"category": "ai"}),
+            ("Kubernetes Ingress-Nginx directs incoming HTTP traffic to backend containerized cluster pods.", {"category": "networking"}),
+            ("Retrieval-Augmented Generation blends vector search similarity with contextual prompt injection.", {"category": "ai"})
         ]
 
         print("2. Generating local embeddings with Ollama...")
-        for doc in corpus:
+        for doc, meta in corpus:
             vec = get_embedding(doc)
             cur.execute(
-                "INSERT INTO documents (content, embedding) VALUES (%s, %s);",
-                (doc, vec)
+                "INSERT INTO documents (content, metadata, embedding) VALUES (%s, %s, %s);",
+                (doc, json.dumps(meta), vec)
             )
         conn.commit()
 
@@ -276,7 +303,7 @@ def main():
 
         # '<=>' operator computes cosine distance in pgvector
         cur.execute("""
-            SELECT id, content, 1 - (embedding <=> %s) AS cosine_similarity
+            SELECT id, content, metadata->>'category' AS category, 1 - (embedding <=> %s) AS cosine_similarity
             FROM documents
             ORDER BY embedding <=> %s
             LIMIT 2;
@@ -285,8 +312,8 @@ def main():
         results = cur.fetchall()
         print("\\n=== Nearest Neighbor Semantic Search Results ===")
         for row in results:
-            doc_id, content, sim = row
-            print(f"[Score: {sim:.4f}] #{doc_id}: {content}")
+            doc_id, content, cat, sim = row
+            print(f"[Score: {sim:.4f} | Category: {cat}] #{doc_id}: {content}")
 
     conn.close()
 
@@ -337,126 +364,300 @@ if __name__ == "__main__":
 
     <div class="prose prose-invert max-w-none space-y-10 text-slate-300 text-sm sm:text-base leading-relaxed">
       
-      <!-- Section 1: Architecture Overview -->
+      <!-- Section 1: The Problem -->
       <section>
         <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
-          <span class="text-emerald-400 font-mono">1.</span> Architectural Blueprint: The Zero-Install Local RAG Topology
+          <span class="text-emerald-400 font-mono">1.</span> The Local RAG Developer Experience Problem: Why DevContainers Are Essential
         </h2>
         <p>
-          Local development of generative AI and Retrieval-Augmented Generation (RAG) applications frequently suffers from dependency sprawl: developers must install local PostgreSQL binaries, compile C extensions for pgvector, configure Ollama runtimes, and balance CUDA toolkit versions.
+          Local development of generative AI and Retrieval-Augmented Generation (RAG) applications frequently devolves into a nightmare of environment fragmentation. When a team of software engineers attempts to prototype a RAG workflow, each developer encounters distinct workstation friction:
         </p>
+        <ul class="list-disc pl-6 space-y-2 mt-3 text-slate-200">
+          <li><strong>Host System Pollution:</strong> Installing PostgreSQL locally, compiling the C source for the <code class="text-emerald-300 font-mono text-xs">pgvector</code> extension against local header files, and managing background system daemons clutters operating systems and risks version collisions with existing relational workloads.</li>
+          <li><strong>CUDA &amp; Hardware Driver Hell:</strong> Configuring NVIDIA CUDA drivers, cuDNN toolkits, and Ollama binaries varies wildly across Ubuntu Linux, Windows 11 WSL2, and Apple Silicon macOS. One developer runs CUDA 12.2 while another is on 11.8, leading to non-reproducible model execution errors.</li>
+          <li><strong>Cross-Platform Onboarding Latency:</strong> Onboarding a new engineer onto an AI project often requires days of manual environment configuration before their first pull request can be tested locally. When environments diverge, developers waste hours debugging differences between local SQLite vector mocks and production PostgreSQL instances.</li>
+          <li><strong>Costly Cloud Dependencies:</strong> Relying on external third-party vector databases (Pinecone, Weaviate Cloud) and hosted embedding APIs (OpenAI text-embedding-3) for local feature prototyping incurs unnecessary cloud expenses and introduces network latency into test execution loops.</li>
+          <li><strong>Data Privacy &amp; Offline Development:</strong> In regulated industries (fintech, healthcare, defense), enterprise policies strictly prohibit transmitting proprietary codebase documentation, internal customer records, or intellectual property to third-party cloud APIs. A fully self-contained local stack ensures complete regulatory compliance.</li>
+        </ul>
         <p class="mt-4">
-          By unifying this toolchain into a multi-container <strong>VS Code DevContainer</strong> specification, any engineer on macOS, Linux, or Windows WSL2 can run <code class="text-emerald-300 font-mono text-xs">Reopen in Container</code> and obtain a production-identical vector development environment within seconds.
+          By codifying this entire topology into a standardized <strong>VS Code DevContainer</strong> specification, any engineer can clone a git repository, click <code class="text-emerald-300 font-mono text-xs">Reopen in Container</code>, and be productive with a GPU-accelerated local vector database within 60 seconds.
+        </p>
+      </section>
+
+      <!-- Section 2: Architecture Overview -->
+      <section>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
+          <span class="text-emerald-400 font-mono">2.</span> Architectural Blueprint: The Zero-Install Local RAG Topology
+        </h2>
+        <p>
+          The architecture pairs an application workspace with two lightweight containerized microservices managed via Docker Compose. The workspace connects over a high-speed internal Docker bridge network, providing complete isolation from the host filesystem while allowing seamless inter-service communication:
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
             <div class="text-xs font-mono text-emerald-400 font-bold uppercase mb-1">App Container</div>
             <div class="text-sm font-bold text-white mb-2">Python 3.11 Workspace</div>
-            <p class="text-xs text-slate-400">Pre-wired with psycopg, pgvector-python, and VS Code SQL/Python extensions.</p>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Based on Ubuntu 24.04 with zsh, pre-configured VS Code Python extensions, database exploration GUI tools, and pre-installed psycopg3 and pgvector drivers.
+            </p>
           </div>
-          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
             <div class="text-xs font-mono text-cyan-400 font-bold uppercase mb-1">Vector DB</div>
             <div class="text-sm font-bold text-white mb-2">pgvector / Postgres 16</div>
-            <p class="text-xs text-slate-400">Hardware-optimized HNSW and IVFFlat index builds on named Docker volumes.</p>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Official PostgreSQL 16 image bundled with pgvector C extensions, mounting a persistent Docker volume for HNSW index files and relational metadata.
+            </p>
           </div>
-          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
             <div class="text-xs font-mono text-purple-400 font-bold uppercase mb-1">Inference Engine</div>
             <div class="text-sm font-bold text-white mb-2">Ollama Daemon (GPU)</div>
-            <p class="text-xs text-slate-400">NVIDIA container toolkit passthrough for sub-15ms local embedding extraction.</p>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              GPU-accelerated local LLM daemon running nomic-embed-text and llama3.2, pulling models into a persistent cache volume with zero host binary footprint.
+            </p>
           </div>
         </div>
+
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          Because the application container uses <code class="text-emerald-300 font-mono text-xs">network_mode: service:db</code> or standard Docker bridge DNS, Python scripts address PostgreSQL at <code class="text-emerald-300 font-mono text-xs">db:5432</code> and Ollama at <code class="text-emerald-300 font-mono text-xs">ollama:11434</code> without complex port bindings or host loopback routing. Developers can work completely offline—on airplanes, trains, or air-gapped security enclaves—without losing access to their AI embedding pipeline.
+        </p>
       </section>
 
-      <!-- Section 2: devcontainer.json -->
+      <!-- Section 3: devcontainer.json -->
       <section>
         <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
-          <span class="text-emerald-400 font-mono">2.</span> DevContainer Configuration (.devcontainer/devcontainer.json)
+          <span class="text-emerald-400 font-mono">3.</span> Production DevContainer Specification (.devcontainer/devcontainer.json)
         </h2>
-        <p class="text-xs text-slate-400 mb-3">
-          This configuration connects VS Code to the Docker Compose topology, forwards ports 5432 and 11434, injects database management extensions, and triggers the automated setup script:
+        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+          The <code class="text-emerald-300 font-mono text-xs">devcontainer.json</code> file acts as the single source of truth for the developer's editing environment. It automatically provisions language servers, connects database visualization tools, forwards ports to the host desktop, and executes automated post-creation bootstrap scripts:
         </p>
+
         <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 mb-6">
           <div class="flex items-center justify-between mb-3 text-xs font-mono text-slate-400">
             <span>.devcontainer/devcontainer.json</span>
-            <span class="text-emerald-400">JSON5</span>
+            <span class="text-emerald-400">Configuration</span>
           </div>
           <pre class="bg-slate-900 text-slate-200 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed" is:raw>{devcontainerJsonCode}</pre>
         </div>
+
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+          Notice the <code class="text-emerald-300 font-mono text-xs">sqltools.connections</code> block. When VS Code mounts the workspace, the SQLTools extension pre-configures a direct graphical database explorer connection to <code class="text-emerald-300 font-mono text-xs">rag_db</code>, allowing developers to visually inspect table schemas, embeddings, and query plans without leaving their IDE.
+        </p>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          The <code class="text-emerald-300 font-mono text-xs">remoteUser: "vscode"</code> parameter prevents file permission collisions on Linux and macOS host machines. When files are written by the container runtime, they match the host user's UID (1000:1000) rather than root, eliminating the frustrating <code class="text-rose-400 font-mono text-xs">permission denied</code> errors common when generating code or logs inside Docker.
+        </p>
       </section>
 
-      <!-- Section 3: docker-compose.yml -->
+      <!-- Section 4: docker-compose.yml -->
       <section>
         <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
-          <span class="text-emerald-400 font-mono">3.</span> Multi-Container Service Definition (.devcontainer/docker-compose.yml)
+          <span class="text-emerald-400 font-mono">4.</span> Multi-Container Service Orchestration with GPU Acceleration (.devcontainer/docker-compose.yml)
         </h2>
-        <p class="text-xs text-slate-400 mb-3">
-          Defines the official <code class="text-emerald-300 font-mono text-xs">pgvector/pgvector:pg16</code> image and the GPU-accelerated Ollama container with dedicated model volume persistence:
+        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+          To enable hardware-accelerated local inference, the Docker Compose manifest includes NVIDIA Container Toolkit passthrough directives. This allows Ollama to utilize local NVIDIA RTX, GTX, or Tesla GPUs on both Linux hosts and Windows 11 via WSL2:
         </p>
+
         <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 mb-6">
           <div class="flex items-center justify-between mb-3 text-xs font-mono text-slate-400">
             <span>.devcontainer/docker-compose.yml</span>
-            <span class="text-cyan-400">YAML</span>
+            <span class="text-cyan-400">Multi-Service Manifest</span>
           </div>
           <pre class="bg-slate-900 text-slate-200 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed" is:raw>{dockerComposeCode}</pre>
         </div>
+
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+          By utilizing named Docker volumes (<code class="text-emerald-300 font-mono text-xs">pgvector-data</code> and <code class="text-emerald-300 font-mono text-xs">ollama-models</code>), model weights and vectorized documents persist across DevContainer rebuilds. When you rebuild or update container definitions, you never need to re-download gigabytes of model checkpoints.
+        </p>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          On Windows 11 with WSL2, Docker Desktop utilizes the <code class="text-emerald-300 font-mono text-xs">dxgkrnl</code> kernel driver bridge to pass host NVIDIA GPU resources directly to the Linux subsystem without requiring custom virtualization configurations. On native Linux hosts, installing the <code class="text-emerald-300 font-mono text-xs">nvidia-container-toolkit</code> package allows the Docker daemon to bind the CUDA driver runtime directly into containerized processes.
+        </p>
       </section>
 
-      <!-- Section 4: Automated Setup Script -->
+      <!-- Section 5: Automated Setup Script -->
       <section>
         <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
-          <span class="text-emerald-400 font-mono">4.</span> Lifecycle Automation Script (.devcontainer/setup.sh)
+          <span class="text-emerald-400 font-mono">5.</span> Container Lifecycle Automation and Health Checks (.devcontainer/setup.sh)
         </h2>
-        <p class="text-xs text-slate-400 mb-3">
-          Executes inside the container during <code class="text-emerald-300 font-mono text-xs">postCreateCommand</code>. Waits for PostgreSQL health, creates the vector extension, installs Python client packages, and pre-downloads the embedding model:
+        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+          When a DevContainer spins up, race conditions can occur if the application container attempts to execute schema migrations before the PostgreSQL database daemon has finished initializing. The <code class="text-emerald-300 font-mono text-xs">setup.sh</code> script prevents startup failures by implementing health polling via <code class="text-emerald-300 font-mono text-xs">pg_isready</code>:
         </p>
+
         <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 mb-6">
           <div class="flex items-center justify-between mb-3 text-xs font-mono text-slate-400">
             <span>.devcontainer/setup.sh</span>
-            <span class="text-emerald-400">Bash</span>
+            <span class="text-emerald-400">Shell Script</span>
           </div>
           <pre class="bg-slate-900 text-slate-200 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed" is:raw>{setupShCode}</pre>
         </div>
+
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+          By automating <code class="text-emerald-300 font-mono text-xs">CREATE EXTENSION IF NOT EXISTS vector;</code> and the pre-downloading of the embedding model inside the <code class="text-emerald-300 font-mono text-xs">postCreateCommand</code>, the workspace arrives in a completely turn-key state. Developers are ready to write code immediately without touching the command line.
+        </p>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          The setup script also pre-pulls a compact local generative model (<code class="text-emerald-300 font-mono text-xs">llama3.2:1b</code>). This allows developers to test end-to-end RAG workflows—embedding retrieval, prompt augmenting, and final LLM response synthesis—all without leaving their containerized developer sandbox.
+        </p>
       </section>
 
-      <!-- Section 5: 30-Second Quickstart Test Script -->
+      <!-- Section 6: 30-Second Quickstart Test Script -->
       <section>
         <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
-          <span class="text-emerald-400 font-mono">5.</span> 30-Second Quickstart Python Test Script (test_rag.py)
+          <span class="text-emerald-400 font-mono">6.</span> End-to-End Local RAG Python Pipeline: Ingestion, Chunking, and HNSW Cosine Search (test_rag.py)
         </h2>
         <p class="text-sm text-slate-300 leading-relaxed mb-4">
-          Test your complete end-to-end vector pipeline immediately. This script generates 768-dimensional embeddings with Ollama, saves them into pgvector, builds an HNSW index using <code class="text-emerald-300 font-mono text-xs">vector_cosine_ops</code>, and performs a semantic cosine search:
+          To verify that the entire vector pipeline is functional, execute this complete, self-contained Python script. It generates 768-dimensional embeddings via Ollama's HTTP API, inserts document records into PostgreSQL using native binary vector bindings, builds an HNSW index, and executes a cosine distance nearest-neighbor query:
         </p>
 
         <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 mb-6">
           <div class="flex items-center justify-between mb-3 text-xs font-mono text-slate-400">
             <span>test_rag.py</span>
-            <span class="text-purple-400">Python 3</span>
+            <span class="text-purple-400">Python 3 Execution Script</span>
           </div>
           <pre class="bg-slate-900 text-slate-200 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed" is:raw>{testPythonCode}</pre>
         </div>
+
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+          In pgvector, distance operators vary depending on your mathematical similarity requirements:
+        </p>
+        <ul class="list-disc pl-6 space-y-1.5 text-xs sm:text-sm text-slate-300 mb-4">
+          <li><strong>Cosine Distance (<code class="text-emerald-300 font-mono text-xs">&lt;=&gt;</code>):</strong> Measures angular orientation regardless of vector magnitude. Perfect for normalized text embeddings where directional similarity indicates semantic closeness.</li>
+          <li><strong>L2 Euclidean Distance (<code class="text-cyan-300 font-mono text-xs">&lt;-&gt;</code>):</strong> Measures straight-line distance in multidimensional space. Recommended when embedding magnitude contains signal (such as image feature clustering).</li>
+          <li><strong>Negative Inner Product (<code class="text-purple-400 font-mono text-xs">&lt;#&gt;</code>):</strong> Computes dot product similarity. Ultra-fast for unit-normalized vectors where dot product equals cosine similarity.</li>
+        </ul>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          Computing <code class="text-emerald-300 font-mono text-xs">1 - (embedding &lt;=&gt; query_vector)</code> yields standard cosine similarity ranging from 0.0 (completely dissimilar) to 1.0 (identical semantic match).
+        </p>
       </section>
 
-      <!-- Section 6: Performance & Tuning -->
+      <!-- Section 7: Performance & Tuning -->
       <section>
         <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
-          <span class="text-emerald-400 font-mono">6.</span> Hardware Acceleration &amp; HNSW Tuning Tips
+          <span class="text-emerald-400 font-mono">7.</span> Tuning pgvector for High-Performance Retrieval: HNSW vs. IVFFlat Indexes
         </h2>
+        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+          As your local dataset expands from dozens of demo documents to hundreds of thousands of vectorized documentation chunks, query performance depends on selecting and tuning the appropriate vector indexing strategy:
+        </p>
+
+        <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 my-6 shadow-xl">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-900 text-slate-200 font-mono uppercase text-[11px] border-b border-slate-800">
+              <tr>
+                <th class="py-3 px-4">Index Metric</th>
+                <th class="py-3 px-4">HNSW (Hierarchical Navigable Small World)</th>
+                <th class="py-3 px-4">IVFFlat (Inverted File Flat)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 font-mono">
+              <tr>
+                <td class="py-3 px-4 font-bold text-white">Query Latency (p99)</td>
+                <td class="py-3 px-4 text-emerald-400 font-bold">&lt; 1.5 ms (Sub-millisecond)</td>
+                <td class="py-3 px-4 text-amber-400">4.0 - 12.0 ms</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-white">Recall Accuracy</td>
+                <td class="py-3 px-4 text-emerald-400 font-bold">&gt; 98% Recall</td>
+                <td class="py-3 px-4 text-amber-400">85% - 95% Recall</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-white">Build Requirements</td>
+                <td class="py-3 px-4 text-emerald-400">Builds immediately on empty tables</td>
+                <td class="py-3 px-4 text-rose-400">Requires pre-populating data to train centroids</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-white">RAM Consumption</td>
+                <td class="py-3 px-4 text-amber-400">Higher (~1.5x - 2x vector size)</td>
+                <td class="py-3 px-4 text-emerald-400">Lower (compact inverted lists)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <div class="space-y-4">
-          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
-            <h3 class="text-sm font-bold text-emerald-400 mb-1">1. Enabling NVIDIA Container Toolkit on Host</h3>
-            <p class="text-xs text-slate-300">
-              For GPU inference in Ollama, install <code class="text-slate-400 font-mono text-xs">nvidia-container-toolkit</code> on your Linux host or enable WSL2 GPU support in Docker Desktop. If running on Apple Silicon, remove the <code class="text-slate-400 font-mono text-xs">deploy.resources</code> block; Docker Desktop on macOS utilizes Metal via virtualization without NVIDIA drivers.
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+            <h3 class="text-sm font-bold text-emerald-400 mb-1">Key HNSW Parameters: m and ef_construction</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              The <code class="text-emerald-300 font-mono text-xs">m</code> parameter defines the max number of bi-directional connection links per node (default: 16). Higher values increase recall for high-dimensional embeddings at the cost of index build time. The <code class="text-emerald-300 font-mono text-xs">ef_construction</code> parameter controls the search queue size during index construction (default: 64). For production RAG corpora, setting <code class="text-emerald-300 font-mono text-xs">WITH (m = 24, ef_construction = 128)</code> delivers optimal recall.
             </p>
           </div>
 
-          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
-            <h3 class="text-sm font-bold text-cyan-400 mb-1">2. Tuning HNSW Vector Indexes for Sub-Millisecond Search</h3>
-            <p class="text-xs text-slate-300">
-              For production RAG datasets with &gt;100k chunks, increase <code class="text-slate-400 font-mono text-xs">m = 24</code> and <code class="text-slate-400 font-mono text-xs">ef_construction = 128</code> when building the HNSW index. Ensure PostgreSQL parameter <code class="text-slate-400 font-mono text-xs">maintenance_work_mem</code> is set to at least 512MB in the database environment variables to accelerate index generation.
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+            <h3 class="text-sm font-bold text-cyan-400 mb-1">PostgreSQL Memory Tuning: maintenance_work_mem</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Building an HNSW graph is memory intensive. Ensure PostgreSQL has sufficient RAM by setting <code class="text-emerald-300 font-mono text-xs">ALTER SYSTEM SET maintenance_work_mem = '1GB';</code> or adding it to your Docker environment variables. Inadequate maintenance memory forces index creation to swap to disk, degrading indexing speed by a factor of 10.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+            <h3 class="text-sm font-bold text-purple-400 mb-1">Hybrid Relational + Vector Filtering</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              One of the greatest advantages of pgvector over standalone vector stores is native SQL integration. You can execute compound queries that filter on relational metadata (<code class="text-slate-300 font-mono text-xs">WHERE metadata-&gt;&gt;'tenant_id' = 'acme' AND published_at &gt; NOW() - INTERVAL '30 days'</code>) directly in the same execution plan as the HNSW vector similarity search.
             </p>
           </div>
         </div>
+      </section>
+
+      <!-- Section 8: Model Selection -->
+      <section>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
+          <span class="text-emerald-400 font-mono">8.</span> Selecting Local Embedding and Generation Models for Developer Workstations
+        </h2>
+        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+          When developing locally, model selection requires balancing context window depth, embedding dimensionality, VRAM footprint, and inference speed:
+        </p>
+
+        <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 my-6 shadow-xl">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-900 text-slate-200 font-mono uppercase text-[11px] border-b border-slate-800">
+              <tr>
+                <th class="py-3 px-4">Model Name</th>
+                <th class="py-3 px-4">Type</th>
+                <th class="py-3 px-4">Dimensions</th>
+                <th class="py-3 px-4">Context Window</th>
+                <th class="py-3 px-4">VRAM Footprint</th>
+                <th class="py-3 px-4">Recommendation</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 font-mono">
+              <tr>
+                <td class="py-3 px-4 font-bold text-emerald-400">nomic-embed-text</td>
+                <td class="py-3 px-4">Embedding</td>
+                <td class="py-3 px-4">768</td>
+                <td class="py-3 px-4">8,192 tokens</td>
+                <td class="py-3 px-4">~600 MB</td>
+                <td class="py-3 px-4 text-emerald-400 font-bold">Best Overall for Local RAG</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-cyan-400">all-minilm:l6-v2</td>
+                <td class="py-3 px-4">Embedding</td>
+                <td class="py-3 px-4">384</td>
+                <td class="py-3 px-4">512 tokens</td>
+                <td class="py-3 px-4">~200 MB</td>
+                <td class="py-3 px-4 text-cyan-400">Ultra-fast for short text snippets</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-amber-400">bge-m3</td>
+                <td class="py-3 px-4">Embedding</td>
+                <td class="py-3 px-4">1,024</td>
+                <td class="py-3 px-4">8,192 tokens</td>
+                <td class="py-3 px-4">~1.2 GB</td>
+                <td class="py-3 px-4 text-amber-400">Top multilingual accuracy</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-purple-400">llama3.2:1b</td>
+                <td class="py-3 px-4">LLM / Synthesis</td>
+                <td class="py-3 px-4">N/A</td>
+                <td class="py-3 px-4">128,000 tokens</td>
+                <td class="py-3 px-4">~1.3 GB</td>
+                <td class="py-3 px-4 text-purple-400">Fast local prompt synthesis</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+          For standard local RAG pipelines, pairing <code class="text-emerald-300 font-mono text-xs">nomic-embed-text</code> with PostgreSQL pgvector offers the optimal combination: high semantic precision, an expansive 8,192-token context window that accommodates large code or document chunks, and sub-15ms embedding generation on modest GPU hardware.
+        </p>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          When segmenting documents for vector indexing, adopt a chunking window of 512 to 1,024 tokens with a 10% to 15% overlap window. This guarantees that semantic context spanning across sentence or paragraph boundaries is preserved in adjacent vector embeddings, preventing retrieval fragmentation when answering nuanced technical questions.
+        </p>
       </section>
 
       <!-- Sibling Internal Links -->
@@ -503,5 +704,4 @@ if __name__ == "__main__":
       </section>
     </div>
   </article>
-
 </Layout>

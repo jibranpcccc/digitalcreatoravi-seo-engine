@@ -75,6 +75,30 @@ const schemaJson = JSON.stringify({
           }
         }
       ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${canonical}#breadcrumb`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://site-12-taupe.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Retention & Churn",
+          "item": "https://site-12-taupe.vercel.app/#metrics"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Customer vs Revenue Churn",
+          "item": canonical
+        }
+      ]
     }
   ]
 });
@@ -183,6 +207,76 @@ const schemaJson = JSON.stringify({
               </p>
             </div>
             <div class="mt-4 pt-2 border-t border-slate-800/80 text-[11px] text-emerald-400 font-mono">Can be Negative (&lt; 0%)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formal Mathematical Derivations -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-bold text-white tracking-tight">Formal Mathematical Derivations: Logo Churn vs Gross MRR Churn vs Net Revenue Churn</h2>
+        <p>
+          To establish rigorous analytical foundations for financial reporting and board decks, we define the retention variables and derive the governing equations:
+        </p>
+
+        <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-4 shadow-xl">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-indigo-400 font-mono">Formal Variable Definitions</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono text-slate-300">
+            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
+              <span class="text-indigo-400 font-bold">C_0</span> : Starting Customer Logos at t=0
+            </div>
+            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
+              <span class="text-rose-400 font-bold">C_lost</span> : Account Cancellations during [0, t]
+            </div>
+            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
+              <span class="text-indigo-400 font-bold">MRR_0</span> : Starting Cohort Monthly Recurring Revenue
+            </div>
+            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
+              <span class="text-rose-400 font-bold">&Delta;MRR_churn</span> : Dollar Revenue Lost via Cancellations
+            </div>
+            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
+              <span class="text-amber-400 font-bold">&Delta;MRR_contract</span> : Dollar Revenue Lost via Plan Downgrades
+            </div>
+            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
+              <span class="text-emerald-400 font-bold">&Delta;MRR_expand</span> : Dollar Revenue Gained via Upsells/Seats
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-4 text-xs sm:text-sm text-slate-300">
+            <div>
+              <h4 class="font-bold text-white mb-1">1. Derivation of Gross MRR Churn Rate (Bounded Range)</h4>
+              <p class="text-xs text-slate-400 mb-2">Gross churn aggregates all downward financial movements from existing accounts, strictly isolated from expansion:</p>
+              <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs sm:text-sm text-rose-300">
+                Gross Churn Rate = (&Delta;MRR_churn + &Delta;MRR_contract) / MRR_0
+              </div>
+              <p class="text-xs text-slate-400 mt-2">
+                Because &Delta;MRR_churn &ge; 0 and &Delta;MRR_contract &ge; 0, and total lost revenue cannot exceed starting revenue (&Delta;MRR_churn + &Delta;MRR_contract &le; MRR_0), Gross Churn is strictly bounded on the closed interval [0, 1] (0% to 100%).
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-white mb-1">2. Derivation of Net Revenue Churn Rate (Unbounded Expansion)</h4>
+              <p class="text-xs text-slate-400 mb-2">Net churn incorporates customer expansion to measure the net dollar velocity of the installed base:</p>
+              <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs sm:text-sm text-emerald-300">
+                Net Churn Rate = [(&Delta;MRR_churn + &Delta;MRR_contract) - (&Delta;MRR_expand + &Delta;MRR_reactivate)] / MRR_0
+              </div>
+              <p class="text-xs text-slate-400 mt-2">
+                When expansion outpaces gross losses (&Delta;MRR_expand + &Delta;MRR_reactivate &gt; &Delta;MRR_churn + &Delta;MRR_contract), the numerator evaluates to a negative number, creating <strong>Negative Churn</strong>.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-white mb-1">3. The Net Revenue Retention (NRR) Identity</h4>
+              <p class="text-xs text-slate-400 mb-2">Net Revenue Retention (NRR) and Net Churn are mathematically dual expressions:</p>
+              <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs sm:text-sm text-cyan-300">
+                NRR_monthly = 1 - Net Churn Rate
+              </div>
+              <p class="text-xs text-slate-400 mt-2">
+                For a multi-month compounding horizon of m months, the retained revenue from cohort MRR_0 equals:
+              </p>
+              <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs sm:text-sm text-cyan-300 mt-1">
+                MRR(m) = MRR_0 * (1 - Net Churn Rate)^m = MRR_0 * (NRR_monthly)^m
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -381,6 +475,148 @@ const schemaJson = JSON.stringify({
         <p>
           Consequently, the effective ARPU expands from <strong>$200/month to over $365/month</strong>. This occurs because the surviving customers are those extracting mission-critical value from the product, expanding user seats, consuming more computational API credits, or adopting higher-tier features.
         </p>
+      </section>
+
+      <!-- LTV Under Negative Churn -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-bold text-white tracking-tight">Customer Lifetime Value (LTV) Under Negative Churn: Solving the Geometric Series Dilemma</h2>
+        <p>
+          The classic textbook SaaS formula for Customer Lifetime Value assumes a static or strictly decaying revenue stream:
+        </p>
+        <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 font-mono text-xs sm:text-sm text-indigo-300">
+          LTV_traditional = (ARPU * Gross Margin %) / Customer Churn Rate
+        </div>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          This formulation relies on the convergence of an infinite geometric series where the common ratio R = (1 - Churn) &lt; 1. However, when an enterprise SaaS operates with <strong>Negative Revenue Churn</strong> (e.g. -2% monthly net churn, or NRR = 102%), the ratio R &gt; 1. Substituting negative churn into the traditional formula causes the denominator to become zero or negative, resulting in a mathematically divergent infinite value (&infin;).
+        </p>
+
+        <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-4 shadow-xl">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-400 font-mono">The Discounted Finite-Horizon Solution</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Institutional investors and SaaS CFOs resolve this dilemma by capping the valuation window to a realistic finite customer horizon H (typically 36 to 60 months) and applying an annual discount rate d (Weighted Average Cost of Capital, WACC ~10%–12%):
+          </p>
+          <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs sm:text-sm text-emerald-300">
+            LTV_H = &sum; [ ARPU_0 * (1 - Net Churn)^t * Gross Margin % ] / [ (1 + d_monthly)^t ] for t=1 to H
+          </div>
+
+          <!-- LTV Simulation Table Across Churn Regimes -->
+          <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 my-4">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr class="border-b border-slate-800 bg-slate-900/80 font-mono text-slate-400 uppercase text-[11px]">
+                  <th class="py-2.5 px-3">Churn Regime</th>
+                  <th class="py-2.5 px-3">Monthly Net Churn</th>
+                  <th class="py-2.5 px-3">Annualized NRR</th>
+                  <th class="py-2.5 px-3 text-cyan-400">3-Year Discounted LTV</th>
+                  <th class="py-2.5 px-3 text-emerald-400 font-bold">5-Year Discounted LTV</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 font-mono">
+                <tr>
+                  <td class="py-2.5 px-3 font-sans font-semibold text-rose-400">High Churn SMB</td>
+                  <td class="py-2.5 px-3">+4.0% / mo</td>
+                  <td class="py-2.5 px-3 text-rose-300">61.3% NRR</td>
+                  <td class="py-2.5 px-3 text-slate-300">$3,420 (Based on $200 ARPU)</td>
+                  <td class="py-2.5 px-3 text-slate-300">$3,950</td>
+                </tr>
+                <tr>
+                  <td class="py-2.5 px-3 font-sans font-semibold text-amber-400">Average Mid-Market</td>
+                  <td class="py-2.5 px-3">+1.0% / mo</td>
+                  <td class="py-2.5 px-3 text-amber-300">88.6% NRR</td>
+                  <td class="py-2.5 px-3 text-slate-300">$5,860</td>
+                  <td class="py-2.5 px-3 text-slate-300">$7,480</td>
+                </tr>
+                <tr>
+                  <td class="py-2.5 px-3 font-sans font-semibold text-cyan-400">Zero Net Churn (Breakeven)</td>
+                  <td class="py-2.5 px-3">0.0% / mo</td>
+                  <td class="py-2.5 px-3 text-cyan-300">100.0% NRR</td>
+                  <td class="py-2.5 px-3 text-cyan-300 font-semibold">$6,840</td>
+                  <td class="py-2.5 px-3 text-cyan-300 font-semibold">$9,920</td>
+                </tr>
+                <tr class="bg-emerald-950/20 font-bold">
+                  <td class="py-2.5 px-3 font-sans text-emerald-400">Elite Enterprise Expansion</td>
+                  <td class="py-2.5 px-3 text-emerald-300">-2.0% / mo</td>
+                  <td class="py-2.5 px-3 text-emerald-300">126.8% NRR</td>
+                  <td class="py-2.5 px-3 text-emerald-400 font-bold">$9,510 (+39% vs breakeven)</td>
+                  <td class="py-2.5 px-3 text-emerald-400 font-bold">$17,680 (+78% vs breakeven)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-[11px] text-slate-400">
+            * Assumptions: Initial ARPU = $200/mo, Gross Margin = 80%, Cost of Capital (Discount Rate) = 10% annualized.
+          </p>
+        </div>
+      </section>
+
+      <!-- Multi-Tier SaaS Cohort Matrix -->
+      <section class="space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+          <div>
+            <h2 class="text-2xl font-bold text-white tracking-tight">Multi-Tier SaaS Cohort Matrix: 3 Archetypes Analyzed</h2>
+            <p class="text-slate-400 text-xs sm:text-sm mt-1">Comparing unit retention dynamics and ARR valuation multiples across go-to-market motions.</p>
+          </div>
+          <span class="mt-2 sm:mt-0 inline-flex text-xs font-mono font-semibold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-3 py-1 rounded-full">
+            Cohort Economics
+          </span>
+        </div>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="border-b border-slate-800 bg-slate-900/90 font-mono text-slate-400 uppercase tracking-wider text-[11px]">
+                <th class="py-3 px-4">Metric / Dimension</th>
+                <th class="py-3 px-3 text-slate-300">Self-Serve Developer Tool</th>
+                <th class="py-3 px-3 text-indigo-400">Mid-Market B2B SaaS</th>
+                <th class="py-3 px-3 text-emerald-400 font-bold">Enterprise Platform</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-mono text-xs">
+              <tr>
+                <td class="py-3 px-4 font-sans font-semibold text-white">Average Contract Value (ACV)</td>
+                <td class="py-3 px-3 text-slate-300">$350 / yr ($29/mo)</td>
+                <td class="py-3 px-3 text-indigo-300">$12,000 / yr ($1k/mo)</td>
+                <td class="py-3 px-3 text-emerald-300 font-bold">$120,000 / yr ($10k/mo)</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-sans font-semibold text-white">Monthly Logo Churn %</td>
+                <td class="py-3 px-3 text-rose-400">5.5% / mo</td>
+                <td class="py-3 px-3 text-amber-400">2.0% / mo</td>
+                <td class="py-3 px-3 text-emerald-400 font-semibold">0.6% / mo</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-sans font-semibold text-white">Monthly Expansion Velocity</td>
+                <td class="py-3 px-3 text-slate-400">0.8% / mo</td>
+                <td class="py-3 px-3 text-indigo-300">3.2% / mo</td>
+                <td class="py-3 px-3 text-emerald-400 font-bold">3.0% / mo</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-sans font-semibold text-white">Monthly Net Revenue Churn %</td>
+                <td class="py-3 px-3 text-rose-400 font-bold">+4.7% / mo</td>
+                <td class="py-3 px-3 text-emerald-400 font-semibold">-1.2% / mo</td>
+                <td class="py-3 px-3 text-emerald-400 font-bold">-2.4% / mo</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-sans font-semibold text-white">Annual Net Revenue Retention (NRR)</td>
+                <td class="py-3 px-3 text-rose-400 font-bold">56.1% NRR</td>
+                <td class="py-3 px-3 text-emerald-400 font-semibold">115.4% NRR</td>
+                <td class="py-3 px-3 text-emerald-400 font-bold">133.0% NRR</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-sans font-semibold text-white">12-Month Retained Cohort MRR ($100k Base)</td>
+                <td class="py-3 px-3 text-rose-400 font-bold">$56,100</td>
+                <td class="py-3 px-3 text-emerald-400 font-semibold">$115,400</td>
+                <td class="py-3 px-3 text-emerald-400 font-bold">$133,000</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-sans font-semibold text-white">Median Institutional ARR Multiple</td>
+                <td class="py-3 px-3 text-slate-400">3.0x - 4.5x ARR</td>
+                <td class="py-3 px-3 text-indigo-400">7.0x - 9.5x ARR</td>
+                <td class="py-3 px-3 text-emerald-400 font-bold">12.0x - 18.0x+ ARR</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <!-- Comparison Matrix: When to Track Which Metric -->
