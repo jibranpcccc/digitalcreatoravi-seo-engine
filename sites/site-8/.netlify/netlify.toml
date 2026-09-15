@@ -6,10 +6,10 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-8\\dist"
+publish = "c:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-8\\dist"
 publishOrigin = "ui"
 commandOrigin = "ui"
-base = "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-8"
+base = "c:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-8"
 command = "npm run build"
 
 [build.environment]

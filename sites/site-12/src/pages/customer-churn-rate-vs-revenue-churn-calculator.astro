@@ -767,4 +767,19 @@ const schemaJson = JSON.stringify({
     </div>
   </div>
 
+
+      <div class="my-6">
+        <h3 class="text-lg font-bold text-white mb-2">Net Revenue Retention & Churn Calculus (Python)</h3>
+        <pre class="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-emerald-400 leading-relaxed" is:raw>
+def calculate_net_mrr_churn(start_mrr: float, expansion_mrr: float, contraction_mrr: float, churn_mrr: float) -> float:
+    # Net MRR Churn Rate = (Churned MRR + Contraction MRR - Expansion MRR) / Starting MRR
+    net_churn = (churn_mrr + contraction_mrr - expansion_mrr) / start_mrr
+    nrr = 1.0 - net_churn
+    return net_churn * 100.0, nrr * 100.0
+
+net_churn_pct, nrr_pct = calculate_net_mrr_churn(100000.0, 12000.0, 3000.0, 4000.0)
+print(f"Net MRR Churn: {net_churn_pct:.2f}% | Net Revenue Retention (NRR): {nrr_pct:.2f}%")
+</pre>
+      </div>
+
 </Layout>

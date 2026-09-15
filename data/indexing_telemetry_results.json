@@ -4,12 +4,12 @@
     "name": "LocalAgentStack",
     "host": "jibranpcccc.github.io",
     "urls_count": 17,
-    "google_websub": 0,
+    "google_websub": 204,
     "bing_indexnow": 200,
     "central_indexnow": 200,
     "pingomatic": true,
     "blogs": true,
-    "twingly": false
+    "twingly": true
   },
   {
     "site_id": "site-10",
@@ -21,7 +21,7 @@
     "central_indexnow": 200,
     "pingomatic": true,
     "blogs": true,
-    "twingly": false
+    "twingly": true
   },
   {
     "site_id": "site-11",
@@ -33,7 +33,7 @@
     "central_indexnow": 200,
     "pingomatic": true,
     "blogs": true,
-    "twingly": false
+    "twingly": true
   },
   {
     "site_id": "site-12",
@@ -45,7 +45,7 @@
     "central_indexnow": 200,
     "pingomatic": true,
     "blogs": true,
-    "twingly": false
+    "twingly": true
   },
   {
     "site_id": "site-13",
@@ -57,7 +57,7 @@
     "central_indexnow": 200,
     "pingomatic": true,
     "blogs": true,
-    "twingly": false
+    "twingly": true
   },
   {
     "site_id": "site-14",

@@ -755,4 +755,24 @@ const schema = {
     </div>
   </article>
 
+
+      <div class="my-6">
+        <h3 class="text-lg font-bold text-white mb-2">Automated Founder Runway Simulation Script (Python)</h3>
+        <pre class="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-emerald-400 leading-relaxed" is:raw>
+def calculate_founder_runway(capital_usd: float, monthly_burn_usd: float, rev_growth_rate: float) -> int:
+    months = 0
+    remaining = capital_usd
+    current_burn = monthly_burn_usd
+    while remaining > 0 and months < 60:
+        remaining -= current_burn
+        current_burn *= (1.0 - rev_growth_rate) # burn decreases with revenue
+        months += 1
+    return months
+
+runway_medellin = calculate_founder_runway(50000, 1850, 0.05)
+runway_ba = calculate_founder_runway(50000, 1620, 0.05)
+print(f"Medellin Runway: {runway_medellin} months | Buenos Aires Runway: {runway_ba} months")
+</pre>
+      </div>
+
 </Layout>

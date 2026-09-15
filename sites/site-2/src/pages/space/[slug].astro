@@ -30,6 +30,7 @@ export async function getStaticPaths() {
 }
 
 const { prop } = Astro.props;
+const citySlug = prop.city.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 const baseSpaceTitle = `${prop.name} Review: Speeds & Workspace (2026)`;
 const spacePageTitle = baseSpaceTitle.length > 60 ? `${prop.name}: Speed & Ergonomics Guide 2026` : baseSpaceTitle;
 
@@ -91,7 +92,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "name": prop.city,
-          "item": `https://workationradar.com/city//`
+          "item": `https://workationradar.com/city/${citySlug}/`
         },
         {
           "@type": "ListItem",
@@ -118,7 +119,7 @@ const schemaData = {
     <nav class="flex items-center space-x-2 text-xs text-stone-400 mb-8 font-medium">
       <a href={`${base}/`} class="hover:text-amber-400 transition">Home</a>
       <span class="text-stone-600">/</span>
-      <a href={`/city//`} class="hover:text-amber-400 transition">{prop.city}</a>
+      <a href={`${base}/city/${citySlug}/`} class="hover:text-amber-400 transition">{prop.city}</a>
       <span class="text-stone-600">/</span>
       <span class="text-amber-400 font-bold truncate max-w-xs">{prop.name}</span>
     </nav>
@@ -357,7 +358,7 @@ const schemaData = {
           <h3 class="text-xl font-extrabold text-white tracking-tight">Alternative Workation Hubs</h3>
           <p class="text-xs text-stone-400 mt-0.5">Explore corresponding verified remote work locations</p>
         </div>
-        <a href={`/city//`} class="text-xs font-mono text-amber-400 hover:text-amber-300">
+        <a href={`${base}/city/${citySlug}/`} class="text-xs font-mono text-amber-400 hover:text-amber-300">
           View All {prop.city} Spaces &rarr;
         </a>
       </div>
@@ -372,6 +373,16 @@ const schemaData = {
       </div>
     </div>
   </article>
+
+      <div class="my-6">
+        <h3 class="text-sm font-bold text-white mb-2">Automated Network Telemetry & Speedtest Command</h3>
+        <pre class="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-emerald-400 leading-relaxed" is:raw>
+# Run Continuous Symmetrical Latency & Packet Loss Diagnostic
+curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 - --simple
+ping -c 20 1.1.1.1 | tail -n 2
+</pre>
+      </div>
+
 </Layout>
 
 <script is:inline define:vars={{ monthlyRate: prop.monthly_rate_eur }}>

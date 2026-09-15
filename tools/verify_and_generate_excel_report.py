@@ -498,8 +498,92 @@ def build_all_backlinks_catalog():
                 "platform": item["platform"],
                 "link_type": item.get("link_type", item["platform"]),
                 "da": item["da"],
-                "anchor": item["anchor"]
+                "anchor": item.get("anchor", "Verified Backlink")
             })
+
+    # 21. 30 GitHub v1.2.0 Releases (DA 96) [NEW]
+    for r in repos_config:
+        s = site_map[r["site_id"]]
+        catalog.append({
+            "site_id": r["site_id"],
+            "site_name": s["name"],
+            "target_url": s["url"],
+            "backlink_url": f"https://github.com/jibranpcccc/{r['repo']}/releases/tag/v1.2.0",
+            "platform": "GitHub Release v1.2 (DA 96)",
+            "link_type": "Production Hardening & High-Concurrency Telemetry Notes",
+            "da": 96,
+            "anchor": f"{s['name']} v1.2.0 Enterprise Release"
+        })
+
+    # 22. 30 GitHub Official Issues #3 (Production Incident RFCs) (DA 96) [NEW]
+    for r in repos_config:
+        s = site_map[r["site_id"]]
+        catalog.append({
+            "site_id": r["site_id"],
+            "site_name": s["name"],
+            "target_url": s["url"],
+            "backlink_url": f"https://github.com/jibranpcccc/{r['repo']}/issues/3",
+            "platform": "GitHub Issue #3 RFC (DA 96)",
+            "link_type": "Official Incident Recovery Runbook & Telemetry RFC",
+            "da": 96,
+            "anchor": f"RFC #3: Incident Runbook & Telemetry ({s['name']})"
+        })
+
+    # 23. 30 jsDelivr OpenAPI 3.1 Specs CDN Endpoints (DA 92) [NEW]
+    for r in repos_config:
+        s = site_map[r["site_id"]]
+        catalog.append({
+            "site_id": r["site_id"],
+            "site_name": s["name"],
+            "target_url": s["url"],
+            "backlink_url": f"https://cdn.jsdelivr.net/gh/jibranpcccc/{r['repo']}@main/openapi.json",
+            "platform": "jsDelivr OpenAPI CDN (DA 92)",
+            "link_type": "Global Open CDN OpenAPI Specification",
+            "da": 92,
+            "anchor": f"jsDelivr CDN: {s['name']} OpenAPI 3.1"
+        })
+
+    # 24. 30 Statically OpenAPI 3.1 Specs CDN Endpoints (DA 81) [NEW]
+    for r in repos_config:
+        s = site_map[r["site_id"]]
+        catalog.append({
+            "site_id": r["site_id"],
+            "site_name": s["name"],
+            "target_url": s["url"],
+            "backlink_url": f"https://cdn.statically.io/gh/jibranpcccc/{r['repo']}/main/openapi.json",
+            "platform": "Statically OpenAPI CDN (DA 81)",
+            "link_type": "Multi-CDN Developer OpenAPI Specification",
+            "da": 81,
+            "anchor": f"Statically CDN: {s['name']} OpenAPI 3.1"
+        })
+
+    # 25. 30 jsDelivr Benchmarks Specs CDN Endpoints (DA 92) [NEW]
+    for r in repos_config:
+        s = site_map[r["site_id"]]
+        catalog.append({
+            "site_id": r["site_id"],
+            "site_name": s["name"],
+            "target_url": s["url"],
+            "backlink_url": f"https://cdn.jsdelivr.net/gh/jibranpcccc/{r['repo']}@main/BENCHMARKS.md",
+            "platform": "jsDelivr Benchmarks CDN (DA 92)",
+            "link_type": "Global Open CDN Benchmark Specification",
+            "da": 92,
+            "anchor": f"jsDelivr CDN: {s['name']} BENCHMARKS.md"
+        })
+
+    # 26. 30 Statically Benchmarks Specs CDN Endpoints (DA 81) [NEW]
+    for r in repos_config:
+        s = site_map[r["site_id"]]
+        catalog.append({
+            "site_id": r["site_id"],
+            "site_name": s["name"],
+            "target_url": s["url"],
+            "backlink_url": f"https://cdn.statically.io/gh/jibranpcccc/{r['repo']}/main/BENCHMARKS.md",
+            "platform": "Statically Benchmarks CDN (DA 81)",
+            "link_type": "Multi-CDN Developer Benchmark Specification",
+            "da": 81,
+            "anchor": f"Statically CDN: {s['name']} BENCHMARKS.md"
+        })
 
     return catalog
 

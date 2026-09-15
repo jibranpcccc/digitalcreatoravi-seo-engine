@@ -1,0 +1,499 @@
+[
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-1\\src\\content\\hardware\\2x-rtx-3090-vs-1x-rtx-4090-ai-inference.md",
+    "site": "site-1",
+    "rel": "src\\content\\hardware\\2x-rtx-3090-vs-1x-rtx-4090-ai-inference.md",
+    "len": 161,
+    "desc": "Empirical tokens/sec, VRAM pooling, and power draw benchmarks comparing dual NVIDIA RTX 3090 (48GB) against a single RTX 4090 (24GB) for local 70B LLM inference."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-1\\src\\content\\models\\deepseek-r1-local-setup-ollama.md",
+    "site": "site-1",
+    "rel": "src\\content\\models\\deepseek-r1-local-setup-ollama.md",
+    "len": 162,
+    "desc": "Step-by-step setup guide for running DeepSeek R1 reasoning models locally via Ollama with custom Modelfiles, GPU layer offloading, and optimal context allocation."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-2\\src\\pages\\florianopolis-brazil-coliving-guide.astro",
+    "site": "site-2",
+    "rel": "src\\pages\\florianopolis-brazil-coliving-guide.astro",
+    "len": 183,
+    "desc": "Exhaustive 2026 digital nomad coliving guide to Florian\u00f3polis (Floripa), Brazil: neighborhood breakdown, verified fiber speeds, monthly living costs, and digital nomad visa tax perks."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-2\\src\\pages\\split-croatia-coliving-guide.astro",
+    "site": "site-2",
+    "rel": "src\\pages\\split-croatia-coliving-guide.astro",
+    "len": 165,
+    "desc": "Exhaustive guide to digital nomad coliving and coworking in Split, Croatia: verified WiFi speeds, monthly costs, Croatia digital nomad permit, and community culture."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-2\\src\\pages\\space\\altschool-chiang-mai.astro",
+    "site": "site-2",
+    "rel": "src\\pages\\space\\altschool-chiang-mai.astro",
+    "len": 163,
+    "desc": "Independent verification of AltSchool Coliving Hub in Chiang Mai, Thailand. Tested 500 Mbps fiber speed, Sihoo Doro C300 Ergonomic chairs, and power backup status."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-2\\src\\pages\\space\\be-beach-coliving-koh-phangan.astro",
+    "site": "site-2",
+    "rel": "src\\pages\\space\\be-beach-coliving-koh-phangan.astro",
+    "len": 164,
+    "desc": "Independent verification of Be Beach Nomad Coliving in Koh Phangan, Thailand. Tested 380 Mbps fiber speed, Sihoo Ergonomic Pro Mesh chairs, and power backup status."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-2\\src\\pages\\space\\cape-town-workation-loft.astro",
+    "site": "site-2",
+    "rel": "src\\pages\\space\\cape-town-workation-loft.astro",
+    "len": 162,
+    "desc": "Independent verification of Cape Town Workation Loft in Cape Town, South Africa. Tested 280 Mbps fiber speed, Herman Miller Aeron chairs, and power backup status."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-2\\src\\pages\\space\\coworking-bansko-coliving.astro",
+    "site": "site-2",
+    "rel": "src\\pages\\space\\coworking-bansko-coliving.astro",
+    "len": 170,
+    "desc": "Independent verification of Coworking Bansko Mountain Coliving in Bansko, Bulgaria. Tested 350 Mbps fiber speed, Ergonomic High-Back Mesh chairs, and power backup status."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-2\\src\\pages\\space\\ponta-do-sol-nomad-coliving.astro",
+    "site": "site-2",
+    "rel": "src\\pages\\space\\ponta-do-sol-nomad-coliving.astro",
+    "len": 163,
+    "desc": "Independent verification of Ponta do Sol Nomad Coliving Hub in Madeira, Portugal. Tested 480 Mbps fiber speed, Herman Miller Aeron chairs, and power backup status."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-2\\src\\pages\\space\\porto-cozy-creator-loft.astro",
+    "site": "site-2",
+    "rel": "src\\pages\\space\\porto-cozy-creator-loft.astro",
+    "len": 164,
+    "desc": "Independent verification of Porto Cozy Creator Loft in Porto, Portugal. Tested 600 Mbps fiber speed, Herman Miller Aeron Remastered chairs, and power backup status."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-5\\src\\pages\\hnsw-vs-ivfflat-memory-consumption-pgvector-tuning.astro",
+    "site": "site-5",
+    "rel": "src\\pages\\hnsw-vs-ivfflat-memory-consumption-pgvector-tuning.astro",
+    "len": 171,
+    "desc": "Empirical benchmark comparing pgvector HNSW vs IVFFlat memory footprints, build times, Recall@10, and QPS on 1,000,000 1536-dim embeddings with complete SQL configuration."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-5\\src\\pages\\qdrant-vs-pinecone-benchmark-2026.astro",
+    "site": "site-5",
+    "rel": "src\\pages\\qdrant-vs-pinecone-benchmark-2026.astro",
+    "len": 170,
+    "desc": "Empirical 2026 benchmark comparing Qdrant (Rust HNSW) vs Pinecone Serverless. Latency percentiles, filtered search throughput at 100k, 1M, and 10M vectors, and cloud TCO."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-5\\src\\pages\\voyage-ai-vs-openai-embeddings-rag-cost.astro",
+    "site": "site-5",
+    "rel": "src\\pages\\voyage-ai-vs-openai-embeddings-rag-cost.astro",
+    "len": 188,
+    "desc": "Empirical benchmark of Voyage-large-2-instruct vs OpenAI text-embedding-3-large vs Cohere Embed v3. MTEB scores, context window limits, dimension truncation math, and enterprise RAG costs."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-6\\src\\pages\\183-day-rule-tax-residency-nomad-guide.astro",
+    "site": "site-6",
+    "rel": "src\\pages\\183-day-rule-tax-residency-nomad-guide.astro",
+    "len": 173,
+    "desc": "Master the 183-day rule for digital nomads. Learn how rolling 365-day periods, center of vital interests, and bilateral tax treaty tie-breakers determine your tax residency."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-6\\src\\pages\\cyprus-non-dom-tax-nomad-guide.astro",
+    "site": "site-6",
+    "rel": "src\\pages\\cyprus-non-dom-tax-nomad-guide.astro",
+    "len": 162,
+    "desc": "Comprehensive analysis of the Cyprus 60-day tax residency rule, 0% tax on dividends and capital gains under non-dom status, and SDC exemption for remote founders."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-6\\src\\pages\\estonia-e-residency-tax-optimization.astro",
+    "site": "site-6",
+    "rel": "src\\pages\\estonia-e-residency-tax-optimization.astro",
+    "len": 175,
+    "desc": "Master Estonia's 0% corporate tax on retained earnings. Compare compounding growth vs EU 25% tax, understand Permanent Establishment (PE) rules, and structure nomad dividends."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-6\\src\\pages\\italy-digital-nomad-visa-flat-tax-vs-spain.astro",
+    "site": "site-6",
+    "rel": "src\\pages\\italy-digital-nomad-visa-flat-tax-vs-spain.astro",
+    "len": 168,
+    "desc": "Mathematical net income comparison between Italy's Regime Forfettario & Impatriati vs Spain's Beckham Law 24% flat tax at \u20ac60k, \u20ac100k, and \u20ac150k gross freelance income."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-6\\src\\pages\\portugal-nhr-tax-nomad-calculator-2026.astro",
+    "site": "site-6",
+    "rel": "src\\pages\\portugal-nhr-tax-nomad-calculator-2026.astro",
+    "len": 165,
+    "desc": "How Portugal's new TIFIC (NHR 2.0) regime impacts digital nomads and remote software engineers. 20% flat tax rules, qualifying criteria, and net income calculations."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-6\\src\\pages\\spain-digital-nomad-visa-beckham-law-guide.astro",
+    "site": "site-6",
+    "rel": "src\\pages\\spain-digital-nomad-visa-beckham-law-guide.astro",
+    "len": 170,
+    "desc": "How to qualify for Spain's 24% flat tax rate under the Beckham Law as a remote worker or contractor. Detailed income thresholds, paperwork checklist, and net salary math."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-7\\src\\pages\\webhook-idempotency-redis-redlock-guide.astro",
+    "site": "site-7",
+    "rel": "src\\pages\\webhook-idempotency-redis-redlock-guide.astro",
+    "len": 166,
+    "desc": "Production blueprint for webhook idempotency using Redis SETNX and distributed Redlock in Python FastAPI. Prevents duplicate charges with atomic Lua scripts and TTLs."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-7\\src\\pages\\webhook-idempotency-redis-redlock-patterns.astro",
+    "site": "site-7",
+    "rel": "src\\pages\\webhook-idempotency-redis-redlock-patterns.astro",
+    "len": 174,
+    "desc": "Masterclass guide on webhook idempotency using Redis Redlock. Multi-region quorum locking, Python and TypeScript implementations, atomic Lua releases, and latency benchmarks."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-7\\src\\pages\\webhook-retry-exponential-backoff-jitter-guide.astro",
+    "site": "site-7",
+    "rel": "src\\pages\\webhook-retry-exponential-backoff-jitter-guide.astro",
+    "len": 168,
+    "desc": "Master webhook delivery retry schedules with exponential backoff and randomized jitter. Mathematical proof, Python & TypeScript recipes, and thundering herd prevention."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-8\\src\\pages\\client-side-pdf-compression-wasm-guide.astro",
+    "site": "site-8",
+    "rel": "src\\pages\\client-side-pdf-compression-wasm-guide.astro",
+    "len": 161,
+    "desc": "Production blueprint for compressing PDFs directly in the browser using WebAssembly (Ghostscript WASM and pdf-lib). Eliminates server uploads and GDPR liability."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-8\\src\\pages\\convert-pdf-to-markdown-offline-guide.astro",
+    "site": "site-8",
+    "rel": "src\\pages\\convert-pdf-to-markdown-offline-guide.astro",
+    "len": 163,
+    "desc": "Master offline PDF to Markdown conversion using client-side WebAssembly. Reconstruct tables, code blocks, and headings without sending data to OpenAI or Anthropic."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-8\\src\\pages\\redact-pdf-locally-browser-wasm-guide.astro",
+    "site": "site-8",
+    "rel": "src\\pages\\redact-pdf-locally-browser-wasm-guide.astro",
+    "len": 181,
+    "desc": "Masterclass guide to permanent client-side PDF redaction using WebAssembly and pdf-lib. Strip metadata, burn vector streams, mitigate WASM memory leaks, and audit network isolation."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-9\\src\\pages\\index.astro",
+    "site": "site-9",
+    "rel": "src\\pages\\index.astro",
+    "len": 167,
+    "desc": "Calculate your startup cash runway multiplier by relocating to Chiang Mai, Lisbon, Bali, Tokyo, Medellin, or Bansko. Extend runway by 3.8x without dilutive VC funding."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-9\\src\\pages\\medellin-vs-buenos-aires-software-founder-runway.astro",
+    "site": "site-9",
+    "rel": "src\\pages\\medellin-vs-buenos-aires-software-founder-runway.astro",
+    "len": 179,
+    "desc": "Deep financial, safety, and infrastructure comparison of Medell\u00edn vs Buenos Aires for bootstrapped tech founders. Monthly budgets, currency arbitrage, and runway multiplier vs SF."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-10\\src\\pages\\late-chunking-vs-sentence-window-retrieval-benchmark.astro",
+    "site": "site-10",
+    "rel": "src\\pages\\late-chunking-vs-sentence-window-retrieval-benchmark.astro",
+    "len": 162,
+    "desc": "Empirical RAG benchmark evaluating Jina AI Late Chunking against LlamaIndex Sentence-Window Retrieval across token ingestion cost, NDCG@10, and embedding latency."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-10\\src\\pages\\semantic-chunking-vs-fixed-size-rag-benchmarks.astro",
+    "site": "site-10",
+    "rel": "src\\pages\\semantic-chunking-vs-fixed-size-rag-benchmarks.astro",
+    "len": 172,
+    "desc": "Empirical benchmark comparing semantic cosine breakpoint chunking vs fixed token sliding windows across 10,000 queries. Analysis of Hit Rate @ 5, MRR, and token efficiency."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-11\\src\\pages\\costa-rica-digital-nomad-visa-bank-statement-guide.astro",
+    "site": "site-11",
+    "rel": "src\\pages\\costa-rica-digital-nomad-visa-bank-statement-guide.astro",
+    "len": 168,
+    "desc": "Exhaustive legal guide to Costa Rica's Digital Nomad Visa: $3,000/mo income proof, bank statement verification, Apostille rules, and 100% tax exemption under Ley 10008."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-11\\src\\pages\\easiest-digital-nomad-visas-in-europe-2026.astro",
+    "site": "site-11",
+    "rel": "src\\pages\\easiest-digital-nomad-visas-in-europe-2026.astro",
+    "len": 170,
+    "desc": "Comprehensive 2026 ranking of Europe's easiest digital nomad visas. Compare Croatia (\u20ac2,539/mo, 0% tax), Spain (\u20ac2,646/mo), Hungary (\u20ac3,000/mo), Portugal D8, and Albania."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-11\\src\\pages\\index.astro",
+    "site": "site-11",
+    "rel": "src\\pages\\index.astro",
+    "len": 191,
+    "desc": "Explore 38+ sovereign Digital Nomad Visas filtered by region and monthly income thresholds (<$2k, $2k-$4k, $4k+). Track statutory requirements, processing times, and tax exemption frameworks."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-11\\src\\pages\\japan-digital-nomad-visa-guide-tax-exemption.astro",
+    "site": "site-11",
+    "rel": "src\\pages\\japan-digital-nomad-visa-guide-tax-exemption.astro",
+    "len": 164,
+    "desc": "Verified legal guide to Japan's 6-month Digital Nomad Visa: \u00a510,000,000 JPY income threshold, 0% local tax exemption, 49 eligible countries, and insurance mandates."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-11\\src\\pages\\spain-digital-nomad-visa-income-requirements.astro",
+    "site": "site-11",
+    "rel": "src\\pages\\spain-digital-nomad-visa-income-requirements.astro",
+    "len": 182,
+    "desc": "Verified 2026 guide for Spain's Digital Nomad Visa: exact 200% SMI monthly income calculations (\u20ac2,646/mo), Beckham Law 24% tax rate, UGE 20-day approvals, and document requirements."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-12\\src\\pages\\index.astro",
+    "site": "site-12",
+    "rel": "src\\pages\\index.astro",
+    "len": 168,
+    "desc": "Interactive SaaS financial calculator for bootstrapped founders. Calculate Gross Margin LTV, LTV:CAC Ratio, CAC Payback Period, and Rule of 40 exit valuation multiples."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-13\\src\\pages\\caddy-server-json-access-log-grok-patterns.astro",
+    "site": "site-13",
+    "rel": "src\\pages\\caddy-server-json-access-log-grok-patterns.astro",
+    "len": 161,
+    "desc": "Production Grok patterns and Logstash/Vector regex configurations for parsing Caddy 2 structured JSON access logs, extraction timestamps, latency, and client IP."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-13\\src\\pages\\haproxy-http-log-format-regex-extractor.astro",
+    "site": "site-13",
+    "rel": "src\\pages\\haproxy-http-log-format-regex-extractor.astro",
+    "len": 182,
+    "desc": "Production guide and regex extractor for parsing HAProxy HTTP access logs. Grok patterns, PCRE regex, latency timers breakdown (%TR/%Tw/%Tc/%Tr/%Ta), and Vector/Fluent Bit pipelines."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-13\\src\\pages\\kubernetes-ingress-nginx-log-parser-fluentbit.astro",
+    "site": "site-13",
+    "rel": "src\\pages\\kubernetes-ingress-nginx-log-parser-fluentbit.astro",
+    "len": 163,
+    "desc": "Master parsing Kubernetes Ingress-Nginx logs. Complete Grok patterns, Oniguruma regex for Fluent Bit, DaemonSet pipelines, and Vector VRL transforms for telemetry."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-14\\src\\pages\\index.astro",
+    "site": "site-14",
+    "rel": "src\\pages\\index.astro",
+    "len": 162,
+    "desc": "Comprehensive B2B SaaS SOC 2 Type II readiness checklist and interactive calculator across CC6 Access, CC7 Operations, CC8 Change Management, and Risk Governance."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-14\\src\\pages\\pentest-requirements-for-soc-2-type-2-audit.astro",
+    "site": "site-14",
+    "rel": "src\\pages\\pentest-requirements-for-soc-2-type-2-audit.astro",
+    "len": 164,
+    "desc": "Master SOC 2 Type II pentest requirements. Detailed auditor criteria for CC4.1 & CC7.1, grey-box vs black-box scoping, finding remediation SLAs, and report formats."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-14\\src\\pages\\soc-2-compliance-for-bootstrapped-startups-under-20k.astro",
+    "site": "site-14",
+    "rel": "src\\pages\\soc-2-compliance-for-bootstrapped-startups-under-20k.astro",
+    "len": 177,
+    "desc": "How to achieve clean SOC 2 Type II compliance under $20,000 without five-figure automation platforms. Open-source tooling, free-tier AWS primitives, and boutique CPA strategies."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-14\\src\\pages\\soc-2-type-1-vs-type-2-compliance-timeline-cost.astro",
+    "site": "site-14",
+    "rel": "src\\pages\\soc-2-type-1-vs-type-2-compliance-timeline-cost.astro",
+    "len": 171,
+    "desc": "Comprehensive comparison between SOC 2 Type 1 and Type 2 reports. Learn exact differences in design vs operational testing, timelines, auditor pricing, and bridge letters."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-14\\src\\pages\\vanta-vs-drata-vs-secureframe-compliance-automation-review.astro",
+    "site": "site-14",
+    "rel": "src\\pages\\vanta-vs-drata-vs-secureframe-compliance-automation-review.astro",
+    "len": 170,
+    "desc": "Comprehensive engineering review of Vanta, Drata, and Secureframe. Compare API architectures, agent footprints, auditor network discounts, hidden seat fees, and real TCO."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-15\\src\\pages\\b2b-contract-vs-eor-permanent-establishment-risk.astro",
+    "site": "site-15",
+    "rel": "src\\pages\\b2b-contract-vs-eor-permanent-establishment-risk.astro",
+    "len": 168,
+    "desc": "Analyze Permanent Establishment (PE) corporate tax risks under OECD Model Tax Convention Article 5. Compare direct B2B contractor contracts against EOR legal shielding."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-15\\src\\pages\\contractor-vs-eor-legal-misclassification-risk-matrix.astro",
+    "site": "site-15",
+    "rel": "src\\pages\\contractor-vs-eor-legal-misclassification-risk-matrix.astro",
+    "len": 187,
+    "desc": "Assess international worker classification risk. Evaluate behavioral control, economic dependence, permanent establishment (PE), and retroactive social tax liabilities across 6 tech hubs."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-15\\src\\pages\\deel-vs-remote-com-pricing-hidden-fees-breakdown.astro",
+    "site": "site-15",
+    "rel": "src\\pages\\deel-vs-remote-com-pricing-hidden-fees-breakdown.astro",
+    "len": 185,
+    "desc": "Unvarnished 2026 financial comparison of Deel versus Remote.com. Analyze monthly SaaS fees, owned vs partner entity models, foreign exchange (FX) spreads, and security deposit reserves."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-15\\src\\pages\\hiring-remote-engineers-in-latin-america-vs-eastern-europe-eor-cost.astro",
+    "site": "site-15",
+    "rel": "src\\pages\\hiring-remote-engineers-in-latin-america-vs-eastern-europe-eor-cost.astro",
+    "len": 202,
+    "desc": "Compare Total Cost to Company (TCTC) for hiring senior software engineers in Latin America (Brazil, Argentina, Colombia) vs Eastern Europe (Poland, Romania). Social taxes, 13th salaries, and time zones."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-15\\src\\pages\\index.astro",
+    "site": "site-15",
+    "rel": "src\\pages\\index.astro",
+    "len": 207,
+    "desc": "Calculate true total cost to company (TCTC) for hiring international employees via Deel, Remote, Oyster, and Multiplier. Uncover hidden 1.5%-2.5% FX spreads, employer social contributions, and deposit locks."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-15\\src\\pages\\philippines-13th-month-pay-mandatory-employer-costs.astro",
+    "site": "site-15",
+    "rel": "src\\pages\\philippines-13th-month-pay-mandatory-employer-costs.astro",
+    "len": 184,
+    "desc": "Complete guide to mandatory employer hiring costs in the Philippines. Learn the 13th month pay legal formula, 2026 SSS contribution brackets, PhilHealth 5% rate, and Pag-IBIG ceilings."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-16\\src\\pages\\devcontainer-json-vs-docker-compose-local-development.astro",
+    "site": "site-16",
+    "rel": "src\\pages\\devcontainer-json-vs-docker-compose-local-development.astro",
+    "len": 170,
+    "desc": "Explore the architectural trade-offs of devcontainer.json vs docker-compose.yml. Master lifecycle hooks, volume caching, and production hybrid development configurations."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-17\\src\\pages\\espocrm-vs-suitecrm-lightweight-php-open-source.astro",
+    "site": "site-17",
+    "rel": "src\\pages\\espocrm-vs-suitecrm-lightweight-php-open-source.astro",
+    "len": 172,
+    "desc": "Granular technical comparison: EspoCRM vs SuiteCRM. Explore RAM benchmarks, PHP 8.3 compatibility, REST API response latency, and 3-year TCO math vs HubSpot and Salesforce."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-17\\src\\pages\\hubspot-to-twenty-crm-migration-script-csv-export.astro",
+    "site": "site-17",
+    "rel": "src\\pages\\hubspot-to-twenty-crm-migration-script-csv-export.astro",
+    "len": 179,
+    "desc": "Comprehensive engineering guide to migrating contacts, companies, and sales pipelines from HubSpot to self-hosted Twenty CRM using Python CSV transforms and GraphQL API ingestion."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-17\\src\\pages\\index.astro",
+    "site": "site-17",
+    "rel": "src\\pages\\index.astro",
+    "len": 185,
+    "desc": "Calculate 3-year TCO savings migrating from Salesforce or HubSpot to self-hosted Twenty CRM or ERPNext on Hetzner VPS. Compare per-seat costs, break-even months, and infrastructure ROI."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-17\\src\\pages\\mautic-vs-hubspot-email-automation-deliverability-benchmark.astro",
+    "site": "site-17",
+    "rel": "src\\pages\\mautic-vs-hubspot-email-automation-deliverability-benchmark.astro",
+    "len": 165,
+    "desc": "Empirical email deliverability test: Self-Hosted Mautic 5 with Amazon SES vs HubSpot Marketing Hub Enterprise. Compare inbox rates, IP warm-up, and 92% cost savings."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-17\\src\\pages\\self-hosted-erpnext-vs-salesforce-cost-migration-breakdown.astro",
+    "site": "site-17",
+    "rel": "src\\pages\\self-hosted-erpnext-vs-salesforce-cost-migration-breakdown.astro",
+    "len": 161,
+    "desc": "In-depth TCO comparison and migration runbook: Self-Hosted Frappe ERPNext vs Salesforce Enterprise. Discover schema mapping, ETL pipelines, and 82% cost savings."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-17\\src\\pages\\twenty-crm-vs-hubspot-open-source-sales-pipeline-audit.astro",
+    "site": "site-17",
+    "rel": "src\\pages\\twenty-crm-vs-hubspot-open-source-sales-pipeline-audit.astro",
+    "len": 168,
+    "desc": "Technical and financial audit comparing Twenty CRM and HubSpot Sales Hub Enterprise. Review PostgreSQL architecture, GraphQL throughput, custom objects, and 3-year TCO."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-18\\src\\pages\\act-run-github-actions-locally-debugging-guide.astro",
+    "site": "site-18",
+    "rel": "src\\pages\\act-run-github-actions-locally-debugging-guide.astro",
+    "len": 165,
+    "desc": "Comprehensive tutorial on using nektos/act to run and debug GitHub Actions workflows locally inside Docker. Avoid git commit spam, test secrets, and simulate events."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-18\\src\\pages\\github-actions-reusable-workflows-vs-composite-actions.astro",
+    "site": "site-18",
+    "rel": "src\\pages\\github-actions-reusable-workflows-vs-composite-actions.astro",
+    "len": 183,
+    "desc": "In-depth architectural comparison of GitHub Actions Reusable Workflows vs Composite Actions. Detailed matrix, secrets inheritance, runner isolation, nesting limits, and YAML examples."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-18\\src\\pages\\github-actions-vs-gitlab-ci-syntax-execution-cost-comparison.astro",
+    "site": "site-18",
+    "rel": "src\\pages\\github-actions-vs-gitlab-ci-syntax-execution-cost-comparison.astro",
+    "len": 170,
+    "desc": "Deep-dive comparison between GitHub Actions and GitLab CI: Directed Acyclic Graph orchestration, YAML syntax translation, runner pricing benchmarks, and matrix execution."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-18\\src\\pages\\index.astro",
+    "site": "site-18",
+    "rel": "src\\pages\\index.astro",
+    "len": 193,
+    "desc": "Validate and visualize GitHub Actions workflows and CI/CD pipelines as interactive Directed Acyclic Graphs (DAG). Detect dependency cycles, calculate critical paths, and benchmark runner costs."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-19\\src\\pages\\crypto-funding-rate-arbitrage-delta-neutral-yield-guide.astro",
+    "site": "site-19",
+    "rel": "src\\pages\\crypto-funding-rate-arbitrage-delta-neutral-yield-guide.astro",
+    "len": 178,
+    "desc": "Institutional guide to cryptocurrency perpetual futures funding rate arbitrage: mathematical formulas, delta-neutral hedging, liquidation buffering, and cash-and-carry execution."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-19\\src\\pages\\impermanent-loss-vs-fee-apr-uniswap-v3-formula.astro",
+    "site": "site-19",
+    "rel": "src\\pages\\impermanent-loss-vs-fee-apr-uniswap-v3-formula.astro",
+    "len": 188,
+    "desc": "Rigorous quantitative breakdown of Uniswap v3 concentrated liquidity impermanent loss formulas, virtual reserve geometry, and empirical breakeven tables comparing 0.05% vs 0.30% fee tiers."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-19\\src\\pages\\index.astro",
+    "site": "site-19",
+    "rel": "src\\pages\\index.astro",
+    "len": 206,
+    "desc": "Institutional-grade financial math visualizer: calculate Black-Scholes option pricing, first and second order Greeks (Delta, Gamma, Vega, Theta, Rho), and Uniswap v3 concentrated liquidity impermanent loss."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-19\\src\\pages\\options-gamma-scalping-theta-decay-hedging-strategies.astro",
+    "site": "site-19",
+    "rel": "src\\pages\\options-gamma-scalping-theta-decay-hedging-strategies.astro",
+    "len": 185,
+    "desc": "Master quantitative options gamma scalping: the mathematical relationship between gamma convexity, theta decay, delta neutral rebalancing thresholds, and realized vs implied volatility."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-19\\src\\pages\\uniswap-v3-concentrated-liquidity-impermanent-loss-calculator.astro",
+    "site": "site-19",
+    "rel": "src\\pages\\uniswap-v3-concentrated-liquidity-impermanent-loss-calculator.astro",
+    "len": 190,
+    "desc": "Comprehensive quantitative guide to Uniswap v3 concentrated liquidity: mathematical derivations of virtual reserves, tick math, divergence loss equations, and capital efficiency multipliers."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-20\\src\\pages\\cloudflare-workers-ai-vs-cerebras-latency-benchmarks.astro",
+    "site": "site-20",
+    "rel": "src\\pages\\cloudflare-workers-ai-vs-cerebras-latency-benchmarks.astro",
+    "len": 205,
+    "desc": "Comprehensive empirical benchmark comparing Llama-3.1-8B latency, Time to First Token (TTFT), tokens/second throughput, and cold start performance across Cloudflare Workers AI, Groq LPU, and Cerebras CS-3."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-20\\src\\pages\\index.astro",
+    "site": "site-20",
+    "rel": "src\\pages\\index.astro",
+    "len": 172,
+    "desc": "Empirical edge AI inference benchmarks comparing WebGPU, ONNX Runtime Web, Cloudflare Workers AI, and Apple CoreML. Latency, tokens/s throughput, and VRAM memory profiling."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-20\\src\\pages\\onnx-runtime-vs-tensorrt-edge-server-latency.astro",
+    "site": "site-20",
+    "rel": "src\\pages\\onnx-runtime-vs-tensorrt-edge-server-latency.astro",
+    "len": 162,
+    "desc": "Empirical edge server benchmarks comparing ONNX Runtime (TensorRT EP, CUDA EP) against standalone NVIDIA TensorRT 10.x. Latency, throughput, and INT8 calibration."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-20\\src\\pages\\onnx-runtime-webgpu-fp16-model-optimization.astro",
+    "site": "site-20",
+    "rel": "src\\pages\\onnx-runtime-webgpu-fp16-model-optimization.astro",
+    "len": 218,
+    "desc": "Production engineering guide to optimizing and quantizing FP16 transformer models for WebGPU inference using ONNX Runtime Web. Includes fused attention conversion scripts, WGSL compute shaders, and hardware benchmarks."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-20\\src\\pages\\transformers-js-v3-webgpu-browser-inference-tutorial.astro",
+    "site": "site-20",
+    "rel": "src\\pages\\transformers-js-v3-webgpu-browser-inference-tutorial.astro",
+    "len": 163,
+    "desc": "Comprehensive tutorial for running local in-browser LLM inference with Hugging Face Transformers.js v3, WebGPU device acceleration, ONNX runtime, and Phi-3.5-mini."
+  },
+  {
+    "file": "C:\\Users\\jibra\\Desktop\\1\\digitalcreatoravi\\sites\\site-20\\src\\pages\\webgpu-vs-wasm-in-browser-llm-inference-benchmarks.astro",
+    "site": "site-20",
+    "rel": "src\\pages\\webgpu-vs-wasm-in-browser-llm-inference-benchmarks.astro",
+    "len": 163,
+    "desc": "Comprehensive benchmark analysis comparing WebGPU WGSL compute shaders against WebAssembly (WASM) SIMD for in-browser LLM inference. Latency, tokens/s, and memory."
+  }
+]
