@@ -2,43 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://raginspect.pages.dev/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://raginspect.pages.dev/colpali-vs-bge-m3-multimodal-document-retrieval/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://raginspect.pages.dev/hybrid-search-bm25-vs-dense-vector-accuracy/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://raginspect.pages.dev/late-chunking-vs-sentence-window-retrieval-benchmark/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://raginspect.pages.dev/ragas-vs-trulens-rag-evaluation-frameworks/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://raginspect.pages.dev/reranking-models-cohere-vs-bge-reranker-large-mteb/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://raginspect.pages.dev/semantic-chunking-vs-fixed-size-rag-benchmarks/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://raginspect.pages.dev/recursive-character-splitter-vs-semantic-chunking/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://raginspect.pages.dev/tuning-bm25-k1-b-hyperparameters-hybrid-rag/</loc>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

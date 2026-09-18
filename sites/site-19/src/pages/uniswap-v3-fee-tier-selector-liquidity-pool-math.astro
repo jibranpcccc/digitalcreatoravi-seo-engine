@@ -1,0 +1,281 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://site-19-nine.vercel.app/uniswap-v3-fee-tier-selector-liquidity-pool-math/#article",
+      "headline": "Uniswap v3 Fee Tier Selector: 0.05% vs 0.30% vs 1.00% Liquidity Pool Volatility Math",
+      "description": "Rigorous quantitative guide and mathematical model for selecting Uniswap v3 fee tiers (0.01%, 0.05%, 0.30%, 1.00%) based on asset volatility and tick spacing.",
+      "url": "https://site-19-nine.vercel.app/uniswap-v3-fee-tier-selector-liquidity-pool-math/",
+      "datePublished": "2026-09-18T00:00:00Z",
+      "dateModified": "2026-09-18T00:00:00Z",
+      "author": {
+        "@type": "Organization",
+        "name": "QuantDevMath Research Team",
+        "url": "https://site-19-nine.vercel.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "QuantDevMath",
+        "url": "https://site-19-nine.vercel.app/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://site-19-nine.vercel.app/uniswap-v3-fee-tier-selector-liquidity-pool-math/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the four official fee tiers in Uniswap v3?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uniswap v3 supports 0.01% (1 bps, tick spacing 1), 0.05% (5 bps, tick spacing 10), 0.30% (30 bps, tick spacing 60), and 1.00% (100 bps, tick spacing 200)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does tick spacing impact liquidity concentration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each fee tier has a fixed tick spacing defined by the smart contract. A smaller tick spacing (such as 1 tick on the 0.01% tier) allows LPs to concentrate liquidity into infinitesimally narrow price bands, maximizing capital efficiency for ultra-stable peg assets like USDC/USDT."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What volatility threshold dictates choosing 0.30% vs 1.00%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When annualized pair volatility exceeds 85% to 100% (such as newly launched memecoins or exotic governance tokens), the 1.00% fee tier is required to generate sufficient fee yield to offset severe impermanent loss (LVR)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://site-19-nine.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "DeFi Quantitative Models",
+          "item": "https://site-19-nine.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Uniswap v3 Fee Tier Selector",
+          "item": "https://site-19-nine.vercel.app/uniswap-v3-fee-tier-selector-liquidity-pool-math/"
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Uniswap v3 Fee Tier Selector: Volatility Math (2026) | QuantDevMath"
+  description="Rigorous quantitative guide and mathematical model for selecting Uniswap v3 fee tiers (0.01%, 0.05%, 0.30%, 1.00%) based on asset volatility and tick spacing."
+  schemaJson={JSON.stringify(schema)}
+>
+  <main class="max-w-4xl mx-auto px-4 py-12 text-slate-200">
+    <nav class="text-xs font-mono text-slate-500 mb-6">
+      <a href="/" class="hover:text-emerald-400">Home</a> &gt; 
+      <a href="/" class="hover:text-emerald-400">Quantitative Finance</a> &gt; 
+      <span class="text-slate-400">Uniswap v3 Fee Tier Optimization</span>
+    </nav>
+
+    <header class="mb-10">
+      <span class="px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-400 rounded-full text-xs font-mono uppercase tracking-wider">
+        AMM Quantitative Modeling
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight leading-tight">
+        Uniswap v3 Fee Tier Selector: 0.05% vs 0.30% vs 1.00% Liquidity Pool Volatility Math
+      </h1>
+      <p class="text-slate-400 mt-3 text-sm font-mono">
+        Loss-Versus-Rebalancing (LVR) Theory • Tick Spacing Mechanics • Updated September 2026
+      </p>
+    </header>
+
+    <div class="bg-slate-900/60 p-6 rounded-xl border-l-4 border-amber-500 mb-10 text-slate-200">
+      <p class="font-bold text-white mb-1">Quick Answer for Liquidity Providers (LPs):</p>
+      <p>
+        Concentrated liquidity in Uniswap v3 is an exercise in balancing <strong>earned fee income against Loss-Versus-Rebalancing (LVR)</strong>. Providing liquidity on the wrong tier destroys capital: stablecoin pairs (USDC/USDT) must use <strong>0.01% or 0.05%</strong> to capture routing volume, blue-chips (ETH/USDC) achieve maximum Sharpe ratios at <strong>0.05% for tight bands or 0.30% for wide bands</strong>, while exotic pairs require <strong>1.00%</strong> to survive toxic arbitrage flow.
+      </p>
+    </div>
+
+    <section class="prose prose-invert max-w-none space-y-8">
+      <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-2">
+        The Four Fee Tiers &amp; Tick Spacing Architecture
+      </h2>
+      <p>
+        In Uniswap v3, prices are discretized into ticks indexed by integer $i$, where the price at tick $i$ is defined by:
+      </p>
+
+      <pre is:raw class="bg-slate-950 p-4 rounded-lg border border-slate-800 text-xs font-mono text-amber-300 overflow-x-auto"><code>Price(i) = 1.0001^i
+</code></pre>
+
+      <p>
+        The table below defines the formal parameters governing all four factory-initialized fee tiers:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-700 bg-slate-900/40 rounded-lg">
+          <thead>
+            <tr class="bg-slate-950 text-amber-400 border-b border-slate-700">
+              <th class="p-3">Fee Tier</th>
+              <th class="p-3">Basis Points (bps)</th>
+              <th class="p-3">Tick Spacing</th>
+              <th class="p-3">Min Price Delta per Tick</th>
+              <th class="p-3">Target Asset Volatility (Annualized)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 text-slate-300">
+            <tr class="hover:bg-slate-800/50">
+              <td class="p-3 font-semibold text-white">0.01%</td>
+              <td class="p-3">1 bps</td>
+              <td class="p-3 font-mono">1 tick</td>
+              <td class="p-3">0.01%</td>
+              <td class="p-3 text-emerald-400 font-bold">&lt; 5% (Pegged Pairs: USDC/USDT, DAI/USDC)</td>
+            </tr>
+            <tr class="hover:bg-slate-800/50">
+              <td class="p-3 font-semibold text-white">0.05%</td>
+              <td class="p-3">5 bps</td>
+              <td class="p-3 font-mono">10 ticks</td>
+              <td class="p-3">0.10%</td>
+              <td class="p-3 text-emerald-400 font-bold">5% – 35% (Correlated / Major Pairs: ETH/BTC, stETH/ETH)</td>
+            </tr>
+            <tr class="hover:bg-slate-800/50 bg-amber-950/20">
+              <td class="p-3 font-semibold text-amber-400 font-bold">0.30%</td>
+              <td class="p-3 font-bold">30 bps</td>
+              <td class="p-3 font-mono text-amber-300 font-bold">60 ticks</td>
+              <td class="p-3 font-bold">0.60%</td>
+              <td class="p-3 text-amber-300 font-bold">35% – 85% (Standard Crypto Assets: ETH/USDC, SOL/USDC)</td>
+            </tr>
+            <tr class="hover:bg-slate-800/50">
+              <td class="p-3 font-semibold text-white">1.00%</td>
+              <td class="p-3">100 bps</td>
+              <td class="p-3 font-mono">200 ticks</td>
+              <td class="p-3">2.02%</td>
+              <td class="p-3 text-rose-400 font-bold">&gt; 85% (Exotic / Micro-Cap Memecoins)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-2">
+        Loss-Versus-Rebalancing (LVR) Mathematical Derivation
+      </h2>
+      <p>
+        Loss-Versus-Rebalancing (formalized by Milionis, Moallemi, Roughgarden, and Timmer) demonstrates that continuous AMM rebalancing by informed arbitrageurs represents an unhedgeable cost for liquidity providers. The instantaneous LVR rate $dLVR / dt$ is defined as:
+      </p>
+
+      <pre is:raw class="bg-slate-950 p-4 rounded-lg border border-slate-800 text-xs font-mono text-amber-300 overflow-x-auto"><code>LVR_rate = (sigma^2 / 8) * S * L
+</code></pre>
+
+      <p>
+        Where:
+      </p>
+      <ul class="space-y-2 text-slate-300 list-disc pl-5">
+        <li><code>sigma</code> is the instantaneous volatility of the asset pair.</li>
+        <li><code>S</code> is the current spot price of the asset.</li>
+        <li><code>L</code> is the total active liquidity depth provided in the price bucket.</li>
+      </ul>
+      <p>
+        An LP is mathematically profitable if and only if the fee revenue rate exceeds the LVR rate:
+      </p>
+
+      <pre is:raw class="bg-slate-950 p-4 rounded-lg border border-slate-800 text-xs font-mono text-amber-300 overflow-x-auto"><code>Fee_Revenue_rate = Fee_Tier * Volume_rate > (sigma^2 / 8) * S * L
+</code></pre>
+
+      <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-2">
+        Python Decision Selector for Optimal Fee Tier
+      </h2>
+      <p>
+        Run this Python function to determine the optimal Uniswap v3 fee tier given your pair's 30-day historical volatility and projected 24-hour swap volume:
+      </p>
+
+      <pre is:raw class="bg-slate-950 p-4 rounded-lg border border-slate-800 text-xs font-mono text-amber-300 overflow-x-auto"><code>def select_uniswap_v3_tier(annual_volatility: float, is_pegged: bool = False) -> dict:
+    """Calculates optimal Uniswap v3 fee tier based on annualized pair volatility."""
+    if is_pegged or annual_volatility &lt; 0.05:
+        return {
+            "tier_bps": 1,
+            "fee_percent": 0.01,
+            "tick_spacing": 1,
+            "profile": "Pegged Stablecoin (USDC/USDT)",
+            "rationale": "Minimal LVR risk allows 100x concentrated capital."
+        }
+    elif annual_volatility &lt;= 0.35:
+        return {
+            "tier_bps": 5,
+            "fee_percent": 0.05,
+            "tick_spacing": 10,
+            "profile": "Correlated / High-Volume Major (ETH/BTC, stETH/ETH)",
+            "rationale": "High volume dominates low per-swap fee."
+        }
+    elif annual_volatility &lt;= 0.85:
+        return {
+            "tier_bps": 30,
+            "fee_percent": 0.30,
+            "tick_spacing": 60,
+            "profile": "Standard High-Cap Volatile Pair (ETH/USDC, SOL/USDC)",
+            "rationale": "Balances toxic MEV arbitrage against natural retail swap fee revenue."
+        }
+    else:
+        return {
+            "tier_bps": 100,
+            "fee_percent": 1.00,
+            "tick_spacing": 200,
+            "profile": "Exotic / Long-Tail Token",
+            "rationale": "100 bps required to compensate for severe adverse selection."
+        }
+
+# Example: ETH/USDC at 62% annualized volatility
+print(select_uniswap_v3_tier(0.62))
+</code></pre>
+
+      <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-2">
+        Concentration Factor &amp; Capital Efficiency Multiplier
+      </h2>
+      <p>
+        In Uniswap v2, liquidity was distributed uniformly across the entire price range $[0, \infty)$. In Uniswap v3, providing liquidity within a concentrated range $[P_a, P_b]$ amplifies capital efficiency by multiplier $M$:
+      </p>
+
+      <pre is:raw class="bg-slate-950 p-4 rounded-lg border border-slate-800 text-xs font-mono text-amber-300 overflow-x-auto"><code>Capital Efficiency Multiplier (M) = 1 / (1 - (Pa / Pb)^(1/4))
+</code></pre>
+
+      <p>
+        For a stablecoin pair operating within a narrow range $[0.999, 1.001]$, the capital efficiency multiplier is over <strong>4,000x</strong>. This allows a $25,000 LP deposit on the 0.01% fee tier to earn the same nominal swap fees as a $100,000,000 position in a standard v2 AMM pool.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-2">
+        Dynamic Range Rebalancing &amp; Gas Cost Thresholds
+      </h2>
+      <p>
+        While tight concentration maximizes earned fee APR, price volatility frequently pushes spot prices outside the active liquidity band. When out of range, the LP earns zero fees while holding 100% of the depreciating asset.
+      </p>
+      <ul class="space-y-2 text-slate-300 list-disc pl-5">
+        <li>On Ethereum L1, gas fees to rebalance a Uniswap v3 NFT position cost $15 to $45, requiring position sizes &gt; $50,000 to justify frequent adjustments.</li>
+        <li>On Arbitrum, Optimism, and Base, rebalance gas costs drop under $0.05, allowing algorithmic automated vaults to rebalance hourly.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-2">
+        Quantitative Summary &amp; Decision Framework
+      </h2>
+      <p>
+        - <strong>0.01% (1 bps)</strong>: Exclusively for 1:1 pegged assets with sub-1% annualized volatility (USDC/USDT, LUSD/USDC).<br/>
+        - <strong>0.05% (5 bps)</strong>: Correlated major assets (ETH/BTC, wstETH/ETH) with 10%–35% volatility.<br/>
+        - <strong>0.30% (30 bps)</strong>: High-volume major crypto pairs (ETH/USDC, SOL/USDT) with 40%–80% volatility.<br/>
+        - <strong>1.00% (100 bps)</strong>: Low-liquidity exotic assets, memecoins, and new protocol governance tokens.
+      </p>
+
+    </section>
+  </main>
+</Layout>

@@ -2,43 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://site-15-ruby.vercel.app/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://site-15-ruby.vercel.app/b2b-contract-vs-eor-permanent-establishment-risk/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://site-15-ruby.vercel.app/contractor-vs-eor-legal-misclassification-risk-matrix/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://site-15-ruby.vercel.app/deel-vs-remote-com-pricing-hidden-fees-breakdown/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://site-15-ruby.vercel.app/hiring-remote-engineers-in-latin-america-vs-eastern-europe-eor-cost/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://site-15-ruby.vercel.app/oyster-vs-deel-pricing-contractor-management-fees/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://site-15-ruby.vercel.app/philippines-13th-month-pay-mandatory-employer-costs/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://site-15-ruby.vercel.app/deel-poland-employer-contributions-zus-tax-calculator/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://site-15-ruby.vercel.app/remote-com-hidden-fx-conversion-spreads-audit/</loc>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

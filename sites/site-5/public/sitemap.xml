@@ -2,43 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://vectorbench-hq.netlify.app/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://vectorbench-hq.netlify.app/chroma-vs-lancedb-embedded-vector-db/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://vectorbench-hq.netlify.app/hnsw-vs-ivfflat-memory-consumption-pgvector-tuning/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://vectorbench-hq.netlify.app/milvus-vs-qdrant-billion-scale-benchmark/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://vectorbench-hq.netlify.app/pgvector-production-tuning-guide/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://vectorbench-hq.netlify.app/qdrant-vs-pinecone-benchmark-2026/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://vectorbench-hq.netlify.app/voyage-ai-vs-openai-embeddings-rag-cost/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vectorbench-hq.netlify.app/cohere-embed-v3-vs-openai-text-embedding-3-large-cost/</loc>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

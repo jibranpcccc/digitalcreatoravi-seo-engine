@@ -1,0 +1,172 @@
+[
+  {
+    "id": "github_release",
+    "name": "GitHub Release",
+    "domain": "github.com",
+    "da": 96,
+    "category": "developer_forge",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": true
+  },
+  {
+    "id": "github_gist",
+    "name": "GitHub Gist",
+    "domain": "gist.github.com",
+    "da": 96,
+    "category": "developer_forge",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": true
+  },
+  {
+    "id": "github_issues",
+    "name": "GitHub RFC Discussion",
+    "domain": "github.com",
+    "da": 96,
+    "category": "developer_forge",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": true
+  },
+  {
+    "id": "telegraph",
+    "name": "Telegraph API",
+    "domain": "telegra.ph",
+    "da": 91,
+    "category": "publishing",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": false
+  },
+  {
+    "id": "rentry",
+    "name": "Rentry Markdown",
+    "domain": "rentry.co",
+    "da": 78,
+    "category": "publishing",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": false
+  },
+  {
+    "id": "paste_rs",
+    "name": "Paste.rs Rust API",
+    "domain": "paste.rs",
+    "da": 71,
+    "category": "pastebin",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": false
+  },
+  {
+    "id": "dpaste",
+    "name": "dpaste API",
+    "domain": "dpaste.com",
+    "da": 74,
+    "category": "pastebin",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": false
+  },
+  {
+    "id": "cl1p",
+    "name": "cl1p Internet Clipboard",
+    "domain": "cl1p.net",
+    "da": 72,
+    "category": "pastebin",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": false
+  },
+  {
+    "id": "jsdelivr_cdn",
+    "name": "jsDelivr Global CDN",
+    "domain": "cdn.jsdelivr.net",
+    "da": 92,
+    "category": "cdn",
+    "contextual": false,
+    "link_type": "dofollow",
+    "auth_required": false
+  },
+  {
+    "id": "statically_cdn",
+    "name": "Statically Multi-CDN",
+    "domain": "cdn.statically.io",
+    "da": 88,
+    "category": "cdn",
+    "contextual": false,
+    "link_type": "dofollow",
+    "auth_required": false
+  },
+  {
+    "id": "zenodo",
+    "name": "Zenodo CERN Repository",
+    "domain": "zenodo.org",
+    "da": 92,
+    "category": "academic",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": true
+  },
+  {
+    "id": "postman",
+    "name": "Postman API Network",
+    "domain": "postman.com",
+    "da": 90,
+    "category": "api_catalog",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": true
+  },
+  {
+    "id": "wayback",
+    "name": "Internet Archive Wayback",
+    "domain": "archive.org",
+    "da": 98,
+    "category": "archival",
+    "contextual": false,
+    "link_type": "dofollow",
+    "auth_required": false
+  },
+  {
+    "id": "devpost",
+    "name": "Devpost Showcase",
+    "domain": "devpost.com",
+    "da": 82,
+    "category": "academic",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": true
+  },
+  {
+    "id": "gitlab",
+    "name": "GitLab Public Snippet",
+    "domain": "gitlab.com",
+    "da": 93,
+    "category": "developer_forge",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": true
+  },
+  {
+    "id": "npm",
+    "name": "NPM Package Registry",
+    "domain": "npmjs.com",
+    "da": 96,
+    "category": "package_registry",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": true
+  },
+  {
+    "id": "pypi",
+    "name": "PyPI Python Package Index",
+    "domain": "pypi.org",
+    "da": 94,
+    "category": "package_registry",
+    "contextual": true,
+    "link_type": "dofollow",
+    "auth_required": true
+  }
+]
