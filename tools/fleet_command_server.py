@@ -164,6 +164,45 @@ class FleetServerHandler(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps({"ok": True, "alerts": alerts}).encode("utf-8"))
             return
 
+        # Static files fallback for Chad_Visuals and root
+        clean_path = path.lstrip("/")
+        candidate_roots = [
+            r"c:\Users\jibra\Desktop\1\Chad_Visuals\video4_gpu_dies_100k\renders",
+            r"c:\Users\jibra\Desktop\1\Chad_Visuals",
+            DASHBOARD_DIR,
+            ROOT_DIR
+        ]
+        for c_root in candidate_roots:
+            candidate = os.path.normpath(os.path.join(c_root, clean_path))
+            if os.path.isfile(candidate) and not os.path.basename(candidate).startswith("."):
+                content_type = "application/octet-stream"
+                ext = os.path.splitext(candidate)[1].lower()
+                mime_types = {
+                    ".html": "text/html; charset=utf-8",
+                    ".js": "application/javascript",
+                    ".css": "text/css",
+                    ".json": "application/json",
+                    ".wav": "audio/wav",
+                    ".mp3": "audio/mpeg",
+                    ".png": "image/png",
+                    ".jpg": "image/jpeg",
+                    ".jpeg": "image/jpeg",
+                    ".svg": "image/svg+xml"
+                }
+                content_type = mime_types.get(ext, content_type)
+                try:
+                    with open(candidate, "rb") as f:
+                        data = f.read()
+                    self.send_response(200)
+                    self.send_header("Content-Type", content_type)
+                    self.send_header("Content-Length", str(len(data)))
+                    self._send_cors_headers()
+                    self.end_headers()
+                    self.wfile.write(data)
+                    return
+                except Exception:
+                    pass
+
         self.send_response(404)
         self.end_headers()
 
