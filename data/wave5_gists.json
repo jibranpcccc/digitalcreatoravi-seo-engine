@@ -1,0 +1,182 @@
+[
+  {
+    "site_id": "site-1",
+    "site_name": "LocalAgentStack",
+    "target_url": "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-32b-vs-70b-coding-accuracy-benchmark/",
+    "title": "DeepSeek-R1 32B vs 70B Coding Accuracy & VRAM Requirements Benchmark",
+    "url": "https://gist.github.com/jibranpcccc/b3b4de13ec504ef7d5bc4a82ee8d05ff",
+    "filename": "deepseek_r1_32b_vs_70b_benchmark.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-2",
+    "site_name": "WorkationRadar",
+    "target_url": "https://jibranpcccc.github.io/workationradar/da-nang-vietnam-remote-worker-cost-fiber-speed/",
+    "title": "Da Nang Vietnam Remote Worker Living Cost & Symmetric Fiber Speed Matrix 2026",
+    "url": "https://gist.github.com/jibranpcccc/0045048db087dd3c0072c1cece8f87c6",
+    "filename": "da_nang_remote_worker_matrix.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-3",
+    "site_name": "OpenAgentStack",
+    "target_url": "https://openagentstack.pages.dev/mcp/mcp-server-stdio-vs-sse-latency-benchmark/",
+    "title": "Model Context Protocol (MCP) Stdio vs SSE Transport Latency Benchmark",
+    "url": "https://gist.github.com/jibranpcccc/061bce95bccb4fc05ece349cdda8445b",
+    "filename": "mcp_stdio_vs_sse_latency.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-4",
+    "site_name": "IndieStackAudit",
+    "target_url": "https://indiestackaudit.pages.dev/stacks/sqlite-vs-postgresql-micro-saas-architecture-math/",
+    "title": "SQLite (Litestream/Turso) vs PostgreSQL for Micro-SaaS Under $10k MRR",
+    "url": "https://gist.github.com/jibranpcccc/2e3927d7d94be6d3dee4269e73537cdb",
+    "filename": "sqlite_vs_postgres_cost_benchmark.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-5",
+    "site_name": "VectorBench",
+    "target_url": "https://vectorbench-hq.netlify.app/cohere-embed-v3-vs-openai-text-embedding-3-large-cost/",
+    "title": "Cohere Embed v3 vs OpenAI text-embedding-3-large Cost & Accuracy Math",
+    "url": "https://gist.github.com/jibranpcccc/fbddc9b2a3d41eeabf8069a8ca7b2caf",
+    "filename": "cohere_vs_openai_embeddings_math.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-6",
+    "site_name": "NomadTreaty",
+    "target_url": "https://nomadtreaty.vercel.app/greece-digital-nomad-visa-50-percent-tax-break-guide/",
+    "title": "Greece Digital Nomad Visa 50% Income Tax Exemption Calculator (Law 4758)",
+    "url": "https://gist.github.com/jibranpcccc/7be7f9a6b1eb498d183f8b83b12b0c96",
+    "filename": "greece_nomad_tax_exemption_calc.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-7",
+    "site_name": "WebhookWatch",
+    "target_url": "https://webhookwatch.vercel.app/full-jitter-exponential-backoff-algorithm-webhook-retries/",
+    "title": "Full Jitter Exponential Backoff Algorithm for Distributed Webhook Delivery",
+    "url": "https://gist.github.com/jibranpcccc/64e6be2ff9ebfaf7095fadf327cbee10",
+    "filename": "full_jitter_exponential_backoff.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-8",
+    "site_name": "LocalDocPrivacy",
+    "target_url": "https://localdocprivacy.netlify.app/remove-metadata-from-pdf-browser-wasm-offline/",
+    "title": "Browser WASM PDF Metadata & EXIF Stripper Utility",
+    "url": "https://gist.github.com/jibranpcccc/6db666949b2e4ac0b90c0025658b7f98",
+    "filename": "wasm_pdf_metadata_stripper.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-9",
+    "site_name": "FounderRunway",
+    "target_url": "https://site-9-inky.vercel.app/taiwan-gold-card-tech-founder-tax-reduction-guide/",
+    "title": "Taiwan Employment Gold Card Tech Founder 50% Tax Deduction Simulator",
+    "url": "https://gist.github.com/jibranpcccc/4dc0080385b77789909a3863ad7e64f3",
+    "filename": "taiwan_gold_card_tax_simulator.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-10",
+    "site_name": "RAGInspect",
+    "target_url": "https://raginspect.pages.dev/tuning-bm25-k1-b-hyperparameters-hybrid-rag/",
+    "title": "Tuning BM25 k1 and b Hyperparameters for Hybrid Dense-Sparse RAG",
+    "url": "https://gist.github.com/jibranpcccc/194121dacabb0af378831b059a2d1a63",
+    "filename": "bm25_hyperparameter_tuner.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-11",
+    "site_name": "NomadPassportIndex",
+    "target_url": "https://nomadpassportindex.netlify.app/croatia-digital-nomad-visa-bank-statement-requirements/",
+    "title": "Croatia Digital Nomad Visa \u20ac2,540 Monthly Income & Bank Proof Auditor",
+    "url": "https://gist.github.com/jibranpcccc/deb069bf0803f3a752d60afb370bdc80",
+    "filename": "croatia_nomad_visa_auditor.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-12",
+    "site_name": "SaaSUnitMath",
+    "target_url": "https://site-12-taupe.vercel.app/b2b-saas-cac-payback-period-benchmarks-acv/",
+    "title": "B2B SaaS CAC Payback Period & Magic Number Benchmarks by ACV Tier",
+    "url": "https://gist.github.com/jibranpcccc/335eeba9bdf8910680f6323733e25dad",
+    "filename": "b2b_saas_cac_payback_model.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-13",
+    "site_name": "GrokLogTester",
+    "target_url": "https://groklogtester.pages.dev/syslog-rfc-5424-grok-pattern-validator-cheatsheet/",
+    "title": "Syslog RFC 5424 Grok Pattern Validator & Microsecond Regex Engine",
+    "url": "https://gist.github.com/jibranpcccc/58c2d9d337c8ed57b824b4c67e65593b",
+    "filename": "syslog_rfc5424_grok_validator.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-14",
+    "site_name": "SOC2Ready",
+    "target_url": "https://site-14-sable.vercel.app/automating-soc-2-evidence-collection-github-actions/",
+    "title": "Automated SOC 2 Type II Evidence Collection Workflow for GitHub Actions",
+    "url": "https://gist.github.com/jibranpcccc/93cf7b9808937040a857541cb7f57ad2",
+    "filename": "soc2_evidence_collector.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-15",
+    "site_name": "EORCalculator",
+    "target_url": "https://site-15-ruby.vercel.app/remote-com-hidden-fx-conversion-spreads-audit/",
+    "title": "Remote.com & Deel Hidden FX Spread & Foreign Exchange Markup Calculator",
+    "url": "https://gist.github.com/jibranpcccc/5059e977425f1e906bc52f04f090240a",
+    "filename": "remote_com_fx_spread_calculator.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-16",
+    "site_name": "DevConfigHub",
+    "target_url": "https://site-16-indol.vercel.app/nix-flake-devshell-python-uv-fastapi-template/",
+    "title": "Nix Flake DevShell for Python with Astral uv & FastAPI Generator",
+    "url": "https://gist.github.com/jibranpcccc/6eac0a474261f9a2483a83b75231f369",
+    "filename": "nix_flake_python_uv_generator.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-17",
+    "site_name": "OpenCRMStack",
+    "target_url": "https://opencrmstack.pages.dev/hubspot-marketing-contacts-price-cliff-calculator/",
+    "title": "HubSpot Marketing Contacts Price Cliff & Tier Escalation Calculator",
+    "url": "https://gist.github.com/jibranpcccc/62df2d804cf713575283ba09995fa54a",
+    "filename": "hubspot_price_cliff_calculator.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-18",
+    "site_name": "CIPipelineGraph",
+    "target_url": "https://site-18-chi.vercel.app/running-act-with-local-secrets-files-guide/",
+    "title": "Running nektos/act Local CI Runner with Secure .secrets Injection",
+    "url": "https://gist.github.com/jibranpcccc/ce0ff656619c32a42512338837b47201",
+    "filename": "act_local_runner_security.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-19",
+    "site_name": "GreekVisualizer",
+    "target_url": "https://site-19-nine.vercel.app/uniswap-v3-fee-tier-selector-liquidity-pool-math/",
+    "title": "Uniswap v3 Dynamic Fee Tier Selector (0.05% vs 0.30% vs 1.00%) Calculator",
+    "url": "https://gist.github.com/jibranpcccc/99a1d7fb97d334acd7d5147f8775c413",
+    "filename": "uniswap_v3_fee_tier_selector.py",
+    "http_status": 200
+  },
+  {
+    "site_id": "site-20",
+    "site_name": "EdgeRuntimeHQ",
+    "target_url": "https://edgeruntimehq.pages.dev/running-smollm2-360m-in-browser-webgpu-memory-profile/",
+    "title": "Running SmolLM2-360M in In-Browser WebGPU Memory & Sharding Profiler",
+    "url": "https://gist.github.com/jibranpcccc/2ecf4ef2e27eb462d9f0534bf8d28c35",
+    "filename": "smollm2_webgpu_profiler.py",
+    "http_status": 200
+  }
+]

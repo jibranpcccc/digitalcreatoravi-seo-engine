@@ -140,7 +140,7 @@
     "bing_indexnow": 200,
     "central_indexnow": 200,
     "pingomatic": true,
-    "blogs": true,
+    "blogs": false,
     "twingly": true
   },
   {

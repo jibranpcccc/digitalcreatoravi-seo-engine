@@ -585,6 +585,27 @@ def build_all_backlinks_catalog():
             "anchor": f"Statically CDN: {s['name']} BENCHMARKS.md"
         })
 
+    # 27. 20 Dedicated Public GitHub Gists - Wave 5 (DA 96) [NEW WAVE 5]
+    wave5_file = os.path.join(DATA_DIR, "wave5_gists.json")
+    if os.path.exists(wave5_file):
+        with open(wave5_file, "r", encoding="utf-8") as f:
+            wave5_gists = json.load(f)
+    else:
+        wave5_gists = []
+
+    for g in wave5_gists:
+        s = site_map[g["site_id"]]
+        catalog.append({
+            "site_id": g["site_id"],
+            "site_name": s["name"],
+            "target_url": g.get("target_url", s["url"]),
+            "backlink_url": g["url"],
+            "platform": "GitHub Gist Wave 5 (DA 96)",
+            "link_type": "Deep Guide Runnable Snippet & Technical Documentation",
+            "da": 96,
+            "anchor": f"⚡ Production Guide: {g['title']}"
+        })
+
     return catalog
 
 def probe_single_item(item):
