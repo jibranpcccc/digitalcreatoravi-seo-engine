@@ -606,6 +606,23 @@ def build_all_backlinks_catalog():
             "anchor": f"⚡ Production Guide: {g['title']}"
         })
 
+    # 28. High-Authority Autonomous Syndication Endpoints (GitHub Issues, Rentry, Paste.rs)
+    synd_file = os.path.join(DATA_DIR, "autonomous_syndication_results.json")
+    if os.path.exists(synd_file):
+        with open(synd_file, "r", encoding="utf-8") as f:
+            synd_links = json.load(f)
+        for item in synd_links:
+            catalog.append({
+                "site_id": "syndication",
+                "site_name": "Autonomous Authority Syndication",
+                "target_url": item["target"],
+                "backlink_url": item["url"],
+                "platform": item["type"],
+                "link_type": f"{item['type']} (High-Authority Outreach)",
+                "da": item["da"],
+                "anchor": f"Verified Technical Reference ({item['type']})"
+            })
+
     return catalog
 
 def probe_single_item(item):
