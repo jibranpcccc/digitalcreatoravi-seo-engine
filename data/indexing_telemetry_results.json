@@ -3,7 +3,7 @@
     "site_id": "site-1",
     "name": "LocalAgentStack",
     "host": "jibranpcccc.github.io",
-    "urls_count": 20,
+    "urls_count": 21,
     "google_websub": 204,
     "bing_indexnow": 200,
     "central_indexnow": 200,
@@ -140,7 +140,7 @@
     "bing_indexnow": 200,
     "central_indexnow": 200,
     "pingomatic": true,
-    "blogs": false,
+    "blogs": true,
     "twingly": true
   },
   {
@@ -267,7 +267,7 @@
     "site_id": "site-3",
     "name": "OpenAgentStack",
     "host": "openagentstack.pages.dev",
-    "urls_count": 18,
+    "urls_count": 19,
     "google_websub": 204,
     "bing_indexnow": 200,
     "central_indexnow": 200,

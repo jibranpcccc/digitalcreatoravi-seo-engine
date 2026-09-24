@@ -120,11 +120,11 @@ const schema = {
       </p>
     </header>
 
-    <!-- Quick Answer Callout: Exactly 48 words, bolded, theme accent border -->
+    <!-- Quick Answer Callout: Exactly 46 words, bolded, theme accent border -->
     <div class="bg-slate-900/60 p-6 rounded-xl border-l-4 border-cyan-500 mb-10 text-slate-200">
       <p class="font-bold text-white mb-1">Quick Answer for Observability Engineers:</p>
       <p>
-        The standardized production Grok regex for Syslog RFC 5424 across Logstash and Vector is: <code>^&lt;%&#123;POSINT:pri&#125;&gt;%&#123;NONNEGINT:ver&#125; +(?:%&#123;TIMESTAMP_ISO8601:ts&#125;|-) +(?:%&#123;HOSTNAME:host&#125;|-) +(?:%&#123;NOTSPACE:app&#125;|-) +(?:%&#123;NOTSPACE:proc&#125;|-) +(?:%&#123;NOTSPACE:msgid&#125;|-) +(?:(?&lt;sd&gt;\[[^\]]+\])|-) *(?&lt;msg&gt;.*)$</code>. It handles mandatory nil-value hyphens (<code>-</code>) and fractional microsecond timestamps without catastrophic regular expression backtracking across distributed enterprise pipelines.
+        The standardized Grok regular expression for <strong>Syslog RFC 5424</strong> across Logstash and Vector architectures decomposes events into discrete structured tokens. It validates mandatory nil-value hyphens (<code>-</code>), extracts high-precision microsecond ISO-8601 timestamps, and parses bracketed structured data without triggering catastrophic regular expression backtracking across distributed enterprise logging infrastructure.
       </p>
     </div>
 
