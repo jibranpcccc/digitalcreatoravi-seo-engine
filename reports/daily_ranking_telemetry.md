@@ -1,15 +1,15 @@
 # 📈 Daily SEO Ranking & Indexation Telemetry Report
-**Generated:** 2026-09-21 04:00:02 UTC  
-**System Status:** 🟢 All Systems Operational (Fleet Health: 20/30 Online, Avg TTFB: 737ms)
+**Generated:** 2026-09-24 04:00:02 UTC  
+**System Status:** 🟢 All Systems Operational (Fleet Health: 20/30 Online, Avg TTFB: 661ms)
 
 ---
 
 ## 🏆 Executive Summary
 
 - **Total Active Websites:** `30` (100% Hosted at $0/month on Multi-Cloud Edges)
-- **Production Pages Live:** `257`
+- **Production Pages Live:** `259`
 - **Total In-Domain Internal Links:** `295` (Zero-PBN Quarantine)
-- **Tracked Seed Queries:** `125` (All Keyword Difficulties KD < 18)
+- **Tracked Seed Queries:** `129` (All Keyword Difficulties KD < 18)
 - **Queued Wave Articles:** `133` (Publishing continuously through Sept 16)
 - **IndexNow Status:** `20 / 20 Sites (100%) Verified & Dispatched` (Bing, Yandex, Seznam)
 - **Authority Anchor:** `GitHub DA 96 Open-Source Hub Active` ([jibranpcccc/digitalcreatoravi-seo-engine](https://github.com/jibranpcccc/digitalcreatoravi-seo-engine))
@@ -31,36 +31,36 @@
 
 | Site ID | Brand Name | Host & CDN | HTTP Status | TTFB Latency | Indexing Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **site-1** | [LocalAgentStack](https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/) | jibranpcccc.github.io | 🟢 200 OK | `470ms` | `Indexed & Dispatched` |
-| **site-10** | [RAGInspect](https://raginspect.pages.dev/) | raginspect.pages.dev | 🟢 200 OK | `581ms` | `Indexed & Dispatched` |
-| **site-11** | [NomadPassportIndex](https://nomadpassportindex.netlify.app/) | nomadpassportindex.netlify.app | 🟢 200 OK | `1373ms` | `Indexed & Dispatched` |
-| **site-12** | [SaaSUnitMath](https://site-12-taupe.vercel.app/) | site-12-taupe.vercel.app | 🟢 200 OK | `607ms` | `Indexed & Dispatched` |
-| **site-13** | [GrokLogTester](https://groklogtester.pages.dev/) | groklogtester.pages.dev | 🟢 200 OK | `432ms` | `Indexed & Dispatched` |
-| **site-14** | [SOC2Ready](https://site-14-sable.vercel.app/) | site-14-sable.vercel.app | 🟢 200 OK | `651ms` | `Indexed & Dispatched` |
-| **site-15** | [EORCalculator](https://site-15-ruby.vercel.app/) | site-15-ruby.vercel.app | 🟢 200 OK | `1039ms` | `Indexed & Dispatched` |
-| **site-16** | [DevConfigHub](https://site-16-indol.vercel.app/) | site-16-indol.vercel.app | 🟢 200 OK | `660ms` | `Indexed & Dispatched` |
-| **site-17** | [OpenCRMStack](https://opencrmstack.pages.dev/) | opencrmstack.pages.dev | 🟢 200 OK | `617ms` | `Indexed & Dispatched` |
-| **site-18** | [CIPipelineGraph](https://site-18-chi.vercel.app/) | site-18-chi.vercel.app | 🟢 200 OK | `638ms` | `Indexed & Dispatched` |
-| **site-19** | [GreekVisualizer](https://site-19-nine.vercel.app/) | site-19-nine.vercel.app | 🟢 200 OK | `636ms` | `Indexed & Dispatched` |
-| **site-2** | [WorkationRadar](https://jibranpcccc.github.io/workationradar/) | jibranpcccc.github.io | 🟢 200 OK | `364ms` | `Indexed & Dispatched` |
-| **site-20** | [EdgeRuntimeHQ](https://edgeruntimehq.pages.dev/) | edgeruntimehq.pages.dev | 🟢 200 OK | `596ms` | `Indexed & Dispatched` |
-| **site-21** | [PromptEvalHQ](https://promptevalhq.pages.dev/) | promptevalhq.pages.dev | 🔴 0 | `10ms` | `Indexed & Dispatched` |
-| **site-22** | [QueueCost](https://queuecost.pages.dev/) | queuecost.pages.dev | 🔴 0 | `15ms` | `Indexed & Dispatched` |
-| **site-23** | [OpenTelemetryLab](https://opentelemetrylab.pages.dev/) | opentelemetrylab.pages.dev | 🔴 0 | `12ms` | `Indexed & Dispatched` |
-| **site-24** | [PostgresScale](https://postgrescale.pages.dev/) | postgrescale.pages.dev | 🔴 0 | `11ms` | `Indexed & Dispatched` |
+| **site-1** | [LocalAgentStack](https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/) | jibranpcccc.github.io | 🟢 200 OK | `1698ms` | `Indexed & Dispatched` |
+| **site-10** | [RAGInspect](https://raginspect.pages.dev/) | raginspect.pages.dev | 🟢 200 OK | `566ms` | `Indexed & Dispatched` |
+| **site-11** | [NomadPassportIndex](https://nomadpassportindex.netlify.app/) | nomadpassportindex.netlify.app | 🟢 200 OK | `1237ms` | `Indexed & Dispatched` |
+| **site-12** | [SaaSUnitMath](https://site-12-taupe.vercel.app/) | site-12-taupe.vercel.app | 🟢 200 OK | `360ms` | `Indexed & Dispatched` |
+| **site-13** | [GrokLogTester](https://groklogtester.pages.dev/) | groklogtester.pages.dev | 🟢 200 OK | `521ms` | `Indexed & Dispatched` |
+| **site-14** | [SOC2Ready](https://site-14-sable.vercel.app/) | site-14-sable.vercel.app | 🟢 200 OK | `371ms` | `Indexed & Dispatched` |
+| **site-15** | [EORCalculator](https://site-15-ruby.vercel.app/) | site-15-ruby.vercel.app | 🟢 200 OK | `348ms` | `Indexed & Dispatched` |
+| **site-16** | [DevConfigHub](https://site-16-indol.vercel.app/) | site-16-indol.vercel.app | 🟢 200 OK | `625ms` | `Indexed & Dispatched` |
+| **site-17** | [OpenCRMStack](https://opencrmstack.pages.dev/) | opencrmstack.pages.dev | 🟢 200 OK | `487ms` | `Indexed & Dispatched` |
+| **site-18** | [CIPipelineGraph](https://site-18-chi.vercel.app/) | site-18-chi.vercel.app | 🟢 200 OK | `609ms` | `Indexed & Dispatched` |
+| **site-19** | [GreekVisualizer](https://site-19-nine.vercel.app/) | site-19-nine.vercel.app | 🟢 200 OK | `370ms` | `Indexed & Dispatched` |
+| **site-2** | [WorkationRadar](https://jibranpcccc.github.io/workationradar/) | jibranpcccc.github.io | 🟢 200 OK | `842ms` | `Indexed & Dispatched` |
+| **site-20** | [EdgeRuntimeHQ](https://edgeruntimehq.pages.dev/) | edgeruntimehq.pages.dev | 🟢 200 OK | `482ms` | `Indexed & Dispatched` |
+| **site-21** | [PromptEvalHQ](https://promptevalhq.pages.dev/) | promptevalhq.pages.dev | 🔴 0 | `15ms` | `Indexed & Dispatched` |
+| **site-22** | [QueueCost](https://queuecost.pages.dev/) | queuecost.pages.dev | 🔴 0 | `11ms` | `Indexed & Dispatched` |
+| **site-23** | [OpenTelemetryLab](https://opentelemetrylab.pages.dev/) | opentelemetrylab.pages.dev | 🔴 0 | `11ms` | `Indexed & Dispatched` |
+| **site-24** | [PostgresScale](https://postgrescale.pages.dev/) | postgrescale.pages.dev | 🔴 0 | `9ms` | `Indexed & Dispatched` |
 | **site-25** | [APIGatewayMatrix](https://apigatewaymatrix.pages.dev/) | apigatewaymatrix.pages.dev | 🔴 0 | `11ms` | `Indexed & Dispatched` |
-| **site-26** | [S3EgressAudit](https://s3egressaudit.pages.dev/) | s3egressaudit.pages.dev | 🔴 0 | `11ms` | `Indexed & Dispatched` |
-| **site-27** | [AuthTokenAudit](https://authtokenaudit.pages.dev/) | authtokenaudit.pages.dev | 🔴 0 | `12ms` | `Indexed & Dispatched` |
-| **site-28** | [DNSPerfHQ](https://dnsperf-hq.pages.dev/) | dnsperf-hq.pages.dev | 🔴 0 | `10ms` | `Indexed & Dispatched` |
-| **site-29** | [FeatureFlagAudit](https://featureflagaudit.pages.dev/) | featureflagaudit.pages.dev | 🔴 0 | `16ms` | `Indexed & Dispatched` |
-| **site-3** | [OpenAgentStack](https://openagentstack.pages.dev/) | openagentstack.pages.dev | 🟢 200 OK | `421ms` | `Indexed & Dispatched` |
-| **site-30** | [TinyContainerHQ](https://tinycontainerhq.pages.dev/) | tinycontainerhq.pages.dev | 🔴 0 | `10ms` | `Indexed & Dispatched` |
-| **site-4** | [IndieStackAudit](https://indiestackaudit.pages.dev/) | indiestackaudit.pages.dev | 🟢 200 OK | `597ms` | `Indexed & Dispatched` |
-| **site-5** | [VectorBench](https://vectorbench-hq.netlify.app/) | vectorbench-hq.netlify.app | 🟢 200 OK | `1512ms` | `Indexed & Dispatched` |
-| **site-6** | [NomadTreaty](https://nomadtreaty.vercel.app/) | nomadtreaty.vercel.app | 🟢 200 OK | `948ms` | `Indexed & Dispatched` |
-| **site-7** | [WebhookWatch](https://webhookwatch.vercel.app/) | webhookwatch.vercel.app | 🟢 200 OK | `650ms` | `Indexed & Dispatched` |
-| **site-8** | [LocalDocPrivacy](https://localdocprivacy.netlify.app/) | localdocprivacy.netlify.app | 🟢 200 OK | `1524ms` | `Indexed & Dispatched` |
-| **site-9** | [FounderRunway](https://site-9-inky.vercel.app/) | site-9-inky.vercel.app | 🟢 200 OK | `425ms` | `Indexed & Dispatched` |
+| **site-26** | [S3EgressAudit](https://s3egressaudit.pages.dev/) | s3egressaudit.pages.dev | 🔴 0 | `10ms` | `Indexed & Dispatched` |
+| **site-27** | [AuthTokenAudit](https://authtokenaudit.pages.dev/) | authtokenaudit.pages.dev | 🔴 0 | `9ms` | `Indexed & Dispatched` |
+| **site-28** | [DNSPerfHQ](https://dnsperf-hq.pages.dev/) | dnsperf-hq.pages.dev | 🔴 0 | `11ms` | `Indexed & Dispatched` |
+| **site-29** | [FeatureFlagAudit](https://featureflagaudit.pages.dev/) | featureflagaudit.pages.dev | 🔴 0 | `10ms` | `Indexed & Dispatched` |
+| **site-3** | [OpenAgentStack](https://openagentstack.pages.dev/) | openagentstack.pages.dev | 🟢 200 OK | `467ms` | `Indexed & Dispatched` |
+| **site-30** | [TinyContainerHQ](https://tinycontainerhq.pages.dev/) | tinycontainerhq.pages.dev | 🔴 0 | `14ms` | `Indexed & Dispatched` |
+| **site-4** | [IndieStackAudit](https://indiestackaudit.pages.dev/) | indiestackaudit.pages.dev | 🟢 200 OK | `506ms` | `Indexed & Dispatched` |
+| **site-5** | [VectorBench](https://vectorbench-hq.netlify.app/) | vectorbench-hq.netlify.app | 🟢 200 OK | `1322ms` | `Indexed & Dispatched` |
+| **site-6** | [NomadTreaty](https://nomadtreaty.vercel.app/) | nomadtreaty.vercel.app | 🟢 200 OK | `610ms` | `Indexed & Dispatched` |
+| **site-7** | [WebhookWatch](https://webhookwatch.vercel.app/) | webhookwatch.vercel.app | 🟢 200 OK | `331ms` | `Indexed & Dispatched` |
+| **site-8** | [LocalDocPrivacy](https://localdocprivacy.netlify.app/) | localdocprivacy.netlify.app | 🟢 200 OK | `1159ms` | `Indexed & Dispatched` |
+| **site-9** | [FounderRunway](https://site-9-inky.vercel.app/) | site-9-inky.vercel.app | 🟢 200 OK | `313ms` | `Indexed & Dispatched` |
 
 ---
 
@@ -74,9 +74,9 @@
 | `site-1` | **vram requirements calculator 70b** | 1,200 | 14 | `https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/vram-requirements-calculator-70b/` | Top 15–25 |
 | `site-1` | **llama.cpp vs vllm memory overhead 4-bit** | 1,200 | 14 | `https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/llamacpp-vs-vllm-4bit-memory-overhead/` | Top 15–25 |
 | `site-1` | **deepseek r1 32b vs 70b coding benchmark** | 1,200 | 14 | `https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-32b-vs-70b-coding/` | Top 15–25 |
+| `site-1` | **vLLM CUDA out of memory during KV cache allocation** | 1,200 | 14 | `https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-cuda-out-of-memory-kv-cache-allocation-fix/` | Top 15–25 |
+| `site-1` | **vLLM CUDA out of memory deepseek r1** | 1,200 | 14 | `https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-cuda-out-of-memory-kv-cache-allocation-fix/` | Top 15–25 |
 | `site-10` | **rag semantic chunking benchmark** | 1,200 | 14 | `https://raginspect.pages.dev/semantic-chunking-vs-fixed-size-rag-benchmarks/` | Top 15–25 |
-| `site-10` | **hybrid search bm25 dense vector accuracy** | 1,200 | 14 | `https://raginspect.pages.dev/hybrid-search-bm25-vs-dense-vector-accuracy/` | Top 15–25 |
-| `site-10` | **recursive character text splitter vs semantic chunking** | 1,200 | 14 | `https://raginspect.pages.dev/recursive-vs-semantic-chunking/` | Top 15–25 |
 
 ### Sector 2: Remote Work, Visas & Geographic Arbitrage
 | Site | Target Search Query | Estimated Vol | KD | Target URL | Projected 15-Day Pos |

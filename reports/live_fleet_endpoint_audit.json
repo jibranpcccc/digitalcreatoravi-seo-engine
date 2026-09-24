@@ -1,0 +1,202 @@
+[
+  {
+    "site_id": "site-1",
+    "name": "LocalAgentStack",
+    "url": "https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/",
+    "http": 200,
+    "ttfb": 439,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-2",
+    "name": "WorkationRadar",
+    "url": "https://jibranpcccc.github.io/workationradar/",
+    "http": 200,
+    "ttfb": 315,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-3",
+    "name": "OpenAgentStack",
+    "url": "https://openagentstack.pages.dev/",
+    "http": 200,
+    "ttfb": 569,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-4",
+    "name": "IndieStackAudit",
+    "url": "https://indiestackaudit.pages.dev/",
+    "http": 200,
+    "ttfb": 275,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-5",
+    "name": "VectorBench",
+    "url": "https://vectorbench-hq.netlify.app/",
+    "http": 200,
+    "ttfb": 1487,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-6",
+    "name": "NomadTreaty",
+    "url": "https://nomadtreaty.vercel.app/",
+    "http": 200,
+    "ttfb": 603,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-7",
+    "name": "WebhookWatch",
+    "url": "https://webhookwatch.vercel.app/",
+    "http": 200,
+    "ttfb": 802,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-8",
+    "name": "LocalDocPrivacy",
+    "url": "https://localdocprivacy.netlify.app/",
+    "http": 200,
+    "ttfb": 1195,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-9",
+    "name": "FounderRunway",
+    "url": "https://site-9-inky.vercel.app/",
+    "http": 200,
+    "ttfb": 651,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-10",
+    "name": "RAGInspect",
+    "url": "https://raginspect.pages.dev/",
+    "http": 200,
+    "ttfb": 649,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-11",
+    "name": "NomadPassportIndex",
+    "url": "https://nomadpassportindex.netlify.app/",
+    "http": 200,
+    "ttfb": 1574,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-12",
+    "name": "SaaSUnitMath",
+    "url": "https://site-12-taupe.vercel.app/",
+    "http": 200,
+    "ttfb": 772,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-13",
+    "name": "GrokLogTester",
+    "url": "https://groklogtester.pages.dev/",
+    "http": 200,
+    "ttfb": 187,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-14",
+    "name": "SOC2Ready",
+    "url": "https://site-14-sable.vercel.app/",
+    "http": 200,
+    "ttfb": 370,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-15",
+    "name": "EORCalculator",
+    "url": "https://site-15-ruby.vercel.app/",
+    "http": 200,
+    "ttfb": 363,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-16",
+    "name": "DevConfigHub",
+    "url": "https://site-16-indol.vercel.app/",
+    "http": 200,
+    "ttfb": 414,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-17",
+    "name": "OpenCRMStack",
+    "url": "https://opencrmstack.pages.dev/",
+    "http": 200,
+    "ttfb": 90,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-18",
+    "name": "CIPipelineGraph",
+    "url": "https://site-18-chi.vercel.app/",
+    "http": 200,
+    "ttfb": 964,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-19",
+    "name": "GreekVisualizer",
+    "url": "https://site-19-nine.vercel.app/",
+    "http": 200,
+    "ttfb": 494,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  },
+  {
+    "site_id": "site-20",
+    "name": "EdgeRuntimeHQ",
+    "url": "https://edgeruntimehq.pages.dev/",
+    "http": 200,
+    "ttfb": 154,
+    "sitemap": 200,
+    "robots": 200,
+    "indexnow": "VERIFIED"
+  }
+]

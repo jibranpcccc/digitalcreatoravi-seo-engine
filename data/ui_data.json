@@ -1853,7 +1853,7 @@
       "position": 4.2
     }
   ],
-  "last_monitor_run": "2026-09-21 04:00:02 UTC",
-  "avg_latency_ms": 737,
+  "last_monitor_run": "2026-09-24 04:00:02 UTC",
+  "avg_latency_ms": 661,
   "healthy_sites_count": 20
 }
