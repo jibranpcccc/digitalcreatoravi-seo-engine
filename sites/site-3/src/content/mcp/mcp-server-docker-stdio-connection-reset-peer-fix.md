@@ -1,5 +1,5 @@
 ---
-title: "Fix: MCP Server Stdio Connection Reset by Peer (Docker Exit Code 137)"
+title: "Fix: MCP Stdio Connection Reset by Peer (Exit 137)"
 description: "Comprehensive diagnostic handbook for resolving connection reset by peer, broken pipe EPIPE, and Docker OOM exit code 137 in containerized Model Context Protocol servers."
 category: "mcp"
 slug: "mcp-server-docker-stdio-connection-reset-peer-fix"

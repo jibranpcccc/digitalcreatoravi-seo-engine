@@ -1,5 +1,5 @@
 ---
-title: "SQLite (Litestream/Turso) vs PostgreSQL for Micro-SaaS Under $10k MRR: Cost & Write Contention Math"
+title: "SQLite vs PostgreSQL for Micro-SaaS Under $10k MRR"
 description: "Empirical benchmark and TCO audit comparing embedded SQLite with Litestream continuous replication against managed PostgreSQL (Supabase/Neon/RDS) for bootstrapped SaaS."
 datePublished: "2026-09-18"
 dateModified: "2026-09-18"

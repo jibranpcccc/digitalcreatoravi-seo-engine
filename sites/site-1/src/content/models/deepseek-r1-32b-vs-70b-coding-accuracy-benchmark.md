@@ -1,5 +1,5 @@
 ---
-title: "DeepSeek-R1 32B vs 70B: Coding Accuracy, VRAM Math & Tokens/s Benchmark (2026)"
+title: "DeepSeek-R1 32B vs 70B: VRAM & Coding Benchmark"
 description: "Empirical benchmark comparing DeepSeek-R1-Distill-Qwen-32B vs DeepSeek-R1-Distill-Llama-70B on SWE-bench, HumanEval, VRAM requirements, and local tokens/sec."
 datePublished: "2026-09-18"
 dateModified: "2026-09-18"

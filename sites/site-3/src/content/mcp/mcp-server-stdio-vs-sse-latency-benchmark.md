@@ -1,5 +1,5 @@
 ---
-title: "Model Context Protocol (MCP) Stdio vs SSE Latency Benchmark: Architecture & Scaling (2026)"
+title: "MCP Stdio vs SSE Latency & Architecture Benchmark"
 description: "Empirical latency and throughput benchmark comparing MCP Stdio (Standard I/O) vs SSE (Server-Sent Events) over HTTP for AI tool calling and agent orchestration."
 datePublished: "2026-09-18"
 dateModified: "2026-09-18"

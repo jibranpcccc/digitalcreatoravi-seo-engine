@@ -1,5 +1,5 @@
 ---
-title: "Fix: vLLM CUDA Out of Memory During KV Cache Allocation (DeepSeek-R1)"
+title: "Fix: vLLM CUDA OOM During KV Cache Allocation"
 description: "Step-by-step diagnostic guide to resolving CUDA out of memory during KV cache allocation errors in vLLM when serving DeepSeek-R1 and 70B models."
 datePublished: "2026-09-21"
 dateModified: "2026-09-21"
