@@ -43,8 +43,8 @@ def run_daily_monitor():
     conn = get_db()
     cursor = conn.cursor()
 
-    # Fetch Sites
-    cursor.execute("SELECT * FROM sites ORDER BY id")
+    # Fetch Sites (Active 20 Production Properties)
+    cursor.execute("SELECT * FROM sites WHERE CAST(SUBSTR(id, 6) AS INTEGER) BETWEEN 1 AND 20 ORDER BY CAST(SUBSTR(id, 6) AS INTEGER)")
     sites = [dict(r) for r in cursor.fetchall()]
 
     # Fetch Indexed Pages
