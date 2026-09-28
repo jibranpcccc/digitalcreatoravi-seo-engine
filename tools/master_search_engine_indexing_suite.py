@@ -93,7 +93,7 @@ def ping_central_indexnow(host, url_list):
 
 import socket
 
-socket.setdefaulttimeout(12.0)
+socket.setdefaulttimeout(5.0)
 
 def ping_pingomatic(title, site_url, rss_url):
     """Pings Ping-O-Matic XML-RPC network."""
@@ -125,7 +125,7 @@ def ping_twingly(title, site_url):
 def main():
     conn = get_db()
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM sites ORDER BY id")
+    cursor.execute("SELECT * FROM sites WHERE CAST(SUBSTR(id, 6) AS INTEGER) BETWEEN 1 AND 20 ORDER BY CAST(SUBSTR(id, 6) AS INTEGER)")
     sites = [dict(r) for r in cursor.fetchall()]
 
     cursor.execute("SELECT site_id, url FROM indexed_pages ORDER BY site_id, id")
