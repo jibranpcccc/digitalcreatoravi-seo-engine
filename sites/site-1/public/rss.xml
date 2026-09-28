@@ -5,55 +5,119 @@
     <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/</link>
     <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Local AI Inference & Hardware.]]></description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
-    <atom:link href="https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2026 09:43:04 GMT</lastBuildDate>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <atom:link rel="self" href="https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/rss.xml" type="application/rss+xml" />
     <item>
-      <title><![CDATA[LocalAgentStack: Local AI & Inference Benchmarks]]></title>
+      <title><![CDATA[SITE-1 Homepage]]></title>
       <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/</link>
       <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
     </item>
     <item>
-      <title><![CDATA[Ollama vs vLLM: High-Concurrency Inference Latency]]></title>
-      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/ollama-vs-vllm-benchmark/</link>
-      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/ollama-vs-vllm-benchmark/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <title><![CDATA[Claude Code CLI: Automating Scheduled Tasks with Cron (2026)]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/agents/claude-code-scheduled-tasks-cron/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/agents/claude-code-scheduled-tasks-cron/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
     </item>
     <item>
-      <title><![CDATA[VRAM Requirements Calculator for 70B Models]]></title>
-      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/vram-requirements-calculator-70b/</link>
-      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/vram-requirements-calculator-70b/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
-      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[DeepSeek-R1 Local Setup Guide with Ollama]]></title>
-      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-local-setup-ollama/</link>
-      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-local-setup-ollama/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
-      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Mac Studio M4 Max LLM Benchmarks (128GB)]]></title>
-      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/mac-studio-m4-max-llm-benchmarks/</link>
-      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/mac-studio-m4-max-llm-benchmarks/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
-      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Building Production MCP Servers in Python]]></title>
+      <title><![CDATA[Custom MCP Server Python Tutorial: Build Tools (2026)]]></title>
       <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/agents/custom-mcp-server-python-tutorial/</link>
       <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/agents/custom-mcp-server-python-tutorial/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
     </item>
     <item>
-      <title><![CDATA[RTX 5090 vs RTX 4090 Local LLM Inference Benchmark (32GB VRAM)]]></title>
-      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/rtx-5090-vs-4090-local-llm-benchmark/</link>
-      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/rtx-5090-vs-4090-local-llm-benchmark/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <title><![CDATA[2x RTX 3090 vs 1x RTX 4090: Local AI Inference (2026)]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/2x-rtx-3090-vs-1x-rtx-4090-ai-inference/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/2x-rtx-3090-vs-1x-rtx-4090-ai-inference/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Run DeepSeek-R1 70B on Dual RTX 3090: 48GB Rig (2026)]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/deepseek-r1-70b-dual-rtx-3090-setup/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/deepseek-r1-70b-dual-rtx-3090-setup/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Mac Studio M4 Max LLM Benchmarks & Tok/s Speed (2026)]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/mac-studio-m4-max-llm-benchmarks/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/mac-studio-m4-max-llm-benchmarks/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[RTX 5090 vs 4090 Local LLM Benchmark: 32GB Speed (2026)]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/rtx-5090-vs-4090-local-llm-benchmark/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/rtx-5090-vs-4090-local-llm-benchmark/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[VRAM Calculator for 70B LLMs: KV-Cache & GPU Math (2026)]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/vram-requirements-calculator-70b/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/hardware/vram-requirements-calculator-70b/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Llama.cpp vs ExLlamaV2 Speed: GGUF vs EXL2 Benchmark]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/llama-cpp-vs-exllamav2-quantization-speed/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/llama-cpp-vs-exllamav2-quantization-speed/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Local RAG Stack with ChromaDB & Ollama: 2026 Setup]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/local-rag-stack-chromadb-ollama/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/local-rag-stack-chromadb-ollama/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Ollama vs vLLM: High-Concurrency VRAM Benchmark (2026)]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/ollama-vs-vllm-benchmark/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/ollama-vs-vllm-benchmark/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Fix: vLLM CUDA OOM During KV Cache Allocation]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-cuda-out-of-memory-kv-cache-allocation-fix/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-cuda-out-of-memory-kv-cache-allocation-fix/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[vLLM Multi-GPU Tensor Parallel: Docker Compose Setup (2026)]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-multi-gpu-tensor-parallel-docker/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/inference/vllm-multi-gpu-tensor-parallel-docker/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[DeepSeek-R1 32B vs 70B: VRAM & Coding Benchmark]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-32b-vs-70b-coding-accuracy-benchmark/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-32b-vs-70b-coding-accuracy-benchmark/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[DeepSeek R1 Local Setup with Ollama: Full Guide (2026)]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-local-setup-ollama/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/deepseek-r1-local-setup-ollama/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Q4_K_M vs Q8_0: Coding Accuracy & Benchmark (2026)]]></title>
+      <link>https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/q4_k_m-vs-q8_0-coding-accuracy-test/</link>
+      <guid isPermaLink="true">https://jibranpcccc.github.io/digitalcreatoravi-seo-engine/models/q4_k_m-vs-q8_0-coding-accuracy-test/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local AI Inference & Hardware.]]></description>
     </item>
   </channel>

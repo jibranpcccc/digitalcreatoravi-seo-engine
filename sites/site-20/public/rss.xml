@@ -5,34 +5,63 @@
     <link>https://edgeruntimehq.pages.dev/</link>
     <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
-    <atom:link href="https://edgeruntimehq.pages.dev/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2026 09:43:04 GMT</lastBuildDate>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <atom:link rel="self" href="https://edgeruntimehq.pages.dev/rss.xml" type="application/rss+xml" />
     <item>
-      <title><![CDATA[Edge AI Inference Leaderboard: WebGPU, ONNX Runtime & CoreML]]></title>
+      <title><![CDATA[SITE-20 Homepage]]></title>
       <link>https://edgeruntimehq.pages.dev/</link>
       <guid isPermaLink="true">https://edgeruntimehq.pages.dev/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
     </item>
     <item>
-      <title><![CDATA[WebGPU vs WASM: In-Browser LLM Inference Latency & Memory Benchmarks]]></title>
-      <link>https://edgeruntimehq.pages.dev/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/</link>
-      <guid isPermaLink="true">https://edgeruntimehq.pages.dev/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <title><![CDATA[Cloudflare Workers AI vs Cerebras & Groq: Cold Start & TTFT Benchmark]]></title>
+      <link>https://edgeruntimehq.pages.dev/cloudflare-workers-ai-vs-cerebras-latency-benchmarks/</link>
+      <guid isPermaLink="true">https://edgeruntimehq.pages.dev/cloudflare-workers-ai-vs-cerebras-latency-benchmarks/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
     </item>
     <item>
       <title><![CDATA[ONNX Runtime vs TensorRT: Edge Server Latency & Throughput Guide]]></title>
       <link>https://edgeruntimehq.pages.dev/onnx-runtime-vs-tensorrt-edge-server-latency/</link>
       <guid isPermaLink="true">https://edgeruntimehq.pages.dev/onnx-runtime-vs-tensorrt-edge-server-latency/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[ONNX Runtime Web: Quantizing &amp; Optimizing FP16 Models for WebGPU Inference]]></title>
+      <link>https://edgeruntimehq.pages.dev/onnx-runtime-webgpu-fp16-model-optimization/</link>
+      <guid isPermaLink="true">https://edgeruntimehq.pages.dev/onnx-runtime-webgpu-fp16-model-optimization/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Running SmolLM2-360M in Browser WebGPU: 120MB VRAM Memory Profile &amp; Transformers.js v3 Guide]]></title>
+      <link>https://edgeruntimehq.pages.dev/running-smollm2-360m-in-browser-webgpu-memory-profile/</link>
+      <guid isPermaLink="true">https://edgeruntimehq.pages.dev/running-smollm2-360m-in-browser-webgpu-memory-profile/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
     </item>
     <item>
       <title><![CDATA[Running Whisper Locally in Browser with WebGPU: Complete Step-by-Step Architecture]]></title>
       <link>https://edgeruntimehq.pages.dev/running-whisper-speech-to-text-locally-in-browser-webgpu/</link>
       <guid isPermaLink="true">https://edgeruntimehq.pages.dev/running-whisper-speech-to-text-locally-in-browser-webgpu/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Transformers.js v3 WebGPU: Running Phi-3.5 in the Browser at 30 Tok/s]]></title>
+      <link>https://edgeruntimehq.pages.dev/transformers-js-v3-webgpu-browser-inference-tutorial/</link>
+      <guid isPermaLink="true">https://edgeruntimehq.pages.dev/transformers-js-v3-webgpu-browser-inference-tutorial/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[WebGPU vs WASM: In-Browser LLM Inference Latency & Memory Benchmarks]]></title>
+      <link>https://edgeruntimehq.pages.dev/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/</link>
+      <guid isPermaLink="true">https://edgeruntimehq.pages.dev/webgpu-vs-wasm-in-browser-llm-inference-benchmarks/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Edge AI Runtimes & ONNX WebGPU Inference.]]></description>
     </item>
   </channel>

@@ -5,34 +5,63 @@
     <link>https://site-12-taupe.vercel.app/</link>
     <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Bootstrapped SaaS Unit Economics.]]></description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
-    <atom:link href="https://site-12-taupe.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2026 09:43:04 GMT</lastBuildDate>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <atom:link rel="self" href="https://site-12-taupe.vercel.app/rss.xml" type="application/rss+xml" />
     <item>
-      <title><![CDATA[Micro-SaaS Unit Economics & LTV/CAC Valuation Calculator]]></title>
+      <title><![CDATA[SITE-12 Homepage]]></title>
       <link>https://site-12-taupe.vercel.app/</link>
       <guid isPermaLink="true">https://site-12-taupe.vercel.app/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Bootstrapped SaaS Unit Economics.]]></description>
     </item>
     <item>
-      <title><![CDATA[SaaS LTV to CAC Ratio & Payback Period Calculator]]></title>
-      <link>https://site-12-taupe.vercel.app/saas-ltv-cac-payback-period-calculator/</link>
-      <guid isPermaLink="true">https://site-12-taupe.vercel.app/saas-ltv-cac-payback-period-calculator/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <title><![CDATA[B2B SaaS CAC Payback Period Benchmarks by ACV Tier: Mathematical Modeling &amp; Net New ARR]]></title>
+      <link>https://site-12-taupe.vercel.app/b2b-saas-cac-payback-period-benchmarks-acv/</link>
+      <guid isPermaLink="true">https://site-12-taupe.vercel.app/b2b-saas-cac-payback-period-benchmarks-acv/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Bootstrapped SaaS Unit Economics.]]></description>
     </item>
     <item>
-      <title><![CDATA[B2B SaaS Churn Rate Benchmarks by ACV Tier (2026 Data)]]></title>
+      <title><![CDATA[2026 B2B SaaS Churn Benchmarks by ACV Tier: Retention & Unit Economics]]></title>
       <link>https://site-12-taupe.vercel.app/b2b-saas-churn-benchmarks-by-acv-2026/</link>
       <guid isPermaLink="true">https://site-12-taupe.vercel.app/b2b-saas-churn-benchmarks-by-acv-2026/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Bootstrapped SaaS Unit Economics.]]></description>
     </item>
     <item>
-      <title><![CDATA[Rule of 40 for Bootstrapped SaaS: Growth + Margin Valuation]]></title>
+      <title><![CDATA[Customer Churn Rate vs Revenue Churn Rate: Formulas, Spreadsheets & Math]]></title>
+      <link>https://site-12-taupe.vercel.app/customer-churn-rate-vs-revenue-churn-calculator/</link>
+      <guid isPermaLink="true">https://site-12-taupe.vercel.app/customer-churn-rate-vs-revenue-churn-calculator/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Bootstrapped SaaS Unit Economics.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Net Revenue Retention (NRR) Benchmarks for Bootstrapped B2B SaaS]]></title>
+      <link>https://site-12-taupe.vercel.app/net-revenue-retention-nrr-benchmark-bootstrapped-saas/</link>
+      <guid isPermaLink="true">https://site-12-taupe.vercel.app/net-revenue-retention-nrr-benchmark-bootstrapped-saas/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Bootstrapped SaaS Unit Economics.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[The Rule of 40 in SaaS: Growth-Profitability Balance & Valuation Multiples]]></title>
       <link>https://site-12-taupe.vercel.app/rule-of-40-saas-valuation-growth-model/</link>
       <guid isPermaLink="true">https://site-12-taupe.vercel.app/rule-of-40-saas-valuation-growth-model/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Bootstrapped SaaS Unit Economics.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[SaaS LTV/CAC Ratio & Payback Period: The Bootstrapped Unit Economics Guide]]></title>
+      <link>https://site-12-taupe.vercel.app/saas-ltv-cac-payback-period-calculator/</link>
+      <guid isPermaLink="true">https://site-12-taupe.vercel.app/saas-ltv-cac-payback-period-calculator/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Bootstrapped SaaS Unit Economics.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[SaaS Magic Number & Sales Efficiency Formula with Calculator]]></title>
+      <link>https://site-12-taupe.vercel.app/saas-magic-number-sales-efficiency-calculator/</link>
+      <guid isPermaLink="true">https://site-12-taupe.vercel.app/saas-magic-number-sales-efficiency-calculator/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Bootstrapped SaaS Unit Economics.]]></description>
     </item>
   </channel>

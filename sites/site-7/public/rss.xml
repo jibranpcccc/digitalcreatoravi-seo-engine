@@ -5,34 +5,70 @@
     <link>https://webhookwatch.vercel.app/</link>
     <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Webhook Architecture & Reliability.]]></description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
-    <atom:link href="https://webhookwatch.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2026 09:43:04 GMT</lastBuildDate>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <atom:link rel="self" href="https://webhookwatch.vercel.app/rss.xml" type="application/rss+xml" />
     <item>
-      <title><![CDATA[WebhookWatch: Webhook Latency & Architecture Benchmarks]]></title>
+      <title><![CDATA[SITE-7 Homepage]]></title>
       <link>https://webhookwatch.vercel.app/</link>
       <guid isPermaLink="true">https://webhookwatch.vercel.app/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
     </item>
     <item>
-      <title><![CDATA[Stripe Webhook Signature Verification in Python (FastAPI)]]></title>
+      <title><![CDATA[Full Jitter Exponential Backoff Algorithm for Webhook Retries: Mathematics &amp; Implementation]]></title>
+      <link>https://webhookwatch.vercel.app/full-jitter-exponential-backoff-algorithm-webhook-retries/</link>
+      <guid isPermaLink="true">https://webhookwatch.vercel.app/full-jitter-exponential-backoff-algorithm-webhook-retries/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[GitHub Webhook Delivery Architecture: Handling 100k Webhooks/Sec with Kafka]]></title>
+      <link>https://webhookwatch.vercel.app/github-webhook-delivery-kafka-architecture/</link>
+      <guid isPermaLink="true">https://webhookwatch.vercel.app/github-webhook-delivery-kafka-architecture/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Shopify Webhook Signature Verification in Node.js & Go (HMAC-SHA256)]]></title>
+      <link>https://webhookwatch.vercel.app/shopify-webhook-signature-verification-guide/</link>
+      <guid isPermaLink="true">https://webhookwatch.vercel.app/shopify-webhook-signature-verification-guide/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Stripe Webhook Signature Verification in Python FastAPI: Production Recipe]]></title>
       <link>https://webhookwatch.vercel.app/stripe-webhook-signature-verification-fastapi/</link>
       <guid isPermaLink="true">https://webhookwatch.vercel.app/stripe-webhook-signature-verification-fastapi/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
     </item>
     <item>
-      <title><![CDATA[Webhook Retry Exponential Backoff with Jitter Guide]]></title>
-      <link>https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/</link>
-      <guid isPermaLink="true">https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
-      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Webhook Dead Letter Queue (DLQ) Architecture with AWS SQS]]></title>
+      <title><![CDATA[Webhook Dead Letter Queue (DLQ) Architecture with AWS SQS: Production Blueprint]]></title>
       <link>https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/</link>
       <guid isPermaLink="true">https://webhookwatch.vercel.app/webhook-dead-letter-queue-architecture-sqs/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Webhook Idempotency with Redis Redlock: Preventing Double-Billing in SaaS]]></title>
+      <link>https://webhookwatch.vercel.app/webhook-idempotency-redis-redlock-guide/</link>
+      <guid isPermaLink="true">https://webhookwatch.vercel.app/webhook-idempotency-redis-redlock-guide/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Webhook Idempotency with Redis Redlock: Multi-Region Distributed Locking Patterns]]></title>
+      <link>https://webhookwatch.vercel.app/webhook-idempotency-redis-redlock-patterns/</link>
+      <guid isPermaLink="true">https://webhookwatch.vercel.app/webhook-idempotency-redis-redlock-patterns/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Webhook Retry Exponential Backoff with Jitter: Production Formula & Code]]></title>
+      <link>https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/</link>
+      <guid isPermaLink="true">https://webhookwatch.vercel.app/webhook-retry-exponential-backoff-jitter-guide/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Webhook Architecture & Reliability.]]></description>
     </item>
   </channel>

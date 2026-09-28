@@ -5,34 +5,63 @@
     <link>https://site-16-indol.vercel.app/</link>
     <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Local Dev Environment Cheatsheets.]]></description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
-    <atom:link href="https://site-16-indol.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2026 09:43:04 GMT</lastBuildDate>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <atom:link rel="self" href="https://site-16-indol.vercel.app/rss.xml" type="application/rss+xml" />
     <item>
-      <title><![CDATA[Modern Developer Config Hub: DevContainer, Docker Compose & Nix Flakes]]></title>
+      <title><![CDATA[SITE-16 Homepage]]></title>
       <link>https://site-16-indol.vercel.app/</link>
       <guid isPermaLink="true">https://site-16-indol.vercel.app/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local Dev Environment Cheatsheets.]]></description>
     </item>
     <item>
-      <title><![CDATA[DevContainer.json vs Docker Compose for Local Development]]></title>
+      <title><![CDATA[DevContainer Feature for pgvector + Ollama: Instant Zero-Install Local RAG]]></title>
+      <link>https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/</link>
+      <guid isPermaLink="true">https://site-16-indol.vercel.app/devcontainer-feature-pgvector-ollama-local-rag/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local Dev Environment Cheatsheets.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[DevContainer.json vs Docker Compose for Local Development: Architecture, Lifecycles & Hybrid Workflows]]></title>
       <link>https://site-16-indol.vercel.app/devcontainer-json-vs-docker-compose-local-development/</link>
       <guid isPermaLink="true">https://site-16-indol.vercel.app/devcontainer-json-vs-docker-compose-local-development/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local Dev Environment Cheatsheets.]]></description>
     </item>
     <item>
-      <title><![CDATA[Nix Flakes for Reproducible Python, Rust & Node Dev Environments]]></title>
-      <link>https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/</link>
-      <guid isPermaLink="true">https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <title><![CDATA[direnv + Nix Flakes: Instant Reproducible Project Shells]]></title>
+      <link>https://site-16-indol.vercel.app/direnv-nix-flakes-fast-developer-shell-tutorial/</link>
+      <guid isPermaLink="true">https://site-16-indol.vercel.app/direnv-nix-flakes-fast-developer-shell-tutorial/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local Dev Environment Cheatsheets.]]></description>
     </item>
     <item>
-      <title><![CDATA[Fastest Docker Compose Postgres & Redis Local Dev Stack]]></title>
+      <title><![CDATA[Docker Compose GPU Passthrough Guide with NVIDIA Container Toolkit]]></title>
+      <link>https://site-16-indol.vercel.app/docker-compose-gpu-passthrough-nvidia-container-toolkit/</link>
+      <guid isPermaLink="true">https://site-16-indol.vercel.app/docker-compose-gpu-passthrough-nvidia-container-toolkit/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local Dev Environment Cheatsheets.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Fastest Docker Compose Postgres 16 & Redis 7 Local Development Stack: Sub-Second Startup & 10x Test Speed]]></title>
       <link>https://site-16-indol.vercel.app/fastest-docker-compose-postgres-redis-local-stack/</link>
       <guid isPermaLink="true">https://site-16-indol.vercel.app/fastest-docker-compose-postgres-redis-local-stack/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local Dev Environment Cheatsheets.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Nix Flake DevShell for Python with uv &amp; FastAPI: Sub-Second Reproducible Environments]]></title>
+      <link>https://site-16-indol.vercel.app/nix-flake-devshell-python-uv-fastapi-template/</link>
+      <guid isPermaLink="true">https://site-16-indol.vercel.app/nix-flake-devshell-python-uv-fastapi-template/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local Dev Environment Cheatsheets.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Nix Flakes for Reproducible Python, Rust, and Node.js Environments: Zero-Container Hermetic Workstations]]></title>
+      <link>https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/</link>
+      <guid isPermaLink="true">https://site-16-indol.vercel.app/nix-flakes-for-reproducible-python-rust-node-environments/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Local Dev Environment Cheatsheets.]]></description>
     </item>
   </channel>

@@ -5,34 +5,70 @@
     <link>https://nomadtreaty.vercel.app/</link>
     <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Digital Nomad Tax & Visas.]]></description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
-    <atom:link href="https://nomadtreaty.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2026 09:43:04 GMT</lastBuildDate>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <atom:link rel="self" href="https://nomadtreaty.vercel.app/rss.xml" type="application/rss+xml" />
     <item>
-      <title><![CDATA[NomadTreaty: Digital Nomad Tax Treaties & Visa Calculator]]></title>
+      <title><![CDATA[SITE-6 Homepage]]></title>
       <link>https://nomadtreaty.vercel.app/</link>
       <guid isPermaLink="true">https://nomadtreaty.vercel.app/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
     </item>
     <item>
-      <title><![CDATA[Spain Digital Nomad Visa & Beckham Law 24% Flat Tax]]></title>
-      <link>https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/</link>
-      <guid isPermaLink="true">https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
-      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Portugal NHR 2.0 (IFICI) Tax Nomad Calculator 2026]]></title>
-      <link>https://nomadtreaty.vercel.app/portugal-nhr-tax-nomad-calculator-2026/</link>
-      <guid isPermaLink="true">https://nomadtreaty.vercel.app/portugal-nhr-tax-nomad-calculator-2026/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
-      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[The 183-Day Rule Demystified for Digital Nomads]]></title>
+      <title><![CDATA[The 183-Day Rule Demystified: How to Avoid Unexpected Tax Residency Traps]]></title>
       <link>https://nomadtreaty.vercel.app/183-day-rule-tax-residency-nomad-guide/</link>
       <guid isPermaLink="true">https://nomadtreaty.vercel.app/183-day-rule-tax-residency-nomad-guide/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Cyprus 60-Day Rule & Non-Dom Tax Regime for Digital Nomads (2026 Guide)]]></title>
+      <link>https://nomadtreaty.vercel.app/cyprus-non-dom-tax-nomad-guide/</link>
+      <guid isPermaLink="true">https://nomadtreaty.vercel.app/cyprus-non-dom-tax-nomad-guide/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Cyprus Non-Dom vs Malta Nomad Residence Tax: 60-Day vs 183-Day Rules Teardown]]></title>
+      <link>https://nomadtreaty.vercel.app/cyprus-non-dom-vs-malta-nomad-residence-tax/</link>
+      <guid isPermaLink="true">https://nomadtreaty.vercel.app/cyprus-non-dom-vs-malta-nomad-residence-tax/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Estonia e-Residency Corporate Tax 0% Retained Earnings Optimization]]></title>
+      <link>https://nomadtreaty.vercel.app/estonia-e-residency-tax-optimization/</link>
+      <guid isPermaLink="true">https://nomadtreaty.vercel.app/estonia-e-residency-tax-optimization/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Greece Digital Nomad Visa: 50% Income Tax Break Guide &amp; Law 4758 Requirements]]></title>
+      <link>https://nomadtreaty.vercel.app/greece-digital-nomad-visa-50-percent-tax-break-guide/</link>
+      <guid isPermaLink="true">https://nomadtreaty.vercel.app/greece-digital-nomad-visa-50-percent-tax-break-guide/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Italy Digital Nomad Visa Flat Tax vs Spain Beckham Law: True Net Comparison]]></title>
+      <link>https://nomadtreaty.vercel.app/italy-digital-nomad-visa-flat-tax-vs-spain/</link>
+      <guid isPermaLink="true">https://nomadtreaty.vercel.app/italy-digital-nomad-visa-flat-tax-vs-spain/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Portugal NHR 2.0 & Digital Nomad Tax Guide: The 20% Flat Rate Explained]]></title>
+      <link>https://nomadtreaty.vercel.app/portugal-nhr-tax-nomad-calculator-2026/</link>
+      <guid isPermaLink="true">https://nomadtreaty.vercel.app/portugal-nhr-tax-nomad-calculator-2026/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Spain Digital Nomad Visa & Beckham Law: Flat 24% Tax Rate Explained (2026)]]></title>
+      <link>https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/</link>
+      <guid isPermaLink="true">https://nomadtreaty.vercel.app/spain-digital-nomad-visa-beckham-law-guide/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Digital Nomad Tax & Visas.]]></description>
     </item>
   </channel>

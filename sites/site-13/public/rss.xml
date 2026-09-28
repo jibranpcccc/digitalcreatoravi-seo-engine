@@ -5,34 +5,63 @@
     <link>https://groklogtester.pages.dev/</link>
     <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Observability Regex & Log Parsing Utilities.]]></description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
-    <atom:link href="https://groklogtester.pages.dev/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2026 09:43:04 GMT</lastBuildDate>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <atom:link rel="self" href="https://groklogtester.pages.dev/rss.xml" type="application/rss+xml" />
     <item>
-      <title><![CDATA[Grok Pattern Tester & Nginx Log Regex Generator]]></title>
+      <title><![CDATA[SITE-13 Homepage]]></title>
       <link>https://groklogtester.pages.dev/</link>
       <guid isPermaLink="true">https://groklogtester.pages.dev/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Observability Regex & Log Parsing Utilities.]]></description>
     </item>
     <item>
-      <title><![CDATA[Nginx Access Log Grok Pattern Generator & Field Extractor]]></title>
-      <link>https://groklogtester.pages.dev/nginx-access-log-grok-pattern-generator/</link>
-      <guid isPermaLink="true">https://groklogtester.pages.dev/nginx-access-log-grok-pattern-generator/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
-      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Observability Regex & Log Parsing Utilities.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[AWS Application Load Balancer (ALB) Log Grok Regex Parser]]></title>
+      <title><![CDATA[AWS ALB Access Log Regex Parser & Format Spec]]></title>
       <link>https://groklogtester.pages.dev/aws-alb-access-log-regex-parser/</link>
       <guid isPermaLink="true">https://groklogtester.pages.dev/aws-alb-access-log-regex-parser/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Observability Regex & Log Parsing Utilities.]]></description>
     </item>
     <item>
-      <title><![CDATA[Vector vs Fluent Bit: High-Throughput Regex Parsing Benchmarks]]></title>
+      <title><![CDATA[Caddy Server JSON Access Log Grok Patterns &amp; Ingestion Architectures]]></title>
+      <link>https://groklogtester.pages.dev/caddy-server-json-access-log-grok-patterns/</link>
+      <guid isPermaLink="true">https://groklogtester.pages.dev/caddy-server-json-access-log-grok-patterns/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Observability Regex & Log Parsing Utilities.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[HAProxy HTTP Log Format Regex Extractor & Grok Expressions]]></title>
+      <link>https://groklogtester.pages.dev/haproxy-http-log-format-regex-extractor/</link>
+      <guid isPermaLink="true">https://groklogtester.pages.dev/haproxy-http-log-format-regex-extractor/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Observability Regex & Log Parsing Utilities.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[High-Throughput Log Parsing: Vector vs Fluent Bit]]></title>
       <link>https://groklogtester.pages.dev/high-throughput-log-parsing-vector-vs-fluentbit/</link>
       <guid isPermaLink="true">https://groklogtester.pages.dev/high-throughput-log-parsing-vector-vs-fluentbit/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Observability Regex & Log Parsing Utilities.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Kubernetes Ingress-Nginx Log Parser for Fluent Bit &amp; Vector: Grok Regex Guide]]></title>
+      <link>https://groklogtester.pages.dev/kubernetes-ingress-nginx-log-parser-fluentbit/</link>
+      <guid isPermaLink="true">https://groklogtester.pages.dev/kubernetes-ingress-nginx-log-parser-fluentbit/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Observability Regex & Log Parsing Utilities.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Nginx Access Log Grok Pattern Generator]]></title>
+      <link>https://groklogtester.pages.dev/nginx-access-log-grok-pattern-generator/</link>
+      <guid isPermaLink="true">https://groklogtester.pages.dev/nginx-access-log-grok-pattern-generator/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Observability Regex & Log Parsing Utilities.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Syslog RFC 5424 Grok Pattern Validator &amp; Field Dictionary: Logstash, Vector &amp; Fluent Bit]]></title>
+      <link>https://groklogtester.pages.dev/syslog-rfc-5424-grok-pattern-validator-cheatsheet/</link>
+      <guid isPermaLink="true">https://groklogtester.pages.dev/syslog-rfc-5424-grok-pattern-validator-cheatsheet/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Observability Regex & Log Parsing Utilities.]]></description>
     </item>
   </channel>

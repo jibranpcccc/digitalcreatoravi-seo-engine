@@ -5,34 +5,63 @@
     <link>https://opencrmstack.pages.dev/</link>
     <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Open-Source CRM Alternatives & Migration Math.]]></description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
-    <atom:link href="https://opencrmstack.pages.dev/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2026 09:43:04 GMT</lastBuildDate>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <atom:link rel="self" href="https://opencrmstack.pages.dev/rss.xml" type="application/rss+xml" />
     <item>
-      <title><![CDATA[Open-Source CRM Total Cost of Ownership (TCO) & Migration Calculator]]></title>
+      <title><![CDATA[SITE-17 Homepage]]></title>
       <link>https://opencrmstack.pages.dev/</link>
       <guid isPermaLink="true">https://opencrmstack.pages.dev/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[EspoCRM vs SuiteCRM: Lightweight Self-Hosted PHP CRM Comparison 2026]]></title>
+      <link>https://opencrmstack.pages.dev/espocrm-vs-suitecrm-lightweight-php-open-source/</link>
+      <guid isPermaLink="true">https://opencrmstack.pages.dev/espocrm-vs-suitecrm-lightweight-php-open-source/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[HubSpot Marketing Contacts Price Cliff: The 1k to 50k Hidden Escalation Curve &amp; Self-Hosted Alternatives]]></title>
+      <link>https://opencrmstack.pages.dev/hubspot-marketing-contacts-price-cliff-calculator/</link>
+      <guid isPermaLink="true">https://opencrmstack.pages.dev/hubspot-marketing-contacts-price-cliff-calculator/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[HubSpot to Twenty CRM Migration Guide: Exporting Deals & Contacts]]></title>
+      <link>https://opencrmstack.pages.dev/hubspot-to-twenty-crm-migration-script-csv-export/</link>
+      <guid isPermaLink="true">https://opencrmstack.pages.dev/hubspot-to-twenty-crm-migration-script-csv-export/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Mautic vs HubSpot: Deliverability &amp; Automation Benchmark]]></title>
+      <link>https://opencrmstack.pages.dev/mautic-vs-hubspot-email-automation-deliverability-benchmark/</link>
+      <guid isPermaLink="true">https://opencrmstack.pages.dev/mautic-vs-hubspot-email-automation-deliverability-benchmark/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Self-Hosted ERPNext vs Salesforce: Cost &amp; Migration Breakdown]]></title>
+      <link>https://opencrmstack.pages.dev/self-hosted-erpnext-vs-salesforce-cost-migration-breakdown/</link>
+      <guid isPermaLink="true">https://opencrmstack.pages.dev/self-hosted-erpnext-vs-salesforce-cost-migration-breakdown/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Twenty CRM Self-Hosted Docker Compose Production Deployment Guide]]></title>
+      <link>https://opencrmstack.pages.dev/twenty-crm-self-hosted-docker-deployment-guide/</link>
+      <guid isPermaLink="true">https://opencrmstack.pages.dev/twenty-crm-self-hosted-docker-deployment-guide/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
     </item>
     <item>
       <title><![CDATA[Twenty CRM vs HubSpot: Open-Source Sales Pipeline Audit]]></title>
       <link>https://opencrmstack.pages.dev/twenty-crm-vs-hubspot-open-source-sales-pipeline-audit/</link>
       <guid isPermaLink="true">https://opencrmstack.pages.dev/twenty-crm-vs-hubspot-open-source-sales-pipeline-audit/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
-      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Self-Hosted ERPNext vs Salesforce: Cost & Migration Breakdown]]></title>
-      <link>https://opencrmstack.pages.dev/self-hosted-erpnext-vs-salesforce-cost-migration-breakdown/</link>
-      <guid isPermaLink="true">https://opencrmstack.pages.dev/self-hosted-erpnext-vs-salesforce-cost-migration-breakdown/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
-      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Mautic vs HubSpot: Deliverability & Automation Benchmark]]></title>
-      <link>https://opencrmstack.pages.dev/mautic-vs-hubspot-email-automation-deliverability-benchmark/</link>
-      <guid isPermaLink="true">https://opencrmstack.pages.dev/mautic-vs-hubspot-email-automation-deliverability-benchmark/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Open-Source CRM Alternatives & Migration Math.]]></description>
     </item>
   </channel>

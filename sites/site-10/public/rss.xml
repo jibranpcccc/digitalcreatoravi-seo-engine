@@ -5,34 +5,63 @@
     <link>https://raginspect.pages.dev/</link>
     <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for RAG Pipeline Chunking & Retrieval Benchmarks.]]></description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
-    <atom:link href="https://raginspect.pages.dev/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2026 09:43:04 GMT</lastBuildDate>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <atom:link rel="self" href="https://raginspect.pages.dev/rss.xml" type="application/rss+xml" />
     <item>
-      <title><![CDATA[RAG Pipeline Inspector: Semantic Chunking & Retrieval Leaderboard]]></title>
+      <title><![CDATA[SITE-10 Homepage]]></title>
       <link>https://raginspect.pages.dev/</link>
       <guid isPermaLink="true">https://raginspect.pages.dev/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for RAG Pipeline Chunking & Retrieval Benchmarks.]]></description>
     </item>
     <item>
-      <title><![CDATA[Semantic Chunking vs Fixed-Size Token Chunking Benchmarks]]></title>
-      <link>https://raginspect.pages.dev/semantic-chunking-vs-fixed-size-rag-benchmarks/</link>
-      <guid isPermaLink="true">https://raginspect.pages.dev/semantic-chunking-vs-fixed-size-rag-benchmarks/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <title><![CDATA[ColPali vs BGE-M3: Multimodal PDF Retrieval Latency]]></title>
+      <link>https://raginspect.pages.dev/colpali-vs-bge-m3-multimodal-document-retrieval/</link>
+      <guid isPermaLink="true">https://raginspect.pages.dev/colpali-vs-bge-m3-multimodal-document-retrieval/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for RAG Pipeline Chunking & Retrieval Benchmarks.]]></description>
     </item>
     <item>
-      <title><![CDATA[Hybrid Search Accuracy: BM25 vs Dense Vector Embeddings]]></title>
+      <title><![CDATA[Hybrid Search Architecture: BM25 Lexical vs Dense Vector Retrieval Accuracy]]></title>
       <link>https://raginspect.pages.dev/hybrid-search-bm25-vs-dense-vector-accuracy/</link>
       <guid isPermaLink="true">https://raginspect.pages.dev/hybrid-search-bm25-vs-dense-vector-accuracy/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for RAG Pipeline Chunking & Retrieval Benchmarks.]]></description>
     </item>
     <item>
-      <title><![CDATA[Ragas vs TruLens vs DeepEval: RAG Triad Benchmarks 2026]]></title>
+      <title><![CDATA[Late Chunking vs Sentence-Window Retrieval: Precision, Memory &amp; Latency Benchmarks]]></title>
+      <link>https://raginspect.pages.dev/late-chunking-vs-sentence-window-retrieval-benchmark/</link>
+      <guid isPermaLink="true">https://raginspect.pages.dev/late-chunking-vs-sentence-window-retrieval-benchmark/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for RAG Pipeline Chunking & Retrieval Benchmarks.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Ragas vs TruLens: Automated RAG Pipeline Evaluation Framework Comparison]]></title>
       <link>https://raginspect.pages.dev/ragas-vs-trulens-rag-evaluation-frameworks/</link>
       <guid isPermaLink="true">https://raginspect.pages.dev/ragas-vs-trulens-rag-evaluation-frameworks/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for RAG Pipeline Chunking & Retrieval Benchmarks.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Cohere Rerank 3 vs BGE-Reranker-Large: Precision & Latency Benchmarks]]></title>
+      <link>https://raginspect.pages.dev/reranking-models-cohere-vs-bge-reranker-large-mteb/</link>
+      <guid isPermaLink="true">https://raginspect.pages.dev/reranking-models-cohere-vs-bge-reranker-large-mteb/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for RAG Pipeline Chunking & Retrieval Benchmarks.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Semantic Chunking vs Fixed-Size Chunking: 2026 RAG Retrieval Benchmarks]]></title>
+      <link>https://raginspect.pages.dev/semantic-chunking-vs-fixed-size-rag-benchmarks/</link>
+      <guid isPermaLink="true">https://raginspect.pages.dev/semantic-chunking-vs-fixed-size-rag-benchmarks/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for RAG Pipeline Chunking & Retrieval Benchmarks.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Tuning BM25 k1 and b Hyperparameters for Hybrid RAG: Mathematical Optimization &amp; Benchmarks]]></title>
+      <link>https://raginspect.pages.dev/tuning-bm25-k1-b-hyperparameters-hybrid-rag/</link>
+      <guid isPermaLink="true">https://raginspect.pages.dev/tuning-bm25-k1-b-hyperparameters-hybrid-rag/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for RAG Pipeline Chunking & Retrieval Benchmarks.]]></description>
     </item>
   </channel>

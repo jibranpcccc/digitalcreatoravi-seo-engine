@@ -5,34 +5,63 @@
     <link>https://site-19-nine.vercel.app/</link>
     <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Options Greeks & DeFi Impermanent Loss Math.]]></description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
-    <atom:link href="https://site-19-nine.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2026 09:43:04 GMT</lastBuildDate>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <atom:link rel="self" href="https://site-19-nine.vercel.app/rss.xml" type="application/rss+xml" />
     <item>
-      <title><![CDATA[Black-Scholes Options Greeks & DeFi Impermanent Loss Visualizer]]></title>
+      <title><![CDATA[SITE-19 Homepage]]></title>
       <link>https://site-19-nine.vercel.app/</link>
       <guid isPermaLink="true">https://site-19-nine.vercel.app/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
     </item>
     <item>
-      <title><![CDATA[Uniswap v3 Concentrated Liquidity & Impermanent Loss Math Guide]]></title>
-      <link>https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/</link>
-      <guid isPermaLink="true">https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
-      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Options Gamma Scalping, Theta Decay & Dynamic Delta Hedging Strategies]]></title>
-      <link>https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/</link>
-      <guid isPermaLink="true">https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
-      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
-    </item>
-    <item>
-      <title><![CDATA[Crypto Funding Rate Arbitrage & Delta-Neutral Yield Guide]]></title>
+      <title><![CDATA[Crypto Funding Rate Arbitrage &amp; Delta-Neutral Yield Guide]]></title>
       <link>https://site-19-nine.vercel.app/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/</link>
       <guid isPermaLink="true">https://site-19-nine.vercel.app/crypto-funding-rate-arbitrage-delta-neutral-yield-guide/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Delta-Neutral Liquidity Provision on Uniswap v3: Impermanent Loss Hedging]]></title>
+      <link>https://site-19-nine.vercel.app/delta-neutral-liquidity-provision-uniswap-v3/</link>
+      <guid isPermaLink="true">https://site-19-nine.vercel.app/delta-neutral-liquidity-provision-uniswap-v3/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Uniswap v3 Impermanent Loss Formula &amp; Exact Fee APR Math Breakdown]]></title>
+      <link>https://site-19-nine.vercel.app/impermanent-loss-vs-fee-apr-uniswap-v3-formula/</link>
+      <guid isPermaLink="true">https://site-19-nine.vercel.app/impermanent-loss-vs-fee-apr-uniswap-v3-formula/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Implied Volatility Smile & Surface Calculation in Python]]></title>
+      <link>https://site-19-nine.vercel.app/implied-volatility-smile-surface-black-scholes/</link>
+      <guid isPermaLink="true">https://site-19-nine.vercel.app/implied-volatility-smile-surface-black-scholes/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Options Gamma Scalping, Theta Decay &amp; Dynamic Delta Hedging Strategies]]></title>
+      <link>https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/</link>
+      <guid isPermaLink="true">https://site-19-nine.vercel.app/options-gamma-scalping-theta-decay-hedging-strategies/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Uniswap v3 Concentrated Liquidity &amp; Impermanent Loss Math Guide]]></title>
+      <link>https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/</link>
+      <guid isPermaLink="true">https://site-19-nine.vercel.app/uniswap-v3-concentrated-liquidity-impermanent-loss-calculator/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Uniswap v3 Fee Tier Selector: 0.05% vs 0.30% vs 1.00% Liquidity Pool Volatility Math]]></title>
+      <link>https://site-19-nine.vercel.app/uniswap-v3-fee-tier-selector-liquidity-pool-math/</link>
+      <guid isPermaLink="true">https://site-19-nine.vercel.app/uniswap-v3-fee-tier-selector-liquidity-pool-math/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Options Greeks & DeFi Impermanent Loss Math.]]></description>
     </item>
   </channel>

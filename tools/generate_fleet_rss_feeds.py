@@ -40,7 +40,8 @@ def generate_rss_for_site(site, pages):
     <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for {site['niche']}.]]></description>
     <language>en-us</language>
     <lastBuildDate>{now_rfc822}</lastBuildDate>
-    <atom:link href="{site['url'].rstrip('/')}/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <atom:link rel="self" href="{site['url'].rstrip('/')}/rss.xml" type="application/rss+xml" />
 {chr(10).join(items_xml)}
   </channel>
 </rss>
@@ -50,7 +51,7 @@ def generate_rss_for_site(site, pages):
 def main():
     conn = get_db()
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM sites ORDER BY id")
+    cursor.execute("SELECT * FROM sites WHERE CAST(SUBSTR(id, 6) AS INTEGER) BETWEEN 1 AND 20 ORDER BY CAST(SUBSTR(id, 6) AS INTEGER)")
     sites = [dict(r) for r in cursor.fetchall()]
 
     cursor.execute("SELECT * FROM indexed_pages ORDER BY site_id, id")

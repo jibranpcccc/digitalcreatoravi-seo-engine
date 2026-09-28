@@ -5,41 +5,84 @@
     <link>https://openagentstack.pages.dev/</link>
     <description><![CDATA[Empirical benchmarks, interactive client-side developer utilities, and comprehensive guides for Autonomous Agents & MCP Protocols.]]></description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 07:39:09 GMT</lastBuildDate>
-    <atom:link href="https://openagentstack.pages.dev/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2026 09:43:04 GMT</lastBuildDate>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <atom:link rel="self" href="https://openagentstack.pages.dev/rss.xml" type="application/rss+xml" />
     <item>
-      <title><![CDATA[OpenAgentStack: Open-Source AI Agent Framework Directory]]></title>
+      <title><![CDATA[SITE-3 Homepage]]></title>
       <link>https://openagentstack.pages.dev/</link>
       <guid isPermaLink="true">https://openagentstack.pages.dev/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Autonomous Agents & MCP Protocols.]]></description>
     </item>
     <item>
-      <title><![CDATA[Browser-Use vs Playwright MCP Benchmark 2026]]></title>
+      <title><![CDATA[LangGraph Postgres Checkpointers: State Persistence (2026)]]></title>
+      <link>https://openagentstack.pages.dev/agents/langgraph-postgres-checkpointer-persistence/</link>
+      <guid isPermaLink="true">https://openagentstack.pages.dev/agents/langgraph-postgres-checkpointer-persistence/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Autonomous Agents & MCP Protocols.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Build Coding Agents with Smolagents & Claude (2026)]]></title>
+      <link>https://openagentstack.pages.dev/agents/smolagents-coding-agent-claude-tutorial/</link>
+      <guid isPermaLink="true">https://openagentstack.pages.dev/agents/smolagents-coding-agent-claude-tutorial/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Autonomous Agents & MCP Protocols.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Browser-Use vs Playwright MCP: Web Automation Test (2026)]]></title>
       <link>https://openagentstack.pages.dev/frameworks/browser-use-vs-playwright-mcp-web-automation-benchmark/</link>
       <guid isPermaLink="true">https://openagentstack.pages.dev/frameworks/browser-use-vs-playwright-mcp-web-automation-benchmark/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Autonomous Agents & MCP Protocols.]]></description>
     </item>
     <item>
-      <title><![CDATA[LangGraph vs AutoGen Multi-Agent Orchestration Cost]]></title>
-      <link>https://openagentstack.pages.dev/agents/langgraph-vs-autogen-multi-agent-orchestration-cost/</link>
-      <guid isPermaLink="true">https://openagentstack.pages.dev/agents/langgraph-vs-autogen-multi-agent-orchestration-cost/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <title><![CDATA[LangGraph vs CrewAI vs AutoGen: Multi-Agent Benchmark 2026]]></title>
+      <link>https://openagentstack.pages.dev/frameworks/langgraph-vs-crewai-vs-autogen-multi-agent-benchmark-2026/</link>
+      <guid isPermaLink="true">https://openagentstack.pages.dev/frameworks/langgraph-vs-crewai-vs-autogen-multi-agent-benchmark-2026/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Autonomous Agents & MCP Protocols.]]></description>
     </item>
     <item>
-      <title><![CDATA[Building Production MCP Servers with FastAPI & SSE]]></title>
-      <link>https://openagentstack.pages.dev/protocols/building-production-mcp-servers-fastapi-sse/</link>
-      <guid isPermaLink="true">https://openagentstack.pages.dev/protocols/building-production-mcp-servers-fastapi-sse/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <title><![CDATA[Smolagents Guide: Minimalist Code Agents Architecture]]></title>
+      <link>https://openagentstack.pages.dev/frameworks/smolagents-minimalist-code-agents-huggingface-guide/</link>
+      <guid isPermaLink="true">https://openagentstack.pages.dev/frameworks/smolagents-minimalist-code-agents-huggingface-guide/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Autonomous Agents & MCP Protocols.]]></description>
     </item>
     <item>
-      <title><![CDATA[Smolagents vs CrewAI: Lightweight Python Agents]]></title>
-      <link>https://openagentstack.pages.dev/frameworks/smolagents-vs-crewai-lightweight-python-agents/</link>
-      <guid isPermaLink="true">https://openagentstack.pages.dev/frameworks/smolagents-vs-crewai-lightweight-python-agents/</guid>
-      <pubDate>Mon, 07 Sep 2026 07:39:09 GMT</pubDate>
+      <title><![CDATA[DeepSeek-R1 Tool Calling with Ollama & MCP Architecture]]></title>
+      <link>https://openagentstack.pages.dev/mcp/local-deepseek-r1-tool-calling-ollama-mcp/</link>
+      <guid isPermaLink="true">https://openagentstack.pages.dev/mcp/local-deepseek-r1-tool-calling-ollama-mcp/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Autonomous Agents & MCP Protocols.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[MCP Servers in Docker & Kubernetes: Production Guide]]></title>
+      <link>https://openagentstack.pages.dev/mcp/mcp-server-docker-kubernetes-guide/</link>
+      <guid isPermaLink="true">https://openagentstack.pages.dev/mcp/mcp-server-docker-kubernetes-guide/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Autonomous Agents & MCP Protocols.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Fix: MCP Stdio Connection Reset by Peer (Exit 137)]]></title>
+      <link>https://openagentstack.pages.dev/mcp/mcp-server-docker-stdio-connection-reset-peer-fix/</link>
+      <guid isPermaLink="true">https://openagentstack.pages.dev/mcp/mcp-server-docker-stdio-connection-reset-peer-fix/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Autonomous Agents & MCP Protocols.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[MCP Stdio vs SSE Latency & Architecture Benchmark]]></title>
+      <link>https://openagentstack.pages.dev/mcp/mcp-server-stdio-vs-sse-latency-benchmark/</link>
+      <guid isPermaLink="true">https://openagentstack.pages.dev/mcp/mcp-server-stdio-vs-sse-latency-benchmark/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
+      <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Autonomous Agents & MCP Protocols.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Top 15 Production MCP Servers for Local Agents (2026)]]></title>
+      <link>https://openagentstack.pages.dev/mcp/top-15-production-mcp-servers-docker-guide/</link>
+      <guid isPermaLink="true">https://openagentstack.pages.dev/mcp/top-15-production-mcp-servers-docker-guide/</guid>
+      <pubDate>Mon, 28 Sep 2026 09:43:04 GMT</pubDate>
       <description><![CDATA[Production guide, benchmark analysis, and interactive tools for Autonomous Agents & MCP Protocols.]]></description>
     </item>
   </channel>
