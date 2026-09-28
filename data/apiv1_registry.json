@@ -42,7 +42,7 @@
   {
     "site_id": "site-5",
     "site_name": "VectorBench",
-    "target_url": "https://vectorbench-hq.netlify.app/",
+    "target_url": "https://vectorbench.pages.dev/",
     "backlink_url": "https://jibranpcccc.github.io/api/v1/site-5.json",
     "platform": "GitHub Pages (Fastly CDN DA 96)",
     "link_type": "API v1 JSON Service Descriptor",
@@ -52,7 +52,7 @@
   {
     "site_id": "site-6",
     "site_name": "NomadTreaty",
-    "target_url": "https://nomadtreaty.vercel.app/",
+    "target_url": "https://nomadtreaty.pages.dev/",
     "backlink_url": "https://jibranpcccc.github.io/api/v1/site-6.json",
     "platform": "GitHub Pages (Fastly CDN DA 96)",
     "link_type": "API v1 JSON Service Descriptor",
@@ -62,7 +62,7 @@
   {
     "site_id": "site-7",
     "site_name": "WebhookWatch",
-    "target_url": "https://webhookwatch.vercel.app/",
+    "target_url": "https://webhookwatch.pages.dev/",
     "backlink_url": "https://jibranpcccc.github.io/api/v1/site-7.json",
     "platform": "GitHub Pages (Fastly CDN DA 96)",
     "link_type": "API v1 JSON Service Descriptor",
@@ -72,7 +72,7 @@
   {
     "site_id": "site-8",
     "site_name": "LocalDocPrivacy",
-    "target_url": "https://localdocprivacy.netlify.app/",
+    "target_url": "https://localdocprivacy.pages.dev/",
     "backlink_url": "https://jibranpcccc.github.io/api/v1/site-8.json",
     "platform": "GitHub Pages (Fastly CDN DA 96)",
     "link_type": "API v1 JSON Service Descriptor",
@@ -82,7 +82,7 @@
   {
     "site_id": "site-9",
     "site_name": "FounderRunway",
-    "target_url": "https://site-9-inky.vercel.app/",
+    "target_url": "https://founderrunway.pages.dev/",
     "backlink_url": "https://jibranpcccc.github.io/api/v1/site-9.json",
     "platform": "GitHub Pages (Fastly CDN DA 96)",
     "link_type": "API v1 JSON Service Descriptor",
@@ -102,7 +102,7 @@
   {
     "site_id": "site-11",
     "site_name": "NomadPassportIndex",
-    "target_url": "https://nomadpassportindex.netlify.app/",
+    "target_url": "https://nomadpassportindex.pages.dev/",
     "backlink_url": "https://jibranpcccc.github.io/api/v1/site-11.json",
     "platform": "GitHub Pages (Fastly CDN DA 96)",
     "link_type": "API v1 JSON Service Descriptor",
@@ -112,7 +112,7 @@
   {
     "site_id": "site-12",
     "site_name": "SaaSUnitMath",
-    "target_url": "https://site-12-taupe.vercel.app/",
+    "target_url": "https://saasunitmath.pages.dev/",
     "backlink_url": "https://jibranpcccc.github.io/api/v1/site-12.json",
     "platform": "GitHub Pages (Fastly CDN DA 96)",
     "link_type": "API v1 JSON Service Descriptor",
@@ -132,7 +132,7 @@
   {
     "site_id": "site-14",
     "site_name": "SOC2Ready",
-    "target_url": "https://site-14-sable.vercel.app/",
+    "target_url": "https://soc2ready.pages.dev/",
     "backlink_url": "https://jibranpcccc.github.io/api/v1/site-14.json",
     "platform": "GitHub Pages (Fastly CDN DA 96)",
     "link_type": "API v1 JSON Service Descriptor",
@@ -140,19 +140,9 @@
     "anchor": "API v1 Service Descriptor: SOC2Ready"
   },
   {
-    "site_id": "site-15",
-    "site_name": "EORCalculator",
-    "target_url": "https://site-15-ruby.vercel.app/",
-    "backlink_url": "https://jibranpcccc.github.io/api/v1/site-15.json",
-    "platform": "GitHub Pages (Fastly CDN DA 96)",
-    "link_type": "API v1 JSON Service Descriptor",
-    "da": 96,
-    "anchor": "API v1 Service Descriptor: EORCalculator"
-  },
-  {
     "site_id": "site-16",
     "site_name": "DevConfigHub",
-    "target_url": "https://site-16-indol.vercel.app/",
+    "target_url": "https://devconfighub.pages.dev/",
     "backlink_url": "https://jibranpcccc.github.io/api/v1/site-16.json",
     "platform": "GitHub Pages (Fastly CDN DA 96)",
     "link_type": "API v1 JSON Service Descriptor",
@@ -172,7 +162,7 @@
   {
     "site_id": "site-18",
     "site_name": "CIPipelineGraph",
-    "target_url": "https://site-18-chi.vercel.app/",
+    "target_url": "https://cipipelinegraph.pages.dev/",
     "backlink_url": "https://jibranpcccc.github.io/api/v1/site-18.json",
     "platform": "GitHub Pages (Fastly CDN DA 96)",
     "link_type": "API v1 JSON Service Descriptor",
@@ -182,7 +172,7 @@
   {
     "site_id": "site-19",
     "site_name": "GreekVisualizer",
-    "target_url": "https://site-19-nine.vercel.app/",
+    "target_url": "https://greekvisualizer.pages.dev/",
     "backlink_url": "https://jibranpcccc.github.io/api/v1/site-19.json",
     "platform": "GitHub Pages (Fastly CDN DA 96)",
     "link_type": "API v1 JSON Service Descriptor",

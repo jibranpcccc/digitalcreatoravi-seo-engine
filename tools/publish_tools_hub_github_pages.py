@@ -42,21 +42,21 @@ tools_html = """<!DOCTYPE html>
         {"@type": "ListItem", "position": 2, "name": "WorkationRadar", "url": "https://jibranpcccc.github.io/workationradar/"},
         {"@type": "ListItem", "position": 3, "name": "OpenAgentStack", "url": "https://openagentstack.pages.dev/"},
         {"@type": "ListItem", "position": 4, "name": "IndieStackAudit", "url": "https://indiestackaudit.pages.dev/"},
-        {"@type": "ListItem", "position": 5, "name": "VectorBench", "url": "https://vectorbench-hq.netlify.app/"},
-        {"@type": "ListItem", "position": 6, "name": "NomadTreaty", "url": "https://nomadtreaty.vercel.app/"},
-        {"@type": "ListItem", "position": 7, "name": "WebhookWatch", "url": "https://webhookwatch.vercel.app/"},
-        {"@type": "ListItem", "position": 8, "name": "LocalDocPrivacy", "url": "https://localdocprivacy.netlify.app/"},
-        {"@type": "ListItem", "position": 9, "name": "FounderRunway", "url": "https://site-9-inky.vercel.app/"},
+        {"@type": "ListItem", "position": 5, "name": "VectorBench", "url": "https://vectorbench.pages.dev/"},
+        {"@type": "ListItem", "position": 6, "name": "NomadTreaty", "url": "https://nomadtreaty.pages.dev/"},
+        {"@type": "ListItem", "position": 7, "name": "WebhookWatch", "url": "https://webhookwatch.pages.dev/"},
+        {"@type": "ListItem", "position": 8, "name": "LocalDocPrivacy", "url": "https://localdocprivacy.pages.dev/"},
+        {"@type": "ListItem", "position": 9, "name": "FounderRunway", "url": "https://founderrunway.pages.dev/"},
         {"@type": "ListItem", "position": 10, "name": "RAGInspect", "url": "https://raginspect.pages.dev/"},
-        {"@type": "ListItem", "position": 11, "name": "NomadPassportIndex", "url": "https://nomadpassportindex.netlify.app/"},
-        {"@type": "ListItem", "position": 12, "name": "SaaSUnitMath", "url": "https://site-12-taupe.vercel.app/"},
+        {"@type": "ListItem", "position": 11, "name": "NomadPassportIndex", "url": "https://nomadpassportindex.pages.dev/"},
+        {"@type": "ListItem", "position": 12, "name": "SaaSUnitMath", "url": "https://saasunitmath.pages.dev/"},
         {"@type": "ListItem", "position": 13, "name": "GrokLogTester", "url": "https://groklogtester.pages.dev/"},
-        {"@type": "ListItem", "position": 14, "name": "SOC2Ready", "url": "https://site-14-sable.vercel.app/"},
-        {"@type": "ListItem", "position": 15, "name": "EORCalculator", "url": "https://site-15-ruby.vercel.app/"},
-        {"@type": "ListItem", "position": 16, "name": "DevConfigHub", "url": "https://site-16-indol.vercel.app/"},
+        {"@type": "ListItem", "position": 14, "name": "SOC2Ready", "url": "https://soc2ready.pages.dev/"},
+        {"@type": "ListItem", "position": 15, "name": "EORCalculator", "url": "https://eorcalculator.pages.dev/"},
+        {"@type": "ListItem", "position": 16, "name": "DevConfigHub", "url": "https://devconfighub.pages.dev/"},
         {"@type": "ListItem", "position": 17, "name": "OpenCRMStack", "url": "https://opencrmstack.pages.dev/"},
-        {"@type": "ListItem", "position": 18, "name": "CIPipelineGraph", "url": "https://site-18-chi.vercel.app/"},
-        {"@type": "ListItem", "position": 19, "name": "GreekVisualizer", "url": "https://site-19-nine.vercel.app/"},
+        {"@type": "ListItem", "position": 18, "name": "CIPipelineGraph", "url": "https://cipipelinegraph.pages.dev/"},
+        {"@type": "ListItem", "position": 19, "name": "GreekVisualizer", "url": "https://greekvisualizer.pages.dev/"},
         {"@type": "ListItem", "position": 20, "name": "EdgeRuntimeHQ", "url": "https://edgeruntimehq.pages.dev/"},
         {"@type": "ListItem", "position": 21, "name": "PromptEvalHQ", "url": "https://promptevalhq.pages.dev/"},
         {"@type": "ListItem", "position": 22, "name": "QueueCost", "url": "https://queuecost.pages.dev/"},
@@ -119,7 +119,7 @@ tools_html = """<!DOCTYPE html>
                     <span class="text-xs font-mono text-indigo-400">site-5 • Netlify Edge</span>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">VectorBench</h3>
                     <p class="text-xs text-slate-400 mb-4">Production vector DB latency, QPS, memory footprint & dollar-per-query benchmarks.</p>
-                    <a href="https://vectorbench-hq.netlify.app/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                    <a href="https://vectorbench.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
                 </div>
                 <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
                     <span class="text-xs font-mono text-indigo-400">site-3 • Cloudflare Pages</span>
@@ -158,25 +158,25 @@ tools_html = """<!DOCTYPE html>
                     <span class="text-xs font-mono text-indigo-400">site-6 • Vercel Edge</span>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">NomadTreaty</h3>
                     <p class="text-xs text-slate-400 mb-4">International tax treaties, 183-day residency rules & Beckham Law / NHR tax calculators.</p>
-                    <a href="https://nomadtreaty.vercel.app/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                    <a href="https://nomadtreaty.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
                 </div>
                 <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
                     <span class="text-xs font-mono text-indigo-400">site-9 • Vercel Edge</span>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">FounderRunway</h3>
                     <p class="text-xs text-slate-400 mb-4">Bootstrapped startup runway calculator with city-by-city geo-arbitrage multipliers.</p>
-                    <a href="https://site-9-inky.vercel.app/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                    <a href="https://founderrunway.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
                 </div>
                 <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
                     <span class="text-xs font-mono text-indigo-400">site-11 • Netlify Edge</span>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">NomadPassportIndex</h3>
                     <p class="text-xs text-slate-400 mb-4">Searchable global digital nomad visa database with income thresholds & consular criteria.</p>
-                    <a href="https://nomadpassportindex.netlify.app/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                    <a href="https://nomadpassportindex.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
                 </div>
                 <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
                     <span class="text-xs font-mono text-indigo-400">site-15 • Vercel Edge</span>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">EORCalculator</h3>
                     <p class="text-xs text-slate-400 mb-4">Employer of Record true-cost calculator modeling mandatory taxes & hidden FX spreads.</p>
-                    <a href="https://site-15-ruby.vercel.app/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                    <a href="https://eorcalculator.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
                 </div>
             </div>
         </div>
@@ -197,19 +197,19 @@ tools_html = """<!DOCTYPE html>
                     <span class="text-xs font-mono text-indigo-400">site-7 • Vercel Edge</span>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">WebhookWatch</h3>
                     <p class="text-xs text-slate-400 mb-4">Real-time HMAC-SHA256 signature generator, exponential backoff simulator & DLQ patterns.</p>
-                    <a href="https://webhookwatch.vercel.app/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                    <a href="https://webhookwatch.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
                 </div>
                 <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
                     <span class="text-xs font-mono text-indigo-400">site-12 • Vercel Edge</span>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">SaaSUnitMath</h3>
                     <p class="text-xs text-slate-400 mb-4">Bootstrapped SaaS unit economics, LTV/CAC payback periods, churn models & Rule of 40 scoring.</p>
-                    <a href="https://site-12-taupe.vercel.app/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                    <a href="https://saasunitmath.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
                 </div>
                 <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
                     <span class="text-xs font-mono text-indigo-400">site-14 • Vercel Edge</span>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">SOC2Ready</h3>
                     <p class="text-xs text-slate-400 mb-4">B2B SaaS SOC 2 Type II readiness assessment, security controls checklist & auditor fee estimator.</p>
-                    <a href="https://site-14-sable.vercel.app/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                    <a href="https://soc2ready.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
                 </div>
                 <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
                     <span class="text-xs font-mono text-indigo-400">site-17 • Cloudflare Pages</span>
@@ -230,7 +230,7 @@ tools_html = """<!DOCTYPE html>
                     <span class="text-xs font-mono text-indigo-400">site-8 • Netlify Edge</span>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">LocalDocPrivacy</h3>
                     <p class="text-xs text-slate-400 mb-4">100% client-side in-browser PDF redaction & offline document converter using WASM.</p>
-                    <a href="https://localdocprivacy.netlify.app/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                    <a href="https://localdocprivacy.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
                 </div>
                 <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
                     <span class="text-xs font-mono text-indigo-400">site-13 • Cloudflare Pages</span>
@@ -242,19 +242,19 @@ tools_html = """<!DOCTYPE html>
                     <span class="text-xs font-mono text-indigo-400">site-16 • Vercel Edge</span>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">DevConfigHub</h3>
                     <p class="text-xs text-slate-400 mb-4">Interactive DevContainer, Docker Compose & Nix Flakes configuration generator.</p>
-                    <a href="https://site-16-indol.vercel.app/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                    <a href="https://devconfighub.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
                 </div>
                 <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
                     <span class="text-xs font-mono text-indigo-400">site-18 • Vercel Edge</span>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">CIPipelineGraph</h3>
                     <p class="text-xs text-slate-400 mb-4">CI/CD YAML workflow visualizer, DAG dependency graph renderer & concurrency optimizer.</p>
-                    <a href="https://site-18-chi.vercel.app/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                    <a href="https://cipipelinegraph.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
                 </div>
                 <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
                     <span class="text-xs font-mono text-indigo-400">site-19 • Vercel Edge</span>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">GreekVisualizer</h3>
                     <p class="text-xs text-slate-400 mb-4">Black-Scholes options Greeks (Delta, Gamma, Theta, Vega) & Uniswap v3 Impermanent Loss calculator.</p>
-                    <a href="https://site-19-nine.vercel.app/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
+                    <a href="https://greekvisualizer.pages.dev/" class="text-xs font-bold text-indigo-400 hover:underline">Launch App &rarr;</a>
                 </div>
             </div>
         </div>
