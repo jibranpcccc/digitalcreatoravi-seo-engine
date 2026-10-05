@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://site-18-chi.vercel.app',
+  site: 'https://cipipelinegraph.pages.dev',
   base: '/',
   build: {
     format: 'directory'

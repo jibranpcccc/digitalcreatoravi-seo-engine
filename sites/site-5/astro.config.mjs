@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://vectorbench-hq.netlify.app',
+  site: 'https://vectorbench.pages.dev',
   base: '/',
   build: {
     format: 'directory'

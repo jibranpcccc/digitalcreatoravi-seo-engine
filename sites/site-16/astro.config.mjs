@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://site-16-indol.vercel.app',
+  site: 'https://devconfighub.pages.dev',
   base: '/',
   build: {
     format: 'directory'

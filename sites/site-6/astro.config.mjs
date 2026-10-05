@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://nomadtreaty.vercel.app',
+  site: 'https://nomadtreaty.pages.dev',
   base: '/',
   build: {
     format: 'directory'

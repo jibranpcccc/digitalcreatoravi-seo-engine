@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://site-15-ruby.vercel.app',
+  site: 'https://eorcalculator.pages.dev',
   base: '/',
   build: {
     format: 'directory'

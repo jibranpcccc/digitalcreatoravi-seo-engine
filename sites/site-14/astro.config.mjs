@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://site-14-sable.vercel.app',
+  site: 'https://soc2ready.pages.dev',
   base: '/',
   build: {
     format: 'directory'

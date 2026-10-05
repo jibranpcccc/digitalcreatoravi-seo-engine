@@ -32,7 +32,7 @@ function rehypeBasePrefix() {
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://jibranpcccc.github.io',
+  site: 'https://jibranpcccc.github.io/digitalcreatoravi-seo-engine',
   base: process.env.BASE_PATH || '/',
   markdown: {
     rehypePlugins: [rehypeBasePrefix],
