@@ -1,0 +1,291 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "AWS IAM Least-Privilege for SOC 2 CC6.1: Terraform Templates & Access Reviews (2026)",
+      "url": "https://site-14-sable.vercel.app/aws-iam-least-privilege-soc-2-cc6-access-control-audit/",
+      "description": "Comprehensive engineering guide to implementing AWS IAM least-privilege access controls for SOC 2 Type II compliance under Trust Services Criteria CC6.1, CC6.2, and CC6.3. Includes production Terraform templates, IAM Permission Boundaries, and automated quarterly access review workflows.",
+      "inLanguage": "en-US",
+      "author": {
+        "@type": "Organization",
+        "name": "SOC2Ready Compliance Engineering Team",
+        "url": "https://site-14-sable.vercel.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SOC2Ready",
+        "url": "https://site-14-sable.vercel.app/"
+      },
+      "datePublished": "2026-10-05T00:00:00Z",
+      "dateModified": "2026-10-05T00:00:00Z"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the specific SOC 2 requirements for AWS IAM access controls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SOC 2 Common Criteria 6.1 (Logical Access Security), 6.2 (User Registration & Access Revocation), and 6.3 (Access Modification & Least Privilege) require organizations to restrict access to production infrastructure strictly based on job roles, enforce multi-factor authentication (MFA), eliminate static root credentials, and conduct quarterly documented access reviews."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do IAM Permission Boundaries assist in SOC 2 audits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IAM Permission Boundaries establish an immutable maximum ceiling of permissions that an IAM entity can ever possess. Auditors value Permission Boundaries because they prevent developers or automated CI/CD roles with policy-creation rights from performing privilege escalation (e.g. attaching AdministratorAccess to themselves)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can early-stage startups automate quarterly SOC 2 access reviews?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Startups can automate access reviews using GitHub Actions and AWS IAM Access Analyzer. A scheduled workflow queries IAM users and roles with inactive credentials (>90 days), generates an audit CSV report, and opens a GitHub Issue where the security lead marks approvals directly in git."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://site-14-sable.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Compliance Guides",
+          "item": "https://site-14-sable.vercel.app/#guides"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AWS IAM Least-Privilege Guide",
+          "item": "https://site-14-sable.vercel.app/aws-iam-least-privilege-soc-2-cc6-access-control-audit/"
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title="AWS IAM Least-Privilege for SOC 2 CC6.1: Terraform & Access Reviews 2026">
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
+  <main class="max-w-4xl mx-auto px-4 py-12 text-slate-100">
+    <header class="mb-10">
+      <div class="text-xs font-semibold tracking-wider text-emerald-400 uppercase mb-3">Cloud Security • SOC 2 CC6 Infrastructure</div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+        AWS IAM Least-Privilege for SOC 2 CC6.1: Terraform Templates & Access Reviews (2026)
+      </h1>
+      <p class="text-slate-400 text-lg leading-relaxed">
+        A hands-on implementation guide for engineering teams. Configuring role-based access control (RBAC), IAM Permission Boundaries, zero-standing-privilege SSO, and automated evidence collection for Trust Services Criteria CC6.
+      </p>
+    </header>
+
+    <!-- Google Quick Answer Callout -->
+    <div class="bg-slate-900/80 border-l-4 border-emerald-500 rounded-xl p-6 mb-10 shadow-lg backdrop-blur-sm">
+      <div class="text-xs uppercase font-bold text-emerald-400 mb-2">Google Quick Answer</div>
+      <p class="text-base text-slate-200 leading-relaxed font-medium">
+        <strong>Passing SOC 2 Trust Services Criteria CC6.1 through CC6.3 requires enforcing Zero Standing Privileges in AWS.</strong> Replace long-lived IAM user access keys with AWS IAM Identity Center (SSO) backed by hardware FIDO2 MFA. Implement <strong>IAM Permission Boundaries</strong> to block privilege escalation, configure AWS IAM Access Analyzer for unused role pruning, and automate quarterly user access reviews using audited GitHub Actions workflows to satisfy auditor evidence samples.
+      </p>
+    </div>
+
+    <section class="prose prose-invert max-w-none space-y-8">
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">1. Demystifying SOC 2 Common Criteria CC6 (Access Controls)</h2>
+        <p class="text-slate-300 leading-relaxed">
+          During a SOC 2 Type II audit, the AICPA Trust Services Criteria Category 6 (CC6) represents over 35% of all testing procedures conducted by external auditors (Schellman, Coalfire, A-LIGN). Auditors scrutinize three primary controls:
+        </p>
+        <ul class="list-disc pl-6 space-y-2 text-slate-300">
+          <li><strong>CC6.1 (Logical Access Security):</strong> The entity implements logical access security software, infrastructure, and architectures over protected information assets to protect them from security events.</li>
+          <li><strong>CC6.2 (User Registration & Access Revocation):</strong> Prior to issuing system credentials and granting system access, the entity registers and authorizes new internal and external users whose access is administered. Access is revoked within 24 hours of employee departure.</li>
+          <li><strong>CC6.3 (Access Modification & Least Privilege):</strong> The entity authorizes, modifies, or removes access to data, software, functions, and other protected information assets based on changes to business need and least privilege requirements.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">2. The 5 Cardinal AWS IAM Anti-Patterns That Fail Audits</h2>
+        
+        <!-- Anti-Pattern Table -->
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left border-collapse border border-slate-700 text-sm">
+            <thead>
+              <tr class="bg-slate-950 text-slate-200">
+                <th class="p-3 border border-slate-700">IAM Anti-Pattern</th>
+                <th class="p-3 border border-slate-700">Audit Severity</th>
+                <th class="p-3 border border-slate-700">AICPA Criteria Breached</th>
+                <th class="p-3 border border-slate-700 text-emerald-400 font-bold">Compliant Remediation</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 bg-slate-900/60 text-slate-300">
+              <tr>
+                <td class="p-3 font-semibold text-rose-300">Static IAM Access Keys for Developers</td>
+                <td class="p-3 text-rose-400 font-bold">High / Blocker</td>
+                <td class="p-3">CC6.1, CC6.6</td>
+                <td class="p-3 text-emerald-300">Migrate to AWS IAM Identity Center (SSO) with short-lived tokens</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-rose-300">Overpermissive Wildcards (`Resource: "*"`)</td>
+                <td class="p-3 text-amber-400">Medium</td>
+                <td class="p-3">CC6.3</td>
+                <td class="p-3 text-emerald-300">Scope S3, DynamoDB, and RDS policies to explicit ARNs and tags</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-rose-300">Active AWS Root Account Credentials</td>
+                <td class="p-3 text-rose-400 font-bold">High / Blocker</td>
+                <td class="p-3">CC6.1</td>
+                <td class="p-3 text-emerald-300">Delete all root access keys; lock root account with hardware YubiKey MFA</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-rose-300">Missing Permission Boundaries</td>
+                <td class="p-3 text-amber-400">Medium</td>
+                <td class="p-3">CC6.3</td>
+                <td class="p-3 text-emerald-300">Enforce boundaries on all CI/CD deployment roles</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-rose-300">No Documented Quarterly Access Reviews</td>
+                <td class="p-3 text-rose-400 font-bold">High / Blocker</td>
+                <td class="p-3">CC6.2, CC6.3</td>
+                <td class="p-3 text-emerald-300">Scheduled GitHub Actions automated user audit with signed approvals</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">3. Production Terraform Template: IAM Permission Boundary</h2>
+        <p class="text-slate-300 leading-relaxed">
+          An IAM Permission Boundary guarantees that even if a developer or automation role creates new IAM policies, they cannot exceed the boundary. The following Terraform configuration blocks privilege escalation and prevents tampering with security logging (CloudTrail, GuardDuty):
+        </p>
+
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono overflow-x-auto my-4">
+          <pre is:raw><code># main.tf - SOC 2 Compliant IAM Permission Boundary
+resource "aws_iam_policy" "soc2_permission_boundary" {
+  name        = "SOC2-Compliance-Permission-Boundary"
+  description = "Maximum permissions ceiling for developers and CI/CD roles to satisfy CC6.3"
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Sid      = "AllowStandardCloudServices"
+        Effect   = "Allow"
+        Action   = [
+          "s3:*",
+          "dynamodb:*",
+          "rds:*",
+          "lambda:*",
+          "ecs:*",
+          "ec2:Describe*",
+          "logs:*"
+        ]
+        Resource = "*"
+      },
+      {
+        Sid      = "DenyDisablingSecurityMonitoring"
+        Effect   = "Deny"
+        Action   = [
+          "cloudtrail:DeleteTrail",
+          "cloudtrail:StopLogging",
+          "cloudtrail:UpdateTrail",
+          "guardduty:DeleteDetector",
+          "guardduty:DisassociateFromMasterAccount",
+          "config:DeleteConfigRule"
+        ]
+        Resource = "*"
+      },
+      {
+        Sid      = "DenyModifyingPermissionBoundary"
+        Effect   = "Deny"
+        Action   = [
+          "iam:DeletePolicy",
+          "iam:DeletePolicyVersion",
+          "iam:CreatePolicyVersion"
+        ]
+        Resource = [aws_iam_policy.soc2_permission_boundary.arn]
+      }
+    ]
+  })
+}</code></pre>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">4. Automated Quarterly Access Review Workflow via GitHub Actions</h2>
+        <p class="text-slate-300 leading-relaxed">
+          SOC 2 auditors demand proof of recurring user access reviews. Rather than spending tens of thousands of dollars on enterprise compliance portals, startups can implement an automated GitHub Actions cron workflow:
+        </p>
+
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono overflow-x-auto my-4">
+          <pre is:raw><code># .github/workflows/quarterly-iam-audit.yml
+name: "Quarterly SOC 2 IAM Access Review"
+
+on:
+  schedule:
+    # Run at 00:00 on day 1 of Jan, Apr, Jul, Oct
+    - cron: "0 0 1 1,4,7,10 *"
+  workflow_dispatch:
+
+jobs:
+  audit-access:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-1
+          role-to-assume: arn:aws:iam::123456789012:role/SOC2AuditorRole
+
+      - name: Run IAM Access Review Script
+        run: |
+          python -m pip install boto3
+          python scripts/audit_iam_users.py > iam_report.md
+
+      - name: Create Audit Review Issue
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "SOC 2 Q$&#123;&#123; github.event.schedule &#125;&#125; IAM Access Review Signoff"
+          content-filepath: iam_report.md
+          labels: compliance, soc2, security-audit</code></pre>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">5. Auditor Evidence Collection Checklist (What to Download Before Day 1)</h2>
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 text-slate-300 space-y-3">
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 font-bold">1.</span>
+            <span><strong>AWS Credential Report:</strong> Export via `aws iam get-credential-report` showing 100% MFA enrollment and 0 active static access keys for human users.</span>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 font-bold">2.</span>
+            <span><strong>IAM Identity Center (SSO) User Directory:</strong> Screenshot or CSV export verifying integration with your Google Workspace or Okta directory.</span>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 font-bold">3.</span>
+            <span><strong>CloudTrail Multi-Region Trail Proof:</strong> Evidence that CloudTrail log file validation is enabled and stored in an immutable S3 bucket with Object Lock.</span>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 font-bold">4.</span>
+            <span><strong>Offboarding Ticket Samples:</strong> 3 closed HR departure tickets demonstrating that AWS access was revoked within 24 hours of employee termination.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

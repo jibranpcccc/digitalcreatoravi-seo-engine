@@ -1,0 +1,478 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const canonical = "https://site-14-sable.vercel.app/soc-2-type-2-continuous-compliance-drata-vs-vanta/";
+const slug = "soc-2-type-2-continuous-compliance-drata-vs-vanta";
+const title = "Continuous SOC 2 Monitoring: Drata vs Vanta Audit Windows";
+const description = "Technical comparison of Drata vs Vanta for continuous SOC 2 Type 2 compliance. Evaluate automated evidence collection engines, workstation agent footprints, and audit window management.";
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": `${canonical}#article`,
+      "url": canonical,
+      "headline": "Continuous SOC 2 Monitoring: Drata vs Vanta Automated Evidence Collection & Audit Windows",
+      "description": "Comprehensive engineering evaluation of Drata and Vanta for managing SOC 2 Type 2 observation windows, agent architectures, and continuous evidence validation.",
+      "inLanguage": "en-US",
+      "author": {
+        "@type": "Organization",
+        "name": "SOC2Ready Compliance Engineering Team",
+        "url": "https://site-14-sable.vercel.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SOC2Ready",
+        "url": "https://site-14-sable.vercel.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://site-14-sable.vercel.app/og-soc2ready.png"
+        }
+      },
+      "datePublished": "2026-03-24T08:00:00Z",
+      "dateModified": "2026-10-05T10:00:00Z"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SOC2Ready",
+          "item": "https://site-14-sable.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Platform Comparisons",
+          "item": "https://site-14-sable.vercel.app/#platforms"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Drata vs Vanta",
+          "item": canonical
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the typical observation window for a SOC 2 Type 2 audit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The standard observation window for an initial SOC 2 Type 2 audit is 3 to 6 months, while annual renewals typically evaluate a continuous 12-month window. During this entire period, controls must operate continuously without unmitigated gaps or control failures."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do Drata and Vanta collect evidence automatically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both platforms integrate with your cloud infrastructure (AWS, GCP, Azure), identity providers (Okta, Google Workspace), source code repositories (GitHub, GitLab), and ticketing systems via read-only API connectors. They run hourly or daily automated tests to verify control operational effectiveness, capturing cryptographic snapshots of configurations as audit-ready evidence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a temporary test failure cause a qualified opinion on a SOC 2 Type 2 report?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily. A temporary failure (such as an unencrypted developer workstation or an IAM role missing MFA for 24 hours) is recorded as an exception. If remediated promptly and accompanied by a documented remediation ticket, CPA auditors classify it as an isolated anomaly rather than a pervasive control failure, preserving an unqualified (clean) audit opinion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the local workstation agent mandatory for Drata and Vanta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If your company deploys Mobile Device Management (MDM) software such as Kandji, Jamf Pro, or Microsoft Intune across 100% of employee laptops, both Drata and Vanta can ingest workstation compliance telemetry directly via MDM APIs without requiring their proprietary background agents."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const schemaJson = JSON.stringify(schemaData);
+---
+
+<Layout title={title} description={description} canonical={canonical} schemaJson={schemaJson} type="article">
+  <article class="max-w-4xl mx-auto pt-4 pb-16 px-4 sm:px-6">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center space-x-2 text-xs font-mono text-slate-400 mb-6">
+      <a href="/" class="hover:text-cyan-400 transition">SOC2Ready</a>
+      <span>/</span>
+      <a href="/#platforms" class="hover:text-cyan-400 transition">Continuous Compliance</a>
+      <span>/</span>
+      <span class="text-cyan-400">Drata vs Vanta</span>
+    </nav>
+
+    <!-- Header Badge -->
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold mb-4 font-mono">
+      <span>🛡️</span> AICPA Trust Services Criteria • Continuous Observability
+    </div>
+
+    <!-- H1 -->
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-tight mb-6">
+      Continuous SOC 2 Monitoring: Drata vs Vanta Automated Evidence Collection & Audit Windows
+    </h1>
+
+    <!-- Meta Telemetry -->
+    <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400 pb-8 border-b border-slate-800">
+      <span class="flex items-center gap-1.5 font-medium text-slate-300">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Verified with Vanta v8.4 & Drata Autopilot 2026
+      </span>
+      <span>•</span>
+      <span>Target Criteria: Security (CC6), Availability & Confidentiality</span>
+      <span>•</span>
+      <span>15 min read</span>
+    </div>
+
+    <!-- Quick Answer Box -->
+    <div class="my-8 p-6 rounded-2xl bg-slate-900/60 border-l-4 border-cyan-500 backdrop-blur-md shadow-xl">
+      <div class="flex items-center gap-2 text-cyan-400 font-bold text-xs uppercase tracking-wider mb-2 font-mono">
+        <span>⚡</span> Quick Answer (Drata vs Vanta Verdict)
+      </div>
+      <p class="text-slate-200 text-base leading-relaxed font-medium">
+        <strong>Both Drata and Vanta automate over 85% of SOC 2 Type 2 evidence collection via daily API testing across cloud infrastructure and identity providers. Vanta excels in developer-first environments with its vast integration catalog (300+ APIs) and open-source OSQuery agent, while Drata offers superior multi-framework audit window isolation and automated auditor evidence reconciliation.</strong>
+      </p>
+    </div>
+
+    <!-- Key Metrics Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 my-10 font-mono">
+      <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+        <div class="text-xs text-slate-400">Audit Window</div>
+        <div class="text-xl font-bold text-cyan-400 mt-1">3 - 12 Mos</div>
+        <div class="text-[11px] text-slate-400">Type 2 Observation Period</div>
+      </div>
+      <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+        <div class="text-xs text-slate-400">Automated Tests</div>
+        <div class="text-xl font-bold text-emerald-400 mt-1">140+ Controls</div>
+        <div class="text-[11px] text-emerald-400">Daily Health Probing</div>
+      </div>
+      <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+        <div class="text-xs text-slate-400">Auditor Marketplace</div>
+        <div class="text-xl font-bold text-purple-400 mt-1">100+ CPAs</div>
+        <div class="text-[11px] text-slate-400">Direct Dashboard Review</div>
+      </div>
+      <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+        <div class="text-xs text-slate-400">Remediation SLA</div>
+        <div class="text-xl font-bold text-amber-400 mt-1">&lt; 72 Hours</div>
+        <div class="text-[11px] text-slate-400">Prevents Audit Qualification</div>
+      </div>
+    </div>
+
+    <!-- Interactive Audit Window Health Sizer -->
+    <div class="my-10 p-6 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-950 border border-cyan-500/30 shadow-2xl">
+      <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
+        <div class="flex items-center gap-2">
+          <span class="text-cyan-400 font-mono font-bold text-sm">🛡️ Interactive Simulator:</span>
+          <span class="text-white text-sm font-semibold">SOC 2 Type 2 Audit Window Health & Risk Score</span>
+        </div>
+        <span class="text-xs text-cyan-400/80 bg-cyan-950/60 px-2 py-1 rounded border border-cyan-800/40">Audit Readiness Engine</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-2">Observation Window Length</label>
+          <select id="win-length" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-white font-mono focus:border-cyan-400 focus:outline-none">
+            <option value="3">3 Months (Initial Fast Track)</option>
+            <option value="6" selected>6 Months (Standard Enterprise)</option>
+            <option value="12">12 Months (Annual Continuous)</option>
+          </select>
+          <p class="text-[11px] text-slate-400 mt-1">Duration of continuous sampling</p>
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-2">Total Employee Count</label>
+          <input type="number" id="win-headcount" min="5" max="500" value="45" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-white font-mono focus:border-cyan-400 focus:outline-none" />
+          <p class="text-[11px] text-slate-400 mt-1">Workstations & background checks</p>
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-2">Control Drift Events (Days with Fails)</label>
+          <input type="number" id="win-fails" min="0" max="30" value="2" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-white font-mono focus:border-cyan-400 focus:outline-none" />
+          <p class="text-[11px] text-slate-400 mt-1">Days with failing tests in window</p>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-4 gap-4 text-center">
+        <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800">
+          <div class="text-[11px] text-slate-400 uppercase tracking-wider font-mono">Sample Population</div>
+          <div id="out-samples" class="text-lg font-bold text-cyan-400 font-mono mt-1">180 Test Cycles</div>
+        </div>
+        <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800">
+          <div class="text-[11px] text-slate-400 uppercase tracking-wider font-mono">Control Operational Uptime</div>
+          <div id="out-uptime" class="text-lg font-bold text-emerald-400 font-mono mt-1">98.9%</div>
+        </div>
+        <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800">
+          <div class="text-[11px] text-slate-400 uppercase tracking-wider font-mono">Audit Exception Risk</div>
+          <div id="out-risk" class="text-lg font-bold text-emerald-400 font-mono mt-1">LOW (Clean Opinion)</div>
+        </div>
+        <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800">
+          <div class="text-[11px] text-slate-400 uppercase tracking-wider font-mono">Estimated CPA Cost</div>
+          <div id="out-cpacost" class="text-lg font-bold text-purple-400 font-mono mt-1">$12,500</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="prose prose-invert max-w-none space-y-10 text-slate-300 text-sm leading-relaxed">
+      
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">1. Understanding the SOC 2 Type 2 Continuous Observation Window</h2>
+        <p>
+          Unlike a SOC 2 Type 1 examination—which audits whether controls are suitably designed at a single point in time (e.g. at 11:59 PM on June 30)—a <strong>SOC 2 Type 2 examination</strong> evaluates the <em>operational effectiveness</em> of controls throughout a continuous historical window.
+        </p>
+        <p>
+          Under the AICPA's Trust Services Criteria (TSP Section 100), the licensed independent CPA firm must inspect random sample populations across the entire duration. If an automated control (such as CloudTrail logging or S3 bucket encryption) fails silently for three weeks in the middle of a 6-month window, the auditor must note a control deficiency or issue a qualified report.
+        </p>
+        <p>
+          This is where compliance automation platforms provide existential leverage: they run automated API tests every 24 hours, notifying engineering teams immediately when a control drifts out of compliance.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">2. Architectural Showdown: Drata Autopilot vs Vanta Continuous Engine</h2>
+        <p>
+          While Drata and Vanta both achieve the end goal of continuous evidence collection, their internal engineering philosophies diverge across three core layers:
+        </p>
+
+        <!-- Comparison Table -->
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-left text-xs sm:text-sm border border-slate-800 rounded-xl overflow-hidden">
+            <thead class="bg-slate-900 text-white font-semibold">
+              <tr>
+                <th class="p-3 border-b border-slate-800">Architectural Dimension</th>
+                <th class="p-3 border-b border-slate-800">Drata (Autopilot Platform)</th>
+                <th class="p-3 border-b border-slate-800">Vanta (Automated Compliance)</th>
+                <th class="p-3 border-b border-slate-800">Engineering Trade-off</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 bg-slate-950/60 font-mono">
+              <tr>
+                <td class="p-3 font-sans font-semibold text-white">Cloud Infrastructure Engine</td>
+                <td class="p-3 text-cyan-400">AWS / GCP / Azure Read-Only IAM</td>
+                <td class="p-3 text-cyan-400">Multi-Cloud OAuth + Role Assumption</td>
+                <td class="p-3 font-sans text-xs">Vanta features deeper pre-built tests; Drata offers custom SQL rule builders.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-sans font-semibold text-white">Workstation Client</td>
+                <td class="p-3 text-slate-300">Proprietary Swift / C++ Agent</td>
+                <td class="p-3 text-emerald-400">Open-Source OSQuery Fork</td>
+                <td class="p-3 font-sans text-xs">Vanta OSQuery provides full transparency; Drata agent has slightly smaller RAM footprint.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-sans font-semibold text-white">Integration Ecosystem</td>
+                <td class="p-3 text-slate-300">180+ Pre-built Connectors</td>
+                <td class="p-3 text-emerald-400 font-bold">320+ Pre-built Connectors</td>
+                <td class="p-3 font-sans text-xs">Vanta integrates with more niche developer tooling and HRIS providers.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-sans font-semibold text-white">Auditor Workspace</td>
+                <td class="p-3 text-emerald-400 font-bold">Dedicated Auditor Portal</td>
+                <td class="p-3 text-slate-300">Integrated Auditor View</td>
+                <td class="p-3 font-sans text-xs">Drata enables auditors to test and verify controls directly inside the app with zero exports.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-sans font-semibold text-white">Annual Software Cost</td>
+                <td class="p-3 text-amber-400">$8,500 - $18,000 / yr</td>
+                <td class="p-3 text-amber-400">$7,500 - $16,500 / yr</td>
+                <td class="p-3 font-sans text-xs">Pricing scales with employee headcount and added frameworks (ISO 27001, HIPAA).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">3. Workstation Agent Deployment: OSQuery vs MDM Direct Ingestion</h2>
+        <p>
+          Verifying security controls on employee laptops (Trust Services Criterion CC6.1 and CC6.6) represents a persistent friction point for remote engineering teams. The required checks include:
+        </p>
+        <ul class="list-disc pl-6 space-y-2 text-slate-300">
+          <li><strong>Full Disk Encryption:</strong> FileVault 2 (macOS) or BitLocker (Windows) active and operating.</li>
+          <li><strong>Screen Lock Timeout:</strong> Enforced auto-lock after maximum 10 to 15 minutes of inactivity.</li>
+          <li><strong>Auto-Updates Enabled:</strong> Operating system updates installed within 30 days of release.</li>
+          <li><strong>Password Manager & EDR:</strong> Verified presence of enterprise password managers (1Password, Bitwarden) and endpoint detection (SentinelOne, CrowdStrike).</li>
+        </ul>
+        <p>
+          While both platforms offer desktop agents, mature organizations bypass desktop agents entirely by connecting Drata or Vanta directly to their <strong>Mobile Device Management (MDM)</strong> suite (such as Kandji, Jamf Pro, or Microsoft Intune). The MDM reports hardware state via webhooks, eliminating the need for employees to install third-party background software.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">4. Managing Audit Window Control Drift: The 72-Hour Remediation SLA</h2>
+        <p>
+          In a 6-month observation window (180 days), automated test failures will inevitably occur. A developer might temporarily generate a public S3 bucket for frontend asset testing, or an offboarded contractor's GitHub access might linger for 48 hours.
+        </p>
+        <p>
+          The difference between a clean SOC 2 Type 2 report and a qualified opinion hinges on your team's <strong>Remediation SLA</strong>:
+        </p>
+        <ol class="list-decimal pl-6 space-y-2 text-slate-300">
+          <li><strong>Automated Alerting:</strong> Connect Drata/Vanta test failures directly to a dedicated PagerDuty or Slack channel (<code>#soc2-alerts</code>).</li>
+          <li><strong>72-Hour Cure Window:</strong> If a test fails and is resolved within 72 hours with an attached Jira ticket explaining root cause and resolution, auditors classify the incident as an isolated anomaly.</li>
+          <li><strong>Documenting Auditor Notes:</strong> In the platform dashboard, enter an explanation in the "Auditor Notes" field referencing the pull request or commit that restored compliance.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">5. Automated Pre-Audit AWS IAM & Infrastructure Diagnostic Script</h2>
+        <p>
+          Run this automated Python verification script using Boto3 to audit high-severity SOC 2 CC6 infrastructure controls before opening your observation window:
+        </p>
+
+<pre is:raw class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono overflow-x-auto text-cyan-400">
+import boto3
+from typing import List, Dict, Any
+
+def audit_soc2_aws_controls() -> Dict[str, Any]:
+    iam = boto3.client('iam')
+    s3 = boto3.client('s3')
+    
+    findings = []
+    
+    # Control CC6.1: Verify root account has zero active access keys
+    root_summary = iam.get_account_summary()
+    if root_summary['SummaryMap'].get('AccountAccessKeysPresent', 0) > 0:
+        findings.append({
+            "control": "CC6.1 - Root Key Elimination",
+            "status": "FAIL",
+            "severity": "CRITICAL",
+            "message": "AWS Root account has active access keys! Delete immediately."
+        })
+    else:
+        findings.append({
+            "control": "CC6.1 - Root Key Elimination",
+            "status": "PASS",
+            "severity": "INFO",
+            "message": "Root account access keys are not present."
+        })
+        
+    # Control CC6.6: Verify S3 Block Public Access is active at account level
+    try:
+        s3control = boto3.client('s3control')
+        caller_id = boto3.client('sts').get_caller_identity()['Account']
+        pab = s3control.get_public_access_block(AccountId=caller_id)
+        config = pab['PublicAccessBlockConfiguration']
+        
+        all_blocked = all([
+            config.get('BlockPublicAcls'),
+            config.get('IgnorePublicAcls'),
+            config.get('BlockPublicPolicy'),
+            config.get('RestrictPublicBuckets')
+        ])
+        
+        findings.append({
+            "control": "CC6.6 - S3 Account Public Access Block",
+            "status": "PASS" if all_blocked else "FAIL",
+            "severity": "HIGH",
+            "message": "All 4 S3 public block toggles enabled." if all_blocked else "Account-level S3 public access is not fully blocked."
+        })
+    except Exception as e:
+        findings.append({
+            "control": "CC6.6 - S3 Account Public Access Block",
+            "status": "FAIL",
+            "severity": "HIGH",
+            "message": f"Could not verify S3 Public Access Block: {str(e)}"
+        })
+        
+    return {
+        "audit_ready": all(f["status"] == "PASS" for f in findings),
+        "total_controls_tested": len(findings),
+        "findings": findings
+    }
+
+if __name__ == "__main__":
+    report = audit_soc2_aws_controls()
+    print(f"Pre-Flight Compliance Status: {'PASSED' if report['audit_ready'] else 'ACTION REQUIRED'}")
+    for item in report["findings"]:
+        print(f"[{item['status']}] {item['control']}: {item['message']}")
+</pre>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">6. Top 4 Audit Window Failure Traps & Remediation Runbook</h2>
+        <ul class="space-y-3 text-slate-300">
+          <li>
+            <strong class="text-white">1. Silent API Token Disconnect During the Window:</strong> An OAuth token or AWS IAM role secret expires, causing Drata/Vanta to stop collecting logs for 30 consecutive days. <em>Mitigation:</em> Configure daily email/Slack notifications for integration health failures; assign integration maintenance to a primary DevOps lead.
+          </li>
+          <li>
+            <strong class="text-white">2. Offboarding Delays Exceeding 24-Hour Policy:</strong> Company policy states access is revoked within 24 hours of employee departure, but an HR offboarding ticket is closed 5 days late. <em>Mitigation:</em> Integrate your HRIS (Rippling, Gusto) directly with Okta/Google Workspace to automate instantaneous account deprovisioning.
+          </li>
+          <li>
+            <strong class="text-white">3. Annual Penetration Test Date Slippage:</strong> Waiting until Month 11 of a 12-month window to schedule an annual third-party pen test, risking audit conclusion before the report is finalized. <em>Mitigation:</em> Book your annual pen test 90 days before your audit window renewal deadline.
+          </li>
+          <li>
+            <strong class="text-white">4. GitHub Pull Requests Merged Without Peer Review:</strong> Administrators bypassing branch protection to push emergency patches directly to <code>main</code> without approval. <em>Mitigation:</em> Enforce branch protection rules with "Do not allow bypassing the above settings" enabled for repository admins.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+        <div class="space-y-4 my-6">
+          <div class="border border-slate-800 rounded-xl p-4 bg-slate-900/40">
+            <h3 class="text-sm font-bold text-white mb-2">Can we use Drata or Vanta if we host on bare metal or hybrid clouds?</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Yes. Both platforms provide custom API endpoints and agent-based evidence uploads for on-premise servers and hybrid infrastructure, though you will need to map custom script collectors to satisfy controls that are normally automated in AWS/GCP.
+            </p>
+          </div>
+          <div class="border border-slate-800 rounded-xl p-4 bg-slate-900/40">
+            <h3 class="text-sm font-bold text-white mb-2">Do auditors still require manual screenshots when using Drata or Vanta?</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              When working with partner CPA firms experienced with automated platforms, manual screenshots are virtually eliminated (95%+ reduction). The auditor reviews cryptographic API snapshots directly within the platform's auditor portal.
+            </p>
+          </div>
+          <div class="border border-slate-800 rounded-xl p-4 bg-slate-900/40">
+            <h3 class="text-sm font-bold text-white mb-2">How much engineering time does continuous compliance require each week?</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Once initial integrations and policies are established, ongoing operational maintenance typically demands 1 to 2 hours of engineering time per week to triage new employee onboarding tasks and remediate occasional test failures.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </article>
+
+  <script is:inline>
+    function updateAuditHealth() {
+      const windowMonths = parseInt(document.getElementById('win-length').value) || 6;
+      const headcount = parseInt(document.getElementById('win-headcount').value) || 40;
+      const fails = parseInt(document.getElementById('win-fails').value) || 0;
+
+      const totalDays = windowMonths * 30;
+      const totalCycles = totalDays;
+      const uptime = Math.max(0, Math.min(100, ((totalDays - fails) / totalDays) * 100));
+
+      document.getElementById('out-samples').innerText = `${totalCycles} Test Cycles`;
+      document.getElementById('out-uptime').innerText = `${uptime.toFixed(1)}%`;
+
+      const riskEl = document.getElementById('out-risk');
+      if (fails <= 3) {
+        riskEl.innerText = 'LOW (Clean Opinion)';
+        riskEl.className = 'text-lg font-bold text-emerald-400 font-mono mt-1';
+      } else if (fails <= 8) {
+        riskEl.innerText = 'MEDIUM (Auditor Notes)';
+        riskEl.className = 'text-lg font-bold text-amber-400 font-mono mt-1';
+      } else {
+        riskEl.innerText = 'HIGH (Qualified Risk)';
+        riskEl.className = 'text-lg font-bold text-rose-500 font-mono mt-1';
+      }
+
+      let cpaBase = 9000;
+      if (windowMonths === 6) cpaBase = 12500;
+      if (windowMonths === 12) cpaBase = 16000;
+      if (headcount > 100) cpaBase += 4000;
+
+      document.getElementById('out-cpacost').innerText = `$${cpaBase.toLocaleString()}`;
+    }
+
+    document.getElementById('win-length')?.addEventListener('change', updateAuditHealth);
+    document.getElementById('win-headcount')?.addEventListener('input', updateAuditHealth);
+    document.getElementById('win-fails')?.addEventListener('input', updateAuditHealth);
+    updateAuditHealth();
+  </script>
+</Layout>

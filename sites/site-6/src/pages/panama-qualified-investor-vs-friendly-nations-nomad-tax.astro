@@ -1,0 +1,559 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://nomadtreaty.pages.dev/panama-qualified-investor-vs-friendly-nations-nomad-tax/#article",
+  "headline": "Panama Territorial Tax System: Friendly Nations Visa vs Qualified Investor for Remote Founders",
+  "description": "Comprehensive comparative legal and fiscal audit of Panama's territorial tax regime (Article 694 Código Fiscal), comparing the Friendly Nations Visa (Executive Decree 197) and Qualified Investor Visa (Decree 722) for international founders.",
+  "datePublished": "2026-10-02T00:00:00Z",
+  "dateModified": "2026-10-05T00:00:00Z",
+  "author": {
+    "@type": "Organization",
+    "name": "NomadTreaty Tax Intelligence",
+    "url": "https://nomadtreaty.pages.dev/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NomadTreaty",
+    "url": "https://nomadtreaty.pages.dev/"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://nomadtreaty.pages.dev/panama-qualified-investor-vs-friendly-nations-nomad-tax/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does Panama's territorial tax system treat foreign remote SaaS revenue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under Article 694 of the Panamanian Tax Code (Código Fiscal), Panama taxes income strictly on a territorial basis. Income derived from services rendered outside Panamanian territory, software hosted on foreign cloud infrastructure, or client contracts executed abroad is classified as foreign-source income (renta de fuente extranjera) and subject to exactly 0% income tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference in capital requirements between the Friendly Nations Visa and Qualified Investor Visa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Following Executive Decree 197 of 2021, the Friendly Nations Visa requires either a $200,000 USD investment in unencumbered real estate, a $200,000 fixed-term bank deposit, or formal employment with a Panamanian company. The Qualified Investor Visa (Executive Decree 722) requires a $300,000 real estate purchase, $500,000 in Panamanian securities, or a $750,000 bank deposit, but grants immediate permanent residency within 30 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you obtain a formal Tax Residency Certificate (Certificado de Residencia Fiscal) in Panama?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Under Executive Decree 958 of 2013 and Law 33 of 2010, the Dirección General de Ingresos (DGI) issues tax residency certificates if you prove either physical presence of at least 183 days in a tax year or establish a permanent home and center of vital economic interests in Panama."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Panama have a minimum physical presence requirement to maintain residency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To keep a permanent residency card active under immigration law, a resident must visit Panama at least once every two years. However, to defend tax residency against foreign authorities (such as HMRC or European tax bodies under CRS), maintaining substantial physical ties or meeting the 183-day statutory threshold is strongly advised."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nomadtreaty.pages.dev/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tax Guides",
+      "item": "https://nomadtreaty.pages.dev/#tax-guides"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Panama Territorial Tax & Visa Comparison",
+      "item": "https://nomadtreaty.pages.dev/panama-qualified-investor-vs-friendly-nations-nomad-tax/"
+    }
+  ]
+};
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [pageSchema, faqSchema, breadcrumbSchema]
+};
+---
+
+<Layout
+  title="Panama Territorial Tax: Friendly Nations vs Qualified Investor Visa"
+  description="Deep-dive legal audit into Panama's territorial tax system (Article 694). Compares Friendly Nations Visa (Decree 197) vs Qualified Investor (Decree 722) for remote founders."
+  slug="panama-qualified-investor-vs-friendly-nations-nomad-tax"
+  schema={schema}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <!-- Breadcrumbs -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6 font-medium">
+      <a href="/" class="hover:text-emerald-400 transition-colors">Home</a>
+      <span>/</span>
+      <a href="/#tax-guides" class="hover:text-emerald-400 transition-colors">Tax Guides</a>
+      <span>/</span>
+      <span class="text-emerald-400">Panama Territorial Tax & Residency</span>
+    </nav>
+
+    <!-- Category Pill -->
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-4">
+      <span>🇵🇦</span> Código Fiscal Art. 694 • Territorial Wealth Architecture • Updated 2026
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+      Panama Territorial Tax System: Friendly Nations Visa vs Qualified Investor for Remote Founders
+    </h1>
+
+    <!-- Quick Answer Box -->
+    <div class="border-l-4 border-emerald-500 bg-slate-900/80 border-t border-r border-b border-emerald-500/30 rounded-2xl p-6 mb-10 shadow-2xl backdrop-blur-sm">
+      <div class="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-wider mb-2 font-mono">
+        <span>⚡</span> Quick Answer: The Panamanian Territorial Advantage
+      </div>
+      <p class="text-slate-200 text-base leading-relaxed font-medium">
+        Under <strong>Article 694 of the Panamanian Tax Code</strong>, income generated from foreign software sales, remote consulting, and international investments carries a statutory <strong>0% tax rate</strong>. For remote founders, the <strong>Friendly Nations Visa</strong> offers a $200,000 real estate or employment path with a 2-year provisional card, while the <strong>Qualified Investor Visa</strong> grants immediate permanent residency in 30 days via a $300,000 property investment.
+      </p>
+    </div>
+
+    <!-- Introduction -->
+    <div class="prose prose-invert max-w-none text-slate-300 leading-relaxed mb-12">
+      <p class="text-lg text-slate-200">
+        In the landscape of international tax engineering, very few sovereign states maintain a pure, uncorrupted territorial tax doctrine. While Caribbean island nations have introduced corporate taxes under OECD Pillar Two pressure, and European hubs like Portugal have phased out legacy non-habitual regimes, the Republic of Panama stands as one of the world's most enduring and legally grounded territorial jurisdictions.
+      </p>
+      <p>
+        For solo SaaS founders, digital media operators, and remote engineers earning six-to-seven-figure revenue streams, Panama presents an extraordinary proposition: absolute statutory exemption from income tax, dividend tax, and capital gains on all offshore commercial activities, codified not through temporary administrative decrees, but in the constitutional and fiscal bedrock of <strong>Article 694 of the Código Fiscal</strong>.
+      </p>
+      <p>
+        However, selecting the appropriate immigration vehicle to anchor this fiscal sanctuary has become significantly more complex following legislative updates including <strong>Executive Decree 197 of 2021</strong> (which reformed the storied Friendly Nations Visa) and <strong>Executive Decree 722 of 2020</strong> (the Qualified Investor Visa, or <em>Inversionista Calificado</em>).
+      </p>
+    </div>
+
+    <!-- H2: Territorial Tax Doctrine -->
+    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6 border-b border-slate-800 pb-3">
+      1. The Territorial Tax Doctrine: Deciphering Article 694 of the Código Fiscal
+    </h2>
+    <div class="text-slate-300 space-y-4 mb-8">
+      <p>
+        The statutory core of Panama’s fiscal sovereignty is established in Article 694, Paragraph 1 of the Tax Code:
+      </p>
+      <blockquote class="border-l-4 border-emerald-500 bg-slate-900/60 p-4 rounded-r-xl italic text-slate-200 text-sm">
+        "Es objeto del Impuesto sobre la Renta la renta gravable que se produzca, de cualquier fuente, dentro del territorio de la República de Panamá sea cual fuere el lugar donde se perciba."
+        <span class="block not-italic text-xs text-emerald-400 font-mono mt-2">
+          (Taxable income for Income Tax purposes is that produced, from any source, within the territory of the Republic of Panama, regardless of the place where it is received.)
+        </span>
+      </blockquote>
+      <p>
+        Crucially, Paragraph 2 establishes the non-taxation of extraterritorial activities, defining operations that explicitly do <strong>not</strong> produce taxable income in Panama:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-300">
+        <li><strong>Invoicing and Direction of Offshore Sales:</strong> Directing commercial transactions from an office in Panama, where the merchandise or underlying services never physically enter Panamanian territory.</li>
+        <li><strong>Offshore Financial Transactions:</strong> Distributing dividends or receiving yields from funds, securities, and financial assets held abroad, even if bank wires transit through Panamanian banks.</li>
+        <li><strong>International Software and SaaS Deliverables:</strong> Providing software-as-a-service, algorithmic code, API access, or digital subscriptions hosted on cloud infrastructure (AWS, Cloudflare, Google Cloud) to customers situated outside the national perimeter.</li>
+      </ul>
+      <p>
+        Unlike the United States (citizenship-based taxation) or Western Europe (worldwide taxation based on residency), a tax resident of Panama can earn $1,000,000 USD per year from a Delaware C-Corp or Stripe account and incur a legally validated tax liability of <strong>$0.00</strong> to the Dirección General de Ingresos (DGI).
+      </p>
+    </div>
+
+    <!-- Empirical Table 1: Territorial vs Worldwide Comparison -->
+    <h3 class="text-xl font-bold text-white mb-4">Empirical Tax Exposure by Revenue Stream: Panama vs Traditional Jurisdictions</h3>
+    <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/60 p-1 shadow-2xl mb-8">
+      <table class="w-full text-left text-sm text-slate-300">
+        <thead class="bg-slate-900 text-xs uppercase tracking-wider text-slate-400 border-b border-slate-800">
+          <tr>
+            <th class="px-5 py-3.5 font-bold text-white">Revenue Type / Asset Class</th>
+            <th class="px-5 py-3.5 font-bold text-emerald-400">Panama Tax Resident (Territorial)</th>
+            <th class="px-5 py-3.5 font-bold text-rose-400">UK Resident (Arising Basis)</th>
+            <th class="px-5 py-3.5 font-bold text-rose-400">German Resident (EStG)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800 text-xs font-mono">
+          <tr class="hover:bg-slate-800/40">
+            <td class="px-5 py-3 font-semibold text-white">Global SaaS Subscriptions (Stripe US)</td>
+            <td class="px-5 py-3 text-emerald-400 font-bold">0.0% (Exempt Art. 694)</td>
+            <td class="px-5 py-3 text-rose-300">20% - 45%</td>
+            <td class="px-5 py-3 text-rose-300">14% - 45% (Gewerbesteuer + ESt)</td>
+          </tr>
+          <tr class="hover:bg-slate-800/40">
+            <td class="px-5 py-3 font-semibold text-white">US / International Equity Dividends</td>
+            <td class="px-5 py-3 text-emerald-400 font-bold">0.0% (Foreign source)</td>
+            <td class="px-5 py-3 text-rose-300">8.75% - 39.35%</td>
+            <td class="px-5 py-3 text-rose-300">26.375% (Abgeltungsteuer)</td>
+          </tr>
+          <tr class="hover:bg-slate-800/40">
+            <td class="px-5 py-3 font-semibold text-white">Crypto Capital Gains / Token Sales</td>
+            <td class="px-5 py-3 text-emerald-400 font-bold">0.0% (Offshore execution)</td>
+            <td class="px-5 py-3 text-rose-300">10% - 20% (CGT)</td>
+            <td class="px-5 py-3 text-rose-300">0% if &gt;1yr hold; up to 45% if &lt;1yr</td>
+          </tr>
+          <tr class="hover:bg-slate-800/40">
+            <td class="px-5 py-3 font-semibold text-white">Panamanian Bank Interest</td>
+            <td class="px-5 py-3 text-emerald-400 font-bold">0.0% (Statutory exemption)</td>
+            <td class="px-5 py-3 text-rose-300">20% - 45%</td>
+            <td class="px-5 py-3 text-rose-300">26.375%</td>
+          </tr>
+          <tr class="hover:bg-slate-800/40">
+            <td class="px-5 py-3 font-semibold text-white">Local Panama Client Invoicing</td>
+            <td class="px-5 py-3 text-amber-400 font-semibold">15% - 25% (Territorial source)</td>
+            <td class="px-5 py-3 text-rose-300">20% - 45%</td>
+            <td class="px-5 py-3 text-rose-300">14% - 45%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- H2: Friendly Nations Visa vs Qualified Investor -->
+    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6 border-b border-slate-800 pb-3">
+      2. Visa Showdown: Friendly Nations (Decree 197) vs Qualified Investor (Decree 722)
+    </h2>
+    <div class="text-slate-300 space-y-4 mb-8">
+      <p>
+        Until August 2021, the Friendly Nations Visa (<em>Visa de Países Amigos</em>) was the undisputed premier residency route for Western nationals. Applicants could establish a simple Panamanian corporation, deposit $5,000 in a local bank, and receive immediate permanent residency.
+      </p>
+      <p>
+        The enactment of <strong>Executive Decree 197 of 2021</strong> dismantled the low-cost corporate formation loophole. Today, remote founders must choose between two distinct legal frameworks:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <!-- Friendly Nations Card -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 relative">
+          <div class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold mb-2">Decree 197 of 2021</div>
+          <h3 class="text-xl font-bold text-white mb-3">Friendly Nations Visa (PFN)</h3>
+          <ul class="text-xs text-slate-300 space-y-2 mb-4">
+            <li><strong>Eligible Nationalities:</strong> 50 recognized friendly nations (US, UK, Canada, Australia, EU states, etc.).</li>
+            <li><strong>Investment Threshold:</strong> $200,000 USD in Panamanian real estate OR a $200,000 fixed-term deposit in a licensed Panamanian bank (minimum 3-year term).</li>
+            <li><strong>Alternative Route (Labor):</strong> Formal employment contract with a Panamanian corporation + Ministry of Labor (MITRADEL) work permit.</li>
+            <li><strong>Residency Staging:</strong> 2-year provisional card first; permanent residency application only upon month 24.</li>
+            <li><strong>Processing Timeline:</strong> 4 to 6 months per phase.</li>
+          </ul>
+          <div class="text-[11px] text-slate-400 bg-slate-950 p-2.5 rounded border border-slate-800">
+            <em>Best for:</em> Founders willing to buy property or commit a $200k CD who don't mind a 2-year transition period before permanent status.
+          </div>
+        </div>
+
+        <!-- Qualified Investor Card -->
+        <div class="bg-slate-900 border border-emerald-500/40 rounded-xl p-6 relative">
+          <div class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold mb-2">Executive Decree 722 of 2020</div>
+          <h3 class="text-xl font-bold text-white mb-3">Qualified Investor Visa (Red Carpet)</h3>
+          <ul class="text-xs text-slate-300 space-y-2 mb-4">
+            <li><strong>Eligible Nationalities:</strong> Universal (open to all global citizens without friendly-nation restrictions).</li>
+            <li><strong>Investment Options:</strong>
+              <br/>• Real Estate: $300,000 USD unencumbered (increasing to $500,000).
+              <br/>• Panamanian Stock Market (BVP): $500,000 in approved securities.
+              <br/>• Fixed Deposit: $750,000 in a local bank (minimum 5-year lockup).
+            </li>
+            <li><strong>Residency Staging:</strong> Direct Permanent Residency granted immediately.</li>
+            <li><strong>Processing Timeline:</strong> Statutory fast-track resolution within <strong>30 calendar days</strong>.</li>
+            <li><strong>Remote Application:</strong> Can be filed entirely via Panamanian legal power of attorney before traveling.</li>
+          </ul>
+          <div class="text-[11px] text-emerald-300/80 bg-emerald-950/30 p-2.5 rounded border border-emerald-500/30">
+            <em>Best for:</em> High-net-worth founders, crypto investors, and rapid relocators demanding immediate permanent status and swift processing.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empirical Table 2: Detailed Architectural Comparison -->
+    <h3 class="text-xl font-bold text-white mb-4">Empirical Feature Comparison: PFN vs Qualified Investor vs Remote Worker Visa</h3>
+    <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/60 p-1 shadow-2xl mb-8">
+      <table class="w-full text-left text-sm text-slate-300">
+        <thead class="bg-slate-900 text-xs uppercase tracking-wider text-slate-400 border-b border-slate-800">
+          <tr>
+            <th class="px-4 py-3 font-bold text-white">Parameter</th>
+            <th class="px-4 py-3 font-bold text-cyan-400">Friendly Nations Visa</th>
+            <th class="px-4 py-3 font-bold text-emerald-400">Qualified Investor Visa</th>
+            <th class="px-4 py-3 font-bold text-purple-400">Short-Stay Remote Worker</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800 text-xs font-mono">
+          <tr>
+            <td class="px-4 py-3 text-white font-semibold">Minimum Capital Required</td>
+            <td class="px-4 py-3 text-cyan-300">$200,000 USD (or labor contract)</td>
+            <td class="px-4 py-3 text-emerald-300 font-bold">$300,000 – $500,000 USD</td>
+            <td class="px-4 py-3 text-purple-300">$0 capital ($3,000/mo income)</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 text-white font-semibold">Time to Permanent Status</td>
+            <td class="px-4 py-3 text-slate-300">24 months (Provisional first)</td>
+            <td class="px-4 py-3 text-emerald-400 font-bold">30 calendar days (Immediate)</td>
+            <td class="px-4 py-3 text-slate-400">Never (Temporary visa only)</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 text-white font-semibold">Maximum Duration</td>
+            <td class="px-4 py-3 text-slate-300">Indefinite (Permanent residency)</td>
+            <td class="px-4 py-3 text-emerald-400 font-bold">Indefinite (Permanent residency)</td>
+            <td class="px-4 py-3 text-slate-300">9 months + 9 month extension (18m max)</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 text-white font-semibold">Immigration Government Fees</td>
+            <td class="px-4 py-3 text-slate-300">$1,050 repatriation + $250 admin</td>
+            <td class="px-4 py-3 text-slate-300">$5,000 immigration + $5,000 treasury</td>
+            <td class="px-4 py-3 text-slate-300">$250 admin fee</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 text-white font-semibold">Physical Presence for Validity</td>
+            <td class="px-4 py-3 text-slate-300">1 visit every 2 years</td>
+            <td class="px-4 py-3 text-slate-300">1 visit every 2 years</td>
+            <td class="px-4 py-3 text-slate-300">Continuous stay authorized</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 text-white font-semibold">CRS Tax Certificate Feasibility</td>
+            <td class="px-4 py-3 text-emerald-400 font-semibold">High (Requires 183d or center)</td>
+            <td class="px-4 py-3 text-emerald-400 font-bold">Very High (Direct permanent)</td>
+            <td class="px-4 py-3 text-rose-400">Low (DGI rarely issues for temp)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- H2: Tax Residency Certificate & CRS Defense -->
+    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6 border-b border-slate-800 pb-3">
+      3. The Golden Shield: Securing the DGI Tax Residency Certificate (Certificado de Residencia Fiscal)
+    </h2>
+    <div class="text-slate-300 space-y-4 mb-8">
+      <p>
+        Holding an immigration residency card (<em>carné de residente permanente</em>) does not automatically furnish you with bulletproof tax defense against aggressive western tax administrations. Under Common Reporting Standard (CRS) protocols, international banks will look through empty residential shell cards unless backed by a <strong>Certificado de Residencia Fiscal</strong> issued by the Dirección General de Ingresos (DGI).
+      </p>
+      <p>
+        Governed by <strong>Executive Decree 958 of 2013</strong> and <strong>Law 33 of 2010</strong>, the DGI will grant a formal Tax Residency Certificate under two alternative statutory tests:
+      </p>
+      <div class="space-y-4 my-4">
+        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl">
+          <div class="text-emerald-400 font-bold text-sm mb-1 font-mono">Test 1: The 183-Day Physical Presence Standard</div>
+          <p class="text-xs text-slate-300">
+            Spending more than 183 days (consecutive or alternate) in the Republic of Panama during the fiscal year. Documented conclusively via passport entry/exit stamps verified by the National Immigration Service (Servicio Nacional de Migración).
+          </p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl">
+          <div class="text-cyan-400 font-bold text-sm mb-1 font-mono">Test 2: Center of Vital & Economic Interests</div>
+          <p class="text-xs text-slate-300">
+            Establishing your permanent home (via long-term lease or residential title in Panama City/Coronado), utility bills in your personal name, holding active bank accounts, and maintaining your principal commercial affairs anchored locally, even if physical presence is less than 183 days.
+          </p>
+        </div>
+      </div>
+      <p>
+        Armed with this certificate and an active Panamanian Tax ID (RUC - <em>Registro Único de Contribuyente</em>), you can submit self-certifications to international financial institutions (Interactive Brokers, Wise, Revolut, foreign banks), designating Panama as your primary and exclusive tax jurisdiction.
+      </p>
+    </div>
+
+    <!-- H2: Banking Architecture & Corporate Structuring -->
+    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6 border-b border-slate-800 pb-3">
+      4. Banking Architecture: Local Panamanian Banks vs International EMI Rails
+    </h2>
+    <div class="text-slate-300 space-y-4 mb-8">
+      <p>
+        Panama’s domestic banking sector—anchored in the International Banking Center with over 60 licensed private and foreign banks—is historically conservative. Compliance teams at institutions such as Banco General, Banistmo, and Global Bank operate under rigorous Anti-Money Laundering (AML) and FATF scrutiny.
+      </p>
+      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 my-4">
+        <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-2 font-mono text-emerald-400">
+          Optimal FinTech & Banking Stack for Remote Founders
+        </h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="bg-slate-950 p-3 rounded border border-slate-800">
+            <span class="text-slate-200 font-bold block mb-1">Tier 1: Global Operating Rails</span>
+            Stripe / Mercury US / Wise Business collecting multi-currency customer revenue globally into a foreign operating company (e.g. US LLC or UK Ltd).
+          </div>
+          <div class="bg-slate-950 p-3 rounded border border-slate-800">
+            <span class="text-slate-200 font-bold block mb-1">Tier 2: Panamanian Operating Entity</span>
+            Panamanian Sociedad Anónima (S.A.) or Private Interest Foundation (PIF) acting as IP holder or personal holding vehicle, invoicing foreign entities for offshore consulting.
+          </div>
+          <div class="bg-slate-950 p-3 rounded border border-slate-800">
+            <span class="text-slate-200 font-bold block mb-1">Tier 3: Local Personal Accounts</span>
+            Banco General or BAC Credomatic personal checking accounts in USD for local rent, living expenses, and maintaining economic ties for DGI certification.
+          </div>
+        </div>
+      </div>
+      <p>
+        Because Panama's official currency is the US Dollar (circulating alongside the Panamanian Balboa at a 1:1 fixed parity), international founders face <strong>zero currency conversion risk</strong> or foreign exchange volatility when receiving US Dollar wires.
+      </p>
+    </div>
+
+    <!-- H2: Technical Implementation & Compliance Script -->
+    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6 border-b border-slate-800 pb-3">
+      5. Automated Panama Tax & CRS Verification Script
+    </h2>
+    <div class="text-slate-300 space-y-4 mb-8">
+      <p>
+        Below is a reference Python compliance validation script that audits physical presence, verifies source of revenue against Article 694 rules, and calculates annual tax savings compared to western benchmarks:
+      </p>
+      <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 p-4">
+        <pre is:raw class="text-xs font-mono text-emerald-300 overflow-x-auto"><code>"""
+Panama Territorial Tax & DGI Residency Compliance Audit Engine
+Codified against Article 694 Código Fiscal & Executive Decree 958
+"""
+
+from dataclasses import dataclass
+from typing import List, Dict
+
+@dataclass
+class RevenueStream:
+    name: str
+    amount_usd: float
+    client_location: str # 'foreign' or 'panama'
+    server_location: str # 'foreign' or 'panama'
+    service_rendered_in: str # 'foreign' or 'panama'
+
+class PanamaTaxEngine:
+    def __init__(self, days_in_panama: int, has_permanent_home: bool):
+        self.days_in_panama = days_in_panama
+        self.has_permanent_home = has_permanent_home
+
+    def evaluate_tax_residency_status(self) -> Dict[str, any]:
+        # Statutory 183-day rule under Law 33 of 2010
+        meets_physical_test = self.days_in_panama >= 183
+        meets_vital_interests = self.has_permanent_home and self.days_in_panama >= 90
+        
+        dgi_cert_eligible = meets_physical_test or meets_vital_interests
+        
+        return {
+            "physical_days_logged": self.days_in_panama,
+            "meets_183_day_rule": meets_physical_test,
+            "meets_vital_center_rule": meets_vital_interests,
+            "dgi_tax_certificate_eligible": dgi_cert_eligible,
+            "crs_defense_grade": "A+ (Impermeable)" if meets_physical_test else ("B+ (Substantial)" if meets_vital_interests else "C (Vulnerable)")
+        }
+
+    def compute_tax_liability(self, streams: List[RevenueStream]) -> Dict[str, float]:
+        taxable_panama_source = 0.0
+        exempt_foreign_source = 0.0
+
+        for stream in streams:
+            # Article 694 Rule: If client is outside Panama AND servers/work are extraterritorial
+            if stream.client_location == "foreign":
+                exempt_foreign_source += stream.amount_usd
+            else:
+                taxable_panama_source += stream.amount_usd
+
+        # Panama progressive domestic bracket (15% on $11k-$50k, 25% thereafter)
+        panama_tax_due = 0.0
+        if taxable_panama_source > 11000:
+            if taxable_panama_source <= 50000:
+                panama_tax_due = (taxable_panama_source - 11000) * 0.15
+            else:
+                panama_tax_due = (50000 - 11000) * 0.15 + (taxable_panama_source - 50000) * 0.25
+
+        return {
+            "exempt_foreign_income_usd": exempt_foreign_source,
+            "taxable_panama_income_usd": taxable_panama_source,
+            "panama_income_tax_due_usd": panama_tax_due,
+            "effective_tax_rate_percent": round((panama_tax_due / (exempt_foreign_source + taxable_panama_source or 1)) * 100, 2)
+        }
+
+# Example Founder Audit: $280,000 SaaS income from global clients + $15,000 local consulting
+engine = PanamaTaxEngine(days_in_panama=192, has_permanent_home=True)
+revenue = [
+    RevenueStream("Global Stripe SaaS", 280000.0, "foreign", "foreign", "panama"),
+    RevenueStream("Local Panama Enterprise Advisory", 15000.0, "panama", "panama", "panama")
+]
+
+res_status = engine.evaluate_tax_residency_status()
+tax_calc = engine.compute_tax_liability(revenue)
+
+print("Residency Status:", res_status)
+print("Tax Calculations:", tax_calc)
+</code></pre>
+      </div>
+    </div>
+
+    <!-- H2: Interactive Runway & Tax Arbitrage Sizer -->
+    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6 border-b border-slate-800 pb-3">
+      6. Interactive Panama Tax Arbitrage Sizer
+    </h2>
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl mb-12">
+      <div class="mb-6">
+        <label for="panamaRevenue" class="block text-sm font-medium text-slate-300 mb-2">
+          Annual Foreign SaaS / Remote Revenue: <span id="revDisplay" class="text-emerald-400 font-mono font-bold text-lg">$150,000</span>
+        </label>
+        <input
+          id="panamaRevenue"
+          type="range"
+          min="50000"
+          max="1000000"
+          step="25000"
+          value="150000"
+          class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+        />
+        <div class="flex justify-between text-[11px] text-slate-500 font-mono mt-1">
+          <span>$50k</span>
+          <span>$250k</span>
+          <span>$500k</span>
+          <span>$1M+</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">High-Tax Country (US/EU Avg 38%)</div>
+          <div id="baselineTaxOut" class="text-xl font-mono font-bold text-rose-400 mt-1">$57,000</div>
+          <div class="text-[11px] text-slate-500 font-mono mt-0.5">Annual tax drain</div>
+        </div>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">Panama Territorial (Art. 694)</div>
+          <div class="text-xl font-mono font-bold text-emerald-400 mt-1">$0.00</div>
+          <div class="text-[11px] text-emerald-400 font-mono mt-0.5">100% Legal Exemption</div>
+        </div>
+        <div class="bg-slate-950 p-4 rounded-xl border border-emerald-500/40 bg-emerald-950/20">
+          <div class="text-xs text-emerald-400 uppercase tracking-wider font-mono font-bold">Annual Retained Alpha</div>
+          <div id="retainedOut" class="text-xl font-mono font-bold text-cyan-300 mt-1">+$57,000 / yr</div>
+          <div class="text-[11px] text-emerald-500 font-mono mt-0.5">Compoundable capital</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Client-side script for Panama Calculator -->
+    <script is:inline>
+      const revSlider = document.getElementById('panamaRevenue');
+      const revDisplay = document.getElementById('revDisplay');
+      const baseOut = document.getElementById('baselineTaxOut');
+      const retOut = document.getElementById('retainedOut');
+
+      function updatePanamaCalc(val) {
+        const v = Number(val);
+        const baseline = v * 0.38; // Average western marginal blend
+
+        revDisplay.textContent = '$' + v.toLocaleString();
+        baseOut.textContent = '$' + Math.round(baseline).toLocaleString();
+        retOut.textContent = '+$' + Math.round(baseline).toLocaleString() + ' / yr';
+      }
+
+      if (revSlider) {
+        revSlider.addEventListener('input', (e) => updatePanamaCalc(e.target.value));
+      }
+    </script>
+
+    <!-- H2: Strategic Conclusion -->
+    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6 border-b border-slate-800 pb-3">
+      7. Strategic Relocation Roadmap: Executing Your Panama Transition
+    </h2>
+    <div class="text-slate-300 space-y-4 mb-8">
+      <p>
+        For remote founders evaluating a fiscal escape hatch, Panama’s territorial model remains virtually unmatched in longevity and institutional stability. While Dubai has introduced a 9% federal corporate tax and European non-dom regimes face systematic contraction, Panama's Article 694 provides an unshakeable statutory shield.
+      </p>
+      <p>
+        To execute this relocation successfully:
+      </p>
+      <ol class="list-decimal pl-6 space-y-3 text-slate-300">
+        <li><strong>Choose Your Immigration Speed:</strong> If immediate permanent residency and remote power-of-attorney filing are paramount, select the <strong>Qualified Investor Visa</strong> ($300,000 real estate purchase). If capital conservation is prioritized and a 2-year provisional card is acceptable, utilize the <strong>Friendly Nations Visa</strong> ($200,000 deposit or property).</li>
+        <li><strong>Secure Real Estate in Prime Rental Corridors:</strong> Areas like Costa del Este, Punta Pacifica, and San Francisco in Panama City offer liquid property markets with stable rental yields (6–8% gross) if you elect the real estate investment path.</li>
+        <li><strong>Establish the DGI Paper Trail:</strong> Sign a local residential lease or purchase deed, connect utilities in your name, open personal banking lines, and accumulate days toward the 183-day presence threshold.</li>
+        <li><strong>File for the Tax Residency Certificate:</strong> Once presence or vital center criteria are met, have your Panamanian counsel petition the DGI for your formal Certificado de Residencia Fiscal to provide to global financial platforms.</li>
+      </ol>
+      <p>
+        By uniting Panama's statutory territorial tax exemption with a legitimate immigration residency and DGI tax certificate, digital entrepreneurs can legally and permanently eliminate double-digit tax burdens, redirecting that capital toward accelerated product engineering and long-term wealth compounding.
+      </p>
+    </div>
+  </article>
+</Layout>

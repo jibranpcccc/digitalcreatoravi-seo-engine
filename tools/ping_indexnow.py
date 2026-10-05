@@ -296,10 +296,44 @@ def ping_indexnow(site):
         print(f"[{site['name']}] IndexNow Ping Exception: {e}")
         return False
 
+def get_db_sites():
+    import os
+    db_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "fleet_telemetry.db"))
+    if not os.path.exists(db_path):
+        return None
+    try:
+        import sqlite3
+        conn = sqlite3.connect(db_path)
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        sites_rows = c.execute("SELECT * FROM sites WHERE CAST(SUBSTR(id, 6) AS INTEGER) BETWEEN 1 AND 20 ORDER BY CAST(SUBSTR(id, 6) AS INTEGER)").fetchall()
+        pages_rows = c.execute("SELECT site_id, url FROM indexed_pages").fetchall()
+        conn.close()
+        
+        config = []
+        for s in sites_rows:
+            s_id = s['id']
+            urls = [p['url'] for p in pages_rows if p['site_id'] == s_id]
+            if not urls:
+                urls = [s['url']]
+            config.append({
+                "name": s['name'],
+                "host": s['host'],
+                "key_location": f"https://{s['host']}/{INDEXNOW_KEY}.txt",
+                "urls": list(dict.fromkeys(urls))
+            })
+        return config
+    except Exception as e:
+        print(f"Warning: Failed to load from db: {e}")
+        return None
+
 def main():
     print("=== PINGING INDEXNOW API (BING & YANDEX DISPATCH) ===")
+    sites = get_db_sites() or SITES_CONFIG
+    total_urls = sum(len(s.get("urls", [])) for s in sites)
+    print(f"Loaded {len(sites)} sites with {total_urls} total URLs to notify.")
     all_ok = True
-    for site in SITES_CONFIG:
+    for site in sites:
         ok = ping_indexnow(site)
         if not ok:
             all_ok = False
@@ -307,3 +341,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
