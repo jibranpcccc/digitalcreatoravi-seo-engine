@@ -167,7 +167,7 @@ const schema = {
         <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
           <div class="text-emerald-400 font-bold text-sm uppercase tracking-wider mb-2 font-mono">Ed25519 (RFC 8032)</div>
           <p class="text-xs text-slate-300 leading-relaxed">
-            EdDSA utilizing the twisted Edwards curve $ -x^2 + y^2 = 1 - (121665/121666)x^2y^2 $ over finite field $\mathbb{F}_{2^{255}-19}$.
+            EdDSA utilizing the twisted Edwards curve <code>-x^2 + y^2 = 1 - (121665/121666)x^2y^2</code> over finite prime field <code>2^255 - 19</code>.
           </p>
           <div class="bg-slate-950 p-2.5 rounded font-mono text-[11px] text-slate-400 my-2">
             Sign: (R, S) = (rG, r + H(R || A || m) · a) mod l
@@ -350,7 +350,7 @@ export function verifyEd25519Webhook({
   // 3. Construct canonical signed payload
   const bodyBuffer = Buffer.isBuffer(rawBody) ? rawBody : Buffer.from(rawBody, 'utf8');
   const signedPayload = Buffer.concat([
-    Buffer.from(`${timestamp}.`, 'utf8'),
+    Buffer.from(`&#36;{timestamp}.`, 'utf8'),
     bodyBuffer
   ]);
 
@@ -375,7 +375,7 @@ export function verifyEd25519Webhook({
 
     return isValid ? { valid: true } : { valid: false, reason: 'INVALID_SIGNATURE' };
   } catch (err: any) {
-    return { valid: false, reason: `CRYPTO_VERIFICATION_ERROR: ${err.message}` };
+    return { valid: false, reason: `CRYPTO_VERIFICATION_ERROR: &#36;{err.message}` };
   }
 }
 </code></pre>

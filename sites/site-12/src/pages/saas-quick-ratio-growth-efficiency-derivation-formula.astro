@@ -100,9 +100,9 @@ const schemaJson = JSON.stringify(schemaData);
   <article class="max-w-4xl mx-auto pt-4 pb-16 px-4 sm:px-6">
     <!-- Breadcrumb -->
     <nav class="flex items-center space-x-2 text-xs font-mono text-slate-400 mb-6">
-      <a href={`${base}/`} class="hover:text-cyan-400 transition">SaaSUnitMath</a>
+      <a href=&#123;`&#36;&#123;base&#125;/`&#125; class="hover:text-cyan-400 transition">SaaSUnitMath</a>
       <span>/</span>
-      <a href={`${base}/#metrics`} class="hover:text-cyan-400 transition">Metrics</a>
+      <a href=&#123;`&#36;&#123;base&#125;/#metrics`&#125; class="hover:text-cyan-400 transition">Metrics</a>
       <span>/</span>
       <span class="text-cyan-400">SaaS Quick Ratio</span>
     </nav>
@@ -224,18 +224,18 @@ const schemaJson = JSON.stringify(schemaData);
           First formalized by venture capitalist Mamoon Hamid during his tenure at Social Capital, the <strong>SaaS Quick Ratio</strong> adapts the classic corporate liquidity test (acid-test ratio) to recurring revenue economics. While classic accounting evaluates whether short-term assets cover short-term liabilities, the SaaS Quick Ratio evaluates whether top-line customer revenue additions provide sufficient thrust to overcome gravitational drag from churn.
         </p>
         <p>
-          Let \( \Delta \text{MRR}_t \) represent the net change in monthly recurring revenue over period \( t \). The revenue waterfall is decomposed into four non-overlapping vectors:
+          Let \( \Delta \text&#123;MRR&#125;_t \) represent the net change in monthly recurring revenue over period \( t \). The revenue waterfall is decomposed into four non-overlapping vectors:
         </p>
         <ul class="list-disc pl-6 space-y-1 text-slate-300">
-          <li><strong>New MRR (\( \text{MRR}_{\text{new}} \)):</strong> Revenue gained from entirely new customer acquisitions.</li>
-          <li><strong>Expansion MRR (\( \text{MRR}_{\text{exp}} \)):</strong> Additional recurring revenue gained from existing customers through upsells, cross-sells, or seat expansion.</li>
-          <li><strong>Churned MRR (\( \text{MRR}_{\text{churn}} \)):</strong> Revenue lost from customers who cancelled all active contracts.</li>
-          <li><strong>Contraction MRR (\( \text{MRR}_{\text{cont}} \)):</strong> Revenue lost from existing customers who downgraded their plan or reduced seat counts without fully churning.</li>
+          <li><strong>New MRR (\( \text&#123;MRR&#125;_&#123;\text&#123;new&#125;&#125; \)):</strong> Revenue gained from entirely new customer acquisitions.</li>
+          <li><strong>Expansion MRR (\( \text&#123;MRR&#125;_&#123;\text&#123;exp&#125;&#125; \)):</strong> Additional recurring revenue gained from existing customers through upsells, cross-sells, or seat expansion.</li>
+          <li><strong>Churned MRR (\( \text&#123;MRR&#125;_&#123;\text&#123;churn&#125;&#125; \)):</strong> Revenue lost from customers who cancelled all active contracts.</li>
+          <li><strong>Contraction MRR (\( \text&#123;MRR&#125;_&#123;\text&#123;cont&#125;&#125; \)):</strong> Revenue lost from existing customers who downgraded their plan or reduced seat counts without fully churning.</li>
         </ul>
 
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 font-mono text-xs my-4 text-slate-300">
           <p class="text-cyan-400 font-bold mb-1">// Standard SaaS Quick Ratio Formula</p>
-          <p>$$ \text{Quick Ratio} = \frac{\text{MRR}_{\text{new}} + \text{MRR}_{\text{exp}}}{\text{MRR}_{\text{churn}} + \text{MRR}_{\text{cont}}} $$</p>
+          <p>$$ \text&#123;Quick Ratio&#125; = \frac&#123;\text&#123;MRR&#125;_&#123;\text&#123;new&#125;&#125; + \text&#123;MRR&#125;_&#123;\text&#123;exp&#125;&#125;&#125;&#123;\text&#123;MRR&#125;_&#123;\text&#123;churn&#125;&#125; + \text&#123;MRR&#125;_&#123;\text&#123;cont&#125;&#125;&#125; $$</p>
         </div>
       </section>
 
@@ -302,33 +302,33 @@ const schemaJson = JSON.stringify(schemaData);
 
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 font-mono text-xs my-4 text-slate-300">
           <p class="text-cyan-400 font-bold mb-1">// Decomposition into Acquisition and Expansion Ratios</p>
-          <p>$$ \text{Quick Ratio} = \underbrace{\frac{\text{MRR}_{\text{new}}}{\text{MRR}_{\text{churn}} + \text{MRR}_{\text{cont}}}}_{\text{Acquisition Efficiency Ratio } (R_{\text{acq}})} + \underbrace{\frac{\text{MRR}_{\text{exp}}}{\text{MRR}_{\text{churn}} + \text{MRR}_{\text{cont}}}}_{\text{Expansion Efficiency Ratio } (R_{\text{exp}})} $$</p>
+          <p>$$ \text&#123;Quick Ratio&#125; = \underbrace&#123;\frac&#123;\text&#123;MRR&#125;_&#123;\text&#123;new&#125;&#125;&#125;&#123;\text&#123;MRR&#125;_&#123;\text&#123;churn&#125;&#125; + \text&#123;MRR&#125;_&#123;\text&#123;cont&#125;&#125;&#125;&#125;_&#123;\text&#123;Acquisition Efficiency Ratio &#125; (R_&#123;\text&#123;acq&#125;&#125;)&#125; + \underbrace&#123;\frac&#123;\text&#123;MRR&#125;_&#123;\text&#123;exp&#125;&#125;&#125;&#123;\text&#123;MRR&#125;_&#123;\text&#123;churn&#125;&#125; + \text&#123;MRR&#125;_&#123;\text&#123;cont&#125;&#125;&#125;&#125;_&#123;\text&#123;Expansion Efficiency Ratio &#125; (R_&#123;\text&#123;exp&#125;&#125;)&#125; $$</p>
         </div>
 
         <p>
           Notice the critical implication:
         </p>
         <ul class="list-disc pl-6 space-y-2 text-slate-300">
-          <li><strong>Scenario A (Acquisition-Heavy):</strong> \( R_{\text{acq}} = 3.5 \), \( R_{\text{exp}} = 0.5 \). The company is relying entirely on new logo generation. If paid acquisition channels saturate or costs increase, growth will instantly stall.</li>
-          <li><strong>Scenario B (Net-Expansion Compounder):</strong> \( R_{\text{acq}} = 1.8 \), \( R_{\text{exp}} = 2.2 \). Here, \( R_{\text{exp}} > 1.0 \), meaning expansion alone outstrips gross churn! The company exhibits negative net churn and will grow indefinitely even if outbound sales completely stops.</li>
+          <li><strong>Scenario A (Acquisition-Heavy):</strong> \( R_&#123;\text&#123;acq&#125;&#125; = 3.5 \), \( R_&#123;\text&#123;exp&#125;&#125; = 0.5 \). The company is relying entirely on new logo generation. If paid acquisition channels saturate or costs increase, growth will instantly stall.</li>
+          <li><strong>Scenario B (Net-Expansion Compounder):</strong> \( R_&#123;\text&#123;acq&#125;&#125; = 1.8 \), \( R_&#123;\text&#123;exp&#125;&#125; = 2.2 \). Here, \( R_&#123;\text&#123;exp&#125;&#125; > 1.0 \), meaning expansion alone outstrips gross churn! The company exhibits negative net churn and will grow indefinitely even if outbound sales completely stops.</li>
         </ul>
       </section>
 
       <section>
         <h2 class="text-2xl font-bold text-white mb-4">4. Relationship Between Quick Ratio, NRR, and Gross Revenue Churn</h2>
         <p>
-          The Quick Ratio directly interfaces with Net Revenue Retention (NRR). Let \( \text{MRR}_{\text{start}} \) denote beginning MRR for a given period. We define:
+          The Quick Ratio directly interfaces with Net Revenue Retention (NRR). Let \( \text&#123;MRR&#125;_&#123;\text&#123;start&#125;&#125; \) denote beginning MRR for a given period. We define:
         </p>
         <ul class="list-disc pl-6 space-y-1 text-slate-300">
-          <li>Gross Churn Rate (\( g_c \)) = \( \frac{\text{MRR}_{\text{churn}} + \text{MRR}_{\text{cont}}}{\text{MRR}_{\text{start}}} \)</li>
-          <li>Net Revenue Retention (\( \text{NRR} \)) = \( 1 + \frac{\text{MRR}_{\text{exp}} - (\text{MRR}_{\text{churn}} + \text{MRR}_{\text{cont}})}{\text{MRR}_{\text{start}}} = 1 + e - g_c \)</li>
-          <li>New Logo Growth Rate (\( g_n \)) = \( \frac{\text{MRR}_{\text{new}}}{\text{MRR}_{\text{start}}} \)</li>
+          <li>Gross Churn Rate (\( g_c \)) = \( \frac&#123;\text&#123;MRR&#125;_&#123;\text&#123;churn&#125;&#125; + \text&#123;MRR&#125;_&#123;\text&#123;cont&#125;&#125;&#125;&#123;\text&#123;MRR&#125;_&#123;\text&#123;start&#125;&#125;&#125; \)</li>
+          <li>Net Revenue Retention (\( \text&#123;NRR&#125; \)) = \( 1 + \frac&#123;\text&#123;MRR&#125;_&#123;\text&#123;exp&#125;&#125; - (\text&#123;MRR&#125;_&#123;\text&#123;churn&#125;&#125; + \text&#123;MRR&#125;_&#123;\text&#123;cont&#125;&#125;)&#125;&#123;\text&#123;MRR&#125;_&#123;\text&#123;start&#125;&#125;&#125; = 1 + e - g_c \)</li>
+          <li>New Logo Growth Rate (\( g_n \)) = \( \frac&#123;\text&#123;MRR&#125;_&#123;\text&#123;new&#125;&#125;&#125;&#123;\text&#123;MRR&#125;_&#123;\text&#123;start&#125;&#125;&#125; \)</li>
         </ul>
         <p>
           Substituting these dimensionless ratios into the Quick Ratio yields:
         </p>
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 font-mono text-xs my-4 text-slate-300">
-          <p>$$ \text{Quick Ratio} = \frac{g_n + (\text{NRR} - 1 + g_c)}{g_c} = \frac{g_n + \text{NRR} - 1}{g_c} + 1 $$</p>
+          <p>$$ \text&#123;Quick Ratio&#125; = \frac&#123;g_n + (\text&#123;NRR&#125; - 1 + g_c)&#125;&#123;g_c&#125; = \frac&#123;g_n + \text&#123;NRR&#125; - 1&#125;&#123;g_c&#125; + 1 $$</p>
         </div>
         <p>
           This proof confirms that minimizing gross churn \( g_c \) in the denominator exerts hyper-linear leverage over the Quick Ratio compared to simply purchasing more top-of-funnel \( g_n \).
@@ -429,7 +429,7 @@ if __name__ == "__main__":
           <div class="border border-slate-800 rounded-xl p-4 bg-slate-900/40">
             <h3 class="text-sm font-bold text-white mb-2">Does an enterprise SaaS business with annual billing use the Quick Ratio?</h3>
             <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Yes. Enterprise companies simply normalize Annual Contract Value (ACV) or Annual Recurring Revenue (ARR) into an ARR Quick Ratio: \( (\text{New ARR} + \text{Expansion ARR}) / (\text{Churn ARR} + \text{Contraction ARR}) \). The same 4.0x efficiency threshold applies.
+              Yes. Enterprise companies simply normalize Annual Contract Value (ACV) or Annual Recurring Revenue (ARR) into an ARR Quick Ratio: \( (\text&#123;New ARR&#125; + \text&#123;Expansion ARR&#125;) / (\text&#123;Churn ARR&#125; + \text&#123;Contraction ARR&#125;) \). The same 4.0x efficiency threshold applies.
             </p>
           </div>
           <div class="border border-slate-800 rounded-xl p-4 bg-slate-900/40">

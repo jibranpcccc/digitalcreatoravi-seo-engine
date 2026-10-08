@@ -97,10 +97,10 @@ const schemaData = {
 ---
 
 <Layout
-  title={pageTitle}
-  description={pageDescription}
-  canonical={canonicalUrl}
-  schemaJson={JSON.stringify(schemaData)}
+  title=&#123;pageTitle&#125;
+  description=&#123;pageDescription&#125;
+  canonical=&#123;canonicalUrl&#125;
+  schemaJson=&#123;JSON.stringify(schemaData)&#125;
 >
   <article class="max-w-4xl mx-auto py-8 sm:py-12">
     <!-- Breadcrumb -->
@@ -147,7 +147,7 @@ const schemaData = {
           Unlike traditional futures contracts (such as CME quarterly index or commodity futures), <strong>perpetual contracts do not possess a fixed calendar expiration date</strong>. Without an expiration date enforcing convergence to spot price via physical or cash settlement at expiry, cryptocurrency derivatives exchanges implement a continuous financial tether: the <em>Perpetual Funding Rate</em>.
         </p>
         <p class="mt-3">
-          The funding rate is calculated by comparing the perpetual contract mark price ($P_{mark}$) against the underlying external spot index ($P_{index}$). When bullish market participants push the mark price above the index ($P_{mark} &gt; P_{index}$), long traders pay short traders every epoch (typically 8 hours or 1 hour). Conversely, during bearish discount regimes ($P_{mark} &lt; P_{index}$), shorts pay longs.
+          The funding rate is calculated by comparing the perpetual contract mark price ($P_&#123;mark&#125;$) against the underlying external spot index ($P_&#123;index&#125;$). When bullish market participants push the mark price above the index ($P_&#123;mark&#125; &gt; P_&#123;index&#125;$), long traders pay short traders every epoch (typically 8 hours or 1 hour). Conversely, during bearish discount regimes ($P_&#123;mark&#125; &lt; P_&#123;index&#125;$), shorts pay longs.
         </p>
         <p class="mt-3">
           On major institutional exchanges (Binance, Bybit, OKX, Hyperliquid), the funding rate $F$ is defined through two distinct components: the <strong>Premium Index</strong> ($P$) and the <strong>Interest Rate Component</strong> ($I$):
@@ -176,16 +176,16 @@ const schemaData = {
           <li>Annual settlement epochs: $N = 365 \times 3 = 1095$</li>
         </ul>
         <p class="mt-3">
-          The <strong>Simple Annualized Percentage Rate (APR)</strong> assuming an average 8-hour funding rate $\bar{F}_{8h}$ is:
+          The <strong>Simple Annualized Percentage Rate (APR)</strong> assuming an average 8-hour funding rate $\bar&#123;F&#125;_&#123;8h&#125;$ is:
         </p>
         <div class="my-3 p-3 bg-slate-950 border border-slate-800 rounded-lg font-mono text-emerald-400 text-sm">
-          APR = \bar{F}_{8h} \times 1095
+          APR = \bar&#123;F&#125;_&#123;8h&#125; \times 1095
         </div>
         <p class="mt-3">
           When funding income is automatically swept into the margin pool or re-hedged into the spot leg every 8 hours, returns compound exponentially. The <strong>Compounded Annual Percentage Yield (APY)</strong> is:
         </p>
         <div class="my-3 p-3 bg-slate-950 border border-slate-800 rounded-lg font-mono text-cyan-400 text-sm">
-          APY = (1 + \bar{F}_{8h})^{1095} - 1
+          APY = (1 + \bar&#123;F&#125;_&#123;8h&#125;)^&#123;1095&#125; - 1
         </div>
 
         <!-- Benchmark Table 1: Funding Rates to Yields -->
@@ -243,20 +243,20 @@ const schemaData = {
           While the net portfolio delta is mathematically zero:
         </p>
         <div class="my-2 p-3 bg-slate-950 border border-slate-800 rounded font-mono text-xs text-slate-300">
-          \Delta_{net} = \Delta_{spot} + \Delta_{perp} = (+1.00) + (-1.00) = 0.00
+          \Delta_&#123;net&#125; = \Delta_&#123;spot&#125; + \Delta_&#123;perp&#125; = (+1.00) + (-1.00) = 0.00
         </div>
         <p class="mt-3">
           <strong>The asymmetric liquidation trap</strong> represents the fatal risk in sloppy execution. The spot leg can appreciate infinitely without liquidation risk. However, the short perpetual leg carries an explicit liquidation boundary. If the underlying price surges aggressively before margin rebalancing can occur, the exchange will forcefully liquidate the short leg, locking in severe losses and leaving the desk naked long.
         </p>
         <p class="mt-3">
-          The liquidation price $P_{liq}$ of an isolated short perpetual position is derived from the maintenance margin condition:
+          The liquidation price $P_&#123;liq&#125;$ of an isolated short perpetual position is derived from the maintenance margin condition:
         </p>
         <div class="my-4 p-4 rounded-xl bg-slate-900/80 border border-slate-800 font-mono text-xs sm:text-sm text-cyan-300">
-          <div>P_liq = P_{entry} \times \left[ 1 + \frac{M_{initial}}{Q \times P_{entry}} - MMR \right]</div>
+          <div>P_liq = P_&#123;entry&#125; \times \left[ 1 + \frac&#123;M_&#123;initial&#125;&#125;&#123;Q \times P_&#123;entry&#125;&#125; - MMR \right]</div>
           <div class="mt-2 text-slate-400 text-xs">
             Where:<br />
-            &bull; P_{entry} = Weighted average short entry price<br />
-            &bull; M_{initial} = Allocated USD/USDT collateral<br />
+            &bull; P_&#123;entry&#125; = Weighted average short entry price<br />
+            &bull; M_&#123;initial&#125; = Allocated USD/USDT collateral<br />
             &bull; Q = Quantity of underlying asset<br />
             &bull; MMR = Exchange Maintenance Margin Ratio (typically 0.005 for BTC, 0.010 for ETH)
           </div>

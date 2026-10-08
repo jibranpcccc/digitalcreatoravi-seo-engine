@@ -144,7 +144,7 @@ const schemaData = {
           <span class="text-emerald-400 font-mono">1.</span> The Nix Flakes Ergonomics Chasm: Raw Expressions vs Module Systems
         </h2>
         <p>
-          Adopting Nix for local development has long represented a trade-off between mathematical determinism and developer onboarding friction. A standard <code class="text-emerald-300 font-mono text-xs">flake.nix</code> declaring a <code class="text-emerald-300 font-mono text-xs">devShells.default = pkgs.mkShell { ... }</code> provides absolute reproducibility. However, when software engineering teams seek to construct a practical day-to-day workflow, vanilla Nix Flakes quickly exhibit usability hurdles:
+          Adopting Nix for local development has long represented a trade-off between mathematical determinism and developer onboarding friction. A standard <code class="text-emerald-300 font-mono text-xs">flake.nix</code> declaring a <code class="text-emerald-300 font-mono text-xs">devShells.default = pkgs.mkShell &#123; ... }</code> provides absolute reproducibility. However, when software engineering teams seek to construct a practical day-to-day workflow, vanilla Nix Flakes quickly exhibit usability hurdles:
         </p>
         <ul class="list-disc pl-6 space-y-2 mt-3 text-slate-200">
           <li><strong>Boilerplate Language Setup:</strong> Configuring a modern Python or Node environment in raw Nix requires handling system-specific compiler toolchains, C-library bindings (<code class="text-emerald-300 font-mono text-xs">stdenv.cc.cc.lib</code>), and dynamically rewritten <code class="text-emerald-300 font-mono text-xs">LD_LIBRARY_PATH</code> environment variables.</li>
@@ -222,8 +222,8 @@ const schemaData = {
         </p>
 
         <div class="my-4">
-          <pre is:raw class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs sm:text-sm font-mono text-emerald-300 overflow-x-auto"><code># devenv.nix
-{ pkgs, lib, config, inputs, ... }:
+          <pre is:raw class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs sm:text-sm font-mono text-emerald-300 overflow-x-auto"># devenv.nix
+&#123; pkgs, lib, config, inputs, ... &#125;:
 
 {
   # 1. Environment Variables
@@ -233,13 +233,13 @@ const schemaData = {
   };
 
   # 2. Declarative Language Runtimes
-  languages.python = {
+  languages.python = &#123;
     enable = true;
     version = "3.12";
     uv.enable = true;
   };
 
-  languages.javascript = {
+  languages.javascript = &#123;
     enable = true;
     package = pkgs.nodejs_22;
     pnpm.enable = true;
@@ -255,7 +255,7 @@ const schemaData = {
   ];
 
   # 4. Built-in Background Services (Managed by process-compose)
-  services.postgres = {
+  services.postgres = &#123;
     enable = true;
     package = pkgs.postgresql_16;
     initialDatabases = [
@@ -288,7 +288,7 @@ const schemaData = {
     echo "PostgreSQL: $DATABASE_URL"
     echo "Type 'devenv up' to start background services!"
   '';
-}</code></pre>
+}</pre>
         </div>
       </section>
 
@@ -302,22 +302,22 @@ const schemaData = {
         </p>
 
         <div class="my-4">
-          <pre is:raw class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs sm:text-sm font-mono text-emerald-300 overflow-x-auto"><code># flake.nix (Vanilla Nix Flake equivalent)
+          <pre is:raw class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs sm:text-sm font-mono text-emerald-300 overflow-x-auto"># flake.nix (Vanilla Nix Flake equivalent)
 {
   description = "Vanilla Nix Flake Polyglot Environment";
 
-  inputs = {
+  inputs = &#123;
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
+  outputs = &#123; self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = import nixpkgs &#123; inherit system; &#125;;
       in
       {
-        devShells.default = pkgs.mkShell {
+        devShells.default = pkgs.mkShell &#123;
           buildInputs = with pkgs; [
             python312
             uv
@@ -346,7 +346,7 @@ const schemaData = {
         };
       }
     );
-}</code></pre>
+}</pre>
         </div>
         <p class="text-sm text-slate-300 mt-2">
           While this vanilla flake evaluates marginally faster on the very first execution, managing database lifecycle, port binding collisions, process shutdown traps, and cross-platform differences across Darwin and Linux becomes an ongoing maintenance tax for senior engineers.

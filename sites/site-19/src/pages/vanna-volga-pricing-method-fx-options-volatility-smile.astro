@@ -78,7 +78,7 @@ const schema = JSON.stringify({
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
-  <script type="application/ld+json" set:html={schema} />
+  <script type="application/ld+json" set:html=&#123;schema&#125; />
 
   <main class="max-w-4xl mx-auto px-4 py-12 text-slate-100">
     <header class="mb-10">
@@ -95,7 +95,7 @@ const schema = JSON.stringify({
     <div class="bg-slate-900/80 border-l-4 border-cyan-500 rounded-xl p-6 mb-10 shadow-lg backdrop-blur-sm">
       <div class="text-xs uppercase font-bold text-cyan-400 mb-2">Google Quick Answer</div>
       <p class="text-base text-slate-200 leading-relaxed font-medium">
-        <strong>The Vanna-Volga method is the standard quantitative framework for pricing vanilla and first-generation exotic options in FX and crypto markets.</strong> By decomposing an option's volatility risk into a portfolio of three liquid instruments (ATM, 25-Delta Call, and 25-Delta Put), the model hedges <strong>Vega, Vanna ($\frac{\partial^2 V}{\partial S \partial \sigma}$), and Volga ($\frac{\partial^2 V}{\partial \sigma^2}$)</strong>, delivering closed-form implied volatility smile calibration without expensive Monte Carlo simulations.
+        <strong>The Vanna-Volga method is the standard quantitative framework for pricing vanilla and first-generation exotic options in FX and crypto markets.</strong> By decomposing an option's volatility risk into a portfolio of three liquid instruments (ATM, 25-Delta Call, and 25-Delta Put), the model hedges <strong>Vega, Vanna (d&sup2;V / dS d&sigma;), and Volga (d&sup2;V / d&sigma;&sup2;)</strong>, delivering closed-form implied volatility smile calibration without expensive Monte Carlo simulations.
       </p>
     </div>
 
@@ -116,13 +116,13 @@ const schema = JSON.stringify({
           In professional FX and crypto derivatives desks, liquidity is concentrated in three standard market quotes for any given expiration ($T$):
         </p>
         <ul class="list-disc pl-6 space-y-2 text-slate-300">
-          <li><strong>At-The-Money Volatility ($\sigma_{ATM}$):</strong> The volatility of a delta-neutral straddle ($K_{ATM}$).</li>
-          <li><strong>25-Delta Risk Reversal ($RR_{25}$):</strong> The volatility spread between the 25-delta call and 25-delta put:
-            $$RR_{25} = \sigma(25\Delta C) - \sigma(25\Delta P)$$
+          <li><strong>At-The-Money Volatility (<code>σ_ATM</code>):</strong> The volatility of a delta-neutral straddle (<code>K_ATM</code>).</li>
+          <li><strong>25-Delta Risk Reversal ($RR_&#123;25&#125;$):</strong> The volatility spread between the 25-delta call and 25-delta put:
+            $$RR_&#123;25&#125; = \sigma(25\Delta C) - \sigma(25\Delta P)$$
             Measures the asymmetric market skew and directional crash fear.
           </li>
-          <li><strong>25-Delta Butterfly ($BF_{25}$):</strong> The difference between the average of the 25-delta options and the ATM volatility:
-            $$BF_{25} = \frac{\sigma(25\Delta C) + \sigma(25\Delta P)}{2} - \sigma_{ATM}$$
+          <li><strong>25-Delta Butterfly ($BF_&#123;25&#125;$):</strong> The difference between the average of the 25-delta options and the ATM volatility:
+            <code>BF_25 = [σ(25Δ C) + σ(25Δ P)] / 2 - σ_ATM</code>
             Measures the market curvature (smile convexity / fat tails).
           </li>
         </ul>
@@ -131,16 +131,16 @@ const schema = JSON.stringify({
       <div>
         <h2 class="text-2xl font-bold text-white mb-4">3. Mathematical Derivation of Vanna-Volga Weighting Coefficients</h2>
         <p class="text-slate-300 leading-relaxed">
-          To price an target option with strike $K$, the Vanna-Volga method constructs a replicating portfolio consisting of the Black-Scholes price ($V_{BS}(K)$) plus a linear combination of three benchmark options ($K_1 = 25\Delta P$, $K_2 = ATM$, $K_3 = 25\Delta C$):
+          To price an target option with strike $K$, the Vanna-Volga method constructs a replicating portfolio consisting of the Black-Scholes price ($V_BS(K)$) plus a linear combination of three benchmark options ($K_1 = 25\Delta P$, $K_2 = ATM$, $K_3 = 25\Delta C$):
         </p>
 
         <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl my-4 text-center">
           <p class="text-sm text-slate-400 mb-2">Vanna-Volga Option Price Formula:</p>
-          <code class="text-base font-mono text-cyan-400">V_{VV}(K) = V_{BS}(K) + w_1(K) [V(K_1) - V_{BS}(K_1)] + w_2(K) [V(K_2) - V_{BS}(K_2)] + w_3(K) [V(K_3) - V_{BS}(K_3)]</code>
+          <code class="text-base font-mono text-cyan-400">V_VV(K) = V_BS(K) + w_1(K) [V(K_1) - V_BS(K_1)] + w_2(K) [V(K_2) - V_BS(K_2)] + w_3(K) [V(K_3) - V_BS(K_3)]</code>
         </div>
 
         <p class="text-slate-300 leading-relaxed">
-          By matching Vega ($\mathcal{V}$), Vanna ($\mathcal{V}_{anna}$), and Volga ($\mathcal{V}_{olga}$) across the portfolio, we solve the $3 \times 3$ linear system to obtain the closed-form Castagna-Mercurio weighting coefficients:
+          By matching Vega ($Vega$), Vanna ($V_anna$), and Volga ($V_olga$) across the portfolio, we solve the $3 \times 3$ linear system to obtain the closed-form Castagna-Mercurio weighting coefficients:
         </p>
         <ul class="list-disc pl-6 space-y-1 text-slate-300 font-mono text-xs">
           <li>w_1(K) = [ln(K/K_2) * ln(K/K_3)] / [ln(K_1/K_2) * ln(K_1/K_3)]</li>
